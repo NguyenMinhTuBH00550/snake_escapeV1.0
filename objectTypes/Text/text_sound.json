@@ -1,0 +1,10 @@
+{
+	"name": "text_sound",
+	"plugin-id": "Text",
+	"sid": 837925802176443,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

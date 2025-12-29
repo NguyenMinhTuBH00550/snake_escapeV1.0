@@ -1,0 +1,15 @@
+{
+	"name": "text_remove_ad",
+	"plugin-id": "Text",
+	"sid": 492775467664577,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}

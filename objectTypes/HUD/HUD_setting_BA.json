@@ -1,0 +1,60 @@
+{
+	"name": "HUD_setting_BA",
+	"plugin-id": "Sprite",
+	"sid": 269401836563670,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 950,
+						"height": 1281,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9140344,
+						"collisionPoly": {
+							"points": [
+								0.23157894736842105,
+								0,
+								0.8136842105263158,
+								0.01014832162373146,
+								1,
+								0.16081186572989853,
+								0.9547368421052631,
+								0.9789227166276346,
+								0.8873684210526316,
+								1,
+								0.11263157894736842,
+								1,
+								0,
+								0.9164715066354411,
+								0.02736842105263158,
+								0.11163153786104606
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 240034408134382,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

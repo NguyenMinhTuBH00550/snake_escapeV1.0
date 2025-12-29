@@ -1,0 +1,15 @@
+{
+	"name": "text_count_snake",
+	"plugin-id": "Text",
+	"sid": 511668654910780,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}

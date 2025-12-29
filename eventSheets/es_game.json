@@ -1,0 +1,4833 @@
+{
+	"name": "es_game",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Value_global"
+		},
+		{
+			"eventType": "variable",
+			"name": "TimeRemaining",
+			"type": "number",
+			"initialValue": "180",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 314466592130703
+		},
+		{
+			"eventType": "variable",
+			"name": "IsTimerRunning",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 450699413644631
+		},
+		{
+			"eventType": "comment",
+			"text": "Value_createMap"
+		},
+		{
+			"eventType": "variable",
+			"name": "CurrentLevel",
+			"type": "string",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 976100879981987
+		},
+		{
+			"eventType": "variable",
+			"name": "TileSize",
+			"type": "string",
+			"initialValue": "32",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 195357417339530
+		},
+		{
+			"eventType": "variable",
+			"name": "GridW",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 146632440649131
+		},
+		{
+			"eventType": "variable",
+			"name": "GridH",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 544975547109121
+		},
+		{
+			"eventType": "variable",
+			"name": "ArrowIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 851672679628418
+		},
+		{
+			"eventType": "variable",
+			"name": "ArrowColor",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 685329497593142
+		},
+		{
+			"eventType": "variable",
+			"name": "NodeX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 462040779830631
+		},
+		{
+			"eventType": "variable",
+			"name": "NodeY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 739137846003960
+		},
+		{
+			"eventType": "variable",
+			"name": "Spacing",
+			"type": "number",
+			"initialValue": "15",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 769772685677035
+		},
+		{
+			"eventType": "variable",
+			"name": "OffsetX",
+			"type": "number",
+			"initialValue": "35",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 663684395076395
+		},
+		{
+			"eventType": "variable",
+			"name": "OffsetY",
+			"type": "number",
+			"initialValue": "-10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 919859903970598
+		},
+		{
+			"eventType": "comment",
+			"text": "Value_eventTouch"
+		},
+		{
+			"eventType": "variable",
+			"name": "EscapeSpeed",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 385885328052419
+		},
+		{
+			"eventType": "variable",
+			"name": "MoveSpeed",
+			"type": "number",
+			"initialValue": "0.3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 701063491644107
+		},
+		{
+			"eventType": "variable",
+			"name": "targetX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 247212476397903
+		},
+		{
+			"eventType": "variable",
+			"name": "targetY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 261300706731908
+		},
+		{
+			"eventType": "variable",
+			"name": "nextTargetX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 822197696691645
+		},
+		{
+			"eventType": "variable",
+			"name": "nextTargetY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 438166542231860
+		},
+		{
+			"eventType": "variable",
+			"name": "EscapeDuration",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 190656544737886
+		},
+		{
+			"functionName": "start_layout",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 676433732713456,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "init",
+							"objectClass": "ProUI",
+							"sid": 684762926835112
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "UI_redaura",
+							"sid": 963415794366902,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Grid_Dot",
+							"sid": 776784593558525,
+							"parameters": {
+								"instance-variable": "PathOrder",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text_level",
+							"sid": 423056786673270,
+							"parameters": {
+								"text": "\"Level  \" & CurrentLevel"
+							}
+						}
+					],
+					"sid": 903865123258397
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 928078007762228
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "start_layout",
+					"sid": 921749450845764
+				}
+			],
+			"sid": 331272569351440
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GamePlay",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Event_CreateMap",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 598187291300820
+								}
+							],
+							"actions": [
+								{
+									"id": "parse",
+									"objectClass": "JsonLevel",
+									"sid": 124700179948049,
+									"parameters": {
+										"data": "Dic_Level.Get(CurrentLevel)\r\n"
+									}
+								},
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 942430759865845,
+									"disabled": true,
+									"parameters": {
+										"type": "log",
+										"message": "\"Loaded level: \" & CurrentLevel & \" → \" & JsonLevel.Get(\"size.x\")\r\n"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 193132991246609,
+									"parameters": {
+										"variable": "GridW",
+										"value": "JsonLevel.Get(\"size.x\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 278657680447244,
+									"parameters": {
+										"variable": "GridH",
+										"value": "JsonLevel.Get(\"size.y\")"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 801384273160815,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "CreateMap",
+									"sid": 728849405239621
+								}
+							],
+							"sid": 844376283277351
+						},
+						{
+							"functionName": "CreateMap",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 332399760419149,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "NodeY_Json",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 572952211763798
+								},
+								{
+									"eventType": "variable",
+									"name": "NodeCount",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 791361811675473
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 313827097054098,
+											"parameters": {
+												"name": "\"x\"",
+												"start-index": "0",
+												"end-index": "GridW - 1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 390774174777397,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for",
+													"objectClass": "System",
+													"sid": 741418228441590,
+													"parameters": {
+														"name": "\"y\"",
+														"start-index": "0",
+														"end-index": "GridH - 1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 491816228410313,
+													"parameters": {
+														"object-to-create": "Grid_Dot",
+														"layer": "\"Grid\"",
+														"x": "((ViewportLeft(0)+ViewportRight(0))/2 - (GridW*(int(TileSize)+Spacing))/2) + loopindex(\"x\") * (int(TileSize) + Spacing)+ OffsetX\r\n",
+														"y": "((ViewportTop(0)+ViewportBottom(0))/2 - (GridH*(int(TileSize)+Spacing))/2) + loopindex(\"y\") * (int(TileSize) + Spacing) + OffsetY\r\n",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Grid_Dot",
+													"sid": 683769882569740,
+													"parameters": {
+														"instance-variable": "GridX",
+														"value": "loopindex(\"x\")"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Grid_Dot",
+													"sid": 377244024231854,
+													"parameters": {
+														"instance-variable": "GridY",
+														"value": "loopindex(\"y\")"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 821309171554782,
+													"parameters": {
+														"object-to-create": "checkpoint",
+														"layer": "\"Grid\"",
+														"x": "Grid_Dot.X",
+														"y": "Grid_Dot.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "checkpoint",
+													"sid": 466206262734382,
+													"parameters": {
+														"instance-variable": "GridX",
+														"value": "loopindex(\"x\")"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "checkpoint",
+													"sid": 369404378738944,
+													"parameters": {
+														"instance-variable": "GridY",
+														"value": "loopindex(\"y\")"
+													}
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 277647102514332,
+													"disabled": true,
+													"parameters": {
+														"type": "log",
+														"message": "Grid_dot.CPIndex"
+													}
+												}
+											],
+											"sid": 711114553120964
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "JsonLevel",
+											"sid": 461249063734340,
+											"parameters": {
+												"path": "\"arrows\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 277932559132455,
+											"parameters": {
+												"variable": "ArrowIndex",
+												"value": "JsonLevel.CurrentKey"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 359031476398909,
+											"parameters": {
+												"variable": "ArrowColor",
+												"value": "int(JsonLevel.Get(\"arrows.\" &  \".color\"))\r\n"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 315063970234692,
+											"disabled": true,
+											"parameters": {
+												"variable": "NodeCount",
+												"value": "JsonLevel.ArraySize(\"arrows.\" & ArrowIndex & \".nodes\")"
+											}
+										}
+									],
+									"sid": 677347778126951,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "JsonLevel",
+													"sid": 277349906352122,
+													"parameters": {
+														"path": "\"arrows.\" & ArrowIndex & \".nodes\"\r\n"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 591086121919420,
+													"parameters": {
+														"variable": "NodeX",
+														"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & JsonLevel.CurrentKey & \".x\"))\n"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 295530732609588,
+													"parameters": {
+														"variable": "NodeY",
+														"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & JsonLevel.CurrentKey & \".y\"))\n"
+													}
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 212890443018853,
+													"disabled": true,
+													"parameters": {
+														"type": "log",
+														"message": "\"key \" & JsonLevel.CurrentKey"
+													}
+												},
+												{
+													"id": "set-at-xyz",
+													"objectClass": "GridMap",
+													"sid": 282432383027583,
+													"parameters": {
+														"x": "NodeX",
+														"y": "NodeY",
+														"z": "0",
+														"value": "int(ArrowIndex) + 1"
+													}
+												}
+											],
+											"sid": 525627256030310,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 132448695678421,
+															"parameters": {
+																"first-value": "int(JsonLevel.CurrentKey)",
+																"comparison": 0,
+																"second-value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 985215439493661,
+															"parameters": {
+																"object-to-create": "snake_head",
+																"layer": "\"Snakes\"",
+																"x": "((ViewportLeft(0)+ViewportRight(0))/2 - (GridW*(int(TileSize)+Spacing))/2) + NodeX*(int(TileSize)+Spacing) + OffsetX\r\n",
+																"y": "((ViewportTop(0)+ViewportBottom(0))/2 - (GridH*(int(TileSize)+Spacing))/2) + NodeY*(int(TileSize)+Spacing) + OffsetY\n",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 450211667904875,
+															"parameters": {
+																"instance-variable": "OwnerID",
+																"value": "ArrowIndex"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 102103887614413,
+															"parameters": {
+																"instance-variable": "GridX",
+																"value": "NodeX"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 520858025426150,
+															"parameters": {
+																"instance-variable": "GridY",
+																"value": "NodeY"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 489559663389122,
+															"parameters": {
+																"instance-variable": "isActive",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 771403253970943,
+															"parameters": {
+																"instance-variable": "HasBlocker",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 830028115849678,
+															"parameters": {
+																"instance-variable": "HasCheckpoint",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 547264823878703,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 291008178007756,
+																	"parameters": {
+																		"object-to-create": "UI_snake_head",
+																		"layer": "\"Snakes\"",
+																		"x": "snake_head.X",
+																		"y": "snake_head.Y",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 944779553407676,
+																	"parameters": {
+																		"object-to-create": "UI_snake_eye_white",
+																		"layer": "\"Snakes\"",
+																		"x": "0",
+																		"y": "0",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_snake_eye_white",
+																	"sid": 258253881790817,
+																	"parameters": {
+																		"instance-variable": "OwnerID",
+																		"value": "ArrowIndex"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_snake_head",
+																	"sid": 816072407851311,
+																	"parameters": {
+																		"instance-variable": "OwnerID",
+																		"value": "ArrowIndex"
+																	}
+																}
+															],
+															"sid": 182446302833112
+														},
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 107476144044280,
+																	"parameters": {
+																		"object-to-create": "UI_eye_right",
+																		"layer": "\"Snakes\"",
+																		"x": "0",
+																		"y": "0",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_eye_right",
+																	"sid": 810370430422694,
+																	"parameters": {
+																		"instance-variable": "OwnerID",
+																		"value": "ArrowIndex"
+																	}
+																}
+															],
+															"sid": 843050734008923
+														},
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 652055063295768,
+																	"parameters": {
+																		"object-to-create": "UI_eye_left",
+																		"layer": "\"Snakes\"",
+																		"x": "0",
+																		"y": "0",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_eye_left",
+																	"sid": 296191391604688,
+																	"parameters": {
+																		"instance-variable": "OwnerID",
+																		"value": "ArrowIndex"
+																	}
+																}
+															],
+															"sid": 384752402833857
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 471924414920792
+														}
+													],
+													"actions": [
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 790461507782217,
+															"parameters": {
+																"object-to-create": "snake_body",
+																"layer": "\"Snakes\"",
+																"x": "((ViewportLeft(0)+ViewportRight(0))/2 - (GridW*(int(TileSize)+Spacing))/2) + NodeX*(int(TileSize)+Spacing) + OffsetX\r\n",
+																"y": "((ViewportTop(0)+ViewportBottom(0))/2 - (GridH*(int(TileSize)+Spacing))/2) + NodeY*(int(TileSize)+Spacing) + OffsetY\r\n",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 107486221030650,
+															"parameters": {
+																"instance-variable": "NodeIndex",
+																"value": "int(JsonLevel.CurrentKey)"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 348311097608431,
+															"parameters": {
+																"instance-variable": "OwnerID",
+																"value": "ArrowIndex"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 270920863710323,
+															"parameters": {
+																"instance-variable": "GridX",
+																"value": "NodeX"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 371820842402125,
+															"parameters": {
+																"instance-variable": "GridY",
+																"value": "NodeY"
+															}
+														}
+													],
+													"sid": 501237105074417
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 515554256613654
+								}
+							],
+							"actions": [],
+							"sid": 439759081524960,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 841210123964710,
+											"parameters": {
+												"object": "snake_head"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 834709853866105,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 574870032182950,
+													"parameters": {
+														"object": "snake_body"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 680988275620514,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 786628625601823,
+															"parameters": {
+																"first-value": "snake_body.OwnerID",
+																"comparison": 0,
+																"second-value": "snake_head.OwnerID"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 531956375540531,
+															"parameters": {
+																"first-value": "snake_body.NodeIndex",
+																"comparison": 0,
+																"second-value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 423882284926441,
+													"children": [
+														{
+															"eventType": "comment",
+															"text": "Case 1 — Body ở dưới head → head quay lên"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 156361612257533,
+																	"parameters": {
+																		"first-value": "snake_body.GridY",
+																		"comparison": 4,
+																		"second-value": "snake_head.GridY"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 330287785351902,
+																	"parameters": {
+																		"instance-variable": "Dir",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-angle",
+																	"objectClass": "snake_head",
+																	"sid": 535742967036480,
+																	"parameters": {
+																		"angle": "0"
+																	}
+																}
+															],
+															"sid": 902866091174751
+														},
+														{
+															"eventType": "comment",
+															"text": "Case 2 — Body ở trái head → head quay phải"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 393420930977549,
+																	"parameters": {
+																		"first-value": "snake_body.GridX",
+																		"comparison": 2,
+																		"second-value": "snake_head.GridX "
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 297552566634528,
+																	"parameters": {
+																		"instance-variable": "Dir",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "set-angle",
+																	"objectClass": "snake_head",
+																	"sid": 249879358108040,
+																	"parameters": {
+																		"angle": "90"
+																	}
+																}
+															],
+															"sid": 144946342765436
+														},
+														{
+															"eventType": "comment",
+															"text": "Case 3 — Body ở trên head → head quay xuống"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 396857794644019,
+																	"parameters": {
+																		"first-value": "snake_body.GridY",
+																		"comparison": 2,
+																		"second-value": "snake_head.GridY"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 778716720003806,
+																	"parameters": {
+																		"instance-variable": "Dir",
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "set-angle",
+																	"objectClass": "snake_head",
+																	"sid": 735654519176976,
+																	"parameters": {
+																		"angle": "180"
+																	}
+																}
+															],
+															"sid": 808084734788332
+														},
+														{
+															"eventType": "comment",
+															"text": "Case 4 — Body ở phải head → head quay trái"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 645156438372855,
+																	"parameters": {
+																		"first-value": "snake_body.GridX",
+																		"comparison": 4,
+																		"second-value": "snake_head.GridX "
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 400114295455099,
+																	"parameters": {
+																		"instance-variable": "Dir",
+																		"value": "3"
+																	}
+																},
+																{
+																	"id": "set-angle",
+																	"objectClass": "snake_head",
+																	"sid": 626210648748282,
+																	"parameters": {
+																		"angle": "270"
+																	}
+																}
+															],
+															"sid": 422377594176233
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 452368235559492,
+													"parameters": {
+														"object": "UI_snake_head"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 192407065993144,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "snake_head",
+															"sid": 376772181735504,
+															"parameters": {
+																"instance-variable": "OwnerID",
+																"comparison": 0,
+																"value": "UI_snake_head.OwnerID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position",
+															"objectClass": "UI_snake_head",
+															"sid": 352014526127220,
+															"parameters": {
+																"x": "snake_head.X",
+																"y": "snake_head.Y"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "UI_snake_head",
+															"sid": 300590769288951,
+															"parameters": {
+																"angle": "snake_head.Angle"
+															}
+														}
+													],
+													"sid": 974022347575814
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 756095141822309,
+													"parameters": {
+														"object": "UI_snake_eye_white"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 346480688984056,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "UI_snake_head",
+															"sid": 500758120214149,
+															"parameters": {
+																"instance-variable": "OwnerID",
+																"comparison": 0,
+																"value": "UI_snake_eye_white.OwnerID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position",
+															"objectClass": "UI_snake_eye_white",
+															"sid": 944878648311576,
+															"parameters": {
+																"x": "UI_snake_head.X",
+																"y": "UI_snake_head.Y"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "UI_snake_eye_white",
+															"sid": 689822518112907,
+															"parameters": {
+																"angle": "UI_snake_head.Angle"
+															}
+														}
+													],
+													"sid": 607204400139369
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 731579261912952,
+													"parameters": {
+														"object": "UI_eye_left"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 861537999335996,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "UI_snake_eye_white",
+															"sid": 551573833180831,
+															"parameters": {
+																"instance-variable": "OwnerID",
+																"comparison": 0,
+																"value": "UI_eye_left.OwnerID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position",
+															"objectClass": "UI_eye_left",
+															"sid": 792304874451680,
+															"parameters": {
+																"x": "UI_snake_eye_white.X - cos(UI_snake_eye_white.Angle) * (UI_snake_eye_white.Width * 0.25)",
+																"y": "UI_snake_eye_white.Y - sin(UI_snake_eye_white.Angle) * (UI_snake_eye_white.Width * 0.25)"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "UI_eye_left",
+															"sid": 960785373079691,
+															"parameters": {
+																"angle": "UI_snake_eye_white.Angle"
+															}
+														}
+													],
+													"sid": 970847588675615
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 562052881478496,
+													"parameters": {
+														"object": "UI_eye_right"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 300612331762624,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "UI_snake_eye_white",
+															"sid": 357585133210963,
+															"parameters": {
+																"instance-variable": "OwnerID",
+																"comparison": 0,
+																"value": "UI_eye_right.OwnerID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position",
+															"objectClass": "UI_eye_right",
+															"sid": 811772168260945,
+															"parameters": {
+																"x": " UI_snake_eye_white.X + cos(UI_snake_eye_white.Angle) * (UI_snake_eye_white.Width * 0.25)",
+																"y": " UI_snake_eye_white.Y + sin(UI_snake_eye_white.Angle) * (UI_snake_eye_white.Width * 0.25)"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "UI_eye_right",
+															"sid": 213774412058017,
+															"parameters": {
+																"angle": "UI_snake_eye_white.Angle"
+															}
+														}
+													],
+													"sid": 136613123131044
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 186706342486315
+								}
+							],
+							"actions": [],
+							"sid": 346724384669376,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_body",
+											"sid": 876270381273964,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_body",
+											"sid": 326415489529276,
+											"parameters": {
+												"color": "rgbEx(255, 0, 0)"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 290263637236322,
+											"parameters": {
+												"color": "rgbEx(255, 0, 0)"
+											}
+										}
+									],
+									"sid": 375228403130147
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_body",
+											"sid": 429392077241355,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_body",
+											"sid": 456362779348860,
+											"parameters": {
+												"color": "rgbEx(0, 255, 0)"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 472299623701571,
+											"parameters": {
+												"color": "rgbEx(0, 255, 0)"
+											}
+										}
+									],
+									"sid": 699193744297415
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_body",
+											"sid": 542257635471031,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_body",
+											"sid": 991406916322963,
+											"parameters": {
+												"color": "rgbEx(0, 0, 255)"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 179724895047618,
+											"parameters": {
+												"color": "rgbEx(0, 0, 255)"
+											}
+										}
+									],
+									"sid": 981185072619036
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_body",
+											"sid": 559289084252010,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_body",
+											"sid": 921458604862329,
+											"parameters": {
+												"color": "rgbEx(255, 255, 0)"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 265967793258165,
+											"parameters": {
+												"color": "rgbEx(255, 255, 0)"
+											}
+										}
+									],
+									"sid": 706970491089340
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_body",
+											"sid": 267268093510434,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_body",
+											"sid": 673038250375702,
+											"parameters": {
+												"color": "rgbEx(100, 0, 0)"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 887668466876733,
+											"parameters": {
+												"color": "rgbEx(100, 0, 0)"
+											}
+										}
+									],
+									"sid": 325157831576261
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_body",
+											"sid": 505221863589370,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_body",
+											"sid": 668378022037884,
+											"parameters": {
+												"color": "rgbEx(0, 100, 0)"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 862524512059977,
+											"parameters": {
+												"color": "rgbEx(0, 100, 0)"
+											}
+										}
+									],
+									"sid": 908827581858027
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_body",
+											"sid": 292669335703895,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "6"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_body",
+											"sid": 314674289615190,
+											"parameters": {
+												"color": "rgbEx(100, 100, 0)"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 558706930912611,
+											"parameters": {
+												"color": "rgbEx(100, 100, 0)"
+											}
+										}
+									],
+									"sid": 655048510077155
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 961357237068214
+								}
+							],
+							"actions": [],
+							"sid": 850301026254339,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_head",
+											"sid": 372899563370138,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 726655834088299,
+											"parameters": {
+												"color": "rgbEx(255, 0, 0)"
+											}
+										}
+									],
+									"sid": 836477808265115
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_head",
+											"sid": 364399597306602,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 692885303863603,
+											"parameters": {
+												"color": "rgbEx(0, 255, 0)"
+											}
+										}
+									],
+									"sid": 189794381017254
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_head",
+											"sid": 625920961847864,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 280990529161985,
+											"parameters": {
+												"color": "rgbEx(0, 0, 255)"
+											}
+										}
+									],
+									"sid": 608610430483672
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_head",
+											"sid": 700574442886702,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 939520874354528,
+											"parameters": {
+												"color": "rgbEx(255, 255, 0)"
+											}
+										}
+									],
+									"sid": 215981482607385
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_head",
+											"sid": 659718345566035,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 857772663061293,
+											"parameters": {
+												"color": "rgbEx(100, 0, 0)"
+											}
+										}
+									],
+									"sid": 720442752399541
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_head",
+											"sid": 768355538569352,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 893968812335644,
+											"parameters": {
+												"color": "rgbEx(0, 100, 0)"
+											}
+										}
+									],
+									"sid": 688227402029464
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "snake_head",
+											"sid": 641870419958635,
+											"parameters": {
+												"instance-variable": "OwnerID",
+												"comparison": 0,
+												"value": "6"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-default-color",
+											"objectClass": "snake_head",
+											"sid": 930635071586308,
+											"parameters": {
+												"color": "rgbEx(100, 100, 0)"
+											}
+										}
+									],
+									"sid": 898334031503246
+								}
+							]
+						}
+					],
+					"sid": 161037751883584
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Event_Touch",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "bumpDistance",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 207453163115684
+						},
+						{
+							"eventType": "variable",
+							"name": "bumpX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 961866271324634
+						},
+						{
+							"eventType": "variable",
+							"name": "bumpY",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 989790169996010
+						},
+						{
+							"eventType": "variable",
+							"name": "activeHeadOwnerID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 997896561260419
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-touched-object",
+									"objectClass": "Touch",
+									"sid": 651700221118270,
+									"parameters": {
+										"object": "snake_head",
+										"type": "start"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 576468562401297,
+									"parameters": {
+										"variable": "IsTimerRunning",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "snake_head",
+									"sid": 655448696413758,
+									"parameters": {
+										"instance-variable": "isActive",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "snake_head",
+									"sid": 117964592928034,
+									"parameters": {
+										"instance-variable": "HasBlocker",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "snake_head",
+									"sid": 139203411250232,
+									"parameters": {
+										"instance-variable": "HasCheckpoint",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "snake_head",
+									"sid": 523712106578087,
+									"parameters": {
+										"instance-variable": "CaseType",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "snake_head",
+									"sid": 658324808779300,
+									"parameters": {
+										"instance-variable": "isEscaping",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 171738422951573,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 486588674303575,
+											"parameters": {
+												"instance-variable": "NextGridX",
+												"value": "snake_head.GridX"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 826568202462704,
+											"parameters": {
+												"instance-variable": "NextGridY",
+												"value": "snake_head.GridY"
+											}
+										}
+									],
+									"sid": 579550352571048,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 688066658851590,
+													"parameters": {
+														"first-value": "snake_head.Dir",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_head",
+													"sid": 802051480054568,
+													"parameters": {
+														"instance-variable": "NextGridY",
+														"value": "snake_head.NextGridY - 1"
+													}
+												}
+											],
+											"sid": 391450601415867
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 508284202740271,
+													"parameters": {
+														"first-value": "snake_head.Dir",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_head",
+													"sid": 454764467193855,
+													"parameters": {
+														"instance-variable": "NextGridX",
+														"value": "snake_head.NextGridX + 1"
+													}
+												}
+											],
+											"sid": 579245725248215
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 302615614883703,
+													"parameters": {
+														"first-value": "snake_head.Dir",
+														"comparison": 0,
+														"second-value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_head",
+													"sid": 982784280210104,
+													"parameters": {
+														"instance-variable": "NextGridY",
+														"value": "snake_head.NextGridY + 1"
+													}
+												}
+											],
+											"sid": 229477939523082
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 237674990945608,
+													"parameters": {
+														"first-value": "snake_head.Dir",
+														"comparison": 0,
+														"second-value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_head",
+													"sid": 222763649431783,
+													"parameters": {
+														"instance-variable": "NextGridX",
+														"value": "snake_head.NextGridX - 1"
+													}
+												}
+											],
+											"sid": 764430371074202
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 953159098224709,
+													"parameters": {
+														"first-value": "snake_head.NextGridX",
+														"comparison": 2,
+														"second-value": "0"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 801135959287434,
+													"parameters": {
+														"first-value": "snake_head.NextGridX",
+														"comparison": 5,
+														"second-value": "GridW"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 322293058062016,
+													"parameters": {
+														"first-value": "snake_head.NextGridY",
+														"comparison": 2,
+														"second-value": "0"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 852779527811734,
+													"parameters": {
+														"first-value": "snake_head.NextGridY",
+														"comparison": 5,
+														"second-value": "GridH"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_head",
+													"sid": 709094015863501,
+													"parameters": {
+														"instance-variable": "CaseType",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_head",
+													"sid": 270620326958554,
+													"parameters": {
+														"instance-variable": "isEscaping",
+														"value": "1"
+													}
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 452130593253041,
+													"parameters": {
+														"type": "log",
+														"message": "\"TH1: ESCAPE! Head ra khỏi grid\""
+													}
+												}
+											],
+											"sid": 239383562894423,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 618367702823542,
+													"parameters": {
+														"first-value": "snake_head.CaseType",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 581654543114436,
+													"parameters": {
+														"variable": "activeHeadOwnerID",
+														"value": "snake_head.OwnerID"
+													}
+												}
+											],
+											"sid": 407503693090858,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 216110194040037,
+															"parameters": {
+																"object": "snake_head"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 522099014679812,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 217180973049163,
+																	"parameters": {
+																		"first-value": "snake_head.OwnerID",
+																		"comparison": 1,
+																		"second-value": "activeHeadOwnerID"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 240354898409685,
+																	"parameters": {
+																		"first-value": "snake_head.isActive",
+																		"comparison": 0,
+																		"second-value": "0"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 193991956636840,
+																	"parameters": {
+																		"first-value": "snake_head.GridX",
+																		"comparison": 0,
+																		"second-value": "snake_head.NextGridX"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 206149245864308,
+																	"parameters": {
+																		"first-value": "snake_head.GridY",
+																		"comparison": 0,
+																		"second-value": "snake_head.NextGridY"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 558794331572512,
+																	"parameters": {
+																		"instance-variable": "HasBlocker",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 394475351522043,
+																	"parameters": {
+																		"instance-variable": "CaseType",
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 507838892321369,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"TH2: BLOCKED by other head!\"\n"
+																	}
+																}
+															],
+															"sid": 153106001721421
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 806678111864692,
+															"parameters": {
+																"object": "snake_body"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 330633479085185,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 443869717780041,
+																	"parameters": {
+																		"first-value": "snake_body.OwnerID",
+																		"comparison": 1,
+																		"second-value": "snake_head.OwnerID"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 254763247040429,
+																	"parameters": {
+																		"first-value": "snake_body.GridX",
+																		"comparison": 0,
+																		"second-value": "snake_head.NextGridX"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 448959724106129,
+																	"parameters": {
+																		"first-value": "snake_body.GridY",
+																		"comparison": 0,
+																		"second-value": "snake_head.NextGridY"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 544954321598202,
+																	"parameters": {
+																		"instance-variable": "HasBlocker",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 782851330597804,
+																	"parameters": {
+																		"instance-variable": "CaseType",
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 663020896341905,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"TH2: BLOCKED by other body!\"\n"
+																	}
+																}
+															],
+															"sid": 543211754315997
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 194115819736378,
+															"parameters": {
+																"object": "checkpoint"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 136203119125504,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 846472710215201,
+																	"parameters": {
+																		"first-value": "checkpoint.GridX",
+																		"comparison": 0,
+																		"second-value": "snake_head.NextGridX "
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 624305317052400,
+																	"parameters": {
+																		"first-value": "checkpoint.GridY",
+																		"comparison": 0,
+																		"second-value": "snake_head.NextGridY"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 351452091404964,
+																	"parameters": {
+																		"instance-variable": "HasCheckpoint",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 914903704363317,
+																	"parameters": {
+																		"instance-variable": "CaseType",
+																		"value": "3"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "checkpoint",
+																	"sid": 245692092153405,
+																	"parameters": {
+																		"instance-variable": "isTarget",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 541180931446672,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"TH3: MOVE to checkpoint!\""
+																	}
+																}
+															],
+															"sid": 767868556066250
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 485518969737799,
+													"parameters": {
+														"first-value": "snake_head.CaseType",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "TH1: HeadOnEdgeGrid",
+													"sid": 110242159198845
+												}
+											],
+											"sid": 451401018312442
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 962945569063017,
+													"parameters": {
+														"first-value": "snake_head.HasCheckpoint",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "TH3: moveToCheckpoint",
+													"sid": 944254568413413
+												}
+											],
+											"sid": 776795179468248
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "TH1: Head on edge grid"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "snake_body",
+									"sid": 421554011787963,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"move\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 371252037179521,
+									"parameters": {
+										"type": "log",
+										"message": "\"Body \" & snake_body.NodeIndex & \" arrived\""
+									}
+								}
+							],
+							"sid": 495843559764116,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nearestfurthest",
+											"objectClass": "checkpoint",
+											"sid": 518724323288842,
+											"parameters": {
+												"which": "nearest",
+												"x": "snake_body.X",
+												"y": "snake_body.Y"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 697530790357500,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_body",
+													"sid": 480553834474948,
+													"parameters": {
+														"instance-variable": "GridX",
+														"value": "checkpoint.GridX"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_body",
+													"sid": 869438051375327,
+													"parameters": {
+														"instance-variable": "GridY",
+														"value": "checkpoint.GridY"
+													}
+												},
+												{
+													"id": "add-key",
+													"objectClass": "Dic_BodyPrevPos",
+													"sid": 217488235192001,
+													"parameters": {
+														"key": "str(snake_body.NodeIndex) & \"_X\"",
+														"value": "checkpoint.GridX"
+													}
+												},
+												{
+													"id": "add-key",
+													"objectClass": "Dic_BodyPrevPos",
+													"sid": 290601562500676,
+													"parameters": {
+														"key": "str(snake_body.NodeIndex) & \"_Y\"",
+														"value": "checkpoint.GridY"
+													}
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 186251580516911,
+													"parameters": {
+														"type": "log",
+														"message": "\"Body \" & snake_body.NodeIndex & \" updated position to (\" & checkpoint.GridX & \",\" & checkpoint.GridY & \") and SAVED to Dictionary\""
+													}
+												}
+											],
+											"sid": 453601182130874
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 184645487852034,
+											"parameters": {
+												"object": "snake_head"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 722760976600928,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 248128652454296,
+													"parameters": {
+														"first-value": "snake_head.OwnerID",
+														"comparison": 0,
+														"second-value": "snake_body.OwnerID"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 247512605785355,
+													"parameters": {
+														"first-value": "snake_head.isEscaping",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 382633503224966,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 106046920660559,
+															"parameters": {
+																"first-value": "snake_body.GridX",
+																"comparison": 0,
+																"second-value": "snake_head.PrevGridX"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 370570940986071,
+															"parameters": {
+																"first-value": "snake_body.GridY",
+																"comparison": 0,
+																"second-value": "snake_head.PrevGridY"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 575438769347161,
+															"parameters": {
+																"instance-variable": "isEscaping",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 818424205312411,
+															"parameters": {
+																"variable": "EscapeDuration",
+																"value": "10 - (snake_body.NodeIndex * 0.8)"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 145902583550628,
+															"parameters": {
+																"variable": "EscapeDuration",
+																"value": "max(EscapeDuration, 9.4)"
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "snake_body",
+															"sid": 416790982516797,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"body_escape\"",
+																"property": "position",
+																"end-x": "snake_body.X + cos(snake_head.Angle - 90) * 2000",
+																"end-y": "snake_body.Y + sin(snake_head.Angle - 90) * 2000",
+																"time": "EscapeDuration",
+																"ease": "noease",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 127011437047491,
+															"parameters": {
+																"type": "log",
+																"message": "\"Body \" & snake_body.NodeIndex & \" ESCAPING!\""
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 473921706274905,
+															"parameters": {
+																"seconds": "(snake_body.NodeIndex - 1) * 0.25",
+																"use-timescale": true
+															}
+														}
+													],
+													"sid": 541691121693362
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 819446329545602
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 355962640900354,
+															"parameters": {
+																"variable": "nextTargetX",
+																"value": "int(Dic_BodyPrevPos.Get(str(snake_body.NodeIndex - 1) & \"_X\"))"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 674664969223581,
+															"parameters": {
+																"variable": "nextTargetY",
+																"value": "int(Dic_BodyPrevPos.Get(str(snake_body.NodeIndex - 1) & \"_Y\"))"
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 102787380501307,
+															"parameters": {
+																"type": "log",
+																"message": "\"Body \" & snake_body.NodeIndex & \" will continue to (\" & nextTargetX & \",\" & nextTargetY & \")\""
+															}
+														}
+													],
+													"sid": 974335725144199,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "System",
+																	"sid": 857183785689198,
+																	"parameters": {
+																		"object": "checkpoint"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 770770296678686,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 544060423518321,
+																			"parameters": {
+																				"first-value": "checkpoint.GridX",
+																				"comparison": 0,
+																				"second-value": "nextTargetX"
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 960482024541397,
+																			"parameters": {
+																				"first-value": "checkpoint.GridY",
+																				"comparison": 0,
+																				"second-value": "nextTargetY"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "tween-two-properties",
+																			"objectClass": "snake_body",
+																			"sid": 401209503826568,
+																			"behaviorType": "Tween",
+																			"parameters": {
+																				"tags": "\"move\"",
+																				"property": "position",
+																				"end-x": "checkpoint.X",
+																				"end-y": "checkpoint.Y",
+																				"time": "0.25",
+																				"ease": "noease",
+																				"destroy-on-complete": "no",
+																				"loop": "no",
+																				"ping-pong": "no",
+																				"repeat-count": "1"
+																			}
+																		},
+																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 995890662549449,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Body \" & snake_body.NodeIndex & \" CONTINUING to (\" & checkpoint.GridX & \",\" & checkpoint.GridY & \")\""
+																			}
+																		}
+																	],
+																	"sid": 398826732568058
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						},
+						{
+							"eventType": "comment",
+							"text": "TH2: Head blocked by other head or body"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "snake_head",
+									"sid": 753095506827644,
+									"parameters": {
+										"object": "snake_body"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 208827615624748,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 464832454782369,
+											"parameters": {
+												"first-value": "snake_head.OwnerID",
+												"comparison": 1,
+												"second-value": "snake_body.OwnerID"
+											}
+										},
+										{
+											"id": "is-playing",
+											"objectClass": "snake_head",
+											"sid": 475106051645212,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"head_move_checkpoint\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 527167710095785,
+											"parameters": {
+												"type": "log",
+												"message": " \"COLLISION DETECTED! Stopping movement...\""
+											}
+										},
+										{
+											"callFunction": "TH2: HeadBlocked",
+											"sid": 963646679400723
+										}
+									],
+									"sid": 920529071057280
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "snake_head",
+									"sid": 624034286328333,
+									"parameters": {
+										"object": "snake_head"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 146900339940504,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 823799806423206,
+											"parameters": {
+												"first-value": "snake_head.OwnerID",
+												"comparison": 0,
+												"second-value": "snake_head.OwnerID"
+											}
+										},
+										{
+											"id": "is-playing",
+											"objectClass": "snake_head",
+											"sid": 705764981765819,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"head_move_checkpoint\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 335602521517078,
+											"parameters": {
+												"type": "log",
+												"message": " \"COLLISION DETECTED! Stopping movement...\""
+											}
+										},
+										{
+											"callFunction": "TH2: HeadBlocked",
+											"sid": 375384306893826
+										}
+									],
+									"sid": 934592732745041
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "snake_head",
+									"sid": 192431365682742,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"collision_pullback\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 224431212696160,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 115906268721873,
+											"parameters": {
+												"instance-variable": "isActive",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 459563118751965,
+											"parameters": {
+												"instance-variable": "CaseType",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 863412666770741,
+											"parameters": {
+												"instance-variable": "HasCheckpoint",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 937042846890114,
+											"parameters": {
+												"instance-variable": "GridX",
+												"value": "snake_head.PrevGridX"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 372447121648904,
+											"parameters": {
+												"instance-variable": "GridY",
+												"value": "snake_head.PrevGridY"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "snake_head",
+											"sid": 947520525684474,
+											"parameters": {
+												"x": "snake_head.PrevX",
+												"y": "snake_head.PrevY"
+											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 232486560979273,
+											"parameters": {
+												"type": "log",
+												"message": "\"Collision pullback complete. Stopped.\""
+											}
+										}
+									],
+									"sid": 733452449169794,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 931207732548725,
+													"parameters": {
+														"object": "snake_body"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 815175735758045,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 485912436279950,
+															"parameters": {
+																"first-value": "snake_body.OwnerID",
+																"comparison": 0,
+																"second-value": "snake_head.OwnerID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "stop-tweens",
+															"objectClass": "snake_body",
+															"sid": 937439287229862,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"body_move_checkpoint\""
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "snake_body",
+															"sid": 277700903478174,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"collision_pullback\"",
+																"property": "position",
+																"end-x": "snake_body.PrevX",
+																"end-y": "snake_body.PrevY",
+																"time": "0.2",
+																"ease": "noease",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 874940426128274,
+															"parameters": {
+																"type": "log",
+																"message": "\"Body \" & snake_body.NodeIndex & \" pulling back to (\" &  snake_body.PrevX & \",\" & snake_body.PrevY & \")\""
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 458680389899540,
+															"parameters": {
+																"instance-variable": "GridX",
+																"value": "snake_body.PrevGridX"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 607475725817805,
+															"parameters": {
+																"instance-variable": "GridY",
+																"value": "snake_body.PrevGridY"
+															}
+														}
+													],
+													"sid": 604247939325562
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						},
+						{
+							"eventType": "comment",
+							"text": "TH3: Head is not blocked and will move to the edge of grid or blocked by other head or body"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "snake_head",
+									"sid": 481845370520719,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"head_move_checkpoint\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 956914607063016,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "snake_head",
+											"sid": 342045620219649,
+											"parameters": {
+												"x": "round(snake_head.X)",
+												"y": "round(snake_head.Y)"
+											}
+										},
+										{
+											"id": "add-key",
+											"objectClass": "Dic_BodyPrevPos",
+											"sid": 839921372328046,
+											"parameters": {
+												"key": "\"0_X\"",
+												"value": "snake_head.GridX"
+											}
+										},
+										{
+											"id": "add-key",
+											"objectClass": "Dic_BodyPrevPos",
+											"sid": 874652047685358,
+											"parameters": {
+												"key": "\"0_Y\"",
+												"value": "snake_head.GridY"
+											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 960215156881540,
+											"parameters": {
+												"type": "log",
+												"message": "\"HEAD arrived at checkpoint (\" & snake_head.GridX & \",\" & snake_head.GridY & \")\""
+											}
+										}
+									],
+									"sid": 825690683622043,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_head",
+													"sid": 553321713655236,
+													"parameters": {
+														"instance-variable": "NextGridX",
+														"value": "snake_head.GridX"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_head",
+													"sid": 570543233008960,
+													"parameters": {
+														"instance-variable": "NextGridY",
+														"value": "snake_head.GridY"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "snake_head",
+													"sid": 389190973789764,
+													"parameters": {
+														"instance-variable": "CaseType",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 890695966470911,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 372610523664600,
+															"parameters": {
+																"first-value": "snake_head.Dir",
+																"comparison": 0,
+																"second-value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 966563990549733,
+															"parameters": {
+																"instance-variable": "NextGridY",
+																"value": "snake_head.NextGridY - 1"
+															}
+														}
+													],
+													"sid": 421254010404474
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 135014213535809,
+															"parameters": {
+																"first-value": "snake_head.Dir",
+																"comparison": 0,
+																"second-value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 348792911114987,
+															"parameters": {
+																"instance-variable": "NextGridX",
+																"value": "snake_head.NextGridX + 1"
+															}
+														}
+													],
+													"sid": 271559341576622
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 536185869481617,
+															"parameters": {
+																"first-value": "snake_head.Dir",
+																"comparison": 0,
+																"second-value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 583371939229633,
+															"parameters": {
+																"instance-variable": "NextGridY",
+																"value": "snake_head.NextGridY + 1"
+															}
+														}
+													],
+													"sid": 845074999490832
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 765140557048926,
+															"parameters": {
+																"first-value": "snake_head.Dir",
+																"comparison": 0,
+																"second-value": "3"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 127433578904736,
+															"parameters": {
+																"instance-variable": "NextGridX",
+																"value": "snake_head.NextGridX - 1"
+															}
+														}
+													],
+													"sid": 329549471993315
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 348580783282923,
+															"parameters": {
+																"first-value": "snake_head.NextGridX",
+																"comparison": 2,
+																"second-value": "0"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 449237049403842,
+															"parameters": {
+																"first-value": "snake_head.NextGridX",
+																"comparison": 5,
+																"second-value": "GridW"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 664028894798793,
+															"parameters": {
+																"first-value": "snake_head.NextGridY",
+																"comparison": 2,
+																"second-value": "0"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 235530818723822,
+															"parameters": {
+																"first-value": "snake_head.NextGridY",
+																"comparison": 5,
+																"second-value": "GridH"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 256237228068859,
+															"parameters": {
+																"instance-variable": "CaseType",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 983177702934361,
+															"parameters": {
+																"instance-variable": "isEscaping",
+																"value": "1"
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 467150859136041,
+															"parameters": {
+																"type": "log",
+																"message": "\"HEAD reached edge → Will ESCAPE!\""
+															}
+														}
+													],
+													"sid": 862237488137952,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 851598463504795,
+															"parameters": {
+																"first-value": "snake_head.CaseType",
+																"comparison": 0,
+																"second-value": "0"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 725584438276881,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "System",
+																	"sid": 645141201936302,
+																	"parameters": {
+																		"object": "snake_head"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 332833189147136,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 671565257062384,
+																			"parameters": {
+																				"first-value": "snake_head.OwnerID",
+																				"comparison": 1,
+																				"second-value": "activeHeadOwnerID"
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 114933084274524,
+																			"parameters": {
+																				"first-value": "snake_head.isActive",
+																				"comparison": 0,
+																				"second-value": "0"
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 892669707325327,
+																			"parameters": {
+																				"first-value": "snake_head.GridX",
+																				"comparison": 0,
+																				"second-value": "snake_head.NextGridX"
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 825336407072502,
+																			"parameters": {
+																				"first-value": "snake_head.GridY",
+																				"comparison": 0,
+																				"second-value": "snake_head.NextGridY"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "snake_head",
+																			"sid": 897078982499852,
+																			"parameters": {
+																				"instance-variable": "HasBlocker",
+																				"value": "1"
+																			}
+																		},
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "snake_head",
+																			"sid": 102447781870880,
+																			"parameters": {
+																				"instance-variable": "CaseType",
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 979992404993435,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"TH2: BLOCKED by other head!\"\n"
+																			}
+																		}
+																	],
+																	"sid": 492217834191388
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "System",
+																	"sid": 615388146128830,
+																	"parameters": {
+																		"object": "snake_body"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 443350757590974,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 918681430814150,
+																			"parameters": {
+																				"first-value": "snake_body.GridX",
+																				"comparison": 0,
+																				"second-value": "snake_head.NextGridX"
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 108347306085741,
+																			"parameters": {
+																				"first-value": "snake_body.GridY",
+																				"comparison": 0,
+																				"second-value": "snake_head.NextGridY"
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 428076418891127,
+																			"parameters": {
+																				"first-value": "snake_body.OwnerID",
+																				"comparison": 1,
+																				"second-value": "snake_head.OwnerID"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "snake_head",
+																			"sid": 151249333800356,
+																			"parameters": {
+																				"instance-variable": "CaseType",
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 924696020230933,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"BLOCKED by body!\""
+																			}
+																		}
+																	],
+																	"sid": 483534047845952
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "System",
+																	"sid": 974905747592243,
+																	"parameters": {
+																		"object": "checkpoint"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 933194559634018,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 969986870774850,
+																			"parameters": {
+																				"first-value": "checkpoint.GridX",
+																				"comparison": 0,
+																				"second-value": "snake_head.NextGridX"
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 923682272919280,
+																			"parameters": {
+																				"first-value": "checkpoint.GridY",
+																				"comparison": 0,
+																				"second-value": "snake_head.NextGridY"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "snake_head",
+																			"sid": 440809871895451,
+																			"parameters": {
+																				"instance-variable": "CaseType",
+																				"value": "3"
+																			}
+																		},
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "snake_head",
+																			"sid": 106543337132399,
+																			"parameters": {
+																				"instance-variable": "HasCheckpoint",
+																				"value": "1"
+																			}
+																		},
+																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 766686434467394,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Checkpoint ahead → CONTINUE!\""
+																			}
+																		}
+																	],
+																	"sid": 478665225251811
+																}
+															]
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 575971989452824,
+															"parameters": {
+																"first-value": "snake_head.CaseType",
+																"comparison": 0,
+																"second-value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 535016592059245,
+															"parameters": {
+																"type": "log",
+																"message": "\"Triggering ESCAPE sequence...\""
+															}
+														},
+														{
+															"callFunction": "TH1: HeadOnEdgeGrid",
+															"sid": 190816160202128
+														}
+													],
+													"sid": 655458810236330
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 193374819362331,
+															"parameters": {
+																"first-value": "snake_head.CaseType",
+																"comparison": 0,
+																"second-value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "TH2: HeadBlocked",
+															"sid": 365194921213229
+														}
+													],
+													"sid": 466304201005006,
+													"disabled": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 456966129774043,
+															"parameters": {
+																"first-value": "snake_head.CaseType",
+																"comparison": 0,
+																"second-value": "3"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 820574431758400,
+															"parameters": {
+																"first-value": "snake_head.HasCheckpoint",
+																"comparison": 0,
+																"second-value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 529834745605004,
+															"parameters": {
+																"type": "log",
+																"message": "\"AUTO CONTINUE!\""
+															}
+														},
+														{
+															"callFunction": "TH3: moveToCheckpoint",
+															"sid": 929391716981275
+														}
+													],
+													"sid": 518567722363425
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"functionName": "TH3: moveToCheckpoint",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": true,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 505857668182524,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 949670427404439,
+											"parameters": {
+												"instance-variable": "HasCheckpoint",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 485461715750985,
+											"parameters": {
+												"instance-variable": "PrevX",
+												"value": "snake_head.X"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 100956005508340,
+											"parameters": {
+												"instance-variable": "PrevY",
+												"value": "snake_head.Y"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 560841748391248,
+											"parameters": {
+												"instance-variable": "PrevGridX",
+												"value": "snake_head.GridX"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 513724144446473,
+											"parameters": {
+												"instance-variable": "PrevGridY",
+												"value": "snake_head.GridY"
+											}
+										},
+										{
+											"id": "clear",
+											"objectClass": "Dic_BodyPrevPos",
+											"sid": 422073317846504
+										}
+									],
+									"sid": 332321007913989,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 459796984641419,
+													"parameters": {
+														"object": "snake_body"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 848068389883983,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 402063091266316,
+															"parameters": {
+																"first-value": "snake_body.OwnerID",
+																"comparison": 0,
+																"second-value": "snake_head.OwnerID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 429724710319448,
+															"parameters": {
+																"instance-variable": "PrevGridX",
+																"value": "snake_body.GridX"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 592602250264460,
+															"parameters": {
+																"instance-variable": "PrevGridY",
+																"value": "snake_body.GridY"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 944179752941920,
+															"parameters": {
+																"instance-variable": "PrevX",
+																"value": "snake_body.X"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 231398826659322,
+															"parameters": {
+																"instance-variable": "PrevY",
+																"value": "snake_body.Y"
+															}
+														},
+														{
+															"id": "add-key",
+															"objectClass": "Dic_BodyPrevPos",
+															"sid": 312686690771855,
+															"parameters": {
+																"key": "str(snake_body.NodeIndex) & \"_X\"",
+																"value": "snake_body.GridX"
+															}
+														},
+														{
+															"id": "add-key",
+															"objectClass": "Dic_BodyPrevPos",
+															"sid": 207387026354458,
+															"parameters": {
+																"key": "str(snake_body.NodeIndex) & \"_Y\"",
+																"value": "snake_body.GridY"
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 740388035641841,
+															"parameters": {
+																"type": "log",
+																"message": "\"Body \" & snake_body.NodeIndex & \" saved GridPos\"\r\n"
+															}
+														}
+													],
+													"sid": 420788426274479,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 355970929330597,
+																	"parameters": {
+																		"variable": "targetX",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 715118739326444,
+																	"parameters": {
+																		"variable": "targetY",
+																		"value": "0"
+																	}
+																}
+															],
+															"sid": 851499385588954,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 733900518361104,
+																			"parameters": {
+																				"first-value": "snake_body.NodeIndex",
+																				"comparison": 0,
+																				"second-value": "1"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 337149610384059,
+																			"parameters": {
+																				"variable": "targetX",
+																				"value": "snake_head.PrevGridX\n"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 663467559825332,
+																			"parameters": {
+																				"variable": "targetY",
+																				"value": "snake_head.PrevGridY\n"
+																			}
+																		}
+																	],
+																	"sid": 218223293581626
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "else",
+																			"objectClass": "System",
+																			"sid": 852742785120678
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 294170998469990,
+																			"parameters": {
+																				"variable": "targetX",
+																				"value": "int(Dic_BodyPrevPos.Get(str(snake_body.NodeIndex - 1) & \"_X\"))\n"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 648000014611205,
+																			"parameters": {
+																				"variable": "targetY",
+																				"value": "int(Dic_BodyPrevPos.Get(str(snake_body.NodeIndex - 1) & \"_Y\"))"
+																			}
+																		}
+																	],
+																	"sid": 261375875119093
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "for-each",
+																			"objectClass": "System",
+																			"sid": 744030044918549,
+																			"parameters": {
+																				"object": "checkpoint"
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 582066589651291,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "compare-two-values",
+																					"objectClass": "System",
+																					"sid": 768733927491341,
+																					"parameters": {
+																						"first-value": "checkpoint.GridX ",
+																						"comparison": 0,
+																						"second-value": "targetX"
+																					}
+																				},
+																				{
+																					"id": "compare-two-values",
+																					"objectClass": "System",
+																					"sid": 850375367685265,
+																					"parameters": {
+																						"first-value": "checkpoint.GridY",
+																						"comparison": 0,
+																						"second-value": "targetY"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "snake_body",
+																					"sid": 318566522874866,
+																					"parameters": {
+																						"instance-variable": "GridX",
+																						"value": "targetX"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "snake_body",
+																					"sid": 911618156055290,
+																					"parameters": {
+																						"instance-variable": "GridY",
+																						"value": "targetY"
+																					}
+																				},
+																				{
+																					"id": "tween-two-properties",
+																					"objectClass": "snake_body",
+																					"sid": 846732817562028,
+																					"behaviorType": "Tween",
+																					"parameters": {
+																						"tags": "\"body_move_checkpoint\"",
+																						"property": "position",
+																						"end-x": "checkpoint.X",
+																						"end-y": "checkpoint.Y",
+																						"time": "0.2",
+																						"ease": "noease",
+																						"destroy-on-complete": "no",
+																						"loop": "no",
+																						"ping-pong": "no",
+																						"repeat-count": "1"
+																					}
+																				}
+																			],
+																			"sid": 206531719494989
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 485999392235300,
+													"parameters": {
+														"object": "checkpoint"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 963822997509040,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 591380349373048,
+															"parameters": {
+																"first-value": "checkpoint.GridX ",
+																"comparison": 0,
+																"second-value": "snake_head.NextGridX"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 528870580293189,
+															"parameters": {
+																"first-value": "checkpoint.GridY",
+																"comparison": 0,
+																"second-value": "snake_head.NextGridY"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 188614216650800,
+															"parameters": {
+																"instance-variable": "GridX",
+																"value": "snake_head.NextGridX"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_head",
+															"sid": 505087388124405,
+															"parameters": {
+																"instance-variable": "GridY",
+																"value": "snake_head.NextGridY"
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "snake_head",
+															"sid": 690521573393318,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"head_move_checkpoint\"",
+																"property": "position",
+																"end-x": "checkpoint.X",
+																"end-y": "checkpoint.Y",
+																"time": "0.2",
+																"ease": "noease",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 561612314084932,
+															"parameters": {
+																"type": "log",
+																"message": "\"HEAD moving to checkpoint (\" & checkpoint.GridX & \",\" & checkpoint.GridY & \")\""
+															}
+														}
+													],
+													"sid": 169910300759448
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"functionName": "TH1: HeadOnEdgeGrid",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": true,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 908193735912637,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 199186180855785,
+											"parameters": {
+												"instance-variable": "PrevX",
+												"value": "snake_head.X"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 149462176279238,
+											"parameters": {
+												"instance-variable": "PrevY",
+												"value": "snake_head.Y"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 555876089351327,
+											"parameters": {
+												"instance-variable": "PrevGridX",
+												"value": "snake_head.GridX"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 293362075040236,
+											"parameters": {
+												"instance-variable": "PrevGridY",
+												"value": "snake_head.GridY"
+											}
+										},
+										{
+											"id": "clear",
+											"objectClass": "Dic_BodyPrevPos",
+											"sid": 829725722922090
+										},
+										{
+											"id": "add-key",
+											"objectClass": "Dic_BodyPrevPos",
+											"sid": 123749974743810,
+											"parameters": {
+												"key": "\"0_X\"",
+												"value": "snake_head.PrevGridX"
+											}
+										},
+										{
+											"id": "add-key",
+											"objectClass": "Dic_BodyPrevPos",
+											"sid": 474762920106990,
+											"parameters": {
+												"key": "\"0_Y\"",
+												"value": "snake_head.PrevGridY"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 974859046473695,
+											"parameters": {
+												"variable": "EscapeDuration",
+												"value": "10 - (snake_body.NodeIndex * 0.4)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 289842013540766,
+											"parameters": {
+												"variable": "EscapeDuration",
+												"value": "max(EscapeDuration, 9)"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "snake_head",
+											"sid": 672509868619647,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"head_escape\"",
+												"property": "position",
+												"end-x": "snake_head.X + cos(snake_head.Angle - 90) * 2000",
+												"end-y": "snake_head.Y + sin(snake_head.Angle - 90) * 2000",
+												"time": "EscapeDuration",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 198514764499569,
+											"parameters": {
+												"type": "log",
+												"message": "\"Head escaping...\""
+											}
+										}
+									],
+									"sid": 559818573661852,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 784518434891700,
+													"parameters": {
+														"object": "snake_body"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 735103596293191,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 480673165069615,
+															"parameters": {
+																"first-value": "snake_body.OwnerID",
+																"comparison": 0,
+																"second-value": "snake_head.OwnerID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 644111036339452,
+															"parameters": {
+																"instance-variable": "PrevX",
+																"value": "snake_body.X"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 781049872897593,
+															"parameters": {
+																"instance-variable": "PrevY",
+																"value": "snake_body.Y"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 363023567253222,
+															"parameters": {
+																"instance-variable": "PrevGridX",
+																"value": "snake_body.GridX"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 167594607484509,
+															"parameters": {
+																"instance-variable": "PrevGridY",
+																"value": "snake_body.GridY"
+															}
+														},
+														{
+															"id": "add-key",
+															"objectClass": "Dic_BodyPrevPos",
+															"sid": 649837634749438,
+															"parameters": {
+																"key": "str(snake_body.NodeIndex) & \"_X\"",
+																"value": "snake_body.PrevGridX"
+															}
+														},
+														{
+															"id": "add-key",
+															"objectClass": "Dic_BodyPrevPos",
+															"sid": 598799235797549,
+															"parameters": {
+																"key": "str(snake_body.NodeIndex) & \"_Y\"",
+																"value": "snake_body.PrevGridY"
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 834113439074365,
+															"parameters": {
+																"type": "log",
+																"message": "\"Saved Body \" & snake_body.NodeIndex & \" pos: \" & snake_body.PrevGridX & \",\" & snake_body.PrevGridY"
+															}
+														}
+													],
+													"sid": 447387803516946,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 684361839005211,
+																	"parameters": {
+																		"first-value": "snake_body.NodeIndex",
+																		"comparison": 0,
+																		"second-value": "1"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_body",
+																	"sid": 486586139873421,
+																	"parameters": {
+																		"instance-variable": "GridX",
+																		"value": "snake_head.PrevGridX"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_body",
+																	"sid": 710450618832804,
+																	"parameters": {
+																		"instance-variable": "GridY",
+																		"value": "snake_head.PrevGridY"
+																	}
+																},
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 741831917267937,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"Body 1 GridPos set to: \" & snake_body.GridX & \",\" & snake_body.GridY"
+																	}
+																}
+															],
+															"sid": 635734477060389
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 259479715988577
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 867753605326173,
+																	"parameters": {
+																		"variable": "targetX",
+																		"value": "int(Dic_BodyPrevPos.Get(str(snake_body.NodeIndex - 1) & \"_X\"))"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 570404048930654,
+																	"parameters": {
+																		"variable": "targetY",
+																		"value": "int(Dic_BodyPrevPos.Get(str(snake_body.NodeIndex - 1) & \"_Y\"))"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_body",
+																	"sid": 977345674088267,
+																	"parameters": {
+																		"instance-variable": "GridX",
+																		"value": "targetX"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_body",
+																	"sid": 742684060152387,
+																	"parameters": {
+																		"instance-variable": "GridY",
+																		"value": "targetY"
+																	}
+																},
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 469444345189789,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"Body \" & snake_body.NodeIndex & \" GridPos set to: \" & snake_body.GridX & \",\" & snake_body.GridY"
+																	}
+																}
+															],
+															"sid": 846006877916206
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "System",
+																	"sid": 514315196718099,
+																	"parameters": {
+																		"object": "checkpoint"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 207145013404427,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 750730325875431,
+																			"parameters": {
+																				"first-value": "checkpoint.GridX",
+																				"comparison": 0,
+																				"second-value": "snake_body.GridX"
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 291548750429262,
+																			"parameters": {
+																				"first-value": "checkpoint.GridY",
+																				"comparison": 0,
+																				"second-value": "snake_body.GridY"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "tween-two-properties",
+																			"objectClass": "snake_body",
+																			"sid": 279856095986286,
+																			"behaviorType": "Tween",
+																			"parameters": {
+																				"tags": "\"move\"",
+																				"property": "position",
+																				"end-x": "checkpoint.X",
+																				"end-y": "checkpoint.Y",
+																				"time": "0.125",
+																				"ease": "noease",
+																				"destroy-on-complete": "no",
+																				"loop": "no",
+																				"ping-pong": "no",
+																				"repeat-count": "1"
+																			}
+																		},
+																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 789641080284030,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Body \" & snake_body.NodeIndex & \" moving to checkpoint at (\" & checkpoint.GridX & \",\" & checkpoint.GridY & \")\""
+																			}
+																		}
+																	],
+																	"sid": 966747045506867
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"functionName": "TH2: HeadBlocked",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": true,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 318845037066394,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "stop-tweens",
+											"objectClass": "snake_head",
+											"sid": 372259712814777,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"head_move_checkpoint\""
+											}
+										},
+										{
+											"id": "stop-all-tweens",
+											"objectClass": "UI_redaura",
+											"sid": 198457696903032,
+											"behaviorType": "Tween"
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
+											"sid": 488678024758099,
+											"parameters": {
+												"instance-variable": "CaseType",
+												"value": "2"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "snake_head",
+											"sid": 851262552871580,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"collision_pullback\"",
+												"property": "position",
+												"end-x": " snake_head.PrevX",
+												"end-y": " snake_head.PrevY",
+												"time": "0.2",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "UI_redaura",
+											"sid": 226015138874974,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"warning_open\"",
+												"property": "offsetOpacity",
+												"end-value": "100",
+												"time": "0.1",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 381004108059848,
+											"parameters": {
+												"type": "log",
+												"message": "\"HEAD pulling back from collision...\""
+											}
+										}
+									],
+									"sid": 110106723102436,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 750064283608222,
+													"parameters": {
+														"seconds": "0.5",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "UI_redaura",
+													"sid": 105656688748083,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"warning_close\"",
+														"property": "offsetOpacity",
+														"end-value": "0",
+														"time": "0.5",
+														"ease": "noease",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 568601103480850
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 306631805431954,
+											"parameters": {
+												"object": "snake_body"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 184009227817499,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 868566328590986,
+													"parameters": {
+														"first-value": "snake_body.OwnerID",
+														"comparison": 0,
+														"second-value": "snake_head.OwnerID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop-tweens",
+													"objectClass": "snake_body",
+													"sid": 602278124863170,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"body_move_checkpoint\""
+													}
+												},
+												{
+													"id": "tween-two-properties",
+													"objectClass": "snake_body",
+													"sid": 425071326971146,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"collision_pullback\"",
+														"property": "position",
+														"end-x": "snake_body.PrevX",
+														"end-y": "snake_body.PrevY",
+														"time": "0.2",
+														"ease": "noease",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 573616328005696,
+													"parameters": {
+														"type": "log",
+														"message": "\"Body \" & snake_body.NodeIndex & \" pulling back to (\" &  snake_body.PrevX & \",\" & snake_body.PrevY & \")\""
+													}
+												}
+											],
+											"sid": 458330260286854
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 675651775942849
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Time_Level",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 462178663642448,
+									"parameters": {
+										"interval-seconds": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "text_time",
+									"sid": 201869453266939,
+									"parameters": {
+										"text": "zeropad(floor(TimeRemaining / 60), 2) & \":\" & zeropad(TimeRemaining % 60, 2)"
+									}
+								}
+							],
+							"sid": 655254648835363,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 163819575047577,
+											"parameters": {
+												"first-value": "TimeRemaining",
+												"comparison": 4,
+												"second-value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 498985220586805,
+											"parameters": {
+												"first-value": "IsTimerRunning",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 823200227725089,
+											"parameters": {
+												"variable": "TimeRemaining",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 724860124895867
+								}
+							]
+						}
+					],
+					"sid": 536342940732395
+				}
+			],
+			"sid": 403058626511012
+		}
+	],
+	"sid": 255832887203852
+}

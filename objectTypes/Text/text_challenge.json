@@ -1,0 +1,10 @@
+{
+	"name": "text_challenge",
+	"plugin-id": "Text",
+	"sid": 422048735726461,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

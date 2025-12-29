@@ -1,0 +1,10 @@
+{
+	"name": "text_music",
+	"plugin-id": "Text",
+	"sid": 417843195235291,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

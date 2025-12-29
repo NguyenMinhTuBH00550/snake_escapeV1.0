@@ -1,0 +1,68 @@
+{
+	"name": "UI_snake_eye_white",
+	"plugin-id": "Sprite",
+	"sid": 552852977696694,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "OffsetY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 120839147124596
+		},
+		{
+			"name": "OffsetX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 780484280857645
+		},
+		{
+			"name": "OwnerID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 970301542606722
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 949694017354522
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 233,
+						"height": 126,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7303515,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 230274190446287,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

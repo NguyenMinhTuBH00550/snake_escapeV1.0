@@ -1,0 +1,410 @@
+{
+	"name": "es_loading",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "LOCAL_TAG",
+			"type": "string",
+			"initialValue": "1.1.1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 747725889197551
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_COIN",
+			"type": "string",
+			"initialValue": "SAVE_COIN",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 140311367469370
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_LEVEL",
+			"type": "string",
+			"initialValue": "SAVE_LEVEL",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 541452750897695
+		},
+		{
+			"eventType": "variable",
+			"name": "LevelID",
+			"type": "string",
+			"initialValue": "\"\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 409464466058385
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 620365075732231
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "HUD_tileLoading",
+					"sid": 536688091320010,
+					"parameters": {
+						"width": "0"
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 798112519158344,
+					"parameters": {
+						"key": "LOCAL_TAG"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 713142596339423,
+					"parameters": {
+						"tag": "\"LoadAllLevels\"",
+						"file": "all_levels.json"
+					}
+				}
+			],
+			"sid": 515464601622336
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 548090827895600,
+					"parameters": {
+						"tag": "\"LoadAllLevels\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Dic_Level",
+					"sid": 581656299648756,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 953146970376252,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each-key",
+							"objectClass": "Dic_Level",
+							"sid": 952239167355847
+						}
+					],
+					"actions": [
+						{
+							"id": "request-url",
+							"objectClass": "AJAX",
+							"sid": 244085375572653,
+							"parameters": {
+								"tag": "\"LoadLevel_\" & Dic_Level.CurrentKey",
+								"url": "Dic_Level.Get(Dic_Level.CurrentKey)\n"
+							}
+						}
+					],
+					"sid": 590744882243646
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-completed",
+					"objectClass": "AJAX",
+					"sid": 978826263198226
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 825869446316893,
+					"parameters": {
+						"first-value": "find(AJAX.Tag, \"LoadLevel_\")",
+						"comparison": 1,
+						"second-value": "-1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 309674604688340,
+					"parameters": {
+						"variable": "LevelID",
+						"value": "replace(AJAX.Tag, \"LoadLevel_\", \"\")\r\n"
+					}
+				},
+				{
+					"id": "add-key",
+					"objectClass": "Dic_Level",
+					"sid": 969115301139624,
+					"parameters": {
+						"key": "LevelID",
+						"value": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 563977563637572
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 448975234053506,
+					"parameters": {
+						"key": "LOCAL_TAG"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "int_SAVE_GAME",
+					"sid": 265721976773679
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "HUD_tileLoading",
+					"sid": 232514708514862,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"loading\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 265934556098516
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 722313678741553,
+					"parameters": {
+						"key": "LOCAL_TAG"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 393353556618233,
+					"parameters": {
+						"key": "LOCAL_TAG"
+					}
+				}
+			],
+			"sid": 492049667588831
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 539343581812852,
+					"parameters": {
+						"key": "LOCAL_TAG"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "DIcSaveGame",
+					"sid": 629791993282922,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"callFunction": "int_SAVE_GAME",
+					"sid": 403401732537403
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "HUD_tileLoading",
+					"sid": 512765692595088,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"loading\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 970052492998585
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "HUD_tileLoading",
+					"sid": 858500041346877,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"loading\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 188122821793951,
+					"parameters": {
+						"layout": "level 1"
+					}
+				}
+			],
+			"sid": 921014087249019
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "HUD_tileLoading",
+					"sid": 381236712482932,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"loading\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "HUD_tileLoading",
+					"sid": 453433864961438,
+					"parameters": {
+						"width": "Self.ImageWidth * Self.Tween.Value(\"loading\") /100"
+					}
+				}
+			],
+			"sid": 651639665765078
+		},
+		{
+			"functionName": "int_SAVE_GAME",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 385979098988155,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "COINS"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-key",
+							"objectClass": "DIcSaveGame",
+							"sid": 951658043387128,
+							"parameters": {
+								"key": "SAVE_COIN"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-key",
+							"objectClass": "DIcSaveGame",
+							"sid": 430000019624481,
+							"parameters": {
+								"key": "SAVE_COIN",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 417009553548023
+				},
+				{
+					"eventType": "comment",
+					"text": "LEVEL"
+				}
+			]
+		},
+		{
+			"functionName": "SAVE_GAME",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 233795556942204,
+					"parameters": {
+						"key": "LOCAL_TAG",
+						"value": "DicSaveGame.AsJSON"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 250420259192728,
+					"parameters": {
+						"key": "SAVE_LEVEL",
+						"value": "Dic_level.AsJSON"
+					}
+				}
+			],
+			"sid": 310615058733741
+		}
+	],
+	"sid": 307326677987007
+}

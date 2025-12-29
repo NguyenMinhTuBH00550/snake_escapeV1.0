@@ -1,0 +1,124 @@
+{
+	"name": "snake_body",
+	"plugin-id": "Sprite",
+	"sid": 381419617584898,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "OwnerID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 522256561638708
+		},
+		{
+			"name": "NodeIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 685600998071254
+		},
+		{
+			"name": "GridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 548071939665609
+		},
+		{
+			"name": "GridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 609888583949617
+		},
+		{
+			"name": "PrevGridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 822863171751604
+		},
+		{
+			"name": "PrevGridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 832752325962365
+		},
+		{
+			"name": "PrevX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 973805595897326
+		},
+		{
+			"name": "PrevY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 775168793251829
+		},
+		{
+			"name": "isEscaping",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 177279346241197
+		},
+		{
+			"name": "TargetGridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 938862099588152
+		},
+		{
+			"name": "TargetGridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 162039785345264
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 571057577637886
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5513419,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 225750075188873,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

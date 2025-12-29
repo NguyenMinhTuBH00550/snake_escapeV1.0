@@ -1,0 +1,611 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 44903,
+	"name": "snake escape",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "aekiro_proui",
+			"name": "ProUI",
+			"author": "Aekiro",
+			"bundled": false,
+			"version": "1.822"
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "aekiro_button",
+			"name": "Button",
+			"author": "Aekiro",
+			"bundled": false,
+			"version": "1.822"
+		},
+		{
+			"type": "behavior",
+			"id": "aekiro_gameobject",
+			"name": "Game Object",
+			"author": "Aekiro",
+			"bundled": false,
+			"version": "1.822"
+		},
+		{
+			"type": "effect",
+			"id": "outline",
+			"name": "Outline",
+			"author": "Richard Lems",
+			"bundled": false,
+			"version": "1.0.0.0"
+		}
+	],
+	"uniqueId": "17juoc9txi6",
+	"objectTypes": {
+		"items": [
+			"Anchor",
+			"LocalStorage",
+			"ProUI",
+			"AJAX",
+			"Browser",
+			"Sprite2",
+			"Mouse",
+			"Touch",
+			"Sprite3",
+			"Sprite4",
+			"Sprite6",
+			"Sprite7"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"HUD_icon_snake",
+					"HUD_level_txt",
+					"HUD_pause",
+					"HUD_retry",
+					"HUD_heart",
+					"HUD_clock_icon",
+					"HUD_layout_level",
+					"HUD_BG_loading",
+					"HUD_barBG",
+					"HUD_logo",
+					"HUD_tileLoading",
+					"HUD_popUp_close",
+					"HUD_homeBottom_tab",
+					"HUD_popUp_pause",
+					"HUD_setting_BA",
+					"HUD_booster_frame"
+				],
+				"subfolders": [],
+				"name": "HUD"
+			},
+			{
+				"items": [
+					"text_level",
+					"text_count_snake",
+					"text_time",
+					"text_challenge",
+					"text_booster",
+					"text_loading",
+					"text_popUp_setting",
+					"text_music",
+					"text_sound",
+					"text_vibration",
+					"text_privacy",
+					"text_restore_purchase",
+					"text_on",
+					"coin_text",
+					"text_remove_ad",
+					"text_videoBar",
+					"text_noti_newBooster",
+					"text_hint",
+					"text_describe",
+					"text_OK"
+				],
+				"subfolders": [],
+				"name": "Text"
+			},
+			{
+				"items": [
+					"UI_btn_booter",
+					"UI_challenge_level",
+					"UI_lock_booster",
+					"UI_snake_head",
+					"UI_snake_eye_white",
+					"UI_eye_right",
+					"UI_eye_left",
+					"home_snake_preview",
+					"UI_icon_music",
+					"UI_icon_sound",
+					"UI_icon_vibration",
+					"UI_setting_button",
+					"UI_bar_setting",
+					"UI_btnPlay",
+					"UI_btnPlus_topBar",
+					"UI_coin_topBar",
+					"UI_edge_title",
+					"UI_home_process",
+					"UI_homeBottom_tab",
+					"UI_homeTab",
+					"UI_icon_challenge",
+					"UI_icon_frameTop",
+					"UI_icon_play",
+					"UI_icon_settingButton",
+					"UI_icon_shop",
+					"UI_noAd",
+					"UI_noAd_frame",
+					"UI_videoAd",
+					"UI_aura",
+					"UI_booster_unlock",
+					"UI_currentLevel",
+					"UI_icon_hint",
+					"UL_btn_booster",
+					"UI_btn_resume",
+					"UI_redaura"
+				],
+				"subfolders": [],
+				"name": "UI"
+			},
+			{
+				"items": [
+					"Grid_Dot",
+					"snake_body",
+					"snake_head",
+					"checkpoint"
+				],
+				"subfolders": [],
+				"name": "Spite"
+			},
+			{
+				"items": [
+					"DIcSaveGame",
+					"Dic_Level",
+					"Dic_BodyPrevPos"
+				],
+				"subfolders": [],
+				"name": "Dic"
+			},
+			{
+				"items": [
+					"GridMap"
+				],
+				"subfolders": [],
+				"name": "Array"
+			},
+			{
+				"items": [
+					"JsonLevel"
+				],
+				"subfolders": [],
+				"name": "JSON"
+			}
+		]
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"obj_bank",
+			"UI",
+			"Loading",
+			"Setting",
+			"Home",
+			"Pause"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"level 1"
+				],
+				"subfolders": [],
+				"name": "level"
+			},
+			{
+				"items": [
+					"hint_booster"
+				],
+				"subfolders": [],
+				"name": "Booster"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"es_game",
+			"es_loading"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "Orbitron Light.otf",
+					"type": "application/font-sfnt",
+					"sid": 666540868072092,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Orbitron Medium.otf",
+					"type": "application/font-sfnt",
+					"sid": 875438459492240,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SourceCodePro-Regular.otf",
+					"type": "application/font-sfnt",
+					"sid": 550189004165447,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "LiberationSans.ttf",
+					"type": "application/font-sfnt",
+					"sid": 493482643721938,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "LilitaOne-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 174447947956546,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "LilitaOne-Regular_0.ttf",
+					"type": "application/font-sfnt",
+					"sid": 258584626387125,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PerfectDOSVGA437.ttf",
+					"type": "application/font-sfnt",
+					"sid": 933399085554139,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Orbitron Black.otf",
+					"type": "application/font-sfnt",
+					"sid": 352142975189332,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "LiberationSans_0.ttf",
+					"type": "application/font-sfnt",
+					"sid": 735404635195417,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Orbitron Bold.otf",
+					"type": "application/font-sfnt",
+					"sid": 549779072135293,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 518083699098551,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 724342947234108,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 549667301478871,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 460783553849073,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 374881378399789,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 744980435030088,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 937282890987065,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "all_levels.json",
+					"type": "application/json",
+					"sid": 398895278329981,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "lv2.json",
+							"type": "application/json",
+							"sid": 651962819982096,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv1.json",
+							"type": "application/json",
+							"sid": 430892941592193,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv3.json",
+							"type": "application/json",
+							"sid": 765073237080019,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv21.json",
+							"type": "application/json",
+							"sid": 102408039072964,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "levels"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Flowchart 1"
+		],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"autoIncrementVersion": false,
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "portrait",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "bilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 540,
+	"viewportHeight": 960,
+	"firstLayout": "Loading"
+}

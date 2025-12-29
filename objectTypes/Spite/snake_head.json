@@ -1,0 +1,152 @@
+{
+	"name": "snake_head",
+	"plugin-id": "Sprite",
+	"sid": 654253930936107,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "OwnerID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 625877831219529
+		},
+		{
+			"name": "GridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 600525806791230
+		},
+		{
+			"name": "GridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 536621466095768
+		},
+		{
+			"name": "Dir",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 410214902372937
+		},
+		{
+			"name": "NextGridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 730930792964945
+		},
+		{
+			"name": "NextGridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 599542311851924
+		},
+		{
+			"name": "HasBlocker",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 604440052814267
+		},
+		{
+			"name": "HasCheckpoint",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 159845398140963
+		},
+		{
+			"name": "isActive",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 858333140664819
+		},
+		{
+			"name": "PrevGridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 632439068485716
+		},
+		{
+			"name": "PrevGridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 691820520106221
+		},
+		{
+			"name": "PrevY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 837735932819717
+		},
+		{
+			"name": "PrevX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 420891269787670
+		},
+		{
+			"name": "isEscaping",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 743757511550943
+		},
+		{
+			"name": "CaseType",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 999538615946955
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 869963804452179
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 404645,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 720462692914363,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"name": "text_popUp_setting",
+	"plugin-id": "Text",
+	"sid": 163019257595584,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}

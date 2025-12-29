@@ -1,0 +1,15 @@
+{
+	"name": "text_noti_newBooster",
+	"plugin-id": "Text",
+	"sid": 296192553994692,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}

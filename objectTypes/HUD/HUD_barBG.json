@@ -1,0 +1,58 @@
+{
+	"name": "HUD_barBG",
+	"plugin-id": "Sprite",
+	"sid": 804934160923726,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 464,
+						"height": 89,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3210793,
+						"collisionPoly": {
+							"points": [
+								0.0603448275862069,
+								0,
+								0.9547413793103449,
+								0.02247191011235955,
+								0.9741379310344828,
+								0.07865168539325842,
+								0.9719827586206896,
+								0.8426966292134831,
+								0.9418103448275862,
+								0.9101123595505618,
+								0.034482758620689655,
+								0.8651685393258427,
+								0.02586206896551724,
+								0.07865168539325842
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 640123669393392,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

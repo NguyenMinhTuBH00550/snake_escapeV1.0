@@ -1,0 +1,10 @@
+{
+	"name": "text_vibration",
+	"plugin-id": "Text",
+	"sid": 280923633355466,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

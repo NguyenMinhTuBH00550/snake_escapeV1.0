@@ -1,0 +1,81 @@
+{
+	"name": "Grid_Dot",
+	"plugin-id": "Sprite",
+	"sid": 778161425745761,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "CPIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 379502057327597
+		},
+		{
+			"name": "PathOrder",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 832463943167512
+		},
+		{
+			"name": "GridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 815711494310681
+		},
+		{
+			"name": "GridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 154444093165495
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 512,
+						"height": 512,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1396465,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.23632830381393433,
+								0.751953125,
+								0.23828113079071045,
+								0.751953125,
+								0.6875,
+								0.25,
+								0.6855467557907104
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 609576939697383,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
