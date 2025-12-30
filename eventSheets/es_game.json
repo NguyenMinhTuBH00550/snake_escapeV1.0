@@ -307,6 +307,26 @@
 							],
 							"actions": [
 								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 438865926798178,
+									"disabled": true,
+									"parameters": {
+										"type": "log",
+										"message": "\"CurrentLevel = \" & CurrentLevel"
+									}
+								},
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 298092071911703,
+									"disabled": true,
+									"parameters": {
+										"type": "log",
+										"message": "\"JSON string = \" & Dic_Level.Get(CurrentLevel)"
+									}
+								},
+								{
 									"id": "parse",
 									"objectClass": "JsonLevel",
 									"sid": 124700179948049,
@@ -353,7 +373,7 @@
 								},
 								{
 									"callFunction": "CreateMap",
-									"sid": 728849405239621
+									"sid": 504586293925285
 								}
 							],
 							"sid": 844376283277351
@@ -368,28 +388,129 @@
 							"functionParameters": [],
 							"eventType": "function-block",
 							"conditions": [],
-							"actions": [],
-							"sid": 332399760419149,
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 597243716764404,
+									"disabled": true,
+									"parameters": {
+										"type": "log",
+										"message": "\"Inside CreateMap - size.x = \" & JsonLevel.Get(\"size.x\")"
+									}
+								}
+							],
+							"sid": 735024326757715,
 							"children": [
 								{
 									"eventType": "variable",
-									"name": "NodeY_Json",
+									"name": "nodeCount",
 									"type": "number",
 									"initialValue": "0",
 									"comment": "",
 									"isStatic": false,
 									"isConstant": false,
-									"sid": 572952211763798
+									"sid": 208235264857947
 								},
 								{
 									"eventType": "variable",
-									"name": "NodeCount",
+									"name": "headX",
 									"type": "number",
 									"initialValue": "0",
 									"comment": "",
 									"isStatic": false,
 									"isConstant": false,
-									"sid": 791361811675473
+									"sid": 505528050696770
+								},
+								{
+									"eventType": "variable",
+									"name": "headY",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 399264627455485
+								},
+								{
+									"eventType": "variable",
+									"name": "tailX",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 439842981914561
+								},
+								{
+									"eventType": "variable",
+									"name": "tailY",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 716065720324464
+								},
+								{
+									"eventType": "variable",
+									"name": "totalNodes",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 804487144440188
+								},
+								{
+									"eventType": "variable",
+									"name": "currentX",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 532503268000819
+								},
+								{
+									"eventType": "variable",
+									"name": "currentY",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 299128076520369
+								},
+								{
+									"eventType": "variable",
+									"name": "pixelX",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 435387482415624
+								},
+								{
+									"eventType": "variable",
+									"name": "pixelY",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 197579463360042
+								},
+								{
+									"eventType": "variable",
+									"name": "isDiagonal",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 160624222544708
 								},
 								{
 									"eventType": "block",
@@ -397,7 +518,7 @@
 										{
 											"id": "for",
 											"objectClass": "System",
-											"sid": 313827097054098,
+											"sid": 498538111514401,
 											"parameters": {
 												"name": "\"x\"",
 												"start-index": "0",
@@ -406,7 +527,7 @@
 										}
 									],
 									"actions": [],
-									"sid": 390774174777397,
+									"sid": 432508502352929,
 									"children": [
 										{
 											"eventType": "block",
@@ -414,7 +535,7 @@
 												{
 													"id": "for",
 													"objectClass": "System",
-													"sid": 741418228441590,
+													"sid": 659349980026255,
 													"parameters": {
 														"name": "\"y\"",
 														"start-index": "0",
@@ -426,7 +547,7 @@
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 491816228410313,
+													"sid": 191296967723953,
 													"parameters": {
 														"object-to-create": "Grid_Dot",
 														"layer": "\"Grid\"",
@@ -439,7 +560,7 @@
 												{
 													"id": "set-instvar-value",
 													"objectClass": "Grid_Dot",
-													"sid": 683769882569740,
+													"sid": 318423451687030,
 													"parameters": {
 														"instance-variable": "GridX",
 														"value": "loopindex(\"x\")"
@@ -448,7 +569,7 @@
 												{
 													"id": "set-instvar-value",
 													"objectClass": "Grid_Dot",
-													"sid": 377244024231854,
+													"sid": 397567913918264,
 													"parameters": {
 														"instance-variable": "GridY",
 														"value": "loopindex(\"y\")"
@@ -457,7 +578,7 @@
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 821309171554782,
+													"sid": 360531188631389,
 													"parameters": {
 														"object-to-create": "checkpoint",
 														"layer": "\"Grid\"",
@@ -470,7 +591,7 @@
 												{
 													"id": "set-instvar-value",
 													"objectClass": "checkpoint",
-													"sid": 466206262734382,
+													"sid": 405768372824922,
 													"parameters": {
 														"instance-variable": "GridX",
 														"value": "loopindex(\"x\")"
@@ -479,7 +600,7 @@
 												{
 													"id": "set-instvar-value",
 													"objectClass": "checkpoint",
-													"sid": 369404378738944,
+													"sid": 717756038311810,
 													"parameters": {
 														"instance-variable": "GridY",
 														"value": "loopindex(\"y\")"
@@ -488,7 +609,7 @@
 												{
 													"id": "log",
 													"objectClass": "Browser",
-													"sid": 277647102514332,
+													"sid": 169135519075176,
 													"disabled": true,
 													"parameters": {
 														"type": "log",
@@ -496,7 +617,7 @@
 													}
 												}
 											],
-											"sid": 711114553120964
+											"sid": 431937563438591
 										}
 									]
 								},
@@ -506,7 +627,7 @@
 										{
 											"id": "for-each",
 											"objectClass": "JsonLevel",
-											"sid": 461249063734340,
+											"sid": 863199212711516,
 											"parameters": {
 												"path": "\"arrows\""
 											}
@@ -514,35 +635,64 @@
 									],
 									"actions": [
 										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 249784792577650,
+											"disabled": true,
+											"parameters": {
+												"type": "log",
+												"message": "\"Total arrows: \" & JsonLevel.ArraySize(\"arrows\")"
+											}
+										},
+										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 277932559132455,
+											"sid": 813349250075859,
 											"parameters": {
 												"variable": "ArrowIndex",
 												"value": "JsonLevel.CurrentKey"
 											}
 										},
 										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 359031476398909,
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 301667405910389,
+											"disabled": true,
 											"parameters": {
-												"variable": "ArrowColor",
-												"value": "int(JsonLevel.Get(\"arrows.\" &  \".color\"))\r\n"
+												"type": "log",
+												"message": "\"Processing arrow: \" & ArrowIndex"
 											}
 										},
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 315063970234692,
+											"sid": 920169966834241,
+											"parameters": {
+												"variable": "ArrowColor",
+												"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".color\"))"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 666125402601115,
+											"parameters": {
+												"variable": "nodeCount",
+												"value": "0"
+											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 744065762124863,
 											"disabled": true,
 											"parameters": {
-												"variable": "NodeCount",
-												"value": "JsonLevel.ArraySize(\"arrows.\" & ArrowIndex & \".nodes\")"
+												"type": "log",
+												"message": "\"Arrow \" & ArrowIndex & \" | nodeCount=\" & nodeCount & \" | isDiagonal=\" & isDiagonal & \" | totalNodes=\" & totalNodes"
 											}
 										}
 									],
-									"sid": 677347778126951,
+									"sid": 559085100554659,
 									"children": [
 										{
 											"eventType": "block",
@@ -550,7 +700,7 @@
 												{
 													"id": "for-each",
 													"objectClass": "JsonLevel",
-													"sid": 277349906352122,
+													"sid": 506014198217399,
 													"parameters": {
 														"path": "\"arrows.\" & ArrowIndex & \".nodes\"\r\n"
 													}
@@ -558,9 +708,18 @@
 											],
 											"actions": [
 												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 860825482178491,
+													"parameters": {
+														"variable": "nodeCount",
+														"value": "1"
+													}
+												},
+												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 591086121919420,
+													"sid": 889765517245336,
 													"parameters": {
 														"variable": "NodeX",
 														"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & JsonLevel.CurrentKey & \".x\"))\n"
@@ -569,35 +728,14 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 295530732609588,
+													"sid": 968512139448566,
 													"parameters": {
 														"variable": "NodeY",
 														"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & JsonLevel.CurrentKey & \".y\"))\n"
 													}
-												},
-												{
-													"id": "log",
-													"objectClass": "Browser",
-													"sid": 212890443018853,
-													"disabled": true,
-													"parameters": {
-														"type": "log",
-														"message": "\"key \" & JsonLevel.CurrentKey"
-													}
-												},
-												{
-													"id": "set-at-xyz",
-													"objectClass": "GridMap",
-													"sid": 282432383027583,
-													"parameters": {
-														"x": "NodeX",
-														"y": "NodeY",
-														"z": "0",
-														"value": "int(ArrowIndex) + 1"
-													}
 												}
 											],
-											"sid": 525627256030310,
+											"sid": 456664145932564,
 											"children": [
 												{
 													"eventType": "block",
@@ -605,11 +743,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 132448695678421,
+															"sid": 218108862665408,
 															"parameters": {
-																"first-value": "int(JsonLevel.CurrentKey)",
+																"first-value": "nodeCount",
 																"comparison": 0,
-																"second-value": "0"
+																"second-value": "1"
 															}
 														}
 													],
@@ -617,7 +755,7 @@
 														{
 															"id": "create-object",
 															"objectClass": "System",
-															"sid": 985215439493661,
+															"sid": 685353993355069,
 															"parameters": {
 																"object-to-create": "snake_head",
 																"layer": "\"Snakes\"",
@@ -630,7 +768,7 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "snake_head",
-															"sid": 450211667904875,
+															"sid": 498047763157845,
 															"parameters": {
 																"instance-variable": "OwnerID",
 																"value": "ArrowIndex"
@@ -639,7 +777,7 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "snake_head",
-															"sid": 102103887614413,
+															"sid": 816609744422289,
 															"parameters": {
 																"instance-variable": "GridX",
 																"value": "NodeX"
@@ -648,41 +786,32 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "snake_head",
-															"sid": 520858025426150,
+															"sid": 226923624623947,
 															"parameters": {
 																"instance-variable": "GridY",
 																"value": "NodeY"
 															}
 														},
 														{
-															"id": "set-instvar-value",
-															"objectClass": "snake_head",
-															"sid": 489559663389122,
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 345569914052089,
 															"parameters": {
-																"instance-variable": "isActive",
-																"value": "0"
+																"variable": "headX",
+																"value": "NodeX"
 															}
 														},
 														{
-															"id": "set-instvar-value",
-															"objectClass": "snake_head",
-															"sid": 771403253970943,
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 126364868048025,
 															"parameters": {
-																"instance-variable": "HasBlocker",
-																"value": "0"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "snake_head",
-															"sid": 830028115849678,
-															"parameters": {
-																"instance-variable": "HasCheckpoint",
-																"value": "0"
+																"variable": "headY",
+																"value": "NodeY"
 															}
 														}
 													],
-													"sid": 547264823878703,
+													"sid": 581107391516684,
 													"children": [
 														{
 															"eventType": "block",
@@ -691,7 +820,7 @@
 																{
 																	"id": "create-object",
 																	"objectClass": "System",
-																	"sid": 291008178007756,
+																	"sid": 287314978935206,
 																	"parameters": {
 																		"object-to-create": "UI_snake_head",
 																		"layer": "\"Snakes\"",
@@ -704,7 +833,7 @@
 																{
 																	"id": "create-object",
 																	"objectClass": "System",
-																	"sid": 944779553407676,
+																	"sid": 191906626697394,
 																	"parameters": {
 																		"object-to-create": "UI_snake_eye_white",
 																		"layer": "\"Snakes\"",
@@ -717,7 +846,7 @@
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "UI_snake_eye_white",
-																	"sid": 258253881790817,
+																	"sid": 418570960560285,
 																	"parameters": {
 																		"instance-variable": "OwnerID",
 																		"value": "ArrowIndex"
@@ -726,14 +855,14 @@
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "UI_snake_head",
-																	"sid": 816072407851311,
+																	"sid": 718268610228503,
 																	"parameters": {
 																		"instance-variable": "OwnerID",
 																		"value": "ArrowIndex"
 																	}
 																}
 															],
-															"sid": 182446302833112
+															"sid": 897196808220818
 														},
 														{
 															"eventType": "block",
@@ -742,7 +871,7 @@
 																{
 																	"id": "create-object",
 																	"objectClass": "System",
-																	"sid": 107476144044280,
+																	"sid": 318480287322595,
 																	"parameters": {
 																		"object-to-create": "UI_eye_right",
 																		"layer": "\"Snakes\"",
@@ -755,14 +884,14 @@
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "UI_eye_right",
-																	"sid": 810370430422694,
+																	"sid": 120979576972366,
 																	"parameters": {
 																		"instance-variable": "OwnerID",
 																		"value": "ArrowIndex"
 																	}
 																}
 															],
-															"sid": 843050734008923
+															"sid": 146562456059873
 														},
 														{
 															"eventType": "block",
@@ -771,7 +900,7 @@
 																{
 																	"id": "create-object",
 																	"objectClass": "System",
-																	"sid": 652055063295768,
+																	"sid": 642593767964333,
 																	"parameters": {
 																		"object-to-create": "UI_eye_left",
 																		"layer": "\"Snakes\"",
@@ -784,14 +913,14 @@
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "UI_eye_left",
-																	"sid": 296191391604688,
+																	"sid": 895206276512676,
 																	"parameters": {
 																		"instance-variable": "OwnerID",
 																		"value": "ArrowIndex"
 																	}
 																}
 															],
-															"sid": 384752402833857
+															"sid": 539038591165930
 														}
 													]
 												},
@@ -801,14 +930,14 @@
 														{
 															"id": "else",
 															"objectClass": "System",
-															"sid": 471924414920792
+															"sid": 823340068123606
 														}
 													],
 													"actions": [
 														{
 															"id": "create-object",
 															"objectClass": "System",
-															"sid": 790461507782217,
+															"sid": 178471732933503,
 															"parameters": {
 																"object-to-create": "snake_body",
 																"layer": "\"Snakes\"",
@@ -821,7 +950,7 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "snake_body",
-															"sid": 107486221030650,
+															"sid": 690203580928941,
 															"parameters": {
 																"instance-variable": "NodeIndex",
 																"value": "int(JsonLevel.CurrentKey)"
@@ -830,7 +959,7 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "snake_body",
-															"sid": 348311097608431,
+															"sid": 603869584146965,
 															"parameters": {
 																"instance-variable": "OwnerID",
 																"value": "ArrowIndex"
@@ -839,7 +968,7 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "snake_body",
-															"sid": 270920863710323,
+															"sid": 369461754885699,
 															"parameters": {
 																"instance-variable": "GridX",
 																"value": "NodeX"
@@ -848,16 +977,177 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "snake_body",
-															"sid": 371820842402125,
+															"sid": 882776269093166,
 															"parameters": {
 																"instance-variable": "GridY",
 																"value": "NodeY"
 															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 133961887651909,
+															"parameters": {
+																"variable": "tailX",
+																"value": "NodeX"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 984232787302714,
+															"parameters": {
+																"variable": "tailY",
+																"value": "NodeY"
+															}
 														}
 													],
-													"sid": 501237105074417
+													"sid": 498098431053511
 												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 838477513311942,
+													"parameters": {
+														"first-value": "nodeCount",
+														"comparison": 0,
+														"second-value": "2"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 834865383813343,
+													"parameters": {
+														"first-value": "nodeCount",
+														"comparison": 0,
+														"second-value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 379696645837923,
+													"parameters": {
+														"variable": "totalNodes",
+														"value": "max(abs(tailX - headX), abs(tailY - headY)) + 1"
+													}
+												}
+											],
+											"sid": 772262805221246,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for",
+															"objectClass": "System",
+															"sid": 624231615337272,
+															"parameters": {
+																"name": "\"fillIndex\"",
+																"start-index": "2",
+																"end-index": "totalNodes - 1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 409489287448780,
+															"parameters": {
+																"variable": "currentX",
+																"value": "headX + round((tailX - headX) * (loopindex(\"fillIndex\") - 1) / (totalNodes - 1))"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 901618692709471,
+															"parameters": {
+																"variable": "currentY",
+																"value": "headY + round((tailY - headY) * (loopindex(\"fillIndex\") - 1) / (totalNodes - 1))"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 685964721141976,
+															"parameters": {
+																"variable": "pixelX",
+																"value": "((ViewportLeft(0)+ViewportRight(0))/2 - (GridW*(int(TileSize)+Spacing))/2) + currentX*(int(TileSize)+Spacing) + OffsetX"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 430054434933562,
+															"parameters": {
+																"variable": "pixelY",
+																"value": "((ViewportTop(0)+ViewportBottom(0))/2 - (GridH*(int(TileSize)+Spacing))/2) + currentY*(int(TileSize)+Spacing) + OffsetY"
+															}
+														},
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 312546141944972,
+															"parameters": {
+																"object-to-create": "snake_body",
+																"layer": "\"Snakes\"",
+																"x": "pixelX",
+																"y": "pixelY",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 182993077869503,
+															"parameters": {
+																"instance-variable": "NodeIndex",
+																"value": "loopindex(\"fillIndex\") - 1"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 683559318477746,
+															"parameters": {
+																"instance-variable": "OwnerID",
+																"value": "ArrowIndex"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 936592950611397,
+															"parameters": {
+																"instance-variable": "GridX",
+																"value": "currentX"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 369737997508760,
+															"parameters": {
+																"instance-variable": "GridY",
+																"value": "currentY"
+															}
+														}
+													],
+													"sid": 555154804618666
+												}
+											],
+											"isOrBlock": true
 										}
 									]
 								}
