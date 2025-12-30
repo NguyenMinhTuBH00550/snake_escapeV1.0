@@ -109,6 +109,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 999538615946955
+		},
+		{
+			"name": "isDiagonal",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 137435986038317
 		}
 	],
 	"behaviorTypes": [

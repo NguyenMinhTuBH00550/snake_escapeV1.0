@@ -882,7 +882,7 @@
 				{
 					"type": "Grid_Dot",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -948,7 +948,8 @@
 						"PrevY": 0,
 						"PrevX": 0,
 						"isEscaping": 0,
-						"CaseType": 0
+						"CaseType": 0,
+						"isDiagonal": 0
 					},
 					"behaviors": {
 						"Tween": {
@@ -1002,8 +1003,7 @@
 						"PrevX": 0,
 						"PrevY": 0,
 						"isEscaping": 0,
-						"TargetGridX": 0,
-						"TargetGridY": 0
+						"isDiagonalBody": 0
 					},
 					"behaviors": {
 						"Tween": {

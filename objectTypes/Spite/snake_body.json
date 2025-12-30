@@ -69,18 +69,11 @@
 			"sid": 177279346241197
 		},
 		{
-			"name": "TargetGridX",
+			"name": "isDiagonalBody",
 			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 938862099588152
-		},
-		{
-			"name": "TargetGridY",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 162039785345264
 		}
 	],
 	"behaviorTypes": [
