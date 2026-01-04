@@ -140,6 +140,16 @@
 			"sid": 919859903970598
 		},
 		{
+			"eventType": "variable",
+			"name": "tailUID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 283895727728582
+		},
+		{
 			"eventType": "comment",
 			"text": "Value_eventTouch"
 		},
@@ -560,6 +570,7 @@
 													"id": "log",
 													"objectClass": "Browser",
 													"sid": 695336743097476,
+													"disabled": true,
 													"parameters": {
 														"type": "log",
 														"message": "\"Created Grid_Dot at (\" & loopindex(\"x\") & \",\" & loopindex(\"y\") & \")\""
@@ -618,6 +629,7 @@
 													"id": "log",
 													"objectClass": "Browser",
 													"sid": 270928109961260,
+													"disabled": true,
 													"parameters": {
 														"type": "log",
 														"message": "\"Total Grid_Dot count: \" & Grid_Dot.Count"
@@ -991,6 +1003,15 @@
 															}
 														},
 														{
+															"id": "set-instvar-value",
+															"objectClass": "snake_body",
+															"sid": 318306825806225,
+															"parameters": {
+																"instance-variable": "isDiagonalBody",
+																"value": "0"
+															}
+														},
+														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
 															"sid": 133961887651909,
@@ -1006,6 +1027,15 @@
 															"parameters": {
 																"variable": "tailY",
 																"value": "NodeY"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 132641532067147,
+															"parameters": {
+																"variable": "tailUID",
+																"value": "snake_body.UID"
 															}
 														}
 													],
@@ -1054,45 +1084,22 @@
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "for-each",
-															"objectClass": "System",
-															"sid": 378390347829493,
+															"id": "pick-by-unique-id",
+															"objectClass": "snake_body",
+															"sid": 133723952093055,
 															"parameters": {
-																"object": "snake_head"
+																"unique-id": "tailUID"
 															}
 														}
 													],
-													"actions": [],
-													"sid": 819023035089721,
-													"children": [
+													"actions": [
 														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-two-values",
-																	"objectClass": "System",
-																	"sid": 302263166125322,
-																	"parameters": {
-																		"first-value": "snake_head.OwnerID",
-																		"comparison": 0,
-																		"second-value": "ArrowIndex"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "snake_head",
-																	"sid": 761093076873928,
-																	"parameters": {
-																		"instance-variable": "isDiagonal",
-																		"value": "1"
-																	}
-																}
-															],
-															"sid": 410352571441829
+															"id": "destroy",
+															"objectClass": "snake_body",
+															"sid": 901038144995697
 														}
-													]
+													],
+													"sid": 760125385512726
 												},
 												{
 													"eventType": "block",
@@ -1100,10 +1107,10 @@
 														{
 															"id": "for",
 															"objectClass": "System",
-															"sid": 624231615337272,
+															"sid": 844426968900981,
 															"parameters": {
 																"name": "\"fillIndex\"",
-																"start-index": "2",
+																"start-index": "1",
 																"end-index": "totalNodes - 1"
 															}
 														}
@@ -1118,19 +1125,19 @@
 																{
 																	"id": "set-eventvar-value",
 																	"objectClass": "System",
-																	"sid": 641412234078355,
+																	"sid": 457791163525393,
 																	"parameters": {
 																		"variable": "currentX",
-																		"value": "headX + round((tailX - headX) * (loopindex(\"fillIndex\") - 1) / (totalNodes - 1))"
+																		"value": " headX + round((tailX - headX) * loopindex(\"fillIndex\") / (totalNodes - 1))"
 																	}
 																},
 																{
 																	"id": "set-eventvar-value",
 																	"objectClass": "System",
-																	"sid": 768195271814481,
+																	"sid": 874483816260432,
 																	"parameters": {
 																		"variable": "currentY",
-																		"value": "headY + round((tailY - headY) * (loopindex(\"fillIndex\") - 1) / (totalNodes - 1))"
+																		"value": " headY + round((tailY - headY) * loopindex(\"fillIndex\") / (totalNodes - 1))"
 																	}
 																},
 																{
@@ -1152,6 +1159,16 @@
 																	}
 																},
 																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 669478186836527,
+																	"disabled": true,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"Creating body at loop \" & loopindex(\"fillIndex\") & \", NodeIndex will be: \" & loopindex(\"fillIndex\")"
+																	}
+																},
+																{
 																	"id": "create-object",
 																	"objectClass": "System",
 																	"sid": 199767152404101,
@@ -1167,16 +1184,16 @@
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "snake_body",
-																	"sid": 687352844884990,
+																	"sid": 794690379591742,
 																	"parameters": {
 																		"instance-variable": "NodeIndex",
-																		"value": "loopindex(\"fillIndex\") - 1"
+																		"value": "loopindex(\"fillIndex\")"
 																	}
 																},
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "snake_body",
-																	"sid": 985959221921782,
+																	"sid": 660748107291354,
 																	"parameters": {
 																		"instance-variable": "OwnerID",
 																		"value": "ArrowIndex"
@@ -1207,6 +1224,16 @@
 																	"parameters": {
 																		"instance-variable": "isDiagonalBody",
 																		"value": "1"
+																	}
+																},
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 199630373888238,
+																	"disabled": true,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"Created body: NodeIndex = \" & snake_body.NodeIndex & \", GridX = \" & snake_body.GridX & \", GridY = \" & snake_body.GridY"
 																	}
 																}
 															],
@@ -1261,6 +1288,7 @@
 											"id": "log",
 											"objectClass": "Browser",
 											"sid": 173585113119499,
+											"disabled": true,
 											"parameters": {
 												"type": "log",
 												"message": "\"Checking Grid_Dot (\" & Grid_Dot.GridX & \",\" & Grid_Dot.GridY & \")\""
@@ -1331,6 +1359,7 @@
 															"id": "log",
 															"objectClass": "Browser",
 															"sid": 496105676939306,
+															"disabled": true,
 															"parameters": {
 																"type": "log",
 																"message": "\"MATCH FOUND! tempMatch = 1\""
@@ -1387,16 +1416,6 @@
 																{
 																	"id": "compare-two-values",
 																	"objectClass": "System",
-																	"sid": 315038204095750,
-																	"parameters": {
-																		"first-value": "snake_head.isDiagonal",
-																		"comparison": 0,
-																		"second-value": "0"
-																	}
-																},
-																{
-																	"id": "compare-two-values",
-																	"objectClass": "System",
 																	"sid": 260233862574419,
 																	"parameters": {
 																		"first-value": "snake_body.isDiagonalBody",
@@ -1439,6 +1458,7 @@
 																	"id": "log",
 																	"objectClass": "Browser",
 																	"sid": 198611362787830,
+																	"disabled": true,
 																	"parameters": {
 																		"type": "log",
 																		"message": "\"MATCH FOUND! tempMatch = 1\""

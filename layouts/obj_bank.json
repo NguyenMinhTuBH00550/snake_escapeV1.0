@@ -948,8 +948,7 @@
 						"PrevY": 0,
 						"PrevX": 0,
 						"isEscaping": 0,
-						"CaseType": 0,
-						"isDiagonal": 0
+						"CaseType": 0
 					},
 					"behaviors": {
 						"Tween": {
