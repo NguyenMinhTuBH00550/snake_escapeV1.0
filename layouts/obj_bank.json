@@ -1051,7 +1051,13 @@
 						"OffsetX": 0,
 						"OffsetY": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 226734695997259,
 						"expanded": true
