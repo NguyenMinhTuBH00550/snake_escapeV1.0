@@ -1,38 +1,32 @@
 {
-	"name": "HUD_icon_snake",
+	"name": "Sprite",
 	"plugin-id": "Sprite",
-	"sid": 689764991863019,
+	"sid": 195860302976789,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 867843882542855
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 115,
-						"height": 119,
+						"width": 331,
+						"height": 731,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9072755,
+						"imageSpriteId": 765199,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 825964347434923,
+				"sid": 664265014742229,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

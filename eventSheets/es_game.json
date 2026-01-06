@@ -224,6 +224,30 @@
 			"sid": 190656544737886
 		},
 		{
+			"eventType": "comment",
+			"text": "Value_eventScore"
+		},
+		{
+			"eventType": "variable",
+			"name": "totalSnakes",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 343390468667769
+		},
+		{
+			"eventType": "variable",
+			"name": "completedSnakes",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 224546069242274
+		},
+		{
 			"functionName": "start_layout",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -317,26 +341,6 @@
 							],
 							"actions": [
 								{
-									"id": "log",
-									"objectClass": "Browser",
-									"sid": 438865926798178,
-									"disabled": true,
-									"parameters": {
-										"type": "log",
-										"message": "\"CurrentLevel = \" & CurrentLevel"
-									}
-								},
-								{
-									"id": "log",
-									"objectClass": "Browser",
-									"sid": 298092071911703,
-									"disabled": true,
-									"parameters": {
-										"type": "log",
-										"message": "\"JSON string = \" & Dic_Level.Get(CurrentLevel)"
-									}
-								},
-								{
 									"id": "parse",
 									"objectClass": "JsonLevel",
 									"sid": 124700179948049,
@@ -345,13 +349,12 @@
 									}
 								},
 								{
-									"id": "log",
-									"objectClass": "Browser",
-									"sid": 942430759865845,
-									"disabled": true,
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 674020963183056,
 									"parameters": {
-										"type": "log",
-										"message": "\"Loaded level: \" & CurrentLevel & \" → \" & JsonLevel.Get(\"size.x\")\r\n"
+										"variable": "completedSnakes",
+										"value": "0"
 									}
 								},
 								{
@@ -393,6 +396,23 @@
 								{
 									"callFunction": "UpdateGridDot",
 									"sid": 870595647738692
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 954723006527248,
+									"parameters": {
+										"variable": "totalSnakes",
+										"value": "snake_head.Count"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_count_snake",
+									"sid": 517701128728663,
+									"parameters": {
+										"text": "completedSnakes & \"/\" & totalSnakes"
+									}
 								}
 							],
 							"sid": 844376283277351
@@ -5985,6 +6005,119 @@
 						}
 					],
 					"sid": 536342940732395
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Score",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "snake_head",
+									"sid": 898473924731490,
+									"parameters": {
+										"object": "exit_zone"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 808352534505973,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 966776993954963,
+											"parameters": {
+												"variable": "completedSnakes",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_count_snake",
+											"sid": 716606690394152,
+											"parameters": {
+												"text": "completedSnakes & \"/\" & totalSnakes"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "HUD_icon_snake",
+											"sid": 537832089746443,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"count_bump\"",
+												"property": "scale",
+												"end-x": "0.53",
+												"end-y": "0.53",
+												"time": "0.3",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "yes",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 556276490813480
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 803450724566787,
+									"parameters": {
+										"first-value": "completedSnakes",
+										"comparison": 0,
+										"second-value": "totalSnakes"
+									}
+								},
+								{
+									"id": "is-on-screen",
+									"objectClass": "snake_head",
+									"sid": 654928628246870,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 864207506551618,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "open0",
+									"objectClass": "Dia_winSceen",
+									"sid": 905248255243987,
+									"behaviorType": "Dialog",
+									"parameters": {
+										"target_x0": "0",
+										"target_y1": "0",
+										"center4": "yes"
+									}
+								}
+							],
+							"sid": 568545456697108
+						}
+					],
+					"sid": 199234473461030
 				}
 			],
 			"sid": 403058626511012

@@ -1,0 +1,62 @@
+{
+	"name": "UI_txt_endgame",
+	"plugin-id": "Sprite",
+	"sid": 992663078245740,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 778,
+						"height": 131,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2584931,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0,
+								0.6645244215938303,
+								0.007633587786259542,
+								0.993573264781491,
+								0.183206106870229,
+								0.9665809768637532,
+								1,
+								0.038560411311053984,
+								0.9770992366412213,
+								0.030848329048843187,
+								0.17557251908396945,
+								0.15681233933161953,
+								0.0916030534351145,
+								0.2969151670951157,
+								0.030534351145038167,
+								0.38174807197943444,
+								0.007633587786259542
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 940680240721776,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

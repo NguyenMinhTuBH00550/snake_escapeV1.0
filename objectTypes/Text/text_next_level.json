@@ -1,17 +1,11 @@
 {
-	"name": "text_count_snake",
+	"name": "text_next_level",
 	"plugin-id": "Text",
-	"sid": 511668654910780,
+	"sid": 169794434371715,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 425255003470512
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [
 		{
 			"effectId": "outline",

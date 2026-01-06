@@ -1,10 +1,15 @@
 {
-	"name": "coin_text",
+	"name": "text_coin_reward",
 	"plugin-id": "Text",
-	"sid": 892914415365249,
+	"sid": 217481989740254,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": []
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
 }

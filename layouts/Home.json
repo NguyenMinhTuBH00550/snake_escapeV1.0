@@ -584,7 +584,7 @@
 					}
 				},
 				{
-					"type": "coin_text",
+					"type": "text_coin",
 					"properties": {
 						"text": "360",
 						"enable-bbcode": true,

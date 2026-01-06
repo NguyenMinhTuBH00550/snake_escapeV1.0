@@ -1,15 +1,20 @@
 {
-	"name": "HUD_icon_snake",
+	"name": "Dia_winSceen",
 	"plugin-id": "Sprite",
-	"sid": 689764991863019,
+	"sid": 211829707501949,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 867843882542855
+			"behaviorId": "aekiro_dialog",
+			"name": "Dialog",
+			"sid": 651956251320180
+		},
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 646095802728614
 		}
 	],
 	"effectTypes": [],
@@ -18,21 +23,21 @@
 			{
 				"frames": [
 					{
-						"width": 115,
-						"height": 119,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9072755,
+						"imageSpriteId": 2186859,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 825964347434923,
+				"sid": 337567586584565,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

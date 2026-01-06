@@ -122,6 +122,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "aekiro_dialog",
+			"name": "Dialog",
+			"author": "Aekiro",
+			"bundled": false,
+			"version": "1.822"
+		},
+		{
+			"type": "behavior",
 			"id": "aekiro_gameobject",
 			"name": "Game Object",
 			"author": "Aekiro",
@@ -151,7 +159,8 @@
 			"Sprite3",
 			"Sprite4",
 			"Sprite6",
-			"Sprite7"
+			"Sprite7",
+			"Sprite"
 		],
 		"subfolders": [
 			{
@@ -191,13 +200,17 @@
 					"text_privacy",
 					"text_restore_purchase",
 					"text_on",
-					"coin_text",
+					"text_coin",
 					"text_remove_ad",
 					"text_videoBar",
 					"text_noti_newBooster",
 					"text_hint",
 					"text_describe",
-					"text_OK"
+					"text_OK",
+					"text_coin_reward",
+					"text_endGame_x2",
+					"text_level_complete",
+					"text_next_level"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -238,7 +251,12 @@
 					"UI_icon_hint",
 					"UL_btn_booster",
 					"UI_btn_resume",
-					"UI_redaura"
+					"UI_redaura",
+					"UI_btn_nextLevel",
+					"UI_btn_x2",
+					"UI_txt_endgame",
+					"UL_btn_home",
+					"winning_BG"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -275,6 +293,14 @@
 				],
 				"subfolders": [],
 				"name": "JSON"
+			},
+			{
+				"items": [
+					"Dia_winSceen",
+					"exit_zone"
+				],
+				"subfolders": [],
+				"name": "Dialog"
 			}
 		]
 	},
@@ -292,7 +318,8 @@
 			"Loading",
 			"Setting",
 			"Home",
-			"Pause"
+			"Pause",
+			"Win-sceen"
 		],
 		"subfolders": [
 			{
