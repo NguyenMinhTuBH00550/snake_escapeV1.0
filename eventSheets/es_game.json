@@ -293,6 +293,37 @@
 							"parameters": {
 								"text": "\"Level  \" & CurrentLevel"
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text_level_complete",
+							"sid": 863234938864178,
+							"parameters": {
+								"text": "\"Level \" & CurrentLevel & \" Complete!\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "UI_txt_endgame",
+							"sid": 302328400100526,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "UI_btn_nextLevel",
+							"sid": 511138942491756,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "confetti",
+							"sid": 258079188666520
 						}
 					],
 					"sid": 903865123258397
@@ -6066,6 +6097,10 @@
 												"ping-pong": "yes",
 												"repeat-count": "1"
 											}
+										},
+										{
+											"callFunction": "CheckWinCondition",
+											"sid": 643593082149026
 										}
 									],
 									"sid": 556276490813480
@@ -6073,48 +6108,265 @@
 							]
 						},
 						{
+							"functionName": "CheckWinCondition",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 873872460924349,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 858603164458227,
+											"parameters": {
+												"first-value": "completedSnakes",
+												"comparison": 0,
+												"second-value": "totalSnakes"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 285442108846763,
+											"parameters": {
+												"seconds": "0.7",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "open0",
+											"objectClass": "Dia_winSceen",
+											"sid": 738376977091643,
+											"behaviorType": "Dialog",
+											"parameters": {
+												"target_x0": "0",
+												"target_y1": "0",
+												"center4": "yes"
+											}
+										}
+									],
+									"sid": 734158919688445
+								}
+							]
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 803450724566787,
-									"parameters": {
-										"first-value": "completedSnakes",
-										"comparison": 0,
-										"second-value": "totalSnakes"
-									}
-								},
-								{
-									"id": "is-on-screen",
-									"objectClass": "snake_head",
-									"sid": 654928628246870,
-									"isInverted": true
+									"id": "ondialogopened0",
+									"objectClass": "Dia_winSceen",
+									"sid": 823880768250822,
+									"behaviorType": "Dialog"
 								}
 							],
 							"actions": [
 								{
+									"id": "set-active",
+									"objectClass": "UI_txt_endgame",
+									"sid": 281322820646232,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "active"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "UI_btn_nextLevel",
+									"sid": 840181211796891,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "active"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 864207506551618,
+									"sid": 443610240949261,
 									"parameters": {
 										"seconds": "0.5",
 										"use-timescale": true
 									}
 								},
 								{
-									"id": "open0",
-									"objectClass": "Dia_winSceen",
-									"sid": 905248255243987,
-									"behaviorType": "Dialog",
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 717416015587783,
 									"parameters": {
-										"target_x0": "0",
-										"target_y1": "0",
-										"center4": "yes"
+										"object-to-create": "Particles",
+										"layer": "\"win_sceen\"",
+										"x": "UI_btn_nextLevel.X",
+										"y": "UI_btn_nextLevel.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
 									}
 								}
 							],
-							"sid": 568545456697108
+							"sid": 992833321444873
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "confetti",
+									"sid": 874929907818539
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "confetti",
+									"sid": 348251913144912,
+									"parameters": {
+										"frame-number": "random(Self.AnimationFrameCount)"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 597007322582284,
+									"parameters": {
+										"seconds": "0.01",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "confetti",
+									"sid": 677591050616684
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "confetti",
+									"sid": 764839105210795,
+									"behaviorType": "Rotate",
+									"parameters": {
+										"speed": "choose(-1,1) * random(50,200)"
+									}
+								}
+							],
+							"sid": 830022213462370
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_btn_nextLevel",
+									"sid": 973788774001155,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 913064632513946,
+									"parameters": {
+										"object-to-create": "UI_coin_reward",
+										"layer": "\"win_sceen\"",
+										"x": "UI_btn_x2.X",
+										"y": "UI_btn_x2.Y - 50",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "UI_coin_reward",
+									"sid": 551233756970126,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "UI_coin_reward",
+									"sid": 120687374526178,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"pop\"",
+										"property": "position",
+										"end-x": "UI_coin_reward.X",
+										"end-y": "UI_coin_reward.Y - 120",
+										"time": "0.25",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 667846082603308
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "UI_coin_reward",
+									"sid": 198485348161884,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"pop\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "UI_coin_reward",
+									"sid": 266476995175390,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fly_to_ui\"",
+										"property": "position",
+										"end-x": "UI_coin_topBar.X",
+										"end-y": "UI_coin_topBar.Y",
+										"time": "0.4",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 963932014339691
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "UI_coin_reward",
+									"sid": 213556965244482,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fly_to_ui\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "UI_coin_reward",
+									"sid": 653638094534216
+								}
+							],
+							"sid": 817146495176229
 						}
 					],
 					"sid": 199234473461030

@@ -57,6 +57,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -102,6 +109,20 @@
 			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -160,7 +181,9 @@
 			"Sprite4",
 			"Sprite6",
 			"Sprite7",
-			"Sprite"
+			"Sprite",
+			"Particles",
+			"UI_coin_reward"
 		],
 		"subfolders": [
 			{
@@ -256,7 +279,8 @@
 					"UI_btn_x2",
 					"UI_txt_endgame",
 					"UL_btn_home",
-					"winning_BG"
+					"winning_BG",
+					"UI_ad"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -301,6 +325,15 @@
 				],
 				"subfolders": [],
 				"name": "Dialog"
+			},
+			{
+				"items": [
+					"coins_effect",
+					"confetti",
+					"Flare"
+				],
+				"subfolders": [],
+				"name": "Particle"
 			}
 		]
 	},
