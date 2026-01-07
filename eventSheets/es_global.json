@@ -1,0 +1,40 @@
+{
+	"name": "es_global",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 549339624284984
+				}
+			],
+			"actions": [],
+			"sid": 707411446384968,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "init",
+							"objectClass": "ProUI",
+							"sid": 684762926835112
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text_coin",
+							"sid": 425093678223684,
+							"parameters": {
+								"text": "DIcSaveGame.Get(SAVE_COIN)"
+							}
+						}
+					],
+					"sid": 657339042161925
+				}
+			]
+		}
+	],
+	"sid": 667786211939097
+}

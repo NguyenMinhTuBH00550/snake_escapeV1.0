@@ -352,12 +352,13 @@
 			"Setting",
 			"Home",
 			"Pause",
-			"Win-sceen"
+			"Win-sceen",
+			"Global"
 		],
 		"subfolders": [
 			{
 				"items": [
-					"level 1"
+					"level"
 				],
 				"subfolders": [],
 				"name": "level"
@@ -373,8 +374,9 @@
 	},
 	"eventSheets": {
 		"items": [
-			"es_game",
-			"es_loading"
+			"es_loading",
+			"es_global",
+			"es_game"
 		],
 		"subfolders": []
 	},

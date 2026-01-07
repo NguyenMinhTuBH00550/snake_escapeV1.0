@@ -3143,7 +3143,13 @@
 					"sid": 991100451117327,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 991100451117327,
 						"expanded": true
@@ -4441,7 +4447,9 @@
 					"uid": 243,
 					"sid": 938008093894096,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Delay": 0
+					},
 					"behaviors": {
 						"Tween": {
 							"properties": {

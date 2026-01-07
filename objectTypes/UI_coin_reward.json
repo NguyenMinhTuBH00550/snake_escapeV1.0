@@ -4,7 +4,15 @@
 	"sid": 823635205495311,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Delay",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 518999411005474
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",

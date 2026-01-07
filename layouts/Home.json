@@ -19,7 +19,13 @@
 					"sid": 405861407913211,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 405861407913211,
 						"expanded": true

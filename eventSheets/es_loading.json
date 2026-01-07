@@ -75,6 +75,15 @@
 						"tag": "\"LoadAllLevels\"",
 						"file": "all_levels.json"
 					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "HUD_logo",
+					"sid": 411060082113544,
+					"disabled": true,
+					"parameters": {
+						"scale": "1"
+					}
 				}
 			],
 			"sid": 515464601622336
@@ -289,11 +298,30 @@
 			],
 			"actions": [
 				{
+					"id": "tween-two-properties",
+					"objectClass": "HUD_logo",
+					"sid": 718061529136508,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"logo_pop\"",
+						"property": "scale",
+						"end-x": "0.7",
+						"end-y": "0.7",
+						"time": "0.25",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 188122821793951,
+					"disabled": true,
 					"parameters": {
-						"layout": "level 1"
+						"layout": "level"
 					}
 				}
 			],
@@ -323,6 +351,98 @@
 				}
 			],
 			"sid": 651639665765078
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "HUD_logo",
+					"sid": 702667262587738,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"logo_pop\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 519298664195697,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "HUD_BG_loading",
+							"sid": 750321114038490,
+							"parameters": {
+								"tags": "\"fade_loadingBG\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "HUD_BG_loading",
+							"sid": 473131661181730,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "HUD_BG_loading",
+							"sid": 144690359767348,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "HUD_BG_loading",
+							"sid": 757150202749969,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade_out\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "0.4",
+								"ease": "noease",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 774551210716144
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "HUD_BG_loading",
+					"sid": 708005421140652,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fade_out\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 859651214932800,
+					"parameters": {
+						"layout": "level"
+					}
+				}
+			],
+			"sid": 579139059155366
 		},
 		{
 			"functionName": "int_SAVE_GAME",
