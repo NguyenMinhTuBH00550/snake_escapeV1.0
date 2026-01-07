@@ -406,7 +406,7 @@
 						"text": "0",
 						"enable-bbcode": true,
 						"font": "LilitaOne-Regular",
-						"size": 18,
+						"size": 15,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -465,7 +465,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 419.1197460994887,
+						"x": 418.1197460994887,
 						"y": 65.88024051196243,
 						"width": 46.856964360087375,
 						"height": 34.65056352840073,
