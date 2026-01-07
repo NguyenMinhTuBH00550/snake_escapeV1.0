@@ -1,43 +1,46 @@
 {
-	"name": "HUD_popUp_close",
+	"name": "UI_losePanel_frame",
 	"plugin-id": "Sprite",
-	"sid": 450164188257177,
+	"sid": 574814793873035,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "aekiro_button",
-			"name": "Button",
-			"sid": 741038955685965
-		},
-		{
-			"behaviorId": "aekiro_gameobject",
-			"name": "GameObject",
-			"sid": 454622166718088
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 130,
-						"height": 131,
+						"width": 824,
+						"height": 513,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8554321,
+						"imageSpriteId": 3371645,
+						"collisionPoly": {
+							"points": [
+								0.06796116504854369,
+								0,
+								0.9951456310679612,
+								0.09746588693957114,
+								0.9951456310679612,
+								0.8966861598440545,
+								0.9344660194174758,
+								0.9922027290448343,
+								0.0048543689320388345,
+								0.8947368421052632
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 148971555700581,
+				"sid": 219563865714774,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

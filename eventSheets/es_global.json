@@ -29,6 +29,15 @@
 							"parameters": {
 								"text": "DIcSaveGame.Get(SAVE_COIN)"
 							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 838677493822804,
+							"parameters": {
+								"layer": "\"fade\"",
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 657339042161925

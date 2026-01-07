@@ -1,0 +1,15 @@
+{
+	"name": "text_Failed_level",
+	"plugin-id": "Text",
+	"sid": 424966523586279,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}

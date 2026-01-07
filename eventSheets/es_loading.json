@@ -442,11 +442,11 @@
 					}
 				},
 				{
-					"id": "reset-global-variables",
+					"id": "reset-eventvar",
 					"objectClass": "System",
-					"sid": 979084846696153,
+					"sid": 532252976106074,
 					"parameters": {
-						"reset-static": true
+						"variable": "TimeRemaining"
 					}
 				}
 			],

@@ -1443,7 +1443,40 @@
 					"sid": 885622020180706,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Button": {
+							"properties": {
+								"isenabled": "true",
+								"normal-frame": "",
+								"hover-frame": "",
+								"clicked-frame": "",
+								"disabled-frame": "",
+								"focus-frame": "",
+								"click-sound": "",
+								"hover-sound": "",
+								"focus-sound": "",
+								"click-animation": "scale quadratic",
+								"hover-animation": "none",
+								"focus-animation": "none",
+								"normal-color": "",
+								"hover-color": "",
+								"clicked-color": "",
+								"disabled-color": "",
+								"focus-color": "",
+								"click-animation-factor": -0.07,
+								"hover-animation-factor": 0.5,
+								"focus-animation-factor": 0.5,
+								"ignore-input": "auto"
+							}
+						},
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 885622020180706,
 						"expanded": true

@@ -183,7 +183,15 @@
 			"Sprite7",
 			"Sprite",
 			"Particles",
-			"UI_coin_reward"
+			"UI_coin_reward",
+			"Sprite5",
+			"HUD_outLive",
+			"UI_loseHeart",
+			"UI_Loseheart_plus3",
+			"Sprite8",
+			"fade_layout",
+			"UI_losePanel_frame",
+			"UI_popup_loseheart"
 		],
 		"subfolders": [
 			{
@@ -233,7 +241,14 @@
 					"text_coin_reward",
 					"text_endGame_x2",
 					"text_level_complete",
-					"text_next_level"
+					"text_next_level",
+					"text_Failed_level",
+					"text_notiFail",
+					"text_free",
+					"text_clam_300",
+					"text_notiOutLive",
+					"text_restart",
+					"text_Failed"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -321,7 +336,9 @@
 			{
 				"items": [
 					"Dia_winSceen",
-					"exit_zone"
+					"exit_zone",
+					"Dia_noti_failed",
+					"Dia_noti_restart"
 				],
 				"subfolders": [],
 				"name": "Dialog"
@@ -353,7 +370,9 @@
 			"Home",
 			"Pause",
 			"Win-sceen",
-			"Global"
+			"Restart_sceen",
+			"Failed_sceen",
+			"Fade"
 		],
 		"subfolders": [
 			{

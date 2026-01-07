@@ -6366,6 +6366,14 @@
 									"objectClass": "UI_btn_nextLevel",
 									"sid": 973788774001155,
 									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_btn_nextLevel",
+									"sid": 339356106236100,
+									"parameters": {
+										"tags": "\"btn_nextLevel\""
+									}
 								}
 							],
 							"actions": [
@@ -6570,6 +6578,11 @@
 										"ping-pong": "no",
 										"repeat-count": "1"
 									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "UI_btnPlus_topBar",
+									"sid": 191878429248262
 								}
 							],
 							"sid": 482489537018718
@@ -6651,6 +6664,15 @@
 									}
 								},
 								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 964712212687266,
+									"parameters": {
+										"seconds": "0.6",
+										"use-timescale": true
+									}
+								},
+								{
 									"id": "go-to-layout",
 									"objectClass": "System",
 									"sid": 199519254771067,
@@ -6663,6 +6685,90 @@
 						}
 					],
 					"sid": 199234473461030
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Level_Failed",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "HUD_retry",
+									"sid": 311667883817332,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"id": "open0",
+									"objectClass": "Dia_noti_failed",
+									"sid": 143614636933935,
+									"behaviorType": "Dialog",
+									"parameters": {
+										"target_x0": "0",
+										"target_y1": "0",
+										"center4": "yes"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 315775161697069,
+									"parameters": {
+										"layer": "\"fade\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 527259357290050
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "HUD_popUp_close",
+									"sid": 720356420155104,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"id": "close1",
+									"objectClass": "Dia_noti_failed",
+									"sid": 135994647912746,
+									"behaviorType": "Dialog"
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 484365461781949,
+									"parameters": {
+										"seconds": "0.3",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "open0",
+									"objectClass": "Dia_noti_restart",
+									"sid": 926089856929721,
+									"behaviorType": "Dialog",
+									"parameters": {
+										"target_x0": "0",
+										"target_y1": "0",
+										"center4": "yes"
+									}
+								}
+							],
+							"sid": 502798097576418
+						}
+					],
+					"sid": 546206241501007
 				}
 			],
 			"sid": 403058626511012
