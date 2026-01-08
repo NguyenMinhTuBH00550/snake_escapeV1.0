@@ -1621,7 +1621,7 @@
 					"sid": 245312777952112,
 					"tags": "",
 					"instanceVariables": {
-						"Index": 3
+						"Index": 0
 					},
 					"behaviors": {
 						"Tween": {
@@ -1776,7 +1776,7 @@
 					"sid": 897790722621051,
 					"tags": "",
 					"instanceVariables": {
-						"Index": 2
+						"Index": 0
 					},
 					"behaviors": {
 						"Tween": {
@@ -1931,7 +1931,7 @@
 					"sid": 668236028460006,
 					"tags": "",
 					"instanceVariables": {
-						"Index": 1
+						"Index": 0
 					},
 					"behaviors": {
 						"Tween": {
@@ -2276,9 +2276,9 @@
 					"showing": true,
 					"locked": true,
 					"world": {
-						"x": 274,
+						"x": 271.82147221413754,
 						"y": 479,
-						"width": 543.6189750395123,
+						"width": 547.9760306112372,
 						"height": 961.0787992495309,
 						"originX": 0.5,
 						"originY": 0.5,

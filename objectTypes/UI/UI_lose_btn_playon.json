@@ -1,7 +1,7 @@
 {
-	"name": "UL_btn_booster",
+	"name": "UI_lose_btn_playon",
 	"plugin-id": "Sprite",
-	"sid": 789961148748381,
+	"sid": 483897097062040,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -9,12 +9,17 @@
 		{
 			"behaviorId": "aekiro_button",
 			"name": "Button",
-			"sid": 319150499878592
+			"sid": 264047428824403
 		},
 		{
 			"behaviorId": "aekiro_gameobject",
 			"name": "GameObject",
-			"sid": 845799526240588
+			"sid": 882133463871154
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 899313541214907
 		}
 	],
 	"effectTypes": [],
@@ -23,7 +28,7 @@
 			{
 				"frames": [
 					{
-						"width": 626,
+						"width": 728,
 						"height": 214,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -31,14 +36,32 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8708833,
+						"imageSpriteId": 4036318,
+						"collisionPoly": {
+							"points": [
+								0.09340659340659341,
+								0,
+								0.9326923076923077,
+								0.02336448598130841,
+								0.9532967032967034,
+								0.06074766355140187,
+								0.9807692307692307,
+								0.8317757009345794,
+								0.9560439560439561,
+								0.9158878504672897,
+								0.9107142857142857,
+								0.9813084112149533,
+								0.057692307692307696,
+								0.9439252336448598
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 639400846796771,
-				"name": "Default",
+				"sid": 853510405714253,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

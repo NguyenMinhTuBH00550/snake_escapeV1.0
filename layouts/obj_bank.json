@@ -2816,7 +2816,7 @@
 					}
 				},
 				{
-					"type": "UI_btn_x2",
+					"type": "UI_btn_endgamewin",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -2886,7 +2886,7 @@
 					}
 				},
 				{
-					"type": "UI_btn_nextLevel",
+					"type": "UI_lose_btn_playon",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -2955,8 +2955,8 @@
 					"world": {
 						"x": 1451,
 						"y": 350,
-						"width": 288,
-						"height": 111.00000000000001,
+						"width": 413.53846153846155,
+						"height": 115.87317073170732,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

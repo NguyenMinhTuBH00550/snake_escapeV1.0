@@ -184,7 +184,9 @@
 			"Sprite",
 			"Sprite5",
 			"fade_layout",
-			"Sprite10"
+			"Sprite10",
+			"Sprite8",
+			"Sprite9"
 		],
 		"subfolders": [
 			{
@@ -284,8 +286,8 @@
 					"UL_btn_booster",
 					"UI_btn_resume",
 					"UI_redaura",
-					"UI_btn_nextLevel",
-					"UI_btn_x2",
+					"UI_lose_btn_playon",
+					"UI_btn_endgamewin",
 					"UI_txt_endgame",
 					"UL_btn_home",
 					"winning_BG",

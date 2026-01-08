@@ -1,48 +1,32 @@
 {
-	"name": "UI_btn_nextLevel",
+	"name": "Sprite8",
 	"plugin-id": "Sprite",
-	"sid": 483897097062040,
+	"sid": 280563697183240,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "aekiro_button",
-			"name": "Button",
-			"sid": 264047428824403
-		},
-		{
-			"behaviorId": "aekiro_gameobject",
-			"name": "GameObject",
-			"sid": 882133463871154
-		},
-		{
-			"behaviorId": "Sin",
-			"name": "Sine",
-			"sid": 899313541214907
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 507,
-						"height": 205,
+						"width": 922,
+						"height": 2048,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4973754,
+						"imageSpriteId": 753136,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 853510405714253,
+				"sid": 524974248476002,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

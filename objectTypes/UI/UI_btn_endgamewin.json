@@ -1,5 +1,5 @@
 {
-	"name": "UI_btn_x2",
+	"name": "UI_btn_endgamewin",
 	"plugin-id": "Sprite",
 	"sid": 892885953107257,
 	"isGlobal": false,
@@ -31,7 +31,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7874127,
+						"imageSpriteId": 1961480,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

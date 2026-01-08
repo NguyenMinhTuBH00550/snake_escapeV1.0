@@ -439,6 +439,24 @@
 					"parameters": {
 						"variable": "TimeRemaining"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 875348782107769,
+					"parameters": {
+						"variable": "Lives",
+						"value": "3"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 567940151922024,
+					"parameters": {
+						"variable": "IsTimerRunning",
+						"value": "0"
+					}
 				}
 			],
 			"sid": 579139059155366

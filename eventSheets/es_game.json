@@ -336,7 +336,7 @@
 						},
 						{
 							"id": "set-active",
-							"objectClass": "UI_btn_nextLevel",
+							"objectClass": "UI_lose_btn_playon",
 							"sid": 511138942491756,
 							"behaviorType": "Sine",
 							"parameters": {
@@ -496,7 +496,7 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "HUD_heart",
-											"sid": 193979511936386,
+											"sid": 439218117025067,
 											"parameters": {
 												"instance-variable": "Index",
 												"value": "loopindex +1"
@@ -3991,7 +3991,7 @@
 										},
 										{
 											"callFunction": "LoseLife",
-											"sid": 635568933606261
+											"sid": 894378752865051
 										}
 									],
 									"sid": 920529071057280
@@ -4052,7 +4052,7 @@
 										},
 										{
 											"callFunction": "LoseLife",
-											"sid": 316346046944041
+											"sid": 992644974674721
 										}
 									],
 									"sid": 934592732745041
@@ -5624,15 +5624,6 @@
 														"type": "log",
 														"message": "\"Body \" & snake_body.NodeIndex & \" pulling back to (\" &  snake_body.PrevX & \",\" & snake_body.PrevY & \")\""
 													}
-												},
-												{
-													"id": "subtract-from-eventvar",
-													"objectClass": "System",
-													"sid": 559772161664053,
-													"parameters": {
-														"variable": "Lives",
-														"value": "1"
-													}
 												}
 											],
 											"sid": 458330260286854
@@ -6173,6 +6164,36 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "CoinCount",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 377481621054480
+						},
+						{
+							"eventType": "variable",
+							"name": "BaseX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 636916791386031
+						},
+						{
+							"eventType": "variable",
+							"name": "BaseY",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 560649557446975
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -6310,7 +6331,7 @@
 								},
 								{
 									"id": "set-active",
-									"objectClass": "UI_btn_nextLevel",
+									"objectClass": "UI_lose_btn_playon",
 									"sid": 840181211796891,
 									"behaviorType": "Sine",
 									"parameters": {
@@ -6333,8 +6354,8 @@
 									"parameters": {
 										"object-to-create": "Particles",
 										"layer": "\"win_sceen\"",
-										"x": "UI_btn_nextLevel.X",
-										"y": "UI_btn_nextLevel.Y",
+										"x": "UI_lose_btn_playon.X",
+										"y": "UI_lose_btn_playon.Y",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
@@ -6387,359 +6408,666 @@
 							"sid": 830022213462370
 						},
 						{
-							"eventType": "variable",
-							"name": "CoinCount",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 168509270678896
-						},
-						{
-							"eventType": "variable",
-							"name": "BaseX",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 109504237893403
-						},
-						{
-							"eventType": "variable",
-							"name": "BaseY",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 232887826020962
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "onclicked3",
-									"objectClass": "UI_btn_nextLevel",
-									"sid": 973788774001155,
-									"behaviorType": "Button"
-								},
-								{
-									"id": "has-tags",
-									"objectClass": "UI_btn_nextLevel",
-									"sid": 339356106236100,
-									"parameters": {
-										"tags": "\"btn_nextLevel\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 642480648197647,
-									"parameters": {
-										"variable": "RewardDone",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "UI_coin_reward",
-									"sid": 796396339743460,
-									"behaviorType": "Tween",
-									"parameters": {
-										"mode": "enabled"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "UI_btn_x2",
-									"sid": 994228540740158,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "UI_btn_nextLevel",
-									"sid": 323666076543058,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "text_coin_reward",
-									"sid": 550297038426761,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "coins_effect",
-									"sid": 762451506975668,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "UI_coin_reward",
-									"sid": 226919381334461,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 477818874138940,
-									"parameters": {
-										"variable": "CoinCount",
-										"value": "12"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 105795287020426,
-									"parameters": {
-										"variable": "BaseX",
-										"value": "UI_btn_x2.X"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 747177491470434,
-									"parameters": {
-										"variable": "BaseY",
-										"value": "UI_btn_x2.Y -20"
-									}
-								}
-							],
-							"sid": 667846082603308,
+							"eventType": "group",
+							"disabled": false,
+							"title": "Button_nextLevel",
+							"description": "",
+							"isActiveOnStart": true,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "for",
-											"objectClass": "System",
-											"sid": 555588960054771,
+											"id": "onclicked3",
+											"objectClass": "UI_lose_btn_playon",
+											"sid": 408908345118114,
+											"behaviorType": "Button"
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "UI_lose_btn_playon",
+											"sid": 373501599463814,
 											"parameters": {
-												"name": "\"i\"",
-												"start-index": "0",
-												"end-index": "CoinCount - 3"
+												"tags": "\"btn_nextLevel\""
 											}
 										}
 									],
 									"actions": [
 										{
-											"id": "create-object",
+											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 780808813032908,
+											"sid": 667566920962274,
 											"parameters": {
-												"object-to-create": "UI_coin_reward",
-												"layer": "\"win_sceen\"",
-												"x": "BaseX + random(-60, 60)",
-												"y": "BaseY + random(-20, 20)",
-												"create-hierarchy": false,
-												"template-name": "\"\""
+												"variable": "RewardDone",
+												"value": "false"
 											}
 										},
 										{
-											"id": "set-instvar-value",
-											"objectClass": "UI_coin_reward",
-											"sid": 488670932454117,
+											"id": "set-key",
+											"objectClass": "DIcSaveGame",
+											"sid": 185201616374266,
 											"parameters": {
-												"instance-variable": "Delay",
-												"value": "loopindex * 0.5"
+												"key": "\"SAVE_COIN\"",
+												"value": "DicSaveGame.Get(\"SAVE_COIN\") + 40"
+											}
+										},
+										{
+											"callFunction": "SAVE_GAME",
+											"sid": 122537212768774
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "UI_coin_reward",
+											"sid": 310153486957259,
+											"behaviorType": "Tween",
+											"parameters": {
+												"mode": "enabled"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "UI_btn_endgamewin",
+											"sid": 911774435693886,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "UI_lose_btn_playon",
+											"sid": 114162947205999,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "text_coin_reward",
+											"sid": 120430660341825,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "coins_effect",
+											"sid": 339396359907885,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "UI_coin_reward",
+											"sid": 797014155906869,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 169908984051941,
+											"parameters": {
+												"variable": "CoinCount",
+												"value": "12"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 597449864520681,
+											"parameters": {
+												"variable": "BaseX",
+												"value": "UI_btn_endgamewin.X"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 935687375273894,
+											"parameters": {
+												"variable": "BaseY",
+												"value": "UI_btn_endgamewin.Y -20"
 											}
 										}
 									],
-									"sid": 260512581759813
+									"sid": 839039907085988,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for",
+													"objectClass": "System",
+													"sid": 335991407326050,
+													"parameters": {
+														"name": "\"i\"",
+														"start-index": "0",
+														"end-index": "CoinCount - 1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 370221226206935,
+													"parameters": {
+														"object-to-create": "UI_coin_reward",
+														"layer": "\"win_sceen\"",
+														"x": "BaseX + random(-60, 60)",
+														"y": "BaseY + random(-20, 20)",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "UI_coin_reward",
+													"sid": 539829408454794,
+													"parameters": {
+														"instance-variable": "Delay",
+														"value": "loopindex * 0.5"
+													}
+												}
+											],
+											"sid": 813862683322795
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "UI_coin_reward",
+											"sid": 935109626819099
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 634900416435679,
+											"parameters": {
+												"seconds": "0.4",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "UI_coin_reward",
+											"sid": 207514537394795,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"pop\"",
+												"property": "position",
+												"end-x": "Self.X",
+												"end-y": "Self.Y - random(80, 140)",
+												"time": "0.3",
+												"ease": "easeinback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 160980167245433
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tweens-finished",
+											"objectClass": "UI_coin_reward",
+											"sid": 866652335429300,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"pop\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-two-properties",
+											"objectClass": "UI_coin_reward",
+											"sid": 479795327048186,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"fly_to_ui\"",
+												"property": "position",
+												"end-x": "UI_coin_topBar.X",
+												"end-y": "UI_coin_topBar.Y",
+												"time": "0.4",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "move-to-top",
+											"objectClass": "UI_btnPlus_topBar",
+											"sid": 330132133424896
+										}
+									],
+									"sid": 385604416254260
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tweens-finished",
+											"objectClass": "UI_coin_reward",
+											"sid": 183447887864115,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"fly_to_ui\""
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 831613769680494,
+											"parameters": {
+												"variable": "RewardDone"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 290296159899381,
+											"parameters": {
+												"variable": "RewardDone",
+												"value": "true"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "UI_coin_reward",
+											"sid": 540569837815191
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_coin",
+											"sid": 405779663985770,
+											"parameters": {
+												"text": "DIcSaveGame.Get(SAVE_COIN)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 326411404776923,
+											"parameters": {
+												"variable": "CurrentLevel",
+												"value": " str( int(CurrentLevel) + 1 )"
+											}
+										},
+										{
+											"id": "set-key",
+											"objectClass": "DIcSaveGame",
+											"sid": 213385144344279,
+											"parameters": {
+												"key": "\"CurrentLevel\"",
+												"value": "CurrentLevel"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 640498153152515,
+											"parameters": {
+												"seconds": "0.6",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 321489416012669,
+											"parameters": {
+												"layout": "Loading"
+											}
+										}
+									],
+									"sid": 805589213147146
 								}
-							]
+							],
+							"sid": 931280641459558
 						},
 						{
-							"eventType": "block",
-							"conditions": [
+							"eventType": "group",
+							"disabled": false,
+							"title": "Button_x2Coin",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
 								{
-									"id": "on-created",
-									"objectClass": "UI_coin_reward",
-									"sid": 802365549322721
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "UI_btn_endgamewin",
+											"sid": 172602305801391,
+											"behaviorType": "Button"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 816619155158298,
+											"parameters": {
+												"variable": "RewardDone",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-key",
+											"objectClass": "DIcSaveGame",
+											"sid": 429222354911029,
+											"parameters": {
+												"key": "\"SAVE_COIN\"",
+												"value": "DicSaveGame.Get(\"SAVE_COIN\") + 80"
+											}
+										},
+										{
+											"callFunction": "SAVE_GAME",
+											"sid": 883668633117241
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "UI_coin_reward",
+											"sid": 306640602688465,
+											"behaviorType": "Tween",
+											"parameters": {
+												"mode": "enabled"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "UI_btn_endgamewin",
+											"sid": 815736457979900,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "UI_lose_btn_playon",
+											"sid": 175802745923441,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "text_coin_reward",
+											"sid": 108732882541995,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "coins_effect",
+											"sid": 905024128965612,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "UI_coin_reward",
+											"sid": 487773751506852,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 599655707454606,
+											"parameters": {
+												"variable": "CoinCount",
+												"value": "15"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 331129309316723,
+											"parameters": {
+												"variable": "BaseX",
+												"value": "UI_btn_endgamewin.X"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 354258432543079,
+											"parameters": {
+												"variable": "BaseY",
+												"value": "UI_btn_endgamewin.Y -20"
+											}
+										}
+									],
+									"sid": 942562901385465,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for",
+													"objectClass": "System",
+													"sid": 499841141161431,
+													"parameters": {
+														"name": "\"i\"",
+														"start-index": "0",
+														"end-index": "CoinCount - 1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 717776668662026,
+													"parameters": {
+														"object-to-create": "UI_coin_reward",
+														"layer": "\"win_sceen\"",
+														"x": "BaseX + random(-60, 60)",
+														"y": "BaseY + random(-20, 20)",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "UI_coin_reward",
+													"sid": 288516392044455,
+													"parameters": {
+														"instance-variable": "Delay",
+														"value": "loopindex * 0.5"
+													}
+												}
+											],
+											"sid": 456482745191650
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "UI_coin_reward",
+											"sid": 436878709154333
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 873643040147417,
+											"parameters": {
+												"seconds": "0.4",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "UI_coin_reward",
+											"sid": 111010192038168,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"pop\"",
+												"property": "position",
+												"end-x": "Self.X",
+												"end-y": "Self.Y - random(80, 140)",
+												"time": "0.3",
+												"ease": "easeinback",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 449385893653069
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tweens-finished",
+											"objectClass": "UI_coin_reward",
+											"sid": 579587739082132,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"pop\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-two-properties",
+											"objectClass": "UI_coin_reward",
+											"sid": 149995062722627,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"fly_to_ui\"",
+												"property": "position",
+												"end-x": "UI_coin_topBar.X",
+												"end-y": "UI_coin_topBar.Y",
+												"time": "0.4",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "move-to-top",
+											"objectClass": "UI_btnPlus_topBar",
+											"sid": 388201956240516
+										}
+									],
+									"sid": 685516043589418
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tweens-finished",
+											"objectClass": "UI_coin_reward",
+											"sid": 928887777698707,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"fly_to_ui\""
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 506660022938897,
+											"parameters": {
+												"variable": "RewardDone"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 349302374830896,
+											"parameters": {
+												"variable": "RewardDone",
+												"value": "true"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "UI_coin_reward",
+											"sid": 335233854352156
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_coin",
+											"sid": 710969375786355,
+											"parameters": {
+												"text": "DIcSaveGame.Get(SAVE_COIN)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 724794977111654,
+											"parameters": {
+												"variable": "CurrentLevel",
+												"value": " str( int(CurrentLevel) + 1 )"
+											}
+										},
+										{
+											"id": "set-key",
+											"objectClass": "DIcSaveGame",
+											"sid": 477878031585787,
+											"parameters": {
+												"key": "\"CurrentLevel\"",
+												"value": "CurrentLevel"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 808846579075169,
+											"parameters": {
+												"seconds": "0.6",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 883488978277020,
+											"parameters": {
+												"layout": "Loading"
+											}
+										}
+									],
+									"sid": 318139876903996
 								}
 							],
-							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 586418351369978,
-									"parameters": {
-										"seconds": "0.4",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "tween-two-properties",
-									"objectClass": "UI_coin_reward",
-									"sid": 866706611616812,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"pop\"",
-										"property": "position",
-										"end-x": "Self.X",
-										"end-y": "Self.Y - random(80, 140)",
-										"time": "0.3",
-										"ease": "easeinback",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								}
-							],
-							"sid": 456592583350813
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-tweens-finished",
-									"objectClass": "UI_coin_reward",
-									"sid": 470936535340054,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"pop\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "tween-two-properties",
-									"objectClass": "UI_coin_reward",
-									"sid": 733454960799531,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"fly_to_ui\"",
-										"property": "position",
-										"end-x": "UI_coin_topBar.X",
-										"end-y": "UI_coin_topBar.Y",
-										"time": "0.4",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								},
-								{
-									"id": "move-to-top",
-									"objectClass": "UI_btnPlus_topBar",
-									"sid": 191878429248262
-								}
-							],
-							"sid": 482489537018718
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-tweens-finished",
-									"objectClass": "UI_coin_reward",
-									"sid": 902921170929215,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"fly_to_ui\""
-									}
-								},
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 865440597100472,
-									"parameters": {
-										"variable": "RewardDone"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 859226159915112,
-									"parameters": {
-										"variable": "RewardDone",
-										"value": "true"
-									}
-								},
-								{
-									"id": "destroy",
-									"objectClass": "UI_coin_reward",
-									"sid": 379377328305202
-								},
-								{
-									"id": "set-key",
-									"objectClass": "DIcSaveGame",
-									"sid": 606596636775549,
-									"parameters": {
-										"key": "\"SAVE_COIN\"",
-										"value": "DicSaveGame.Get(\"SAVE_COIN\") + 40"
-									}
-								},
-								{
-									"callFunction": "SAVE_GAME",
-									"sid": 650382057824354
-								},
-								{
-									"id": "set-text",
-									"objectClass": "text_coin",
-									"sid": 916089125226311,
-									"parameters": {
-										"text": "DIcSaveGame.Get(SAVE_COIN)"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 355390729371266,
-									"parameters": {
-										"variable": "CurrentLevel",
-										"value": " str( int(CurrentLevel) + 1 )"
-									}
-								},
-								{
-									"id": "set-key",
-									"objectClass": "DIcSaveGame",
-									"sid": 923639044388749,
-									"parameters": {
-										"key": "\"CurrentLevel\"",
-										"value": "CurrentLevel"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 964712212687266,
-									"parameters": {
-										"seconds": "0.6",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 199519254771067,
-									"parameters": {
-										"layout": "Loading"
-									}
-								}
-							],
-							"sid": 867545897766224
+							"sid": 903885168822856
 						}
 					],
 					"sid": 199234473461030
@@ -6751,40 +7079,6 @@
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "onclicked3",
-									"objectClass": "HUD_retry",
-									"sid": 311667883817332,
-									"behaviorType": "Button"
-								}
-							],
-							"actions": [
-								{
-									"id": "open0",
-									"objectClass": "Dia_noti_failed",
-									"sid": 143614636933935,
-									"behaviorType": "Dialog",
-									"parameters": {
-										"target_x0": "0",
-										"target_y1": "0",
-										"center4": "yes"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 315775161697069,
-									"parameters": {
-										"layer": "\"fade\"",
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 527259357290050
-						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -6850,6 +7144,248 @@
 								}
 							],
 							"sid": 701272038182549
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "HUD_heart",
+									"sid": 792616587672661,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"heart_opacity\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 718694275189562,
+									"parameters": {
+										"first-value": "Lives",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "open0",
+									"objectClass": "Dia_noti_failed",
+									"sid": 387130073093438,
+									"behaviorType": "Dialog",
+									"parameters": {
+										"target_x0": "0",
+										"target_y1": "0",
+										"center4": "yes"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 312143208525778,
+									"parameters": {
+										"layer": "\"fade\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 192554869151941
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_lose_btn_playon",
+									"sid": 130903787578550,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_lose_btn_playon",
+									"sid": 163572010745020,
+									"parameters": {
+										"tags": "\"btn_clam300\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 409533854183845,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 373763181391394,
+											"parameters": {
+												"first-value": "DIcSaveGame.Get(SAVE_COIN)",
+												"comparison": 5,
+												"second-value": "300"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-key",
+											"objectClass": "DIcSaveGame",
+											"sid": 160878585438670,
+											"parameters": {
+												"key": "\"SAVE_COIN\"",
+												"value": "DicSaveGame.Get(\"SAVE_COIN\") - 300"
+											}
+										},
+										{
+											"callFunction": "SAVE_GAME",
+											"sid": 707658257000844
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_coin",
+											"sid": 722387702490602,
+											"parameters": {
+												"text": "DIcSaveGame.Get(SAVE_COIN)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 961311124504406,
+											"parameters": {
+												"variable": "Lives",
+												"value": "3"
+											}
+										},
+										{
+											"callFunction": "RefreshHearts",
+											"sid": 426700100040325
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 779866818851721,
+											"parameters": {
+												"seconds": "0.3",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "close1",
+											"objectClass": "Dia_noti_failed",
+											"sid": 394415285635426,
+											"behaviorType": "Dialog"
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 601512271453533,
+											"parameters": {
+												"layer": "\"fade\"",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 701650915536704
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UL_btn_booster",
+									"sid": 301246194365820,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UL_btn_booster",
+									"sid": 244197690198668,
+									"parameters": {
+										"tags": "\"free_level_fail\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 336716991002241,
+									"parameters": {
+										"variable": "Lives",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "RefreshHearts",
+									"sid": 229926492788117
+								},
+								{
+									"id": "close1",
+									"objectClass": "Dia_noti_failed",
+									"sid": 511482931141154,
+									"behaviorType": "Dialog"
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 795706672893031,
+									"parameters": {
+										"layer": "\"fade\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 411260664087381
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "ondialogopened0",
+									"objectClass": "Dia_noti_failed",
+									"sid": 623812157234222,
+									"behaviorType": "Dialog"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 413750349389531,
+									"parameters": {
+										"group-name": "\"Time_Level\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 200017467042630
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "ondialogclosed1",
+									"objectClass": "Dia_noti_failed",
+									"sid": 578286056904894,
+									"behaviorType": "Dialog"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 134778876276667,
+									"parameters": {
+										"group-name": "\"Time_Level\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 170240965609596
 						}
 					],
 					"sid": 546206241501007
@@ -6889,7 +7425,7 @@
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
-					"functionCopyPicked": false,
+					"functionCopyPicked": true,
 					"functionIsAsync": false,
 					"functionParameters": [],
 					"eventType": "function-block",
@@ -6925,73 +7461,169 @@
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 558052829608062,
+									"children": [
 										{
-											"id": "set-instvar-value",
-											"objectClass": "HUD_heart",
-											"sid": 405434881628109,
-											"parameters": {
-												"instance-variable": "Index",
-												"value": "Lives +1"
-											}
-										},
-										{
-											"id": "tween-two-properties",
-											"objectClass": "HUD_heart",
-											"sid": 882714460312822,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"heart_scale\"",
-												"property": "scale",
-												"end-x": "0.25",
-												"end-y": "0.25",
-												"time": "0.2",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "HUD_heart",
-											"sid": 520422460061930,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"heart_opacity\"",
-												"property": "offsetOpacity",
-												"end-value": "0",
-												"time": "0.3",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 167577159255961,
+													"parameters": {
+														"first-value": "HUD_heart.Index",
+														"comparison": 0,
+														"second-value": "Lives +1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-two-properties",
+													"objectClass": "HUD_heart",
+													"sid": 186570663813640,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"heart_scale\"",
+														"property": "scale",
+														"end-x": "0.25",
+														"end-y": "0.25",
+														"time": "0.2",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "HUD_heart",
+													"sid": 983798940226687,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"heart_opacity\"",
+														"property": "offsetOpacity",
+														"end-value": "0",
+														"time": "0.3",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 366119053755144
 										}
-									],
-									"sid": 558052829608062
+									]
 								}
 							]
 						}
 					]
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-tweens-finished",
-							"objectClass": "HUD_heart",
-							"sid": 541188550432997,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"heart_opacity\""
-							}
-						}
-					],
+					"functionName": "RefreshHearts",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
 					"actions": [],
-					"sid": 681195426955774
+					"sid": 605447814184387,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 584935668512240,
+									"parameters": {
+										"object": "HUD_heart"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 512769849406357,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 837955656900789,
+											"parameters": {
+												"first-value": "HUD_heart.Index",
+												"comparison": 3,
+												"second-value": "Lives"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "HUD_heart",
+											"sid": 434174104666704,
+											"parameters": {
+												"opacity": "100"
+											}
+										},
+										{
+											"id": "set-scale",
+											"objectClass": "HUD_heart",
+											"sid": 433334576999007,
+											"parameters": {
+												"scale": "0.1"
+											}
+										}
+									],
+									"sid": 222042092681681
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 909817149879304,
+											"parameters": {
+												"first-value": "HUD_heart.Index",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 446015418124842,
+											"parameters": {
+												"first-value": "Lives",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "HUD_heart",
+											"sid": 308541616920409,
+											"parameters": {
+												"opacity": "100"
+											}
+										}
+									],
+									"sid": 975608211193674
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 403058626511012
