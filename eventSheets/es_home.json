@@ -90,6 +90,97 @@
 				}
 			],
 			"sid": 992932701751427
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Home_Button",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Setting_button",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_icon_settingButton",
+									"sid": 463676934183016,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"id": "open0",
+									"objectClass": "Dia_Setting",
+									"sid": 189740913555236,
+									"behaviorType": "Dialog",
+									"parameters": {
+										"target_x0": "0",
+										"target_y1": "0",
+										"center4": "yes"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 275458739310746,
+									"parameters": {
+										"layer": "\"fade\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 842321542290707
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "HUD_popUp_close",
+									"sid": 835451337490013,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "HUD_popUp_close",
+									"sid": 679295630558697,
+									"parameters": {
+										"tags": "\"setting\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "close1",
+									"objectClass": "Dia_Setting",
+									"sid": 717196725568068,
+									"behaviorType": "Dialog"
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 611564025160269,
+									"parameters": {
+										"layer": "\"fade\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 557820049213984
+						}
+					],
+					"sid": 540327809137132
+				}
+			],
+			"sid": 843270326101061
 		}
 	],
 	"sid": 879809268910420

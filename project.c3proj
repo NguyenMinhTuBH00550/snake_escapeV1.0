@@ -186,8 +186,7 @@
 			"fade_layout",
 			"Sprite10",
 			"Sprite8",
-			"Sprite9",
-			"Sprite11"
+			"Sprite9"
 		],
 		"subfolders": [
 			{
@@ -305,7 +304,8 @@
 					"UI_Loseheart_plus3",
 					"UI_losePanel_frame",
 					"UI_play_timeframe",
-					"UI_popup_loseheart"
+					"UI_popup_loseheart",
+					"UI_Home"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -349,7 +349,8 @@
 					"exit_zone",
 					"Dia_noti_failed",
 					"Dia_noti_restart",
-					"Dia_pause"
+					"Dia_pause",
+					"Dia_Setting"
 				],
 				"subfolders": [],
 				"name": "Dialog"

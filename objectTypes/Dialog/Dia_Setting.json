@@ -1,20 +1,20 @@
 {
-	"name": "UI_noAd_frame",
+	"name": "Dia_Setting",
 	"plugin-id": "Sprite",
-	"sid": 237337385134778,
+	"sid": 433358710485940,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "aekiro_button",
-			"name": "Button",
-			"sid": 381294862474802
+			"behaviorId": "aekiro_dialog",
+			"name": "Dialog",
+			"sid": 898475836376831
 		},
 		{
 			"behaviorId": "aekiro_gameobject",
 			"name": "GameObject",
-			"sid": 533667722964745
+			"sid": 576697567354895
 		}
 	],
 	"effectTypes": [],
@@ -23,21 +23,21 @@
 			{
 				"frames": [
 					{
-						"width": 184,
-						"height": 170,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8237374,
+						"imageSpriteId": 6935957,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 664376741101279,
+				"sid": 605294563828141,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
