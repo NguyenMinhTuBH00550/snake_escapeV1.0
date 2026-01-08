@@ -4,8 +4,22 @@
 	"sid": 165577931740900,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "Index",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 302758703132500
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 364899702366407
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

@@ -262,6 +262,20 @@
 			"sid": 674097357650379
 		},
 		{
+			"eventType": "comment",
+			"text": "Value_event_Lose_Heart"
+		},
+		{
+			"eventType": "variable",
+			"name": "Lives",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 446918629123048
+		},
+		{
 			"functionName": "start_layout",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -464,7 +478,34 @@
 									}
 								}
 							],
-							"sid": 844376283277351
+							"sid": 844376283277351,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 620372455271065,
+											"parameters": {
+												"object": "HUD_heart"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "HUD_heart",
+											"sid": 193979511936386,
+											"parameters": {
+												"instance-variable": "Index",
+												"value": "loopindex +1"
+											}
+										}
+									],
+									"sid": 702205235384187
+								}
+							]
 						},
 						{
 							"functionName": "CreateMap",
@@ -3947,6 +3988,10 @@
 										{
 											"callFunction": "TH2: SnakeBlocked",
 											"sid": 963646679400723
+										},
+										{
+											"callFunction": "LoseLife",
+											"sid": 635568933606261
 										}
 									],
 									"sid": 920529071057280
@@ -4004,6 +4049,10 @@
 										{
 											"callFunction": "TH2: SnakeBlocked",
 											"sid": 375384306893826
+										},
+										{
+											"callFunction": "LoseLife",
+											"sid": 316346046944041
 										}
 									],
 									"sid": 934592732745041
@@ -5575,6 +5624,15 @@
 														"type": "log",
 														"message": "\"Body \" & snake_body.NodeIndex & \" pulling back to (\" &  snake_body.PrevX & \",\" & snake_body.PrevY & \")\""
 													}
+												},
+												{
+													"id": "subtract-from-eventvar",
+													"objectClass": "System",
+													"sid": 559772161664053,
+													"parameters": {
+														"variable": "Lives",
+														"value": "1"
+													}
 												}
 											],
 											"sid": 458330260286854
@@ -6766,9 +6824,174 @@
 								}
 							],
 							"sid": 502798097576418
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UL_btn_booster",
+									"sid": 136876386534423,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UL_btn_booster",
+									"sid": 937370457327529,
+									"parameters": {
+										"tags": "\"restart\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Restart_Level",
+									"sid": 610445253674446
+								}
+							],
+							"sid": 701272038182549
 						}
 					],
 					"sid": 546206241501007
+				},
+				{
+					"functionName": "Restart_Level",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 846727950087798,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 564334090732866,
+									"parameters": {
+										"layout": "Loading"
+									}
+								}
+							],
+							"sid": 410127597142181
+						}
+					]
+				},
+				{
+					"functionName": "LoseLife",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 999711436263177,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 903559600790676,
+									"parameters": {
+										"variable": "Lives",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 875002789680482,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 373684195163783,
+											"parameters": {
+												"object": "HUD_heart"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "HUD_heart",
+											"sid": 405434881628109,
+											"parameters": {
+												"instance-variable": "Index",
+												"value": "Lives +1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "HUD_heart",
+											"sid": 882714460312822,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"heart_scale\"",
+												"property": "scale",
+												"end-x": "0.25",
+												"end-y": "0.25",
+												"time": "0.2",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "HUD_heart",
+											"sid": 520422460061930,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"heart_opacity\"",
+												"property": "offsetOpacity",
+												"end-value": "0",
+												"time": "0.3",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 558052829608062
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "HUD_heart",
+							"sid": 541188550432997,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"heart_opacity\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 681195426955774
 				}
 			],
 			"sid": 403058626511012

@@ -182,16 +182,9 @@
 			"Sprite6",
 			"Sprite7",
 			"Sprite",
-			"Particles",
-			"UI_coin_reward",
 			"Sprite5",
-			"HUD_outLive",
-			"UI_loseHeart",
-			"UI_Loseheart_plus3",
-			"Sprite8",
 			"fade_layout",
-			"UI_losePanel_frame",
-			"UI_popup_loseheart"
+			"Sprite10"
 		],
 		"subfolders": [
 			{
@@ -211,7 +204,8 @@
 					"HUD_homeBottom_tab",
 					"HUD_popUp_pause",
 					"HUD_setting_BA",
-					"HUD_booster_frame"
+					"HUD_booster_frame",
+					"HUD_outLive"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -295,7 +289,14 @@
 					"UI_txt_endgame",
 					"UL_btn_home",
 					"winning_BG",
-					"UI_ad"
+					"UI_ad",
+					"UI_coin_reward",
+					"UI_heart_frame",
+					"UI_loseHeart",
+					"UI_Loseheart_plus3",
+					"UI_losePanel_frame",
+					"UI_play_timeframe",
+					"UI_popup_loseheart"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -347,7 +348,8 @@
 				"items": [
 					"coins_effect",
 					"confetti",
-					"Flare"
+					"Flare",
+					"Particles"
 				],
 				"subfolders": [],
 				"name": "Particle"

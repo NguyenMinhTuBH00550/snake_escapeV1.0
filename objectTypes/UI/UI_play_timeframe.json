@@ -1,7 +1,7 @@
 {
-	"name": "HUD_level_txt",
+	"name": "UI_play_timeframe",
 	"plugin-id": "Sprite",
-	"sid": 313714011155036,
+	"sid": 978613228380011,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,22 +12,22 @@
 			{
 				"frames": [
 					{
-						"width": 392,
-						"height": 156,
+						"width": 223,
+						"height": 77,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9924748,
+						"imageSpriteId": 3544767,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 159408022760880,
-				"name": "Animation 1",
+				"sid": 385364856981973,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
