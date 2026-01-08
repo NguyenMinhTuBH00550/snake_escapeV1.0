@@ -30,6 +30,16 @@
 			"sid": 450699413644631
 		},
 		{
+			"eventType": "variable",
+			"name": "NextLayout",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 648177564860600
+		},
+		{
 			"eventType": "comment",
 			"text": "Value_createMap"
 		},
@@ -6443,6 +6453,15 @@
 											}
 										},
 										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 424324030923617,
+											"parameters": {
+												"variable": "NextLayout",
+												"value": "\"Level\""
+											}
+										},
+										{
 											"id": "set-key",
 											"objectClass": "DIcSaveGame",
 											"sid": 185201616374266,
@@ -6770,6 +6789,15 @@
 											}
 										},
 										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 657576560056653,
+											"parameters": {
+												"variable": "NextLayout",
+												"value": "\"Level\""
+											}
+										},
+										{
 											"id": "set-key",
 											"objectClass": "DIcSaveGame",
 											"sid": 429222354911029,
@@ -7087,6 +7115,14 @@
 									"objectClass": "HUD_popUp_close",
 									"sid": 720356420155104,
 									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "HUD_popUp_close",
+									"sid": 969701377335495,
+									"parameters": {
+										"tags": "\"fail_sceen\""
+									}
 								}
 							],
 							"actions": [
@@ -7360,6 +7396,15 @@
 										"group-name": "\"Time_Level\"",
 										"state": "deactivated"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 686444234559865,
+									"parameters": {
+										"variable": "IsTimerRunning",
+										"value": "0"
+									}
 								}
 							],
 							"sid": 200017467042630
@@ -7389,6 +7434,231 @@
 						}
 					],
 					"sid": 546206241501007
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Button",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Pause",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "HUD_pause",
+											"sid": 309689392239606,
+											"behaviorType": "Button"
+										}
+									],
+									"actions": [
+										{
+											"id": "open0",
+											"objectClass": "Dia_pause",
+											"sid": 130095243179131,
+											"behaviorType": "Dialog",
+											"parameters": {
+												"target_x0": "0",
+												"target_y1": "0",
+												"center4": "yes"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 807340183417448,
+											"parameters": {
+												"layer": "\"fade\"",
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 478987287351435
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "HUD_popUp_close",
+											"sid": 842123407458117,
+											"behaviorType": "Button"
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "HUD_popUp_close",
+											"sid": 384758065262906,
+											"parameters": {
+												"tags": "\"pause\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "close1",
+											"objectClass": "Dia_pause",
+											"sid": 300606577520992,
+											"behaviorType": "Dialog"
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 967692682721937,
+											"parameters": {
+												"layer": "\"fade\"",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 666344886867077
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "UI_btn_resume",
+											"sid": 782973152573394,
+											"behaviorType": "Button"
+										}
+									],
+									"actions": [
+										{
+											"id": "close1",
+											"objectClass": "Dia_pause",
+											"sid": 207499035955488,
+											"behaviorType": "Dialog"
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 716359167775402,
+											"parameters": {
+												"layer": "\"fade\"",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 916569146016424
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "ondialogopened0",
+											"objectClass": "Dia_pause",
+											"sid": 521177254748218,
+											"behaviorType": "Dialog"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 516834921318264,
+											"parameters": {
+												"group-name": "\"Time_Level\"",
+												"state": "deactivated"
+											}
+										}
+									],
+									"sid": 229530007362113
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "ondialogclosed1",
+											"objectClass": "Dia_pause",
+											"sid": 395869309912860,
+											"behaviorType": "Dialog"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 381952736296427,
+											"parameters": {
+												"group-name": "\"Time_Level\"",
+												"state": "activated"
+											}
+										}
+									],
+									"sid": 226335831928668
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "HUD_popUp_pause",
+											"sid": 814558810565842,
+											"behaviorType": "Button"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 163486604034762,
+											"parameters": {
+												"variable": "NextLayout",
+												"value": "\"Home\""
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 262787174633172,
+											"parameters": {
+												"layout": "Loading"
+											}
+										}
+									],
+									"sid": 768272737222179
+								}
+							],
+							"sid": 443635190762930
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Retry",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "HUD_retry",
+											"sid": 991422096680418,
+											"behaviorType": "Button"
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Restart_Level",
+											"sid": 615058746757614
+										}
+									],
+									"sid": 724891631366878
+								}
+							],
+							"sid": 168302296147309
+						}
+					],
+					"sid": 221043431180358
 				},
 				{
 					"functionName": "Restart_Level",

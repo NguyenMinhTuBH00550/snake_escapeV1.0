@@ -5,7 +5,18 @@
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_button",
+			"name": "Button",
+			"sid": 370135064411311
+		},
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 706585945778254
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -20,7 +31,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3314109,
+						"imageSpriteId": 1395165,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

@@ -186,7 +186,8 @@
 			"fade_layout",
 			"Sprite10",
 			"Sprite8",
-			"Sprite9"
+			"Sprite9",
+			"Sprite11"
 		],
 		"subfolders": [
 			{
@@ -244,7 +245,13 @@
 					"text_clam_300",
 					"text_notiOutLive",
 					"text_restart",
-					"text_Failed"
+					"text_Failed",
+					"text_Pause",
+					"text_btn_Home",
+					"text_btn_Resume",
+					"text_level_count",
+					"text_next_level_count",
+					"text_level_note"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -341,7 +348,8 @@
 					"Dia_winSceen",
 					"exit_zone",
 					"Dia_noti_failed",
-					"Dia_noti_restart"
+					"Dia_noti_restart",
+					"Dia_pause"
 				],
 				"subfolders": [],
 				"name": "Dialog"
@@ -399,7 +407,8 @@
 		"items": [
 			"es_loading",
 			"es_global",
-			"es_game"
+			"es_game",
+			"es_home"
 		],
 		"subfolders": []
 	},

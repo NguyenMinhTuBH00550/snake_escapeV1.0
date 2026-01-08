@@ -1,0 +1,96 @@
+{
+	"name": "es_home",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "es_global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 614633693213878
+				}
+			],
+			"actions": [],
+			"sid": 561503345798090,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "text_level",
+							"sid": 447163641988644,
+							"parameters": {
+								"text": "\"Level  \" & CurrentLevel"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text_level_count",
+							"sid": 962861758492299,
+							"parameters": {
+								"text": "CurrentLevel"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text_next_level_count",
+							"sid": 267086479498718,
+							"parameters": {
+								"text": "int(CurrentLevel) +1"
+							}
+						}
+					],
+					"sid": 465369523426076
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Select_Level",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onclicked3",
+							"objectClass": "UI_btnPlay",
+							"sid": 731887674525300,
+							"behaviorType": "Button"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 259280841097523,
+							"parameters": {
+								"variable": "NextLayout",
+								"value": "\"Level\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 945120724495458,
+							"parameters": {
+								"layout": "Loading"
+							}
+						}
+					],
+					"sid": 322674816031204
+				}
+			],
+			"sid": 992932701751427
+		}
+	],
+	"sid": 879809268910420
+}

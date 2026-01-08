@@ -75,18 +75,38 @@
 						"tag": "\"LoadAllLevels\"",
 						"file": "all_levels.json"
 					}
-				},
-				{
-					"id": "set-scale",
-					"objectClass": "HUD_logo",
-					"sid": 411060082113544,
-					"disabled": true,
-					"parameters": {
-						"scale": "1"
-					}
 				}
 			],
-			"sid": 515464601622336
+			"sid": 515464601622336,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 299622423878389,
+							"parameters": {
+								"first-value": "NextLayout",
+								"comparison": 0,
+								"second-value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 752937118893540,
+							"parameters": {
+								"variable": "NextLayout",
+								"value": "\"Home\""
+							}
+						}
+					],
+					"sid": 913655508160127
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -423,43 +443,88 @@
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 579139059155366,
+			"children": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 859651214932800,
-					"parameters": {
-						"layout": "level"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 802035198636525,
+							"parameters": {
+								"first-value": "NextLayout",
+								"comparison": 0,
+								"second-value": "\"Home\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 325398250806908,
+							"parameters": {
+								"layout": "Home"
+							}
+						}
+					],
+					"sid": 532581034577593
 				},
 				{
-					"id": "reset-eventvar",
-					"objectClass": "System",
-					"sid": 532252976106074,
-					"parameters": {
-						"variable": "TimeRemaining"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 875348782107769,
-					"parameters": {
-						"variable": "Lives",
-						"value": "3"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 567940151922024,
-					"parameters": {
-						"variable": "IsTimerRunning",
-						"value": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 399119993161974,
+							"parameters": {
+								"first-value": "NextLayout",
+								"comparison": 0,
+								"second-value": "\"Level\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 681688088068263,
+							"parameters": {
+								"layout": "level"
+							}
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 950291065156531,
+							"parameters": {
+								"variable": "TimeRemaining"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 654370979610514,
+							"parameters": {
+								"variable": "Lives",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 762886635882435,
+							"parameters": {
+								"variable": "IsTimerRunning",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 326319412265557
 				}
-			],
-			"sid": 579139059155366
+			]
 		},
 		{
 			"functionName": "int_SAVE_GAME",

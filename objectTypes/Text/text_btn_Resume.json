@@ -1,0 +1,15 @@
+{
+	"name": "text_btn_Resume",
+	"plugin-id": "Text",
+	"sid": 598675595642746,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}

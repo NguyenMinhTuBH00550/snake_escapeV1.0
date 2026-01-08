@@ -1,0 +1,15 @@
+{
+	"name": "text_btn_Home",
+	"plugin-id": "Text",
+	"sid": 302462428274373,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}
