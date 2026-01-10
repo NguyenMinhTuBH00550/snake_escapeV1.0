@@ -2572,7 +2572,7 @@
 					},
 					"uid": 323,
 					"sid": 531193033281013,
-					"tags": "",
+					"tags": "spd_deal",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {
@@ -3079,7 +3079,7 @@
 					},
 					"uid": 326,
 					"sid": 287304958691879,
-					"tags": "",
+					"tags": "no_ads_deal",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {
@@ -3652,7 +3652,7 @@
 					},
 					"uid": 328,
 					"sid": 729403483159061,
-					"tags": "",
+					"tags": "1kCoin_deal",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {
@@ -4144,7 +4144,7 @@
 					},
 					"uid": 340,
 					"sid": 753701391874675,
-					"tags": "",
+					"tags": "5kCoin_deal",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {
@@ -4636,7 +4636,7 @@
 					},
 					"uid": 347,
 					"sid": 286893695119025,
-					"tags": "",
+					"tags": "10kCoin_deal",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {
@@ -5128,7 +5128,7 @@
 					},
 					"uid": 352,
 					"sid": 182624757215894,
-					"tags": "",
+					"tags": "25kCoin_deal",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {
@@ -5620,7 +5620,7 @@
 					},
 					"uid": 357,
 					"sid": 795302370083118,
-					"tags": "",
+					"tags": "50kCoin_deal",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {
@@ -6112,7 +6112,7 @@
 					},
 					"uid": 362,
 					"sid": 650414795804342,
-					"tags": "",
+					"tags": "100kCoin_deal",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {
@@ -6732,7 +6732,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -54.460226389694355,
+						"x": -51.533181445132044,
 						"y": 87.1710823671744,
 						"width": 51.3805670693676,
 						"height": 44.12359945364669,
@@ -6819,7 +6819,7 @@
 						"text": "0",
 						"enable-bbcode": true,
 						"font": "LilitaOne-Regular",
-						"size": 15,
+						"size": 12,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -6878,10 +6878,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -147.46022638969436,
-						"y": 68.1710823671744,
-						"width": 74.57288934558864,
-						"height": 34.65056352840073,
+						"x": -138.8598887982373,
+						"y": 69.97235149791193,
+						"width": 70.06974743943127,
+						"height": 29.24678705687466,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -8078,10 +8078,10 @@
 				{
 					"type": "text_coin",
 					"properties": {
-						"text": "360",
+						"text": "0",
 						"enable-bbcode": true,
 						"font": "LilitaOne-Regular",
-						"size": 15,
+						"size": 12,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -8140,10 +8140,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 386.4968085627745,
-						"y": 71.15380511078263,
-						"width": 100.92012602484374,
-						"height": 31.530804040363158,
+						"x": 406.8593914634505,
+						"y": 75.4318134986555,
+						"width": 63.543957760729995,
+						"height": 23.19997489410317,
 						"originX": 0,
 						"originY": 0,
 						"color": [

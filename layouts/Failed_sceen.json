@@ -359,7 +359,7 @@
 						"text": "0",
 						"enable-bbcode": true,
 						"font": "LilitaOne-Regular",
-						"size": 15,
+						"size": 12,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -418,10 +418,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 397.83353298092925,
-						"y": 25.2376191764237,
-						"width": 72.98493166314756,
-						"height": 34.65056352840073,
+						"x": 398.9593087947541,
+						"y": 27.939507412186735,
+						"width": 67.130841774023,
+						"height": 25.19395083814431,
 						"originX": 0,
 						"originY": 0,
 						"color": [
