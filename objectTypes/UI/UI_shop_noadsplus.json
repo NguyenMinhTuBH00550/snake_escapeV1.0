@@ -1,33 +1,39 @@
 {
-	"name": "Sprite4",
+	"name": "UI_shop_noadsplus",
 	"plugin-id": "Sprite",
-	"sid": 632272606015597,
+	"sid": 781253498935738,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 963896356589701
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 946,
-						"height": 2048,
+						"width": 1032,
+						"height": 518,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3297044,
+						"imageSpriteId": 8756690,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 531261964140932,
-				"name": "Animation 1",
+				"sid": 384215101356607,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

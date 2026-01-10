@@ -43,6 +43,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "LocalStorage",
 			"name": "Local storage",
 			"author": "Scirra",
@@ -158,6 +165,14 @@
 			"version": "1.822"
 		},
 		{
+			"type": "behavior",
+			"id": "aekiro_scrollView",
+			"name": "Scroll View",
+			"author": "Aekiro",
+			"bundled": false,
+			"version": "1.822"
+		},
+		{
 			"type": "effect",
 			"id": "outline",
 			"name": "Outline",
@@ -186,7 +201,17 @@
 			"fade_layout",
 			"Sprite10",
 			"Sprite8",
-			"Sprite9"
+			"Sprite9",
+			"Keyboard",
+			"Dia_shop",
+			"Dia_Home",
+			"Sprite11",
+			"HUD_challenge_BG",
+			"UI_challenge_btn",
+			"UI_challenge_iconlock",
+			"HUD_challenge_panel",
+			"UI_challenge_frameLock",
+			"Dia_Challenge"
 		],
 		"subfolders": [
 			{
@@ -207,7 +232,8 @@
 					"HUD_popUp_pause",
 					"HUD_setting_BA",
 					"HUD_booster_frame",
-					"HUD_outLive"
+					"HUD_outLive",
+					"BG_shop"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -217,7 +243,7 @@
 					"text_level",
 					"text_count_snake",
 					"text_time",
-					"text_challenge",
+					"text_tutorial",
 					"text_booster",
 					"text_loading",
 					"text_popUp_setting",
@@ -250,7 +276,15 @@
 					"text_btn_Resume",
 					"text_level_count",
 					"text_next_level_count",
-					"text_level_note"
+					"text_level_note",
+					"text_coin_shop",
+					"text_noAd_bundle",
+					"text_challenge",
+					"text_panel_challenge",
+					"text_panel_challenge2",
+					"text_btn_challengeLock",
+					"text_btn_Shop",
+					"text_btn_Challenge"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -275,7 +309,6 @@
 					"UI_coin_topBar",
 					"UI_edge_title",
 					"UI_home_process",
-					"UI_homeBottom_tab",
 					"UI_homeTab",
 					"UI_icon_challenge",
 					"UI_icon_frameTop",
@@ -305,7 +338,23 @@
 					"UI_losePanel_frame",
 					"UI_play_timeframe",
 					"UI_popup_loseheart",
-					"UI_Home"
+					"UI_Home",
+					"Tile_BG_shop",
+					"UI_booster_grid",
+					"UI_shop_btn",
+					"UI_shop_coin_panel",
+					"UI_shop_coinpack1",
+					"UI_shop_coinpack2",
+					"UI_shop_coinpack3",
+					"UI_shop_noads",
+					"UI_shop_noadsplus",
+					"UI_shop_top",
+					"UI_text_shop_coin",
+					"UI_text_shop_deals",
+					"UI_shop_coinpack4",
+					"UI_shop_coinpack5",
+					"UI_shop_coinpack6",
+					"UI_shop_coinpack7"
 				],
 				"subfolders": [],
 				"name": "UI"

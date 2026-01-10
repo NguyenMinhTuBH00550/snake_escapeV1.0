@@ -1,33 +1,39 @@
 {
-	"name": "Sprite4",
+	"name": "UI_text_shop_coin",
 	"plugin-id": "Sprite",
-	"sid": 632272606015597,
+	"sid": 707806581478675,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 241477192973556
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 946,
-						"height": 2048,
+						"width": 178,
+						"height": 64,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3297044,
+						"imageSpriteId": 3004126,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 531261964140932,
-				"name": "Animation 1",
+				"sid": 394948077385597,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

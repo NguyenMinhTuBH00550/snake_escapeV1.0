@@ -1,7 +1,7 @@
 {
-	"name": "Sprite4",
+	"name": "HUD_challenge_BG",
 	"plugin-id": "Sprite",
-	"sid": 632272606015597,
+	"sid": 962633072951154,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,7 +12,7 @@
 			{
 				"frames": [
 					{
-						"width": 946,
+						"width": 1366,
 						"height": 2048,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -20,14 +20,14 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3297044,
+						"imageSpriteId": 7313642,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 531261964140932,
-				"name": "Animation 1",
+				"sid": 978847866721212,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

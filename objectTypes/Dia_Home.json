@@ -1,32 +1,38 @@
 {
-	"name": "Sprite4",
+	"name": "Dia_Home",
 	"plugin-id": "Sprite",
-	"sid": 632272606015597,
+	"sid": 514825953745464,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 613866421100631
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 946,
-						"height": 2048,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3297044,
+						"imageSpriteId": 4433968,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 531261964140932,
+				"sid": 385012159780514,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

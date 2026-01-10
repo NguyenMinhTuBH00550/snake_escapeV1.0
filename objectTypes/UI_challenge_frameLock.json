@@ -1,7 +1,7 @@
 {
-	"name": "Sprite4",
+	"name": "UI_challenge_frameLock",
 	"plugin-id": "Sprite",
-	"sid": 632272606015597,
+	"sid": 542437188141970,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,22 +12,22 @@
 			{
 				"frames": [
 					{
-						"width": 946,
-						"height": 2048,
+						"width": 550,
+						"height": 168,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3297044,
+						"imageSpriteId": 4121673,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 531261964140932,
-				"name": "Animation 1",
+				"sid": 922388580902478,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

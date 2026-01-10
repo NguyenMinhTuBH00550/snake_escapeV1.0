@@ -1,7 +1,7 @@
 {
-	"name": "text_challenge",
+	"name": "text_panel_challenge",
 	"plugin-id": "Text",
-	"sid": 855113390927470,
+	"sid": 233112875014391,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],

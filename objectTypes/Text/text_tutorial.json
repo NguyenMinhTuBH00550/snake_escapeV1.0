@@ -1,15 +1,10 @@
 {
-	"name": "text_challenge",
+	"name": "text_tutorial",
 	"plugin-id": "Text",
-	"sid": 855113390927470,
+	"sid": 422048735726461,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [
-		{
-			"effectId": "outline",
-			"name": "Outline"
-		}
-	]
+	"effectTypes": []
 }

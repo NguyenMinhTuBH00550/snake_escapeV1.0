@@ -1,7 +1,7 @@
 {
-	"name": "text_challenge",
+	"name": "text_btn_challengeLock",
 	"plugin-id": "Text",
-	"sid": 855113390927470,
+	"sid": 346413231239008,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],

@@ -6,6 +6,16 @@
 			"includeSheet": "es_global"
 		},
 		{
+			"eventType": "variable",
+			"name": "onClick",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 651110732894354
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -44,9 +54,136 @@
 							"parameters": {
 								"text": "int(CurrentLevel) +1"
 							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Dia_Home",
+							"sid": 257963489220948,
+							"parameters": {
+								"x": " (ViewportLeft(0) + ViewportRight(0)) / 2"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Dia_shop",
+							"sid": 100635366713314,
+							"parameters": {
+								"x": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0)"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Dia_Challenge",
+							"sid": 896420318379559,
+							"parameters": {
+								"x": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0) * 2"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "UI_homeTab",
+							"sid": 348285283790039,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "UI_Home",
+							"sid": 987402527517008,
+							"parameters": {
+								"instance-variable": "initialY",
+								"value": "UI_Home.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "UI_icon_shop",
+							"sid": 133094314988513,
+							"parameters": {
+								"instance-variable": "initialY",
+								"value": "UI_icon_shop.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "UI_icon_challenge",
+							"sid": 137894133633704,
+							"parameters": {
+								"instance-variable": "initialY",
+								"value": "UI_icon_challenge.Y"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "UI_Home",
+							"sid": 384715040603946,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"icon_home\"",
+								"property": "offsetY",
+								"end-value": "UI_Home.initialY - 43",
+								"time": "0.15",
+								"ease": "noease",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "UI_Home",
+							"sid": 594397102531501,
+							"parameters": {
+								"animation": "\"home_bottomtab2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "text_btn_Shop",
+							"sid": 918383480215015,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "text_btn_Challenge",
+							"sid": 794201727695068,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
-					"sid": 465369523426076
+					"sid": 465369523426076,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "UI_homeTab",
+									"sid": 869343805787456,
+									"parameters": {
+										"tags": "\"pannel_home\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "UI_homeTab",
+									"sid": 900355486499879,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 451392157256977
+						}
+					]
 				}
 			]
 		},
@@ -178,6 +315,634 @@
 						}
 					],
 					"sid": 540327809137132
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 269333339582010,
+							"parameters": {
+								"object": "UI_Home",
+								"type": "start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetActiveIcon",
+							"sid": 769987433285462,
+							"parameters": [
+								"0"
+							]
+						}
+					],
+					"sid": 918665815536795,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "Dia_Home",
+									"sid": 359762299156164,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2",
+										"time": "0.3",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Dia_shop",
+									"sid": 345234359554089,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "ViewportLeft(0) + ViewportRight(0) / 2 - ViewportWidth(0)",
+										"time": "0.3",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Dia_Challenge",
+									"sid": 176248524903088,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0) * 2",
+										"time": "0.3",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 599252665623211
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 442433379268504,
+							"parameters": {
+								"object": "UI_icon_shop",
+								"type": "start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetActiveIcon",
+							"sid": 865224092814405,
+							"parameters": [
+								"1"
+							]
+						}
+					],
+					"sid": 931138325617732,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "Dia_Home",
+									"sid": 948808686265852,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0)",
+										"time": "0.3",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Dia_shop",
+									"sid": 581901372766204,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2",
+										"time": "0.3",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Dia_Challenge",
+									"sid": 853489226735502,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0)",
+										"time": "0.3",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 402078337357377
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 637972741936809,
+							"parameters": {
+								"object": "UI_icon_challenge",
+								"type": "start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetActiveIcon",
+							"sid": 158197272223742,
+							"parameters": [
+								"2"
+							]
+						}
+					],
+					"sid": 185729963103764,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "Dia_Home",
+									"sid": 102267351358394,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2 - ViewportWidth(0) * 2",
+										"time": "0.3",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Dia_shop",
+									"sid": 263885971383565,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "ViewportLeft(0) + ViewportRight(0) / 2 - ViewportWidth(0)",
+										"time": "0.3",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Dia_Challenge",
+									"sid": 361379533080876,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2",
+										"time": "0.3",
+										"ease": "easeoutexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 449604801343379
+						}
+					]
+				},
+				{
+					"functionName": "SetActiveIcon",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "iconIndex",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 121808398086332
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 785885948667014,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "UI_Home",
+									"sid": 910313144929731,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"icon_home\"",
+										"property": "offsetY",
+										"end-value": "UI_Home.initialY",
+										"time": "0.15",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "UI_icon_shop",
+									"sid": 767705762402908,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"icon_home\"",
+										"property": "offsetY",
+										"end-value": "UI_icon_shop.initialY",
+										"time": "0.15",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "UI_icon_challenge",
+									"sid": 812504377070325,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"icon_home\"",
+										"property": "offsetY",
+										"end-value": "UI_icon_challenge.initialY",
+										"time": "0.15",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "text_btn_Shop",
+									"sid": 867008757725310,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "text_btn_Challenge",
+									"sid": 510887845816964,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "text_btn_Home",
+									"sid": 733239577078054,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "UI_homeTab",
+									"sid": 837659390903225,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "UI_Home",
+									"sid": 800865994988002,
+									"parameters": {
+										"animation": "\"home_bottomtab\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "UI_icon_shop",
+									"sid": 216600449741932,
+									"parameters": {
+										"animation": "\"icon_shop_gray\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "UI_icon_challenge",
+									"sid": 750367440795639,
+									"parameters": {
+										"animation": "\"icon_challenge_gray\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 473996933355160,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 581455926238700,
+											"parameters": {
+												"first-value": "iconIndex",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "UI_Home",
+											"sid": 383874357794054,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"icon_home\"",
+												"property": "offsetY",
+												"end-value": "UI_Home.initialY - 43",
+												"time": "0.15",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "UI_Home",
+											"sid": 512272114291245,
+											"parameters": {
+												"animation": "\"home_bottomtab2\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "text_btn_Home",
+											"sid": 494824226106683,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 455726034803367,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "UI_homeTab",
+													"sid": 900491056826007,
+													"parameters": {
+														"tags": "\"pannel_home\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "UI_homeTab",
+													"sid": 568942885497137,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 693344714554005
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 563876948103213,
+											"parameters": {
+												"first-value": "iconIndex",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "UI_icon_shop",
+											"sid": 469813065264424,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"icon_home\"",
+												"property": "offsetY",
+												"end-value": "UI_icon_shop.initialY - 43",
+												"time": "0.15",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "UI_icon_shop",
+											"sid": 195901679602756,
+											"parameters": {
+												"animation": "\"icon_shop_yellow\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "text_btn_Shop",
+											"sid": 582421753574936,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 568021170261981,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "UI_homeTab",
+													"sid": 742248584194987,
+													"parameters": {
+														"tags": "\"pannel_shop\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "UI_homeTab",
+													"sid": 691289854844298,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 240433475779735
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 839826977018314,
+											"parameters": {
+												"first-value": "iconIndex",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "UI_icon_challenge",
+											"sid": 909066451957553,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"icon_home\"",
+												"property": "offsetY",
+												"end-value": "UI_icon_challenge.initialY - 43",
+												"time": "0.15",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "UI_icon_challenge",
+											"sid": 909245021823293,
+											"parameters": {
+												"animation": "\"icon_challenge_yellow\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "text_btn_Challenge",
+											"sid": 577455531377647,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 395438149626195,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "UI_homeTab",
+													"sid": 902265782176347,
+													"parameters": {
+														"tags": "\"pannel_challenge\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "UI_homeTab",
+													"sid": 102745994391960,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 617779238109676
+										}
+									]
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 843270326101061

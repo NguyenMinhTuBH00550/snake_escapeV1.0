@@ -115,7 +115,7 @@
 					}
 				},
 				{
-					"type": "text_challenge",
+					"type": "text_tutorial",
 					"properties": {
 						"text": "Tap to move",
 						"enable-bbcode": true,

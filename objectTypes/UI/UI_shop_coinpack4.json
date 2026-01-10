@@ -1,7 +1,7 @@
 {
-	"name": "UI_homeBottom_tab",
+	"name": "UI_shop_coinpack4",
 	"plugin-id": "Sprite",
-	"sid": 636594009145229,
+	"sid": 672744015911641,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,22 +12,22 @@
 			{
 				"frames": [
 					{
-						"width": 176,
-						"height": 165,
+						"width": 195,
+						"height": 156,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6395333,
+						"imageSpriteId": 3199957,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 212246311886851,
-				"name": "Animation 1",
+				"sid": 839261294140725,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

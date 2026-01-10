@@ -1,0 +1,29 @@
+{
+	"name": "Tile_BG_shop",
+	"plugin-id": "TiledBg",
+	"sid": 730445412890532,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 582472929238336
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 887120,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}
