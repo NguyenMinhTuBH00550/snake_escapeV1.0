@@ -980,7 +980,9 @@
 						"PrevY": 0,
 						"PrevX": 0,
 						"isEscaping": 0,
-						"CaseType": 0
+						"CaseType": 0,
+						"isBlocked": false,
+						"IsCollision": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -1034,7 +1036,8 @@
 						"PrevX": 0,
 						"PrevY": 0,
 						"isEscaping": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"isBlocked": false
 					},
 					"behaviors": {
 						"Tween": {

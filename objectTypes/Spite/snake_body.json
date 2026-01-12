@@ -74,6 +74,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 938862099588152
+		},
+		{
+			"name": "isBlocked",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 585030309212781
 		}
 	],
 	"behaviorTypes": [
