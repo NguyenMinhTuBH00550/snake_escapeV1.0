@@ -1,0 +1,62 @@
+{
+	"name": "UI_head_snake",
+	"plugin-id": "Sprite",
+	"sid": 296220854400759,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "OwnerID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 947253969766735
+		},
+		{
+			"name": "OffsetX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 518723697830158
+		},
+		{
+			"name": "OffsetY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 702179378679265
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 248,
+						"height": 262,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 648950,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 462029179987500,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

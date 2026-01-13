@@ -137,7 +137,7 @@
 			"eventType": "variable",
 			"name": "OffsetX",
 			"type": "number",
-			"initialValue": "35",
+			"initialValue": "2.3",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -147,7 +147,7 @@
 			"eventType": "variable",
 			"name": "OffsetY",
 			"type": "number",
-			"initialValue": "-10",
+			"initialValue": "-9",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -591,6 +591,560 @@
 										}
 									],
 									"sid": 702205235384187
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 245204154162484,
+											"parameters": {
+												"object": "snake_head"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 429089664178640,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 518888036729588,
+													"parameters": {
+														"object": "snake_body"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 726245051755280,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 995393065327347,
+															"parameters": {
+																"first-value": "snake_body.OwnerID",
+																"comparison": 0,
+																"second-value": "snake_head.OwnerID"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 978561254348200,
+															"parameters": {
+																"first-value": "snake_body.NodeIndex",
+																"comparison": 0,
+																"second-value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 538645881994434,
+													"children": [
+														{
+															"eventType": "comment",
+															"text": "Case 1 — Body ở dưới head → head quay lên"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 939954112134135,
+																	"parameters": {
+																		"first-value": "snake_body.GridY",
+																		"comparison": 4,
+																		"second-value": "snake_head.GridY"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 551809970863093,
+																	"parameters": {
+																		"instance-variable": "Dir",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-angle",
+																	"objectClass": "snake_head",
+																	"sid": 101158118059308,
+																	"parameters": {
+																		"angle": "0"
+																	}
+																}
+															],
+															"sid": 680678475746153
+														},
+														{
+															"eventType": "comment",
+															"text": "Case 2 — Body ở trái head → head quay phải"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 646309372366691,
+																	"parameters": {
+																		"first-value": "snake_body.GridX",
+																		"comparison": 2,
+																		"second-value": "snake_head.GridX "
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 388340515059206,
+																	"parameters": {
+																		"instance-variable": "Dir",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "set-angle",
+																	"objectClass": "snake_head",
+																	"sid": 455615450725557,
+																	"parameters": {
+																		"angle": "90"
+																	}
+																}
+															],
+															"sid": 154935164520960
+														},
+														{
+															"eventType": "comment",
+															"text": "Case 3 — Body ở trên head → head quay xuống"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 879569604896091,
+																	"parameters": {
+																		"first-value": "snake_body.GridY",
+																		"comparison": 2,
+																		"second-value": "snake_head.GridY"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 573360255174363,
+																	"parameters": {
+																		"instance-variable": "Dir",
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "set-angle",
+																	"objectClass": "snake_head",
+																	"sid": 547356265993155,
+																	"parameters": {
+																		"angle": "180"
+																	}
+																}
+															],
+															"sid": 381120568298478
+														},
+														{
+															"eventType": "comment",
+															"text": "Case 4 — Body ở phải head → head quay trái"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 367950095811990,
+																	"parameters": {
+																		"first-value": "snake_body.GridX",
+																		"comparison": 4,
+																		"second-value": "snake_head.GridX "
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "snake_head",
+																	"sid": 669140116542853,
+																	"parameters": {
+																		"instance-variable": "Dir",
+																		"value": "3"
+																	}
+																},
+																{
+																	"id": "set-angle",
+																	"objectClass": "snake_head",
+																	"sid": 215528021265497,
+																	"parameters": {
+																		"angle": "270"
+																	}
+																}
+															],
+															"sid": 340146250308437
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 749666465202221,
+																	"parameters": {
+																		"first-value": "snake_body.isDiagonalBody",
+																		"comparison": 0,
+																		"second-value": "1"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 534206164082425,
+															"children": [
+																{
+																	"eventType": "comment",
+																	"text": "Case 5 — Body ở trái-dưới → Head quay phải-lên (↗)"
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 658617494690256,
+																			"parameters": {
+																				"first-value": "snake_body.GridX",
+																				"comparison": 2,
+																				"second-value": "snake_head.GridX "
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 909438305057879,
+																			"parameters": {
+																				"first-value": "snake_body.GridY",
+																				"comparison": 4,
+																				"second-value": "snake_head.GridY"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "snake_head",
+																			"sid": 482734117239406,
+																			"parameters": {
+																				"instance-variable": "Dir",
+																				"value": "4"
+																			}
+																		},
+																		{
+																			"id": "set-angle",
+																			"objectClass": "snake_head",
+																			"sid": 584480916229978,
+																			"parameters": {
+																				"angle": "45"
+																			}
+																		}
+																	],
+																	"sid": 330563648222871
+																},
+																{
+																	"eventType": "comment",
+																	"text": "Case 6 — Body ở phải-dưới → Head quay trái-lên (↖)"
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 713012492807316,
+																			"parameters": {
+																				"first-value": "snake_body.GridX",
+																				"comparison": 4,
+																				"second-value": "snake_head.GridX "
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 683131657539435,
+																			"parameters": {
+																				"first-value": "snake_body.GridY",
+																				"comparison": 4,
+																				"second-value": "snake_head.GridY"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "snake_head",
+																			"sid": 121945592754722,
+																			"parameters": {
+																				"instance-variable": "Dir",
+																				"value": "5"
+																			}
+																		},
+																		{
+																			"id": "set-angle",
+																			"objectClass": "snake_head",
+																			"sid": 213659070828772,
+																			"parameters": {
+																				"angle": "315"
+																			}
+																		}
+																	],
+																	"sid": 277849389700343
+																},
+																{
+																	"eventType": "comment",
+																	"text": "Case 7 — Body ở trái-trên → Head quay phải-xuống (↘)"
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 879158875493924,
+																			"parameters": {
+																				"first-value": "snake_body.GridX",
+																				"comparison": 2,
+																				"second-value": "snake_head.GridX "
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 247292853693664,
+																			"parameters": {
+																				"first-value": "snake_body.GridY",
+																				"comparison": 2,
+																				"second-value": "snake_head.GridY"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "snake_head",
+																			"sid": 953062553739270,
+																			"parameters": {
+																				"instance-variable": "Dir",
+																				"value": "6"
+																			}
+																		},
+																		{
+																			"id": "set-angle",
+																			"objectClass": "snake_head",
+																			"sid": 615495257786044,
+																			"parameters": {
+																				"angle": "135"
+																			}
+																		}
+																	],
+																	"sid": 250904004736405
+																},
+																{
+																	"eventType": "comment",
+																	"text": "Case 8 — Body ở phải-trên → Head quay trái-xuống (↙)"
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 821884332651362,
+																			"parameters": {
+																				"first-value": "snake_body.GridX",
+																				"comparison": 4,
+																				"second-value": "snake_head.GridX "
+																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 223368830331891,
+																			"parameters": {
+																				"first-value": "snake_body.GridY",
+																				"comparison": 2,
+																				"second-value": "snake_head.GridY"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "snake_head",
+																			"sid": 922449433968726,
+																			"parameters": {
+																				"instance-variable": "Dir",
+																				"value": "7"
+																			}
+																		},
+																		{
+																			"id": "set-angle",
+																			"objectClass": "snake_head",
+																			"sid": 476510768201503,
+																			"parameters": {
+																				"angle": "225"
+																			}
+																		}
+																	],
+																	"sid": 826634075189113
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 106032565671347,
+													"parameters": {
+														"object": "UI_head_snake"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 417940292169822,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "snake_head",
+															"sid": 286456668544985,
+															"parameters": {
+																"instance-variable": "OwnerID",
+																"comparison": 0,
+																"value": "UI_head_snake.OwnerID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position",
+															"objectClass": "UI_head_snake",
+															"sid": 283349906554957,
+															"parameters": {
+																"x": "snake_head.X",
+																"y": "snake_head.Y"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "UI_head_snake",
+															"sid": 376416565116500,
+															"parameters": {
+																"angle": "snake_head.Angle"
+															}
+														},
+														{
+															"id": "set-scale",
+															"objectClass": "UI_head_snake",
+															"sid": 124951218318026,
+															"parameters": {
+																"scale": "0.155"
+															}
+														}
+													],
+													"sid": 347120660735707
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 724231061270823,
+													"parameters": {
+														"object": "UI_snake_eye"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 111272787990825,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "UI_head_snake",
+															"sid": 655231308438168,
+															"parameters": {
+																"instance-variable": "OwnerID",
+																"comparison": 0,
+																"value": "UI_snake_eye.OwnerID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position",
+															"objectClass": "UI_snake_eye",
+															"sid": 351708046491716,
+															"parameters": {
+																"x": "UI_head_snake.X + cos(UI_head_snake.Angle) * OffsetX",
+																"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) * OffsetY"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "UI_snake_eye",
+															"sid": 932604757723882,
+															"parameters": {
+																"angle": "UI_head_snake.Angle"
+															}
+														},
+														{
+															"id": "set-scale",
+															"objectClass": "UI_snake_eye",
+															"sid": 602750398698033,
+															"parameters": {
+																"scale": "0.1"
+															}
+														}
+													],
+													"sid": 569382568723559
+												}
+											]
+										}
+									]
 								}
 							]
 						},
@@ -1045,9 +1599,9 @@
 																{
 																	"id": "create-object",
 																	"objectClass": "System",
-																	"sid": 287314978935206,
+																	"sid": 408070408691736,
 																	"parameters": {
-																		"object-to-create": "UI_snake_head",
+																		"object-to-create": "UI_head_snake",
 																		"layer": "\"Snakes\"",
 																		"x": "snake_head.X",
 																		"y": "snake_head.Y",
@@ -1058,9 +1612,9 @@
 																{
 																	"id": "create-object",
 																	"objectClass": "System",
-																	"sid": 191906626697394,
+																	"sid": 980322639674496,
 																	"parameters": {
-																		"object-to-create": "UI_snake_eye_white",
+																		"object-to-create": "UI_snake_eye",
 																		"layer": "\"Snakes\"",
 																		"x": "0",
 																		"y": "0",
@@ -1070,7 +1624,7 @@
 																},
 																{
 																	"id": "set-instvar-value",
-																	"objectClass": "UI_snake_eye_white",
+																	"objectClass": "UI_snake_eye",
 																	"sid": 418570960560285,
 																	"parameters": {
 																		"instance-variable": "OwnerID",
@@ -1079,7 +1633,7 @@
 																},
 																{
 																	"id": "set-instvar-value",
-																	"objectClass": "UI_snake_head",
+																	"objectClass": "UI_head_snake",
 																	"sid": 718268610228503,
 																	"parameters": {
 																		"instance-variable": "OwnerID",
@@ -1088,64 +1642,6 @@
 																}
 															],
 															"sid": 897196808220818
-														},
-														{
-															"eventType": "block",
-															"conditions": [],
-															"actions": [
-																{
-																	"id": "create-object",
-																	"objectClass": "System",
-																	"sid": 318480287322595,
-																	"parameters": {
-																		"object-to-create": "UI_eye_right",
-																		"layer": "\"Snakes\"",
-																		"x": "0",
-																		"y": "0",
-																		"create-hierarchy": false,
-																		"template-name": "\"\""
-																	}
-																},
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "UI_eye_right",
-																	"sid": 120979576972366,
-																	"parameters": {
-																		"instance-variable": "OwnerID",
-																		"value": "ArrowIndex"
-																	}
-																}
-															],
-															"sid": 146562456059873
-														},
-														{
-															"eventType": "block",
-															"conditions": [],
-															"actions": [
-																{
-																	"id": "create-object",
-																	"objectClass": "System",
-																	"sid": 642593767964333,
-																	"parameters": {
-																		"object-to-create": "UI_eye_left",
-																		"layer": "\"Snakes\"",
-																		"x": "0",
-																		"y": "0",
-																		"create-hierarchy": false,
-																		"template-name": "\"\""
-																	}
-																},
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "UI_eye_left",
-																	"sid": 895206276512676,
-																	"parameters": {
-																		"instance-variable": "OwnerID",
-																		"value": "ArrowIndex"
-																	}
-																}
-															],
-															"sid": 539038591165930
 														}
 													]
 												},
@@ -1254,7 +1750,49 @@
 															}
 														}
 													],
-													"sid": 498098431053511
+													"sid": 498098431053511,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 441878283198504,
+																	"disabled": true,
+																	"parameters": {
+																		"object-to-create": "UI_snake_body",
+																		"layer": "\"Snakes\"",
+																		"x": "(snake_body.X + snake_body.PrevX) / 2",
+																		"y": "(snake_body.Y + snake_body.PrevY) / 2",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
+																	"id": "set-angle",
+																	"objectClass": "UI_snake_body",
+																	"sid": 523526253805461,
+																	"disabled": true,
+																	"parameters": {
+																		"angle": " angle(snake_body.PrevX, snake_body.PrevY, snake_body.X, snake_body.Y)"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_snake_body",
+																	"sid": 223018993531042,
+																	"disabled": true,
+																	"parameters": {
+																		"instance-variable": "OwnerID",
+																		"value": "ArrowIndex"
+																	}
+																}
+															],
+															"sid": 376626260915518
+														}
+													]
 												}
 											]
 										},
@@ -1741,13 +2279,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 515554256613654
+									"id": "is-any-playing",
+									"objectClass": "snake_head",
+									"sid": 667524714896978,
+									"behaviorType": "Tween"
 								}
 							],
 							"actions": [],
-							"sid": 439759081524960,
+							"sid": 516969741546340,
 							"children": [
 								{
 									"eventType": "block",
@@ -1755,639 +2294,101 @@
 										{
 											"id": "for-each",
 											"objectClass": "System",
-											"sid": 841210123964710,
+											"sid": 300146044881525,
 											"parameters": {
-												"object": "snake_head"
+												"object": "UI_head_snake"
 											}
 										}
 									],
 									"actions": [],
-									"sid": 834709853866105,
+									"sid": 591519697420554,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 574870032182950,
+													"id": "compare-instance-variable",
+													"objectClass": "snake_head",
+													"sid": 210166006931367,
 													"parameters": {
-														"object": "snake_body"
+														"instance-variable": "OwnerID",
+														"comparison": 0,
+														"value": "UI_head_snake.OwnerID"
 													}
 												}
 											],
-											"actions": [],
-											"sid": 680988275620514,
-											"children": [
+											"actions": [
 												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-two-values",
-															"objectClass": "System",
-															"sid": 786628625601823,
-															"parameters": {
-																"first-value": "snake_body.OwnerID",
-																"comparison": 0,
-																"second-value": "snake_head.OwnerID"
-															}
-														},
-														{
-															"id": "compare-two-values",
-															"objectClass": "System",
-															"sid": 531956375540531,
-															"parameters": {
-																"first-value": "snake_body.NodeIndex",
-																"comparison": 0,
-																"second-value": "1"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 423882284926441,
-													"children": [
-														{
-															"eventType": "comment",
-															"text": "Case 1 — Body ở dưới head → head quay lên"
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-two-values",
-																	"objectClass": "System",
-																	"sid": 156361612257533,
-																	"parameters": {
-																		"first-value": "snake_body.GridY",
-																		"comparison": 4,
-																		"second-value": "snake_head.GridY"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "snake_head",
-																	"sid": 330287785351902,
-																	"parameters": {
-																		"instance-variable": "Dir",
-																		"value": "0"
-																	}
-																},
-																{
-																	"id": "set-angle",
-																	"objectClass": "snake_head",
-																	"sid": 535742967036480,
-																	"parameters": {
-																		"angle": "0"
-																	}
-																}
-															],
-															"sid": 902866091174751
-														},
-														{
-															"eventType": "comment",
-															"text": "Case 2 — Body ở trái head → head quay phải"
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-two-values",
-																	"objectClass": "System",
-																	"sid": 393420930977549,
-																	"parameters": {
-																		"first-value": "snake_body.GridX",
-																		"comparison": 2,
-																		"second-value": "snake_head.GridX "
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "snake_head",
-																	"sid": 297552566634528,
-																	"parameters": {
-																		"instance-variable": "Dir",
-																		"value": "1"
-																	}
-																},
-																{
-																	"id": "set-angle",
-																	"objectClass": "snake_head",
-																	"sid": 249879358108040,
-																	"parameters": {
-																		"angle": "90"
-																	}
-																}
-															],
-															"sid": 144946342765436
-														},
-														{
-															"eventType": "comment",
-															"text": "Case 3 — Body ở trên head → head quay xuống"
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-two-values",
-																	"objectClass": "System",
-																	"sid": 396857794644019,
-																	"parameters": {
-																		"first-value": "snake_body.GridY",
-																		"comparison": 2,
-																		"second-value": "snake_head.GridY"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "snake_head",
-																	"sid": 778716720003806,
-																	"parameters": {
-																		"instance-variable": "Dir",
-																		"value": "2"
-																	}
-																},
-																{
-																	"id": "set-angle",
-																	"objectClass": "snake_head",
-																	"sid": 735654519176976,
-																	"parameters": {
-																		"angle": "180"
-																	}
-																}
-															],
-															"sid": 808084734788332
-														},
-														{
-															"eventType": "comment",
-															"text": "Case 4 — Body ở phải head → head quay trái"
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-two-values",
-																	"objectClass": "System",
-																	"sid": 645156438372855,
-																	"parameters": {
-																		"first-value": "snake_body.GridX",
-																		"comparison": 4,
-																		"second-value": "snake_head.GridX "
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "snake_head",
-																	"sid": 400114295455099,
-																	"parameters": {
-																		"instance-variable": "Dir",
-																		"value": "3"
-																	}
-																},
-																{
-																	"id": "set-angle",
-																	"objectClass": "snake_head",
-																	"sid": 626210648748282,
-																	"parameters": {
-																		"angle": "270"
-																	}
-																}
-															],
-															"sid": 422377594176233
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-two-values",
-																	"objectClass": "System",
-																	"sid": 937269153609586,
-																	"parameters": {
-																		"first-value": "snake_body.isDiagonalBody",
-																		"comparison": 0,
-																		"second-value": "1"
-																	}
-																}
-															],
-															"actions": [],
-															"sid": 235845162185313,
-															"children": [
-																{
-																	"eventType": "comment",
-																	"text": "Case 5 — Body ở trái-dưới → Head quay phải-lên (↗)"
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 354845927924898,
-																			"parameters": {
-																				"first-value": "snake_body.GridX",
-																				"comparison": 2,
-																				"second-value": "snake_head.GridX "
-																			}
-																		},
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 703196279411731,
-																			"parameters": {
-																				"first-value": "snake_body.GridY",
-																				"comparison": 4,
-																				"second-value": "snake_head.GridY"
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "set-instvar-value",
-																			"objectClass": "snake_head",
-																			"sid": 971487100797423,
-																			"parameters": {
-																				"instance-variable": "Dir",
-																				"value": "4"
-																			}
-																		},
-																		{
-																			"id": "set-angle",
-																			"objectClass": "snake_head",
-																			"sid": 186760726173379,
-																			"parameters": {
-																				"angle": "45"
-																			}
-																		}
-																	],
-																	"sid": 690745373025325
-																},
-																{
-																	"eventType": "comment",
-																	"text": "Case 6 — Body ở phải-dưới → Head quay trái-lên (↖)"
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 306192301921495,
-																			"parameters": {
-																				"first-value": "snake_body.GridX",
-																				"comparison": 4,
-																				"second-value": "snake_head.GridX "
-																			}
-																		},
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 947296953353854,
-																			"parameters": {
-																				"first-value": "snake_body.GridY",
-																				"comparison": 4,
-																				"second-value": "snake_head.GridY"
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "set-instvar-value",
-																			"objectClass": "snake_head",
-																			"sid": 983405100835314,
-																			"parameters": {
-																				"instance-variable": "Dir",
-																				"value": "5"
-																			}
-																		},
-																		{
-																			"id": "set-angle",
-																			"objectClass": "snake_head",
-																			"sid": 434505563153100,
-																			"parameters": {
-																				"angle": "315"
-																			}
-																		}
-																	],
-																	"sid": 494932506197038
-																},
-																{
-																	"eventType": "comment",
-																	"text": "Case 7 — Body ở trái-trên → Head quay phải-xuống (↘)"
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 655999203575738,
-																			"parameters": {
-																				"first-value": "snake_body.GridX",
-																				"comparison": 2,
-																				"second-value": "snake_head.GridX "
-																			}
-																		},
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 342042578010856,
-																			"parameters": {
-																				"first-value": "snake_body.GridY",
-																				"comparison": 2,
-																				"second-value": "snake_head.GridY"
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "set-instvar-value",
-																			"objectClass": "snake_head",
-																			"sid": 804281761708722,
-																			"parameters": {
-																				"instance-variable": "Dir",
-																				"value": "6"
-																			}
-																		},
-																		{
-																			"id": "set-angle",
-																			"objectClass": "snake_head",
-																			"sid": 496111801330679,
-																			"parameters": {
-																				"angle": "135"
-																			}
-																		}
-																	],
-																	"sid": 365463867518164
-																},
-																{
-																	"eventType": "comment",
-																	"text": "Case 8 — Body ở phải-trên → Head quay trái-xuống (↙)"
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 234158223192846,
-																			"parameters": {
-																				"first-value": "snake_body.GridX",
-																				"comparison": 4,
-																				"second-value": "snake_head.GridX "
-																			}
-																		},
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 544291256223241,
-																			"parameters": {
-																				"first-value": "snake_body.GridY",
-																				"comparison": 2,
-																				"second-value": "snake_head.GridY"
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "set-instvar-value",
-																			"objectClass": "snake_head",
-																			"sid": 879869524985266,
-																			"parameters": {
-																				"instance-variable": "Dir",
-																				"value": "7"
-																			}
-																		},
-																		{
-																			"id": "set-angle",
-																			"objectClass": "snake_head",
-																			"sid": 687504687254005,
-																			"parameters": {
-																				"angle": "225"
-																			}
-																		}
-																	],
-																	"sid": 467568431191766
-																}
-															]
-														}
-													]
+													"id": "set-position",
+													"objectClass": "UI_head_snake",
+													"sid": 724532917948723,
+													"parameters": {
+														"x": "snake_head.X",
+														"y": "snake_head.Y"
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "UI_head_snake",
+													"sid": 523258357310312,
+													"parameters": {
+														"angle": "snake_head.Angle"
+													}
 												}
-											]
-										},
+											],
+											"sid": 729701993612123
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 837562659420910,
+											"parameters": {
+												"object": "UI_snake_eye"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 670618199108792,
+									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 452368235559492,
+													"id": "compare-instance-variable",
+													"objectClass": "UI_head_snake",
+													"sid": 742962324109560,
 													"parameters": {
-														"object": "UI_snake_head"
+														"instance-variable": "OwnerID",
+														"comparison": 0,
+														"value": "UI_snake_eye.OwnerID"
 													}
 												}
 											],
-											"actions": [],
-											"sid": 192407065993144,
-											"children": [
+											"actions": [
 												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "snake_head",
-															"sid": 376772181735504,
-															"parameters": {
-																"instance-variable": "OwnerID",
-																"comparison": 0,
-																"value": "UI_snake_head.OwnerID"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-position",
-															"objectClass": "UI_snake_head",
-															"sid": 352014526127220,
-															"parameters": {
-																"x": "snake_head.X",
-																"y": "snake_head.Y"
-															}
-														},
-														{
-															"id": "set-angle",
-															"objectClass": "UI_snake_head",
-															"sid": 300590769288951,
-															"parameters": {
-																"angle": "snake_head.Angle"
-															}
-														}
-													],
-													"sid": 974022347575814
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 756095141822309,
+													"id": "set-position",
+													"objectClass": "UI_snake_eye",
+													"sid": 340362994140433,
 													"parameters": {
-														"object": "UI_snake_eye_white"
+														"x": "UI_head_snake.X + cos(UI_head_snake.Angle) * OffsetX",
+														"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) * OffsetY"
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "UI_snake_eye",
+													"sid": 491710840304674,
+													"parameters": {
+														"angle": "UI_head_snake.Angle"
 													}
 												}
 											],
-											"actions": [],
-											"sid": 346480688984056,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "UI_snake_head",
-															"sid": 500758120214149,
-															"parameters": {
-																"instance-variable": "OwnerID",
-																"comparison": 0,
-																"value": "UI_snake_eye_white.OwnerID"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-position",
-															"objectClass": "UI_snake_eye_white",
-															"sid": 944878648311576,
-															"parameters": {
-																"x": "UI_snake_head.X",
-																"y": "UI_snake_head.Y"
-															}
-														},
-														{
-															"id": "set-angle",
-															"objectClass": "UI_snake_eye_white",
-															"sid": 689822518112907,
-															"parameters": {
-																"angle": "UI_snake_head.Angle"
-															}
-														}
-													],
-													"sid": 607204400139369
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 731579261912952,
-													"parameters": {
-														"object": "UI_eye_left"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 861537999335996,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "UI_snake_eye_white",
-															"sid": 551573833180831,
-															"parameters": {
-																"instance-variable": "OwnerID",
-																"comparison": 0,
-																"value": "UI_eye_left.OwnerID"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-position",
-															"objectClass": "UI_eye_left",
-															"sid": 792304874451680,
-															"parameters": {
-																"x": "UI_snake_eye_white.X - cos(UI_snake_eye_white.Angle) * (UI_snake_eye_white.Width * 0.25)",
-																"y": "UI_snake_eye_white.Y - sin(UI_snake_eye_white.Angle) * (UI_snake_eye_white.Width * 0.25)"
-															}
-														},
-														{
-															"id": "set-angle",
-															"objectClass": "UI_eye_left",
-															"sid": 960785373079691,
-															"parameters": {
-																"angle": "UI_snake_eye_white.Angle"
-															}
-														}
-													],
-													"sid": 970847588675615
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 562052881478496,
-													"parameters": {
-														"object": "UI_eye_right"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 300612331762624,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "UI_snake_eye_white",
-															"sid": 357585133210963,
-															"parameters": {
-																"instance-variable": "OwnerID",
-																"comparison": 0,
-																"value": "UI_eye_right.OwnerID"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-position",
-															"objectClass": "UI_eye_right",
-															"sid": 811772168260945,
-															"parameters": {
-																"x": " UI_snake_eye_white.X + cos(UI_snake_eye_white.Angle) * (UI_snake_eye_white.Width * 0.25)",
-																"y": " UI_snake_eye_white.Y + sin(UI_snake_eye_white.Angle) * (UI_snake_eye_white.Width * 0.25)"
-															}
-														},
-														{
-															"id": "set-angle",
-															"objectClass": "UI_eye_right",
-															"sid": 213774412058017,
-															"parameters": {
-																"angle": "UI_snake_eye_white.Angle"
-															}
-														}
-													],
-													"sid": 136613123131044
-												}
-											]
+											"sid": 318823075937310
 										}
 									]
 								}

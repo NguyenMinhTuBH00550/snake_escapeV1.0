@@ -114,13 +114,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Rotate",
 			"name": "Rotate",
 			"author": "Scirra",
@@ -207,11 +200,10 @@
 			"Dia_Home",
 			"Sprite11",
 			"HUD_challenge_BG",
-			"UI_challenge_btn",
-			"UI_challenge_iconlock",
 			"HUD_challenge_panel",
-			"UI_challenge_frameLock",
-			"Dia_Challenge"
+			"Dia_Challenge",
+			"sactx02048x2048ASTC6x6gameatlas42e01cac_",
+			"sactx12048x2048ASTC6x6gameatlas42e01cac"
 		],
 		"subfolders": [
 			{
@@ -294,10 +286,6 @@
 					"UI_btn_booter",
 					"UI_challenge_level",
 					"UI_lock_booster",
-					"UI_snake_head",
-					"UI_snake_eye_white",
-					"UI_eye_right",
-					"UI_eye_left",
 					"home_snake_preview",
 					"UI_icon_music",
 					"UI_icon_sound",
@@ -354,7 +342,15 @@
 					"UI_shop_coinpack4",
 					"UI_shop_coinpack5",
 					"UI_shop_coinpack6",
-					"UI_shop_coinpack7"
+					"UI_shop_coinpack7",
+					"UI_body",
+					"UI_challenge_btn",
+					"UI_challenge_frameLock",
+					"UI_challenge_iconlock",
+					"UI_head_snake",
+					"UI_snake_body",
+					"UI_snake_eye",
+					"UI_snake_tail"
 				],
 				"subfolders": [],
 				"name": "UI"
