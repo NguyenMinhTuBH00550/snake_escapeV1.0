@@ -5089,8 +5089,7 @@
 										},
 										{
 											"callFunction": "LoseLife",
-											"sid": 894378752865051,
-											"disabled": true
+											"sid": 894378752865051
 										}
 									],
 									"sid": 920529071057280
@@ -5151,8 +5150,7 @@
 										},
 										{
 											"callFunction": "LoseLife",
-											"sid": 992644974674721,
-											"disabled": true
+											"sid": 992644974674721
 										}
 									],
 									"sid": 934592732745041
