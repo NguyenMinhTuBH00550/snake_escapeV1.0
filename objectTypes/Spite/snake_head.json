@@ -123,6 +123,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 449107843549551
+		},
+		{
+			"name": "TapGridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 342221805493636
+		},
+		{
+			"name": "TapGridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 751378383064698
 		}
 	],
 	"behaviorTypes": [
