@@ -5061,7 +5061,7 @@
 						"expanded": true
 					},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 356.59288600327585,
 						"y": 1516,
@@ -5091,7 +5091,9 @@
 					"uid": 365,
 					"sid": 990754196788626,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"OwnerID": 0
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 990754196788626,
@@ -5338,7 +5340,7 @@
 					"world": {
 						"x": 1296.0047815558517,
 						"y": 526.2951396064815,
-						"width": 47.82021669571743,
+						"width": 47.820216695717434,
 						"height": 22.930058348111167,
 						"originX": 0.5,
 						"originY": 0.5,

@@ -683,7 +683,7 @@
 						"Dialog": {
 							"properties": {
 								"open-animation": "scaleup",
-								"open-animation-tweenning": "bounce out",
+								"open-animation-tweenning": "quadratic out",
 								"open-animation-duration": 200,
 								"open-sound": "",
 								"close-animation": "scaledown",

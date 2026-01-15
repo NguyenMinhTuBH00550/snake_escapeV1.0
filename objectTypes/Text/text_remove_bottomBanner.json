@@ -1,0 +1,15 @@
+{
+	"name": "text_remove_bottomBanner",
+	"plugin-id": "Text",
+	"sid": 745727305840121,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}

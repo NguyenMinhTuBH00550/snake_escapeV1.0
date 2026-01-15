@@ -1,7 +1,7 @@
 {
-	"name": "Dia_Home",
+	"name": "LY_Challenge",
 	"plugin-id": "Sprite",
-	"sid": 514825953745464,
+	"sid": 928914828564161,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -9,7 +9,7 @@
 		{
 			"behaviorId": "Tween",
 			"name": "Tween",
-			"sid": 613866421100631
+			"sid": 367381360386531
 		}
 	],
 	"effectTypes": [],
@@ -26,13 +26,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4433968,
+						"imageSpriteId": 4078392,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 385012159780514,
+				"sid": 936624575226506,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -40,9 +40,257 @@
 							}
 						}
 					],
-					"sid": 657339042161925
+					"sid": 657339042161925,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "HUD_popUp_close",
+									"sid": 235627723309071,
+									"parameters": {
+										"tags": "\"shop\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "setenabled0",
+									"objectClass": "HUD_popUp_close",
+									"sid": 992478600940204,
+									"behaviorType": "Button",
+									"parameters": {
+										"state2": "disabled"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "HUD_popUp_close",
+									"sid": 589267213013222,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 154829682812230
+						}
+					]
 				}
 			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Btn_UI_icon_frameTop",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onclicked3",
+							"objectClass": "UI_icon_frameTop",
+							"sid": 823082940901821,
+							"behaviorType": "Button"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 983732020773429,
+							"parameters": {
+								"layer": "\"fade\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 467329187306262,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 450454089669937,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "HUD_popUp_close",
+									"sid": 500388256590176,
+									"parameters": {
+										"tags": "\"shop\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "setenabled0",
+									"objectClass": "HUD_popUp_close",
+									"sid": 750341857786717,
+									"behaviorType": "Button",
+									"parameters": {
+										"state2": "enabled"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "HUD_popUp_close",
+									"sid": 448022344012621,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 682206774302513,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "UI_icon_settingButton",
+									"sid": 198176113043920,
+									"parameters": {
+										"tags": "\"\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "setenabled0",
+									"objectClass": "UI_icon_settingButton",
+									"sid": 978356743026654,
+									"behaviorType": "Button",
+									"parameters": {
+										"state2": "disabled"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "UI_icon_settingButton",
+									"sid": 326619384610914,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 691209426216885,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onclicked3",
+							"objectClass": "HUD_popUp_close",
+							"sid": 615563547538394,
+							"behaviorType": "Button"
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "HUD_popUp_close",
+							"sid": 784589086339601,
+							"parameters": {
+								"tags": "\"shop\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 623367988544241,
+							"parameters": {
+								"layer": "\"fade\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 765174067629458,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "HUD_popUp_close",
+									"sid": 945933569389620,
+									"parameters": {
+										"tags": "\"shop\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "setenabled0",
+									"objectClass": "HUD_popUp_close",
+									"sid": 850095405644073,
+									"behaviorType": "Button",
+									"parameters": {
+										"state2": "disabled"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "HUD_popUp_close",
+									"sid": 972664179072517,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 271747050370790,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "UI_icon_settingButton",
+									"sid": 414459298106390,
+									"parameters": {
+										"tags": "\"\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "setenabled0",
+									"objectClass": "UI_icon_settingButton",
+									"sid": 626062604718366,
+									"behaviorType": "Button",
+									"parameters": {
+										"state2": "enabled"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "UI_icon_settingButton",
+									"sid": 779177553532763,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 738563674973487,
+							"disabled": true
+						}
+					]
+				}
+			],
+			"sid": 405242757979508
 		}
 	],
 	"sid": 667786211939097

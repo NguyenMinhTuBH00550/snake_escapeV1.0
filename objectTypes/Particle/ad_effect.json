@@ -1,22 +1,22 @@
 {
-	"name": "coins_effect",
+	"name": "ad_effect",
 	"plugin-id": "Particles",
-	"sid": 710878082892893,
+	"sid": 345478502047623,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 128,
-		"height": 128,
+		"width": 110,
+		"height": 111,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 2900931,
+		"imageSpriteId": 4785830,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

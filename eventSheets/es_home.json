@@ -57,7 +57,7 @@
 						},
 						{
 							"id": "set-x",
-							"objectClass": "Dia_Home",
+							"objectClass": "LY_Home",
 							"sid": 257963489220948,
 							"parameters": {
 								"x": " (ViewportLeft(0) + ViewportRight(0)) / 2"
@@ -65,7 +65,7 @@
 						},
 						{
 							"id": "set-x",
-							"objectClass": "Dia_shop",
+							"objectClass": "LY_shop",
 							"sid": 100635366713314,
 							"parameters": {
 								"x": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0)"
@@ -73,7 +73,7 @@
 						},
 						{
 							"id": "set-x",
-							"objectClass": "Dia_Challenge",
+							"objectClass": "LY_Challenge",
 							"sid": 896420318379559,
 							"parameters": {
 								"x": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0) * 2"
@@ -353,7 +353,7 @@
 									"actions": [
 										{
 											"id": "tween-one-property",
-											"objectClass": "Dia_Home",
+											"objectClass": "LY_Home",
 											"sid": 467569861297175,
 											"behaviorType": "Tween",
 											"parameters": {
@@ -370,7 +370,7 @@
 										},
 										{
 											"id": "tween-one-property",
-											"objectClass": "Dia_shop",
+											"objectClass": "LY_shop",
 											"sid": 961737038780187,
 											"behaviorType": "Tween",
 											"parameters": {
@@ -387,7 +387,7 @@
 										},
 										{
 											"id": "tween-one-property",
-											"objectClass": "Dia_Challenge",
+											"objectClass": "LY_Challenge",
 											"sid": 871198615947076,
 											"behaviorType": "Tween",
 											"parameters": {
@@ -437,7 +437,7 @@
 									"actions": [
 										{
 											"id": "tween-one-property",
-											"objectClass": "Dia_Home",
+											"objectClass": "LY_Home",
 											"sid": 554051817403516,
 											"behaviorType": "Tween",
 											"parameters": {
@@ -454,7 +454,7 @@
 										},
 										{
 											"id": "tween-one-property",
-											"objectClass": "Dia_shop",
+											"objectClass": "LY_shop",
 											"sid": 996960850454224,
 											"behaviorType": "Tween",
 											"parameters": {
@@ -471,7 +471,7 @@
 										},
 										{
 											"id": "tween-one-property",
-											"objectClass": "Dia_Challenge",
+											"objectClass": "LY_Challenge",
 											"sid": 893705287672453,
 											"behaviorType": "Tween",
 											"parameters": {
@@ -521,7 +521,7 @@
 									"actions": [
 										{
 											"id": "tween-one-property",
-											"objectClass": "Dia_Home",
+											"objectClass": "LY_Home",
 											"sid": 659532234842390,
 											"behaviorType": "Tween",
 											"parameters": {
@@ -538,7 +538,7 @@
 										},
 										{
 											"id": "tween-one-property",
-											"objectClass": "Dia_shop",
+											"objectClass": "LY_shop",
 											"sid": 363912308638865,
 											"behaviorType": "Tween",
 											"parameters": {
@@ -555,7 +555,7 @@
 										},
 										{
 											"id": "tween-one-property",
-											"objectClass": "Dia_Challenge",
+											"objectClass": "LY_Challenge",
 											"sid": 913757453489594,
 											"behaviorType": "Tween",
 											"parameters": {
@@ -1267,6 +1267,87 @@
 				}
 			],
 			"sid": 843270326101061
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Ad_button",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onclicked3",
+							"objectClass": "UI_noAd_frame",
+							"sid": 838136713867322,
+							"behaviorType": "Button"
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "UI_noAd_frame",
+							"sid": 391783137268836,
+							"parameters": {
+								"tags": "\"remove_ads\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "open0",
+							"objectClass": "Dia_Ad",
+							"sid": 448166659830730,
+							"behaviorType": "Dialog",
+							"parameters": {
+								"target_x0": "0",
+								"target_y1": "0",
+								"center4": "yes"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 430997747941492,
+							"parameters": {
+								"layer": "\"fade\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 393899755508327
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onclicked3",
+							"objectClass": "UI_popup_noads_X",
+							"sid": 571972936380247,
+							"behaviorType": "Button"
+						}
+					],
+					"actions": [
+						{
+							"id": "close1",
+							"objectClass": "Dia_Ad",
+							"sid": 558441633324141,
+							"behaviorType": "Dialog"
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 504998800679198,
+							"parameters": {
+								"layer": "\"fade\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 734760907749257
+				}
+			],
+			"sid": 507241512456126
 		}
 	],
 	"sid": 879809268910420

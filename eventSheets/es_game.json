@@ -137,7 +137,7 @@
 			"eventType": "variable",
 			"name": "OffsetX",
 			"type": "number",
-			"initialValue": "2.3",
+			"initialValue": "40",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -147,11 +147,31 @@
 			"eventType": "variable",
 			"name": "OffsetY",
 			"type": "number",
-			"initialValue": "-9",
+			"initialValue": "-10",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 919859903970598
+		},
+		{
+			"eventType": "variable",
+			"name": "MapOffsetX",
+			"type": "number",
+			"initialValue": "2.3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 128494560709604
+		},
+		{
+			"eventType": "variable",
+			"name": "MapOffsetY",
+			"type": "number",
+			"initialValue": "-9",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 258650796220272
 		},
 		{
 			"eventType": "variable",
@@ -162,6 +182,46 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 283895727728582
+		},
+		{
+			"eventType": "variable",
+			"name": "prevNodeX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 319336390203222
+		},
+		{
+			"eventType": "variable",
+			"name": "prevNodeY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 823640602815257
+		},
+		{
+			"eventType": "variable",
+			"name": "prevPixelX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 905522084338931
+		},
+		{
+			"eventType": "variable",
+			"name": "prevPixelY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 959848919518454
 		},
 		{
 			"eventType": "comment",
@@ -1117,10 +1177,10 @@
 														{
 															"id": "set-position",
 															"objectClass": "UI_snake_eye",
-															"sid": 351708046491716,
+															"sid": 479314052183795,
 															"parameters": {
-																"x": "UI_head_snake.X + cos(UI_head_snake.Angle) * OffsetX",
-																"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) * OffsetY"
+																"x": "UI_head_snake.X + cos(UI_head_snake.Angle) * MapOffsetX",
+																"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) * MapOffsetY"
 															}
 														},
 														{
@@ -1273,6 +1333,16 @@
 									"sid": 197579463360042
 								},
 								{
+									"eventType": "variable",
+									"name": "MaxNodeIndex",
+									"type": "number",
+									"initialValue": "-1",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 605758208989332
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -1307,7 +1377,7 @@
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 660153701744488,
+													"sid": 541853306686076,
 													"parameters": {
 														"object-to-create": "Grid_Dot",
 														"layer": "\"Grid\"",
@@ -1525,7 +1595,7 @@
 														{
 															"id": "create-object",
 															"objectClass": "System",
-															"sid": 685353993355069,
+															"sid": 943103141639640,
 															"parameters": {
 																"object-to-create": "snake_head",
 																"layer": "\"Snakes\"",
@@ -1658,7 +1728,7 @@
 														{
 															"id": "create-object",
 															"objectClass": "System",
-															"sid": 178471732933503,
+															"sid": 541540251173016,
 															"parameters": {
 																"object-to-create": "snake_body",
 																"layer": "\"Snakes\"",
@@ -1754,43 +1824,53 @@
 													"children": [
 														{
 															"eventType": "block",
-															"conditions": [],
-															"actions": [
+															"conditions": [
 																{
-																	"id": "create-object",
+																	"id": "for-each",
 																	"objectClass": "System",
-																	"sid": 441878283198504,
-																	"disabled": true,
+																	"sid": 210951968373301,
 																	"parameters": {
-																		"object-to-create": "UI_snake_body",
-																		"layer": "\"Snakes\"",
-																		"x": "(snake_body.X + snake_body.PrevX) / 2",
-																		"y": "(snake_body.Y + snake_body.PrevY) / 2",
-																		"create-hierarchy": false,
-																		"template-name": "\"\""
-																	}
-																},
-																{
-																	"id": "set-angle",
-																	"objectClass": "UI_snake_body",
-																	"sid": 523526253805461,
-																	"disabled": true,
-																	"parameters": {
-																		"angle": " angle(snake_body.PrevX, snake_body.PrevY, snake_body.X, snake_body.Y)"
-																	}
-																},
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "UI_snake_body",
-																	"sid": 223018993531042,
-																	"disabled": true,
-																	"parameters": {
-																		"instance-variable": "OwnerID",
-																		"value": "ArrowIndex"
+																		"object": "snake_body"
 																	}
 																}
 															],
-															"sid": 376626260915518
+															"actions": [],
+															"sid": 326959940136894,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 255456940451994,
+																			"parameters": {
+																				"first-value": "snake_body.OwnerID",
+																				"comparison": 0,
+																				"second-value": "ArrowIndex"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 134122510098574,
+																			"parameters": {
+																				"variable": "MaxNodeIndex",
+																				"value": "max(MaxNodeIndex, snake_body.NodeIndex)"
+																			}
+																		}
+																	],
+																	"sid": 251363183611343
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [],
+															"sid": 837306454953197
 														}
 													]
 												}
@@ -2373,10 +2453,10 @@
 												{
 													"id": "set-position",
 													"objectClass": "UI_snake_eye",
-													"sid": 340362994140433,
+													"sid": 402819441274109,
 													"parameters": {
-														"x": "UI_head_snake.X + cos(UI_head_snake.Angle) * OffsetX",
-														"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) * OffsetY"
+														"x": "UI_head_snake.X + cos(UI_head_snake.Angle) * MapOffsetX",
+														"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) * MapOffsetY"
 													}
 												},
 												{

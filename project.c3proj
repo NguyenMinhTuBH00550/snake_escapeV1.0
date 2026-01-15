@@ -196,14 +196,24 @@
 			"Sprite8",
 			"Sprite9",
 			"Keyboard",
-			"Dia_shop",
-			"Dia_Home",
+			"LY_shop",
+			"LY_Home",
 			"Sprite11",
 			"HUD_challenge_BG",
 			"HUD_challenge_panel",
-			"Dia_Challenge",
+			"LY_Challenge",
 			"sactx02048x2048ASTC6x6gameatlas42e01cac_",
-			"sactx12048x2048ASTC6x6gameatlas42e01cac"
+			"sactx12048x2048ASTC6x6gameatlas42e01cac",
+			"Sprite12",
+			"HUD_popup_noads_panel",
+			"HUD_popup_noads_frame",
+			"UI_popup_noads_icon",
+			"UI_popup_noads_banner",
+			"UI_popup_noads_gift",
+			"HUD_popup_noads_btn",
+			"UI_popup_noads_tagsale",
+			"UI_popup_noads_X",
+			"HUD_popup_noads_ribbon"
 		],
 		"subfolders": [
 			{
@@ -276,7 +286,10 @@
 					"text_panel_challenge2",
 					"text_btn_challengeLock",
 					"text_btn_Shop",
-					"text_btn_Challenge"
+					"text_btn_Challenge",
+					"text_remove_obliADs",
+					"text_remove_bottomBanner",
+					"text_remove_bottomBanner2"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -395,7 +408,8 @@
 					"Dia_noti_failed",
 					"Dia_noti_restart",
 					"Dia_pause",
-					"Dia_Setting"
+					"Dia_Setting",
+					"Dia_Ad"
 				],
 				"subfolders": [],
 				"name": "Dialog"
@@ -405,7 +419,8 @@
 					"coins_effect",
 					"confetti",
 					"Flare",
-					"Particles"
+					"Particles",
+					"ad_effect"
 				],
 				"subfolders": [],
 				"name": "Particle"
@@ -430,7 +445,8 @@
 			"Win-sceen",
 			"Restart_sceen",
 			"Failed_sceen",
-			"Fade"
+			"Fade",
+			"Ad_sceen"
 		],
 		"subfolders": [
 			{

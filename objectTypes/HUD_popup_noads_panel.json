@@ -1,44 +1,33 @@
 {
-	"name": "BG_shop",
+	"name": "HUD_popup_noads_panel",
 	"plugin-id": "Sprite",
-	"sid": 819652020249882,
+	"sid": 954433169511018,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "aekiro_scrollView",
-			"name": "ScrollView",
-			"sid": 432074689616048
-		},
-		{
-			"behaviorId": "aekiro_gameobject",
-			"name": "GameObject",
-			"sid": 218699281420633
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1100,
+						"height": 1336,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5589112,
+						"imageSpriteId": 8842380,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 771179045867816,
-				"name": "Animation 1",
+				"sid": 188459672257019,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
