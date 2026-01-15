@@ -157,7 +157,7 @@
 			"eventType": "variable",
 			"name": "MapOffsetX",
 			"type": "number",
-			"initialValue": "2.3",
+			"initialValue": "20",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -731,18 +731,18 @@
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "snake_head",
-																	"sid": 551809970863093,
+																	"sid": 264179615105130,
 																	"parameters": {
 																		"instance-variable": "Dir",
-																		"value": "0"
+																		"value": "270"
 																	}
 																},
 																{
 																	"id": "set-angle",
 																	"objectClass": "snake_head",
-																	"sid": 101158118059308,
+																	"sid": 865804442846582,
 																	"parameters": {
-																		"angle": "0"
+																		"angle": "270"
 																	}
 																}
 															],
@@ -770,18 +770,18 @@
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "snake_head",
-																	"sid": 388340515059206,
+																	"sid": 822986302348200,
 																	"parameters": {
 																		"instance-variable": "Dir",
-																		"value": "1"
+																		"value": "0"
 																	}
 																},
 																{
 																	"id": "set-angle",
 																	"objectClass": "snake_head",
-																	"sid": 455615450725557,
+																	"sid": 612805415557379,
 																	"parameters": {
-																		"angle": "90"
+																		"angle": "0"
 																	}
 																}
 															],
@@ -809,18 +809,18 @@
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "snake_head",
-																	"sid": 573360255174363,
+																	"sid": 522950004972450,
 																	"parameters": {
 																		"instance-variable": "Dir",
-																		"value": "2"
+																		"value": "90"
 																	}
 																},
 																{
 																	"id": "set-angle",
 																	"objectClass": "snake_head",
-																	"sid": 547356265993155,
+																	"sid": 598159465829819,
 																	"parameters": {
-																		"angle": "180"
+																		"angle": "90"
 																	}
 																}
 															],
@@ -848,18 +848,18 @@
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "snake_head",
-																	"sid": 669140116542853,
+																	"sid": 271241082939018,
 																	"parameters": {
 																		"instance-variable": "Dir",
-																		"value": "3"
+																		"value": "180"
 																	}
 																},
 																{
 																	"id": "set-angle",
 																	"objectClass": "snake_head",
-																	"sid": 215528021265497,
+																	"sid": 325636369240330,
 																	"parameters": {
-																		"angle": "270"
+																		"angle": "180"
 																	}
 																}
 															],
@@ -914,18 +914,18 @@
 																		{
 																			"id": "set-instvar-value",
 																			"objectClass": "snake_head",
-																			"sid": 482734117239406,
+																			"sid": 289623538057557,
 																			"parameters": {
 																				"instance-variable": "Dir",
-																				"value": "4"
+																				"value": "315"
 																			}
 																		},
 																		{
 																			"id": "set-angle",
 																			"objectClass": "snake_head",
-																			"sid": 584480916229978,
+																			"sid": 199686816907012,
 																			"parameters": {
-																				"angle": "45"
+																				"angle": "315"
 																			}
 																		}
 																	],
@@ -963,18 +963,18 @@
 																		{
 																			"id": "set-instvar-value",
 																			"objectClass": "snake_head",
-																			"sid": 121945592754722,
+																			"sid": 403539863556823,
 																			"parameters": {
 																				"instance-variable": "Dir",
-																				"value": "5"
+																				"value": "225"
 																			}
 																		},
 																		{
 																			"id": "set-angle",
 																			"objectClass": "snake_head",
-																			"sid": 213659070828772,
+																			"sid": 552136802297928,
 																			"parameters": {
-																				"angle": "315"
+																				"angle": "225"
 																			}
 																		}
 																	],
@@ -1012,18 +1012,18 @@
 																		{
 																			"id": "set-instvar-value",
 																			"objectClass": "snake_head",
-																			"sid": 953062553739270,
+																			"sid": 907080527044229,
 																			"parameters": {
 																				"instance-variable": "Dir",
-																				"value": "6"
+																				"value": "45"
 																			}
 																		},
 																		{
 																			"id": "set-angle",
 																			"objectClass": "snake_head",
-																			"sid": 615495257786044,
+																			"sid": 833325084845746,
 																			"parameters": {
-																				"angle": "135"
+																				"angle": "45"
 																			}
 																		}
 																	],
@@ -1061,18 +1061,18 @@
 																		{
 																			"id": "set-instvar-value",
 																			"objectClass": "snake_head",
-																			"sid": 922449433968726,
+																			"sid": 495878853974454,
 																			"parameters": {
 																				"instance-variable": "Dir",
-																				"value": "7"
+																				"value": "135"
 																			}
 																		},
 																		{
 																			"id": "set-angle",
 																			"objectClass": "snake_head",
-																			"sid": 476510768201503,
+																			"sid": 607098853055263,
 																			"parameters": {
-																				"angle": "225"
+																				"angle": "135"
 																			}
 																		}
 																	],
@@ -1177,10 +1177,10 @@
 														{
 															"id": "set-position",
 															"objectClass": "UI_snake_eye",
-															"sid": 479314052183795,
+															"sid": 207420345357581,
 															"parameters": {
-																"x": "UI_head_snake.X + cos(UI_head_snake.Angle) * MapOffsetX",
-																"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) * MapOffsetY"
+																"x": "UI_head_snake.X + cos(UI_head_snake.Angle)",
+																"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) "
 															}
 														},
 														{
@@ -1336,7 +1336,7 @@
 									"eventType": "variable",
 									"name": "MaxNodeIndex",
 									"type": "number",
-									"initialValue": "-1",
+									"initialValue": "0",
 									"comment": "",
 									"isStatic": false,
 									"isConstant": false,
@@ -1712,6 +1712,55 @@
 																}
 															],
 															"sid": 897196808220818
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for",
+																	"objectClass": "System",
+																	"sid": 967163300575968,
+																	"parameters": {
+																		"name": "\"k\"",
+																		"start-index": "0",
+																		"end-index": "1"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 549615318238140,
+																	"parameters": {
+																		"object-to-create": "UI_snake_body",
+																		"layer": "\"Snakes\"",
+																		"x": "snake_head.X -30",
+																		"y": "snake_head.Y +5",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
+																	"id": "add-child",
+																	"objectClass": "snake_head",
+																	"sid": 942843387394967,
+																	"parameters": {
+																		"child": "UI_snake_body",
+																		"transform-x": true,
+																		"transform-y": true,
+																		"transform-w": false,
+																		"transform-h": false,
+																		"transform-a": true,
+																		"transform-o": false,
+																		"transform-z-elevation": true,
+																		"transform-visibility": false,
+																		"destroy-with-parent": false
+																	}
+																}
+															],
+															"sid": 740419704695594,
+															"disabled": true
 														}
 													]
 												},
@@ -1818,6 +1867,15 @@
 																"type": "log",
 																"message": "\"Created BODY OwnerID=\" & snake_body.OwnerID &\n            \" Grid=(\" & snake_body.GridX & \",\" & snake_body.GridY & \")\""
 															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 507499247202692,
+															"parameters": {
+																"variable": "MaxNodeIndex",
+																"value": "0"
+															}
 														}
 													],
 													"sid": 498098431053511,
@@ -1836,6 +1894,7 @@
 															],
 															"actions": [],
 															"sid": 326959940136894,
+															"disabled": true,
 															"children": [
 																{
 																	"eventType": "block",
@@ -1862,15 +1921,96 @@
 																			}
 																		}
 																	],
-																	"sid": 251363183611343
+																	"sid": 251363183611343,
+																	"disabled": true
 																}
 															]
 														},
 														{
 															"eventType": "block",
-															"conditions": [],
-															"actions": [],
-															"sid": 837306454953197
+															"conditions": [
+																{
+																	"id": "pick-by-evaluate",
+																	"objectClass": "System",
+																	"sid": 339893475402185,
+																	"parameters": {
+																		"object": "snake_body",
+																		"expression": "snake_body.OwnerID = ArrowIndex & snake_body.NodeIndex = MaxNodeIndex"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 989522950766672,
+																	"parameters": {
+																		"object-to-create": "UI_snake_body",
+																		"layer": "\"Snakes\"",
+																		"x": "snake_body.X",
+																		"y": "snake_body.Y",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_snake_tail",
+																	"sid": 667329412029794,
+																	"disabled": true,
+																	"parameters": {
+																		"instance-variable": "OwnerID",
+																		"value": "snake_body.OwnerID"
+																	}
+																},
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 580806875814662,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"Created UI_snake_tail for NodeIndex \" & MaxNodeIndex"
+																	}
+																}
+															],
+															"sid": 837306454953197,
+															"disabled": true,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-by-evaluate",
+																			"objectClass": "System",
+																			"sid": 740437827960691,
+																			"parameters": {
+																				"object": "snake_body",
+																				"expression": "snake_body.OwnerID = ArrowIndex & snake_body.NodeIndex = (MaxNodeIndex - 1)"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-angle",
+																			"objectClass": "UI_snake_tail",
+																			"sid": 435215097854053,
+																			"parameters": {
+																				"angle": "angle(snake_body.X, snake_body.Y, UI_snake_tail.X, UI_snake_tail.Y)"
+																			}
+																		},
+																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 701372834649880,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Tail angle set from body \" & snake_body.NodeIndex"
+																			}
+																		}
+																	],
+																	"sid": 596465628362655
+																}
+															]
 														}
 													]
 												}
@@ -2453,10 +2593,10 @@
 												{
 													"id": "set-position",
 													"objectClass": "UI_snake_eye",
-													"sid": 402819441274109,
+													"sid": 676667679281558,
 													"parameters": {
-														"x": "UI_head_snake.X + cos(UI_head_snake.Angle) * MapOffsetX",
-														"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) * MapOffsetY"
+														"x": "UI_head_snake.X + cos(UI_head_snake.Angle)",
+														"y": "UI_head_snake.Y + sin(UI_head_snake.Angle) "
 													}
 												},
 												{
@@ -3116,11 +3256,11 @@
 																		{
 																			"id": "compare-two-values",
 																			"objectClass": "System",
-																			"sid": 850815983242276,
+																			"sid": 454251789903697,
 																			"parameters": {
 																				"first-value": "snake_head.Dir",
 																				"comparison": 0,
-																				"second-value": "0"
+																				"second-value": "270"
 																			}
 																		}
 																	],
@@ -3147,11 +3287,11 @@
 																		{
 																			"id": "compare-two-values",
 																			"objectClass": "System",
-																			"sid": 506805100635579,
+																			"sid": 187854126751897,
 																			"parameters": {
 																				"first-value": "snake_head.Dir",
 																				"comparison": 0,
-																				"second-value": "1"
+																				"second-value": "0"
 																			}
 																		}
 																	],
@@ -3178,11 +3318,11 @@
 																		{
 																			"id": "compare-two-values",
 																			"objectClass": "System",
-																			"sid": 779677543084508,
+																			"sid": 477973151408510,
 																			"parameters": {
 																				"first-value": "snake_head.Dir",
 																				"comparison": 0,
-																				"second-value": "2"
+																				"second-value": "90"
 																			}
 																		}
 																	],
@@ -3209,11 +3349,11 @@
 																		{
 																			"id": "compare-two-values",
 																			"objectClass": "System",
-																			"sid": 391558455158598,
+																			"sid": 419115184258217,
 																			"parameters": {
 																				"first-value": "snake_head.Dir",
 																				"comparison": 0,
-																				"second-value": "3"
+																				"second-value": "180"
 																			}
 																		}
 																	],
@@ -3240,11 +3380,11 @@
 																		{
 																			"id": "compare-two-values",
 																			"objectClass": "System",
-																			"sid": 212489848014746,
+																			"sid": 797975598276084,
 																			"parameters": {
 																				"first-value": "snake_head.Dir",
 																				"comparison": 0,
-																				"second-value": "4"
+																				"second-value": "315"
 																			}
 																		}
 																	],
@@ -3280,11 +3420,11 @@
 																		{
 																			"id": "compare-two-values",
 																			"objectClass": "System",
-																			"sid": 793381744640766,
+																			"sid": 291269890621297,
 																			"parameters": {
 																				"first-value": "snake_head.Dir",
 																				"comparison": 0,
-																				"second-value": "5"
+																				"second-value": "225"
 																			}
 																		}
 																	],
@@ -3320,11 +3460,11 @@
 																		{
 																			"id": "compare-two-values",
 																			"objectClass": "System",
-																			"sid": 153544680094485,
+																			"sid": 248452377690919,
 																			"parameters": {
 																				"first-value": "snake_head.Dir",
 																				"comparison": 0,
-																				"second-value": "6"
+																				"second-value": "45"
 																			}
 																		}
 																	],
@@ -3360,11 +3500,11 @@
 																		{
 																			"id": "compare-two-values",
 																			"objectClass": "System",
-																			"sid": 932726474682488,
+																			"sid": 762727918114363,
 																			"parameters": {
 																				"first-value": "snake_head.Dir",
 																				"comparison": 0,
-																				"second-value": "7"
+																				"second-value": "135"
 																			}
 																		}
 																	],
@@ -4062,11 +4202,11 @@
 																						{
 																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 884584178672590,
+																							"sid": 936894284199032,
 																							"parameters": {
 																								"first-value": "snake_head.Dir",
 																								"comparison": 0,
-																								"second-value": "0"
+																								"second-value": "270"
 																							}
 																						}
 																					],
@@ -4093,11 +4233,11 @@
 																						{
 																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 575673426692731,
+																							"sid": 452871777701462,
 																							"parameters": {
 																								"first-value": "snake_head.Dir",
 																								"comparison": 0,
-																								"second-value": "1"
+																								"second-value": "0"
 																							}
 																						}
 																					],
@@ -4124,11 +4264,11 @@
 																						{
 																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 229022119389408,
+																							"sid": 448568202349989,
 																							"parameters": {
 																								"first-value": "snake_head.Dir",
 																								"comparison": 0,
-																								"second-value": "2"
+																								"second-value": "90"
 																							}
 																						}
 																					],
@@ -4155,11 +4295,11 @@
 																						{
 																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 213884098867055,
+																							"sid": 499087879214366,
 																							"parameters": {
 																								"first-value": "snake_head.Dir",
 																								"comparison": 0,
-																								"second-value": "3"
+																								"second-value": "180"
 																							}
 																						}
 																					],
@@ -4186,11 +4326,11 @@
 																						{
 																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 395583918631920,
+																							"sid": 497600279572146,
 																							"parameters": {
 																								"first-value": "snake_head.Dir",
 																								"comparison": 0,
-																								"second-value": "4"
+																								"second-value": "315"
 																							}
 																						}
 																					],
@@ -4226,11 +4366,11 @@
 																						{
 																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 491257919912512,
+																							"sid": 297632364378383,
 																							"parameters": {
 																								"first-value": "snake_head.Dir",
 																								"comparison": 0,
-																								"second-value": "5"
+																								"second-value": "225"
 																							}
 																						}
 																					],
@@ -4266,11 +4406,11 @@
 																						{
 																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 766357410310150,
+																							"sid": 398496528303872,
 																							"parameters": {
 																								"first-value": "snake_head.Dir",
 																								"comparison": 0,
-																								"second-value": "6"
+																								"second-value": "45"
 																							}
 																						}
 																					],
@@ -4306,11 +4446,11 @@
 																						{
 																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 396799577392424,
+																							"sid": 664939208909576,
 																							"parameters": {
 																								"first-value": "snake_head.Dir",
 																								"comparison": 0,
-																								"second-value": "7"
+																								"second-value": "135"
 																							}
 																						}
 																					],
@@ -4952,13 +5092,13 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "snake_body",
-															"sid": 416790982516797,
+															"sid": 403426179309618,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"body_escape\"",
 																"property": "position",
-																"end-x": "snake_body.X + cos(snake_head.Angle - 90) * 2000",
-																"end-y": "snake_body.Y + sin(snake_head.Angle - 90) * 2000",
+																"end-x": "snake_body.X + cos(snake_head.Angle ) * 2000",
+																"end-y": "snake_body.Y + sin(snake_head.Angle ) * 2000",
 																"time": "EscapeDuration",
 																"ease": "noease",
 																"destroy-on-complete": "no",
@@ -5552,11 +5692,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 594212110177072,
+															"sid": 491399617177940,
 															"parameters": {
 																"first-value": "snake_head.Dir",
 																"comparison": 0,
-																"second-value": "0"
+																"second-value": "270"
 															}
 														}
 													],
@@ -5583,11 +5723,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 952240685845242,
+															"sid": 549909534728175,
 															"parameters": {
 																"first-value": "snake_head.Dir",
 																"comparison": 0,
-																"second-value": "1"
+																"second-value": "0"
 															}
 														}
 													],
@@ -5614,11 +5754,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 139580526484245,
+															"sid": 822044918221926,
 															"parameters": {
 																"first-value": "snake_head.Dir",
 																"comparison": 0,
-																"second-value": "2"
+																"second-value": "90"
 															}
 														}
 													],
@@ -5645,11 +5785,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 608852240155875,
+															"sid": 897113741043786,
 															"parameters": {
 																"first-value": "snake_head.Dir",
 																"comparison": 0,
-																"second-value": "3"
+																"second-value": "180"
 															}
 														}
 													],
@@ -5676,11 +5816,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 629846295659915,
+															"sid": 321450247970460,
 															"parameters": {
 																"first-value": "snake_head.Dir",
 																"comparison": 0,
-																"second-value": "4"
+																"second-value": "315"
 															}
 														}
 													],
@@ -5716,11 +5856,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 368774706226586,
+															"sid": 985465342515776,
 															"parameters": {
 																"first-value": "snake_head.Dir",
 																"comparison": 0,
-																"second-value": "5"
+																"second-value": "225"
 															}
 														}
 													],
@@ -5756,11 +5896,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 317608001723760,
+															"sid": 982469832721842,
 															"parameters": {
 																"first-value": "snake_head.Dir",
 																"comparison": 0,
-																"second-value": "6"
+																"second-value": "45"
 															}
 														}
 													],
@@ -5796,11 +5936,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 102049660618413,
+															"sid": 763848857720701,
 															"parameters": {
 																"first-value": "snake_head.Dir",
 																"comparison": 0,
-																"second-value": "7"
+																"second-value": "135"
 															}
 														}
 													],
@@ -6333,13 +6473,13 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "snake_head",
-											"sid": 672509868619647,
+											"sid": 800187482119309,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"head_escape\"",
 												"property": "position",
-												"end-x": "snake_head.X + cos(snake_head.Angle - 90) * 2000",
-												"end-y": "snake_head.Y + sin(snake_head.Angle - 90) * 2000",
+												"end-x": "snake_head.X + cos(snake_head.Angle ) * 2000",
+												"end-y": "snake_head.Y + sin(snake_head.Angle ) * 2000",
 												"time": "EscapeDuration",
 												"ease": "noease",
 												"destroy-on-complete": "no",
