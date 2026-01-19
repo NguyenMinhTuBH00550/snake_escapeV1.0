@@ -18,7 +18,7 @@
 			"initialValue": "SAVE_COIN",
 			"comment": "",
 			"isStatic": false,
-			"isConstant": false,
+			"isConstant": true,
 			"sid": 140311367469370
 		},
 		{
@@ -28,7 +28,7 @@
 			"initialValue": "SAVE_LEVEL",
 			"comment": "",
 			"isStatic": false,
-			"isConstant": false,
+			"isConstant": true,
 			"sid": 541452750897695
 		},
 		{
@@ -217,13 +217,13 @@
 				{
 					"id": "tween-value",
 					"objectClass": "HUD_tileLoading",
-					"sid": 232514708514862,
+					"sid": 309789623066554,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"loading\"",
 						"start-value": "0",
 						"end-value": "100",
-						"time": "2",
+						"time": "1",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -286,13 +286,13 @@
 				{
 					"id": "tween-value",
 					"objectClass": "HUD_tileLoading",
-					"sid": 512765692595088,
+					"sid": 417293496823364,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"loading\"",
 						"start-value": "0",
 						"end-value": "100",
-						"time": "2",
+						"time": "1",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -518,6 +518,15 @@
 							"sid": 762886635882435,
 							"parameters": {
 								"variable": "IsTimerRunning",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 389482756776175,
+							"parameters": {
+								"variable": "HintIndex",
 								"value": "0"
 							}
 						}

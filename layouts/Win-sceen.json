@@ -482,7 +482,7 @@
 					}
 				},
 				{
-					"type": "UL_btn_home",
+					"type": "UI_btn_home",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

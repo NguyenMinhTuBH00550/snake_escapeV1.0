@@ -118,7 +118,7 @@
 					}
 				},
 				{
-					"type": "UL_btn_booster",
+					"type": "UI_btn_booster",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",

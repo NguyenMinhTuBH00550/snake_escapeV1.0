@@ -1,33 +1,44 @@
 {
-	"name": "sactx12048x2048ASTC6x6gameatlas42e01cac2",
+	"name": "UI_btn_home",
 	"plugin-id": "Sprite",
-	"sid": 411856267423248,
+	"sid": 238744169475308,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_button",
+			"name": "Button",
+			"sid": 730712929300706
+		},
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 328205121278089
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 245,
-						"height": 292,
+						"width": 123,
+						"height": 124,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1791217,
+						"imageSpriteId": 5534469,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 780588469929255,
-				"name": "Default",
+				"sid": 311809491354201,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

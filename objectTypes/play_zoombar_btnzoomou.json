@@ -1,43 +1,32 @@
 {
-	"name": "UL_btn_booster",
+	"name": "play_zoombar_btnzoomou",
 	"plugin-id": "Sprite",
-	"sid": 789961148748381,
+	"sid": 301546356235678,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "aekiro_button",
-			"name": "Button",
-			"sid": 319150499878592
-		},
-		{
-			"behaviorId": "aekiro_gameobject",
-			"name": "GameObject",
-			"sid": 845799526240588
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 626,
-						"height": 214,
+						"width": 106,
+						"height": 107,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8708833,
+						"imageSpriteId": 7223743,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 639400846796771,
+				"sid": 778838525889290,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

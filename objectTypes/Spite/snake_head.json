@@ -125,18 +125,18 @@
 			"sid": 449107843549551
 		},
 		{
-			"name": "TapGridX",
+			"name": "HintOrder",
 			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 342221805493636
 		},
 		{
-			"name": "TapGridY",
-			"type": "number",
+			"name": "isExiting",
+			"type": "boolean",
 			"desc": "",
 			"show": true,
-			"sid": 751378383064698
+			"sid": 124595836399335
 		}
 	],
 	"behaviorTypes": [
