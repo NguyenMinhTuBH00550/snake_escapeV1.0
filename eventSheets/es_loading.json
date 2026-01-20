@@ -217,13 +217,13 @@
 				{
 					"id": "tween-value",
 					"objectClass": "HUD_tileLoading",
-					"sid": 309789623066554,
+					"sid": 263594976583820,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"loading\"",
 						"start-value": "0",
 						"end-value": "100",
-						"time": "1",
+						"time": "0.75",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -286,13 +286,13 @@
 				{
 					"id": "tween-value",
 					"objectClass": "HUD_tileLoading",
-					"sid": 417293496823364,
+					"sid": 169427231639936,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"loading\"",
 						"start-value": "0",
 						"end-value": "100",
-						"time": "1",
+						"time": "0.75",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -320,13 +320,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "HUD_logo",
-					"sid": 718061529136508,
+					"sid": 768474466388988,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"logo_pop\"",
 						"property": "scale",
-						"end-x": "0.7",
-						"end-y": "0.7",
+						"end-x": "1.3",
+						"end-y": "1.3",
 						"time": "0.25",
 						"ease": "easeoutback",
 						"destroy-on-complete": "no",
@@ -403,7 +403,7 @@
 						{
 							"id": "set-opacity",
 							"objectClass": "HUD_BG_loading",
-							"sid": 144690359767348,
+							"sid": 120398546753853,
 							"parameters": {
 								"opacity": "0"
 							}

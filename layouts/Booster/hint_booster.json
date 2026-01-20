@@ -27,10 +27,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 271.35714285714306,
-						"y": 480.14284624372226,
-						"width": 472.285714285715,
-						"height": 448.2856924874445,
+						"x": 547,
+						"y": 965.5,
+						"width": 970.2857142857151,
+						"height": 903.2856924874445,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -64,10 +64,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 270.67784812638087,
-						"y": 445.0524781341108,
-						"width": 410.64430374723827,
-						"height": 230.1049562682216,
+						"x": 546.1905124802439,
+						"y": 900,
+						"width": 826.2632787867506,
+						"height": 476.1049562682216,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -101,10 +101,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 269.8603165286065,
-						"y": 393.75718198209256,
-						"width": 73.54072413068889,
-						"height": 89.47670159747837,
+						"x": 544.6202678158364,
+						"y": 793.9807959417187,
+						"width": 149.17646161838076,
+						"height": 178.75695638942074,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -171,10 +171,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 271.0160753731934,
-						"y": 622.9560587047578,
-						"width": 293.34200085925715,
-						"height": 93.03086949013343,
+						"x": 544.5,
+						"y": 1262,
+						"width": 600.3420008592572,
+						"height": 193.03086949013343,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -193,7 +193,7 @@
 						"text": "New Booster",
 						"enable-bbcode": true,
 						"font": "LilitaOne-Regular",
-						"size": 32,
+						"size": 65,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -267,10 +267,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 141.62702624226142,
-						"y": 258.4716529512553,
-						"width": 261.5056226572257,
-						"height": 49.35860681116759,
+						"x": 254.2101158728966,
+						"y": 509.8949304691622,
+						"width": 573.5056226572257,
+						"height": 127.35860681116759,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -289,7 +289,7 @@
 						"text": "Hint",
 						"enable-bbcode": true,
 						"font": "LilitaOne-Regular",
-						"size": 25,
+						"size": 55,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -363,10 +363,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 192.5178147329741,
-						"y": 449.9691811525473,
-						"width": 151.40973209656187,
-						"height": 49.35860681116759,
+						"x": 419.47081674857907,
+						"y": 916.470816748579,
+						"width": 248.40973209656187,
+						"height": 93.35860681116759,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -385,7 +385,7 @@
 						"text": "Find a snake that can escape!",
 						"enable-bbcode": true,
 						"font": "LilitaOne-Regular",
-						"size": 20,
+						"size": 40,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -416,10 +416,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 117.90803532280347,
-						"y": 481.4525698114063,
-						"width": 306.49733283230876,
-						"height": 83.46940955337266,
+						"x": 263.10581040842885,
+						"y": 979.3545723583804,
+						"width": 555.4973328323088,
+						"height": 158.46940955337266,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -438,7 +438,7 @@
 						"text": "OK",
 						"enable-bbcode": true,
 						"font": "LilitaOne-Regular",
-						"size": 40,
+						"size": 70,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -512,10 +512,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 197.32653061224266,
-						"y": 596.4956468409744,
-						"width": 151.40973209656187,
-						"height": 49.35860681116759,
+						"x": 442,
+						"y": 1211,
+						"width": 200.40973209656187,
+						"height": 96.35860681116759,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -557,78 +557,6 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": true
-		},
-		{
-			"name": "Layer 0",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [
-				{
-					"type": "Sprite6",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 149,
-					"sid": 954898336083763,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 954898336083763,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 270.65077051228656,
-						"y": 480.5,
-						"width": 538.156162679816,
-						"height": 958.2449090807504,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
-			"sid": 252126645936179,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
 		}
 	],
 	"scene-graphs-folder-root": {

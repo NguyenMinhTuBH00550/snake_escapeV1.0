@@ -207,7 +207,7 @@
 			"HUD_popup_noads_panel",
 			"HUD_popup_noads_frame",
 			"HUD_popup_noads_btn",
-			"HUD_popup_noads_ribbon",
+			"HUD_popup_noads_ribbo",
 			"Sprite13",
 			"HUD_home_adbar",
 			"UI_count_booster",
@@ -215,7 +215,8 @@
 			"play_zoombar_slide",
 			"play_zoombar_btnzoomin",
 			"play_zoombar_btnzoomou",
-			"hint_tile"
+			"hint_tile",
+			"Sprite14"
 		],
 		"subfolders": [
 			{
@@ -771,7 +772,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 540,
-	"viewportHeight": 960,
+	"viewportWidth": 1080,
+	"viewportHeight": 1920,
 	"firstLayout": "Loading"
 }

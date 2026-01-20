@@ -117,12 +117,12 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "UI_Home",
-							"sid": 384715040603946,
+							"sid": 826404617218654,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"icon_home\"",
 								"property": "offsetY",
-								"end-value": "UI_Home.initialY - 43",
+								"end-value": "UI_Home.initialY - 100",
 								"time": "0.15",
 								"ease": "noease",
 								"destroy-on-complete": "no",
@@ -731,12 +731,12 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "UI_Home",
-													"sid": 115586256899932,
+													"sid": 548123377610867,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"icon_home\"",
 														"property": "offsetY",
-														"end-value": "UI_Home.initialY - 43",
+														"end-value": "UI_Home.initialY - 100",
 														"time": "0.15",
 														"ease": "noease",
 														"destroy-on-complete": "no",
@@ -809,12 +809,12 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "UI_icon_shop",
-													"sid": 234228735090907,
+													"sid": 437766517276264,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"icon_home\"",
 														"property": "offsetY",
-														"end-value": "UI_icon_shop.initialY - 43",
+														"end-value": "UI_icon_shop.initialY - 100",
 														"time": "0.15",
 														"ease": "noease",
 														"destroy-on-complete": "no",
@@ -887,12 +887,12 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "UI_icon_challenge",
-													"sid": 619041588465942,
+													"sid": 870651545355790,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"icon_home\"",
 														"property": "offsetY",
-														"end-value": "UI_icon_challenge.initialY - 43",
+														"end-value": "UI_icon_challenge.initialY - 100",
 														"time": "0.15",
 														"ease": "noease",
 														"destroy-on-complete": "no",

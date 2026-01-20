@@ -2,7 +2,7 @@
 	"name": "Grid_Dot",
 	"plugin-id": "Sprite",
 	"sid": 778161425745761,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
