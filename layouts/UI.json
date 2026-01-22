@@ -1049,8 +1049,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 541.5,
-						"y": 1331,
+						"x": 1909,
+						"y": 1156,
 						"width": 736.0000000000001,
 						"height": 192,
 						"originX": 0.5,
@@ -1130,8 +1130,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 354,
-						"y": 1292,
+						"x": 1721.5,
+						"y": 1117,
 						"width": 384,
 						"height": 64,
 						"originX": 0,
@@ -3081,45 +3081,7 @@
 			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "Sprite13",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 27,
-					"sid": 853104098274607,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 853104098274607,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 543,
-						"y": 983,
-						"width": 1081.1322101505616,
-						"height": 1924.218634999652,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 604986970161808,
 			"effectTypes": [],
 			"isInitiallyVisible": true,

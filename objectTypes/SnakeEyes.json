@@ -1,32 +1,10 @@
 {
-	"name": "UI_head_snake",
+	"name": "SnakeEyes",
 	"plugin-id": "Sprite",
-	"sid": 296220854400759,
+	"sid": 423413896696967,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "OwnerID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 947253969766735
-		},
-		{
-			"name": "OffsetX",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 518723697830158
-		},
-		{
-			"name": "OffsetY",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 702179378679265
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -34,25 +12,25 @@
 			{
 				"frames": [
 					{
-						"width": 262,
-						"height": 248,
+						"width": 120,
+						"height": 226,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4802069,
+						"imageSpriteId": 6590345,
 						"collisionPoly": {
 							"points": [
-								1,
-								0,
-								1,
-								1,
 								0,
 								1,
 								0,
-								0
+								0.004424778761061954,
+								0.9916666666666667,
+								0.004424778761061954,
+								0.9916666666666667,
+								1
 							]
 						},
 						"useCollisionPoly": true,
@@ -60,8 +38,8 @@
 						"tag": ""
 					}
 				],
-				"sid": 462029179987500,
-				"name": "Default",
+				"sid": 949810488733099,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

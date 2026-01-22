@@ -81,6 +81,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 585030309212781
+		},
+		{
+			"name": "dot",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 779649798999923
+		},
+		{
+			"name": "color",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 426798788101208
 		}
 	],
 	"behaviorTypes": [
@@ -104,7 +118,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5513419,
+						"imageSpriteId": 5355183,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

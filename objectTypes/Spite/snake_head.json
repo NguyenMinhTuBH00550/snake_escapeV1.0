@@ -125,18 +125,25 @@
 			"sid": 449107843549551
 		},
 		{
-			"name": "HintOrder",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 342221805493636
-		},
-		{
 			"name": "isExiting",
 			"type": "boolean",
 			"desc": "",
 			"show": true,
 			"sid": 124595836399335
+		},
+		{
+			"name": "dot",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 811205948217392
+		},
+		{
+			"name": "color",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 110679889482773
 		}
 	],
 	"behaviorTypes": [
@@ -160,7 +167,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 404645,
+						"imageSpriteId": 2150794,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
