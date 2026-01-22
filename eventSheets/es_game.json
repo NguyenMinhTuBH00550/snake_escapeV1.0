@@ -2626,6 +2626,36 @@
 							"sid": 997896561260419
 						},
 						{
+							"eventType": "variable",
+							"name": "dx",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 403294518820883
+						},
+						{
+							"eventType": "variable",
+							"name": "dy",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 316704906805028
+						},
+						{
+							"eventType": "variable",
+							"name": "step",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 971894554883390
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -3840,34 +3870,34 @@
 													],
 													"actions": [
 														{
-															"id": "set-instvar-value",
+															"id": "stop-tweens",
 															"objectClass": "snake_body",
-															"sid": 575438769347161,
+															"sid": 902599299537704,
+															"behaviorType": "Tween",
 															"parameters": {
-																"instance-variable": "isEscaping",
-																"value": "1"
+																"tags": "\"move\""
 															}
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 930357831729741,
+															"sid": 614492043464671,
 															"parameters": {
 																"variable": "EscapeDuration",
-																"value": "(snake_body.NodeIndex - 1) * 0.1"
+																"value": "max(EscapeDuration, 3.5)"
 															}
 														},
 														{
 															"id": "tween-two-properties",
 															"objectClass": "snake_body",
-															"sid": 889569287516101,
+															"sid": 712640975579441,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"body_escape\"",
 																"property": "position",
 																"end-x": "snake_body.X + cos(snake_head.Angle ) * 2000",
 																"end-y": "snake_body.Y + sin(snake_head.Angle ) * 2000",
-																"time": "3",
+																"time": "EscapeDuration",
 																"ease": "noease",
 																"destroy-on-complete": "no",
 																"loop": "no",
@@ -3882,15 +3912,6 @@
 															"parameters": {
 																"type": "log",
 																"message": "\"Body \" & snake_body.NodeIndex & \" ESCAPING!\""
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 525443026638859,
-															"parameters": {
-																"seconds": "0",
-																"use-timescale": true
 															}
 														}
 													],
@@ -3979,14 +4000,14 @@
 																		{
 																			"id": "tween-two-properties",
 																			"objectClass": "snake_body",
-																			"sid": 693005149746052,
+																			"sid": 136210268604101,
 																			"behaviorType": "Tween",
 																			"parameters": {
 																				"tags": "\"move\"",
 																				"property": "position",
 																				"end-x": "checkpoint.X",
 																				"end-y": "checkpoint.Y",
-																				"time": "0.3",
+																				"time": "0.1",
 																				"ease": "noease",
 																				"destroy-on-complete": "no",
 																				"loop": "no",
@@ -5187,6 +5208,15 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "snake_head",
+											"sid": 164148587866427,
+											"parameters": {
+												"instance-variable": "isEscaping",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "snake_head",
 											"sid": 199186180855785,
 											"parameters": {
 												"instance-variable": "PrevX",
@@ -5246,10 +5276,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 821374388791432,
+											"sid": 579135450835934,
 											"parameters": {
 												"variable": "EscapeDuration",
-												"value": "3"
+												"value": "max(EscapeDuration, 3.5)"
 											}
 										},
 										{
@@ -5286,6 +5316,16 @@
 											"parameters": {
 												"type": "log",
 												"message": "\"Head escaping...\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 569994791662128,
+											"disabled": true,
+											"parameters": {
+												"seconds": "0.02",
+												"use-timescale": true
 											}
 										}
 									],
@@ -5533,7 +5573,7 @@
 																		{
 																			"id": "tween-two-properties",
 																			"objectClass": "snake_body",
-																			"sid": 899830642525507,
+																			"sid": 548306885159326,
 																			"behaviorType": "Tween",
 																			"parameters": {
 																				"tags": "\"move\"",
