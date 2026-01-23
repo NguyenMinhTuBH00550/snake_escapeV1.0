@@ -5294,8 +5294,8 @@
 					"world": {
 						"x": 628,
 						"y": 491,
-						"width": 64,
-						"height": 64,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5351,8 +5351,8 @@
 					"world": {
 						"x": 630,
 						"y": 577,
-						"width": 64,
-						"height": 64,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5392,7 +5392,7 @@
 							"h": true,
 							"a": true,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -5459,7 +5459,7 @@
 							"h": true,
 							"a": true,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -5526,7 +5526,7 @@
 							"h": true,
 							"a": true,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -5593,7 +5593,7 @@
 							"h": true,
 							"a": true,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -5808,7 +5808,7 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -5823,7 +5823,7 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -5904,7 +5904,7 @@
 							"h": true,
 							"a": true,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -5974,7 +5974,7 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -5989,7 +5989,7 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -6004,7 +6004,7 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -6233,7 +6233,7 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -6312,7 +6312,7 @@
 							"h": true,
 							"a": true,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
