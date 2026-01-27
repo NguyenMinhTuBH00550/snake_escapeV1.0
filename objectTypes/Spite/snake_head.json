@@ -132,13 +132,6 @@
 			"sid": 124595836399335
 		},
 		{
-			"name": "dot",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 811205948217392
-		},
-		{
 			"name": "color",
 			"type": "number",
 			"desc": "",

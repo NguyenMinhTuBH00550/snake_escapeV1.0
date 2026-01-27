@@ -1,7 +1,7 @@
 {
-	"name": "SnakeBody",
+	"name": "SnakeBody_Cross",
 	"plugin-id": "Sprite",
-	"sid": 572582323827930,
+	"sid": 942138933188824,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
@@ -10,14 +10,14 @@
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 746781788971709
+			"sid": 758885410115708
 		},
 		{
 			"name": "TargetAngle",
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 957509417596862
+			"sid": 920204587443164
 		}
 	],
 	"behaviorTypes": [],
@@ -35,7 +35,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2752521,
+						"imageSpriteId": 948803,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -61,7 +61,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1054303,
+						"imageSpriteId": 9586082,
 						"collisionPoly": {
 							"points": [
 								0.004524886877828038,
@@ -87,7 +87,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7419371,
+						"imageSpriteId": 3878871,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -105,7 +105,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 149603926020615,
+				"sid": 825942775566570,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

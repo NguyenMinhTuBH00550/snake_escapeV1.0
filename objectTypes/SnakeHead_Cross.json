@@ -1,7 +1,7 @@
 {
-	"name": "SnakeBody",
+	"name": "SnakeHead_Cross",
 	"plugin-id": "Sprite",
-	"sid": 572582323827930,
+	"sid": 176433886916264,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
@@ -10,14 +10,7 @@
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 746781788971709
-		},
-		{
-			"name": "TargetAngle",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 957509417596862
+			"sid": 372044802011587
 		}
 	],
 	"behaviorTypes": [],
@@ -27,50 +20,24 @@
 			{
 				"frames": [
 					{
-						"width": 220,
-						"height": 222,
+						"width": 254,
+						"height": 242,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2752521,
+						"imageSpriteId": 5778190,
 						"collisionPoly": {
 							"points": [
-								0,
-								0.9954954954954955,
-								0,
-								0.0045045045045044585,
+								0.003937007874015741,
 								1,
-								0.0045045045045044585,
+								0.003937007874015741,
+								0.004132231404958664,
 								1,
-								0.9954954954954955
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					},
-					{
-						"width": 221,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 1054303,
-						"collisionPoly": {
-							"points": [
-								0.004524886877828038,
+								0.004132231404958664,
 								1,
-								0.004524886877828038,
-								0,
-								0.995475113122172,
-								0,
-								0.995475113122172,
 								1
 							]
 						},
@@ -79,25 +46,51 @@
 						"tag": ""
 					},
 					{
-						"width": 220,
-						"height": 224,
+						"width": 255,
+						"height": 242,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7419371,
+						"imageSpriteId": 8087461,
 						"collisionPoly": {
 							"points": [
-								0,
-								0.9955357142857143,
-								0,
-								0.004464285714285698,
+								0.0039215686274509665,
 								1,
-								0.004464285714285698,
+								0.0039215686274509665,
+								0.004132231404958664,
 								1,
-								0.9955357142857143
+								0.004132231404958664,
+								1,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 255,
+						"height": 242,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7084578,
+						"collisionPoly": {
+							"points": [
+								0.0039215686274509665,
+								1,
+								0.0039215686274509665,
+								0,
+								1,
+								0,
+								1,
+								1
 							]
 						},
 						"useCollisionPoly": true,
@@ -105,8 +98,8 @@
 						"tag": ""
 					}
 				],
-				"sid": 149603926020615,
-				"name": "Animation 1",
+				"sid": 441101446278385,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -1,0 +1,11 @@
+{
+	"name": "Family1",
+	"plugin-id": "Sprite",
+	"sid": 338130025265548,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"snake_body"
+	]
+}

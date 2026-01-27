@@ -95,6 +95,48 @@
 			"desc": "",
 			"show": true,
 			"sid": 426798788101208
+		},
+		{
+			"name": "HasTurn",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 426253248805342
+		},
+		{
+			"name": "TurnGX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 433351488627012
+		},
+		{
+			"name": "TurnGY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 316451930074192
+		},
+		{
+			"name": "TurnAngle",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 368013143590701
+		},
+		{
+			"name": "TurnDone",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 898397014980155
+		},
+		{
+			"name": "MoveDir",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 801227609338004
 		}
 	],
 	"behaviorTypes": [

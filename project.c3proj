@@ -206,7 +206,11 @@
 			"SnakeBody",
 			"SnakeTail",
 			"SnakeHead",
-			"SnakeEyes"
+			"SnakeEyes",
+			"SnakeHead_Cross",
+			"SnakeEyes_Cross",
+			"SnakeBody_Cross",
+			"SnakeTail_Cross"
 		],
 		"subfolders": [
 			{
@@ -428,7 +432,9 @@
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Family1"
+		],
 		"subfolders": []
 	},
 	"layouts": {

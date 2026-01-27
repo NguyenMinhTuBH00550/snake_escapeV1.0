@@ -1,32 +1,10 @@
 {
-	"name": "checkpoint",
+	"name": "SnakeEyes_Cross",
 	"plugin-id": "Sprite",
-	"sid": 329159593375038,
+	"sid": 832583594204319,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "GridX",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 759092073740633
-		},
-		{
-			"name": "GridY",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 422858919920228
-		},
-		{
-			"name": "OwnerID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 718979594199409
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -34,21 +12,33 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 120,
+						"height": 226,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 278028,
+						"imageSpriteId": 4241359,
+						"collisionPoly": {
+							"points": [
+								0,
+								1,
+								0,
+								0.004424778761061954,
+								0.9916666666666667,
+								0.004424778761061954,
+								0.9916666666666667,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 919114357754162,
+				"sid": 941137699825191,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
