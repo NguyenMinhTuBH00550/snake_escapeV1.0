@@ -206,11 +206,7 @@
 			"SnakeBody",
 			"SnakeTail",
 			"SnakeHead",
-			"SnakeEyes",
-			"SnakeHead_Cross",
-			"SnakeEyes_Cross",
-			"SnakeBody_Cross",
-			"SnakeTail_Cross"
+			"SnakeEyes"
 		],
 		"subfolders": [
 			{

@@ -15,6 +15,277 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
+					"uid": 39,
+					"sid": 756683060131786,
+					"tags": "cross",
+					"instanceVariables": {
+						"ownID": 0,
+						"TargetAngle": 0
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 282,
+						"uid": 39,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 756683060131786,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1102,
+						"y": 1376,
+						"width": 220,
+						"height": 222,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SnakeBody",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 345,
+					"sid": 141877447952157,
+					"tags": "",
+					"instanceVariables": {
+						"ownID": 0,
+						"TargetAngle": 0
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 269,
+						"uid": 345,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 141877447952157,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1040,
+						"y": 1635,
+						"width": 220,
+						"height": 222,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SnakeBody",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 292,
+					"sid": 903835412949180,
+					"tags": "",
+					"instanceVariables": {
+						"ownID": 0,
+						"TargetAngle": 0
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 269,
+						"uid": 292,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 903835412949180,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1153,
+						"y": 1635,
+						"width": 220,
+						"height": 222,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SnakeTail",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 2",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 158,
+					"sid": 888753236424946,
+					"tags": "",
+					"instanceVariables": {
+						"ownID": 0
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 284,
+						"uid": 158,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 888753236424946,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1385,
+						"y": 760,
+						"width": 182,
+						"height": 157,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SnakeBody",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
 					"uid": 285,
 					"sid": 795986780869111,
 					"tags": "",
@@ -58,76 +329,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1236,
-						"y": 1072,
-						"width": 220,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeBody",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 39,
-					"sid": 463519521280176,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0,
-						"TargetAngle": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 282,
-						"uid": 39,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": true,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 463519521280176,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1153,
-						"y": 1375,
+						"x": 1254,
+						"y": 1073,
 						"width": 220,
 						"height": 222,
 						"originX": 0.5,
@@ -194,765 +397,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1244,
-						"y": 1374,
+						"x": 1214,
+						"y": 1378,
 						"width": 220,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeTail_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 2",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3,
-					"sid": 762981988938070,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0
-					},
-					"behaviors": {},
-					"template": {
-						"mode": "replica",
-						"templateName": "",
-						"sourceTemplateName": "cross",
-						"replicaHierarchyInSyncWithTemplate": false,
-						"templatePropagateHierarchyChanges": true,
-						"replicaIgnoreTemplateHierarchyChanges": false,
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												false
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
-							},
-							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "ownID",
-												"state": true
-											}
-										]
-									}
-								]
-							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												false
-											],
-											[
-												"h",
-												false
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												false
-											],
-											[
-												"sy",
-												false
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						],
-						"replicasUIDs": null
-					},
-					"sceneGraphData": {
-						"parent-uid": 391,
-						"uid": 3,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 762981988938070,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 221,
-						"y": 1951,
-						"width": 177,
-						"height": 144,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeBody_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 371,
-					"sid": 181069532049074,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0,
-						"TargetAngle": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 27,
-						"uid": 371,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 181069532049074,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 499,
-						"y": 2154,
-						"width": 226,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeBody_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 365,
-					"sid": 239282523242202,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0,
-						"TargetAngle": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 27,
-						"uid": 365,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 239282523242202,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 578,
-						"y": 2155,
-						"width": 226,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeBody_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 269,
-					"sid": 105185132479471,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0,
-						"TargetAngle": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 27,
-						"uid": 269,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 105185132479471,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 670,
-						"y": 2155,
-						"width": 226,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeBody_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 62,
-					"sid": 180191041536310,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0,
-						"TargetAngle": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 27,
-						"uid": 62,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 180191041536310,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 752,
-						"y": 2156,
-						"width": 226,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeBody_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 427,
-					"sid": 802227439250966,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0,
-						"TargetAngle": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 399,
-						"uid": 427,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 802227439250966,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 635,
-						"y": 1885,
-						"width": 226,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeBody_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 426,
-					"sid": 861592962326529,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0,
-						"TargetAngle": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 399,
-						"uid": 426,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 861592962326529,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 703,
-						"y": 1884,
-						"width": 226,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeBody_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 425,
-					"sid": 606463126852563,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0,
-						"TargetAngle": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 399,
-						"uid": 425,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 606463126852563,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 789,
-						"y": 1883,
-						"width": 226,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeBody_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 424,
-					"sid": 118006857320234,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0,
-						"TargetAngle": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 399,
-						"uid": 424,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 118006857320234,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 891,
-						"y": 1884,
-						"width": 226,
 						"height": 222,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -5859,8 +5306,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -9,
-						"y": 1211,
+						"x": -476,
+						"y": 1500,
 						"width": 969,
 						"height": 823,
 						"originX": 0.5,
@@ -6381,8 +5828,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1339,
-						"y": 1371,
+						"x": 1324,
+						"y": 1378,
 						"width": 220,
 						"height": 222,
 						"originX": 0.5,
@@ -6449,77 +5896,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1341,
+						"x": 1379,
 						"y": 1073,
 						"width": 220,
 						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeTail",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 2",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 158,
-					"sid": 888753236424946,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 284,
-						"uid": 158,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": true,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 888753236424946,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1455,
-						"y": 772,
-						"width": 177,
-						"height": 144,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6584,7 +5964,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1439,
+						"x": 1508,
 						"y": 1073,
 						"width": 220,
 						"height": 222,
@@ -6848,7 +6228,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1540,
+						"x": 1630,
 						"y": 1073,
 						"width": 220,
 						"height": 222,
@@ -6916,8 +6296,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1435,
-						"y": 1371,
+						"x": 1461,
+						"y": 1378,
 						"width": 226,
 						"height": 222,
 						"originX": 0.5,
@@ -7060,8 +6440,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1554,
-						"y": 1371,
+						"x": 1594,
+						"y": 1378,
 						"width": 254,
 						"height": 242,
 						"originX": 0.5,
@@ -7289,10 +6669,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1535,
-						"y": 772,
-						"width": 180,
-						"height": 181,
+						"x": 1471,
+						"y": 759,
+						"width": 176,
+						"height": 186.99999999999997,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -7354,8 +6734,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1548,
-						"y": 1371,
+						"x": 1588,
+						"y": 1378,
 						"width": 120,
 						"height": 226,
 						"originX": 0.5,
@@ -7371,151 +6751,7 @@
 					}
 				},
 				{
-					"type": "SnakeHead_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 399,
-					"sid": 267925163313565,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 399,
-						"children": [
-							{
-								"uid": 408,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": true,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 424,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 427,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 426,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 425,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 267925163313565,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1015,
-						"y": 1880,
-						"width": 254,
-						"height": 242,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeEyes_Cross",
+					"type": "SnakeBody",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -7523,14 +6759,17 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 408,
-					"sid": 534885132993623,
+					"uid": 3,
+					"sid": 252003355053411,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"ownID": 0,
+						"TargetAngle": 0
+					},
 					"behaviors": {},
 					"sceneGraphData": {
-						"parent-uid": 399,
-						"uid": 408,
+						"parent-uid": 269,
+						"uid": 3,
 						"flags": {
 							"x": true,
 							"y": true,
@@ -7557,16 +6796,16 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 534885132993623,
+						"sid": 252003355053411,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1002,
-						"y": 1880,
-						"width": 120,
-						"height": 226,
+						"x": 1264,
+						"y": 1635,
+						"width": 220,
+						"height": 222,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -7580,7 +6819,7 @@
 					}
 				},
 				{
-					"type": "SnakeBody_Cross",
+					"type": "SnakeBody",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -7589,7 +6828,143 @@
 						"live-preview": false
 					},
 					"uid": 27,
-					"sid": 673016979693868,
+					"sid": 912926149187868,
+					"tags": "",
+					"instanceVariables": {
+						"ownID": 0,
+						"TargetAngle": 0
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 269,
+						"uid": 27,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 912926149187868,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1389,
+						"y": 1635,
+						"width": 220,
+						"height": 222,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SnakeBody",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 62,
+					"sid": 620102855879766,
+					"tags": "",
+					"instanceVariables": {
+						"ownID": 0,
+						"TargetAngle": 0
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 269,
+						"uid": 62,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 620102855879766,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1518,
+						"y": 1635,
+						"width": 220,
+						"height": 222,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SnakeBody",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 269,
+					"sid": 634251112214163,
 					"tags": "",
 					"instanceVariables": {
 						"ownID": 0,
@@ -7599,7 +6974,7 @@
 					"template": {
 						"mode": "template",
 						"templateName": "cross",
-						"sourceTemplateName": "",
+						"sourceTemplateName": "body",
 						"replicaHierarchyInSyncWithTemplate": false,
 						"templatePropagateHierarchyChanges": true,
 						"replicaIgnoreTemplateHierarchyChanges": false,
@@ -7747,53 +7122,8 @@
 					},
 					"sceneGraphData": {
 						"parent-uid": null,
-						"uid": 27,
+						"uid": 269,
 						"children": [
-							{
-								"uid": 371,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 365,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 269,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
 							{
 								"uid": 62,
 								"flags": {
@@ -7804,225 +7134,26 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": true,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 673016979693868,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 846,
-						"y": 2158,
-						"width": 226,
-						"height": 222,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SnakeTail_Cross",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 391,
-					"sid": 388039426044367,
-					"tags": "",
-					"instanceVariables": {
-						"ownID": 0
-					},
-					"behaviors": {},
-					"template": {
-						"mode": "template",
-						"templateName": "cross",
-						"sourceTemplateName": "",
-						"replicaHierarchyInSyncWithTemplate": false,
-						"templatePropagateHierarchyChanges": true,
-						"replicaIgnoreTemplateHierarchyChanges": false,
-						"components": [
-							{
-								"id": "plugin",
-								"component": [
-									{
-										"key": "plugin",
-										"state": [
-											[
-												"initially-visible",
-												true
-											],
-											[
-												"initial-animation",
-												true
-											],
-											[
-												"initial-frame",
-												true
-											],
-											[
-												"enable-collisions",
-												true
-											]
-										]
-									}
-								]
 							},
 							{
-								"id": "instance-variable",
-								"component": [
-									{
-										"key": "instance-variable",
-										"state": [
-											{
-												"iv": "ownID",
-												"state": true
-											}
-										]
-									}
-								]
+								"uid": 27,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								}
 							},
-							{
-								"id": "behavior",
-								"component": []
-							},
-							{
-								"id": "effect",
-								"component": []
-							},
-							{
-								"id": "world-instance",
-								"component": [
-									{
-										"key": "world-instance",
-										"state": [
-											[
-												"x",
-												false
-											],
-											[
-												"y",
-												false
-											],
-											[
-												"z",
-												true
-											],
-											[
-												"w",
-												true
-											],
-											[
-												"h",
-												true
-											],
-											[
-												"a",
-												true
-											],
-											[
-												"o",
-												true
-											],
-											[
-												"c",
-												true
-											],
-											[
-												"sx",
-												true
-											],
-											[
-												"sy",
-												true
-											],
-											[
-												"bm",
-												true
-											],
-											[
-												"twpx",
-												true
-											],
-											[
-												"twpy",
-												true
-											],
-											[
-												"twpz",
-												true
-											],
-											[
-												"twpw",
-												true
-											],
-											[
-												"twph",
-												true
-											],
-											[
-												"twpa",
-												true
-											],
-											[
-												"dwp",
-												true
-											],
-											[
-												"ssm",
-												true
-											]
-										]
-									}
-								]
-							}
-						],
-						"replicasUIDs": null
-					},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 391,
-						"children": [
 							{
 								"uid": 3,
 								"flags": {
@@ -8033,7 +7164,37 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 292,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 345,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -8065,16 +7226,16 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 388039426044367,
+						"sid": 634251112214163,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 314,
-						"y": 1947,
-						"width": 180,
-						"height": 181,
+						"x": 1640,
+						"y": 1635,
+						"width": 220,
+						"height": 222,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

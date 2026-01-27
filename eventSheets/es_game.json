@@ -137,7 +137,7 @@
 			"eventType": "variable",
 			"name": "SNAKE_SPACING",
 			"type": "number",
-			"initialValue": "35",
+			"initialValue": "60",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
@@ -1218,7 +1218,7 @@
 																{
 																	"id": "set-scale",
 																	"objectClass": "SnakeHead",
-																	"sid": 499289384001144,
+																	"sid": 130034621327281,
 																	"parameters": {
 																		"scale": "0.2"
 																	}
@@ -1423,7 +1423,7 @@
 																{
 																	"id": "set-scale",
 																	"objectClass": "SnakeBody",
-																	"sid": 913698845515458,
+																	"sid": 990354906815839,
 																	"parameters": {
 																		"scale": "0.2"
 																	}
@@ -1561,19 +1561,19 @@
 																{
 																	"id": "set-eventvar-value",
 																	"objectClass": "System",
-																	"sid": 659038732925887,
+																	"sid": 638934671537268,
 																	"parameters": {
 																		"variable": "pixelX",
-																		"value": "((ViewportLeft(0)+ViewportRight(0))/2 - (GridW*(int(TileSize)+Spacing))/2) + currentX*(int(TileSize)+Spacing) + OffsetX"
+																		"value": "((ViewportLeft(0)+ViewportRight(0))/2 - (GridW*(int(TileSize)+SNAKE_SPACING))/2) + currentX*(int(TileSize)+SNAKE_SPACING) + OffsetX"
 																	}
 																},
 																{
 																	"id": "set-eventvar-value",
 																	"objectClass": "System",
-																	"sid": 259687565079655,
+																	"sid": 930997524838426,
 																	"parameters": {
 																		"variable": "pixelY",
-																		"value": "((ViewportTop(0)+ViewportBottom(0))/2 - (GridH*(int(TileSize)+Spacing))/2) + currentY*(int(TileSize)+Spacing) + OffsetY"
+																		"value": "((ViewportTop(0)+ViewportBottom(0))/2 - (GridH*(int(TileSize)+SNAKE_SPACING))/2) + currentY*(int(TileSize)+SNAKE_SPACING) + OffsetY"
 																	}
 																},
 																{
@@ -1666,74 +1666,14 @@
 																{
 																	"id": "create-object",
 																	"objectClass": "System",
-																	"sid": 945275373331049,
-																	"disabled": true,
-																	"parameters": {
-																		"object-to-create": "SnakeBody_Cross",
-																		"layer": "\"Snakes\"",
-																		"x": "snake_body.X",
-																		"y": "snake_body.Y",
-																		"create-hierarchy": true,
-																		"template-name": "\"cross\""
-																	}
-																},
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "SnakeBody_Cross",
-																	"sid": 571802347908122,
-																	"disabled": true,
-																	"parameters": {
-																		"instance-variable": "ownID",
-																		"value": "ArrowIndex"
-																	}
-																},
-																{
-																	"id": "set-scale",
-																	"objectClass": "SnakeBody_Cross",
-																	"sid": 144383314635162,
-																	"disabled": true,
-																	"parameters": {
-																		"scale": "0.2"
-																	}
-																},
-																{
-																	"id": "set-animation-frame",
-																	"objectClass": "SnakeBody_Cross",
-																	"sid": 884101735412073,
-																	"disabled": true,
-																	"parameters": {
-																		"frame-number": "ArrowColor"
-																	}
-																},
-																{
-																	"id": "add-child",
-																	"objectClass": "snake_body",
-																	"sid": 856981018848183,
-																	"disabled": true,
-																	"parameters": {
-																		"child": "SnakeBody_Cross",
-																		"transform-x": true,
-																		"transform-y": true,
-																		"transform-w": false,
-																		"transform-h": false,
-																		"transform-a": true,
-																		"transform-o": false,
-																		"transform-z-elevation": false,
-																		"transform-visibility": false,
-																		"destroy-with-parent": true
-																	}
-																},
-																{
-																	"id": "create-object",
-																	"objectClass": "System",
-																	"sid": 282891880408459,
+																	"sid": 978270453754749,
 																	"parameters": {
 																		"object-to-create": "SnakeBody",
 																		"layer": "\"Snakes\"",
 																		"x": "snake_body.X",
 																		"y": "snake_body.Y",
 																		"create-hierarchy": true,
-																		"template-name": "\"body\""
+																		"template-name": "\"cross\""
 																	}
 																},
 																{
@@ -1748,7 +1688,7 @@
 																{
 																	"id": "set-scale",
 																	"objectClass": "SnakeBody",
-																	"sid": 235433109118207,
+																	"sid": 435637138058656,
 																	"parameters": {
 																		"scale": "0.2"
 																	}
@@ -2236,7 +2176,7 @@
 																		{
 																			"id": "set-scale",
 																			"objectClass": "SnakeTail",
-																			"sid": 425067737893063,
+																			"sid": 683572530548909,
 																			"parameters": {
 																				"scale": "0.23"
 																			}
@@ -2277,84 +2217,6 @@
 																		}
 																	],
 																	"sid": 139253388804227
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "pick-children",
-																			"objectClass": "snake_body",
-																			"sid": 796529457240529,
-																			"parameters": {
-																				"child": "SnakeBody_Cross",
-																				"which": "own"
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "destroy",
-																			"objectClass": "SnakeBody_Cross",
-																			"sid": 279907007775589
-																		},
-																		{
-																			"id": "create-object",
-																			"objectClass": "System",
-																			"sid": 972863126968629,
-																			"parameters": {
-																				"object-to-create": "SnakeTail_Cross",
-																				"layer": "\"Snakes\"",
-																				"x": "snake_body.X",
-																				"y": "snake_body.Y",
-																				"create-hierarchy": true,
-																				"template-name": "\"cross\""
-																			}
-																		},
-																		{
-																			"id": "set-scale",
-																			"objectClass": "SnakeTail_Cross",
-																			"sid": 441157849045724,
-																			"parameters": {
-																				"scale": "0.23"
-																			}
-																		},
-																		{
-																			"id": "set-instvar-value",
-																			"objectClass": "SnakeTail_Cross",
-																			"sid": 240769772494607,
-																			"parameters": {
-																				"instance-variable": "ownID",
-																				"value": "snake_body.OwnerID"
-																			}
-																		},
-																		{
-																			"id": "set-animation-frame",
-																			"objectClass": "SnakeTail_Cross",
-																			"sid": 360471680394787,
-																			"parameters": {
-																				"frame-number": "snake_body.color"
-																			}
-																		},
-																		{
-																			"id": "add-child",
-																			"objectClass": "snake_body",
-																			"sid": 991710534130978,
-																			"parameters": {
-																				"child": "SnakeTail_Cross",
-																				"transform-x": true,
-																				"transform-y": true,
-																				"transform-w": false,
-																				"transform-h": false,
-																				"transform-a": true,
-																				"transform-o": false,
-																				"transform-z-elevation": false,
-																				"transform-visibility": false,
-																				"destroy-with-parent": true
-																			}
-																		}
-																	],
-																	"sid": 986619588601989,
-																	"disabled": true
 																}
 															]
 														},
@@ -2617,7 +2479,49 @@
 									"sid": 519945108215415
 								}
 							],
-							"sid": 334215439757851
+							"sid": 334215439757851,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 314200647842963,
+											"parameters": {
+												"first-value": "int(CurrentLevel)",
+												"comparison": 1,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 570360540954815,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "SnakeBody",
+													"sid": 653120437710836,
+													"parameters": {
+														"tags": "\"cross\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "SnakeBody",
+													"sid": 829405384370870
+												}
+											],
+											"sid": 892585357302225
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -2636,42 +2540,6 @@
 								}
 							],
 							"sid": 888459389380648
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-created",
-									"objectClass": "SnakeBody_Cross",
-									"sid": 374524734089674
-								}
-							],
-							"actions": [
-								{
-									"id": "move-to-bottom",
-									"objectClass": "SnakeBody_Cross",
-									"sid": 993630682933552
-								}
-							],
-							"sid": 284476354391356
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-created",
-									"objectClass": "SnakeTail_Cross",
-									"sid": 694018091216951
-								}
-							],
-							"actions": [
-								{
-									"id": "move-to-bottom",
-									"objectClass": "SnakeTail_Cross",
-									"sid": 820095023759820
-								}
-							],
-							"sid": 166196665312989
 						}
 					],
 					"sid": 161037751883584
@@ -6928,7 +6796,15 @@
 									"sid": 550743204905513
 								}
 							],
-							"sid": 204895888905061
+							"sid": 204895888905061,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 892343528823131
+								}
+							]
 						}
 					],
 					"sid": 675651775942849
