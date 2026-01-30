@@ -4,15 +4,7 @@
 	"sid": 687157920669414,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "ownID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 570283286134526
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -28,7 +20,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 213433,
+						"imageSpriteId": 5064140,
 						"collisionPoly": {
 							"points": [
 								0,

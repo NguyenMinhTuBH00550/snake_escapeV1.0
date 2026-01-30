@@ -114,6 +114,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Rotate",
 			"name": "Rotate",
 			"author": "Scirra",
@@ -166,6 +173,13 @@
 			"version": "1.822"
 		},
 		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "effect",
 			"id": "outline",
 			"name": "Outline",
@@ -206,7 +220,8 @@
 			"SnakeBody",
 			"SnakeTail",
 			"SnakeHead",
-			"SnakeEyes"
+			"SnakeEyes",
+			"Snake_Solid"
 		],
 		"subfolders": [
 			{
@@ -370,7 +385,7 @@
 					"Grid_Dot",
 					"snake_body",
 					"snake_head",
-					"checkpoint"
+					"Snake_Checkpoint"
 				],
 				"subfolders": [],
 				"name": "Spite"
@@ -379,7 +394,8 @@
 				"items": [
 					"DIcSaveGame",
 					"Dic_Level",
-					"Dic_BodyPrevPos"
+					"Dic_BodyPrevPos",
+					"Dic_SnakePath"
 				],
 				"subfolders": [],
 				"name": "Dic"
@@ -429,7 +445,7 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Family1"
+			"F_Snake"
 		],
 		"subfolders": []
 	},

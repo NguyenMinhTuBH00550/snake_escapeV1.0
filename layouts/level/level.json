@@ -599,6 +599,14 @@
 			"sid": 191440886271380,
 			"tags": "",
 			"instanceVariables": {}
+		},
+		{
+			"type": "Dic_SnakePath",
+			"properties": {},
+			"uid": 365,
+			"sid": 674911698717335,
+			"tags": "",
+			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],

@@ -107,12 +107,12 @@
 						"expanded": true
 					},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 542,
-						"y": 950.6920767486895,
+						"y": 978.1920767486895,
 						"width": 1085.6983152258424,
-						"height": 1904.317742468556,
+						"height": 1959.317742468556,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

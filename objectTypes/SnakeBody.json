@@ -4,22 +4,7 @@
 	"sid": 572582323827930,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "ownID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 746781788971709
-		},
-		{
-			"name": "TargetAngle",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 957509417596862
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

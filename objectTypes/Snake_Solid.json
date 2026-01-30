@@ -1,33 +1,17 @@
 {
-	"name": "checkpoint",
+	"name": "Snake_Solid",
 	"plugin-id": "Sprite",
-	"sid": 329159593375038,
+	"sid": 473024631860298,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
+	"instanceVariables": [],
+	"behaviorTypes": [
 		{
-			"name": "GridX",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 759092073740633
-		},
-		{
-			"name": "GridY",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 422858919920228
-		},
-		{
-			"name": "OwnerID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 718979594199409
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 625775801773198
 		}
 	],
-	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -42,13 +26,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 278028,
+						"imageSpriteId": 9145213,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 919114357754162,
+				"sid": 908290427796365,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

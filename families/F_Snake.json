@@ -1,0 +1,69 @@
+{
+	"name": "F_Snake",
+	"plugin-id": "Sprite",
+	"sid": 338130025265548,
+	"instanceVariables": [
+		{
+			"name": "GridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 188147922409337
+		},
+		{
+			"name": "GridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 951591035362247
+		},
+		{
+			"name": "wayPoint",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 779395471692752
+		},
+		{
+			"name": "startAngle",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 837283516170953
+		},
+		{
+			"name": "StartX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 403406572403565
+		},
+		{
+			"name": "StartY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 684090347502200
+		},
+		{
+			"name": "ownID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 820286859135275
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 203601335442978
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"SnakeBody",
+		"SnakeHead",
+		"SnakeTail"
+	]
+}
