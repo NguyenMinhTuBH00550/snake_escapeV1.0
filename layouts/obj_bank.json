@@ -6212,6 +6212,10 @@
 												"state": true
 											},
 											{
+												"iv": "wayPoint",
+												"state": true
+											},
+											{
 												"iv": "startAngle",
 												"state": true
 											},
@@ -6225,10 +6229,6 @@
 											},
 											{
 												"iv": "ownID",
-												"state": true
-											},
-											{
-												"iv": "wayPoint",
 												"state": true
 											}
 										]
@@ -6568,7 +6568,8 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"isBlocked": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6794,6 +6795,10 @@
 												"state": true
 											},
 											{
+												"iv": "wayPoint",
+												"state": true
+											},
+											{
 												"iv": "startAngle",
 												"state": true
 											},
@@ -6807,10 +6812,6 @@
 											},
 											{
 												"iv": "ownID",
-												"state": true
-											},
-											{
-												"iv": "wayPoint",
 												"state": true
 											}
 										]
@@ -7419,6 +7420,10 @@
 												"state": true
 											},
 											{
+												"iv": "wayPoint",
+												"state": true
+											},
+											{
 												"iv": "startAngle",
 												"state": true
 											},
@@ -7432,10 +7437,6 @@
 											},
 											{
 												"iv": "ownID",
-												"state": true
-											},
-											{
-												"iv": "wayPoint",
 												"state": true
 											}
 										]

@@ -596,28 +596,10 @@
 								}
 							],
 							"sid": 178905446947876
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [],
-							"sid": 350070503149719
 						}
 					]
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 928078007762228
-				}
-			],
-			"actions": [],
-			"sid": 331272569351440
 		},
 		{
 			"eventType": "group",
@@ -6594,11 +6576,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-tap-object",
+									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 860566509120650,
+									"sid": 271645005843439,
 									"parameters": {
-										"object": "snake_head"
+										"object": "snake_head",
+										"type": "start"
 									}
 								}
 							],
@@ -6618,11 +6601,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-tap-object",
+									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 637098627150189,
+									"sid": 733895455307171,
 									"parameters": {
-										"object": "snake_body"
+										"object": "snake_body",
+										"type": "start"
 									}
 								}
 							],
@@ -6641,11 +6625,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-tap-object",
+									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 412359635660197,
+									"sid": 466248053087526,
 									"parameters": {
-										"object": "SnakeBody"
+										"object": "SnakeBody",
+										"type": "start"
 									}
 								}
 							],
@@ -6664,11 +6649,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-tap-object",
+									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 375107257938789,
+									"sid": 826738992025946,
 									"parameters": {
-										"object": "SnakeHead"
+										"object": "SnakeHead",
+										"type": "start"
 									}
 								}
 							],
@@ -6687,11 +6673,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-tap-object",
+									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 459634134813699,
+									"sid": 368375188084278,
 									"parameters": {
-										"object": "SnakeTail"
+										"object": "SnakeTail",
+										"type": "start"
 									}
 								}
 							],
@@ -6824,19 +6811,152 @@
 																{
 																	"id": "stop-loop",
 																	"objectClass": "System",
-																	"sid": 534623726928397
+																	"sid": 679444376231969,
+																	"disabled": true
 																},
 																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 337095763995281,
+																	"id": "set-instvar-value",
+																	"objectClass": "SnakeHead",
+																	"sid": 318533170401535,
+																	"disabled": true,
 																	"parameters": {
-																		"variable": "canRun",
-																		"value": "0"
+																		"instance-variable": "isBlocked",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "stop",
+																	"objectClass": "SnakeHead",
+																	"sid": 965995814406841,
+																	"disabled": true,
+																	"behaviorType": "MoveTo"
+																},
+																{
+																	"id": "move-to-position",
+																	"objectClass": "SnakeHead",
+																	"sid": 336894518424819,
+																	"disabled": true,
+																	"behaviorType": "MoveTo",
+																	"parameters": {
+																		"x": "Snake_Checkpoint.X",
+																		"y": "Snake_Checkpoint.Y",
+																		"mode": "add-waypoint"
 																	}
 																}
 															],
-															"sid": 207683777682775
+															"sid": 207683777682775,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-all",
+																			"objectClass": "System",
+																			"sid": 893994149146107,
+																			"parameters": {
+																				"object": "SnakeBody"
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 837964365984686,
+																	"disabled": true,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "pick-by-evaluate",
+																					"objectClass": "System",
+																					"sid": 320301307278142,
+																					"parameters": {
+																						"object": "SnakeBody",
+																						"expression": "SnakeBody.ownID = activeOwnID"
+																					}
+																				},
+																				{
+																					"id": "for-each",
+																					"objectClass": "System",
+																					"sid": 699762704706372,
+																					"parameters": {
+																						"object": "SnakeBody"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "move-to-position",
+																					"objectClass": "SnakeBody",
+																					"sid": 363155609429457,
+																					"behaviorType": "MoveTo",
+																					"parameters": {
+																						"x": "Snake_Checkpoint.X",
+																						"y": "Snake_Checkpoint.Y",
+																						"mode": "add-waypoint"
+																					}
+																				}
+																			],
+																			"sid": 720944028255698,
+																			"disabled": true
+																		}
+																	]
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-all",
+																			"objectClass": "System",
+																			"sid": 621541786472950,
+																			"parameters": {
+																				"object": "SnakeTail"
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 273580934016321,
+																	"disabled": true,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "pick-by-evaluate",
+																					"objectClass": "System",
+																					"sid": 348322701926063,
+																					"parameters": {
+																						"object": "SnakeTail",
+																						"expression": "SnakeTail.ownID = activeOwnID"
+																					}
+																				},
+																				{
+																					"id": "for-each",
+																					"objectClass": "System",
+																					"sid": 709460879145113,
+																					"parameters": {
+																						"object": "SnakeTail"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "move-to-position",
+																					"objectClass": "SnakeTail",
+																					"sid": 149370138444375,
+																					"behaviorType": "MoveTo",
+																					"parameters": {
+																						"x": "Snake_Checkpoint.X",
+																						"y": "Snake_Checkpoint.Y",
+																						"mode": "add-waypoint"
+																					}
+																				}
+																			],
+																			"sid": 232559215182945,
+																			"disabled": true
+																		}
+																	]
+																}
+															]
 														}
 													]
 												},
@@ -7213,6 +7333,263 @@
 									]
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "SnakeHead",
+									"sid": 173290697802561,
+									"behaviorType": "MoveTo"
+								}
+							],
+							"actions": [],
+							"sid": 876252095347628,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "SnakeHead",
+											"sid": 845526654907718,
+											"parameters": {
+												"angle": "SnakeHead.startAngle"
+											}
+										}
+									],
+									"sid": 110543474500842
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-evaluate",
+											"objectClass": "System",
+											"sid": 337967714342337,
+											"parameters": {
+												"object": "SnakeBody",
+												"expression": "SnakeBody.ownID <> SnakeHead.ownID"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 615020617704964,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-collision-with-another-object",
+													"objectClass": "SnakeHead",
+													"sid": 716017803095135,
+													"parameters": {
+														"object": "SnakeBody"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 436636911439513,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "stop",
+															"objectClass": "SnakeHead",
+															"sid": 974924936021146,
+															"behaviorType": "MoveTo"
+														},
+														{
+															"id": "move-to-position",
+															"objectClass": "SnakeHead",
+															"sid": 844009541601139,
+															"behaviorType": "MoveTo",
+															"parameters": {
+																"x": "SnakeHead.StartX",
+																"y": "SnakeHead.StartY",
+																"mode": "add-waypoint"
+															}
+														}
+													],
+													"sid": 780583403646687,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-all",
+																	"objectClass": "System",
+																	"sid": 521330073162061,
+																	"parameters": {
+																		"object": "SnakeBody"
+																	}
+																},
+																{
+																	"id": "pick-by-evaluate",
+																	"objectClass": "System",
+																	"sid": 622341054768279,
+																	"parameters": {
+																		"object": "SnakeBody",
+																		"expression": "SnakeBody.ownID = SnakeHead.ownID"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop",
+																	"objectClass": "SnakeBody",
+																	"sid": 814247829005023,
+																	"behaviorType": "MoveTo"
+																}
+															],
+															"sid": 468713940240552,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "for-each",
+																			"objectClass": "System",
+																			"sid": 932640782579947,
+																			"parameters": {
+																				"object": "SnakeBody"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "move-to-position",
+																			"objectClass": "SnakeBody",
+																			"sid": 690997634410163,
+																			"behaviorType": "MoveTo",
+																			"parameters": {
+																				"x": "SnakeBody.StartX",
+																				"y": "SnakeBody.StartY",
+																				"mode": "add-waypoint"
+																			}
+																		}
+																	],
+																	"sid": 537078697967155
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-all",
+																	"objectClass": "System",
+																	"sid": 747809750958831,
+																	"parameters": {
+																		"object": "SnakeTail"
+																	}
+																},
+																{
+																	"id": "pick-by-evaluate",
+																	"objectClass": "System",
+																	"sid": 564448338170187,
+																	"parameters": {
+																		"object": "SnakeTail",
+																		"expression": "SnakeTail.ownID = SnakeHead.ownID"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop",
+																	"objectClass": "SnakeTail",
+																	"sid": 566058316293737,
+																	"behaviorType": "MoveTo"
+																}
+															],
+															"sid": 910630756604546,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "for-each",
+																			"objectClass": "System",
+																			"sid": 517636968891593,
+																			"parameters": {
+																				"object": "SnakeTail"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "move-to-position",
+																			"objectClass": "SnakeTail",
+																			"sid": 614546039591253,
+																			"behaviorType": "MoveTo",
+																			"parameters": {
+																				"x": "SnakeTail.StartX",
+																				"y": "SnakeTail.StartY",
+																				"mode": "add-waypoint"
+																			}
+																		}
+																	],
+																	"sid": 504319641994750
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "SnakeBody",
+									"sid": 973264588733596,
+									"behaviorType": "MoveTo"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "SnakeBody",
+									"sid": 382865050272631,
+									"parameters": {
+										"angle": "snake_body.Angle"
+									}
+								}
+							],
+							"sid": 738653891854453,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "SnakeTail",
+									"sid": 970952614823781,
+									"behaviorType": "MoveTo"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "SnakeTail",
+									"sid": 805250120542963,
+									"parameters": {
+										"angle": "SnakeTail.startAngle"
+									}
+								}
+							],
+							"sid": 732873809258188,
+							"disabled": true
 						}
 					],
 					"sid": 675651775942849

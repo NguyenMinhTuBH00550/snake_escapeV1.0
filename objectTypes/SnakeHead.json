@@ -4,7 +4,15 @@
 	"sid": 743687575629709,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "isBlocked",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 783652804677399
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
