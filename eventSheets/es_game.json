@@ -6748,6 +6748,49 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 419423640106436,
+											"parameters": {
+												"object": "F_Snake"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "F_Snake",
+											"sid": 708383665780963,
+											"parameters": {
+												"instance-variable": "startAngle",
+												"value": "Self.Angle"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "F_Snake",
+											"sid": 785477741587167,
+											"parameters": {
+												"instance-variable": "StartX",
+												"value": "Self.X"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "F_Snake",
+											"sid": 997518474606015,
+											"parameters": {
+												"instance-variable": "StartY",
+												"value": "Self.Y"
+											}
+										}
+									],
+									"sid": 208639127565739
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
 											"id": "pick-by-evaluate",
 											"objectClass": "System",
 											"sid": 561003337274698,
@@ -6809,33 +6852,27 @@
 															],
 															"actions": [
 																{
-																	"id": "stop-loop",
-																	"objectClass": "System",
-																	"sid": 679444376231969,
-																	"disabled": true
-																},
-																{
 																	"id": "set-instvar-value",
 																	"objectClass": "SnakeHead",
-																	"sid": 318533170401535,
-																	"disabled": true,
+																	"sid": 981029329568144,
 																	"parameters": {
 																		"instance-variable": "isBlocked",
 																		"value": "1"
 																	}
 																},
 																{
-																	"id": "stop",
+																	"id": "set-instvar-value",
 																	"objectClass": "SnakeHead",
-																	"sid": 965995814406841,
-																	"disabled": true,
-																	"behaviorType": "MoveTo"
+																	"sid": 920488796610670,
+																	"parameters": {
+																		"instance-variable": "BlockedID",
+																		"value": "Snake_Checkpoint.IID"
+																	}
 																},
 																{
 																	"id": "move-to-position",
 																	"objectClass": "SnakeHead",
-																	"sid": 336894518424819,
-																	"disabled": true,
+																	"sid": 213907080935759,
 																	"behaviorType": "MoveTo",
 																	"parameters": {
 																		"x": "Snake_Checkpoint.X",
@@ -7338,6 +7375,266 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-arrived",
+									"objectClass": "SnakeHead",
+									"sid": 644627727628277,
+									"behaviorType": "MoveTo"
+								}
+							],
+							"actions": [],
+							"sid": 580512264545708,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SnakeHead",
+											"sid": 431865898666086,
+											"parameters": {
+												"instance-variable": "isBlocked",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "SnakeHead",
+											"sid": 332264921285943,
+											"parameters": {
+												"angle": "SnakeHead.startAngle"
+											}
+										}
+									],
+									"sid": 402867139313061,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "SnakeHead",
+													"sid": 324842077599882,
+													"behaviorType": "MoveTo"
+												},
+												{
+													"id": "move-to-position",
+													"objectClass": "SnakeHead",
+													"sid": 123016919166692,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"x": "SnakeHead.StartX",
+														"y": "SnakeHead.StartY",
+														"mode": "add-waypoint"
+													}
+												}
+											],
+											"sid": 513203357324709,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 528154281570082,
+															"parameters": {
+																"object": "SnakeBody"
+															}
+														},
+														{
+															"id": "pick-by-evaluate",
+															"objectClass": "System",
+															"sid": 903475632232204,
+															"parameters": {
+																"object": "SnakeBody",
+																"expression": "SnakeBody.ownID = SnakeHead.ownID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "stop",
+															"objectClass": "SnakeBody",
+															"sid": 952347947999060,
+															"behaviorType": "MoveTo"
+														}
+													],
+													"sid": 712865303424742,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "System",
+																	"sid": 132915157700388,
+																	"parameters": {
+																		"object": "SnakeBody"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-to-position",
+																	"objectClass": "SnakeBody",
+																	"sid": 694717797359251,
+																	"behaviorType": "MoveTo",
+																	"parameters": {
+																		"x": "SnakeBody.StartX",
+																		"y": "SnakeBody.StartY",
+																		"mode": "add-waypoint"
+																	}
+																}
+															],
+															"sid": 670096845511453
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 310805118127870,
+															"parameters": {
+																"object": "SnakeTail"
+															}
+														},
+														{
+															"id": "pick-by-evaluate",
+															"objectClass": "System",
+															"sid": 631626976375368,
+															"parameters": {
+																"object": "SnakeTail",
+																"expression": "SnakeTail.ownID = SnakeHead.ownID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "stop",
+															"objectClass": "SnakeTail",
+															"sid": 796344597026409,
+															"behaviorType": "MoveTo"
+														}
+													],
+													"sid": 407385780737473,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "System",
+																	"sid": 749859500584930,
+																	"parameters": {
+																		"object": "SnakeTail"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-to-position",
+																	"objectClass": "SnakeTail",
+																	"sid": 389113543788393,
+																	"behaviorType": "MoveTo",
+																	"parameters": {
+																		"x": "SnakeTail.StartX",
+																		"y": "SnakeTail.StartY",
+																		"mode": "add-waypoint"
+																	}
+																}
+															],
+															"sid": 756217355868783
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-arrived",
+									"objectClass": "SnakeHead",
+									"sid": 668233804621501,
+									"behaviorType": "MoveTo"
+								}
+							],
+							"actions": [],
+							"sid": 312644765359816,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SnakeHead",
+											"sid": 225719004444281,
+											"parameters": {
+												"instance-variable": "isBlocked",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 114959277591378,
+											"parameters": {
+												"first-value": "SnakeHead.X",
+												"comparison": 0,
+												"second-value": "SnakeHead.StartX"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 286573381688224,
+											"parameters": {
+												"first-value": "SnakeHead.Y",
+												"comparison": 0,
+												"second-value": "SnakeHead.StartY"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SnakeHead",
+											"sid": 681224939990298,
+											"parameters": {
+												"instance-variable": "isBlocked",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SnakeHead",
+											"sid": 365670085513179,
+											"parameters": {
+												"instance-variable": "BlockedID",
+												"value": "-1"
+											}
+										}
+									],
+									"sid": 363033618934301
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "is-moving",
 									"objectClass": "SnakeHead",
 									"sid": 173290697802561,
@@ -7346,6 +7643,7 @@
 							],
 							"actions": [],
 							"sid": 876252095347628,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -7360,7 +7658,8 @@
 											}
 										}
 									],
-									"sid": 110543474500842
+									"sid": 110543474500842,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -7377,6 +7676,7 @@
 									],
 									"actions": [],
 									"sid": 615020617704964,
+									"disabled": true,
 									"children": [
 										{
 											"eventType": "block",
@@ -7392,6 +7692,7 @@
 											],
 											"actions": [],
 											"sid": 436636911439513,
+											"disabled": true,
 											"children": [
 												{
 													"eventType": "block",
@@ -7416,6 +7717,7 @@
 														}
 													],
 													"sid": 780583403646687,
+													"disabled": true,
 													"children": [
 														{
 															"eventType": "block",
@@ -7447,6 +7749,7 @@
 																}
 															],
 															"sid": 468713940240552,
+															"disabled": true,
 															"children": [
 																{
 																	"eventType": "block",
@@ -7473,7 +7776,8 @@
 																			}
 																		}
 																	],
-																	"sid": 537078697967155
+																	"sid": 537078697967155,
+																	"disabled": true
 																}
 															]
 														},
@@ -7507,6 +7811,7 @@
 																}
 															],
 															"sid": 910630756604546,
+															"disabled": true,
 															"children": [
 																{
 																	"eventType": "block",
@@ -7533,7 +7838,8 @@
 																			}
 																		}
 																	],
-																	"sid": 504319641994750
+																	"sid": 504319641994750,
+																	"disabled": true
 																}
 															]
 														}
@@ -7555,18 +7861,36 @@
 									"behaviorType": "MoveTo"
 								}
 							],
-							"actions": [
-								{
-									"id": "set-angle",
-									"objectClass": "SnakeBody",
-									"sid": 382865050272631,
-									"parameters": {
-										"angle": "snake_body.Angle"
-									}
-								}
-							],
+							"actions": [],
 							"sid": 738653891854453,
-							"disabled": true
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SnakeHead",
+											"sid": 438251098799413,
+											"parameters": {
+												"instance-variable": "isBlocked",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "SnakeBody",
+											"sid": 527406231205443,
+											"parameters": {
+												"angle": "SnakeBody.startAngle"
+											}
+										}
+									],
+									"sid": 656728267345172
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -7578,18 +7902,58 @@
 									"behaviorType": "MoveTo"
 								}
 							],
+							"actions": [],
+							"sid": 732873809258188,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SnakeHead",
+											"sid": 865531951421950,
+											"parameters": {
+												"instance-variable": "isBlocked",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "SnakeTail",
+											"sid": 156585442140575,
+											"parameters": {
+												"angle": "SnakeTail.startAngle"
+											}
+										}
+									],
+									"sid": 735295128368660
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "SnakeHead",
+									"sid": 279694828084068,
+									"behaviorType": "MoveTo"
+								}
+							],
 							"actions": [
 								{
 									"id": "set-angle",
-									"objectClass": "SnakeTail",
-									"sid": 805250120542963,
+									"objectClass": "SnakeHead",
+									"sid": 283963644205747,
 									"parameters": {
-										"angle": "SnakeTail.startAngle"
+										"angle": "SnakeHead.startAngle"
 									}
 								}
 							],
-							"sid": 732873809258188,
-							"disabled": true
+							"sid": 620568052870773
 						}
 					],
 					"sid": 675651775942849

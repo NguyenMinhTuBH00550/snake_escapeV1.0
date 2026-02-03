@@ -6569,7 +6569,8 @@
 						"StartX": 0,
 						"StartY": 0,
 						"ownID": 0,
-						"isBlocked": 0
+						"isBlocked": 0,
+						"BlockedID": 0
 					},
 					"behaviors": {
 						"MoveTo": {

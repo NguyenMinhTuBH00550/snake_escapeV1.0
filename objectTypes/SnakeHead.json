@@ -11,6 +11,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 783652804677399
+		},
+		{
+			"name": "BlockedID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 802740808214875
 		}
 	],
 	"behaviorTypes": [],
