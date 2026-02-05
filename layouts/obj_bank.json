@@ -25,7 +25,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -36,6 +43,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -110,7 +122,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -121,6 +140,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -195,7 +219,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -206,6 +237,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -293,6 +329,11 @@
 								"stop-on-solids": true,
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -365,7 +406,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -376,6 +424,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -450,7 +503,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -461,6 +521,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -5893,7 +5958,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -5904,6 +5976,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -5978,7 +6055,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -5989,6 +6073,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -6063,7 +6152,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6074,6 +6170,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -6148,7 +6249,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6159,6 +6267,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -6230,6 +6343,34 @@
 											{
 												"iv": "ownID",
 												"state": true
+											},
+											{
+												"iv": "BodyPathIndex",
+												"state": true
+											},
+											{
+												"iv": "BodyBackIndex",
+												"state": true
+											},
+											{
+												"iv": "BodyBackMax",
+												"state": true
+											},
+											{
+												"iv": "BodyOrder",
+												"state": true
+											},
+											{
+												"iv": "BackTargetX",
+												"state": true
+											},
+											{
+												"iv": "BackTargetY",
+												"state": true
+											},
+											{
+												"iv": "NeedBack",
+												"state": true
 											}
 										]
 									}
@@ -6265,6 +6406,15 @@
 												"stop-on-solids",
 												true
 											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Tween",
+										"state": [
 											[
 												"enabled",
 												true
@@ -6483,7 +6633,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6494,6 +6651,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -6570,7 +6732,7 @@
 						"StartY": 0,
 						"ownID": 0,
 						"isBlocked": 0,
-						"BlockedID": 0
+						"OrderIndexTemp": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6581,6 +6743,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -6745,6 +6912,11 @@
 								"stop-on-solids": true,
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"template": {
@@ -6849,6 +7021,15 @@
 												"stop-on-solids",
 												true
 											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Tween",
+										"state": [
 											[
 												"enabled",
 												true
@@ -7102,7 +7283,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7113,6 +7301,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -7187,7 +7380,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7198,6 +7398,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -7272,7 +7477,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7283,6 +7495,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -7357,7 +7574,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"BodyPathIndex": 0,
+						"BodyBackIndex": 0,
+						"BodyBackMax": 0,
+						"BodyOrder": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"NeedBack": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7368,6 +7592,11 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -7439,6 +7668,34 @@
 											{
 												"iv": "ownID",
 												"state": true
+											},
+											{
+												"iv": "BodyPathIndex",
+												"state": true
+											},
+											{
+												"iv": "BodyBackIndex",
+												"state": true
+											},
+											{
+												"iv": "BodyBackMax",
+												"state": true
+											},
+											{
+												"iv": "BodyOrder",
+												"state": true
+											},
+											{
+												"iv": "BackTargetX",
+												"state": true
+											},
+											{
+												"iv": "BackTargetY",
+												"state": true
+											},
+											{
+												"iv": "NeedBack",
+												"state": true
 											}
 										]
 									}
@@ -7474,6 +7731,15 @@
 												"stop-on-solids",
 												true
 											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Tween",
+										"state": [
 											[
 												"enabled",
 												true

@@ -394,8 +394,8 @@
 				"items": [
 					"DIcSaveGame",
 					"Dic_Level",
-					"Dic_BodyPrevPos",
-					"Dic_SnakePath"
+					"DicSnakeBodyPos",
+					"DicSnakePath"
 				],
 				"subfolders": [],
 				"name": "Dic"
@@ -417,7 +417,6 @@
 			{
 				"items": [
 					"Dia_winSceen",
-					"exit_zone",
 					"Dia_noti_failed",
 					"Dia_noti_restart",
 					"Dia_pause",
