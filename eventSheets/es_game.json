@@ -3767,6 +3767,46 @@
 													"sid": 329050418147351,
 													"children": [
 														{
+															"eventType": "variable",
+															"name": "FakeTargetX",
+															"type": "number",
+															"initialValue": "0",
+															"comment": "",
+															"isStatic": false,
+															"isConstant": false,
+															"sid": 985761285705776
+														},
+														{
+															"eventType": "variable",
+															"name": "FakeTargetY",
+															"type": "number",
+															"initialValue": "0",
+															"comment": "",
+															"isStatic": false,
+															"isConstant": false,
+															"sid": 611801516575381
+														},
+														{
+															"eventType": "variable",
+															"name": "moveAngle",
+															"type": "number",
+															"initialValue": "0",
+															"comment": "",
+															"isStatic": false,
+															"isConstant": false,
+															"sid": 675249351326455
+														},
+														{
+															"eventType": "variable",
+															"name": "backOffset",
+															"type": "number",
+															"initialValue": "0",
+															"comment": "",
+															"isStatic": false,
+															"isConstant": false,
+															"sid": 599683863040971
+														},
+														{
 															"eventType": "block",
 															"conditions": [
 																{
@@ -3782,66 +3822,54 @@
 															],
 															"actions": [
 																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 500608604376279,
+																	"parameters": {
+																		"variable": "moveAngle",
+																		"value": "angle(SnakeHead.X,SnakeHead.Y,Snake_Checkpoint.X,Snake_Checkpoint.Y)"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 399030828912676,
+																	"parameters": {
+																		"variable": "backOffset",
+																		"value": "SnakeBody.Width"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 990896259197621,
+																	"parameters": {
+																		"variable": "FakeTargetX",
+																		"value": "Snake_Checkpoint.X - cos(moveAngle)*backOffset"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 533717491585292,
+																	"parameters": {
+																		"variable": "FakeTargetY",
+																		"value": "Snake_Checkpoint.Y - sin(moveAngle)*backOffset"
+																	}
+																},
+																{
 																	"id": "move-to-position",
 																	"objectClass": "SnakeHead",
-																	"sid": 276862265600782,
+																	"sid": 657608160216742,
 																	"behaviorType": "MoveTo",
 																	"parameters": {
-																		"x": "Snake_Checkpoint.X",
-																		"y": "Snake_Checkpoint.Y",
-																		"mode": "direct"
+																		"x": "FakeTargetX",
+																		"y": "FakeTargetY",
+																		"mode": "add-waypoint"
 																	}
 																}
 															],
-															"sid": 207683777682775,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "every-tick",
-																			"objectClass": "System",
-																			"sid": 236032438567914
-																		}
-																	],
-																	"actions": [],
-																	"sid": 403182451646153,
-																	"children": [
-																		{
-																			"eventType": "block",
-																			"conditions": [
-																				{
-																					"id": "is-moving",
-																					"objectClass": "SnakeHead",
-																					"sid": 513108325286817,
-																					"behaviorType": "MoveTo"
-																				}
-																			],
-																			"actions": [
-																				{
-																					"id": "set-instvar-value",
-																					"objectClass": "SnakeHead",
-																					"sid": 927692043605187,
-																					"parameters": {
-																						"instance-variable": "LogicX",
-																						"value": "SnakeHead.X"
-																					}
-																				},
-																				{
-																					"id": "set-instvar-value",
-																					"objectClass": "SnakeHead",
-																					"sid": 422595131764009,
-																					"parameters": {
-																						"instance-variable": "LogicY",
-																						"value": "SnakeHead.Y"
-																					}
-																				}
-																			],
-																			"sid": 838528230367714
-																		}
-																	]
-																}
-															]
+															"sid": 207683777682775
 														}
 													]
 												},

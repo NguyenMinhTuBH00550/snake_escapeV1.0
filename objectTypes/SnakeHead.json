@@ -18,20 +18,6 @@
 			"desc": "",
 			"show": true,
 			"sid": 802740808214875
-		},
-		{
-			"name": "LogicX",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 460012956281259
-		},
-		{
-			"name": "LogicY",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 187223170773285
 		}
 	],
 	"behaviorTypes": [],

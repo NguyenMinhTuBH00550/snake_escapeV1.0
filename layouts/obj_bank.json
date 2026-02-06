@@ -6739,9 +6739,7 @@
 						"StartY": 0,
 						"ownID": 0,
 						"isBlocked": 0,
-						"OrderIndexTemp": 0,
-						"LogicX": 0,
-						"LogicY": 0
+						"OrderIndexTemp": 0
 					},
 					"behaviors": {
 						"MoveTo": {
