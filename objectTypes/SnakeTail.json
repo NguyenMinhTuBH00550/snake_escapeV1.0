@@ -4,7 +4,57 @@
 	"sid": 687157920669414,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "TailOrder",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 866223144700289
+		},
+		{
+			"name": "TailPathIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 487773001315627
+		},
+		{
+			"name": "TailBackIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 962091505133171
+		},
+		{
+			"name": "TailBackMax",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 931216452903677
+		},
+		{
+			"name": "BackTargetX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 864992193876066
+		},
+		{
+			"name": "BackTargetY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 763182095383836
+		},
+		{
+			"name": "Needback",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 228752729067595
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

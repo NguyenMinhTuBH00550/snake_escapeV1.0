@@ -394,8 +394,9 @@
 				"items": [
 					"DIcSaveGame",
 					"Dic_Level",
-					"DicSnakeBodyPos",
-					"DicSnakePath"
+					"DicSnakeBody",
+					"DicSnakeHead",
+					"DicSnakeTail"
 				],
 				"subfolders": [],
 				"name": "Dic"

@@ -463,7 +463,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2041,
+						"x": 2079,
 						"y": 147,
 						"width": 939.9999999999999,
 						"height": 453.00000000000006,
@@ -634,7 +634,7 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "DicSnakeBodyPos",
+			"type": "DicSnakeBody",
 			"properties": {},
 			"uid": 130,
 			"sid": 191440886271380,
@@ -642,10 +642,18 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "DicSnakePath",
+			"type": "DicSnakeHead",
 			"properties": {},
 			"uid": 365,
 			"sid": 674911698717335,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "DicSnakeTail",
+			"properties": {},
+			"uid": 389,
+			"sid": 961158823680204,
 			"tags": "",
 			"instanceVariables": {}
 		}

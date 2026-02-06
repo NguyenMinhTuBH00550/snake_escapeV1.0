@@ -316,7 +316,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"TailOrder": 0,
+						"TailPathIndex": 0,
+						"TailBackIndex": 0,
+						"TailBackMax": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"Needback": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6732,7 +6739,9 @@
 						"StartY": 0,
 						"ownID": 0,
 						"isBlocked": 0,
-						"OrderIndexTemp": 0
+						"OrderIndexTemp": 0,
+						"LogicX": 0,
+						"LogicY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6899,7 +6908,14 @@
 						"startAngle": 0,
 						"StartX": 0,
 						"StartY": 0,
-						"ownID": 0
+						"ownID": 0,
+						"TailOrder": 0,
+						"TailPathIndex": 0,
+						"TailBackIndex": 0,
+						"TailBackMax": 0,
+						"BackTargetX": 0,
+						"BackTargetY": 0,
+						"Needback": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6985,6 +7001,34 @@
 											},
 											{
 												"iv": "ownID",
+												"state": true
+											},
+											{
+												"iv": "TailOrder",
+												"state": true
+											},
+											{
+												"iv": "TailPathIndex",
+												"state": true
+											},
+											{
+												"iv": "TailBackIndex",
+												"state": true
+											},
+											{
+												"iv": "TailBackMax",
+												"state": true
+											},
+											{
+												"iv": "BackTargetX",
+												"state": true
+											},
+											{
+												"iv": "BackTargetY",
+												"state": true
+											},
+											{
+												"iv": "Needback",
 												"state": true
 											}
 										]
