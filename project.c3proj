@@ -393,10 +393,7 @@
 			{
 				"items": [
 					"DIcSaveGame",
-					"Dic_Level",
-					"DicSnakeBody",
-					"DicSnakeHead",
-					"DicSnakeTail"
+					"Dic_Level"
 				],
 				"subfolders": [],
 				"name": "Dic"

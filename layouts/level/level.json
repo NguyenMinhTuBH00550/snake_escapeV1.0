@@ -632,30 +632,6 @@
 			"sid": 962781129050218,
 			"tags": "",
 			"instanceVariables": {}
-		},
-		{
-			"type": "DicSnakeBody",
-			"properties": {},
-			"uid": 130,
-			"sid": 191440886271380,
-			"tags": "",
-			"instanceVariables": {}
-		},
-		{
-			"type": "DicSnakeHead",
-			"properties": {},
-			"uid": 365,
-			"sid": 674911698717335,
-			"tags": "",
-			"instanceVariables": {}
-		},
-		{
-			"type": "DicSnakeTail",
-			"properties": {},
-			"uid": 389,
-			"sid": 961158823680204,
-			"tags": "",
-			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],

@@ -18,6 +18,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 802740808214875
+		},
+		{
+			"name": "HeadPathIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 747874261477324
+		},
+		{
+			"name": "HeadBackMax",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 747279624020454
+		},
+		{
+			"name": "HeadBackIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 646578769416043
 		}
 	],
 	"behaviorTypes": [],

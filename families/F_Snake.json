@@ -51,6 +51,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 820286859135275
+		},
+		{
+			"name": "SnakeWay",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 972347549782079
 		}
 	],
 	"behaviorTypes": [

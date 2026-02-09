@@ -179,36 +179,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "SnakePathIndex",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 696295717154774
-		},
-		{
-			"eventType": "variable",
-			"name": "SnakeBackIndex",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 719410096239262
-		},
-		{
-			"eventType": "variable",
-			"name": "SnakeBackMax",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 790578835532727
-		},
-		{
-			"eventType": "variable",
 			"name": "SnakeIsBusy",
 			"type": "number",
 			"initialValue": "0",
@@ -3669,16 +3639,6 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "F_Snake",
-											"sid": 708383665780963,
-											"disabled": true,
-											"parameters": {
-												"instance-variable": "startAngle",
-												"value": "Self.Angle"
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "F_Snake",
 											"sid": 785477741587167,
 											"parameters": {
 												"instance-variable": "StartX",
@@ -3712,22 +3672,30 @@
 									],
 									"actions": [
 										{
-											"id": "clear",
-											"objectClass": "DicSnakeHead",
-											"sid": 603500729814157
+											"id": "set-instvar-value",
+											"objectClass": "SnakeHead",
+											"sid": 671823233650803,
+											"parameters": {
+												"instance-variable": "SnakeWay",
+												"value": "\"\""
+											}
 										},
 										{
-											"id": "clear",
-											"objectClass": "DicSnakeBody",
-											"sid": 895266672128580
+											"id": "set-instvar-value",
+											"objectClass": "SnakeHead",
+											"sid": 852455421251322,
+											"parameters": {
+												"instance-variable": "HeadPathIndex",
+												"value": "0"
+											}
 										},
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 789302314146064,
+											"sid": 882255702602832,
 											"parameters": {
-												"variable": "SnakePathIndex",
-												"value": "0"
+												"variable": "activeHeadOwnerID",
+												"value": "SnakeHead.ownID"
 											}
 										}
 									],
@@ -4031,6 +3999,15 @@
 												"instance-variable": "BodyPathIndex",
 												"value": "0"
 											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SnakeBody",
+											"sid": 163297925374961,
+											"parameters": {
+												"instance-variable": "SnakeWay",
+												"value": "\"\""
+											}
 										}
 									],
 									"sid": 135440708762324,
@@ -4171,6 +4148,15 @@
 											"parameters": {
 												"instance-variable": "TailPathIndex",
 												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SnakeTail",
+											"sid": 907941025667841,
+											"parameters": {
+												"instance-variable": "SnakeWay",
+												"value": "\"\""
 											}
 										}
 									],
@@ -4319,12 +4305,22 @@
 									"sid": 738167778210135
 								},
 								{
+									"eventType": "variable",
+									"name": "CurrentRecord",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 885201004457628
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
 											"id": "pick-by-evaluate",
 											"objectClass": "System",
-											"sid": 912240970280402,
+											"sid": 875030587635916,
 											"parameters": {
 												"object": "SnakeHead",
 												"expression": "SnakeHead.ownID = activeOwnID"
@@ -4332,7 +4328,7 @@
 										}
 									],
 									"actions": [],
-									"sid": 663874839516398,
+									"sid": 604120492763733,
 									"children": [
 										{
 											"eventType": "block",
@@ -4340,9 +4336,9 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 598697178600203,
+													"sid": 452549798261281,
 													"parameters": {
-														"first-value": "SnakeBackIndex",
+														"first-value": "SnakeHead.HeadBackIndex",
 														"comparison": 5,
 														"second-value": "0"
 													}
@@ -4352,42 +4348,51 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 742933705457751,
+													"sid": 714314422579231,
+													"parameters": {
+														"variable": "CurrentRecord",
+														"value": "tokenat(\r\n    SnakeHead.SnakeWay,\r\n    SnakeHead.HeadBackIndex,\r\n    \"|\"\r\n)"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 928480618911736,
 													"parameters": {
 														"variable": "TargetX",
-														"value": "DicSnakeHead.Get( str(activeOwnID) & \"_\" & str(SnakeBackIndex) & \"_x\" )"
+														"value": "tokenat(CurrentRecord,1,\",\")"
 													}
 												},
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 906505845741357,
+													"sid": 218246652074219,
 													"parameters": {
 														"variable": "TargetY",
-														"value": "DicSnakeHead.Get( str(activeOwnID) & \"_\" & str(SnakeBackIndex) & \"_y\" )"
+														"value": "tokenat(CurrentRecord,2,\",\")"
 													}
 												},
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 967554263068949,
+													"sid": 232907839960690,
 													"parameters": {
 														"variable": "TargetAngle",
-														"value": "DicSnakeHead.Get(str(activeOwnID) & \"_\" & str(SnakeBackIndex) & \"_a\")"
+														"value": "tokenat(CurrentRecord,3,\",\")"
 													}
 												},
 												{
 													"id": "set-angle",
 													"objectClass": "SnakeHead",
-													"sid": 282616692346826,
+													"sid": 811967604541453,
 													"parameters": {
-														"angle": "SnakeHead.startAngle"
+														"angle": "TargetAngle"
 													}
 												},
 												{
 													"id": "tween-two-properties",
 													"objectClass": "SnakeHead",
-													"sid": 768623646524872,
+													"sid": 748222476051183,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"head_back\"",
@@ -4395,7 +4400,7 @@
 														"end-x": "TargetX",
 														"end-y": "TargetY",
 														"time": "0.02",
-														"ease": "noease",
+														"ease": "default",
 														"destroy-on-complete": "no",
 														"loop": "no",
 														"ping-pong": "no",
@@ -4403,7 +4408,7 @@
 													}
 												}
 											],
-											"sid": 615375080388279
+											"sid": 515529175254639
 										}
 									]
 								}
@@ -4461,6 +4466,16 @@
 									"sid": 644685836840895
 								},
 								{
+									"eventType": "variable",
+									"name": "CurrentRecord",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 778159162747741
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -4511,28 +4526,37 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 560124932840579,
+															"sid": 833734502504643,
+															"parameters": {
+																"variable": "CurrentRecord",
+																"value": "tokenat(\r\n    SnakeBody.SnakeWay,\r\n    SnakeBody.BodyBackIndex,\r\n    \"|\"\r\n)"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 799308473651985,
 															"parameters": {
 																"variable": "TargetX",
-																"value": "DicSnakeBody.Get(\r\n\"B_\"\r\n& str(SnakeBody.ownID)\r\n& \"_\"\r\n& str(SnakeBody.BodyOrder)\r\n& \"_\"\r\n& str(SnakeBody.BodyBackIndex)\r\n& \"_X\"\r\n)\r\n"
+																"value": "tokenat(CurrentRecord,1,\",\")"
 															}
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 907909704883462,
+															"sid": 684745092719808,
 															"parameters": {
 																"variable": "TargetY",
-																"value": "DicSnakeBody.Get(\r\n\"B_\"\r\n& str(SnakeBody.ownID)\r\n& \"_\"\r\n& str(SnakeBody.BodyOrder)\r\n& \"_\"\r\n& str(SnakeBody.BodyBackIndex)\r\n& \"_Y\"\r\n)\r\n"
+																"value": "tokenat(CurrentRecord,2,\",\")"
 															}
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 153505994491548,
+															"sid": 726409641830779,
 															"parameters": {
 																"variable": "TargetAngle",
-																"value": "DicSnakeBody.Get(\r\n\"B_\"\r\n& str(SnakeBody.ownID)\r\n& \"_\"\r\n& str(SnakeBody.BodyOrder)\r\n& \"_\"\r\n& str(SnakeBody.BodyBackIndex)\r\n& \"_A\"\r\n)\r\n"
+																"value": "tokenat(CurrentRecord,3,\",\")"
 															}
 														},
 														{
@@ -4556,7 +4580,7 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "SnakeBody",
-															"sid": 372984208903051,
+															"sid": 644491693322894,
 															"parameters": {
 																"instance-variable": "startAngle",
 																"value": "TargetAngle"
@@ -4565,7 +4589,7 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "SnakeBody",
-															"sid": 734627779284174,
+															"sid": 542986103786073,
 															"parameters": {
 																"instance-variable": "NeedBack",
 																"value": "1"
@@ -4632,6 +4656,16 @@
 									"sid": 388810028523585
 								},
 								{
+									"eventType": "variable",
+									"name": "CurrentRecord",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 273610190383475
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -4682,28 +4716,37 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 718593705203692,
+															"sid": 701885156688527,
+															"parameters": {
+																"variable": "CurrentRecord",
+																"value": "tokenat(\r\n    SnakeTail.SnakeWay,\r\n    SnakeTail.TailBackIndex,\r\n    \"|\"\r\n)"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 317464673310954,
 															"parameters": {
 																"variable": "TargetX",
-																"value": "DicSnakeTail.Get(\r\n\"B_\"\r\n& str(SnakeTail.ownID)\r\n& \"_T_\"\r\n& str(SnakeTail.TailOrder)\r\n& \"_\"\r\n& str(SnakeTail.TailBackIndex)\r\n& \"_X\"\r\n)\r\n"
+																"value": "tokenat(CurrentRecord,1,\",\")"
 															}
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 840867720679340,
+															"sid": 773832422516213,
 															"parameters": {
 																"variable": "TargetY",
-																"value": "DicSnakeTail.Get(\r\n\"B_\"\r\n& str(SnakeTail.ownID)\r\n& \"_T_\"\r\n& str(SnakeTail.TailOrder)\r\n& \"_\"\r\n& str(SnakeTail.TailBackIndex)\r\n& \"_Y\"\r\n)\r\n"
+																"value": "tokenat(CurrentRecord,2,\",\")"
 															}
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 244393981290660,
+															"sid": 390263868271677,
 															"parameters": {
 																"variable": "TargetAngle",
-																"value": "DicSnakeTail.Get(\r\n\"B_\"\r\n& str(SnakeTail.ownID)\r\n& \"_T_\"\r\n& str(SnakeTail.TailOrder)\r\n& \"_\"\r\n& str(SnakeTail.TailBackIndex)\r\n& \"_A\"\r\n)\r\n"
+																"value": "tokenat(CurrentRecord,3,\",\")"
 															}
 														},
 														{
@@ -4787,38 +4830,26 @@
 											"behaviorType": "MoveTo"
 										},
 										{
-											"id": "stop",
-											"objectClass": "SnakeBody",
-											"sid": 499134353913201,
-											"behaviorType": "MoveTo"
-										},
-										{
-											"id": "stop",
-											"objectClass": "SnakeTail",
-											"sid": 428406700450425,
-											"behaviorType": "MoveTo"
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 908399130654267,
+											"id": "set-instvar-value",
+											"objectClass": "SnakeHead",
+											"sid": 498560400271102,
 											"parameters": {
-												"variable": "SnakeBackMax",
-												"value": "SnakePathIndex - 1"
+												"instance-variable": "HeadBackMax",
+												"value": "SnakeHead.HeadPathIndex - 1"
 											}
 										},
 										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 607233933754031,
+											"id": "set-instvar-value",
+											"objectClass": "SnakeHead",
+											"sid": 918872642106899,
 											"parameters": {
-												"variable": "SnakeBackIndex",
-												"value": "SnakeBackMax"
+												"instance-variable": "HeadBackIndex",
+												"value": "SnakeHead.HeadBackMax"
 											}
 										},
 										{
 											"callFunction": "SnakeMoveBack",
-											"sid": 296452030780642,
+											"sid": 747162028979218,
 											"parameters": [
 												"SnakeHead.ownID"
 											]
@@ -4826,6 +4857,84 @@
 									],
 									"sid": 293192287477718,
 									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 685941315720756,
+													"parameters": {
+														"object": "SnakeBody"
+													}
+												},
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 546911679145925,
+													"parameters": {
+														"object": "SnakeBody",
+														"expression": "SnakeBody.ownID = SnakeHead.ownID"
+													}
+												},
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 905973605814169,
+													"parameters": {
+														"object": "SnakeBody"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "SnakeBody",
+													"sid": 269471071601987,
+													"behaviorType": "MoveTo"
+												}
+											],
+											"sid": 129117963298637
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 520012553069076,
+													"parameters": {
+														"object": "SnakeTail"
+													}
+												},
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 642755239963919,
+													"parameters": {
+														"object": "SnakeTail",
+														"expression": "SnakeTail.ownID = SnakeHead.ownID"
+													}
+												},
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 245822377537248,
+													"parameters": {
+														"object": "SnakeTail"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "SnakeTail",
+													"sid": 650936474774803,
+													"behaviorType": "MoveTo"
+												}
+											],
+											"sid": 226712624901262
+										},
 										{
 											"eventType": "block",
 											"conditions": [],
@@ -5004,12 +5113,12 @@
 								{
 									"id": "is-moving",
 									"objectClass": "SnakeHead",
-									"sid": 332010106384247,
+									"sid": 283200321823808,
 									"behaviorType": "MoveTo"
 								}
 							],
 							"actions": [],
-							"sid": 699972359178299,
+							"sid": 751515232817545,
 							"children": [
 								{
 									"eventType": "block",
@@ -5017,7 +5126,7 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "SnakeHead",
-											"sid": 290221852830464,
+											"sid": 749446326713415,
 											"parameters": {
 												"instance-variable": "isBlocked",
 												"comparison": 0,
@@ -5026,56 +5135,55 @@
 										}
 									],
 									"actions": [],
-									"sid": 102497552870443,
+									"sid": 261551490272386,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "every-tick",
+													"id": "for-each",
 													"objectClass": "System",
-													"sid": 288918639739097
-												}
-											],
-											"actions": [
-												{
-													"id": "add-key",
-													"objectClass": "DicSnakeHead",
-													"sid": 225535117914764,
+													"sid": 324047926837444,
 													"parameters": {
-														"key": "str(SnakeHead.ownID) & \"_\" & str(SnakePathIndex) & \"_x\"",
-														"value": "SnakeHead.X"
-													}
-												},
-												{
-													"id": "add-key",
-													"objectClass": "DicSnakeHead",
-													"sid": 570162285816686,
-													"parameters": {
-														"key": "str(SnakeHead.ownID) & \"_\" & str(SnakePathIndex) & \"_y\"",
-														"value": "SnakeHead.Y"
-													}
-												},
-												{
-													"id": "add-key",
-													"objectClass": "DicSnakeHead",
-													"sid": 937008215507639,
-													"parameters": {
-														"key": "str(SnakeHead.ownID) & \"_\" & str(SnakePathIndex) & \"_A\"",
-														"value": "SnakeHead.Angle"
-													}
-												},
-												{
-													"id": "add-to-eventvar",
-													"objectClass": "System",
-													"sid": 924463850538352,
-													"parameters": {
-														"variable": "SnakePathIndex",
-														"value": "1"
+														"object": "SnakeHead"
 													}
 												}
 											],
-											"sid": 298045932862634
+											"actions": [],
+											"sid": 520915307329503,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "every-tick",
+															"objectClass": "System",
+															"sid": 191345296626581
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SnakeHead",
+															"sid": 320741508486611,
+															"parameters": {
+																"instance-variable": "SnakeWay",
+																"value": "\"A \"\n&\nSnakeHead.SnakeWay\r\n&\r\nSnakeHead.ownID & \",\"\r\n&\r\nSnakeHead.X & \",\"\r\n&\r\nSnakeHead.Y & \",\"\r\n&\r\nSnakeHead.Angle\r\n&\r\n\"|\"\r\n"
+															}
+														},
+														{
+															"id": "add-to-instvar",
+															"objectClass": "SnakeHead",
+															"sid": 323970977550352,
+															"parameters": {
+																"instance-variable": "HeadPathIndex",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 688490641085133
+												}
+											]
 										}
 									]
 								}
@@ -5151,30 +5259,12 @@
 															],
 															"actions": [
 																{
-																	"id": "add-key",
-																	"objectClass": "DicSnakeTail",
-																	"sid": 486571281434742,
+																	"id": "set-instvar-value",
+																	"objectClass": "SnakeTail",
+																	"sid": 668165312901823,
 																	"parameters": {
-																		"key": "\"B_\"\r\n& str(SnakeTail.ownID)\r\n& \"_T_\"\r\n& str(SnakeTail.TailOrder)\r\n& \"_\"\r\n& str(SnakeTail.TailPathIndex)\r\n& \"_X\"\r\n",
-																		"value": "SnakeTail.X\r\n"
-																	}
-																},
-																{
-																	"id": "add-key",
-																	"objectClass": "DicSnakeTail",
-																	"sid": 104395598954837,
-																	"parameters": {
-																		"key": "\"B_\"\r\n& str(SnakeTail.ownID)\r\n& \"_T_\"\r\n& str(SnakeTail.TailOrder)\r\n& \"_\"\r\n& str(SnakeTail.TailPathIndex)\r\n& \"_Y\"\r\n",
-																		"value": "SnakeTail.Y"
-																	}
-																},
-																{
-																	"id": "add-key",
-																	"objectClass": "DicSnakeTail",
-																	"sid": 215698656680995,
-																	"parameters": {
-																		"key": "\"B_\"\r\n& str(SnakeTail.ownID)\r\n& \"_T_\"\r\n& str(SnakeTail.TailOrder)\r\n& \"_\"\r\n& str(SnakeTail.TailPathIndex)\r\n& \"_A\"\r\n",
-																		"value": "SnakeTail.Angle"
+																		"instance-variable": "SnakeWay",
+																		"value": "\"B \"\r\n&\r\nSnakeTail.SnakeWay\r\n&\r\nSnakeTail.ownID & \",\"\r\n&\r\nSnakeTail.X & \",\"\r\n&\r\nSnakeTail.Y & \",\"\r\n&\r\nSnakeTail.Angle\r\n&\r\n\"|\"\r\n"
 																	}
 																},
 																{
@@ -5273,30 +5363,12 @@
 																	"conditions": [],
 																	"actions": [
 																		{
-																			"id": "add-key",
-																			"objectClass": "DicSnakeBody",
-																			"sid": 650568181223986,
+																			"id": "set-instvar-value",
+																			"objectClass": "SnakeBody",
+																			"sid": 229153163844789,
 																			"parameters": {
-																				"key": "\"B_\"\r\n& str(SnakeBody.ownID)\r\n& \"_\"\r\n& str(SnakeBody.BodyOrder)\r\n& \"_\"\r\n& str(SnakeBody.BodyPathIndex)\r\n& \"_X\"\r\n",
-																				"value": "SnakeBody.X"
-																			}
-																		},
-																		{
-																			"id": "add-key",
-																			"objectClass": "DicSnakeBody",
-																			"sid": 587609729966227,
-																			"parameters": {
-																				"key": "\"B_\"\r\n& str(SnakeBody.ownID)\r\n& \"_\"\r\n& str(SnakeBody.BodyOrder)\r\n& \"_\"\r\n& str(SnakeBody.BodyPathIndex)\r\n& \"_Y\"\r\n",
-																				"value": "SnakeBody.Y"
-																			}
-																		},
-																		{
-																			"id": "add-key",
-																			"objectClass": "DicSnakeBody",
-																			"sid": 683481014738507,
-																			"parameters": {
-																				"key": "\"B_\"\r\n& str(SnakeBody.ownID)\r\n& \"_\"\r\n& str(SnakeBody.BodyOrder)\r\n& \"_\"\r\n& str(SnakeBody.BodyPathIndex)\r\n& \"_A\"",
-																				"value": "SnakeBody.Angle"
+																				"instance-variable": "SnakeWay",
+																				"value": "\"B \"\r\n&\r\nSnakeBody.SnakeWay\r\n&\r\nSnakeBody.ownID & \",\"\r\n&\r\nSnakeBody.X & \",\"\r\n&\r\nSnakeBody.Y & \",\"\r\n&\r\nSnakeBody.Angle\r\n&\r\n\"|\"\r\n"
 																			}
 																		},
 																		{
@@ -5342,21 +5414,12 @@
 									"conditions": [],
 									"actions": [
 										{
-											"id": "subtract-from-eventvar",
-											"objectClass": "System",
-											"sid": 997771227507889,
+											"id": "subtract-from-instvar",
+											"objectClass": "SnakeHead",
+											"sid": 155572079816505,
 											"parameters": {
-												"variable": "SnakeBackIndex",
+												"instance-variable": "HeadBackIndex",
 												"value": "1"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 659909173184625,
-											"parameters": {
-												"variable": "SnakeIsBusy",
-												"value": "0"
 											}
 										},
 										{
@@ -5502,7 +5565,7 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "SnakeBody",
-									"sid": 391309619153393,
+									"sid": 329164913858824,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"body_angle\"",
@@ -5519,7 +5582,7 @@
 								{
 									"id": "tween-two-properties",
 									"objectClass": "SnakeBody",
-									"sid": 584864932204261,
+									"sid": 510555936794161,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"body_back\"",
@@ -5537,7 +5600,7 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "SnakeBody",
-									"sid": 559146856585406,
+									"sid": 792701471654815,
 									"parameters": {
 										"instance-variable": "NeedBack",
 										"value": "0"
@@ -5564,7 +5627,7 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "SnakeTail",
-									"sid": 866318936733928,
+									"sid": 684598188602918,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"tail_angle\"",
@@ -5581,7 +5644,7 @@
 								{
 									"id": "tween-two-properties",
 									"objectClass": "SnakeTail",
-									"sid": 117102508836612,
+									"sid": 124326107681093,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"tail_back\"",
@@ -5599,7 +5662,7 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "SnakeTail",
-									"sid": 382819008632016,
+									"sid": 574199431980092,
 									"parameters": {
 										"instance-variable": "Needback",
 										"value": "0"
