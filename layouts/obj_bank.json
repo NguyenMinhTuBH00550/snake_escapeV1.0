@@ -6362,6 +6362,10 @@
 												"state": true
 											},
 											{
+												"iv": "SnakeWay",
+												"state": true
+											},
+											{
 												"iv": "BodyPathIndex",
 												"state": true
 											},
@@ -6387,10 +6391,6 @@
 											},
 											{
 												"iv": "NeedBack",
-												"state": true
-											},
-											{
-												"iv": "SnakeWay",
 												"state": true
 											}
 										]
@@ -7021,6 +7021,10 @@
 												"state": true
 											},
 											{
+												"iv": "SnakeWay",
+												"state": true
+											},
+											{
 												"iv": "TailOrder",
 												"state": true
 											},
@@ -7046,10 +7050,6 @@
 											},
 											{
 												"iv": "Needback",
-												"state": true
-											},
-											{
-												"iv": "SnakeWay",
 												"state": true
 											}
 										]
@@ -7739,6 +7739,10 @@
 												"state": true
 											},
 											{
+												"iv": "SnakeWay",
+												"state": true
+											},
+											{
 												"iv": "BodyPathIndex",
 												"state": true
 											},
@@ -7764,10 +7768,6 @@
 											},
 											{
 												"iv": "NeedBack",
-												"state": true
-											},
-											{
-												"iv": "SnakeWay",
 												"state": true
 											}
 										]
