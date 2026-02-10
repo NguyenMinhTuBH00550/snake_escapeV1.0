@@ -3577,7 +3577,7 @@
 							"functionDescription": "",
 							"functionCategory": "",
 							"functionReturnType": "none",
-							"functionCopyPicked": false,
+							"functionCopyPicked": true,
 							"functionIsAsync": false,
 							"functionParameters": [
 								{
@@ -4382,6 +4382,7 @@
 													"id": "tween-two-properties",
 													"objectClass": "SnakeHead",
 													"sid": 686596475592958,
+													"disabled": true,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"head_back\"",
@@ -4395,6 +4396,40 @@
 														"ping-pong": "no",
 														"repeat-count": "1"
 													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "SnakeHead",
+													"sid": 506834702879242,
+													"parameters": {
+														"x": "TargetX",
+														"y": "TargetY"
+													}
+												},
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "SnakeHead",
+													"sid": 627041845781357,
+													"parameters": {
+														"instance-variable": "HeadBackIndex",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 661003593591650,
+													"parameters": {
+														"seconds": "0.03",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "SnakeMoveBack",
+													"sid": 137387251221986,
+													"parameters": [
+														"SnakeHead.ownID"
+													]
 												}
 											],
 											"sid": 896581086569009
@@ -4408,7 +4443,7 @@
 							"functionDescription": "",
 							"functionCategory": "",
 							"functionReturnType": "none",
-							"functionCopyPicked": false,
+							"functionCopyPicked": true,
 							"functionIsAsync": false,
 							"functionParameters": [
 								{
@@ -5426,6 +5461,7 @@
 							],
 							"actions": [],
 							"sid": 174643457668596,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -5459,7 +5495,8 @@
 											]
 										}
 									],
-									"sid": 278690063906757
+									"sid": 278690063906757,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -5477,6 +5514,7 @@
 									],
 									"actions": [],
 									"sid": 989827145370439,
+									"disabled": true,
 									"children": [
 										{
 											"eventType": "block",
@@ -5502,7 +5540,8 @@
 													}
 												}
 											],
-											"sid": 761079403394594
+											"sid": 761079403394594,
+											"disabled": true
 										}
 									]
 								}
@@ -5523,6 +5562,7 @@
 							],
 							"actions": [],
 							"sid": 735048956837749,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -5556,7 +5596,8 @@
 											]
 										}
 									],
-									"sid": 811501260225612
+									"sid": 811501260225612,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -5574,6 +5615,7 @@
 									],
 									"actions": [],
 									"sid": 592291514372732,
+									"disabled": true,
 									"children": [
 										{
 											"eventType": "block",
@@ -5599,7 +5641,8 @@
 													}
 												}
 											],
-											"sid": 210428388977950
+											"sid": 210428388977950,
+											"disabled": true
 										}
 									]
 								}
@@ -5624,6 +5667,7 @@
 									"id": "tween-one-property",
 									"objectClass": "SnakeBody",
 									"sid": 329164913858824,
+									"disabled": true,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"body_angle\"",
@@ -5641,6 +5685,7 @@
 									"id": "tween-two-properties",
 									"objectClass": "SnakeBody",
 									"sid": 510555936794161,
+									"disabled": true,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"body_back\"",
@@ -5654,18 +5699,160 @@
 										"ping-pong": "no",
 										"repeat-count": "1"
 									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "SnakeBody",
-									"sid": 792701471654815,
-									"parameters": {
-										"instance-variable": "NeedBack",
-										"value": "0"
-									}
 								}
 							],
-							"sid": 406460519454197
+							"sid": 406460519454197,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 704573643428268,
+											"parameters": {
+												"object": "SnakeHead"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 401826691090948,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 115000978240662,
+													"parameters": {
+														"object": "SnakeBody",
+														"expression": "SnakeBody.ownID = SnakeHead.ownID"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 310594016347060,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 315387098131057,
+															"parameters": {
+																"object": "SnakeBody"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-angle",
+															"objectClass": "SnakeBody",
+															"sid": 747014096562322,
+															"parameters": {
+																"angle": "SnakeBody.startAngle"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "SnakeBody",
+															"sid": 531393788069808,
+															"parameters": {
+																"x": "SnakeBody.BackTargetX",
+																"y": "SnakeBody.BackTargetY"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SnakeBody",
+															"sid": 328992919795765,
+															"parameters": {
+																"instance-variable": "NeedBack",
+																"value": "0"
+															}
+														},
+														{
+															"id": "subtract-from-instvar",
+															"objectClass": "SnakeBody",
+															"sid": 897257061242531,
+															"parameters": {
+																"instance-variable": "BodyBackIndex",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 608367764091739,
+															"parameters": {
+																"seconds": "0.03",
+																"use-timescale": true
+															}
+														},
+														{
+															"callFunction": "SnakeBodyMoveBack",
+															"sid": 705372095394977,
+															"parameters": [
+																"SnakeBody.ownID"
+															]
+														}
+													],
+													"sid": 746353206293129
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 443638021940739,
+											"parameters": {
+												"name": "\"\"",
+												"start-index": "tokencount(SnakeBody.wayPoint, \"|\")-2",
+												"end-index": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 411770327929855,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 475440491873083,
+													"parameters": {
+														"object": "Snake_Checkpoint",
+														"expression": "Snake_Checkpoint.IID = int(tokenat(SnakeBody.wayPoint, loopindex , \"|\"))"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Snake_Checkpoint",
+													"sid": 348588970130646,
+													"parameters": {
+														"instance-variable": "HasSnake",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 675998552602553,
+											"disabled": true
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -5686,6 +5873,7 @@
 									"id": "tween-one-property",
 									"objectClass": "SnakeTail",
 									"sid": 684598188602918,
+									"disabled": true,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"tail_angle\"",
@@ -5703,6 +5891,7 @@
 									"id": "tween-two-properties",
 									"objectClass": "SnakeTail",
 									"sid": 124326107681093,
+									"disabled": true,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"tail_back\"",
@@ -5716,18 +5905,160 @@
 										"ping-pong": "no",
 										"repeat-count": "1"
 									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "SnakeTail",
-									"sid": 574199431980092,
-									"parameters": {
-										"instance-variable": "Needback",
-										"value": "0"
-									}
 								}
 							],
-							"sid": 398839892940973
+							"sid": 398839892940973,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 281680030199673,
+											"parameters": {
+												"object": "SnakeHead"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 929509321129321,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 966364448620204,
+													"parameters": {
+														"object": "SnakeTail",
+														"expression": "SnakeTail.ownID = SnakeHead.ownID"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 272002203659611,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 540045637273907,
+															"parameters": {
+																"object": "SnakeTail"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-angle",
+															"objectClass": "SnakeTail",
+															"sid": 822901659951293,
+															"parameters": {
+																"angle": "SnakeTail.startAngle"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "SnakeTail",
+															"sid": 464371038973080,
+															"parameters": {
+																"x": "SnakeTail.BackTargetX",
+																"y": "SnakeTail.BackTargetY"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SnakeTail",
+															"sid": 729309945850474,
+															"parameters": {
+																"instance-variable": "Needback",
+																"value": "0"
+															}
+														},
+														{
+															"id": "subtract-from-instvar",
+															"objectClass": "SnakeTail",
+															"sid": 409232921603518,
+															"parameters": {
+																"instance-variable": "TailBackIndex",
+																"value": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 208141962019437,
+															"parameters": {
+																"seconds": "0.03",
+																"use-timescale": true
+															}
+														},
+														{
+															"callFunction": "SnakeTailMoveBack",
+															"sid": 367666526937481,
+															"parameters": [
+																"SnakeTail.ownID"
+															]
+														}
+													],
+													"sid": 352054594043402
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 149161349613234,
+											"parameters": {
+												"name": "\"\"",
+												"start-index": "tokencount(SnakeTail.wayPoint, \"|\") -2",
+												"end-index": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 761171067372379,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 110004945385405,
+													"parameters": {
+														"object": "Snake_Checkpoint",
+														"expression": "Snake_Checkpoint.IID = int(tokenat(SnakeTail.wayPoint, loopindex, \"|\"))"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Snake_Checkpoint",
+													"sid": 896055562427683,
+													"parameters": {
+														"instance-variable": "HasSnake",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 955564792322786,
+											"disabled": true
+										}
+									]
+								}
+							]
 						}
 					],
 					"sid": 675651775942849

@@ -6,13 +6,6 @@
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "isBlocked",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 783652804677399
-		},
-		{
 			"name": "OrderIndexTemp",
 			"type": "number",
 			"desc": "",

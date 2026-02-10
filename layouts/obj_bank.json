@@ -6754,7 +6754,6 @@
 						"StartY": 0,
 						"ownID": 0,
 						"SnakeWay": "",
-						"isBlocked": 0,
 						"OrderIndexTemp": 0,
 						"HeadPathIndex": 0,
 						"HeadBackMax": 0,
