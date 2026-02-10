@@ -400,6 +400,24 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SnakeBody",
+							"sid": 597672540107191,
+							"parameters": {
+								"instance-variable": "NeedBack",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SnakeTail",
+							"sid": 469475198395374,
+							"parameters": {
+								"instance-variable": "Needback",
+								"value": "0"
+							}
 						}
 					],
 					"sid": 903865123258397,
@@ -1810,21 +1828,6 @@
 															"sid": 755121431508288
 														}
 													]
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "for-each",
-															"objectClass": "System",
-															"sid": 456021850373629,
-															"parameters": {
-																"object": "SnakeHead"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 749194759114647
 												}
 											]
 										},
@@ -5177,9 +5180,10 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 774523250118026
+									"id": "is-moving",
+									"objectClass": "SnakeTail",
+									"sid": 929447045352319,
+									"behaviorType": "MoveTo"
 								}
 							],
 							"actions": [],
@@ -5189,10 +5193,9 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-moving",
-											"objectClass": "SnakeTail",
-											"sid": 444845043578256,
-											"behaviorType": "MoveTo"
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 399800895126788
 										}
 									],
 									"actions": [],
@@ -5275,9 +5278,10 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 980922887290147
+									"id": "is-moving",
+									"objectClass": "SnakeBody",
+									"sid": 824015013340368,
+									"behaviorType": "MoveTo"
 								}
 							],
 							"actions": [],
@@ -5287,10 +5291,9 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-moving",
-											"objectClass": "SnakeBody",
-											"sid": 200487071135655,
-											"behaviorType": "MoveTo"
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 860632355968901
 										}
 									],
 									"actions": [],
@@ -5821,7 +5824,6 @@
 									],
 									"actions": [],
 									"sid": 411770327929855,
-									"disabled": true,
 									"children": [
 										{
 											"eventType": "block",
@@ -5847,8 +5849,7 @@
 													}
 												}
 											],
-											"sid": 675998552602553,
-											"disabled": true
+											"sid": 675998552602553
 										}
 									]
 								}
@@ -6027,7 +6028,6 @@
 									],
 									"actions": [],
 									"sid": 761171067372379,
-									"disabled": true,
 									"children": [
 										{
 											"eventType": "block",
@@ -6053,8 +6053,7 @@
 													}
 												}
 											],
-											"sid": 955564792322786,
-											"disabled": true
+											"sid": 955564792322786
 										}
 									]
 								}
