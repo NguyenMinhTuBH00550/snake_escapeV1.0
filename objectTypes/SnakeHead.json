@@ -32,6 +32,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 646578769416043
+		},
+		{
+			"name": "NeedBack",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 287599135720195
+		},
+		{
+			"name": "BackTargetX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 418140473893546
+		},
+		{
+			"name": "BackTargetY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 260921466844783
 		}
 	],
 	"behaviorTypes": [],

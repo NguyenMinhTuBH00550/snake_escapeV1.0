@@ -418,6 +418,15 @@
 								"instance-variable": "Needback",
 								"value": "0"
 							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "F_Snake",
+							"sid": 948641752894008,
+							"parameters": {
+								"instance-variable": "CanTouch",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 903865123258397,
@@ -3420,29 +3429,14 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-touched-object",
-									"objectClass": "Touch",
-									"sid": 271645005843439,
-									"parameters": {
-										"object": "snake_head",
-										"type": "start"
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "SnakePlay",
-									"sid": 945957312775652,
-									"parameters": [
-										"snake_head.OwnerID"
-									]
-								}
-							],
-							"sid": 171738422951573,
-							"isOrBlock": true
+							"eventType": "variable",
+							"name": "activeHeadOwnerID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 566622550599467
 						},
 						{
 							"eventType": "block",
@@ -3450,55 +3444,7 @@
 								{
 									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 733895455307171,
-									"parameters": {
-										"object": "snake_body",
-										"type": "start"
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "SnakePlay",
-									"sid": 236663824497669,
-									"parameters": [
-										"snake_body.OwnerID"
-									]
-								}
-							],
-							"sid": 120101196635385
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-touched-object",
-									"objectClass": "Touch",
-									"sid": 466248053087526,
-									"parameters": {
-										"object": "SnakeBody",
-										"type": "start"
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "SnakePlay",
-									"sid": 389700523173028,
-									"parameters": [
-										"SnakeBody.ownID"
-									]
-								}
-							],
-							"sid": 267479893067822
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-touched-object",
-									"objectClass": "Touch",
-									"sid": 826738992025946,
+									"sid": 544784079456486,
 									"parameters": {
 										"object": "SnakeHead",
 										"type": "start"
@@ -3507,14 +3453,94 @@
 							],
 							"actions": [
 								{
-									"callFunction": "SnakePlay",
-									"sid": 363636294254968,
-									"parameters": [
-										"SnakeHead.ownID"
-									]
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 514758841630821,
+									"parameters": {
+										"variable": "activeHeadOwnerID",
+										"value": "SnakeHead.ownID"
+									}
 								}
 							],
-							"sid": 790416098283753
+							"sid": 598518734810880,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "SnakeHead",
+											"sid": 796743071751439,
+											"parameters": {
+												"instance-variable": "CanTouch"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "SnakeHead",
+											"sid": 901438792759010,
+											"parameters": {
+												"instance-variable": "CanTouch",
+												"value": "false"
+											}
+										},
+										{
+											"callFunction": "SnakePlay",
+											"sid": 907034676144359,
+											"parameters": [
+												"SnakeHead.ownID"
+											]
+										}
+									],
+									"sid": 310753089413091,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 467127914773152,
+													"parameters": {
+														"object": "F_Snake"
+													}
+												},
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 387493754416529,
+													"parameters": {
+														"object": "F_Snake",
+														"expression": "F_Snake.ownID = SnakeHead.ownID"
+													}
+												},
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 311448249336573,
+													"parameters": {
+														"object": "F_Snake"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 885234541403001,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 220188656220600
+										}
+									]
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -3522,23 +3548,187 @@
 								{
 									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 368375188084278,
+									"sid": 431339320260151,
+									"parameters": {
+										"object": "SnakeBody",
+										"type": "start"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 111515109487939,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "SnakeBody",
+											"sid": 562039934162251,
+											"parameters": {
+												"instance-variable": "CanTouch"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "SnakeBody",
+											"sid": 145493366911556,
+											"parameters": {
+												"instance-variable": "CanTouch",
+												"value": "false"
+											}
+										},
+										{
+											"callFunction": "SnakePlay",
+											"sid": 866465080511029,
+											"parameters": [
+												"SnakeBody.ownID"
+											]
+										}
+									],
+									"sid": 585593248720229,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 593878950786960,
+													"parameters": {
+														"object": "F_Snake"
+													}
+												},
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 839161181157118,
+													"parameters": {
+														"object": "F_Snake",
+														"expression": "F_Snake.ownID = SnakeBody.ownID"
+													}
+												},
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 818115582922069,
+													"parameters": {
+														"object": "F_Snake"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 883303874583604,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 104757044474906
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-touched-object",
+									"objectClass": "Touch",
+									"sid": 313141950174359,
 									"parameters": {
 										"object": "SnakeTail",
 										"type": "start"
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 693875063615697,
+							"children": [
 								{
-									"callFunction": "SnakePlay",
-									"sid": 346001187912194,
-									"parameters": [
-										"SnakeTail.ownID"
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "SnakeTail",
+											"sid": 857841761276027,
+											"parameters": {
+												"instance-variable": "CanTouch"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "SnakeTail",
+											"sid": 784073881772786,
+											"parameters": {
+												"instance-variable": "CanTouch",
+												"value": "false"
+											}
+										},
+										{
+											"callFunction": "SnakePlay",
+											"sid": 292770614345714,
+											"parameters": [
+												"SnakeTail.ownID"
+											]
+										}
+									],
+									"sid": 881825739462203,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 867542726351244,
+													"parameters": {
+														"object": "F_Snake"
+													}
+												},
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 714376842868746,
+													"parameters": {
+														"object": "F_Snake",
+														"expression": "F_Snake.ownID = SnakeTail.ownID"
+													}
+												},
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 180473704912490,
+													"parameters": {
+														"object": "F_Snake"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 600396634933149,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 291111177414720
+										}
 									]
 								}
-							],
-							"sid": 583230407051193
+							]
 						},
 						{
 							"functionName": "SnakePlay",
@@ -4411,11 +4601,29 @@
 													}
 												},
 												{
+													"id": "set-boolean-instvar",
+													"objectClass": "SnakeHead",
+													"sid": 134045442684698,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "false"
+													}
+												},
+												{
 													"id": "subtract-from-instvar",
 													"objectClass": "SnakeHead",
 													"sid": 627041845781357,
 													"parameters": {
 														"instance-variable": "HeadBackIndex",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "SnakeHead",
+													"sid": 106340805615949,
+													"parameters": {
+														"instance-variable": "NeedBack",
 														"value": "1"
 													}
 												},
@@ -4436,7 +4644,106 @@
 													]
 												}
 											],
-											"sid": 896581086569009
+											"sid": 896581086569009,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "SnakeHead",
+															"sid": 824542845857801,
+															"parameters": {
+																"instance-variable": "NeedBack",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 159318831326310,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-all",
+																	"objectClass": "System",
+																	"sid": 937054629982040,
+																	"parameters": {
+																		"object": "SnakeHead"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 194191400066985,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-by-evaluate",
+																			"objectClass": "System",
+																			"sid": 164772075819158,
+																			"parameters": {
+																				"object": "SnakeHead",
+																				"expression": "SnakeHead.ownID = activeOwnID"
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 449513021842835,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "for-each",
+																					"objectClass": "System",
+																					"sid": 692354202381076,
+																					"parameters": {
+																						"object": "SnakeHead"
+																					}
+																				}
+																			],
+																			"actions": [],
+																			"sid": 404185910317325,
+																			"children": [
+																				{
+																					"eventType": "block",
+																					"conditions": [
+																						{
+																							"id": "pick-by-evaluate",
+																							"objectClass": "System",
+																							"sid": 870691652989877,
+																							"parameters": {
+																								"object": "SnakeHead",
+																								"expression": "SnakeHead.X = SnakeHead.StartX &\nSnakeHead.Y = SnakeHead.StartY"
+																							}
+																						}
+																					],
+																					"actions": [
+																						{
+																							"id": "set-boolean-instvar",
+																							"objectClass": "SnakeHead",
+																							"sid": 664440560989943,
+																							"parameters": {
+																								"instance-variable": "CanTouch",
+																								"value": "true"
+																							}
+																						}
+																					],
+																					"sid": 527025166225815
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
 										}
 									]
 								}
@@ -5503,6 +5810,15 @@
 															}
 														},
 														{
+															"id": "set-boolean-instvar",
+															"objectClass": "SnakeBody",
+															"sid": 234371234605455,
+															"parameters": {
+																"instance-variable": "CanTouch",
+																"value": "false"
+															}
+														},
+														{
 															"id": "wait",
 															"objectClass": "System",
 															"sid": 608367764091739,
@@ -5519,7 +5835,35 @@
 															]
 														}
 													],
-													"sid": 746353206293129
+													"sid": 746353206293129,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-by-evaluate",
+																	"objectClass": "System",
+																	"sid": 138125278894851,
+																	"parameters": {
+																		"object": "SnakeBody",
+																		"expression": "SnakeBody.BackTargetX = SnakeBody.X &\nSnakeBody.BackTargetY = SnakeBody.Y"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "SnakeBody",
+																	"sid": 280580846710164,
+																	"parameters": {
+																		"instance-variable": "CanTouch",
+																		"value": "true"
+																	}
+																}
+															],
+															"sid": 854170368094445
+														}
+													]
 												}
 											]
 										}
@@ -5669,6 +6013,15 @@
 															}
 														},
 														{
+															"id": "set-boolean-instvar",
+															"objectClass": "SnakeTail",
+															"sid": 183140060782964,
+															"parameters": {
+																"instance-variable": "CanTouch",
+																"value": "false"
+															}
+														},
+														{
 															"id": "wait",
 															"objectClass": "System",
 															"sid": 208141962019437,
@@ -5685,7 +6038,35 @@
 															]
 														}
 													],
-													"sid": 352054594043402
+													"sid": 352054594043402,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-by-evaluate",
+																	"objectClass": "System",
+																	"sid": 756218849964773,
+																	"parameters": {
+																		"object": "SnakeTail",
+																		"expression": "SnakeTail.BackTargetX = SnakeTail.X &\nSnakeTail.BackTargetY = SnakeTail.Y"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "SnakeTail",
+																	"sid": 154503141715326,
+																	"parameters": {
+																		"instance-variable": "CanTouch",
+																		"value": "true"
+																	}
+																}
+															],
+															"sid": 905448523505080
+														}
+													]
 												}
 											]
 										}

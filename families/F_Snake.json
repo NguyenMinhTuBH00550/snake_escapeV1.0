@@ -58,6 +58,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 972347549782079
+		},
+		{
+			"name": "CanTouch",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 778605674487879
 		}
 	],
 	"behaviorTypes": [
