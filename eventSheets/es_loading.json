@@ -367,9 +367,9 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-playing",
+					"id": "on-tweens-finished",
 					"objectClass": "HUD_logo",
-					"sid": 702667262587738,
+					"sid": 304102843358431,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"logo_pop\""
@@ -403,7 +403,7 @@
 						{
 							"id": "set-opacity",
 							"objectClass": "HUD_BG_loading",
-							"sid": 120398546753853,
+							"sid": 796316780490708,
 							"parameters": {
 								"opacity": "0"
 							}
@@ -411,18 +411,45 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "HUD_BG_loading",
-							"sid": 757150202749969,
+							"sid": 996950351451898,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"fade_out\"",
 								"property": "offsetOpacity",
 								"end-value": "100",
-								"time": "0.4",
+								"time": "0.2",
+								"ease": "easeoutsine",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "HUD_BG_loading",
+							"sid": 469293416090040,
+							"disabled": true,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade_in\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "0.2",
 								"ease": "noease",
 								"destroy-on-complete": "no",
 								"loop": "no",
 								"ping-pong": "no",
 								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 108872027667075,
+							"parameters": {
+								"type": "log",
+								"message": "\"a \"  & HUD_BG_loading.Opacity"
 							}
 						}
 					],
@@ -436,14 +463,41 @@
 				{
 					"id": "on-tweens-finished",
 					"objectClass": "HUD_BG_loading",
-					"sid": 708005421140652,
+					"sid": 897307072711716,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"fade_out\""
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "HUD_BG_loading",
+					"sid": 136974170756604,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fade_in\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.2",
+						"ease": "easeoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "log",
+					"objectClass": "Browser",
+					"sid": 323384346290598,
+					"parameters": {
+						"type": "log",
+						"message": "\"b \"& HUD_BG_loading.Opacity"
+					}
+				}
+			],
 			"sid": 579139059155366,
 			"children": [
 				{

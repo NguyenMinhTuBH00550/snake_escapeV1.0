@@ -266,6 +266,16 @@
 			"sid": 446918629123048
 		},
 		{
+			"eventType": "variable",
+			"name": "heart_scale",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 811597355931161
+		},
+		{
 			"eventType": "comment",
 			"text": "Value_event_Booster"
 		},
@@ -3869,6 +3879,15 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
+											"sid": 843045528474445,
+											"parameters": {
+												"variable": "IsTimerRunning",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
 											"sid": 971130798377356,
 											"parameters": {
 												"variable": "dirX",
@@ -5144,6 +5163,10 @@
 											"behaviorType": "MoveTo"
 										},
 										{
+											"callFunction": "LoseLife",
+											"sid": 549901674432793
+										},
+										{
 											"id": "set-instvar-value",
 											"objectClass": "SnakeHead",
 											"sid": 498560400271102,
@@ -6133,62 +6156,79 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-x-seconds",
+									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 462178663642448,
+									"sid": 279058700449122,
 									"parameters": {
-										"interval-seconds": "1"
+										"first-value": "TimeRemaining",
+										"comparison": 4,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 891387903325499,
+									"parameters": {
+										"first-value": "IsTimerRunning",
+										"comparison": 0,
+										"second-value": "1"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-text",
-									"objectClass": "text_time",
-									"sid": 201869453266939,
-									"parameters": {
-										"text": "zeropad(floor(TimeRemaining / 60), 2) & \":\" & zeropad(TimeRemaining % 60, 2)"
-									}
+									"callFunction": "TimeLevel",
+									"sid": 203379896537338
 								}
 							],
-							"sid": 655254648835363,
+							"sid": 496661452430799
+						},
+						{
+							"functionName": "TimeLevel",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 727666093577941,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-two-values",
+											"id": "every-x-seconds",
 											"objectClass": "System",
-											"sid": 163819575047577,
+											"sid": 458109423448211,
 											"parameters": {
-												"first-value": "TimeRemaining",
-												"comparison": 4,
-												"second-value": "0"
-											}
-										},
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 498985220586805,
-											"parameters": {
-												"first-value": "IsTimerRunning",
-												"comparison": 0,
-												"second-value": "1"
+												"interval-seconds": "1"
 											}
 										}
 									],
 									"actions": [
 										{
+											"id": "set-text",
+											"objectClass": "text_time",
+											"sid": 600707395644703,
+											"parameters": {
+												"text": "zeropad(floor(TimeRemaining / 60), 2) & \":\" & zeropad(TimeRemaining % 60, 2)"
+											}
+										},
+										{
 											"id": "subtract-from-eventvar",
 											"objectClass": "System",
-											"sid": 823200227725089,
+											"sid": 321996497117599,
 											"parameters": {
 												"variable": "TimeRemaining",
 												"value": "1"
 											}
 										}
 									],
-									"sid": 724860124895867
+									"sid": 844701403534666
 								}
 							]
 						}
@@ -7299,6 +7339,14 @@
 										"comparison": 0,
 										"second-value": "0"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "F_Snake",
+									"sid": 311297772205365,
+									"parameters": {
+										"instance-variable": "CanTouch"
+									}
 								}
 							],
 							"actions": [
@@ -7821,6 +7869,71 @@
 							"conditions": [],
 							"actions": [
 								{
+									"id": "stop-all-tweens",
+									"objectClass": "UI_redaura",
+									"sid": 698519592012673,
+									"behaviorType": "Tween"
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "UI_redaura",
+									"sid": 998106128626818,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"warning_open\"",
+										"property": "offsetOpacity",
+										"end-value": "100",
+										"time": "0.1",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 475867813997167,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 720844843946001,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "UI_redaura",
+											"sid": 993742788358094,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"warning_close\"",
+												"property": "offsetOpacity",
+												"end-value": "0",
+												"time": "0.1",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 384832445407372
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
 									"sid": 903559600790676,
@@ -7958,11 +8071,12 @@
 											}
 										},
 										{
-											"id": "set-scale",
+											"id": "set-size",
 											"objectClass": "HUD_heart",
-											"sid": 433334576999007,
+											"sid": 377606598355208,
 											"parameters": {
-												"scale": "0.1"
+												"width": "55",
+												"height": "40"
 											}
 										}
 									],
@@ -8319,6 +8433,15 @@
 						}
 					],
 					"sid": 677004420041689
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Loading_Layer",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [],
+					"sid": 477189302945458
 				}
 			],
 			"sid": 403058626511012

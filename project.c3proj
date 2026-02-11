@@ -221,7 +221,8 @@
 			"SnakeTail",
 			"SnakeHead",
 			"SnakeEyes",
-			"Snake_Solid"
+			"Snake_Solid",
+			"Sprite"
 		],
 		"subfolders": [
 			{

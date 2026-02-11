@@ -361,7 +361,7 @@
 					},
 					"uid": 6,
 					"sid": 166870556303603,
-					"tags": "",
+					"tags": "fade_loadingBG",
 					"instanceVariables": {},
 					"behaviors": {
 						"Tween": {
@@ -377,10 +377,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2048,
-						"y": 755,
+						"x": -694,
+						"y": 961,
 						"width": 1086,
-						"height": 1922,
+						"height": 1940,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -420,10 +420,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2050,
-						"y": 744,
-						"width": 1071,
-						"height": 1912,
+						"x": -678,
+						"y": 943,
+						"width": 1063,
+						"height": 1934,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -447,7 +447,7 @@
 					},
 					"uid": 179,
 					"sid": 562878040085897,
-					"tags": "",
+					"tags": "fade_loadingBG",
 					"instanceVariables": {},
 					"behaviors": {
 						"Tween": {
@@ -463,10 +463,47 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2079,
-						"y": 147,
-						"width": 939.9999999999999,
-						"height": 453.00000000000006,
+						"x": -700.5,
+						"y": 642,
+						"width": 903,
+						"height": 365,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HUD_barBG",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 130,
+					"sid": 936096600398972,
+					"tags": "fade_loadingBG",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 936096600398972,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -695.5,
+						"y": 1461,
+						"width": 525,
+						"height": 79,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -500,7 +537,7 @@
 					},
 					"uid": 188,
 					"sid": 437551041585148,
-					"tags": "",
+					"tags": "fade_loadingBG",
 					"instanceVariables": {},
 					"behaviors": {
 						"Tween": {
@@ -544,10 +581,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1796,
-						"y": 947,
+						"x": -948,
+						"y": 1428,
 						"width": 510,
-						"height": 57,
+						"height": 58,
 						"originX": 0,
 						"originY": 0,
 						"color": [
