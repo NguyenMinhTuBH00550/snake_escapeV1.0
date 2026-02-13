@@ -2,6 +2,22 @@
 	"name": "es_global",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "E_Responsive"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "E_Dialog"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "E_Particle"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "E_GA"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -34,10 +50,18 @@
 							"id": "set-layer-visible",
 							"objectClass": "System",
 							"sid": 838677493822804,
+							"disabled": true,
 							"parameters": {
 								"layer": "\"fade\"",
 								"visibility": "invisible"
 							}
+						},
+						{
+							"callFunction": "closeDialog",
+							"sid": 772150318632694,
+							"parameters": [
+								"\"\""
+							]
 						}
 					],
 					"sid": 657339042161925,
@@ -300,11 +324,11 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
-			"sid": 432749902134118
+			"sid": 117978508117933
 		},
 		{
 			"eventType": "group",
-			"disabled": true,
+			"disabled": false,
 			"title": "Fader",
 			"description": "",
 			"isActiveOnStart": true,
@@ -322,7 +346,7 @@
 							"type": "number",
 							"initialValue": "100",
 							"comment": "",
-							"sid": 979864614646922
+							"sid": 170531453278948
 						}
 					],
 					"eventType": "function-block",
@@ -331,7 +355,7 @@
 						{
 							"id": "stop-tweens",
 							"objectClass": "GameManager",
-							"sid": 858519960498075,
+							"sid": 653784299238293,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"FaderStart\""
@@ -340,7 +364,7 @@
 						{
 							"id": "tween-value",
 							"objectClass": "GameManager",
-							"sid": 977059639640141,
+							"sid": 641903577753337,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"FaderStart\"",
@@ -355,8 +379,7 @@
 							}
 						}
 					],
-					"sid": 152725971525379,
-					"disabled": true,
+					"sid": 274801497961586,
 					"children": [
 						{
 							"eventType": "block",
@@ -364,7 +387,7 @@
 								{
 									"id": "evaluate-expression",
 									"objectClass": "System",
-									"sid": 764882394435983,
+									"sid": 693263285514799,
 									"parameters": {
 										"value": "LayoutName <> \"Loading\""
 									}
@@ -374,7 +397,7 @@
 								{
 									"id": "set-width",
 									"objectClass": "HUD_tileLoading",
-									"sid": 755686941804052,
+									"sid": 609222945397110,
 									"parameters": {
 										"width": "Self.ImageWidth*0.01"
 									}
@@ -382,7 +405,7 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "HUD_tileLoading",
-									"sid": 419064624192797,
+									"sid": 518417508727595,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"\"",
@@ -397,8 +420,7 @@
 									}
 								}
 							],
-							"sid": 477275334611645,
-							"disabled": true
+							"sid": 966727748513637
 						}
 					]
 				},
@@ -416,7 +438,7 @@
 						{
 							"id": "stop-tweens",
 							"objectClass": "GameManager",
-							"sid": 619958245894908,
+							"sid": 674497246635079,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"FaderStart\""
@@ -425,7 +447,7 @@
 						{
 							"id": "tween-value",
 							"objectClass": "GameManager",
-							"sid": 111736403596943,
+							"sid": 899162220794783,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"FaderStart\"",
@@ -440,8 +462,7 @@
 							}
 						}
 					],
-					"sid": 294836393866485,
-					"disabled": true
+					"sid": 464775636997347
 				},
 				{
 					"eventType": "block",
@@ -449,7 +470,7 @@
 						{
 							"id": "is-playing",
 							"objectClass": "GameManager",
-							"sid": 820393480876169,
+							"sid": 220257483221939,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"FaderStart\""
@@ -460,224 +481,17 @@
 						{
 							"id": "set-layer-opacity",
 							"objectClass": "System",
-							"sid": 721891353706589,
+							"sid": 135438249505689,
 							"parameters": {
 								"layer": "LAYER_FADER",
 								"opacity": "GameManager.Tween.Value(\"FaderStart\")"
 							}
 						}
 					],
-					"sid": 175856166897320,
-					"disabled": true
+					"sid": 492746711789315
 				}
 			],
-			"sid": 130113654796681
-		},
-		{
-			"eventType": "group",
-			"disabled": true,
-			"title": "Responsive",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "variable",
-					"name": "widthScreen",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": true,
-					"isConstant": false,
-					"sid": 331449486480205
-				},
-				{
-					"eventType": "variable",
-					"name": "heightScreen",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": true,
-					"isConstant": false,
-					"sid": 291092834816347
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 327944582239275
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "Responsive",
-							"sid": 501525093820746
-						}
-					],
-					"sid": 443812357725923,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 599315581806589,
-							"parameters": {
-								"interval-seconds": "0.1"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 684314814690241,
-							"parameters": {
-								"variable": "widthScreen",
-								"comparison": 1,
-								"value": "ViewportWidth(0)"
-							}
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "Responsive",
-							"sid": 950493704892783
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 340024254299142,
-							"parameters": {
-								"variable": "widthScreen",
-								"value": "ViewportWidth(0)"
-							}
-						}
-					],
-					"sid": 814924929945065,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 148504608680751,
-							"parameters": {
-								"interval-seconds": "0.1"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 800738295047342,
-							"parameters": {
-								"variable": "heightScreen",
-								"comparison": 1,
-								"value": "ViewportHeight(0)"
-							}
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "Responsive",
-							"sid": 960877511071351
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 422805985289105,
-							"parameters": {
-								"variable": "heightScreen",
-								"value": "ViewportHeight(0)"
-							}
-						}
-					],
-					"sid": 233837522107667,
-					"disabled": true
-				},
-				{
-					"functionName": "Responsive",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-size",
-							"objectClass": "HUD_BG_loading",
-							"sid": 279909117107567,
-							"parameters": {
-								"width": "ViewportWidth(0)",
-								"height": "ViewportHeight(0)"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "HUD_BG_loading",
-							"sid": 933734045543522,
-							"parameters": {
-								"x": "LayoutWidth*0.5",
-								"y": "LayoutHeight*0.5"
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "HUD_layout_level",
-							"sid": 963006813126389,
-							"parameters": {
-								"width": "ViewportWidth(0)",
-								"height": "ViewportHeight(0)"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "HUD_layout_level",
-							"sid": 639063774593386,
-							"parameters": {
-								"x": "LayoutWidth*0.5",
-								"y": "LayoutHeight*0.5"
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "HUD_home_adbar",
-							"sid": 597349025151064,
-							"parameters": {
-								"width": "ViewportWidth(0)",
-								"height": "HUD_home_adbar.Height"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "HUD_home_adbar",
-							"sid": 364816921589368,
-							"parameters": {
-								"x": "LayoutWidth*0.5",
-								"y": "Self.Y"
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "UI_redaura",
-							"sid": 399376255219256,
-							"parameters": {
-								"width": "ViewportWidth(0)",
-								"height": "ViewportHeight(0)"
-							}
-						}
-					],
-					"sid": 378192353741523,
-					"disabled": true
-				}
-			],
-			"sid": 549995622938974
+			"sid": 833894339197284
 		}
 	],
 	"sid": 667786211939097

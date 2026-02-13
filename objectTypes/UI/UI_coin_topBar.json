@@ -10,23 +10,17 @@
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 966326817426918
+			"sid": 421596741303134
 		},
 		{
 			"name": "initHeight",
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 683817004623114
+			"sid": 639773265122782
 		}
 	],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 897493077869008
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [

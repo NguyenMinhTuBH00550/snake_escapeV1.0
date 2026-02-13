@@ -184,6 +184,26 @@
 							"sid": 451392157256977
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 298003296015065,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "hideFader",
+							"sid": 269387162625778
+						}
+					],
+					"sid": 574297336614207
 				}
 			]
 		},
@@ -206,24 +226,84 @@
 					],
 					"actions": [
 						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 437179748744893,
+							"parameters": {
+								"variable": "TimeRemaining"
+							}
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 259280841097523,
+							"sid": 860315456226014,
+							"parameters": {
+								"variable": "Lives",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 291364961638089,
+							"parameters": {
+								"variable": "IsTimerRunning",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 298803763096020,
+							"parameters": {
+								"variable": "HintIndex",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 990875955210698,
 							"parameters": {
 								"variable": "NextLayout",
 								"value": "\"Level\""
 							}
-						},
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 203397408222359,
-							"parameters": {
-								"layout": "level"
-							}
 						}
 					],
-					"sid": 322674816031204
+					"sid": 322674816031204,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"callFunction": "showFader",
+									"sid": 391436665951677,
+									"parameters": [
+										"100"
+									]
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 321464120190650,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 375135725561308,
+									"parameters": {
+										"layout": "level"
+									}
+								}
+							],
+							"sid": 225088306938249
+						}
+					]
 				}
 			],
 			"sid": 992932701751427
@@ -268,10 +348,18 @@
 									"id": "set-layer-visible",
 									"objectClass": "System",
 									"sid": 275458739310746,
+									"disabled": true,
 									"parameters": {
 										"layer": "\"fade\"",
 										"visibility": "visible"
 									}
+								},
+								{
+									"callFunction": "openDialog",
+									"sid": 384426473392622,
+									"parameters": [
+										"\"\""
+									]
 								}
 							],
 							"sid": 842321542290707
@@ -305,10 +393,18 @@
 									"id": "set-layer-visible",
 									"objectClass": "System",
 									"sid": 611564025160269,
+									"disabled": true,
 									"parameters": {
 										"layer": "\"fade\"",
 										"visibility": "invisible"
 									}
+								},
+								{
+									"callFunction": "closeDialog",
+									"sid": 440179357729724,
+									"parameters": [
+										"\"\""
+									]
 								}
 							],
 							"sid": 557820049213984
@@ -1309,10 +1405,18 @@
 							"id": "set-layer-visible",
 							"objectClass": "System",
 							"sid": 430997747941492,
+							"disabled": true,
 							"parameters": {
 								"layer": "\"fade\"",
 								"visibility": "visible"
 							}
+						},
+						{
+							"callFunction": "openDialog",
+							"sid": 829007890015538,
+							"parameters": [
+								"\"\""
+							]
 						}
 					],
 					"sid": 393899755508327
@@ -1338,10 +1442,18 @@
 							"id": "set-layer-visible",
 							"objectClass": "System",
 							"sid": 504998800679198,
+							"disabled": true,
 							"parameters": {
 								"layer": "\"fade\"",
 								"visibility": "invisible"
 							}
+						},
+						{
+							"callFunction": "closeDialog",
+							"sid": 382411738067152,
+							"parameters": [
+								"\"\""
+							]
 						}
 					],
 					"sid": 734760907749257

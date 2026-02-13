@@ -1,0 +1,23 @@
+{
+	"name": "Fireword_PTC",
+	"plugin-id": "Particles",
+	"sid": 884711118428079,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 33,
+		"height": 33,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 7672518,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

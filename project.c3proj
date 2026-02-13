@@ -36,13 +36,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "InstantGames",
-			"name": "Instant Games",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Json",
 			"name": "JSON",
 			"author": "Scirra",
@@ -66,6 +59,13 @@
 			"type": "plugin",
 			"id": "Mouse",
 			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -205,8 +205,8 @@
 	"uniqueId": "17juoc9txi6",
 	"objectTypes": {
 		"items": [
-			"sactx12048x2048ASTC6x6gameatlas42e01cac",
-			"Sprite"
+			"TiledBackground",
+			"9patch"
 		],
 		"subfolders": [
 			{
@@ -228,14 +228,7 @@
 					"HUD_setting_BA",
 					"HUD_booster_frame",
 					"HUD_outLive",
-					"BG_shop",
-					"HUD_challenge_BG",
-					"HUD_challenge_panel",
-					"HUD_home_adbar",
-					"HUD_popup_noads_btn",
-					"HUD_popup_noads_frame",
-					"HUD_popup_noads_panel",
-					"HUD_popup_noads_ribbo"
+					"BG_shop"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -329,8 +322,8 @@
 					"UI_btn_booster",
 					"UI_btn_resume",
 					"UI_redaura",
-					"UI_nextLevel_btn",
-					"UI_btn_WinX2",
+					"UI_lose_btn_playon",
+					"WinGameX2_BTN",
 					"UI_txt_endgame",
 					"UI_btn_home",
 					"winning_BG",
@@ -368,10 +361,24 @@
 					"UI_popup_noads_icon",
 					"UI_popup_noads_tagsale",
 					"UI_popup_noads_X",
+					"fade_layout",
+					"hint_tile",
+					"HUD_challenge_BG",
+					"HUD_challenge_panel",
+					"HUD_home_adbar",
+					"HUD_popup_noads_btn",
+					"HUD_popup_noads_frame",
+					"HUD_popup_noads_panel",
+					"HUD_popup_noads_ribbo",
+					"LY_Challenge",
+					"LY_Home",
+					"LY_shop",
 					"play_zoombar_btnzoomin",
 					"play_zoombar_btnzoomou",
 					"play_zoombar_frame",
 					"play_zoombar_slide",
+					"sactx12048x2048ASTC6x6gameatlas42e01cac",
+					"Snake_Solid",
 					"SnakeBody",
 					"SnakeEyes",
 					"SnakeHead",
@@ -386,14 +393,7 @@
 					"Grid_Dot",
 					"snake_body",
 					"snake_head",
-					"Snake_Checkpoint",
-					"fade_layout",
-					"hint_tile",
-					"LY_Challenge",
-					"LY_Home",
-					"LY_shop",
-					"navigation",
-					"Snake_Solid"
+					"Snake_Checkpoint"
 				],
 				"subfolders": [],
 				"name": "Spite"
@@ -401,8 +401,7 @@
 			{
 				"items": [
 					"DIcSaveGame",
-					"Dic_Level",
-					"Dic_GameManagerplayerID"
+					"Dic_Level"
 				],
 				"subfolders": [],
 				"name": "Dic"
@@ -446,19 +445,41 @@
 			},
 			{
 				"items": [
-					"AJAX",
-					"Anchor",
-					"Browser",
-					"InstantGames",
-					"Keyboard",
-					"LocalStorage",
-					"Mouse",
-					"ProUI",
-					"Touch",
-					"GameManager"
+					"Anchor"
 				],
-				"subfolders": [],
-				"name": "System"
+				"subfolders": [
+					{
+						"items": [
+							"DICT_GameManager"
+						],
+						"subfolders": [],
+						"name": "Dict"
+					},
+					{
+						"items": [
+							"InstantGame",
+							"AJAX",
+							"Browser",
+							"Keyboard",
+							"LocalStorage",
+							"Mouse",
+							"ProUI",
+							"Touch",
+							"GameManager"
+						],
+						"subfolders": [],
+						"name": "System"
+					},
+					{
+						"items": [
+							"Fireword_PTC",
+							"PhaoHoa"
+						],
+						"subfolders": [],
+						"name": "Particle"
+					}
+				],
+				"name": "hhg"
 			}
 		]
 	},
@@ -467,7 +488,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"F_Snake"
+			"F_Snake",
+			"F_Tween"
 		],
 		"subfolders": []
 	},
@@ -507,12 +529,20 @@
 			"es_loading",
 			"es_global",
 			"es_game",
-			"es_home",
-			"es_GA",
-			"es_Particle",
-			"es_Dialog"
+			"es_home"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"E_Responsive",
+					"E_Dialog",
+					"E_GA",
+					"E_Particle"
+				],
+				"subfolders": [],
+				"name": "E_"
+			}
+		]
 	},
 	"rootFileFolders": {
 		"script": {
@@ -759,7 +789,7 @@
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-scale",
+		"fullscreenMode": "scale-outer",
 		"fullscreenQuality": "high",
 		"viewportFit": "auto",
 		"backgroundColor": [

@@ -24,7 +24,7 @@
 							"properties": {
 								"left-edge": "window-left",
 								"top-edge": "window-top",
-								"right-edge": "window-right",
+								"right-edge": "none",
 								"bottom-edge": "none",
 								"enabled": true
 							}
@@ -83,7 +83,7 @@
 					"locked": false,
 					"world": {
 						"x": 256,
-						"y": 163,
+						"y": 39,
 						"width": 50.63295055631581,
 						"height": 49.843934075087745,
 						"originX": 0.5,
@@ -116,7 +116,7 @@
 							"properties": {
 								"left-edge": "window-left",
 								"top-edge": "window-top",
-								"right-edge": "window-right",
+								"right-edge": "none",
 								"bottom-edge": "none",
 								"enabled": true
 							}
@@ -175,7 +175,7 @@
 					"locked": false,
 					"world": {
 						"x": 113,
-						"y": 165,
+						"y": 34,
 						"width": 50.63295055631581,
 						"height": 49.843934075087745,
 						"originX": 0.5,
@@ -224,9 +224,9 @@
 									"x": true,
 									"y": true,
 									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
+									"w": false,
+									"h": false,
+									"a": false,
 									"o": false,
 									"v": false,
 									"d": true,
@@ -267,7 +267,7 @@
 					"locked": false,
 					"world": {
 						"x": 545,
-						"y": 172,
+						"y": 91,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -359,7 +359,7 @@
 					"locked": false,
 					"world": {
 						"x": 554,
-						"y": 300,
+						"y": 219,
 						"width": 24.788064496935725,
 						"height": 22.697506991134574,
 						"originX": 0.5,
@@ -456,8 +456,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 110.14169427732135,
-						"y": 167.995013327678,
+						"x": 110,
+						"y": 87,
 						"width": 120,
 						"height": 100,
 						"originX": 0.5,
@@ -554,8 +554,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 251.3705387810374,
-						"y": 168.33373260390934,
+						"x": 251,
+						"y": 87,
 						"width": 122,
 						"height": 100,
 						"originX": 0.5,
@@ -591,7 +591,7 @@
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": null,
+						"parent-uid": 420,
 						"uid": 195,
 						"children": [
 							{
@@ -642,8 +642,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 979.7482681561339,
-						"y": 170.79143110384632,
+						"x": 980,
+						"y": 89,
 						"width": 113,
 						"height": 96,
 						"originX": 0.5,
@@ -741,9 +741,9 @@
 							"x": true,
 							"y": true,
 							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
+							"w": false,
+							"h": false,
+							"a": false,
 							"o": false,
 							"v": false,
 							"d": true,
@@ -769,8 +769,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 544.1206845553432,
-						"y": 183.07316208386297,
+						"x": 544,
+						"y": 102,
 						"width": 393.00000000000006,
 						"height": 128,
 						"originX": 0.5,
@@ -866,7 +866,7 @@
 					"locked": false,
 					"world": {
 						"x": 471,
-						"y": 132,
+						"y": 51,
 						"width": 142,
 						"height": 41,
 						"originX": 0,
@@ -967,8 +967,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 844.3237190979387,
-						"y": 172.87422418617518,
+						"x": 849,
+						"y": 92,
 						"width": 152,
 						"height": 61.52207837498895,
 						"originX": 0.5,
@@ -1049,8 +1049,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2320,
-						"y": 85,
+						"x": 1909,
+						"y": 1156,
 						"width": 736.0000000000001,
 						"height": 192,
 						"originX": 0.5,
@@ -1130,8 +1130,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2132.5,
-						"y": 46,
+						"x": 1721.5,
+						"y": 1117,
 						"width": 384,
 						"height": 64,
 						"originX": 0,
@@ -1824,8 +1824,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 467.72495238800747,
-						"y": 204,
+						"x": 468,
+						"y": 123,
 						"width": 61,
 						"height": 42,
 						"originX": 0.5,
@@ -1897,8 +1897,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 467.73703788610123,
-						"y": 204.13264114526055,
+						"x": 468,
+						"y": 123,
 						"width": 53,
 						"height": 37,
 						"originX": 0.5,
@@ -1979,8 +1979,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 543.7249523880074,
-						"y": 203.5,
+						"x": 544,
+						"y": 122,
 						"width": 61,
 						"height": 43,
 						"originX": 0.5,
@@ -2052,8 +2052,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 543.8929612661391,
-						"y": 204.13264114526055,
+						"x": 544,
+						"y": 123,
 						"width": 54,
 						"height": 39,
 						"originX": 0.5,
@@ -2134,8 +2134,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 619.2249523880074,
-						"y": 203,
+						"x": 619,
+						"y": 122,
 						"width": 62,
 						"height": 44,
 						"originX": 0.5,
@@ -2208,7 +2208,7 @@
 					"locked": false,
 					"world": {
 						"x": 619,
-						"y": 204,
+						"y": 123,
 						"width": 55,
 						"height": 40.00000000000001,
 						"originX": 0.5,
@@ -2304,8 +2304,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 555.8886379173722,
-						"y": 300.0618996768741,
+						"x": 556,
+						"y": 219,
 						"width": 193,
 						"height": 57,
 						"originX": 0.5,
@@ -2369,8 +2369,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 471.43515843193927,
-						"y": 299.2453990000731,
+						"x": 471,
+						"y": 218,
 						"width": 75,
 						"height": 61,
 						"originX": 0.5,
@@ -2466,7 +2466,7 @@
 					"locked": false,
 					"world": {
 						"x": 514,
-						"y": 282,
+						"y": 201,
 						"width": 119,
 						"height": 40,
 						"originX": 0,
@@ -3046,6 +3046,81 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Anchor",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 421,
+					"sid": 803986042958608,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-right",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 421,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 803986042958608,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -248,
+						"y": -267,
+						"width": 50.63295055631581,
+						"height": 49.843934075087745,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 133412256323460,
@@ -3076,6 +3151,40 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": true
+		},
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 604986970161808,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
 		}
 	],
 	"scene-graphs-folder-root": {

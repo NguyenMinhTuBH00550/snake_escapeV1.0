@@ -3012,8 +3012,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1399,
-						"y": -244,
+						"x": 163,
+						"y": -1094,
 						"width": 331,
 						"height": 617,
 						"originX": 0.5,
@@ -3151,7 +3151,7 @@
 					}
 				},
 				{
-					"type": "UI_btn_WinX2",
+					"type": "WinGameX2_BTN",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3221,7 +3221,7 @@
 					}
 				},
 				{
-					"type": "UI_nextLevel_btn",
+					"type": "UI_lose_btn_playon",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3265,20 +3265,6 @@
 								"parent-name": "",
 								"parent-layer": false
 							}
-						},
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 4,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 50,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
 						}
 					},
 					"instanceFolderItem": {
@@ -3290,8 +3276,8 @@
 					"world": {
 						"x": 1451,
 						"y": 350,
-						"width": 413,
-						"height": 115,
+						"width": 333.00961538461536,
+						"height": 126.28504672897196,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3412,11 +3398,6 @@
 								"enabled": true,
 								"live-preview": false
 							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
 						}
 					},
 					"instanceFolderItem": {
@@ -3426,8 +3407,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1603,
-						"y": -337,
+						"x": 1965.1781710797545,
+						"y": -355.697538836998,
 						"width": 26,
 						"height": 31,
 						"originX": 0.5,
@@ -3445,28 +3426,28 @@
 				{
 					"type": "Particles",
 					"properties": {
-						"rate": 32,
-						"spray-cone": 360,
+						"rate": 50,
+						"spray-cone": 60,
 						"type": "one-shot",
 						"object": 280736141983048,
 						"initially-visible": true,
 						"live-preview": false,
-						"speed": 500,
-						"size": 64,
+						"speed": 450,
+						"size": 20,
 						"opacity": 100,
 						"grow-rate": 0,
-						"x-randomiser": 360,
-						"y-randomiser": 360,
+						"x-randomiser": 200,
+						"y-randomiser": 0,
 						"initial-speed-randomiser": 0,
-						"size-randomiser": 32,
+						"size-randomiser": 0,
 						"grow-rate-randomiser": 0,
 						"acceleration": -150,
-						"gravity": 800,
-						"angle-randomiser": 1,
-						"life-speed-randomiser": 0,
+						"gravity": 250,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
 						"opacity-randomiser": 0,
 						"destroy-mode": "timeout-expired",
-						"timeout": 6
+						"timeout": 5
 					},
 					"uid": 185,
 					"sid": 940987725868094,
@@ -3480,8 +3461,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1725,
-						"y": -337,
+						"x": 1808.1001491272568,
+						"y": -339.07749844481623,
 						"width": 100,
 						"height": 100,
 						"originX": 0,
@@ -5131,7 +5112,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"Delay": 0,
-						"Coin": 0
+						"coin": 0
 					},
 					"behaviors": {
 						"Tween": {
@@ -5140,6 +5121,165 @@
 							}
 						}
 					},
+					"template": {
+						"mode": "template",
+						"templateName": "coin_bung",
+						"sourceTemplateName": "",
+						"replicaHierarchyInSyncWithTemplate": false,
+						"templatePropagateHierarchyChanges": true,
+						"replicaIgnoreTemplateHierarchyChanges": false,
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "Delay",
+												"state": true
+											},
+											{
+												"iv": "coin",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "Tween",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						],
+						"replicasUIDs": null
+					},
 					"instanceFolderItem": {
 						"sid": 938008093894096,
 						"expanded": true
@@ -5147,10 +5287,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 430,
-						"y": 597,
-						"width": 53,
-						"height": 55,
+						"x": 384,
+						"y": 768,
+						"width": 104,
+						"height": 105,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -8134,26 +8274,41 @@
 					}
 				},
 				{
-					"type": "navigation",
+					"type": "PhaoHoa",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
-					"uid": 391,
-					"sid": 395207283694895,
+					"uid": 2,
+					"sid": 796937981764850,
 					"tags": "",
-					"instanceVariables": {
-						"last_x": 0,
-						"last_y": 0,
-						"touch_count": 0,
-						"touch_for_selected_arrow_x": 0,
-						"touch_for_selected_arrow_y": 0,
-						"last_width": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 0.6,
+								"period-random": 0.6,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 50,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 158,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
 						"Tween": {
 							"properties": {
 								"enabled": true
@@ -8161,17 +8316,17 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 395207283694895,
+						"sid": 796937981764850,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 856,
-						"y": 715,
-						"width": 64,
-						"height": 28,
-						"originX": 0,
+						"x": 1946,
+						"y": -209,
+						"width": 43.05882352941177,
+						"height": 43.05882352941177,
+						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -8184,40 +8339,48 @@
 					}
 				},
 				{
-					"type": "GameManager",
+					"type": "Fireword_PTC",
 					"properties": {
+						"rate": 32,
+						"spray-cone": 360,
+						"type": "one-shot",
+						"object": 280736141983048,
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"live-preview": false,
+						"speed": 500,
+						"size": 64,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 360,
+						"y-randomiser": 360,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 32,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 400,
+						"angle-randomiser": 1,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 6
 					},
-					"uid": 399,
-					"sid": 198113138098621,
+					"uid": 365,
+					"sid": 913251418480471,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Timer": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 198113138098621,
+						"sid": 913251418480471,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1365,
-						"y": -670,
-						"width": 60,
-						"height": 60,
-						"originX": 0.5,
+						"x": 1745,
+						"y": -219,
+						"width": 122,
+						"height": 100,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -8225,7 +8388,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 6.283143952396929,
 						"zElevation": 0
 					}
 				}

@@ -2,6 +2,10 @@
 	"name": "es_loading",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "es_global"
+		},
+		{
 			"eventType": "variable",
 			"name": "LOCAL_TAG",
 			"type": "string",
@@ -217,7 +221,7 @@
 				{
 					"id": "set-width",
 					"objectClass": "HUD_tileLoading",
-					"sid": 471867875672237,
+					"sid": 361578367717113,
 					"parameters": {
 						"width": "Self.ImageWidth*0.01"
 					}
@@ -225,7 +229,7 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "HUD_tileLoading",
-					"sid": 138905318995150,
+					"sid": 546881795692486,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
@@ -282,19 +286,19 @@
 				{
 					"id": "load",
 					"objectClass": "DIcSaveGame",
-					"sid": 835907887515936,
+					"sid": 629791993282922,
 					"parameters": {
 						"json": "LocalStorage.ItemValue"
 					}
 				},
 				{
 					"callFunction": "int_SAVE_GAME",
-					"sid": 952330448191283
+					"sid": 403401732537403
 				},
 				{
 					"id": "set-width",
 					"objectClass": "HUD_tileLoading",
-					"sid": 905584527698655,
+					"sid": 361578367717113,
 					"parameters": {
 						"width": "Self.ImageWidth*0.01"
 					}
@@ -302,7 +306,7 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "HUD_tileLoading",
-					"sid": 916933244111054,
+					"sid": 546881795692486,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
@@ -325,7 +329,7 @@
 				{
 					"id": "on-tweens-finished",
 					"objectClass": "HUD_tileLoading",
-					"sid": 854686764564214,
+					"sid": 449599668375302,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\""
@@ -334,27 +338,8 @@
 			],
 			"actions": [
 				{
-					"id": "tween-two-properties",
-					"objectClass": "HUD_logo",
-					"sid": 795459386928415,
-					"disabled": true,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"logo_pop\"",
-						"property": "scale",
-						"end-x": "1.3",
-						"end-y": "1.3",
-						"time": "0.25",
-						"ease": "easeoutback",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				},
-				{
 					"callFunction": "showFader",
-					"sid": 808053482984860,
+					"sid": 966555801721438,
 					"parameters": [
 						"100"
 					]
@@ -362,7 +347,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 200981763390035,
+					"sid": 504874612421484,
 					"parameters": {
 						"seconds": "0.5",
 						"use-timescale": true
@@ -371,13 +356,13 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 202762296742755,
+					"sid": 852359824718126,
 					"parameters": {
 						"layout": "Home"
 					}
 				}
 			],
-			"sid": 642226745494811
+			"sid": 142436801467045
 		},
 		{
 			"functionName": "int_SAVE_GAME",

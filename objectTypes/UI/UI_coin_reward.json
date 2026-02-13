@@ -13,11 +13,11 @@
 			"sid": 518999411005474
 		},
 		{
-			"name": "Coin",
+			"name": "coin",
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 121072010901008
+			"sid": 511354527782548
 		}
 	],
 	"behaviorTypes": [

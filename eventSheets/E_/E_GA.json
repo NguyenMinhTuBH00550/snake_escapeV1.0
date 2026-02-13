@@ -1,0 +1,149 @@
+{
+	"name": "E_GA",
+	"events": [
+		{
+			"functionName": "blockUserSendGA",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 565123256552956,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 272713239181644,
+							"parameters": {
+								"value": "DICT_GameManager.playerID <> \"25118301344493971\" &\nDICT_GameManager.playerID <> \"26071163565811447\"\n"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 153914323215246,
+							"parameters": {
+								"value": "0"
+							}
+						}
+					],
+					"sid": 644610228110941
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 407897990458298
+						}
+					],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 873205244845202,
+							"parameters": {
+								"value": "1"
+							}
+						}
+					],
+					"sid": 627034224839380
+				}
+			]
+		},
+		{
+			"functionName": "Gtag",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "log",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 883053878064872
+				},
+				{
+					"name": "parameter",
+					"type": "string",
+					"initialValue": "{}",
+					"comment": "",
+					"sid": 604778895461665
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 778757381243956,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "InstantGame",
+							"sid": 478284275185932,
+							"parameters": {
+								"instance-variable": "Available"
+							}
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 939686593897191,
+							"parameters": {
+								"value": "Functions.blockUserSendGA = 0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"gtag('event', localVars.log, JSON.parse(localVars.parameter))       "
+							]
+						}
+					],
+					"sid": 127968202682245
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 906259355691873
+						}
+					],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 845296957038238,
+							"parameters": {
+								"type": "log",
+								"message": "\"log = \" & log & newline & \"param = \" & parameter"
+							}
+						}
+					],
+					"sid": 904972591356078
+				}
+			]
+		}
+	],
+	"sid": 319326814801163
+}

@@ -1,0 +1,17 @@
+{
+	"name": "F_Tween",
+	"plugin-id": "Sprite",
+	"sid": 223620260120777,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 417384959991915
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"UI_coin_topBar"
+	]
+}

@@ -46,7 +46,7 @@
 			],
 			"sid": 376850975067786,
 			"effectTypes": [],
-			"isInitiallyVisible": true,
+			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
 			"color": [

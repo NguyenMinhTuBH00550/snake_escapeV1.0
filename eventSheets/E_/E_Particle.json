@@ -1,0 +1,75 @@
+{
+	"name": "E_Particle",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "PhaoHoa",
+					"sid": 496208446671786
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "PhaoHoa",
+					"sid": 727988994055500
+				}
+			],
+			"sid": 619953193464930,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "PhaoHoa",
+							"sid": 811274093333669,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"speed": "choose(158,-159)"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "PhaoHoa",
+							"sid": 365326813420568,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "PhaoHoa",
+							"sid": 773961738721319,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PhaoHoa",
+							"sid": 469112694095978,
+							"parameters": {
+								"frame-number": "int(random(0,Self.AnimationFrameCount))"
+							}
+						}
+					],
+					"sid": 619450208253245
+				}
+			]
+		}
+	],
+	"sid": 520799174625973
+}

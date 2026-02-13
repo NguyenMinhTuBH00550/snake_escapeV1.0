@@ -10,11 +10,6 @@
 			"behaviorId": "Rotate",
 			"name": "Rotate",
 			"sid": 158073227193120
-		},
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 556979440762446
 		}
 	],
 	"effectTypes": [],

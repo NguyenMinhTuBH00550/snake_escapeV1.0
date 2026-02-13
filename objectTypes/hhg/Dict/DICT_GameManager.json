@@ -1,0 +1,149 @@
+{
+	"name": "DICT_GameManager",
+	"plugin-id": "Dictionary",
+	"sid": 323372300318842,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "device",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 614603890494408
+		},
+		{
+			"name": "jsonDebug",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 139840580599013
+		},
+		{
+			"name": "language",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 575239767312460
+		},
+		{
+			"name": "canSaveGame",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 127632704861463
+		},
+		{
+			"name": "playBySharing",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 168417087250904
+		},
+		{
+			"name": "building",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 695119995106651
+		},
+		{
+			"name": "heartInfinity",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 621187140928979
+		},
+		{
+			"name": "loseVolcanoStreak",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 984842751136943
+		},
+		{
+			"name": "loseSkyStreak",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 582133200824257
+		},
+		{
+			"name": "hexCollect",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 895569935186019
+		},
+		{
+			"name": "endRacing",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 789021893527908
+		},
+		{
+			"name": "winTreasureTrailStreak",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 379657257464779
+		},
+		{
+			"name": "playerID",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 389086591321176
+		},
+		{
+			"name": "playerAvatar",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 972093550372704
+		},
+		{
+			"name": "mode",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 180379968357898
+		},
+		{
+			"name": "tourContextID",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 977092259853090
+		},
+		{
+			"name": "tourName",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 976826531804357
+		},
+		{
+			"name": "tourEndTime",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 772113735242948
+		},
+		{
+			"name": "tourLevel",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 979743992329879
+		},
+		{
+			"name": "iapAvailable",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 306349549352723
+		}
+	]
+}

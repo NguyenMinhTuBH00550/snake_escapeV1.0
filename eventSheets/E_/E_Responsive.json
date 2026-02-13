@@ -1,0 +1,208 @@
+{
+	"name": "E_Responsive",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Responsive",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "widthScreen",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 119145741343547
+				},
+				{
+					"eventType": "variable",
+					"name": "heightScreen",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 268937560140756
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 791444014495961
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Responsive",
+							"sid": 660592219519402
+						}
+					],
+					"sid": 200990756728771
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 400609022698564,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 535046029691995,
+							"parameters": {
+								"variable": "widthScreen",
+								"comparison": 1,
+								"value": "ViewportWidth(0)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Responsive",
+							"sid": 961173285389796
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 927651628299041,
+							"parameters": {
+								"variable": "widthScreen",
+								"value": "ViewportWidth(0)"
+							}
+						}
+					],
+					"sid": 481179698796900
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 298455703986705,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 548843308256621,
+							"parameters": {
+								"variable": "heightScreen",
+								"comparison": 1,
+								"value": "ViewportHeight(0)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Responsive",
+							"sid": 741004519872462
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 589703466417160,
+							"parameters": {
+								"variable": "heightScreen",
+								"value": "ViewportHeight(0)"
+							}
+						}
+					],
+					"sid": 461017300646547
+				},
+				{
+					"functionName": "Responsive",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "HUD_BG_loading",
+							"sid": 553820751648869,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "ViewportHeight(0)"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "HUD_BG_loading",
+							"sid": 877884624826580,
+							"parameters": {
+								"x": "LayoutWidth*0.5",
+								"y": "LayoutHeight*0.5"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "HUD_layout_level",
+							"sid": 633472168175011,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "ViewportHeight(0)"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "HUD_layout_level",
+							"sid": 400284452666085,
+							"parameters": {
+								"x": "LayoutWidth*0.5",
+								"y": "LayoutHeight*0.5"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "HUD_home_adbar",
+							"sid": 735785514003786,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "HUD_home_adbar.Height"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "HUD_home_adbar",
+							"sid": 818566990186264,
+							"parameters": {
+								"x": "LayoutWidth*0.5",
+								"y": "Self.Y"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "UI_redaura",
+							"sid": 211103163694689,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "ViewportHeight(0)"
+							}
+						}
+					],
+					"sid": 216150177941523
+				}
+			],
+			"sid": 854279332537065
+		}
+	],
+	"sid": 468396240775507
+}

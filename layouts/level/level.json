@@ -61,8 +61,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 539,
-						"y": 961.46875,
+						"x": 538,
+						"y": 967,
 						"width": 1085,
 						"height": 1928,
 						"originX": 0.5,
@@ -176,13 +176,13 @@
 			"global": false
 		},
 		{
-			"name": "fade",
-			"overriden": 1,
+			"name": "BlackLayerBottom",
+			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 674991231297896,
+			"sid": 902005683658065,
 			"effectTypes": [],
-			"isInitiallyVisible": true,
+			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
 			"color": [
@@ -192,14 +192,14 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				0,
+				0,
+				0,
 				1
 			],
-			"isTransparent": true,
-			"parallaxX": 0,
-			"parallaxY": 0,
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
@@ -207,7 +207,7 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
-			"global": false
+			"global": true
 		},
 		{
 			"name": "win_sceen",
@@ -349,255 +349,7 @@
 			"name": "loading",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "HUD_BG_loading",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 6,
-					"sid": 166870556303603,
-					"tags": "fade_loadingBG",
-					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 166870556303603,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": -694,
-						"y": 961,
-						"width": 1086,
-						"height": 1940,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "HUD_BG_loading",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 37,
-					"sid": 595917784105144,
-					"tags": "fade_loadingBG",
-					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 595917784105144,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": -678,
-						"y": 943,
-						"width": 1063,
-						"height": 1934,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "HUD_logo",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 179,
-					"sid": 562878040085897,
-					"tags": "fade_loadingBG",
-					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 562878040085897,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": -700.5,
-						"y": 642,
-						"width": 903,
-						"height": 365,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "HUD_barBG",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 130,
-					"sid": 936096600398972,
-					"tags": "fade_loadingBG",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 936096600398972,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": -695.5,
-						"y": 1461,
-						"width": 525,
-						"height": 79,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "HUD_tileLoading",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0,
-						"enable-tile-randomization": false,
-						"x-random": 1,
-						"y-random": 1,
-						"angle-random": 1,
-						"blend-margin-x": 0.1,
-						"blend-margin-y": 0.1
-					},
-					"uid": 188,
-					"sid": 437551041585148,
-					"tags": "fade_loadingBG",
-					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 188,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": false,
-							"w": true,
-							"h": false,
-							"a": false,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 437551041585148,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": -948,
-						"y": 1428,
-						"width": 510,
-						"height": 58,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 907770357417797,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -613,6 +365,40 @@
 				0.3686274509803922,
 				0.3686274509803922,
 				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Fader",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 493446250560609,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0,
+				0,
+				0,
 				1
 			],
 			"isTransparent": true,
@@ -671,20 +457,39 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "Dic_GameManagerplayerID",
+			"type": "DICT_GameManager",
 			"properties": {},
-			"uid": 389,
-			"sid": 593120195714008,
+			"uid": 188,
+			"sid": 388468747482743,
 			"tags": "",
 			"instanceVariables": {
-				"playerID": ""
+				"device": "",
+				"jsonDebug": "",
+				"language": "en-GB",
+				"canSaveGame": 0,
+				"playBySharing": 0,
+				"building": "",
+				"heartInfinity": 0,
+				"loseVolcanoStreak": 0,
+				"loseSkyStreak": 0,
+				"hexCollect": 0,
+				"endRacing": 0,
+				"winTreasureTrailStreak": 0,
+				"playerID": "",
+				"playerAvatar": 0,
+				"mode": "",
+				"tourContextID": "",
+				"tourName": "",
+				"tourEndTime": "",
+				"tourLevel": 0,
+				"iapAvailable": 0
 			}
 		}
 	],
 	"effectTypes": [],
 	"width": 1080,
 	"height": 1920,
-	"unboundedScrolling": false,
+	"unboundedScrolling": true,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",

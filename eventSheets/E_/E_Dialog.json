@@ -1,0 +1,352 @@
+{
+	"name": "E_Dialog",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "LAYER_BLACKLAYERBOTTOM",
+			"type": "string",
+			"initialValue": "BlackLayerBottom",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 356716938256080
+		},
+		{
+			"eventType": "variable",
+			"name": "LAYER_BLACKLAYERTOP",
+			"type": "string",
+			"initialValue": "BlackLayerTop",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 993685509170640
+		},
+		{
+			"functionName": "openDialog",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "dialogName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 509851680135558
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 784263405731330,
+					"parameters": {
+						"layer": "LAYER_BLACKLAYERBOTTOM",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "stop-tweens",
+					"objectClass": "GameManager",
+					"sid": 329809736664181,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerBottom\""
+					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "GameManager",
+					"sid": 340196396782524,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerBottom\"",
+						"start-value": "LayerOpacity(LAYER_BLACKLAYERBOTTOM)",
+						"end-value": "90",
+						"time": "0.3",
+						"ease": "easeoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 691118541725881,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 991298957543801,
+							"parameters": {
+								"value": "dialogName <> \"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Gtag",
+							"sid": 422760273067119,
+							"parameters": [
+								"\"popup_show\"",
+								"\"{\r\n  \"\"ui_name\"\" : \"\"\"&dialogName&\"\"\",\r\n  \"\"location\"\" : \"\"\"&dialogName&\"\"\"\r\n}\""
+							]
+						}
+					],
+					"sid": 669503675329082
+				}
+			]
+		},
+		{
+			"functionName": "closeDialog",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "dialogName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 194589322688502
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "stop-tweens",
+					"objectClass": "GameManager",
+					"sid": 818343059881648,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerBottom\""
+					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "GameManager",
+					"sid": 294877768865955,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerBottom\"",
+						"start-value": "LayerOpacity(LAYER_BLACKLAYERBOTTOM)",
+						"end-value": "0",
+						"time": "0.3",
+						"ease": "easeoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 791513045042410
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 506396551996736,
+					"parameters": {
+						"layer": "LAYER_BLACKLAYERBOTTOM",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 513915694265764,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 322807422723175,
+							"parameters": {
+								"value": "dialogName <> \"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Gtag",
+							"sid": 570096225776464,
+							"parameters": [
+								"\"popup_close\"",
+								"\"{\r\n  \"\"ui_name\"\" : \"\"\"&dialogName&\"\"\",\r\n  \"\"location\"\" : \"\"\"&dialogName&\"\"\"\r\n}\""
+							]
+						}
+					],
+					"sid": 601753645890345
+				}
+			]
+		},
+		{
+			"functionName": "openDialogTop",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 276757293968164,
+					"parameters": {
+						"layer": "LAYER_BLACKLAYERTOP",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "stop-tweens",
+					"objectClass": "GameManager",
+					"sid": 268722094860633,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerTop\""
+					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "GameManager",
+					"sid": 442146070963018,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerTop\"",
+						"start-value": "LayerOpacity(LAYER_BLACKLAYERTOP)",
+						"end-value": "85",
+						"time": "0.3",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 540551506244913
+		},
+		{
+			"functionName": "closeDialogTop",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "stop-tweens",
+					"objectClass": "GameManager",
+					"sid": 204689031134130,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerTop\""
+					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "GameManager",
+					"sid": 743184277747567,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerTop\"",
+						"start-value": "LayerOpacity(LAYER_BLACKLAYERTOP)",
+						"end-value": "0",
+						"time": "0.3",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 604937616424832
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 401383082980071,
+					"parameters": {
+						"layer": "LAYER_BLACKLAYERTOP",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 365831789209750
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "GameManager",
+					"sid": 689756354942658,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerBottom\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 164298944173469,
+					"parameters": {
+						"layer": "LAYER_BLACKLAYERBOTTOM",
+						"opacity": "GameManager.Tween.Value(\"BlackLayerBottom\")"
+					}
+				}
+			],
+			"sid": 234806764557533
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "GameManager",
+					"sid": 104342485457239,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"BlackLayerTop\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 804299247918876,
+					"parameters": {
+						"layer": "LAYER_BLACKLAYERTOP",
+						"opacity": "GameManager.Tween.Value(\"BlackLayerTop\")"
+					}
+				}
+			],
+			"sid": 795178405437502
+		}
+	],
+	"sid": 613986982310598
+}

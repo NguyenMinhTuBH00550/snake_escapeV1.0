@@ -290,90 +290,6 @@
 			"sid": 610837607316550
 		},
 		{
-			"eventType": "comment",
-			"text": "Value_event_ScollTo"
-		},
-		{
-			"eventType": "variable",
-			"name": "CamX",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 923879596647394
-		},
-		{
-			"eventType": "variable",
-			"name": "CamY",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 806827718739355
-		},
-		{
-			"eventType": "variable",
-			"name": "LastTouchX",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 799701676769053
-		},
-		{
-			"eventType": "variable",
-			"name": "LastTouchY",
-			"type": "number",
-			"initialValue": "1",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 535496039566337
-		},
-		{
-			"eventType": "variable",
-			"name": "LastDist",
-			"type": "number",
-			"initialValue": "1",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 642694029517549
-		},
-		{
-			"eventType": "variable",
-			"name": "IsPanning",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 997350442856165
-		},
-		{
-			"eventType": "variable",
-			"name": "IsZooming",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 331806647392022
-		},
-		{
-			"eventType": "variable",
-			"name": "Layout_Scale",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 606219648512968
-		},
-		{
 			"functionName": "start_layout",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -427,15 +343,6 @@
 							"id": "set-active",
 							"objectClass": "UI_txt_endgame",
 							"sid": 302328400100526,
-							"behaviorType": "Sine",
-							"parameters": {
-								"state": "inactive"
-							}
-						},
-						{
-							"id": "set-active",
-							"objectClass": "UI_nextLevel_btn",
-							"sid": 511138942491756,
 							"behaviorType": "Sine",
 							"parameters": {
 								"state": "inactive"
@@ -744,6 +651,19 @@
 								{
 									"callFunction": "start_layout",
 									"sid": 634534852985961
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 634168271661016,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "hideFader",
+									"sid": 482607720654547
 								}
 							],
 							"sid": 844376283277351,
@@ -3886,56 +3806,6 @@
 									"sid": 508050642810747
 								},
 								{
-									"eventType": "variable",
-									"name": "ScanMode",
-									"type": "number",
-									"initialValue": "0",
-									"comment": "",
-									"isStatic": false,
-									"isConstant": false,
-									"sid": 997043385934824
-								},
-								{
-									"eventType": "variable",
-									"name": "ScanGoalX",
-									"type": "number",
-									"initialValue": "0",
-									"comment": "",
-									"isStatic": false,
-									"isConstant": false,
-									"sid": 174798671543067
-								},
-								{
-									"eventType": "variable",
-									"name": "ScanGoalY",
-									"type": "number",
-									"initialValue": "0",
-									"comment": "",
-									"isStatic": false,
-									"isConstant": false,
-									"sid": 142495785426725
-								},
-								{
-									"eventType": "variable",
-									"name": "ScanHitX",
-									"type": "number",
-									"initialValue": "0",
-									"comment": "",
-									"isStatic": false,
-									"isConstant": false,
-									"sid": 278163996771998
-								},
-								{
-									"eventType": "variable",
-									"name": "ScanHitY",
-									"type": "number",
-									"initialValue": "0",
-									"comment": "",
-									"isStatic": false,
-									"isConstant": false,
-									"sid": 697326179106608
-								},
-								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -4036,15 +3906,6 @@
 												"variable": "dirY",
 												"value": "round(sin(SnakeHead.startAngle))"
 											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 916830536053195,
-											"parameters": {
-												"variable": "ScanMode",
-												"value": "-1"
-											}
 										}
 									],
 									"sid": 530820393790304,
@@ -4065,7 +3926,6 @@
 											],
 											"actions": [],
 											"sid": 504783105830316,
-											"disabled": true,
 											"children": [
 												{
 													"eventType": "block",
@@ -4082,7 +3942,6 @@
 													],
 													"actions": [],
 													"sid": 329050418147351,
-													"disabled": true,
 													"children": [
 														{
 															"eventType": "variable",
@@ -4140,7 +3999,6 @@
 															],
 															"actions": [],
 															"sid": 940696378653438,
-															"disabled": true,
 															"children": [
 																{
 																	"eventType": "block",
@@ -4192,24 +4050,9 @@
 																				"y": "FakeTargetY",
 																				"mode": "add-waypoint"
 																			}
-																		},
-																		{
-																			"id": "wait",
-																			"objectClass": "System",
-																			"sid": 611213932074119,
-																			"parameters": {
-																				"seconds": "0.5",
-																				"use-timescale": true
-																			}
-																		},
-																		{
-																			"id": "stop-loop",
-																			"objectClass": "System",
-																			"sid": 118804576565730
 																		}
 																	],
-																	"sid": 922087704304720,
-																	"disabled": true
+																	"sid": 922087704304720
 																}
 															]
 														}
@@ -4226,8 +4069,35 @@
 													],
 													"actions": [],
 													"sid": 661322930170478,
-													"disabled": true,
 													"children": [
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "add-to-eventvar",
+																	"objectClass": "System",
+																	"sid": 680180438617076,
+																	"parameters": {
+																		"variable": "completedSnakes",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "set-text",
+																	"objectClass": "text_count_snake",
+																	"sid": 673416381550601,
+																	"parameters": {
+																		"text": "completedSnakes & \"/\" & totalSnakes"
+																	}
+																},
+																{
+																	"callFunction": "CheckWinCondition",
+																	"sid": 805905387268968
+																}
+															],
+															"sid": 627107607113388
+														},
 														{
 															"eventType": "block",
 															"conditions": [],
@@ -4239,7 +4109,6 @@
 																}
 															],
 															"sid": 914698510510483,
-															"disabled": true,
 															"children": [
 																{
 																	"eventType": "block",
@@ -4256,7 +4125,6 @@
 																		}
 																	],
 																	"sid": 989706973233198,
-																	"disabled": true,
 																	"children": [
 																		{
 																			"eventType": "block",
@@ -4324,486 +4192,13 @@
 																					}
 																				}
 																			],
-																			"sid": 341955190520318,
-																			"disabled": true,
-																			"children": [
-																				{
-																					"eventType": "block",
-																					"conditions": [],
-																					"actions": [
-																						{
-																							"id": "add-to-eventvar",
-																							"objectClass": "System",
-																							"sid": 911800200038891,
-																							"parameters": {
-																								"variable": "completedSnakes",
-																								"value": "1"
-																							}
-																						},
-																						{
-																							"id": "set-text",
-																							"objectClass": "text_count_snake",
-																							"sid": 650613339421267,
-																							"parameters": {
-																								"text": "completedSnakes & \"/\" & totalSnakes"
-																							}
-																						},
-																						{
-																							"callFunction": "CheckWinCondition",
-																							"sid": 391128818746402
-																						}
-																					],
-																					"sid": 289952436185441,
-																					"disabled": true
-																				}
-																			]
+																			"sid": 341955190520318
 																		}
 																	]
 																}
 															]
 														}
 													]
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "for",
-													"objectClass": "System",
-													"sid": 863011793494714,
-													"parameters": {
-														"name": "\"\"",
-														"start-index": "1",
-														"end-index": "100"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 110193338119913,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "pick-by-evaluate",
-															"objectClass": "System",
-															"sid": 448252832914632,
-															"parameters": {
-																"object": "Snake_Checkpoint",
-																"expression": "Snake_Checkpoint.GridX = SnakeHead.GridX + dirX*loopindex\r\n&\r\nSnake_Checkpoint.GridY = SnakeHead.GridY + dirY*loopindex"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 878135435364997,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-two-values",
-																	"objectClass": "System",
-																	"sid": 697728819240291,
-																	"parameters": {
-																		"first-value": "Snake_Checkpoint.HasSnake",
-																		"comparison": 0,
-																		"second-value": "1"
-																	}
-																}
-															],
-															"actions": [],
-															"sid": 277494475344149,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [],
-																	"actions": [
-																		{
-																			"id": "set-eventvar-value",
-																			"objectClass": "System",
-																			"sid": 693369493867037,
-																			"parameters": {
-																				"variable": "ScanMode",
-																				"value": "0"
-																			}
-																		},
-																		{
-																			"id": "set-eventvar-value",
-																			"objectClass": "System",
-																			"sid": 549948336179506,
-																			"parameters": {
-																				"variable": "ScanHitX",
-																				"value": "Snake_Checkpoint.X"
-																			}
-																		},
-																		{
-																			"id": "set-eventvar-value",
-																			"objectClass": "System",
-																			"sid": 732795888415434,
-																			"parameters": {
-																				"variable": "ScanHitY",
-																				"value": "Snake_Checkpoint.Y"
-																			}
-																		},
-																		{
-																			"id": "stop-loop",
-																			"objectClass": "System",
-																			"sid": 904067041140454
-																		}
-																	],
-																	"sid": 721987290490024
-																}
-															]
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "else",
-																	"objectClass": "System",
-																	"sid": 452359077967662
-																}
-															],
-															"actions": [],
-															"sid": 148348184506202,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [],
-																	"actions": [
-																		{
-																			"id": "set-eventvar-value",
-																			"objectClass": "System",
-																			"sid": 654859035517151,
-																			"parameters": {
-																				"variable": "ScanMode",
-																				"value": "1"
-																			}
-																		},
-																		{
-																			"id": "set-eventvar-value",
-																			"objectClass": "System",
-																			"sid": 278533202818118,
-																			"parameters": {
-																				"variable": "ScanGoalX",
-																				"value": "Snake_Checkpoint.X"
-																			}
-																		},
-																		{
-																			"id": "set-eventvar-value",
-																			"objectClass": "System",
-																			"sid": 201872125768250,
-																			"parameters": {
-																				"variable": "ScanGoalY",
-																				"value": "Snake_Checkpoint.Y"
-																			}
-																		},
-																		{
-																			"id": "stop-loop",
-																			"objectClass": "System",
-																			"sid": 574799884735398
-																		}
-																	],
-																	"sid": 142693333230397
-																}
-															]
-														}
-													]
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-two-values",
-															"objectClass": "System",
-															"sid": 656348233667623,
-															"parameters": {
-																"first-value": "ScanMode",
-																"comparison": 1,
-																"second-value": "0"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 335691929426284,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [],
-															"actions": [
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 689317734214607,
-																	"parameters": {
-																		"variable": "ScanMode",
-																		"value": "1"
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 275054922576099,
-																	"parameters": {
-																		"variable": "ScanGoalX",
-																		"value": "SnakeHead.X + dirX *2000"
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 380579594282728,
-																	"parameters": {
-																		"variable": "ScanGoalY",
-																		"value": "SnakeHead.Y + dirY *2000"
-																	}
-																},
-																{
-																	"id": "stop-loop",
-																	"objectClass": "System",
-																	"sid": 913292882778233
-																}
-															],
-															"sid": 121465753303844
-														}
-													]
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 349497916358771,
-													"parameters": {
-														"first-value": "ScanMode",
-														"comparison": 0,
-														"second-value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "stop-loop",
-													"objectClass": "System",
-													"sid": 886565143616400
-												}
-											],
-											"sid": 583355066845526,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [],
-													"actions": [
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 266431175609768,
-															"parameters": {
-																"variable": "canRun",
-																"value": "1"
-															}
-														}
-													],
-													"sid": 636539974325354,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [],
-															"actions": [
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 759685925902881,
-																	"parameters": {
-																		"variable": "GoalX",
-																		"value": "ScanGoalX"
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 104582068865605,
-																	"parameters": {
-																		"variable": "GoalY",
-																		"value": "ScanGoalY"
-																	}
-																},
-																{
-																	"id": "move-to-position",
-																	"objectClass": "SnakeHead",
-																	"sid": 656610100463143,
-																	"behaviorType": "MoveTo",
-																	"parameters": {
-																		"x": "GoalX",
-																		"y": "GoalY",
-																		"mode": "add-waypoint"
-																	}
-																},
-																{
-																	"id": "create-object",
-																	"objectClass": "System",
-																	"sid": 109789372731131,
-																	"parameters": {
-																		"object-to-create": "Snake_Solid",
-																		"layer": "SnakeHead.LayerName",
-																		"x": "GoalX",
-																		"y": "GoalY",
-																		"create-hierarchy": false,
-																		"template-name": "\"\""
-																	}
-																},
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "Snake_Checkpoint",
-																	"sid": 981614199030662,
-																	"parameters": {
-																		"instance-variable": "HasSnake",
-																		"value": "0"
-																	}
-																},
-																{
-																	"id": "add-to-eventvar",
-																	"objectClass": "System",
-																	"sid": 629691808821092,
-																	"parameters": {
-																		"variable": "completedSnakes",
-																		"value": "1"
-																	}
-																},
-																{
-																	"id": "set-text",
-																	"objectClass": "text_count_snake",
-																	"sid": 811176074309917,
-																	"parameters": {
-																		"text": "completedSnakes & \"/\" & totalSnakes"
-																	}
-																},
-																{
-																	"callFunction": "CheckWinCondition",
-																	"sid": 605705372103122
-																}
-															],
-															"sid": 566304394887229
-														}
-													]
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 371638460216877,
-													"parameters": {
-														"first-value": "ScanMode",
-														"comparison": 0,
-														"second-value": "0"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 121013432745002,
-											"children": [
-												{
-													"eventType": "variable",
-													"name": "FakeTargetX",
-													"type": "number",
-													"initialValue": "0",
-													"comment": "",
-													"isStatic": false,
-													"isConstant": false,
-													"sid": 761381888680447
-												},
-												{
-													"eventType": "variable",
-													"name": "FakeTargetY",
-													"type": "number",
-													"initialValue": "0",
-													"comment": "",
-													"isStatic": false,
-													"isConstant": false,
-													"sid": 400427492771521
-												},
-												{
-													"eventType": "variable",
-													"name": "moveAngle",
-													"type": "number",
-													"initialValue": "0",
-													"comment": "",
-													"isStatic": false,
-													"isConstant": false,
-													"sid": 329978508133095
-												},
-												{
-													"eventType": "variable",
-													"name": "backOffset",
-													"type": "number",
-													"initialValue": "0",
-													"comment": "",
-													"isStatic": false,
-													"isConstant": false,
-													"sid": 605812440412656
-												},
-												{
-													"eventType": "block",
-													"conditions": [],
-													"actions": [
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 850703642936716,
-															"parameters": {
-																"variable": "moveAngle",
-																"value": "SnakeHead.startAngle"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 857508185741359,
-															"parameters": {
-																"variable": "backOffset",
-																"value": "SnakeBody.Width"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 258049618008273,
-															"parameters": {
-																"variable": "FakeTargetX",
-																"value": "ScanHitX - cos(moveAngle)*backOffset"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 958738509731945,
-															"parameters": {
-																"variable": "FakeTargetY",
-																"value": "ScanHitY - sin(moveAngle)*backOffset"
-															}
-														},
-														{
-															"id": "move-to-position",
-															"objectClass": "SnakeHead",
-															"sid": 831287325211972,
-															"behaviorType": "MoveTo",
-															"parameters": {
-																"x": "FakeTargetX",
-																"y": "FakeTargetY",
-																"mode": "add-waypoint"
-															}
-														}
-													],
-													"sid": 532475341764499
 												}
 											]
 										}
@@ -5801,8 +5196,7 @@
 										},
 										{
 											"callFunction": "LoseLife",
-											"sid": 549901674432793,
-											"disabled": true
+											"sid": 549901674432793
 										},
 										{
 											"id": "set-instvar-value",
@@ -6960,6 +6354,7 @@
 									"id": "tween-two-properties",
 									"objectClass": "HUD_icon_snake",
 									"sid": 736444807364286,
+									"disabled": true,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"count_bump\"",
@@ -7032,7 +6427,7 @@
 										},
 										{
 											"callFunction": "openDialog",
-											"sid": 588179628714800,
+											"sid": 827417903460892,
 											"parameters": [
 												"\"\""
 											]
@@ -7065,25 +6460,12 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 475726699585032,
+									"sid": 535337910119613,
 									"parameters": {
-										"object-to-create": "Particles",
+										"object-to-create": "Fireword_PTC",
 										"layer": "\"win_sceen\"",
-										"x": "UI_nextLevel_btn.X -50",
-										"y": "UI_nextLevel_btn.Y- 100",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 788907765808162,
-									"parameters": {
-										"object-to-create": "Particles",
-										"layer": "\"win_sceen\"",
-										"x": "UI_nextLevel_btn.X",
-										"y": "UI_nextLevel_btn.Y- 200",
+										"x": "UI_txt_endgame.X-50",
+										"y": "UI_txt_endgame.Y",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
@@ -7091,83 +6473,27 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 721461941219155,
+									"sid": 694186379665968,
 									"parameters": {
-										"seconds": "0.1",
+										"seconds": "0.25",
 										"use-timescale": true
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 148118659130101,
+									"parameters": {
+										"object-to-create": "Fireword_PTC",
+										"layer": "\"win_sceen\"",
+										"x": "UI_txt_endgame.X+50",
+										"y": "UI_txt_endgame.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
 									}
 								}
 							],
 							"sid": 992833321444873
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-created",
-									"objectClass": "confetti",
-									"sid": 908649262424927
-								}
-							],
-							"actions": [
-								{
-									"id": "move-to-top",
-									"objectClass": "confetti",
-									"sid": 281614027578757
-								}
-							],
-							"sid": 620895686095585,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "set-speed",
-											"objectClass": "confetti",
-											"sid": 130205885237158,
-											"behaviorType": "Rotate",
-											"parameters": {
-												"speed": "choose(158,-159)"
-											}
-										},
-										{
-											"id": "set-opacity",
-											"objectClass": "confetti",
-											"sid": 589406995985171,
-											"parameters": {
-												"opacity": "0"
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "confetti",
-											"sid": 587715625003410,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"particle\"",
-												"property": "offsetOpacity",
-												"end-value": "100",
-												"time": "0.5",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "confetti",
-											"sid": 425823240392004,
-											"parameters": {
-												"frame-number": "int(random(0,Self.AnimationFrameCount))"
-											}
-										}
-									],
-									"sid": 158219154620344
-								}
-							]
 						},
 						{
 							"eventType": "group",
@@ -7181,70 +6507,29 @@
 									"conditions": [
 										{
 											"id": "onclicked3",
-											"objectClass": "UI_nextLevel_btn",
-											"sid": 408908345118114,
+											"objectClass": "UI_lose_btn_playon",
+											"sid": 203214739756221,
 											"behaviorType": "Button"
 										},
 										{
 											"id": "has-tags",
-											"objectClass": "UI_nextLevel_btn",
-											"sid": 373501599463814,
+											"objectClass": "UI_lose_btn_playon",
+											"sid": 144710833986701,
 											"parameters": {
 												"tags": "\"btn_nextLevel\""
 											}
 										}
 									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "UI_btn_WinX2",
-											"sid": 911774435693886,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "UI_nextLevel_btn",
-											"sid": 114162947205999,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "text_coin_reward",
-											"sid": 120430660341825,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "coins_effect",
-											"sid": 339396359907885,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "UI_coin_reward",
-											"sid": 797014155906869,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										}
-									],
-									"sid": 839039907085988,
+									"actions": [],
+									"sid": 578922302976656,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
 													"id": "pick-children",
-													"objectClass": "UI_nextLevel_btn",
-													"sid": 781170986982951,
+													"objectClass": "UI_lose_btn_playon",
+													"sid": 528859227875120,
 													"parameters": {
 														"child": "UI_coin_topBar",
 														"which": "all"
@@ -7253,8 +6538,8 @@
 											],
 											"actions": [
 												{
-													"callFunction": "WinCoin",
-													"sid": 791592046114088,
+													"callFunction": "winCoin",
+													"sid": 920329310162354,
 													"parameters": [
 														"40",
 														"UI_coin_topBar.X",
@@ -7262,7 +6547,7 @@
 													]
 												}
 											],
-											"sid": 361883096219737
+											"sid": 932721416772119
 										}
 									]
 								},
@@ -7271,62 +6556,21 @@
 									"conditions": [
 										{
 											"id": "onclicked3",
-											"objectClass": "UI_btn_WinX2",
-											"sid": 945147338614012,
+											"objectClass": "WinGameX2_BTN",
+											"sid": 571892718390275,
 											"behaviorType": "Button"
 										}
 									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "UI_btn_WinX2",
-											"sid": 377297514272573,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "UI_nextLevel_btn",
-											"sid": 191424932875722,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "text_coin_reward",
-											"sid": 693037593392410,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "coins_effect",
-											"sid": 297696314834973,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-visible",
-											"objectClass": "UI_coin_reward",
-											"sid": 242242708607849,
-											"parameters": {
-												"visibility": "invisible"
-											}
-										}
-									],
-									"sid": 370190592106500,
+									"actions": [],
+									"sid": 795040011075534,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
 													"id": "pick-children",
-													"objectClass": "UI_btn_WinX2",
-													"sid": 961364318798347,
+													"objectClass": "WinGameX2_BTN",
+													"sid": 623173160223744,
 													"parameters": {
 														"child": "UI_coin_topBar",
 														"which": "all"
@@ -7335,8 +6579,8 @@
 											],
 											"actions": [
 												{
-													"callFunction": "WinCoin",
-													"sid": 582105120092235,
+													"callFunction": "winCoin",
+													"sid": 608034473189067,
 													"parameters": [
 														"80",
 														"UI_coin_topBar.X",
@@ -7344,7 +6588,356 @@
 													]
 												}
 											],
-											"sid": 256839696054518
+											"sid": 242210813054758
+										}
+									]
+								},
+								{
+									"functionName": "winCoin",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": true,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "coin",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 127712164946313
+										},
+										{
+											"name": "xx",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 719385782802489
+										},
+										{
+											"name": "yy",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 939432378727222
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 783579748020241,
+											"parameters": {
+												"variable": "RewardDone",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 833051877207843,
+											"parameters": {
+												"variable": "NextLayout",
+												"value": "\"Level\""
+											}
+										},
+										{
+											"id": "set-key",
+											"objectClass": "DIcSaveGame",
+											"sid": 106338561257896,
+											"parameters": {
+												"key": "\"SAVE_COIN\"",
+												"value": "DicSaveGame.Get(\"SAVE_COIN\") + coin"
+											}
+										},
+										{
+											"callFunction": "SAVE_GAME",
+											"sid": 872115835403732
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "UI_coin_reward",
+											"sid": 974208815736227,
+											"behaviorType": "Tween",
+											"parameters": {
+												"mode": "enabled"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 238775104396107,
+											"parameters": {
+												"variable": "CoinCount",
+												"value": "10"
+											}
+										}
+									],
+									"sid": 558885653737666,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for",
+													"objectClass": "System",
+													"sid": 107050540458056,
+													"parameters": {
+														"name": "\"\"",
+														"start-index": "0",
+														"end-index": "CoinCount - 1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 194961126993888,
+													"parameters": {
+														"object-to-create": "UI_coin_reward",
+														"layer": "UI_lose_btn_playon.LayerName",
+														"x": "xx",
+														"y": "yy",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "UI_coin_reward",
+													"sid": 661581348471838,
+													"parameters": {
+														"instance-variable": "Delay",
+														"value": "loopindex * 0.05"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "UI_coin_reward",
+													"sid": 498688605711743,
+													"parameters": {
+														"instance-variable": "coin",
+														"value": "coin/10"
+													}
+												},
+												{
+													"id": "tween-two-properties",
+													"objectClass": "UI_coin_reward",
+													"sid": 414659813981414,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"pop\"",
+														"property": "position",
+														"end-x": "Self.X + random(-120,120)",
+														"end-y": "Self.Y + random(-120,120)",
+														"time": "0.6",
+														"ease": "easeoutquint",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 626345867681026
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 618995389222147,
+													"parameters": {
+														"variable": "CurrentLevel",
+														"value": " str( int(CurrentLevel) + 1 )"
+													}
+												},
+												{
+													"id": "set-key",
+													"objectClass": "DIcSaveGame",
+													"sid": 992066234312317,
+													"parameters": {
+														"key": "\"CurrentLevel\"",
+														"value": "CurrentLevel"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 761660157972553,
+													"parameters": {
+														"seconds": "2",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 484378119386460,
+													"parameters": {
+														"layout": "Loading"
+													}
+												}
+											],
+											"sid": 275039172981735
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tweens-finished",
+											"objectClass": "UI_coin_reward",
+											"sid": 866652335429300,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"pop\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 385604416254260,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "UI_coin_topBar",
+													"sid": 744472373580035,
+													"parameters": {
+														"tags": "\"STATE_WIN_GAME\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-two-properties",
+													"objectClass": "UI_coin_reward",
+													"sid": 416790091135739,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"fly_to_ui\"",
+														"property": "position",
+														"end-x": "UI_coin_topBar.X",
+														"end-y": "UI_coin_topBar.Y",
+														"time": "0.5+Self.Delay",
+														"ease": "easeinback",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 813365446660038
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tweens-finished",
+											"objectClass": "UI_coin_reward",
+											"sid": 183447887864115,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"fly_to_ui\""
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 831613769680494,
+											"disabled": true,
+											"parameters": {
+												"variable": "RewardDone"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 290296159899381,
+											"disabled": true,
+											"parameters": {
+												"variable": "RewardDone",
+												"value": "true"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "UI_coin_reward",
+											"sid": 540569837815191
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_coin",
+											"sid": 647264568638292,
+											"parameters": {
+												"text": "int(Self.Text) + UI_coin_reward.coin"
+											}
+										}
+									],
+									"sid": 805589213147146,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "UI_coin_topBar",
+													"sid": 305805712308404,
+													"parameters": {
+														"tags": "\"STATE_WIN_GAME\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop-all-tweens",
+													"objectClass": "UI_coin_topBar",
+													"sid": 181909216174247,
+													"behaviorType": "Tween"
+												},
+												{
+													"id": "set-size",
+													"objectClass": "UI_coin_topBar",
+													"sid": 854534808431182,
+													"parameters": {
+														"width": "Self.initWidth",
+														"height": "Self.initHeight"
+													}
+												},
+												{
+													"id": "tween-two-properties",
+													"objectClass": "UI_coin_topBar",
+													"sid": 588618089476969,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"\"",
+														"property": "size",
+														"end-x": "Self.initWidth*1.2",
+														"end-y": "Self.initHeight*1.2",
+														"time": "0.1",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "yes",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 407274135213047
 										}
 									]
 								},
@@ -7398,334 +6991,6 @@
 										}
 									],
 									"sid": 677246849773459
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-tweens-finished",
-											"objectClass": "UI_coin_reward",
-											"sid": 444994619979775,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"pop\""
-											}
-										}
-									],
-									"actions": [],
-									"sid": 296536940802051,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [],
-											"actions": [
-												{
-													"id": "tween-two-properties",
-													"objectClass": "UI_coin_reward",
-													"sid": 602090427302773,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"fly_to_ui\"",
-														"property": "position",
-														"end-x": "UI_coin_topBar.X",
-														"end-y": "UI_coin_topBar.Y",
-														"time": "0.5+Self.Delay",
-														"ease": "easeinback",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
-													}
-												}
-											],
-											"sid": 326831024006165
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-tweens-finished",
-											"objectClass": "UI_coin_reward",
-											"sid": 381469598284182,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"fly_to_ui\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "destroy",
-											"objectClass": "UI_coin_reward",
-											"sid": 872348156804735
-										},
-										{
-											"id": "set-text",
-											"objectClass": "text_coin",
-											"sid": 914919730396301,
-											"parameters": {
-												"text": "int(Self.Text) + UI_coin_reward.coin"
-											}
-										}
-									],
-									"sid": 422441759011922,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "has-tags",
-													"objectClass": "UI_coin_topBar",
-													"sid": 893294001801246,
-													"parameters": {
-														"tags": "\"STATE_WIN_GAME\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "stop-all-tweens",
-													"objectClass": "UI_coin_topBar",
-													"sid": 171226364434418,
-													"behaviorType": "Tween"
-												},
-												{
-													"id": "set-size",
-													"objectClass": "UI_coin_topBar",
-													"sid": 364853938755678,
-													"parameters": {
-														"width": "Self.initWidth",
-														"height": "Self.initHeight"
-													}
-												},
-												{
-													"id": "tween-two-properties",
-													"objectClass": "UI_coin_topBar",
-													"sid": 100210803105672,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"\"",
-														"property": "size",
-														"end-x": "Self.initWidth*1.2",
-														"end-y": "Self.initHeight*1.2",
-														"time": "0.1",
-														"ease": "default",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "yes",
-														"repeat-count": "1"
-													}
-												}
-											],
-											"sid": 873208447183220
-										}
-									]
-								},
-								{
-									"functionName": "WinCoin",
-									"functionDescription": "",
-									"functionCategory": "",
-									"functionReturnType": "none",
-									"functionCopyPicked": false,
-									"functionIsAsync": false,
-									"functionParameters": [
-										{
-											"name": "coin",
-											"type": "number",
-											"initialValue": "0",
-											"comment": "",
-											"sid": 744361064571664
-										},
-										{
-											"name": "xx",
-											"type": "number",
-											"initialValue": "0",
-											"comment": "",
-											"sid": 897955457796454
-										},
-										{
-											"name": "yy",
-											"type": "number",
-											"initialValue": "0",
-											"comment": "",
-											"sid": 711767540432372
-										}
-									],
-									"eventType": "function-block",
-									"conditions": [],
-									"actions": [],
-									"sid": 870474101904311,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 441793822884418,
-													"parameters": {
-														"variable": "RewardDone",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 840400489810109,
-													"parameters": {
-														"variable": "NextLayout",
-														"value": "\"Level\""
-													}
-												},
-												{
-													"id": "set-key",
-													"objectClass": "DIcSaveGame",
-													"sid": 363812236761516,
-													"parameters": {
-														"key": "\"SAVE_COIN\"",
-														"value": "DicSaveGame.Get(\"SAVE_COIN\") + coin"
-													}
-												},
-												{
-													"callFunction": "SAVE_GAME",
-													"sid": 749610592522753
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "UI_coin_reward",
-													"sid": 659588662723312,
-													"behaviorType": "Tween",
-													"parameters": {
-														"mode": "enabled"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 408682298733720,
-													"parameters": {
-														"variable": "CoinCount",
-														"value": "10"
-													}
-												}
-											],
-											"sid": 360124978047701,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "for",
-															"objectClass": "System",
-															"sid": 661642590459815,
-															"parameters": {
-																"name": "\"i\"",
-																"start-index": "0",
-																"end-index": "CoinCount - 1"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "create-object",
-															"objectClass": "System",
-															"sid": 368402916740582,
-															"parameters": {
-																"object-to-create": "UI_coin_reward",
-																"layer": "UI_nextLevel_btn.LayerName",
-																"x": "xx",
-																"y": "yy",
-																"create-hierarchy": false,
-																"template-name": "\"\""
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "UI_coin_reward",
-															"sid": 181411277685789,
-															"parameters": {
-																"instance-variable": "Delay",
-																"value": "loopindex * 0.05"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "UI_coin_reward",
-															"sid": 747752294237215,
-															"parameters": {
-																"instance-variable": "Coin",
-																"value": "coin/10"
-															}
-														},
-														{
-															"id": "tween-two-properties",
-															"objectClass": "UI_coin_reward",
-															"sid": 734182093823071,
-															"behaviorType": "Tween",
-															"parameters": {
-																"tags": "\"pop\"",
-																"property": "position",
-																"end-x": "Self.X + random(-120,120)",
-																"end-y": "Self.Y + random(-120,120)",
-																"time": "0.6",
-																"ease": "easeoutquint",
-																"destroy-on-complete": "no",
-																"loop": "no",
-																"ping-pong": "no",
-																"repeat-count": "1"
-															}
-														}
-													],
-													"sid": 140929204570483
-												},
-												{
-													"eventType": "block",
-													"conditions": [],
-													"actions": [
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 370585347120576,
-															"parameters": {
-																"variable": "CurrentLevel",
-																"value": " str( int(CurrentLevel) + 1 )"
-															}
-														},
-														{
-															"id": "set-key",
-															"objectClass": "DIcSaveGame",
-															"sid": 206294600480396,
-															"parameters": {
-																"key": "\"CurrentLevel\"",
-																"value": "CurrentLevel"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 834505021939772,
-															"parameters": {
-																"seconds": "2",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 616253414002518,
-															"parameters": {
-																"layout": "Loading"
-															}
-														}
-													],
-													"sid": 177202297493876
-												}
-											]
-										}
-									]
 								}
 							],
 							"sid": 931280641459558
@@ -7861,10 +7126,18 @@
 									"id": "set-layer-visible",
 									"objectClass": "System",
 									"sid": 312143208525778,
+									"disabled": true,
 									"parameters": {
 										"layer": "\"fade\"",
 										"visibility": "visible"
 									}
+								},
+								{
+									"callFunction": "openDialog",
+									"sid": 201269113529507,
+									"parameters": [
+										"\"\""
+									]
 								}
 							],
 							"sid": 192554869151941
@@ -7874,13 +7147,13 @@
 							"conditions": [
 								{
 									"id": "onclicked3",
-									"objectClass": "UI_nextLevel_btn",
+									"objectClass": "UI_lose_btn_playon",
 									"sid": 130903787578550,
 									"behaviorType": "Button"
 								},
 								{
 									"id": "has-tags",
-									"objectClass": "UI_nextLevel_btn",
+									"objectClass": "UI_lose_btn_playon",
 									"sid": 163572010745020,
 									"parameters": {
 										"tags": "\"btn_clam300\""
@@ -7958,10 +7231,18 @@
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 601512271453533,
+											"disabled": true,
 											"parameters": {
 												"layer": "\"fade\"",
 												"visibility": "invisible"
 											}
+										},
+										{
+											"callFunction": "closeDialog",
+											"sid": 878176860623974,
+											"parameters": [
+												"\"\""
+											]
 										}
 									],
 									"sid": 701650915536704
@@ -8010,10 +7291,18 @@
 									"id": "set-layer-visible",
 									"objectClass": "System",
 									"sid": 795706672893031,
+									"disabled": true,
 									"parameters": {
 										"layer": "\"fade\"",
 										"visibility": "invisible"
 									}
+								},
+								{
+									"callFunction": "closeDialog",
+									"sid": 145042580407571,
+									"parameters": [
+										"\"\""
+									]
 								}
 							],
 							"sid": 411260664087381
@@ -8116,10 +7405,18 @@
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 807340183417448,
+											"disabled": true,
 											"parameters": {
 												"layer": "\"fade\"",
 												"visibility": "visible"
 											}
+										},
+										{
+											"callFunction": "openDialog",
+											"sid": 682883645409176,
+											"parameters": [
+												"\"\""
+											]
 										}
 									],
 									"sid": 478987287351435
@@ -8153,10 +7450,18 @@
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 967692682721937,
+											"disabled": true,
 											"parameters": {
 												"layer": "\"fade\"",
 												"visibility": "invisible"
 											}
+										},
+										{
+											"callFunction": "closeDialog",
+											"sid": 252005247951341,
+											"parameters": [
+												"\"\""
+											]
 										}
 									],
 									"sid": 666344886867077
@@ -8182,10 +7487,18 @@
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 716359167775402,
+											"disabled": true,
 											"parameters": {
 												"layer": "\"fade\"",
 												"visibility": "invisible"
 											}
+										},
+										{
+											"callFunction": "closeDialog",
+											"sid": 525464931429902,
+											"parameters": [
+												"\"\""
+											]
 										}
 									],
 									"sid": 916569146016424
@@ -8373,13 +7686,13 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "UI_redaura",
-									"sid": 998106128626818,
+									"sid": 917679935335403,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"warning_open\"",
 										"property": "offsetOpacity",
 										"end-value": "100",
-										"time": "0.1",
+										"time": "0.15",
 										"ease": "noease",
 										"destroy-on-complete": "no",
 										"loop": "no",
@@ -8397,23 +7710,23 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 720844843946001,
+											"sid": 874812083789679,
 											"parameters": {
-												"seconds": "0.5",
+												"seconds": "0.25",
 												"use-timescale": true
 											}
 										},
 										{
 											"id": "tween-one-property",
 											"objectClass": "UI_redaura",
-											"sid": 993742788358094,
+											"sid": 277878560850339,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"warning_close\"",
 												"property": "offsetOpacity",
 												"end-value": "0",
-												"time": "0.1",
-												"ease": "noease",
+												"time": "0.3",
+												"ease": "easeoutquint",
 												"destroy-on-complete": "no",
 												"loop": "no",
 												"ping-pong": "no",
@@ -8933,115 +8246,10 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Zoom_In/Out",
+					"title": "Loading_Layer",
 					"description": "",
 					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 520231567306633
-								}
-							],
-							"actions": [],
-							"sid": 517110823777659,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 459018414326189,
-											"parameters": {
-												"first-value": "Touch.TouchCount",
-												"comparison": 0,
-												"second-value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 337991614546401,
-											"parameters": {
-												"variable": "IsPanning",
-												"value": "false"
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 153251837126697,
-											"parameters": {
-												"variable": "IsZooming",
-												"value": "false"
-											}
-										}
-									],
-									"sid": 669953534353652
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 222994386832324,
-											"parameters": {
-												"first-value": "Touch.TouchCount",
-												"comparison": 0,
-												"second-value": "1"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 210406908090120,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 151773796646549,
-													"parameters": {
-														"variable": "IsPanning"
-													},
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 704220725348714,
-													"parameters": {
-														"variable": "LastTouchX",
-														"value": "Touch.X(\"sceen\")"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 157352826149021,
-													"parameters": {
-														"variable": "LastTouchY",
-														"value": "Touch.Y(\"sceen\")"
-													}
-												}
-											],
-											"sid": 685301863256758
-										}
-									]
-								}
-							]
-						}
-					],
+					"children": [],
 					"sid": 477189302945458
 				}
 			],
