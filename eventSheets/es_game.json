@@ -4001,7 +4001,7 @@
 																{
 																	"id": "stop-loop",
 																	"objectClass": "System",
-																	"sid": 252952437112287
+																	"sid": 508930006108859
 																}
 															],
 															"sid": 940696378653438,
@@ -4013,71 +4013,70 @@
 																		{
 																			"id": "set-eventvar-value",
 																			"objectClass": "System",
-																			"sid": 798096152669533,
-																			"disabled": true,
+																			"sid": 626349452268223,
 																			"parameters": {
-																				"variable": "canRun",
-																				"value": "1"
+																				"variable": "moveAngle",
+																				"value": "SnakeHead.startAngle"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 940465744382461,
+																			"parameters": {
+																				"variable": "backOffset",
+																				"value": "SnakeBody.Width"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 771180666746755,
+																			"parameters": {
+																				"variable": "FakeTargetX",
+																				"value": "Snake_Checkpoint.X - cos(moveAngle)*backOffset"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 247850581371246,
+																			"parameters": {
+																				"variable": "FakeTargetY",
+																				"value": "Snake_Checkpoint.Y - sin(moveAngle)*backOffset"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 229879755524245,
+																			"parameters": {
+																				"variable": "GoalX",
+																				"value": "Snake_Checkpoint.X + dirX*2000"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 292443907181804,
+																			"parameters": {
+																				"variable": "GoalY",
+																				"value": "Snake_Checkpoint.Y + dirY*2000"
+																			}
+																		},
+																		{
+																			"id": "move-to-position",
+																			"objectClass": "SnakeHead",
+																			"sid": 253130862272225,
+																			"behaviorType": "MoveTo",
+																			"parameters": {
+																				"x": "FakeTargetX",
+																				"y": "FakeTargetY",
+																				"mode": "add-waypoint"
 																			}
 																		}
 																	],
-																	"sid": 881742350942011,
-																	"children": [
-																		{
-																			"eventType": "block",
-																			"conditions": [],
-																			"actions": [
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 748407315183517,
-																					"parameters": {
-																						"variable": "moveAngle",
-																						"value": "SnakeHead.startAngle"
-																					}
-																				},
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 389292936654050,
-																					"parameters": {
-																						"variable": "backOffset",
-																						"value": "SnakeBody.Width"
-																					}
-																				},
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 560350060223041,
-																					"parameters": {
-																						"variable": "FakeTargetX",
-																						"value": "Snake_Checkpoint.X - cos(moveAngle)*backOffset"
-																					}
-																				},
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 948363284727287,
-																					"parameters": {
-																						"variable": "FakeTargetY",
-																						"value": "Snake_Checkpoint.Y - sin(moveAngle)*backOffset"
-																					}
-																				},
-																				{
-																					"id": "move-to-position",
-																					"objectClass": "SnakeHead",
-																					"sid": 976678144041698,
-																					"behaviorType": "MoveTo",
-																					"parameters": {
-																						"x": "FakeTargetX",
-																						"y": "FakeTargetY",
-																						"mode": "add-waypoint"
-																					}
-																				}
-																			],
-																			"sid": 495241586229916
-																		}
-																	]
+																	"sid": 536082185996854
 																}
 															]
 														}
@@ -4143,7 +4142,6 @@
 																			"id": "set-eventvar-value",
 																			"objectClass": "System",
 																			"sid": 799779943877622,
-																			"disabled": true,
 																			"parameters": {
 																				"variable": "canRun",
 																				"value": "1"
@@ -4352,7 +4350,7 @@
 																{
 																	"id": "compare-two-values",
 																	"objectClass": "System",
-																	"sid": 807493485806013,
+																	"sid": 415174620622210,
 																	"parameters": {
 																		"first-value": "loopindex",
 																		"comparison": 0,
@@ -4364,7 +4362,7 @@
 																{
 																	"id": "move-to-position",
 																	"objectClass": "SnakeBody",
-																	"sid": 875328486068973,
+																	"sid": 145383960117954,
 																	"behaviorType": "MoveTo",
 																	"parameters": {
 																		"x": "GoalX",
@@ -4373,7 +4371,7 @@
 																	}
 																}
 															],
-															"sid": 301429840007990
+															"sid": 115493650272122
 														}
 													]
 												}
@@ -4503,7 +4501,7 @@
 																{
 																	"id": "compare-two-values",
 																	"objectClass": "System",
-																	"sid": 432609636281693,
+																	"sid": 325836018731651,
 																	"parameters": {
 																		"first-value": "loopindex",
 																		"comparison": 0,
@@ -4515,7 +4513,7 @@
 																{
 																	"id": "move-to-position",
 																	"objectClass": "SnakeTail",
-																	"sid": 925434360915335,
+																	"sid": 191155132811600,
 																	"behaviorType": "MoveTo",
 																	"parameters": {
 																		"x": "GoalX",
@@ -4524,7 +4522,7 @@
 																	}
 																}
 															],
-															"sid": 595921486128162
+															"sid": 431099285173433
 														}
 													]
 												}
