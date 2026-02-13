@@ -11,6 +11,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 518999411005474
+		},
+		{
+			"name": "Coin",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 121072010901008
 		}
 	],
 	"behaviorTypes": [

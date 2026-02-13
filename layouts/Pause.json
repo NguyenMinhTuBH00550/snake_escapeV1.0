@@ -2444,8 +2444,17 @@
 					"uid": 50,
 					"sid": 462599776922298,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"initWidth": 0,
+						"initHeight": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 42,
 						"uid": 50,

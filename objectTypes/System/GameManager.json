@@ -1,20 +1,20 @@
 {
-	"name": "UI_btn_endgamewin",
+	"name": "GameManager",
 	"plugin-id": "Sprite",
-	"sid": 892885953107257,
-	"isGlobal": false,
+	"sid": 697156076473648,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "aekiro_button",
-			"name": "Button",
-			"sid": 146812684594296
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 422511577118197
 		},
 		{
-			"behaviorId": "aekiro_gameobject",
-			"name": "GameObject",
-			"sid": 601584489383826
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 384350876566101
 		}
 	],
 	"effectTypes": [],
@@ -23,21 +23,21 @@
 			{
 				"frames": [
 					{
-						"width": 587,
-						"height": 235,
+						"width": 60,
+						"height": 60,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1961480,
+						"imageSpriteId": 8970282,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 513514268496877,
+				"sid": 265569148570553,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -163,8 +163,17 @@
 					"uid": 246,
 					"sid": 375859361626683,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"initWidth": 0,
+						"initHeight": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 245,
 						"uid": 246,
@@ -1293,7 +1302,7 @@
 					}
 				},
 				{
-					"type": "UI_lose_btn_playon",
+					"type": "UI_nextLevel_btn",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1559,8 +1568,17 @@
 					"uid": 258,
 					"sid": 556369376667241,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"initWidth": 0,
+						"initHeight": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 260,
 						"uid": 258,

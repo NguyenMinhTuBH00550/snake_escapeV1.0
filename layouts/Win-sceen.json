@@ -7,88 +7,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Particles",
-					"properties": {
-						"rate": 70,
-						"spray-cone": 30,
-						"type": "one-shot",
-						"object": 280736141983048,
-						"initially-visible": true,
-						"live-preview": false,
-						"speed": 2000,
-						"size": 60,
-						"opacity": 100,
-						"grow-rate": 0,
-						"x-randomiser": 200,
-						"y-randomiser": 0,
-						"initial-speed-randomiser": 0,
-						"size-randomiser": 0,
-						"grow-rate-randomiser": 0,
-						"acceleration": -100,
-						"gravity": 1800,
-						"angle-randomiser": 0,
-						"life-speed-randomiser": 800,
-						"opacity-randomiser": 0,
-						"destroy-mode": "timeout-expired",
-						"timeout": 5
-					},
-					"uid": 187,
-					"sid": 791837106757915,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 29,
-						"uid": 187,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": false,
-							"w": false,
-							"h": false,
-							"a": false,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 2.220446049250313e-16,
-							"transformH": 2.220446049250313e-16,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 791837106757915,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 549,
-						"y": 1841,
-						"width": 252.8127945620604,
-						"height": 384.6204077914516,
-						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 4.71238898038469,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "winning_BG",
 					"properties": {
 						"initially-visible": true,
@@ -281,9 +199,18 @@
 					},
 					"uid": 181,
 					"sid": 533324533400694,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"tags": "\"STATE_WIN_GAME\"",
+					"instanceVariables": {
+						"initWidth": 0,
+						"initHeight": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 180,
 						"uid": 181,
@@ -773,7 +700,7 @@
 					}
 				},
 				{
-					"type": "UI_btn_endgamewin",
+					"type": "UI_btn_WinX2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1136,8 +1063,17 @@
 					"uid": 23,
 					"sid": 136667902203638,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"initWidth": 0,
+						"initHeight": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 16,
 						"uid": 23,
@@ -1229,21 +1165,6 @@
 						"parent-uid": null,
 						"uid": 29,
 						"children": [
-							{
-								"uid": 187,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": false,
-									"w": false,
-									"h": false,
-									"a": false,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
 							{
 								"uid": 180,
 								"flags": {
@@ -1575,7 +1496,7 @@
 					}
 				},
 				{
-					"type": "UI_lose_btn_playon",
+					"type": "UI_nextLevel_btn",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1841,8 +1762,17 @@
 					"uid": 24,
 					"sid": 680202196811573,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"initWidth": 0,
+						"initHeight": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 18,
 						"uid": 24,
@@ -2085,7 +2015,8 @@
 					"sid": 493477183447170,
 					"tags": "",
 					"instanceVariables": {
-						"Delay": 0
+						"Delay": 0,
+						"Coin": 0
 					},
 					"behaviors": {
 						"Tween": {

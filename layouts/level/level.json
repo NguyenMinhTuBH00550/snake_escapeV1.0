@@ -669,6 +669,16 @@
 			"sid": 962781129050218,
 			"tags": "",
 			"instanceVariables": {}
+		},
+		{
+			"type": "Dic_GameManagerplayerID",
+			"properties": {},
+			"uid": 389,
+			"sid": 593120195714008,
+			"tags": "",
+			"instanceVariables": {
+				"playerID": ""
+			}
 		}
 	],
 	"effectTypes": [],

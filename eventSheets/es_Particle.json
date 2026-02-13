@@ -1,0 +1,75 @@
+{
+	"name": "es_Particle",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "confetti",
+					"sid": 616313398463963
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "confetti",
+					"sid": 527908421273098
+				}
+			],
+			"sid": 949044232347139,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "confetti",
+							"sid": 320916213432370,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"speed": "choose(158,-159)"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "confetti",
+							"sid": 673615256624226,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "confetti",
+							"sid": 515103523589484,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"particle\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "confetti",
+							"sid": 674472353454714,
+							"parameters": {
+								"frame-number": "int(random(0,Self.AnimationFrameCount))"
+							}
+						}
+					],
+					"sid": 619969113000113
+				}
+			]
+		}
+	],
+	"sid": 764132755740203
+}

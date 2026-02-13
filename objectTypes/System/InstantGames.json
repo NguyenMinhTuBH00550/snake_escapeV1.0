@@ -1,0 +1,14 @@
+{
+	"name": "InstantGames",
+	"plugin-id": "InstantGames",
+	"sid": 235534704634790,
+	"singleglobal-inst": {
+		"type": "InstantGames",
+		"properties": {
+			"navigation-menu": "floating"
+		},
+		"uid": 365,
+		"sid": 869366514512653,
+		"tags": ""
+	}
+}

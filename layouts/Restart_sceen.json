@@ -957,8 +957,17 @@
 					"uid": 307,
 					"sid": 363288144698192,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"initWidth": 0,
+						"initHeight": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 306,
 						"uid": 307,

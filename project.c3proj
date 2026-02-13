@@ -36,6 +36,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "InstantGames",
+			"name": "Instant Games",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Json",
 			"name": "JSON",
 			"author": "Scirra",
@@ -135,6 +142,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
@@ -191,37 +205,7 @@
 	"uniqueId": "17juoc9txi6",
 	"objectTypes": {
 		"items": [
-			"Anchor",
-			"LocalStorage",
-			"ProUI",
-			"AJAX",
-			"Browser",
-			"Mouse",
-			"Touch",
-			"fade_layout",
-			"Keyboard",
-			"LY_shop",
-			"LY_Home",
-			"HUD_challenge_BG",
-			"HUD_challenge_panel",
-			"LY_Challenge",
 			"sactx12048x2048ASTC6x6gameatlas42e01cac",
-			"HUD_popup_noads_panel",
-			"HUD_popup_noads_frame",
-			"HUD_popup_noads_btn",
-			"HUD_popup_noads_ribbo",
-			"HUD_home_adbar",
-			"UI_count_booster",
-			"play_zoombar_frame",
-			"play_zoombar_slide",
-			"play_zoombar_btnzoomin",
-			"play_zoombar_btnzoomou",
-			"hint_tile",
-			"SnakeBody",
-			"SnakeTail",
-			"SnakeHead",
-			"SnakeEyes",
-			"Snake_Solid",
 			"Sprite"
 		],
 		"subfolders": [
@@ -244,7 +228,14 @@
 					"HUD_setting_BA",
 					"HUD_booster_frame",
 					"HUD_outLive",
-					"BG_shop"
+					"BG_shop",
+					"HUD_challenge_BG",
+					"HUD_challenge_panel",
+					"HUD_home_adbar",
+					"HUD_popup_noads_btn",
+					"HUD_popup_noads_frame",
+					"HUD_popup_noads_panel",
+					"HUD_popup_noads_ribbo"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -338,8 +329,8 @@
 					"UI_btn_booster",
 					"UI_btn_resume",
 					"UI_redaura",
-					"UI_lose_btn_playon",
-					"UI_btn_endgamewin",
+					"UI_nextLevel_btn",
+					"UI_btn_WinX2",
 					"UI_txt_endgame",
 					"UI_btn_home",
 					"winning_BG",
@@ -376,7 +367,16 @@
 					"UI_popup_noads_gift",
 					"UI_popup_noads_icon",
 					"UI_popup_noads_tagsale",
-					"UI_popup_noads_X"
+					"UI_popup_noads_X",
+					"play_zoombar_btnzoomin",
+					"play_zoombar_btnzoomou",
+					"play_zoombar_frame",
+					"play_zoombar_slide",
+					"SnakeBody",
+					"SnakeEyes",
+					"SnakeHead",
+					"SnakeTail",
+					"UI_count_booster"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -386,7 +386,14 @@
 					"Grid_Dot",
 					"snake_body",
 					"snake_head",
-					"Snake_Checkpoint"
+					"Snake_Checkpoint",
+					"fade_layout",
+					"hint_tile",
+					"LY_Challenge",
+					"LY_Home",
+					"LY_shop",
+					"navigation",
+					"Snake_Solid"
 				],
 				"subfolders": [],
 				"name": "Spite"
@@ -394,7 +401,8 @@
 			{
 				"items": [
 					"DIcSaveGame",
-					"Dic_Level"
+					"Dic_Level",
+					"Dic_GameManagerplayerID"
 				],
 				"subfolders": [],
 				"name": "Dic"
@@ -435,6 +443,22 @@
 				],
 				"subfolders": [],
 				"name": "Particle"
+			},
+			{
+				"items": [
+					"AJAX",
+					"Anchor",
+					"Browser",
+					"InstantGames",
+					"Keyboard",
+					"LocalStorage",
+					"Mouse",
+					"ProUI",
+					"Touch",
+					"GameManager"
+				],
+				"subfolders": [],
+				"name": "System"
 			}
 		]
 	},
@@ -483,7 +507,10 @@
 			"es_loading",
 			"es_global",
 			"es_game",
-			"es_home"
+			"es_home",
+			"es_GA",
+			"es_Particle",
+			"es_Dialog"
 		],
 		"subfolders": []
 	},

@@ -215,15 +215,23 @@
 					"sid": 265721976773679
 				},
 				{
-					"id": "tween-value",
+					"id": "set-width",
 					"objectClass": "HUD_tileLoading",
-					"sid": 263594976583820,
+					"sid": 471867875672237,
+					"parameters": {
+						"width": "Self.ImageWidth*0.01"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "HUD_tileLoading",
+					"sid": 138905318995150,
 					"behaviorType": "Tween",
 					"parameters": {
-						"tags": "\"loading\"",
-						"start-value": "0",
-						"end-value": "100",
-						"time": "0.75",
+						"tags": "\"\"",
+						"property": "offsetWidth",
+						"end-value": "Self.ImageWidth",
+						"time": "0.3",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -274,25 +282,33 @@
 				{
 					"id": "load",
 					"objectClass": "DIcSaveGame",
-					"sid": 629791993282922,
+					"sid": 835907887515936,
 					"parameters": {
 						"json": "LocalStorage.ItemValue"
 					}
 				},
 				{
 					"callFunction": "int_SAVE_GAME",
-					"sid": 403401732537403
+					"sid": 952330448191283
 				},
 				{
-					"id": "tween-value",
+					"id": "set-width",
 					"objectClass": "HUD_tileLoading",
-					"sid": 169427231639936,
+					"sid": 905584527698655,
+					"parameters": {
+						"width": "Self.ImageWidth*0.01"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "HUD_tileLoading",
+					"sid": 916933244111054,
 					"behaviorType": "Tween",
 					"parameters": {
-						"tags": "\"loading\"",
-						"start-value": "0",
-						"end-value": "100",
-						"time": "0.75",
+						"tags": "\"\"",
+						"property": "offsetWidth",
+						"end-value": "Self.ImageWidth",
+						"time": "0.3",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -309,10 +325,10 @@
 				{
 					"id": "on-tweens-finished",
 					"objectClass": "HUD_tileLoading",
-					"sid": 858500041346877,
+					"sid": 854686764564214,
 					"behaviorType": "Tween",
 					"parameters": {
-						"tags": "\"loading\""
+						"tags": "\"\""
 					}
 				}
 			],
@@ -320,7 +336,8 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "HUD_logo",
-					"sid": 768474466388988,
+					"sid": 795459386928415,
+					"disabled": true,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"logo_pop\"",
@@ -334,260 +351,33 @@
 						"ping-pong": "no",
 						"repeat-count": "1"
 					}
-				}
-			],
-			"sid": 921014087249019
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+				},
 				{
-					"id": "is-playing",
-					"objectClass": "HUD_tileLoading",
-					"sid": 381236712482932,
-					"behaviorType": "Tween",
+					"callFunction": "showFader",
+					"sid": 808053482984860,
+					"parameters": [
+						"100"
+					]
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 200981763390035,
 					"parameters": {
-						"tags": "\"loading\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-width",
-					"objectClass": "HUD_tileLoading",
-					"sid": 453433864961438,
-					"parameters": {
-						"width": "Self.ImageWidth * Self.Tween.Value(\"loading\") /100"
-					}
-				}
-			],
-			"sid": 651639665765078
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "HUD_logo",
-					"sid": 304102843358431,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"logo_pop\""
-					}
-				}
-			],
-			"actions": [],
-			"sid": 519298664195697,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "has-tags",
-							"objectClass": "HUD_BG_loading",
-							"sid": 750321114038490,
-							"parameters": {
-								"tags": "\"fade_loadingBG\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "HUD_BG_loading",
-							"sid": 473131661181730,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-opacity",
-							"objectClass": "HUD_BG_loading",
-							"sid": 796316780490708,
-							"parameters": {
-								"opacity": "0"
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "HUD_BG_loading",
-							"sid": 996950351451898,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"fade_out\"",
-								"property": "offsetOpacity",
-								"end-value": "100",
-								"time": "0.2",
-								"ease": "easeoutsine",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "HUD_BG_loading",
-							"sid": 469293416090040,
-							"disabled": true,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"fade_in\"",
-								"property": "offsetOpacity",
-								"end-value": "0",
-								"time": "0.2",
-								"ease": "noease",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 108872027667075,
-							"parameters": {
-								"type": "log",
-								"message": "\"a \"  & HUD_BG_loading.Opacity"
-							}
-						}
-					],
-					"sid": 774551210716144
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "HUD_BG_loading",
-					"sid": 897307072711716,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fade_out\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-one-property",
-					"objectClass": "HUD_BG_loading",
-					"sid": 136974170756604,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"fade_in\"",
-						"property": "offsetOpacity",
-						"end-value": "0",
-						"time": "0.2",
-						"ease": "easeoutsine",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
+						"seconds": "0.5",
+						"use-timescale": true
 					}
 				},
 				{
-					"id": "log",
-					"objectClass": "Browser",
-					"sid": 323384346290598,
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 202762296742755,
 					"parameters": {
-						"type": "log",
-						"message": "\"b \"& HUD_BG_loading.Opacity"
+						"layout": "Home"
 					}
 				}
 			],
-			"sid": 579139059155366,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 802035198636525,
-							"parameters": {
-								"first-value": "NextLayout",
-								"comparison": 0,
-								"second-value": "\"Home\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 325398250806908,
-							"parameters": {
-								"layout": "Home"
-							}
-						}
-					],
-					"sid": 532581034577593
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 399119993161974,
-							"parameters": {
-								"first-value": "NextLayout",
-								"comparison": 0,
-								"second-value": "\"Level\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 681688088068263,
-							"parameters": {
-								"layout": "level"
-							}
-						},
-						{
-							"id": "reset-eventvar",
-							"objectClass": "System",
-							"sid": 950291065156531,
-							"parameters": {
-								"variable": "TimeRemaining"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 654370979610514,
-							"parameters": {
-								"variable": "Lives",
-								"value": "3"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 762886635882435,
-							"parameters": {
-								"variable": "IsTimerRunning",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 389482756776175,
-							"parameters": {
-								"variable": "HintIndex",
-								"value": "0"
-							}
-						}
-					],
-					"sid": 326319412265557
-				}
-			]
+			"sid": 642226745494811
 		},
 		{
 			"functionName": "int_SAVE_GAME",

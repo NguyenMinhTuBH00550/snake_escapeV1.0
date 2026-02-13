@@ -3151,7 +3151,7 @@
 					}
 				},
 				{
-					"type": "UI_btn_endgamewin",
+					"type": "UI_btn_WinX2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3221,7 +3221,7 @@
 					}
 				},
 				{
-					"type": "UI_lose_btn_playon",
+					"type": "UI_nextLevel_btn",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3412,6 +3412,11 @@
 								"enabled": true,
 								"live-preview": false
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"instanceFolderItem": {
@@ -3440,28 +3445,28 @@
 				{
 					"type": "Particles",
 					"properties": {
-						"rate": 50,
-						"spray-cone": 60,
+						"rate": 32,
+						"spray-cone": 360,
 						"type": "one-shot",
 						"object": 280736141983048,
 						"initially-visible": true,
 						"live-preview": false,
-						"speed": 450,
-						"size": 20,
+						"speed": 500,
+						"size": 64,
 						"opacity": 100,
 						"grow-rate": 0,
-						"x-randomiser": 200,
-						"y-randomiser": 0,
+						"x-randomiser": 360,
+						"y-randomiser": 360,
 						"initial-speed-randomiser": 0,
-						"size-randomiser": 0,
+						"size-randomiser": 32,
 						"grow-rate-randomiser": 0,
 						"acceleration": -150,
-						"gravity": 250,
-						"angle-randomiser": 0,
-						"life-speed-randomiser": 800,
+						"gravity": 800,
+						"angle-randomiser": 1,
+						"life-speed-randomiser": 0,
 						"opacity-randomiser": 0,
 						"destroy-mode": "timeout-expired",
-						"timeout": 5
+						"timeout": 6
 					},
 					"uid": 185,
 					"sid": 940987725868094,
@@ -4202,8 +4207,17 @@
 					"uid": 226,
 					"sid": 595848744942927,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"initWidth": 0,
+						"initHeight": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 225,
 						"uid": 226,
@@ -5116,7 +5130,8 @@
 					"sid": 938008093894096,
 					"tags": "",
 					"instanceVariables": {
-						"Delay": 0
+						"Delay": 0,
+						"Coin": 0
 					},
 					"behaviors": {
 						"Tween": {
@@ -6376,6 +6391,10 @@
 												"state": true
 											},
 											{
+												"iv": "CanTouch",
+												"state": true
+											},
+											{
 												"iv": "BodyPathIndex",
 												"state": true
 											},
@@ -6401,10 +6420,6 @@
 											},
 											{
 												"iv": "NeedBack",
-												"state": true
-											},
-											{
-												"iv": "CanTouch",
 												"state": true
 											}
 										]
@@ -7045,6 +7060,10 @@
 												"state": true
 											},
 											{
+												"iv": "CanTouch",
+												"state": true
+											},
+											{
 												"iv": "TailOrder",
 												"state": true
 											},
@@ -7070,10 +7089,6 @@
 											},
 											{
 												"iv": "Needback",
-												"state": true
-											},
-											{
-												"iv": "CanTouch",
 												"state": true
 											}
 										]
@@ -7771,6 +7786,10 @@
 												"state": true
 											},
 											{
+												"iv": "CanTouch",
+												"state": true
+											},
+											{
 												"iv": "BodyPathIndex",
 												"state": true
 											},
@@ -7796,10 +7815,6 @@
 											},
 											{
 												"iv": "NeedBack",
-												"state": true
-											},
-											{
-												"iv": "CanTouch",
 												"state": true
 											}
 										]
@@ -8106,6 +8121,102 @@
 						"y": 498,
 						"width": 32,
 						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "navigation",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 391,
+					"sid": 395207283694895,
+					"tags": "",
+					"instanceVariables": {
+						"last_x": 0,
+						"last_y": 0,
+						"touch_count": 0,
+						"touch_for_selected_arrow_x": 0,
+						"touch_for_selected_arrow_y": 0,
+						"last_width": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 395207283694895,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 856,
+						"y": 715,
+						"width": 64,
+						"height": 28,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "GameManager",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 399,
+					"sid": 198113138098621,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 198113138098621,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1365,
+						"y": -670,
+						"width": 60,
+						"height": 60,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

@@ -1,0 +1,16 @@
+{
+	"name": "Dic_GameManagerplayerID",
+	"plugin-id": "Dictionary",
+	"sid": 605290332532118,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "playerID",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 872271316032836
+		}
+	]
+}
