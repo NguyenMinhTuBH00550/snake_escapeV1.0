@@ -6,14 +6,14 @@
 			"conditions": [
 				{
 					"id": "on-created",
-					"objectClass": "PhaoHoa",
+					"objectClass": "confetti",
 					"sid": 496208446671786
 				}
 			],
 			"actions": [
 				{
 					"id": "move-to-top",
-					"objectClass": "PhaoHoa",
+					"objectClass": "confetti",
 					"sid": 727988994055500
 				}
 			],
@@ -25,7 +25,7 @@
 					"actions": [
 						{
 							"id": "set-speed",
-							"objectClass": "PhaoHoa",
+							"objectClass": "confetti",
 							"sid": 811274093333669,
 							"behaviorType": "Rotate",
 							"parameters": {
@@ -34,7 +34,7 @@
 						},
 						{
 							"id": "set-opacity",
-							"objectClass": "PhaoHoa",
+							"objectClass": "confetti",
 							"sid": 365326813420568,
 							"parameters": {
 								"opacity": "0"
@@ -42,7 +42,7 @@
 						},
 						{
 							"id": "tween-one-property",
-							"objectClass": "PhaoHoa",
+							"objectClass": "confetti",
 							"sid": 773961738721319,
 							"behaviorType": "Tween",
 							"parameters": {
@@ -59,7 +59,7 @@
 						},
 						{
 							"id": "set-animation-frame",
-							"objectClass": "PhaoHoa",
+							"objectClass": "confetti",
 							"sid": 469112694095978,
 							"parameters": {
 								"frame-number": "int(random(0,Self.AnimationFrameCount))"

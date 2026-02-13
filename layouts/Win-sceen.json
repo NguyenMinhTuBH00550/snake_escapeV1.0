@@ -7,88 +7,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Particles",
-					"properties": {
-						"rate": 70,
-						"spray-cone": 30,
-						"type": "one-shot",
-						"object": 280736141983048,
-						"initially-visible": true,
-						"live-preview": false,
-						"speed": 2000,
-						"size": 60,
-						"opacity": 100,
-						"grow-rate": 0,
-						"x-randomiser": 200,
-						"y-randomiser": 0,
-						"initial-speed-randomiser": 0,
-						"size-randomiser": 0,
-						"grow-rate-randomiser": 0,
-						"acceleration": -100,
-						"gravity": 1800,
-						"angle-randomiser": 0,
-						"life-speed-randomiser": 800,
-						"opacity-randomiser": 0,
-						"destroy-mode": "timeout-expired",
-						"timeout": 5
-					},
-					"uid": 187,
-					"sid": 791837106757915,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 29,
-						"uid": 187,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": false,
-							"w": false,
-							"h": false,
-							"a": false,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 2.220446049250313e-16,
-							"transformH": 2.220446049250313e-16,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 791837106757915,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 543,
-						"y": 1384,
-						"width": 250,
-						"height": 400,
-						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 4.71238898038469,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "UI_icon_frameTop",
 					"properties": {
 						"initially-visible": true,
@@ -1050,21 +968,6 @@
 						"parent-uid": null,
 						"uid": 29,
 						"children": [
-							{
-								"uid": 187,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": false,
-									"w": false,
-									"h": false,
-									"a": false,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
 							{
 								"uid": 7,
 								"flags": {
