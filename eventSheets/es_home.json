@@ -254,15 +254,6 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 298803763096020,
-							"parameters": {
-								"variable": "HintIndex",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
 							"sid": 990875955210698,
 							"parameters": {
 								"variable": "NextLayout",

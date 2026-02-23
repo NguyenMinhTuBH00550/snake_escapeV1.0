@@ -1031,7 +1031,9 @@
 					"uid": 44,
 					"sid": 768432758296769,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"ToggleState": 0
+					},
 					"behaviors": {
 						"Button": {
 							"properties": {
@@ -1161,7 +1163,9 @@
 					"uid": 45,
 					"sid": 501276071938631,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"ToggleState": 0
+					},
 					"behaviors": {
 						"Button": {
 							"properties": {
@@ -5588,12 +5592,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1404.4018784555135,
-						"y": 447.3457135308782,
-						"width": 9.137033,
-						"height": 102.485741,
-						"originX": 0.5,
-						"originY": 0,
+						"x": 2080,
+						"y": 1376,
+						"width": -768,
+						"height": 32,
+						"originX": 0,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -8267,6 +8271,45 @@
 						"width": 26,
 						"height": 31,
 						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "hint_grid",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 2",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 13,
+					"sid": 736278826234857,
+					"tags": "",
+					"instanceVariables": {
+						"OwnerID": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 736278826234857,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2080,
+						"y": 1632,
+						"width": -768,
+						"height": 32,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,

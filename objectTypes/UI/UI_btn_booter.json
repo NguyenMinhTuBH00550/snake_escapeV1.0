@@ -4,7 +4,15 @@
 	"sid": 688452804261503,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "ToggleState",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 494621207033529
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "aekiro_button",

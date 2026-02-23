@@ -383,7 +383,8 @@
 					"SnakeEyes",
 					"SnakeHead",
 					"SnakeTail",
-					"UI_count_booster"
+					"UI_count_booster",
+					"hint_grid"
 				],
 				"subfolders": [],
 				"name": "UI"

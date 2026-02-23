@@ -1158,7 +1158,9 @@
 					"uid": 207,
 					"sid": 115593946961408,
 					"tags": "grid",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"ToggleState": 0
+					},
 					"behaviors": {
 						"Button": {
 							"properties": {
@@ -1318,7 +1320,9 @@
 					"uid": 208,
 					"sid": 576512694864357,
 					"tags": "hint",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"ToggleState": 0
+					},
 					"behaviors": {
 						"Button": {
 							"properties": {

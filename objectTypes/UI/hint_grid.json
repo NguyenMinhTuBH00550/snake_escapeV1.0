@@ -1,7 +1,7 @@
 {
-	"name": "hint_tile",
+	"name": "hint_grid",
 	"plugin-id": "Sprite",
-	"sid": 212091136104243,
+	"sid": 806627360281358,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
@@ -10,7 +10,7 @@
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 253207119599380
+			"sid": 884085977750901
 		}
 	],
 	"behaviorTypes": [],
@@ -28,7 +28,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5536139,
+						"imageSpriteId": 5608369,
 						"collisionPoly": {
 							"points": [
 								1,
@@ -46,44 +46,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 724931823804757,
-				"name": "Animation 1",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
-			},
-			{
-				"frames": [
-					{
-						"width": 250,
-						"height": 250,
-						"originX": 0,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 3337760,
-						"collisionPoly": {
-							"points": [
-								1,
-								0,
-								1,
-								1,
-								0,
-								1,
-								0,
-								0
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					}
-				],
-				"sid": 242777076824931,
+				"sid": 141057847727132,
 				"name": "Animation 2",
 				"isLooping": false,
 				"isPingPong": false,
