@@ -188,6 +188,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "aekiro_sliderbar",
+			"name": "Slider Bar",
+			"author": "Aekiro",
+			"bundled": false,
+			"version": "1.822"
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -207,7 +215,8 @@
 		"items": [
 			"TiledBackground",
 			"9patch",
-			"CameraController"
+			"CameraController",
+			"play_zoombar_frame"
 		],
 		"subfolders": [
 			{
@@ -376,7 +385,6 @@
 					"LY_shop",
 					"play_zoombar_btnzoomin",
 					"play_zoombar_btnzoomou",
-					"play_zoombar_frame",
 					"play_zoombar_slide",
 					"sactx12048x2048ASTC6x6gameatlas42e01cac",
 					"Snake_Solid",

@@ -394,6 +394,26 @@
 			"sid": 353006760488493
 		},
 		{
+			"eventType": "variable",
+			"name": "IsDraggingUI",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 725938105738558
+		},
+		{
+			"eventType": "variable",
+			"name": "LastZoomLevel",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 365148624927807
+		},
+		{
 			"functionName": "start_layout",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -8952,6 +8972,16 @@
 											"id": "on-any-touch-start",
 											"objectClass": "Touch",
 											"sid": 521935992595727
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 378739738088711,
+											"parameters": {
+												"first-value": "IsDraggingUI",
+												"comparison": 0,
+												"second-value": "0"
+											}
 										}
 									],
 									"actions": [],
@@ -9093,6 +9123,16 @@
 												"first-value": "TouchZoomID",
 												"comparison": 0,
 												"second-value": "-1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 662255879760424,
+											"parameters": {
+												"first-value": "IsDraggingUI",
+												"comparison": 0,
+												"second-value": "0"
 											}
 										}
 									],
@@ -9485,6 +9525,86 @@
 											"sid": 847744687690379
 										}
 									]
+								},
+								{
+									"eventType": "variable",
+									"name": "tempSliderValue",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 124600910758421
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 630452647737043,
+											"parameters": {
+												"first-value": "ZoomLevel",
+												"comparison": 1,
+												"second-value": "LastZoomLevel"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 120897668634103,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 359796875908285,
+													"parameters": {
+														"variable": "LastZoomLevel",
+														"value": "ZoomLevel"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 282294840860434,
+													"parameters": {
+														"variable": "tempSliderValue",
+														"value": "((ZoomLevel - ZoomMin) / (ZoomMax - ZoomMin)) * 100"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 292517352492444,
+													"parameters": {
+														"variable": "tempSliderValue",
+														"value": "clamp(tempSliderValue, 0, 100)"
+													}
+												},
+												{
+													"id": "setvalue1",
+													"objectClass": "play_zoombar_frame",
+													"sid": 328906534731644,
+													"behaviorType": "SliderBar",
+													"parameters": {
+														"value0": "tempSliderValue"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "text_zoom_bar",
+													"sid": 852828583606359,
+													"parameters": {
+														"text": "play_zoombar_frame.SliderBar.value & \"%\""
+													}
+												}
+											],
+											"sid": 366012166551297
+										}
+									]
 								}
 							],
 							"sid": 297915222282136
@@ -9676,6 +9796,300 @@
 								}
 							],
 							"sid": 881695929115658
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "ZoomBar",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "targetZoom",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 901055508286584
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-touched-object",
+											"objectClass": "Touch",
+											"sid": 891041295816013,
+											"parameters": {
+												"object": "play_zoombar_slide",
+												"type": "start"
+											}
+										},
+										{
+											"id": "on-touched-object",
+											"objectClass": "Touch",
+											"sid": 221081709990676,
+											"parameters": {
+												"object": "play_zoombar_frame",
+												"type": "start"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 598666371095388,
+											"parameters": {
+												"variable": "IsDraggingUI",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 648177589801000,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-any-touch-end",
+											"objectClass": "Touch",
+											"sid": 100416056945126
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 838479309349049,
+											"parameters": {
+												"variable": "IsDraggingUI",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 865875998808740
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "play_zoombar_btnzoomou",
+											"sid": 349890734276443,
+											"behaviorType": "Button"
+										}
+									],
+									"actions": [
+										{
+											"id": "setvalue1",
+											"objectClass": "play_zoombar_frame",
+											"sid": 160701510608863,
+											"behaviorType": "SliderBar",
+											"parameters": {
+												"value0": "play_zoombar_frame.SliderBar.value +10"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_zoom_bar",
+											"sid": 246348844450011,
+											"parameters": {
+												"text": "play_zoombar_frame.SliderBar.value & \"%\""
+											}
+										}
+									],
+									"sid": 322231488810836,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"callFunction": "ZoomBar",
+													"sid": 582481683308986
+												}
+											],
+											"sid": 768625428295142
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "play_zoombar_btnzoomin",
+											"sid": 494621334675497,
+											"behaviorType": "Button"
+										}
+									],
+									"actions": [
+										{
+											"id": "setvalue1",
+											"objectClass": "play_zoombar_frame",
+											"sid": 179553111078691,
+											"behaviorType": "SliderBar",
+											"parameters": {
+												"value0": "play_zoombar_frame.SliderBar.value -10"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_zoom_bar",
+											"sid": 932644387211061,
+											"parameters": {
+												"text": "play_zoombar_frame.SliderBar.value & \"%\""
+											}
+										}
+									],
+									"sid": 145428374122150,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"callFunction": "ZoomBar",
+													"sid": 289201086188735
+												}
+											],
+											"sid": 161674155308749
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "issliding0",
+											"objectClass": "play_zoombar_frame",
+											"sid": 560655128982713,
+											"behaviorType": "SliderBar"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "text_zoom_bar",
+											"sid": 448870568950134,
+											"parameters": {
+												"text": "play_zoombar_frame.SliderBar.value & \"%\""
+											}
+										}
+									],
+									"sid": 491532567143020,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"callFunction": "ZoomBar",
+													"sid": 873594155647995
+												}
+											],
+											"sid": 760012001606453
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onchanged",
+											"objectClass": "play_zoombar_frame",
+											"sid": 340291984462054,
+											"behaviorType": "SliderBar"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "text_zoom_bar",
+											"sid": 488938818051781,
+											"parameters": {
+												"text": "play_zoombar_frame.SliderBar.value & \"%\""
+											}
+										}
+									],
+									"sid": 849880134752657,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"callFunction": "ZoomBar",
+													"sid": 521440335875063
+												}
+											],
+											"sid": 183068978098006
+										}
+									]
+								},
+								{
+									"functionName": "ZoomBar",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [],
+									"sid": 802260471960493,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 479065355136181,
+													"parameters": {
+														"variable": "targetZoom",
+														"value": "ZoomMin + (play_zoombar_frame.SliderBar.value /100) * (ZoomMax - ZoomMin)"
+													}
+												},
+												{
+													"id": "set-layout-scale",
+													"objectClass": "System",
+													"sid": 130970078910084,
+													"parameters": {
+														"scale": "targetZoom"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 323617512757509,
+													"parameters": {
+														"variable": "ZoomLevel",
+														"value": "targetZoom"
+													}
+												},
+												{
+													"id": "scroll-to-position",
+													"objectClass": "System",
+													"sid": 271228640800071,
+													"parameters": {
+														"x": "scrollx",
+														"y": "scrolly"
+													}
+												}
+											],
+											"sid": 481572171654484
+										}
+									]
+								}
+							],
+							"sid": 545480885082439
 						}
 					],
 					"sid": 477189302945458

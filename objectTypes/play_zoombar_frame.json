@@ -1,11 +1,22 @@
 {
 	"name": "play_zoombar_frame",
 	"plugin-id": "Sprite",
-	"sid": 159158711430134,
+	"sid": 397166437918741,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_sliderbar",
+			"name": "SliderBar",
+			"sid": 211987431251147
+		},
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 236092414133880
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -20,14 +31,14 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9857486,
+						"imageSpriteId": 7383201,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 359109092581859,
-				"name": "Default",
+				"sid": 914342895686660,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
