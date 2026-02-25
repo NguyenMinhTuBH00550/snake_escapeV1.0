@@ -377,7 +377,7 @@
 			"eventType": "variable",
 			"name": "ZoomMax",
 			"type": "number",
-			"initialValue": "2",
+			"initialValue": "1.5",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -8890,81 +8890,12 @@
 							"sid": 193302265977678
 						},
 						{
-							"eventType": "variable",
-							"name": "TouchMidX",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 473143054492350
-						},
-						{
-							"eventType": "variable",
-							"name": "TouchMidY",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 223107865157089
-						},
-						{
 							"eventType": "group",
 							"disabled": false,
 							"title": "DragMap",
 							"description": "",
 							"isActiveOnStart": true,
 							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-start-of-layout",
-											"objectClass": "System",
-											"sid": 681950897911871
-										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 319398668985420,
-											"parameters": {
-												"variable": "BoundLeft",
-												"value": "ViewportWidth(0)/2"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 450230287605969,
-											"parameters": {
-												"variable": "BoundTop",
-												"value": "ViewportHeight(0)/2"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 423710224247721,
-											"parameters": {
-												"variable": "BoundRight",
-												"value": "LayoutWidth - ViewportWidth(0)/2"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 667127775846284,
-											"parameters": {
-												"variable": "BoundBottom",
-												"value": "LayoutHeight - ViewportHeight(0)/2"
-											}
-										}
-									],
-									"sid": 761274001890038
-								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -9146,10 +9077,10 @@
 												{
 													"id": "scroll-to-position",
 													"objectClass": "System",
-													"sid": 907773234844513,
+													"sid": 972992901534443,
 													"parameters": {
-														"x": "scrollx - (Touch.XForID(PanPointerID,\"HUD\") - PanLastX) / LayoutScale",
-														"y": "scrolly - (Touch.YForID(PanPointerID,\"HUD\") - PanLastY) / LayoutScale"
+														"x": "clamp(\n    scrollx - (Touch.XForID(PanPointerID,\"HUD\") - PanLastX) / LayoutScale,\n    200,\n    880\n)",
+														"y": "clamp(\n    scrolly - (Touch.YForID(PanPointerID,\"HUD\") - PanLastY) / LayoutScale,\n    400,\n    1400\n)"
 													}
 												},
 												{
@@ -9353,10 +9284,10 @@
 														{
 															"id": "scroll-to-position",
 															"objectClass": "System",
-															"sid": 378273379246106,
+															"sid": 870606551859578,
 															"parameters": {
-																"x": "scrollx - (TouchCurrentMidX - PanLastX) / LayoutScale",
-																"y": "scrolly - (TouchCurrentMidY - PanLastY)/LayoutScale"
+																"x": "clamp(\n        scrollx - (TouchCurrentMidX - PanLastX) / LayoutScale,\n        200,\n        880\n    )",
+																"y": "clamp(\n        scrolly - (TouchCurrentMidY - PanLastY) / LayoutScale,\n        400,\n        1400\n    )"
 															}
 														},
 														{
