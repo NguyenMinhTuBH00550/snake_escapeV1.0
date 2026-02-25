@@ -591,7 +591,7 @@
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 420,
+						"parent-uid": 421,
 						"uid": 195,
 						"children": [
 							{
@@ -1049,8 +1049,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1909,
-						"y": 1156,
+						"x": -1091,
+						"y": -799,
 						"width": 736.0000000000001,
 						"height": 192,
 						"originX": 0.5,
@@ -1130,8 +1130,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1721.5,
-						"y": 1117,
+						"x": -1278.5,
+						"y": -838,
 						"width": 384,
 						"height": 64,
 						"originX": 0,
@@ -3078,6 +3078,23 @@
 					"sceneGraphData": {
 						"parent-uid": null,
 						"uid": 421,
+						"children": [
+							{
+								"uid": 195,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
 						"flags": {
 							"x": true,
 							"y": true,
@@ -3110,8 +3127,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -248,
-						"y": -267,
+						"x": 981,
+						"y": 84,
 						"width": 50.63295055631581,
 						"height": 49.843934075087745,
 						"originX": 0.5,
@@ -3147,7 +3164,7 @@
 			"isTransparent": true,
 			"parallaxX": 0,
 			"parallaxY": 0,
-			"scaleRate": 1,
+			"scaleRate": 0,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",

@@ -1,0 +1,104 @@
+{
+	"name": "CameraController",
+	"plugin-id": "Sprite",
+	"sid": 340380416580753,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Zoom",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 264657662208642
+		},
+		{
+			"name": "TargetZoom",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 637829839274908
+		},
+		{
+			"name": "ZoomMin",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 279162629669772
+		},
+		{
+			"name": "ZoomMax",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 805568440901232
+		},
+		{
+			"name": "ZoomSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 924449283730195
+		},
+		{
+			"name": "BoundLeft",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 384127579095006
+		},
+		{
+			"name": "BoundRight",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 361201930119737
+		},
+		{
+			"name": "BoundTop",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 523026711486675
+		},
+		{
+			"name": "BoundBottom",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 463016126787065
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4056682,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 194236756168986,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

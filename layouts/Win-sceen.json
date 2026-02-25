@@ -1708,21 +1708,6 @@
 						"uid": 420,
 						"children": [
 							{
-								"uid": 195,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
 								"uid": 180,
 								"flags": {
 									"x": true,

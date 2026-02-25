@@ -206,7 +206,8 @@
 	"objectTypes": {
 		"items": [
 			"TiledBackground",
-			"9patch"
+			"9patch",
+			"CameraController"
 		],
 		"subfolders": [
 			{

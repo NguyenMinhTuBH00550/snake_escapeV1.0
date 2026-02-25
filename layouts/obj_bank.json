@@ -8315,6 +8315,53 @@
 							1,
 							1,
 							1,
+							0.6
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CameraController",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 30,
+					"sid": 497917214808910,
+					"tags": "",
+					"instanceVariables": {
+						"Zoom": 1,
+						"TargetZoom": 1,
+						"ZoomMin": 1,
+						"ZoomMax": 2,
+						"ZoomSpeed": 0.15,
+						"BoundLeft": 0,
+						"BoundRight": 0,
+						"BoundTop": 0,
+						"BoundBottom": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 497917214808910,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2016,
+						"y": 1152,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
 							1
 						],
 						"angle": 0,

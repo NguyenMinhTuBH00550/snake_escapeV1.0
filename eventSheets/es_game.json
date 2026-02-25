@@ -290,6 +290,110 @@
 			"sid": 610837607316550
 		},
 		{
+			"eventType": "comment",
+			"text": "Value_event_Zoom/Drag"
+		},
+		{
+			"eventType": "variable",
+			"name": "PanPointerID",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 283838747745030
+		},
+		{
+			"eventType": "variable",
+			"name": "PanLastX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 349247486295276
+		},
+		{
+			"eventType": "variable",
+			"name": "PanLastY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 356739390193703
+		},
+		{
+			"eventType": "variable",
+			"name": "TouchZoomID",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 148331947395815
+		},
+		{
+			"eventType": "variable",
+			"name": "TouchStartDistance",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 786639160635290
+		},
+		{
+			"eventType": "variable",
+			"name": "InitialScale",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 861973784115774
+		},
+		{
+			"eventType": "variable",
+			"name": "ZoomLevel",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 942178829661022
+		},
+		{
+			"eventType": "variable",
+			"name": "ZoomMin",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 412635624817995
+		},
+		{
+			"eventType": "variable",
+			"name": "ZoomMax",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 129477348206011
+		},
+		{
+			"eventType": "variable",
+			"name": "ZoomStep",
+			"type": "number",
+			"initialValue": "0.1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 353006760488493
+		},
+		{
 			"functionName": "start_layout",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -3458,10 +3562,10 @@
 								{
 									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 544784079456486,
+									"sid": 791261553078889,
 									"parameters": {
 										"object": "SnakeHead",
-										"type": "start"
+										"type": "end"
 									}
 								}
 							],
@@ -3484,7 +3588,7 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "SnakeHead",
-											"sid": 796743071751439,
+											"sid": 486826602365947,
 											"parameters": {
 												"instance-variable": "CanTouch"
 											}
@@ -3494,7 +3598,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "SnakeHead",
-											"sid": 901438792759010,
+											"sid": 692707589993689,
 											"parameters": {
 												"instance-variable": "CanTouch",
 												"value": "false"
@@ -3502,13 +3606,13 @@
 										},
 										{
 											"callFunction": "SnakePlay",
-											"sid": 907034676144359,
+											"sid": 807877871258668,
 											"parameters": [
 												"SnakeHead.ownID"
 											]
 										}
 									],
-									"sid": 310753089413091,
+									"sid": 451607432457302,
 									"children": [
 										{
 											"eventType": "block",
@@ -3516,7 +3620,7 @@
 												{
 													"id": "pick-all",
 													"objectClass": "System",
-													"sid": 467127914773152,
+													"sid": 296689989240120,
 													"parameters": {
 														"object": "F_Snake"
 													}
@@ -3524,7 +3628,7 @@
 												{
 													"id": "pick-by-evaluate",
 													"objectClass": "System",
-													"sid": 387493754416529,
+													"sid": 181570540344548,
 													"parameters": {
 														"object": "F_Snake",
 														"expression": "F_Snake.ownID = SnakeHead.ownID"
@@ -3533,7 +3637,7 @@
 												{
 													"id": "for-each",
 													"objectClass": "System",
-													"sid": 311448249336573,
+													"sid": 898553526449019,
 													"parameters": {
 														"object": "F_Snake"
 													}
@@ -3543,14 +3647,14 @@
 												{
 													"id": "set-boolean-instvar",
 													"objectClass": "F_Snake",
-													"sid": 885234541403001,
+													"sid": 591180165317912,
 													"parameters": {
 														"instance-variable": "CanTouch",
 														"value": "false"
 													}
 												}
 											],
-											"sid": 220188656220600
+											"sid": 546440466841755
 										}
 									]
 								}
@@ -3562,10 +3666,10 @@
 								{
 									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 431339320260151,
+									"sid": 846963922668120,
 									"parameters": {
 										"object": "SnakeBody",
-										"type": "start"
+										"type": "end"
 									}
 								}
 							],
@@ -3578,7 +3682,7 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "SnakeBody",
-											"sid": 562039934162251,
+											"sid": 398783135413663,
 											"parameters": {
 												"instance-variable": "CanTouch"
 											}
@@ -3588,7 +3692,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "SnakeBody",
-											"sid": 145493366911556,
+											"sid": 847711317264954,
 											"parameters": {
 												"instance-variable": "CanTouch",
 												"value": "false"
@@ -3596,13 +3700,13 @@
 										},
 										{
 											"callFunction": "SnakePlay",
-											"sid": 866465080511029,
+											"sid": 887623507253148,
 											"parameters": [
 												"SnakeBody.ownID"
 											]
 										}
 									],
-									"sid": 585593248720229,
+									"sid": 684720677990945,
 									"children": [
 										{
 											"eventType": "block",
@@ -3610,7 +3714,7 @@
 												{
 													"id": "pick-all",
 													"objectClass": "System",
-													"sid": 593878950786960,
+													"sid": 905961676551758,
 													"parameters": {
 														"object": "F_Snake"
 													}
@@ -3618,7 +3722,7 @@
 												{
 													"id": "pick-by-evaluate",
 													"objectClass": "System",
-													"sid": 839161181157118,
+													"sid": 591253572982105,
 													"parameters": {
 														"object": "F_Snake",
 														"expression": "F_Snake.ownID = SnakeBody.ownID"
@@ -3627,7 +3731,7 @@
 												{
 													"id": "for-each",
 													"objectClass": "System",
-													"sid": 818115582922069,
+													"sid": 737783379810933,
 													"parameters": {
 														"object": "F_Snake"
 													}
@@ -3637,14 +3741,14 @@
 												{
 													"id": "set-boolean-instvar",
 													"objectClass": "F_Snake",
-													"sid": 883303874583604,
+													"sid": 426885723377699,
 													"parameters": {
 														"instance-variable": "CanTouch",
 														"value": "false"
 													}
 												}
 											],
-											"sid": 104757044474906
+											"sid": 258146109013650
 										}
 									]
 								}
@@ -3656,10 +3760,10 @@
 								{
 									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 313141950174359,
+									"sid": 280545718803237,
 									"parameters": {
 										"object": "SnakeTail",
-										"type": "start"
+										"type": "end"
 									}
 								}
 							],
@@ -3672,7 +3776,7 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "SnakeTail",
-											"sid": 857841761276027,
+											"sid": 527142096732525,
 											"parameters": {
 												"instance-variable": "CanTouch"
 											}
@@ -3682,7 +3786,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "SnakeTail",
-											"sid": 784073881772786,
+											"sid": 558267462564671,
 											"parameters": {
 												"instance-variable": "CanTouch",
 												"value": "false"
@@ -3690,13 +3794,13 @@
 										},
 										{
 											"callFunction": "SnakePlay",
-											"sid": 292770614345714,
+											"sid": 806081203221033,
 											"parameters": [
 												"SnakeTail.ownID"
 											]
 										}
 									],
-									"sid": 881825739462203,
+									"sid": 570180655433579,
 									"children": [
 										{
 											"eventType": "block",
@@ -3704,7 +3808,7 @@
 												{
 													"id": "pick-all",
 													"objectClass": "System",
-													"sid": 867542726351244,
+													"sid": 593790023413490,
 													"parameters": {
 														"object": "F_Snake"
 													}
@@ -3712,7 +3816,7 @@
 												{
 													"id": "pick-by-evaluate",
 													"objectClass": "System",
-													"sid": 714376842868746,
+													"sid": 288311731454773,
 													"parameters": {
 														"object": "F_Snake",
 														"expression": "F_Snake.ownID = SnakeTail.ownID"
@@ -3721,7 +3825,7 @@
 												{
 													"id": "for-each",
 													"objectClass": "System",
-													"sid": 180473704912490,
+													"sid": 497702573029472,
 													"parameters": {
 														"object": "F_Snake"
 													}
@@ -3731,14 +3835,14 @@
 												{
 													"id": "set-boolean-instvar",
 													"objectClass": "F_Snake",
-													"sid": 600396634933149,
+													"sid": 486972559710037,
 													"parameters": {
 														"instance-variable": "CanTouch",
 														"value": "false"
 													}
 												}
 											],
-											"sid": 291111177414720
+											"sid": 834177100755187
 										}
 									]
 								}
@@ -5309,17 +5413,7 @@
 								{
 									"eventType": "block",
 									"conditions": [],
-									"actions": [
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 855973716153395,
-											"parameters": {
-												"seconds": "0",
-												"use-timescale": true
-											}
-										}
-									],
+									"actions": [],
 									"sid": 601927552579146,
 									"children": [
 										{
@@ -8493,174 +8587,154 @@
 																	"eventType": "block",
 																	"conditions": [
 																		{
-																			"id": "compare-two-values",
+																			"id": "for-each",
 																			"objectClass": "System",
-																			"sid": 672818896550296,
-																			"disabled": true,
+																			"sid": 234325711653617,
 																			"parameters": {
-																				"first-value": "hint_tile.Count",
-																				"comparison": 0,
-																				"second-value": "0"
+																				"object": "SnakeHead"
 																			}
 																		}
 																	],
-																	"actions": [],
-																	"sid": 994126568382208,
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 250861833483373,
+																			"parameters": {
+																				"variable": "dirX",
+																				"value": "round(cos(SnakeHead.startAngle))"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 832728087201145,
+																			"parameters": {
+																				"variable": "dirY",
+																				"value": "round(sin(SnakeHead.startAngle))"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 200414154368638,
+																			"parameters": {
+																				"variable": "GoalX",
+																				"value": " SnakeHead.X + dirX * 2000"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 322003594421680,
+																			"parameters": {
+																				"variable": "GoalY",
+																				"value": " SnakeHead.Y + dirY * 2000"
+																			}
+																		}
+																	],
+																	"sid": 309001226520065,
 																	"children": [
 																		{
 																			"eventType": "block",
 																			"conditions": [
 																				{
-																					"id": "for-each",
+																					"id": "for",
 																					"objectClass": "System",
-																					"sid": 504405303230475,
+																					"sid": 526489898104194,
 																					"parameters": {
-																						"object": "SnakeHead"
+																						"name": "\"\"",
+																						"start-index": "1",
+																						"end-index": "100"
 																					}
 																				}
 																			],
-																			"actions": [
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 671677376071299,
-																					"parameters": {
-																						"variable": "dirX",
-																						"value": "round(cos(SnakeHead.startAngle))"
-																					}
-																				},
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 144434260831464,
-																					"parameters": {
-																						"variable": "dirY",
-																						"value": "round(sin(SnakeHead.startAngle))"
-																					}
-																				},
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 824802414745181,
-																					"parameters": {
-																						"variable": "GoalX",
-																						"value": " SnakeHead.X + dirX * 2000"
-																					}
-																				},
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 675708655936478,
-																					"parameters": {
-																						"variable": "GoalY",
-																						"value": " SnakeHead.Y + dirY * 2000"
-																					}
-																				}
-																			],
-																			"sid": 191956229292258,
+																			"actions": [],
+																			"sid": 623302846524076,
 																			"children": [
 																				{
 																					"eventType": "block",
 																					"conditions": [
 																						{
-																							"id": "for",
-																							"objectClass": "System",
-																							"sid": 127367204593324,
-																							"parameters": {
-																								"name": "\"\"",
-																								"start-index": "1",
-																								"end-index": "100"
-																							}
+																							"id": "is-moving",
+																							"objectClass": "SnakeHead",
+																							"sid": 612999599604997,
+																							"behaviorType": "MoveTo",
+																							"isInverted": true
 																						}
 																					],
-																					"actions": [],
-																					"sid": 835626216945388,
-																					"children": [
+																					"actions": [
 																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "is-moving",
-																									"objectClass": "SnakeHead",
-																									"sid": 265978612522778,
-																									"behaviorType": "MoveTo",
-																									"isInverted": true
-																								}
-																							],
-																							"actions": [
-																								{
-																									"id": "create-object",
-																									"objectClass": "System",
-																									"sid": 279691005233121,
-																									"parameters": {
-																										"object-to-create": "hint_grid",
-																										"layer": "\"Grid\"",
-																										"x": "SnakeHead.X",
-																										"y": "SnakeHead.Y",
-																										"create-hierarchy": false,
-																										"template-name": "\"\""
-																									}
-																								},
-																								{
-																									"id": "move-to-object",
-																									"objectClass": "hint_grid",
-																									"sid": 378472851848905,
-																									"parameters": {
-																										"where": "behind",
-																										"object": "hint_tile"
-																									}
-																								},
-																								{
-																									"id": "set-scale",
-																									"objectClass": "hint_grid",
-																									"sid": 504858076421472,
-																									"parameters": {
-																										"scale": "hint_scale"
-																									}
-																								},
-																								{
-																									"id": "set-angle",
-																									"objectClass": "hint_grid",
-																									"sid": 976256577303784,
-																									"parameters": {
-																										"angle": "angle(SnakeHead.X, SnakeHead.Y, GoalX, GoalY)"
-																									}
-																								},
-																								{
-																									"id": "set-width",
-																									"objectClass": "hint_grid",
-																									"sid": 466463842012997,
-																									"parameters": {
-																										"width": "distance(\n    SnakeHead.X,\n    SnakeHead.Y,\n    GoalX,\n    GoalY\n)"
-																									}
-																								},
-																								{
-																									"id": "set-position",
-																									"objectClass": "hint_grid",
-																									"sid": 520168643884106,
-																									"parameters": {
-																										"x": "SnakeHead.X",
-																										"y": "SnakeHead.Y"
-																									}
-																								},
-																								{
-																									"id": "set-instvar-value",
-																									"objectClass": "hint_grid",
-																									"sid": 604047646786918,
-																									"parameters": {
-																										"instance-variable": "OwnerID",
-																										"value": "SnakeHead.ownID"
-																									}
-																								},
-																								{
-																									"id": "stop-loop",
-																									"objectClass": "System",
-																									"sid": 693136578870214
-																								}
-																							],
-																							"sid": 563844836547949
+																							"id": "create-object",
+																							"objectClass": "System",
+																							"sid": 447098131517322,
+																							"parameters": {
+																								"object-to-create": "hint_grid",
+																								"layer": "\"Grid\"",
+																								"x": "SnakeHead.X",
+																								"y": "SnakeHead.Y",
+																								"create-hierarchy": false,
+																								"template-name": "\"\""
+																							}
+																						},
+																						{
+																							"id": "move-to-object",
+																							"objectClass": "hint_grid",
+																							"sid": 532461079668554,
+																							"parameters": {
+																								"where": "behind",
+																								"object": "hint_tile"
+																							}
+																						},
+																						{
+																							"id": "set-scale",
+																							"objectClass": "hint_grid",
+																							"sid": 269160614895161,
+																							"parameters": {
+																								"scale": "hint_scale"
+																							}
+																						},
+																						{
+																							"id": "set-angle",
+																							"objectClass": "hint_grid",
+																							"sid": 562214182990614,
+																							"parameters": {
+																								"angle": "angle(SnakeHead.X, SnakeHead.Y, GoalX, GoalY)"
+																							}
+																						},
+																						{
+																							"id": "set-width",
+																							"objectClass": "hint_grid",
+																							"sid": 779636990445969,
+																							"parameters": {
+																								"width": "distance(\n    SnakeHead.X,\n    SnakeHead.Y,\n    GoalX,\n    GoalY\n)"
+																							}
+																						},
+																						{
+																							"id": "set-position",
+																							"objectClass": "hint_grid",
+																							"sid": 859545319738079,
+																							"parameters": {
+																								"x": "SnakeHead.X",
+																								"y": "SnakeHead.Y"
+																							}
+																						},
+																						{
+																							"id": "set-instvar-value",
+																							"objectClass": "hint_grid",
+																							"sid": 491753304262203,
+																							"parameters": {
+																								"instance-variable": "OwnerID",
+																								"value": "SnakeHead.ownID"
+																							}
+																						},
+																						{
+																							"id": "stop-loop",
+																							"objectClass": "System",
+																							"sid": 569661248582998
 																						}
-																					]
+																					],
+																					"sid": 262133948021761
 																				}
 																			]
 																		}
@@ -8756,10 +8830,852 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [],
-							"sid": 453770471055458
+							"eventType": "variable",
+							"name": "BoundLeft",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 642136464333127
+						},
+						{
+							"eventType": "variable",
+							"name": "BoundRight",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 782019001570880
+						},
+						{
+							"eventType": "variable",
+							"name": "BoundTop",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 887047537048060
+						},
+						{
+							"eventType": "variable",
+							"name": "BoundBottom",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 193302265977678
+						},
+						{
+							"eventType": "variable",
+							"name": "TouchMidX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 473143054492350
+						},
+						{
+							"eventType": "variable",
+							"name": "TouchMidY",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 223107865157089
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "DragMap",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-start-of-layout",
+											"objectClass": "System",
+											"sid": 681950897911871
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 319398668985420,
+											"parameters": {
+												"variable": "BoundLeft",
+												"value": "ViewportWidth(0)/2"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 450230287605969,
+											"parameters": {
+												"variable": "BoundTop",
+												"value": "ViewportHeight(0)/2"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 423710224247721,
+											"parameters": {
+												"variable": "BoundRight",
+												"value": "LayoutWidth - ViewportWidth(0)/2"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 667127775846284,
+											"parameters": {
+												"variable": "BoundBottom",
+												"value": "LayoutHeight - ViewportHeight(0)/2"
+											}
+										}
+									],
+									"sid": 761274001890038
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-any-touch-start",
+											"objectClass": "Touch",
+											"sid": 521935992595727
+										}
+									],
+									"actions": [],
+									"sid": 582351858463550,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 108469490311192,
+													"parameters": {
+														"first-value": "PanPointerID",
+														"comparison": 0,
+														"second-value": "-1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 340227726064152,
+													"parameters": {
+														"variable": "PanPointerID",
+														"value": "Touch.TouchID"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 130457665261148,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "Touch.X(\"HUD\")"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 604593617207425,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "Touch.Y(\"HUD\")"
+													}
+												}
+											],
+											"sid": 617016779965557
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 400155654165783
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 252301542786770,
+													"parameters": {
+														"first-value": "TouchZoomID",
+														"comparison": 0,
+														"second-value": "-1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 581683756895382,
+													"parameters": {
+														"variable": "TouchZoomID",
+														"value": "Touch.TouchID"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 252620783257403,
+													"parameters": {
+														"variable": "TouchStartDistance",
+														"value": "distance(\r\n Touch.XForID(PanPointerID,\"HUD\"),\r\n Touch.YForID(PanPointerID,\"HUD\"),\r\n Touch.XForID(TouchZoomID,\"HUD\"),\r\n Touch.YForID(TouchZoomID,\"HUD\")\r\n)"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 293679051728588,
+													"parameters": {
+														"variable": "InitialScale",
+														"value": "LayoutScale"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 720420812283598,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "(\r\n Touch.XForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.XForID(TouchZoomID,\"HUD\")\r\n) / 2"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 775972578851632,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "(\r\n Touch.YForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.YForID(TouchZoomID,\"HUD\")\r\n) / 2"
+													}
+												}
+											],
+											"sid": 267287619504085
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 723128270727840,
+											"parameters": {
+												"first-value": "PanPointerID",
+												"comparison": 1,
+												"second-value": "-1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 111671474240013,
+											"parameters": {
+												"first-value": "TouchZoomID",
+												"comparison": 0,
+												"second-value": "-1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 991879585184219,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "scroll-to-position",
+													"objectClass": "System",
+													"sid": 907773234844513,
+													"parameters": {
+														"x": "scrollx - (Touch.XForID(PanPointerID,\"HUD\") - PanLastX) / LayoutScale",
+														"y": "scrolly - (Touch.YForID(PanPointerID,\"HUD\") - PanLastY) / LayoutScale"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 541444669046030,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "Touch.X(\"HUD\")"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 414619250038817,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "Touch.Y(\"HUD\")"
+													}
+												}
+											],
+											"sid": 561166539196622
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 593017808682892,
+											"parameters": {
+												"first-value": "TouchZoomID",
+												"comparison": 1,
+												"second-value": "-1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 852806564362934,
+									"children": [
+										{
+											"eventType": "variable",
+											"name": "TouchCurrentDistance",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 269304141207670
+										},
+										{
+											"eventType": "variable",
+											"name": "TouchCurrentMidX",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 583555142830735
+										},
+										{
+											"eventType": "variable",
+											"name": "TouchCurrentMidY",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 692717858570472
+										},
+										{
+											"eventType": "variable",
+											"name": "zoomRaw",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 746646200876315
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 346105404578571,
+													"parameters": {
+														"variable": "TouchCurrentMidX",
+														"value": "(\r\n Touch.XForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.XForID(TouchZoomID,\"HUD\")\r\n)/2"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 621069427099593,
+													"parameters": {
+														"variable": "TouchCurrentMidY",
+														"value": "(\r\n Touch.YForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.YForID(TouchZoomID,\"HUD\")\r\n)/2"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 154332001526559,
+													"parameters": {
+														"variable": "TouchCurrentDistance",
+														"value": "distance(\n Touch.XForID(PanPointerID,\"HUD\"),\n Touch.YForID(PanPointerID,\"HUD\"),\n Touch.XForID(TouchZoomID,\"HUD\"),\n Touch.YForID(TouchZoomID,\"HUD\")\n)"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 586567138887302,
+													"parameters": {
+														"variable": "zoomRaw",
+														"value": "InitialScale * (TouchCurrentDistance / TouchStartDistance)"
+													}
+												}
+											],
+											"sid": 824774686230285,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 607739669544566,
+															"parameters": {
+																"first-value": "zoomRaw",
+																"comparison": 2,
+																"second-value": "ZoomMin"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 667797810192461,
+															"parameters": {
+																"variable": "zoomRaw",
+																"value": "ZoomMin"
+															}
+														}
+													],
+													"sid": 857158306451159
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 679331521963156,
+															"parameters": {
+																"first-value": "zoomRaw",
+																"comparison": 4,
+																"second-value": "ZoomMax"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 972976149581117,
+															"parameters": {
+																"variable": "zoomRaw",
+																"value": "ZoomMax"
+															}
+														}
+													],
+													"sid": 756829781417982
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-layout-scale",
+															"objectClass": "System",
+															"sid": 468902414884456,
+															"parameters": {
+																"scale": "zoomRaw"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 924573944153874,
+															"parameters": {
+																"variable": "ZoomLevel",
+																"value": "zoomRaw"
+															}
+														},
+														{
+															"id": "scroll-to-position",
+															"objectClass": "System",
+															"sid": 378273379246106,
+															"parameters": {
+																"x": "scrollx - (TouchCurrentMidX - PanLastX) / LayoutScale",
+																"y": "scrolly - (TouchCurrentMidY - PanLastY)/LayoutScale"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 496586076217181,
+															"parameters": {
+																"variable": "PanLastX",
+																"value": "TouchCurrentMidX"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 945925247565391,
+															"parameters": {
+																"variable": "PanLastY",
+																"value": "TouchCurrentMidY"
+															}
+														}
+													],
+													"sid": 213399345010419
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-any-touch-end",
+											"objectClass": "Touch",
+											"sid": 465292771489658
+										}
+									],
+									"actions": [],
+									"sid": 529466333212145,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 202567589193661,
+													"parameters": {
+														"first-value": "PanPointerID",
+														"comparison": 0,
+														"second-value": "Touch.TouchID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 258874468427411,
+													"parameters": {
+														"variable": "PanPointerID",
+														"value": "-1"
+													}
+												}
+											],
+											"sid": 524770852209670,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 269451869232466,
+															"parameters": {
+																"first-value": "TouchZoomID",
+																"comparison": 1,
+																"second-value": "-1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 951296409532907,
+															"parameters": {
+																"variable": "PanPointerID",
+																"value": "TouchZoomID"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 232232009358023,
+															"parameters": {
+																"variable": "TouchZoomID",
+																"value": "-1"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 298616419479068,
+															"parameters": {
+																"variable": "PanLastX",
+																"value": "Touch.XForID(PanPointerID,\"HUD\")"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 973049119854102,
+															"parameters": {
+																"variable": "PanLastY",
+																"value": "Touch.YForID(PanPointerID,\"HUD\")"
+															}
+														}
+													],
+													"sid": 992394622784442
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 578287063510077,
+													"parameters": {
+														"first-value": "TouchZoomID",
+														"comparison": 0,
+														"second-value": "Touch.TouchID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 156549266202027,
+													"parameters": {
+														"variable": "TouchZoomID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 770989744991992,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "Touch.XForID(PanPointerID,\"HUD\")"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 276111577739854,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "Touch.YForID(PanPointerID,\"HUD\")"
+													}
+												}
+											],
+											"sid": 847744687690379
+										}
+									]
+								}
+							],
+							"sid": 297915222282136
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "ZoomPC",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "targetZoom",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 672452745797773
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-mouse-wheel",
+											"objectClass": "Mouse",
+											"sid": 152940681544053,
+											"parameters": {
+												"direction": "any"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 349260872190385,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 307011966384467,
+													"parameters": {
+														"first-value": "Mouse.WheelDeltaY",
+														"comparison": 2,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 980026740010908,
+													"parameters": {
+														"variable": "targetZoom",
+														"value": "ZoomLevel + ZoomStep"
+													}
+												}
+											],
+											"sid": 981276260933166
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 425648066134344,
+													"parameters": {
+														"first-value": "Mouse.WheelDeltaY",
+														"comparison": 4,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 562949859020544,
+													"parameters": {
+														"variable": "targetZoom",
+														"value": "ZoomLevel - ZoomStep"
+													}
+												}
+											],
+											"sid": 582781458408119
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 783419361441899,
+													"parameters": {
+														"first-value": "targetZoom",
+														"comparison": 4,
+														"second-value": "ZoomMax"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 160579439712619,
+													"parameters": {
+														"variable": "targetZoom",
+														"value": "ZoomMax"
+													}
+												}
+											],
+											"sid": 231434949211629
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 689670975034690,
+													"parameters": {
+														"first-value": "targetZoom",
+														"comparison": 2,
+														"second-value": "ZoomMin"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 692715069024777,
+													"parameters": {
+														"variable": "targetZoom",
+														"value": "ZoomMin"
+													}
+												}
+											],
+											"sid": 994844297733211
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 489118411875086,
+													"parameters": {
+														"first-value": "targetZoom",
+														"comparison": 1,
+														"second-value": "ZoomLevel"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 450938064626110,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-layout-scale",
+															"objectClass": "System",
+															"sid": 644138464289383,
+															"parameters": {
+																"scale": "targetZoom"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 734013789179168,
+															"parameters": {
+																"variable": "ZoomLevel",
+																"value": "targetZoom"
+															}
+														}
+													],
+													"sid": 389398979710827
+												}
+											]
+										}
+									]
+								}
+							],
+							"sid": 881695929115658
 						}
 					],
 					"sid": 477189302945458
