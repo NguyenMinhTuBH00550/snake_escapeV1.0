@@ -53,6 +53,34 @@
 			"desc": "",
 			"show": true,
 			"sid": 228752729067595
+		},
+		{
+			"name": "TailGoalX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 624053338646346
+		},
+		{
+			"name": "TailGoalY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 824433128530339
+		},
+		{
+			"name": "cpX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 359081329907859
+		},
+		{
+			"name": "cpY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 599972275191200
 		}
 	],
 	"behaviorTypes": [],

@@ -34,7 +34,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -48,10 +52,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -133,7 +135,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -147,10 +153,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -232,7 +236,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -246,10 +254,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -331,7 +337,11 @@
 						"TailBackMax": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"Needback": 0
+						"Needback": 0,
+						"TailGoalX": 0,
+						"TailGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -345,10 +355,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -430,7 +438,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -444,10 +456,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -529,7 +539,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -543,10 +557,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -1625,7 +1637,7 @@
 					"sid": 488141666738587,
 					"tags": "",
 					"instanceVariables": {
-						"CPIndex": 0,
+						"HasSnake": 0,
 						"PathOrder": -1,
 						"GridX": 0,
 						"GridY": 0
@@ -6082,7 +6094,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6096,10 +6112,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -6181,7 +6195,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6195,10 +6213,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -6280,7 +6296,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6294,10 +6314,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -6379,7 +6397,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6393,10 +6415,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -6502,6 +6522,22 @@
 											{
 												"iv": "NeedBack",
 												"state": true
+											},
+											{
+												"iv": "BodyGoalX",
+												"state": true
+											},
+											{
+												"iv": "BodyGoalY",
+												"state": true
+											},
+											{
+												"iv": "cpX",
+												"state": true
+											},
+											{
+												"iv": "cpY",
+												"state": true
 											}
 										]
 									}
@@ -6544,13 +6580,8 @@
 										]
 									},
 									{
-										"key": "Tween",
-										"state": [
-											[
-												"enabled",
-												true
-											]
-										]
+										"key": "Timer",
+										"state": []
 									}
 								]
 							},
@@ -6773,7 +6804,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6787,10 +6822,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -6886,10 +6919,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -7048,7 +7079,11 @@
 						"TailBackMax": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"Needback": 0
+						"Needback": 0,
+						"TailGoalX": 0,
+						"TailGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7062,10 +7097,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -7171,6 +7204,22 @@
 											{
 												"iv": "Needback",
 												"state": true
+											},
+											{
+												"iv": "TailGoalX",
+												"state": true
+											},
+											{
+												"iv": "TailGoalY",
+												"state": true
+											},
+											{
+												"iv": "cpX",
+												"state": true
+											},
+											{
+												"iv": "cpY",
+												"state": true
 											}
 										]
 									}
@@ -7213,13 +7262,8 @@
 										]
 									},
 									{
-										"key": "Tween",
-										"state": [
-											[
-												"enabled",
-												true
-											]
-										]
+										"key": "Timer",
+										"state": []
 									}
 								]
 							},
@@ -7477,7 +7521,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7491,10 +7539,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -7576,7 +7622,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7590,10 +7640,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -7675,7 +7723,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7689,10 +7741,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"sceneGraphData": {
@@ -7774,7 +7824,11 @@
 						"BodyOrder": 0,
 						"BackTargetX": 0,
 						"BackTargetY": 0,
-						"NeedBack": 0
+						"NeedBack": 0,
+						"BodyGoalX": 0,
+						"BodyGoalY": 0,
+						"cpX": 0,
+						"cpY": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7788,10 +7842,8 @@
 								"enabled": true
 							}
 						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -7897,6 +7949,22 @@
 											{
 												"iv": "NeedBack",
 												"state": true
+											},
+											{
+												"iv": "BodyGoalX",
+												"state": true
+											},
+											{
+												"iv": "BodyGoalY",
+												"state": true
+											},
+											{
+												"iv": "cpX",
+												"state": true
+											},
+											{
+												"iv": "cpY",
+												"state": true
 											}
 										]
 									}
@@ -7939,13 +8007,8 @@
 										]
 									},
 									{
-										"key": "Tween",
-										"state": [
-											[
-												"enabled",
-												true
-											]
-										]
+										"key": "Timer",
+										"state": []
 									}
 								]
 							},

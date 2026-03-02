@@ -4,6 +4,12 @@
         "1": "levels/lv1.json",
         "2": "levels/lv2.json",
         "3": "levels/lv3.json",
-        "4": "levels/lv21.json"
+        "4": "levels/lv4.json",
+        "5": "levels/lv5.json",
+        "6": "levels/lv6.json",
+        "7": "levels/lv7.json",
+        "8": "levels/lv8.json",
+        "9": "levels/lv9.json",
+        "10": "levels/lv10.json"
     }
 }

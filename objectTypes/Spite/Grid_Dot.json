@@ -2,11 +2,11 @@
 	"name": "Grid_Dot",
 	"plugin-id": "Sprite",
 	"sid": 778161425745761,
-	"isGlobal": true,
+	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "CPIndex",
+			"name": "HasSnake",
 			"type": "number",
 			"desc": "",
 			"show": true,

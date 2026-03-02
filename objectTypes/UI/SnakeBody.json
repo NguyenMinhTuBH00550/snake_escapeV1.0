@@ -53,6 +53,34 @@
 			"desc": "",
 			"show": true,
 			"sid": 477284319702282
+		},
+		{
+			"name": "BodyGoalX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 469105302432254
+		},
+		{
+			"name": "BodyGoalY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 778233358387370
+		},
+		{
+			"name": "cpX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 631293266122521
+		},
+		{
+			"name": "cpY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 198769669443555
 		}
 	],
 	"behaviorTypes": [],
