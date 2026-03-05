@@ -870,7 +870,9 @@
 					"uid": 197,
 					"sid": 658571300614413,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -966,7 +968,9 @@
 					"uid": 201,
 					"sid": 514900044225077,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {
 						"Tween": {
 							"properties": {
@@ -1150,7 +1154,9 @@
 					"uid": 206,
 					"sid": 602920126341120,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 205,
@@ -1685,7 +1691,9 @@
 					"uid": 211,
 					"sid": 359279293063103,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 207,
@@ -1766,7 +1774,9 @@
 					"uid": 212,
 					"sid": 766103514992751,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 208,
@@ -2474,7 +2484,9 @@
 					"uid": 204,
 					"sid": 503565725632932,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -2563,10 +2575,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 545.7243742937849,
-						"y": 1847.2974786896696,
-						"width": 1120,
-						"height": 192,
+						"x": 540.7243742937849,
+						"y": 1836.2974786896696,
+						"width": 1080,
+						"height": 170,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2754,7 +2766,9 @@
 					"uid": 416,
 					"sid": 792408432372865,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -3040,7 +3054,9 @@
 					"uid": 415,
 					"sid": 593065187259453,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -3458,7 +3474,9 @@
 					"uid": 423,
 					"sid": 150376264920320,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {

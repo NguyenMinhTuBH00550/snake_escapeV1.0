@@ -318,7 +318,9 @@
 					"uid": 248,
 					"sid": 262455645705071,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 245,
@@ -831,7 +833,9 @@
 					"uid": 254,
 					"sid": 471896145505657,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -927,7 +931,9 @@
 					"uid": 253,
 					"sid": 701464636176727,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1233,7 +1239,9 @@
 					"uid": 259,
 					"sid": 957902210493340,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1474,7 +1482,9 @@
 					"uid": 261,
 					"sid": 897641530792009,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {

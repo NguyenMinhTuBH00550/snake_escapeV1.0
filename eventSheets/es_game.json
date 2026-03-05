@@ -4486,6 +4486,16 @@
 												"instance-variable": "BodyGoalY",
 												"value": "GoalY"
 											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 631736824173940,
+											"disabled": true,
+											"parameters": {
+												"type": "log",
+												"message": "\"aaa: \" & activeOwnID"
+											}
 										}
 									],
 									"sid": 744084285282758,
@@ -5613,11 +5623,6 @@
 											"behaviorType": "MoveTo"
 										},
 										{
-											"callFunction": "LoseLife",
-											"sid": 714379516075730,
-											"disabled": true
-										},
-										{
 											"id": "set-instvar-value",
 											"objectClass": "SnakeHead",
 											"sid": 798156996918401,
@@ -5651,6 +5656,10 @@
 											"parameters": [
 												"SnakeHead.ownID"
 											]
+										},
+										{
+											"callFunction": "LoseLife",
+											"sid": 705945030657592
 										}
 									],
 									"sid": 686504783449966,
@@ -5972,49 +5981,32 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "for-each",
+											"id": "every-tick",
 											"objectClass": "System",
-											"sid": 941095811440701,
+											"sid": 604853805067597
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "SnakeHead",
+											"sid": 838834761573792,
 											"parameters": {
-												"object": "SnakeHead"
+												"instance-variable": "SnakeWay",
+												"value": "\"A \"\n&\nSnakeHead.SnakeWay\r\n&\r\nSnakeHead.ownID & \",\"\r\n&\r\nSnakeHead.X & \",\"\r\n&\r\nSnakeHead.Y & \",\"\r\n&\r\nSnakeHead.Angle\r\n&\r\n\"|\"\r\n"
+											}
+										},
+										{
+											"id": "add-to-instvar",
+											"objectClass": "SnakeHead",
+											"sid": 441109012637493,
+											"parameters": {
+												"instance-variable": "HeadPathIndex",
+												"value": "1"
 											}
 										}
 									],
-									"actions": [],
-									"sid": 196087868690114,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "every-tick",
-													"objectClass": "System",
-													"sid": 319542131220632
-												}
-											],
-											"actions": [
-												{
-													"id": "set-instvar-value",
-													"objectClass": "SnakeHead",
-													"sid": 882229825254469,
-													"parameters": {
-														"instance-variable": "SnakeWay",
-														"value": "\"A \"\n&\nSnakeHead.SnakeWay\r\n&\r\nSnakeHead.ownID & \",\"\r\n&\r\nSnakeHead.X & \",\"\r\n&\r\nSnakeHead.Y & \",\"\r\n&\r\nSnakeHead.Angle\r\n&\r\n\"|\"\r\n"
-													}
-												},
-												{
-													"id": "add-to-instvar",
-													"objectClass": "SnakeHead",
-													"sid": 689308684610525,
-													"parameters": {
-														"instance-variable": "HeadPathIndex",
-														"value": "1"
-													}
-												}
-											],
-											"sid": 169092716123880
-										}
-									]
+									"sid": 717485365952944
 								},
 								{
 									"eventType": "block",
@@ -6096,79 +6088,27 @@
 											"sid": 740847817621035
 										}
 									],
-									"actions": [],
-									"sid": 216429801857490,
-									"children": [
+									"actions": [
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 101279191502844,
-													"parameters": {
-														"object": "SnakeHead"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 131936935124746,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "pick-by-evaluate",
-															"objectClass": "System",
-															"sid": 357333858555384,
-															"parameters": {
-																"object": "SnakeTail",
-																"expression": "SnakeTail.ownID = SnakeHead.ownID"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 932348339522756,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "for-each",
-																	"objectClass": "System",
-																	"sid": 474476348508945,
-																	"parameters": {
-																		"object": "SnakeTail"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "SnakeTail",
-																	"sid": 905713829603902,
-																	"parameters": {
-																		"instance-variable": "SnakeWay",
-																		"value": "\"B \"\r\n&\r\nSnakeTail.SnakeWay\r\n&\r\nSnakeTail.ownID & \",\"\r\n&\r\nSnakeTail.X & \",\"\r\n&\r\nSnakeTail.Y & \",\"\r\n&\r\nSnakeTail.Angle\r\n&\r\n\"|\"\r\n"
-																	}
-																},
-																{
-																	"id": "add-to-instvar",
-																	"objectClass": "SnakeTail",
-																	"sid": 315020223792581,
-																	"parameters": {
-																		"instance-variable": "TailPathIndex",
-																		"value": "1"
-																	}
-																}
-															],
-															"sid": 240140251826974
-														}
-													]
-												}
-											]
+											"id": "set-instvar-value",
+											"objectClass": "SnakeTail",
+											"sid": 951863241233229,
+											"parameters": {
+												"instance-variable": "SnakeWay",
+												"value": "\"B \"\r\n&\r\nSnakeTail.SnakeWay\r\n&\r\nSnakeTail.ownID & \",\"\r\n&\r\nSnakeTail.X & \",\"\r\n&\r\nSnakeTail.Y & \",\"\r\n&\r\nSnakeTail.Angle\r\n&\r\n\"|\"\r\n"
+											}
+										},
+										{
+											"id": "add-to-instvar",
+											"objectClass": "SnakeTail",
+											"sid": 855841834264865,
+											"parameters": {
+												"instance-variable": "TailPathIndex",
+												"value": "1"
+											}
 										}
-									]
+									],
+									"sid": 216429801857490
 								}
 							]
 						},
@@ -6194,87 +6134,27 @@
 											"sid": 764964942190133
 										}
 									],
-									"actions": [],
-									"sid": 943962639690943,
-									"children": [
+									"actions": [
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 821658752982986,
-													"parameters": {
-														"object": "SnakeHead"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 232614082603657,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "pick-by-evaluate",
-															"objectClass": "System",
-															"sid": 414721297091368,
-															"parameters": {
-																"object": "SnakeBody",
-																"expression": "SnakeBody.ownID = SnakeHead.ownID"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 344975311907786,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "for-each",
-																	"objectClass": "System",
-																	"sid": 380632942556788,
-																	"parameters": {
-																		"object": "SnakeBody"
-																	}
-																}
-															],
-															"actions": [],
-															"sid": 950088229945065,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [],
-																	"actions": [
-																		{
-																			"id": "set-instvar-value",
-																			"objectClass": "SnakeBody",
-																			"sid": 466290138104892,
-																			"parameters": {
-																				"instance-variable": "SnakeWay",
-																				"value": "\"B \"\r\n&\r\nSnakeBody.SnakeWay\r\n&\r\nSnakeBody.ownID & \",\"\r\n&\r\nSnakeBody.X & \",\"\r\n&\r\nSnakeBody.Y & \",\"\r\n&\r\nSnakeBody.Angle\r\n&\r\n\"|\"\r\n"
-																			}
-																		},
-																		{
-																			"id": "add-to-instvar",
-																			"objectClass": "SnakeBody",
-																			"sid": 829310270343375,
-																			"parameters": {
-																				"instance-variable": "BodyPathIndex",
-																				"value": "1"
-																			}
-																		}
-																	],
-																	"sid": 853466270681370
-																}
-															]
-														}
-													]
-												}
-											]
+											"id": "set-instvar-value",
+											"objectClass": "SnakeBody",
+											"sid": 926835886393498,
+											"parameters": {
+												"instance-variable": "SnakeWay",
+												"value": "\"B \"\r\n&\r\nSnakeBody.SnakeWay\r\n&\r\nSnakeBody.ownID & \",\"\r\n&\r\nSnakeBody.X & \",\"\r\n&\r\nSnakeBody.Y & \",\"\r\n&\r\nSnakeBody.Angle\r\n&\r\n\"|\"\r\n"
+											}
+										},
+										{
+											"id": "add-to-instvar",
+											"objectClass": "SnakeBody",
+											"sid": 884801950946812,
+											"parameters": {
+												"instance-variable": "BodyPathIndex",
+												"value": "1"
+											}
 										}
-									]
+									],
+									"sid": 943962639690943
 								}
 							]
 						},
@@ -7101,7 +6981,7 @@
 										},
 										{
 											"id": "set-key",
-											"objectClass": "DIcSaveGame",
+											"objectClass": "DicSaveGame",
 											"sid": 106338561257896,
 											"parameters": {
 												"key": "\"SAVE_COIN\"",
@@ -7215,7 +7095,7 @@
 												},
 												{
 													"id": "set-key",
-													"objectClass": "DIcSaveGame",
+													"objectClass": "DicSaveGame",
 													"sid": 992066234312317,
 													"parameters": {
 														"key": "\"CurrentLevel\"",
@@ -7322,6 +7202,13 @@
 											"parameters": {
 												"text": "int(Self.Text) + UI_coin_reward.coin"
 											}
+										},
+										{
+											"callFunction": "ChangeTextWidth",
+											"sid": 327262007233353,
+											"parameters": [
+												"text_coin.UID"
+											]
 										}
 									],
 									"sid": 805589213147146,
@@ -7401,7 +7288,7 @@
 										},
 										{
 											"id": "set-key",
-											"objectClass": "DIcSaveGame",
+											"objectClass": "DicSaveGame",
 											"sid": 928676647080437,
 											"parameters": {
 												"key": "\"CurrentLevel\"",
@@ -7559,16 +7446,6 @@
 									}
 								},
 								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 312143208525778,
-									"disabled": true,
-									"parameters": {
-										"layer": "\"fade\"",
-										"visibility": "visible"
-									}
-								},
-								{
 									"callFunction": "openDialog",
 									"sid": 201269113529507,
 									"parameters": [
@@ -7616,7 +7493,7 @@
 									"actions": [
 										{
 											"id": "set-key",
-											"objectClass": "DIcSaveGame",
+											"objectClass": "DicSaveGame",
 											"sid": 160878585438670,
 											"parameters": {
 												"key": "\"SAVE_COIN\"",
@@ -7630,10 +7507,17 @@
 										{
 											"id": "set-text",
 											"objectClass": "text_coin",
-											"sid": 722387702490602,
+											"sid": 567337399356129,
 											"parameters": {
-												"text": "DIcSaveGame.Get(SAVE_COIN)"
+												"text": "int(DIcSaveGame.Get(SAVE_COIN))"
 											}
+										},
+										{
+											"callFunction": "ChangeTextWidth",
+											"sid": 931652148737504,
+											"parameters": [
+												"text_coin.UID"
+											]
 										},
 										{
 											"id": "set-eventvar-value",
@@ -7662,16 +7546,6 @@
 											"objectClass": "Dia_noti_failed",
 											"sid": 394415285635426,
 											"behaviorType": "Dialog"
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 601512271453533,
-											"disabled": true,
-											"parameters": {
-												"layer": "\"fade\"",
-												"visibility": "invisible"
-											}
 										},
 										{
 											"callFunction": "closeDialog",
@@ -7722,16 +7596,6 @@
 									"objectClass": "Dia_noti_failed",
 									"sid": 511482931141154,
 									"behaviorType": "Dialog"
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 795706672893031,
-									"disabled": true,
-									"parameters": {
-										"layer": "\"fade\"",
-										"visibility": "invisible"
-									}
 								},
 								{
 									"callFunction": "closeDialog",
@@ -7838,18 +7702,8 @@
 											}
 										},
 										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 807340183417448,
-											"disabled": true,
-											"parameters": {
-												"layer": "\"fade\"",
-												"visibility": "visible"
-											}
-										},
-										{
 											"callFunction": "openDialog",
-											"sid": 682883645409176,
+											"sid": 222980445663435,
 											"parameters": [
 												"\"\""
 											]
@@ -7883,18 +7737,8 @@
 											"behaviorType": "Dialog"
 										},
 										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 967692682721937,
-											"disabled": true,
-											"parameters": {
-												"layer": "\"fade\"",
-												"visibility": "invisible"
-											}
-										},
-										{
 											"callFunction": "closeDialog",
-											"sid": 252005247951341,
+											"sid": 673806728740940,
 											"parameters": [
 												"\"\""
 											]
@@ -7920,18 +7764,8 @@
 											"behaviorType": "Dialog"
 										},
 										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 716359167775402,
-											"disabled": true,
-											"parameters": {
-												"layer": "\"fade\"",
-												"visibility": "invisible"
-											}
-										},
-										{
 											"callFunction": "closeDialog",
-											"sid": 525464931429902,
+											"sid": 881662235988317,
 											"parameters": [
 												"\"\""
 											]
@@ -7960,11 +7794,12 @@
 											}
 										},
 										{
-											"id": "set-time-scale",
+											"id": "set-group-active",
 											"objectClass": "System",
-											"sid": 514974729948937,
+											"sid": 412565032636694,
 											"parameters": {
-												"time-scale": "0"
+												"group-name": "\"Event_Touch\"",
+												"state": "deactivated"
 											}
 										}
 									],
@@ -7991,11 +7826,12 @@
 											}
 										},
 										{
-											"id": "set-time-scale",
+											"id": "set-group-active",
 											"objectClass": "System",
-											"sid": 327477082804052,
+											"sid": 728700535712411,
 											"parameters": {
-												"time-scale": "1"
+												"group-name": "\"Event_Touch\"",
+												"state": "activated"
 											}
 										}
 									],
@@ -9119,6 +8955,36 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "DragStartX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 622078588443030
+						},
+						{
+							"eventType": "variable",
+							"name": "DragStartY",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 369936658121684
+						},
+						{
+							"eventType": "variable",
+							"name": "IsPanning",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 485234670705172
+						},
+						{
 							"eventType": "group",
 							"disabled": false,
 							"title": "DragMap",
@@ -9187,6 +9053,33 @@
 													"parameters": {
 														"variable": "PanLastY",
 														"value": "Touch.Y(\"HUD\")"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 824634257780771,
+													"parameters": {
+														"variable": "DragStartX",
+														"value": "Touch.X(\"HUD\")"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 805645194018181,
+													"parameters": {
+														"variable": "DragStartY",
+														"value": "Touch.Y(\"HUD\")"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 492608230578286,
+													"parameters": {
+														"variable": "IsPanning",
+														"value": "0"
 													}
 												}
 											],
@@ -9268,6 +9161,33 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
+											"sid": 797449640674958,
+											"parameters": {
+												"first-value": "distance(\n DragStartX,\n DragStartY,\n Touch.XForID(PanPointerID,\"HUD\"),\n Touch.YForID(PanPointerID,\"HUD\")\n)",
+												"comparison": 4,
+												"second-value": "50"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 492041804732254,
+											"parameters": {
+												"variable": "IsPanning",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 280209781929844
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
 											"sid": 723128270727840,
 											"parameters": {
 												"first-value": "PanPointerID",
@@ -9293,6 +9213,16 @@
 												"first-value": "IsDraggingUI",
 												"comparison": 0,
 												"second-value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 137657405300905,
+											"parameters": {
+												"first-value": "IsPanning",
+												"comparison": 0,
+												"second-value": "1"
 											}
 										}
 									],
@@ -9553,7 +9483,17 @@
 											"sid": 465292771489658
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 668602008651402,
+											"parameters": {
+												"variable": "IsPanning",
+												"value": "0"
+											}
+										}
+									],
 									"sid": 529466333212145,
 									"children": [
 										{

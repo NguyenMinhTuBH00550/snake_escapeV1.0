@@ -215,7 +215,9 @@
 					"uid": 155,
 					"sid": 152581179641960,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -311,7 +313,9 @@
 					"uid": 154,
 					"sid": 117354844444914,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -407,7 +411,9 @@
 					"uid": 157,
 					"sid": 615431071297804,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 615431071297804,
@@ -460,7 +466,9 @@
 					"uid": 156,
 					"sid": 516067133200342,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {

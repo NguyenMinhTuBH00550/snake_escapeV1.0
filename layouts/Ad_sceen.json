@@ -717,7 +717,9 @@
 					"uid": 401,
 					"sid": 260508304770319,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -813,7 +815,9 @@
 					"uid": 402,
 					"sid": 484730249935870,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -909,7 +913,9 @@
 					"uid": 400,
 					"sid": 982045021807350,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1005,7 +1011,9 @@
 					"uid": 403,
 					"sid": 278868109703225,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1101,7 +1109,9 @@
 					"uid": 404,
 					"sid": 305885821157096,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {

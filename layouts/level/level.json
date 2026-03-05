@@ -27,10 +27,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 538,
-						"y": 967,
-						"width": 1085,
-						"height": 1928,
+						"x": 540.5,
+						"y": 960,
+						"width": 1080,
+						"height": 1920,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -346,40 +346,6 @@
 			"global": false
 		},
 		{
-			"name": "loading",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [],
-			"sid": 907770357417797,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 0,
-			"parallaxY": 0,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
 			"name": "Fader",
 			"overriden": 1,
 			"subLayers": [],
@@ -421,7 +387,7 @@
 	"sid": 939378455030547,
 	"nonworld-instances": [
 		{
-			"type": "DIcSaveGame",
+			"type": "DicSaveGame",
 			"properties": {},
 			"uid": 56,
 			"sid": 177649584780610,

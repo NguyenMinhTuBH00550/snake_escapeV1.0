@@ -27,17 +27,17 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 541.6144645647976,
-						"y": 968,
-						"width": 1109,
-						"height": 1946,
+						"x": 540.6144645647976,
+						"y": 943.5,
+						"width": 1113,
+						"height": 1953,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
-							0.95
+							0.9
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -53,7 +53,7 @@
 				1,
 				1,
 				1,
-				1
+				0.8
 			],
 			"backgroundColor": [
 				0.3686274509803922,
@@ -64,7 +64,7 @@
 			"isTransparent": true,
 			"parallaxX": 0,
 			"parallaxY": 0,
-			"scaleRate": 1,
+			"scaleRate": 0,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",

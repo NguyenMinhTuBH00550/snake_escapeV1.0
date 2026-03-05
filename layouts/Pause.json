@@ -1092,7 +1092,9 @@
 					"uid": 173,
 					"sid": 837573879174552,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 286,
@@ -1173,7 +1175,9 @@
 					"uid": 174,
 					"sid": 960324897845852,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 286,
@@ -1254,7 +1258,9 @@
 					"uid": 175,
 					"sid": 147925316800002,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 286,
@@ -1335,7 +1341,9 @@
 					"uid": 176,
 					"sid": 547272283324367,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1431,7 +1439,9 @@
 					"uid": 177,
 					"sid": 462432811966706,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1527,7 +1537,9 @@
 					"uid": 178,
 					"sid": 104537206662214,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1623,7 +1635,9 @@
 					"uid": 279,
 					"sid": 464844676022734,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1719,7 +1733,9 @@
 					"uid": 278,
 					"sid": 243680329767610,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1815,7 +1831,9 @@
 					"uid": 280,
 					"sid": 174977725102171,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -1899,13 +1917,13 @@
 					"behaviors": {
 						"Dialog": {
 							"properties": {
-								"open-animation": "scaleup",
+								"open-animation": "none",
 								"open-animation-tweenning": "quadratic out",
 								"open-animation-duration": 200,
 								"open-sound": "",
-								"close-animation": "scaledown",
-								"close-animation-tweenning": "back out",
-								"close-animation-duration": 150,
+								"close-animation": "none",
+								"close-animation-tweenning": "quartic out",
+								"close-animation-duration": 300,
 								"close-sound": "",
 								"close-button-name": "",
 								"is-modal": "yes"
@@ -2224,7 +2242,7 @@
 								}
 							},
 							{
-								"uid": 42,
+								"uid": 411,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -2297,7 +2315,7 @@
 						"live-preview": false
 					},
 					"uid": 42,
-					"sid": 552391524799010,
+					"sid": 842930448128418,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
@@ -2335,24 +2353,9 @@
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 286,
+						"parent-uid": 411,
 						"uid": 42,
 						"children": [
-							{
-								"uid": 50,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
 							{
 								"uid": 57,
 								"flags": {
@@ -2370,6 +2373,21 @@
 							},
 							{
 								"uid": 54,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 50,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -2410,16 +2428,16 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 552391524799010,
+						"sid": 842930448128418,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 890,
-						"y": 119,
-						"width": 185,
-						"height": 63,
+						"x": 918,
+						"y": 136,
+						"width": 230,
+						"height": 81,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2428,7 +2446,7 @@
 							1,
 							1
 						],
-						"angle": 0.02198856596601103,
+						"angle": 0,
 						"zElevation": 0
 					}
 				},
@@ -2442,11 +2460,11 @@
 						"live-preview": false
 					},
 					"uid": 50,
-					"sid": 462599776922298,
-					"tags": "",
+					"sid": 239745924631321,
+					"tags": "STATE_WIN_GAME",
 					"instanceVariables": {
-						"initWidth": 0,
-						"initHeight": 0
+						"initWidth": 104,
+						"initHeight": 105
 					},
 					"behaviors": {
 						"Tween": {
@@ -2484,16 +2502,16 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 462599776922298,
+						"sid": 239745924631321,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 992,
-						"y": 120,
-						"width": 105,
-						"height": 85,
+						"x": 1029,
+						"y": 136,
+						"width": 104,
+						"height": 105,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2502,7 +2520,7 @@
 							1,
 							1
 						],
-						"angle": 0.02198856596601103,
+						"angle": 0,
 						"zElevation": 0
 					}
 				},
@@ -2516,7 +2534,7 @@
 						"live-preview": false
 					},
 					"uid": 54,
-					"sid": 744457876006590,
+					"sid": 651068319832567,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
@@ -2549,16 +2567,16 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 744457876006590,
+						"sid": 651068319832567,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 951,
-						"y": 150,
-						"width": 55,
-						"height": 50,
+						"x": 996,
+						"y": 166,
+						"width": 57,
+						"height": 58,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2567,7 +2585,7 @@
 							1,
 							1
 						],
-						"angle": 0.02198856596601103,
+						"angle": 0,
 						"zElevation": 0
 					}
 				},
@@ -2577,7 +2595,7 @@
 						"text": "0",
 						"enable-bbcode": true,
 						"font": "LilitaOne-Regular",
-						"size": 25,
+						"size": 36,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -2597,9 +2615,11 @@
 						"read-aloud": false
 					},
 					"uid": 57,
-					"sid": 605481181904562,
+					"sid": 808857802311182,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 42,
@@ -2630,16 +2650,16 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 605481181904562,
+						"sid": 808857802311182,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 786,
-						"y": 99,
-						"width": 195,
-						"height": 31,
+						"x": 830,
+						"y": 93,
+						"width": 141.85881477904366,
+						"height": 81,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -2648,7 +2668,99 @@
 							1,
 							1
 						],
-						"angle": 0.02198856596601103,
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Anchor",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 411,
+					"sid": 243936792739887,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-right",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 286,
+						"uid": 411,
+						"children": [
+							{
+								"uid": 42,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 243936792739887,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1103,
+						"y": 60,
+						"width": 50.63295055631581,
+						"height": 49.843934075087745,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
 						"zElevation": 0
 					}
 				}

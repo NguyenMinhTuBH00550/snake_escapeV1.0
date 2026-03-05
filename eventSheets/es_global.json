@@ -26,41 +26,54 @@
 					"sid": 549339624284984
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "init",
+					"objectClass": "ProUI",
+					"sid": 486765517414447
+				},
+				{
+					"callFunction": "closeDialog",
+					"sid": 453339102200750,
+					"parameters": [
+						"\"\""
+					]
+				},
+				{
+					"id": "clear",
+					"objectClass": "DicSaveGame",
+					"sid": 951211057451384,
+					"disabled": true
+				}
+			],
 			"sid": 707411446384968,
 			"children": [
 				{
 					"eventType": "block",
-					"conditions": [],
-					"actions": [
+					"conditions": [
 						{
-							"id": "init",
-							"objectClass": "ProUI",
-							"sid": 684762926835112
-						},
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 344678103900179,
+							"parameters": {
+								"object": "text_coin"
+							}
+						}
+					],
+					"actions": [
 						{
 							"id": "set-text",
 							"objectClass": "text_coin",
-							"sid": 425093678223684,
+							"sid": 739272691346382,
 							"parameters": {
-								"text": "DIcSaveGame.Get(SAVE_COIN)"
+								"text": "int(DIcSaveGame.Get(SAVE_COIN))"
 							}
 						},
 						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 838677493822804,
-							"disabled": true,
-							"parameters": {
-								"layer": "\"fade\"",
-								"visibility": "invisible"
-							}
-						},
-						{
-							"callFunction": "closeDialog",
-							"sid": 772150318632694,
+							"callFunction": "ChangeTextWidth",
+							"sid": 884429452055540,
 							"parameters": [
-								"\"\""
+								"text_coin.UID"
 							]
 						}
 					],
@@ -492,6 +505,166 @@
 				}
 			],
 			"sid": 833894339197284
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ChangeText",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "ChangeTextWidth",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "uid",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 770365972758471
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 300696450756967,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "F_TextWidthChange",
+									"sid": 302060015192933,
+									"parameters": {
+										"unique-id": "uid"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 381282611321666,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "F_TextWidthChange",
+											"sid": 615122034073878,
+											"parameters": {
+												"instance-variable": "font_size",
+												"comparison": 0,
+												"value": "-1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "F_TextWidthChange",
+											"sid": 341211850885024,
+											"parameters": {
+												"instance-variable": "font_size",
+												"value": "Self.FaceSize"
+											}
+										}
+									],
+									"sid": 976337832852288
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-font-size",
+											"objectClass": "F_TextWidthChange",
+											"sid": 949268246717865,
+											"parameters": {
+												"size-pt": "Self.font_size"
+											}
+										}
+									],
+									"sid": 779442453967993
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "repeat",
+											"objectClass": "System",
+											"sid": 951847893577615,
+											"parameters": {
+												"count": "500"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 383768373131637,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "evaluate-expression",
+													"objectClass": "System",
+													"sid": 267638307500447,
+													"parameters": {
+														"value": "F_TextWidthChange.TextWidth > F_TextWidthChange.Width"
+													}
+												},
+												{
+													"id": "evaluate-expression",
+													"objectClass": "System",
+													"sid": 205787149826675,
+													"parameters": {
+														"value": "F_TextWidthChange.TextHeight > F_TextWidthChange.Height"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-font-size",
+													"objectClass": "F_TextWidthChange",
+													"sid": 996218091908676,
+													"parameters": {
+														"size-pt": "Self.FaceSize - 0.5"
+													}
+												}
+											],
+											"sid": 152314189039141,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 925732864864897
+												}
+											],
+											"actions": [
+												{
+													"id": "stop-loop",
+													"objectClass": "System",
+													"sid": 322176352526673
+												}
+											],
+											"sid": 600099114817050
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 485044017111114
 		}
 	],
 	"sid": 667786211939097

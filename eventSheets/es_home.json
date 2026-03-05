@@ -336,16 +336,6 @@
 									}
 								},
 								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 275458739310746,
-									"disabled": true,
-									"parameters": {
-										"layer": "\"fade\"",
-										"visibility": "visible"
-									}
-								},
-								{
 									"callFunction": "openDialog",
 									"sid": 384426473392622,
 									"parameters": [
@@ -379,16 +369,6 @@
 									"objectClass": "Dia_Setting",
 									"sid": 717196725568068,
 									"behaviorType": "Dialog"
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 611564025160269,
-									"disabled": true,
-									"parameters": {
-										"layer": "\"fade\"",
-										"visibility": "invisible"
-									}
 								},
 								{
 									"callFunction": "closeDialog",
@@ -1069,7 +1049,7 @@
 							"actions": [
 								{
 									"id": "set-key",
-									"objectClass": "DIcSaveGame",
+									"objectClass": "DicSaveGame",
 									"sid": 410565176862439,
 									"parameters": {
 										"key": "\"SAVE_COIN\"",
@@ -1083,10 +1063,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "text_coin",
-									"sid": 193120171404801,
+									"sid": 650543609590807,
 									"parameters": {
-										"text": "DIcSaveGame.Get(SAVE_COIN)"
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
 									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 137482241570009,
+									"parameters": [
+										"text_coin.UID"
+									]
 								}
 							],
 							"sid": 395797662704045
@@ -1112,7 +1099,7 @@
 							"actions": [
 								{
 									"id": "set-key",
-									"objectClass": "DIcSaveGame",
+									"objectClass": "DicSaveGame",
 									"sid": 991908481675356,
 									"parameters": {
 										"key": "\"SAVE_COIN\"",
@@ -1126,10 +1113,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "text_coin",
-									"sid": 722069361518117,
+									"sid": 186482118047870,
 									"parameters": {
-										"text": "DIcSaveGame.Get(SAVE_COIN)"
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
 									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 388761311350944,
+									"parameters": [
+										"text_coin.UID"
+									]
 								}
 							],
 							"sid": 111097292487933
@@ -1155,7 +1149,7 @@
 							"actions": [
 								{
 									"id": "set-key",
-									"objectClass": "DIcSaveGame",
+									"objectClass": "DicSaveGame",
 									"sid": 868852043540840,
 									"parameters": {
 										"key": "\"SAVE_COIN\"",
@@ -1169,10 +1163,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "text_coin",
-									"sid": 627439737222100,
+									"sid": 961630591043504,
 									"parameters": {
-										"text": "DIcSaveGame.Get(SAVE_COIN)"
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
 									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 926095137759595,
+									"parameters": [
+										"text_coin.UID"
+									]
 								}
 							],
 							"sid": 778856527508447
@@ -1198,7 +1199,7 @@
 							"actions": [
 								{
 									"id": "set-key",
-									"objectClass": "DIcSaveGame",
+									"objectClass": "DicSaveGame",
 									"sid": 928009018221814,
 									"parameters": {
 										"key": "\"SAVE_COIN\"",
@@ -1212,10 +1213,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "text_coin",
-									"sid": 130124140260386,
+									"sid": 861693694568744,
 									"parameters": {
-										"text": "DIcSaveGame.Get(SAVE_COIN)"
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
 									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 786391977255333,
+									"parameters": [
+										"text_coin.UID"
+									]
 								}
 							],
 							"sid": 598344116284348
@@ -1241,7 +1249,7 @@
 							"actions": [
 								{
 									"id": "set-key",
-									"objectClass": "DIcSaveGame",
+									"objectClass": "DicSaveGame",
 									"sid": 141395937667548,
 									"parameters": {
 										"key": "\"SAVE_COIN\"",
@@ -1255,10 +1263,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "text_coin",
-									"sid": 116631462167443,
+									"sid": 635342821679249,
 									"parameters": {
-										"text": "DIcSaveGame.Get(SAVE_COIN)"
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
 									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 275011665882420,
+									"parameters": [
+										"text_coin.UID"
+									]
 								}
 							],
 							"sid": 798940058206012
@@ -1284,7 +1299,7 @@
 							"actions": [
 								{
 									"id": "set-key",
-									"objectClass": "DIcSaveGame",
+									"objectClass": "DicSaveGame",
 									"sid": 604211520106358,
 									"parameters": {
 										"key": "\"SAVE_COIN\"",
@@ -1298,10 +1313,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "text_coin",
-									"sid": 455828756668545,
+									"sid": 295178009601337,
 									"parameters": {
-										"text": "DIcSaveGame.Get(SAVE_COIN)"
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
 									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 974982503004210,
+									"parameters": [
+										"text_coin.UID"
+									]
 								}
 							],
 							"sid": 854253186470965
@@ -1327,7 +1349,7 @@
 							"actions": [
 								{
 									"id": "set-key",
-									"objectClass": "DIcSaveGame",
+									"objectClass": "DicSaveGame",
 									"sid": 371332333936182,
 									"parameters": {
 										"key": "\"SAVE_COIN\"",
@@ -1341,10 +1363,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "text_coin",
-									"sid": 721405458633324,
+									"sid": 731071706482995,
 									"parameters": {
-										"text": "DIcSaveGame.Get(SAVE_COIN)"
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
 									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 448805625253620,
+									"parameters": [
+										"text_coin.UID"
+									]
 								}
 							],
 							"sid": 721938266315029

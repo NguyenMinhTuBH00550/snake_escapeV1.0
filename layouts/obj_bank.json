@@ -1453,7 +1453,9 @@
 					"uid": 48,
 					"sid": 866355428079067,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 44,
@@ -1534,7 +1536,9 @@
 					"uid": 49,
 					"sid": 736721765854604,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 45,
@@ -2184,7 +2188,9 @@
 					"uid": 102,
 					"sid": 783672889474274,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -2252,7 +2258,9 @@
 					"uid": 103,
 					"sid": 518486197778851,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 518486197778851,
@@ -2305,7 +2313,9 @@
 					"uid": 104,
 					"sid": 585955632933039,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 585955632933039,
@@ -2358,7 +2368,9 @@
 					"uid": 105,
 					"sid": 664759641669492,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 664759641669492,
@@ -2411,7 +2423,9 @@
 					"uid": 106,
 					"sid": 423058785089248,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -2507,7 +2521,9 @@
 					"uid": 107,
 					"sid": 979358462766508,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -2677,7 +2693,9 @@
 					"uid": 110,
 					"sid": 210804617925967,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -2745,7 +2763,9 @@
 					"uid": 111,
 					"sid": 753467457774799,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -2850,7 +2870,9 @@
 					"uid": 113,
 					"sid": 692272286403858,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -3772,7 +3794,9 @@
 					"uid": 222,
 					"sid": 946148061896391,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -4259,7 +4283,9 @@
 					"uid": 228,
 					"sid": 566779349656690,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 225,
@@ -4554,7 +4580,9 @@
 					"uid": 233,
 					"sid": 882505401068805,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -4724,7 +4752,9 @@
 					"uid": 236,
 					"sid": 256644842596079,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
@@ -5878,7 +5908,9 @@
 					"uid": 417,
 					"sid": 453482916998704,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"font_size": -1
+					},
 					"behaviors": {},
 					"effects": {
 						"Outline": {
