@@ -276,6 +276,24 @@
 								"x": "LayoutWidth*0.5",
 								"y": "LayoutHeight*0.5"
 							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "HUD_home_adbar",
+							"sid": 667567217646932,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "HUD_home_adbar.Height"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "HUD_home_adbar",
+							"sid": 299130860136011,
+							"parameters": {
+								"x": "LayoutWidth*0.5",
+								"y": "Self.Y"
+							}
 						}
 					],
 					"sid": 216150177941523

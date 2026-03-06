@@ -6875,7 +6875,7 @@
 											"actions": [
 												{
 													"callFunction": "winCoin",
-													"sid": 920329310162354,
+													"sid": 857513128247280,
 													"parameters": [
 														"40",
 														"UI_coin_topBar.X",
@@ -7314,6 +7314,43 @@
 										}
 									],
 									"sid": 677246849773459
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "UI_btn_home",
+											"sid": 215241567177858,
+											"behaviorType": "Button"
+										}
+									],
+									"actions": [],
+									"sid": 479426877056264,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "UI_lose_btn_playon",
+													"sid": 992336793242570,
+													"parameters": {
+														"tags": "\"btn_nextLevel\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "simulateclick",
+													"objectClass": "UI_lose_btn_playon",
+													"sid": 922719395376559,
+													"behaviorType": "Button"
+												}
+											],
+											"sid": 538774916267991
+										}
+									]
 								}
 							],
 							"sid": 931280641459558
@@ -7929,11 +7966,36 @@
 							"conditions": [],
 							"actions": [
 								{
+									"callFunction": "showFader",
+									"sid": 761773041172922,
+									"parameters": [
+										"100"
+									]
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 485432594162097,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
 									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 564334090732866,
+									"sid": 403730960604201,
 									"parameters": {
-										"layout": "Loading"
+										"layout": "level"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 513747007626637,
+									"parameters": {
+										"variable": "IsTimerRunning",
+										"value": "0"
 									}
 								}
 							],
