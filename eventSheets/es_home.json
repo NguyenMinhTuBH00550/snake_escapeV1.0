@@ -56,30 +56,6 @@
 							}
 						},
 						{
-							"id": "set-x",
-							"objectClass": "LY_Home",
-							"sid": 257963489220948,
-							"parameters": {
-								"x": " (ViewportLeft(0) + ViewportRight(0)) / 2"
-							}
-						},
-						{
-							"id": "set-x",
-							"objectClass": "LY_shop",
-							"sid": 100635366713314,
-							"parameters": {
-								"x": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0)"
-							}
-						},
-						{
-							"id": "set-x",
-							"objectClass": "LY_Challenge",
-							"sid": 896420318379559,
-							"parameters": {
-								"x": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0) * 2"
-							}
-						},
-						{
 							"id": "set-visible",
 							"objectClass": "UI_homeTab",
 							"sid": 348285283790039,
@@ -88,41 +64,23 @@
 							}
 						},
 						{
-							"id": "set-instvar-value",
-							"objectClass": "UI_Home",
-							"sid": 987402527517008,
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 757007937669911,
 							"parameters": {
-								"instance-variable": "initialY",
-								"value": "UI_Home.Y"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "UI_icon_shop",
-							"sid": 133094314988513,
-							"parameters": {
-								"instance-variable": "initialY",
-								"value": "UI_icon_shop.Y"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "UI_icon_challenge",
-							"sid": 137894133633704,
-							"parameters": {
-								"instance-variable": "initialY",
-								"value": "UI_icon_challenge.Y"
+								"seconds": "0",
+								"use-timescale": true
 							}
 						},
 						{
 							"id": "tween-one-property",
 							"objectClass": "UI_Home",
-							"sid": 826404617218654,
+							"sid": 948220384674888,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"icon_home\"",
 								"property": "offsetY",
-								"end-value": "UI_Home.initialY - 100",
+								"end-value": "Self.Y -100",
 								"time": "0.15",
 								"ease": "noease",
 								"destroy-on-complete": "no",
@@ -182,6 +140,12 @@
 								}
 							],
 							"sid": 451392157256977
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 584391988805151
 						}
 					]
 				},
@@ -410,69 +374,36 @@
 									"parameters": [
 										"0"
 									]
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 319117552117822,
+									"parameters": {
+										"layer": "\"Home\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 137703899470413,
+									"parameters": {
+										"layer": "\"Shop\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 560453986484943,
+									"parameters": {
+										"layer": "\"Challenge\"",
+										"visibility": "invisible"
+									}
 								}
 							],
-							"sid": 865342530996296,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "tween-one-property",
-											"objectClass": "LY_Home",
-											"sid": 467569861297175,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetX",
-												"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2",
-												"time": "0.3",
-												"ease": "easeoutexpo",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "LY_shop",
-											"sid": 961737038780187,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetX",
-												"end-value": "ViewportLeft(0) + ViewportRight(0) / 2 - ViewportWidth(0)",
-												"time": "0.3",
-												"ease": "easeoutexpo",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "LY_Challenge",
-											"sid": 871198615947076,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetX",
-												"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0) * 2",
-												"time": "0.3",
-												"ease": "easeoutexpo",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										}
-									],
-									"sid": 135961872200044
-								}
-							]
+							"sid": 865342530996296
 						},
 						{
 							"eventType": "block",
@@ -494,69 +425,36 @@
 									"parameters": [
 										"1"
 									]
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 521651511042572,
+									"parameters": {
+										"layer": "\"Home\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 415335161219037,
+									"parameters": {
+										"layer": "\"Shop\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 540497149920616,
+									"parameters": {
+										"layer": "\"Challenge\"",
+										"visibility": "invisible"
+									}
 								}
 							],
-							"sid": 357618724468064,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "tween-one-property",
-											"objectClass": "LY_Home",
-											"sid": 554051817403516,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetX",
-												"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0)",
-												"time": "0.3",
-												"ease": "easeoutexpo",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "LY_shop",
-											"sid": 996960850454224,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetX",
-												"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2",
-												"time": "0.3",
-												"ease": "easeoutexpo",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "LY_Challenge",
-											"sid": 893705287672453,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetX",
-												"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2 + ViewportWidth(0)",
-												"time": "0.3",
-												"ease": "easeoutexpo",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										}
-									],
-									"sid": 510531379213268
-								}
-							]
+							"sid": 357618724468064
 						},
 						{
 							"eventType": "block",
@@ -578,69 +476,36 @@
 									"parameters": [
 										"2"
 									]
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 478007490412791,
+									"parameters": {
+										"layer": "\"Home\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 348965409826459,
+									"parameters": {
+										"layer": "\"Shop\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 857763944541274,
+									"parameters": {
+										"layer": "\"Challenge\"",
+										"visibility": "visible"
+									}
 								}
 							],
-							"sid": 584241838515934,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "tween-one-property",
-											"objectClass": "LY_Home",
-											"sid": 659532234842390,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetX",
-												"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2 - ViewportWidth(0) * 2",
-												"time": "0.3",
-												"ease": "easeoutexpo",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "LY_shop",
-											"sid": 363912308638865,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetX",
-												"end-value": "ViewportLeft(0) + ViewportRight(0) / 2 - ViewportWidth(0)",
-												"time": "0.3",
-												"ease": "easeoutexpo",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "LY_Challenge",
-											"sid": 913757453489594,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"\"",
-												"property": "offsetX",
-												"end-value": "(ViewportLeft(0) + ViewportRight(0)) / 2",
-												"time": "0.3",
-												"ease": "easeoutexpo",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										}
-									],
-									"sid": 696226592462090
-								}
-							]
+							"sid": 584241838515934
 						},
 						{
 							"functionName": "SetActiveIcon",
@@ -670,12 +535,12 @@
 										{
 											"id": "tween-one-property",
 											"objectClass": "UI_Home",
-											"sid": 521625998991059,
+											"sid": 761479780051586,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"icon_home\"",
 												"property": "offsetY",
-												"end-value": "UI_Home.initialY",
+												"end-value": "UI_homeTab.Y + 20",
 												"time": "0.15",
 												"ease": "noease",
 												"destroy-on-complete": "no",
@@ -687,12 +552,12 @@
 										{
 											"id": "tween-one-property",
 											"objectClass": "UI_icon_shop",
-											"sid": 300415725853505,
+											"sid": 535246169667773,
 											"behaviorType": "Tween",
 											"parameters": {
-												"tags": "\"icon_home\"",
+												"tags": "\"icon_shop\"",
 												"property": "offsetY",
-												"end-value": "UI_icon_shop.initialY",
+												"end-value": "UI_homeTab.Y + 20",
 												"time": "0.15",
 												"ease": "noease",
 												"destroy-on-complete": "no",
@@ -704,12 +569,12 @@
 										{
 											"id": "tween-one-property",
 											"objectClass": "UI_icon_challenge",
-											"sid": 171535825424919,
+											"sid": 935061069284367,
 											"behaviorType": "Tween",
 											"parameters": {
-												"tags": "\"icon_home\"",
+												"tags": "\"icon_challenge\"",
 												"property": "offsetY",
-												"end-value": "UI_icon_challenge.initialY",
+												"end-value": "UI_homeTab.Y + 20",
 												"time": "0.15",
 												"ease": "noease",
 												"destroy-on-complete": "no",
@@ -798,12 +663,12 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "UI_Home",
-													"sid": 548123377610867,
+													"sid": 839787832699426,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"icon_home\"",
 														"property": "offsetY",
-														"end-value": "UI_Home.initialY - 100",
+														"end-value": "UI_homeTab.Y- 100",
 														"time": "0.15",
 														"ease": "noease",
 														"destroy-on-complete": "no",
@@ -876,12 +741,12 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "UI_icon_shop",
-													"sid": 437766517276264,
+													"sid": 400316417952555,
 													"behaviorType": "Tween",
 													"parameters": {
-														"tags": "\"icon_home\"",
+														"tags": "\"icon_shop\"",
 														"property": "offsetY",
-														"end-value": "UI_icon_shop.initialY - 100",
+														"end-value": "UI_homeTab.Y- 100",
 														"time": "0.15",
 														"ease": "noease",
 														"destroy-on-complete": "no",
@@ -954,12 +819,12 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "UI_icon_challenge",
-													"sid": 870651545355790,
+													"sid": 534614300465287,
 													"behaviorType": "Tween",
 													"parameters": {
-														"tags": "\"icon_home\"",
+														"tags": "\"icon_challenge\"",
 														"property": "offsetY",
-														"end-value": "UI_icon_challenge.initialY - 100",
+														"end-value": "UI_homeTab.Y- 100",
 														"time": "0.15",
 														"ease": "noease",
 														"destroy-on-complete": "no",

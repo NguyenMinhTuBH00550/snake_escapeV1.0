@@ -196,6 +196,86 @@
 								"width": "ViewportWidth(0)",
 								"height": "ViewportHeight(0)"
 							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "UI_home_process",
+							"sid": 431696106170210,
+							"parameters": {
+								"height": "4000"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "HUD_homeBottom_tab",
+							"sid": 845955093299929,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "HUD_homeBottom_tab.Height"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "HUD_homeBottom_tab",
+							"sid": 517505424446991,
+							"parameters": {
+								"x": "LayoutWidth*0.5",
+								"y": "Self.Y"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "BG",
+							"sid": 531593798641812,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "ViewportHeight(0)"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "BG",
+							"sid": 299394688899811,
+							"parameters": {
+								"x": "LayoutWidth*0.5",
+								"y": "LayoutHeight*0.5"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "UI_shop_top",
+							"sid": 264588054114237,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "UI_shop_top.Height"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "UI_shop_top",
+							"sid": 190294599240457,
+							"parameters": {
+								"x": "LayoutWidth*0.5",
+								"y": "Self.Y"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "HUD_challenge_BG",
+							"sid": 500938283893707,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "ViewportHeight(0)"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "HUD_challenge_BG",
+							"sid": 739816918879531,
+							"parameters": {
+								"x": "LayoutWidth*0.5",
+								"y": "LayoutHeight*0.5"
+							}
 						}
 					],
 					"sid": 216150177941523

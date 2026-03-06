@@ -4421,7 +4421,15 @@
 					"sid": 209861539362824,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 209861539362824,
 						"expanded": true
@@ -4848,7 +4856,7 @@
 						"width": 27.000000000000004,
 						"height": 650,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,

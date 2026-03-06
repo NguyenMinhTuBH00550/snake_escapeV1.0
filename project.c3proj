@@ -213,10 +213,11 @@
 	"uniqueId": "17juoc9txi6",
 	"objectTypes": {
 		"items": [
-			"TiledBackground",
 			"9patch",
 			"CameraController",
-			"play_zoombar_frame"
+			"play_zoombar_frame",
+			"TiledBackground",
+			"BG"
 		],
 		"subfolders": [
 			{

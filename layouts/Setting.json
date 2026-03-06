@@ -2614,6 +2614,13 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
+						},
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
 						}
 					},
 					"sceneGraphData": {

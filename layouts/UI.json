@@ -85,6 +85,13 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
+						},
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -176,6 +183,13 @@
 								"right-edge": "none",
 								"bottom-edge": "none",
 								"enabled": true
+							}
+						},
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
 							}
 						}
 					},
@@ -269,6 +283,13 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
+						},
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -360,6 +381,13 @@
 								"right-edge": "window-right",
 								"bottom-edge": "none",
 								"enabled": true
+							}
+						},
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
 							}
 						}
 					},
@@ -2604,7 +2632,15 @@
 					"sid": 495031325724796,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 207,
 						"uid": 393,
@@ -2892,7 +2928,15 @@
 					"sid": 473957344838897,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 208,
 						"uid": 410,
@@ -3145,6 +3189,13 @@
 								"right-edge": "none",
 								"bottom-edge": "none",
 								"enabled": true
+							}
+						},
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
 							}
 						}
 					},

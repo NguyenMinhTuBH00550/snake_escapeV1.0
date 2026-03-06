@@ -10,6 +10,11 @@
 			"behaviorId": "Anchor",
 			"name": "Anchor",
 			"sid": 338291500912322
+		},
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 709522604164900
 		}
 	],
 	"effectTypes": [],

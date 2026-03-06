@@ -84,7 +84,15 @@
 					"sid": 681936907856600,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 406,
 						"uid": 64,
@@ -1112,7 +1120,15 @@
 					"instanceVariables": {
 						"font_size": -1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
 					"effects": {
 						"Outline": {
 							"isEnabled": true,
