@@ -4,8 +4,22 @@
 	"sid": 914127349690993,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "Status",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 329799863679517
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 552829734696882
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -20,7 +34,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4715151,
+						"imageSpriteId": 229938,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

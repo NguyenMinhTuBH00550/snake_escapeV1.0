@@ -1439,13 +1439,6 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -1537,13 +1530,6 @@
 								"right-edge": "none",
 								"bottom-edge": "none",
 								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
 							}
 						}
 					},
@@ -1637,13 +1623,6 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -1735,13 +1714,6 @@
 								"right-edge": "none",
 								"bottom-edge": "none",
 								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
 							}
 						}
 					},
@@ -1873,10 +1845,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 548.5,
-								"y": 1209,
-								"width": 1063,
-								"height": 2420,
+								"x": 541.5,
+								"y": 1211,
+								"width": 1077,
+								"height": 2416,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -1928,7 +1900,7 @@
 							"type": "Tile_BG_shop",
 							"properties": {
 								"initially-visible": true,
-								"origin": "center",
+								"origin": "top-left",
 								"wrap-horizontal": "repeat",
 								"wrap-vertical": "repeat",
 								"image-offset-x": 0,
@@ -1991,12 +1963,12 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 547,
-								"y": 1340.5,
+								"x": 4,
+								"y": 243,
 								"width": 1076,
-								"height": 2136,
-								"originX": 0.5,
-								"originY": 0.5,
+								"height": 2135,
+								"originX": 0,
+								"originY": 0,
 								"color": [
 									1,
 									1,
@@ -2028,13 +2000,6 @@
 										"right-edge": "none",
 										"bottom-edge": "none",
 										"enabled": true
-									}
-								},
-								"GameObject": {
-									"properties": {
-										"name": "shop_anchor",
-										"parent-name": "",
-										"parent-layer": false
 									}
 								}
 							},
@@ -7306,104 +7271,6 @@
 					}
 				},
 				{
-					"type": "UI_icon_settingButton",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 367,
-					"sid": 869656241257307,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"Button": {
-							"properties": {
-								"isenabled": "true",
-								"normal-frame": "",
-								"hover-frame": "",
-								"clicked-frame": "",
-								"disabled-frame": "",
-								"focus-frame": "",
-								"click-sound": "",
-								"hover-sound": "",
-								"focus-sound": "",
-								"click-animation": "none",
-								"hover-animation": "none",
-								"focus-animation": "none",
-								"normal-color": "",
-								"hover-color": "",
-								"clicked-color": "",
-								"disabled-color": "",
-								"focus-color": "",
-								"click-animation-factor": 0.1,
-								"hover-animation-factor": 0.1,
-								"focus-animation-factor": 0.1,
-								"ignore-input": "auto"
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 311,
-						"uid": 367,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 869656241257307,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 142.05105015767242,
-						"y": 158.22205175473664,
-						"width": 121,
-						"height": 99,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "UI_icon_frameTop",
 					"properties": {
 						"initially-visible": true,
@@ -7456,21 +7323,6 @@
 						"children": [
 							{
 								"uid": 429,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 428,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -7623,71 +7475,6 @@
 					}
 				},
 				{
-					"type": "UI_btnPlus_topBar",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 428,
-					"sid": 602675248615619,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": 369,
-						"uid": 428,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 602675248615619,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 990.4902722495262,
-						"y": 136.93039919978196,
-						"width": 57,
-						"height": 58,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "text_coin",
 					"properties": {
 						"text": "0",
@@ -7792,13 +7579,6 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -7878,105 +7658,6 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 311,
-					"sid": 746262538179477,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"Anchor": {
-							"properties": {
-								"left-edge": "window-left",
-								"top-edge": "window-top",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 311,
-						"children": [
-							{
-								"uid": 367,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 746262538179477,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 144,
-						"y": 152,
-						"width": 50.63295055631581,
-						"height": 49.843934075087745,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Anchor",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 312,
 					"sid": 706282608450488,
 					"tags": "",
@@ -7989,13 +7670,6 @@
 								"right-edge": "none",
 								"bottom-edge": "none",
 								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
 							}
 						}
 					},
@@ -8123,7 +7797,7 @@
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 131,
 						"flags": {
 							"x": true,
@@ -8184,7 +7858,7 @@
 					},
 					"uid": 126,
 					"sid": 436007835488049,
-					"tags": "",
+					"tags": "home_sceen",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {
@@ -8946,7 +8620,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 144,
 						"flags": {
 							"x": true,
@@ -9011,7 +8685,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 145,
 						"flags": {
 							"x": true,
@@ -9076,7 +8750,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 146,
 						"flags": {
 							"x": true,
@@ -9141,7 +8815,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 118,
 						"flags": {
 							"x": true,
@@ -9206,7 +8880,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 147,
 						"flags": {
 							"x": true,
@@ -9271,7 +8945,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 148,
 						"flags": {
 							"x": true,
@@ -9369,7 +9043,7 @@
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 294,
 						"flags": {
 							"x": true,
@@ -9467,7 +9141,7 @@
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 293,
 						"flags": {
 							"x": true,
@@ -9565,7 +9239,7 @@
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 295,
 						"flags": {
 							"x": true,
@@ -9603,313 +9277,6 @@
 						"y": 194,
 						"width": 112,
 						"height": 77,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "LY_Home",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 370,
-					"sid": 363067110373237,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Anchor": {
-							"properties": {
-								"left-edge": "none",
-								"top-edge": "none",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 370,
-						"children": [
-							{
-								"uid": 131,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 123,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 144,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 145,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 146,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 118,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 147,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 148,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 294,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 293,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 295,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 389,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 418,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 408,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 399,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 363067110373237,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 546,
-						"y": 432,
-						"width": 101,
-						"height": 98,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -9970,7 +9337,7 @@
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 123,
 						"children": [
 							{
@@ -10350,17 +9717,10 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 389,
 						"children": [
 							{
@@ -10449,17 +9809,10 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 408,
 						"children": [
 							{
@@ -10593,17 +9946,10 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 418,
 						"children": [
 							{
@@ -11104,17 +10450,10 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": 370,
+						"parent-uid": null,
 						"uid": 399,
 						"children": [
 							{
@@ -12107,13 +11446,6 @@
 								"bottom-edge": "window-bottom",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -12205,13 +11537,6 @@
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
 								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
 							}
 						}
 					},
@@ -12305,13 +11630,6 @@
 								"bottom-edge": "window-bottom",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -12403,13 +11721,6 @@
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
 								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
 							}
 						}
 					},

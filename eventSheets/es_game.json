@@ -7990,13 +7990,34 @@
 									}
 								},
 								{
+									"id": "reset-eventvar",
+									"objectClass": "System",
+									"sid": 879579438785839,
+									"parameters": {
+										"variable": "TimeRemaining"
+									}
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 513747007626637,
+									"sid": 621047087377433,
 									"parameters": {
 										"variable": "IsTimerRunning",
 										"value": "0"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 711325589562090,
+									"parameters": {
+										"variable": "Lives",
+										"value": "3"
+									}
+								},
+								{
+									"callFunction": "RefreshHearts",
+									"sid": 753985374196607
 								}
 							],
 							"sid": 410127597142181

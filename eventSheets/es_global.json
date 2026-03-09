@@ -44,6 +44,25 @@
 					"objectClass": "DicSaveGame",
 					"sid": 951211057451384,
 					"disabled": true
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 659613807913292
+				},
+				{
+					"callFunction": "turnAudio",
+					"sid": 423194277632081
+				},
+				{
+					"id": "log",
+					"objectClass": "Browser",
+					"sid": 596987107808116,
+					"disabled": true,
+					"parameters": {
+						"type": "log",
+						"message": "(DicSaveGame.Get(SAVE_MUSIC))"
+					}
 				}
 			],
 			"sid": 707411446384968,
@@ -665,6 +684,516 @@
 				}
 			],
 			"sid": 485044017111114
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "On/Off Button",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Music Button",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "UI_bar_setting",
+											"sid": 343628869182578,
+											"behaviorType": "Button"
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "UI_bar_setting",
+											"sid": 324091802117589,
+											"parameters": {
+												"tags": "\"music\""
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "UI_bar_setting",
+											"sid": 630707015060102,
+											"parameters": {
+												"instance-variable": "canClick"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "UI_bar_setting",
+											"sid": 191840849520338,
+											"parameters": {
+												"instance-variable": "canClick",
+												"value": "false"
+											}
+										},
+										{
+											"callFunction": "ToggleMusic",
+											"sid": 263586326491083
+										}
+									],
+									"sid": 807669498870245
+								},
+								{
+									"functionName": "ToggleMusic",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [],
+									"sid": 616025581780427,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "UI_setting_button",
+													"sid": 247687389799429,
+													"parameters": {
+														"instance-variable": "Status",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 290841448598072,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "UI_bar_setting",
+															"sid": 604647726185710,
+															"parameters": {
+																"tags": "\"music\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 834722081447868,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 946960026918376,
+																	"parameters": {
+																		"child": "UI_setting_button",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop-all-tweens",
+																	"objectClass": "UI_setting_button",
+																	"sid": 392819018769402,
+																	"behaviorType": "Tween"
+																},
+																{
+																	"id": "tween-one-property",
+																	"objectClass": "UI_setting_button",
+																	"sid": 903069525810371,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"music_on\"",
+																		"property": "offsetX",
+																		"end-value": "Self.X +150",
+																		"time": "0.2",
+																		"ease": "noease",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no",
+																		"repeat-count": "1"
+																	}
+																},
+																{
+																	"id": "set-animation-frame",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 835198739652923,
+																	"parameters": {
+																		"frame-number": "0"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_setting_button",
+																	"sid": 594971731167480,
+																	"parameters": {
+																		"instance-variable": "Status",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-key",
+																	"objectClass": "DicSaveGame",
+																	"sid": 581510422819149,
+																	"parameters": {
+																		"key": "SAVE_MUSIC",
+																		"value": "1"
+																	}
+																},
+																{
+																	"callFunction": "SAVE_GAME",
+																	"sid": 170486873136785
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 383921828988063,
+																	"parameters": {
+																		"seconds": "0.3",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 265364790790326,
+																	"parameters": {
+																		"instance-variable": "canClick",
+																		"value": "true"
+																	}
+																}
+															],
+															"sid": 225431706783395
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 681888064655012
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "UI_setting_button",
+													"sid": 117296535615015,
+													"parameters": {
+														"instance-variable": "Status",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 640181709780290,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "UI_bar_setting",
+															"sid": 197073719071793,
+															"parameters": {
+																"tags": "\"music\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 580350789713142,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 555429461167721,
+																	"parameters": {
+																		"child": "UI_setting_button",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop-all-tweens",
+																	"objectClass": "UI_setting_button",
+																	"sid": 993712548525658,
+																	"behaviorType": "Tween"
+																},
+																{
+																	"id": "tween-one-property",
+																	"objectClass": "UI_setting_button",
+																	"sid": 202749587842391,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"music_off\"",
+																		"property": "offsetX",
+																		"end-value": "Self.X - 150",
+																		"time": "0.2",
+																		"ease": "noease",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no",
+																		"repeat-count": "1"
+																	}
+																},
+																{
+																	"id": "set-animation-frame",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 359412391075679,
+																	"parameters": {
+																		"frame-number": "1"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_setting_button",
+																	"sid": 326907696337081,
+																	"parameters": {
+																		"instance-variable": "Status",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "set-key",
+																	"objectClass": "DicSaveGame",
+																	"sid": 524093546480433,
+																	"parameters": {
+																		"key": "SAVE_MUSIC",
+																		"value": "0"
+																	}
+																},
+																{
+																	"callFunction": "SAVE_GAME",
+																	"sid": 269567076731454
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 754358228610357,
+																	"parameters": {
+																		"seconds": "0.3",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 993861468228146,
+																	"parameters": {
+																		"instance-variable": "canClick",
+																		"value": "true"
+																	}
+																}
+															],
+															"sid": 927413368888231
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							],
+							"sid": 617085637235288
+						},
+						{
+							"functionName": "turnAudio",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 771998271444706,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 619588691741607,
+											"parameters": {
+												"first-value": "DicSaveGame.Get(SAVE_MUSIC)",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 240496676926010,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "UI_bar_setting",
+													"sid": 725747352942897,
+													"parameters": {
+														"tags": "\"music\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "UI_bar_setting",
+													"sid": 658206721519093,
+													"parameters": {
+														"frame-number": "0"
+													}
+												}
+											],
+											"sid": 284412586344786,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-children",
+															"objectClass": "UI_bar_setting",
+															"sid": 114732081831890,
+															"parameters": {
+																"child": "UI_setting_button",
+																"which": "own"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "UI_setting_button",
+															"sid": 941176462312119,
+															"parameters": {
+																"instance-variable": "Status",
+																"value": "0"
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "UI_setting_button",
+															"sid": 740982113252795,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"music_on\"",
+																"property": "offsetX",
+																"end-value": "Self.X",
+																"time": "0.2",
+																"ease": "noease",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														}
+													],
+													"sid": 306994358713391
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 531331180675832
+										}
+									],
+									"actions": [],
+									"sid": 244023929873254,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "UI_bar_setting",
+													"sid": 967896051131524,
+													"parameters": {
+														"tags": "\"music\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "UI_bar_setting",
+													"sid": 895409754836909,
+													"parameters": {
+														"frame-number": "1"
+													}
+												}
+											],
+											"sid": 794285113098553,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-children",
+															"objectClass": "UI_bar_setting",
+															"sid": 129535728334887,
+															"parameters": {
+																"child": "UI_setting_button",
+																"which": "own"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "UI_setting_button",
+															"sid": 603324395170176,
+															"parameters": {
+																"instance-variable": "Status",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 672473694767956
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 258134291351911
+				}
+			],
+			"sid": 601662255812628
 		}
 	],
 	"sid": 667786211939097

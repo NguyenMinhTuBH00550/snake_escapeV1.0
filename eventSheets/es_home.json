@@ -267,6 +267,58 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "MoreCoin_Button",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_icon_frameTop",
+									"sid": 380611533271244,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 641744324471641,
+									"parameters": {
+										"layer": "\"Home\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 171789917503329,
+									"parameters": {
+										"layer": "\"Shop\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 738123164464115,
+									"parameters": {
+										"layer": "\"Challenge\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 252068697495784,
+							"disabled": true
+						}
+					],
+					"sid": 545411176182388
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Setting_button",
 					"description": "",
 					"isActiveOnStart": true,
@@ -337,6 +389,24 @@
 								}
 							],
 							"sid": 557820049213984
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "ondialogopened0",
+									"objectClass": "Dia_Setting",
+									"sid": 397623789370181,
+									"behaviorType": "Dialog"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "turnAudio",
+									"sid": 265316292868230
+								}
+							],
+							"sid": 362891217578235
 						}
 					],
 					"sid": 540327809137132
@@ -354,10 +424,18 @@
 								{
 									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 152964894004341,
+									"sid": 702075939446717,
 									"parameters": {
-										"object": "UI_Home",
+										"object": "UI_homeTab",
 										"type": "start"
+									}
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_homeTab",
+									"sid": 709112717079194,
+									"parameters": {
+										"tags": "\"pannel_home\""
 									}
 								}
 							],
@@ -405,10 +483,18 @@
 								{
 									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 266681781546879,
+									"sid": 111935390905877,
 									"parameters": {
-										"object": "UI_icon_shop",
+										"object": "UI_homeTab",
 										"type": "start"
+									}
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_homeTab",
+									"sid": 218706877227764,
+									"parameters": {
+										"tags": "\"pannel_shop\""
 									}
 								}
 							],
@@ -456,10 +542,18 @@
 								{
 									"id": "on-touched-object",
 									"objectClass": "Touch",
-									"sid": 674785927200225,
+									"sid": 258539559720783,
 									"parameters": {
-										"object": "UI_icon_challenge",
+										"object": "UI_homeTab",
 										"type": "start"
+									}
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_homeTab",
+									"sid": 522591747790092,
+									"parameters": {
+										"tags": "\"pannel_challenge\""
 									}
 								}
 							],

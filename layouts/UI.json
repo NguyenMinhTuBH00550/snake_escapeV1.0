@@ -113,13 +113,6 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -211,13 +204,6 @@
 								"right-edge": "none",
 								"bottom-edge": "none",
 								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
 							}
 						}
 					},
@@ -311,13 +297,6 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -409,13 +388,6 @@
 								"right-edge": "window-right",
 								"bottom-edge": "none",
 								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
 							}
 						}
 					},
@@ -3246,13 +3218,6 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -3729,13 +3694,6 @@
 								"bottom-edge": "window-bottom",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -3827,13 +3785,6 @@
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
 								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
 							}
 						}
 					},
@@ -3927,13 +3878,6 @@
 								"bottom-edge": "window-bottom",
 								"enabled": true
 							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
-							}
 						}
 					},
 					"sceneGraphData": {
@@ -4025,13 +3969,6 @@
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
 								"enabled": true
-							}
-						},
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "",
-								"parent-layer": false
 							}
 						}
 					},
