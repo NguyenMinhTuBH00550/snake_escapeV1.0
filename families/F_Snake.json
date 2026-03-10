@@ -65,6 +65,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 778605674487879
+		},
+		{
+			"name": "MoveType",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 723462140792967
 		}
 	],
 	"behaviorTypes": [

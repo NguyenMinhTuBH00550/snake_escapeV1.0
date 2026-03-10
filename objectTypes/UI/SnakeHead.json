@@ -53,6 +53,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 260921466844783
+		},
+		{
+			"name": "timerOwnID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 843590677921133
 		}
 	],
 	"behaviorTypes": [],

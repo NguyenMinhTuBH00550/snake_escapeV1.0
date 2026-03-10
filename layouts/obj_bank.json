@@ -28,6 +28,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -129,6 +130,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -230,6 +232,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -331,6 +334,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"TailOrder": 0,
 						"TailPathIndex": 0,
 						"TailBackIndex": 0,
@@ -432,6 +436,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -533,6 +538,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6236,6 +6242,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6337,6 +6344,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6438,6 +6446,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6539,6 +6548,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6685,6 +6695,10 @@
 											},
 											{
 												"iv": "cpY",
+												"state": true
+											},
+											{
+												"iv": "MoveType",
 												"state": true
 											}
 										]
@@ -6946,6 +6960,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -7047,13 +7062,15 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"OrderIndexTemp": 0,
 						"HeadPathIndex": 0,
 						"HeadBackMax": 0,
 						"HeadBackIndex": 0,
 						"NeedBack": 0,
 						"BackTargetX": 0,
-						"BackTargetY": 0
+						"BackTargetY": 0,
+						"timerOwnID": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7221,6 +7238,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"TailOrder": 0,
 						"TailPathIndex": 0,
 						"TailBackIndex": 0,
@@ -7367,6 +7385,10 @@
 											},
 											{
 												"iv": "cpY",
+												"state": true
+											},
+											{
+												"iv": "MoveType",
 												"state": true
 											}
 										]
@@ -7663,6 +7685,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -7764,6 +7787,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -7865,6 +7889,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -7966,6 +7991,7 @@
 						"ownID": 0,
 						"SnakeWay": "",
 						"CanTouch": true,
+						"MoveType": 0,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -8112,6 +8138,10 @@
 											},
 											{
 												"iv": "cpY",
+												"state": true
+											},
+											{
+												"iv": "MoveType",
 												"state": true
 											}
 										]
