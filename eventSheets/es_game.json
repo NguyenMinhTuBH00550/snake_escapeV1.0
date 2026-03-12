@@ -460,10 +460,17 @@
 						{
 							"id": "set-text",
 							"objectClass": "text_level",
-							"sid": 423056786673270,
+							"sid": 471694989698029,
 							"parameters": {
-								"text": "\"Level  \" & CurrentLevel"
+								"text": "\"Level  \" & int(CurrentLevel)"
 							}
+						},
+						{
+							"callFunction": "ChangeTextWidth",
+							"sid": 887622480137007,
+							"parameters": [
+								"text_level.UID"
+							]
 						},
 						{
 							"id": "set-text",
@@ -4054,6 +4061,15 @@
 									],
 									"actions": [
 										{
+											"id": "set-enabled",
+											"objectClass": "F_Snake",
+											"sid": 571652038641151,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"enabled": false
+											}
+										},
+										{
 											"id": "set-max-speed",
 											"objectClass": "F_Snake",
 											"sid": 195341243028572,
@@ -4451,15 +4467,6 @@
 																			}
 																		},
 																		{
-																			"id": "log",
-																			"objectClass": "Browser",
-																			"sid": 517740913340388,
-																			"parameters": {
-																				"type": "log",
-																				"message": "\"loop ownID=\" & SnakeHead.ownID & \"waypoint= \" & SnakeHead.MoveTo.WaypointCount"
-																			}
-																		},
-																		{
 																			"id": "create-object",
 																			"objectClass": "System",
 																			"sid": 733451354273222,
@@ -4642,12 +4649,12 @@
 															}
 														},
 														{
-															"id": "log",
-															"objectClass": "Browser",
-															"sid": 294579869486319,
+															"id": "set-enabled",
+															"objectClass": "SnakeBody",
+															"sid": 971777616250168,
+															"behaviorType": "MoveTo",
 															"parameters": {
-																"type": "log",
-																"message": "SnakeBody.UID & \" waypoint added\""
+																"enabled": true
 															}
 														},
 														{
@@ -4659,15 +4666,6 @@
 																"x": "SnakeBody.cpX",
 																"y": "SnakeBody.cpY",
 																"mode": "add-waypoint"
-															}
-														},
-														{
-															"id": "log",
-															"objectClass": "Browser",
-															"sid": 997018863701731,
-															"parameters": {
-																"type": "log",
-																"message": "\"loop ownID=\" & SnakeHead.ownID & \"waypoint= \" & SnakeHead.MoveTo.WaypointCount"
 															}
 														}
 													],
@@ -4688,6 +4686,15 @@
 																}
 															],
 															"actions": [
+																{
+																	"id": "set-enabled",
+																	"objectClass": "SnakeBody",
+																	"sid": 120827662056285,
+																	"behaviorType": "MoveTo",
+																	"parameters": {
+																		"enabled": true
+																	}
+																},
 																{
 																	"id": "move-to-position",
 																	"objectClass": "SnakeBody",
@@ -4925,6 +4932,15 @@
 											}
 										},
 										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 627051027471649,
+											"parameters": {
+												"type": "log",
+												"message": "\"aaa= \" & SnakeHead.timerOwnID   &  \"bbb= \" & activeOwnID "
+											}
+										},
+										{
 											"id": "start-timer",
 											"objectClass": "SnakeHead",
 											"sid": 269891740563183,
@@ -4972,6 +4988,15 @@
 										"variable": "timerOwnID",
 										"value": "SnakeHead.timerOwnID"
 									}
+								},
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 486540286018849,
+									"parameters": {
+										"type": "log",
+										"message": "\"ccc= \" & timerOwnID & \"ddd= \" &   SnakeHead.timerOwnID"
+									}
 								}
 							],
 							"sid": 345345537314898,
@@ -4990,6 +5015,15 @@
 										}
 									],
 									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "F_Snake",
+											"sid": 516336943348464,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"enabled": true
+											}
+										},
 										{
 											"id": "set-max-speed",
 											"objectClass": "F_Snake",
