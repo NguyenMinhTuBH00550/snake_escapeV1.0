@@ -217,7 +217,8 @@
 			"CameraController",
 			"play_zoombar_frame",
 			"TiledBackground",
-			"BG"
+			"BG",
+			"wayBlockers"
 		],
 		"subfolders": [
 			{
@@ -296,7 +297,8 @@
 					"text_remove_bottomBanner2",
 					"text_boosterGrid_count",
 					"text_boosterHInt_count",
-					"text_zoom_bar"
+					"text_zoom_bar",
+					"text_wayBlocker"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -829,6 +831,102 @@
 							"name": "lv12.json",
 							"type": "application/json",
 							"sid": 125241460172572,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv13.json",
+							"type": "application/json",
+							"sid": 139377108908190,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv14.json",
+							"type": "application/json",
+							"sid": 659516692646393,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv15.json",
+							"type": "application/json",
+							"sid": 709497880578103,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv16.json",
+							"type": "application/json",
+							"sid": 704396222274877,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv17.json",
+							"type": "application/json",
+							"sid": 816933989965951,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv18.json",
+							"type": "application/json",
+							"sid": 562686785421309,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv19.json",
+							"type": "application/json",
+							"sid": 466808136109118,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv20.json",
+							"type": "application/json",
+							"sid": 700494915919529,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv22.json",
+							"type": "application/json",
+							"sid": 593237605572012,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv23.json",
+							"type": "application/json",
+							"sid": 596780289312681,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv24.json",
+							"type": "application/json",
+							"sid": 896551967067584,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv25.json",
+							"type": "application/json",
+							"sid": 196652674626102,
 							"file-info": {
 								"purpose": "none"
 							}

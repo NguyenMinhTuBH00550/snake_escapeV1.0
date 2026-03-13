@@ -60,6 +60,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 843590677921133
+		},
+		{
+			"name": "dirX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 844063000710268
+		},
+		{
+			"name": "dirY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 456193857986731
 		}
 	],
 	"behaviorTypes": [],

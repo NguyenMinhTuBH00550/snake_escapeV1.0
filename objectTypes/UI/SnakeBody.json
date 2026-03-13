@@ -81,6 +81,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 198769669443555
+		},
+		{
+			"name": "isDiagonalBody",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 550685168961819
 		}
 	],
 	"behaviorTypes": [],

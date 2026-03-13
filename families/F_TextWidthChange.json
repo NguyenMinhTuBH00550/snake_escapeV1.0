@@ -64,6 +64,7 @@
 		"text_tutorial",
 		"text_videoBar",
 		"text_vibration",
-		"text_zoom_bar"
+		"text_zoom_bar",
+		"text_wayBlocker"
 	]
 }

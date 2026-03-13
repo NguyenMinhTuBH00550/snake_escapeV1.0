@@ -1,7 +1,7 @@
 {
     "c2dictionary": true,
     "data": {
-        "1": "levels/lv12.json",
+        "1": "levels/lv1.json",
         "2": "levels/lv2.json",
         "3": "levels/lv3.json",
         "4": "levels/lv4.json",
@@ -12,14 +12,24 @@
         "9": "levels/lv9.json",
         "10": "levels/lv10.json",
         "11": "levels/lv11.json",
-        "12": "levels/lv1.json",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
-        "19": "",
-        "20": ""
+        "12": "levels/lv12.json",
+        "13": "levels/lv13.json",
+        "14": "levels/lv14.json",
+        "15": "levels/lv15.json",
+        "16": "levels/lv16.json",
+        "17": "levels/lv17.json",
+        "18": "levels/lv18.json",
+        "19": "levels/lv19.json",
+        "20": "levels/lv20.json",
+        "21": "levels/lv21.json",
+        "22": "levels/lv22.json",
+        "23": "levels/lv23.json",
+        "24": "levels/lv24.json",
+        "25": "levels/lv25.json",
+        "26": "",
+        "27": "",
+        "28": "",
+        "29": "",
+        "30": ""
     }
 }

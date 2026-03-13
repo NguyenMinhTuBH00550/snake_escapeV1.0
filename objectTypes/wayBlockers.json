@@ -1,7 +1,7 @@
 {
-	"name": "Snake_Checkpoint",
+	"name": "wayBlockers",
 	"plugin-id": "Sprite",
-	"sid": 329159593375038,
+	"sid": 230805375901348,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
@@ -10,60 +10,66 @@
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 759092073740633
+			"sid": 598354618609032
 		},
 		{
 			"name": "GridY",
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 422858919920228
+			"sid": 835134317068257
 		},
 		{
-			"name": "OwnerID",
+			"name": "lockTime",
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 718979594199409
+			"sid": 998875973090222
 		},
 		{
-			"name": "HasSnake",
+			"name": "OriginX",
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 718821453397014
+			"sid": 451950060043969
 		},
 		{
-			"name": "HasWayBlocker",
-			"type": "boolean",
+			"name": "OriginY",
+			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 479644975597703
+			"sid": 735446993295398
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 349791691800671
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 230,
+						"height": 228,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 278028,
+						"imageSpriteId": 696327,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 919114357754162,
-				"name": "Animation 1",
+				"sid": 563527529134786,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
