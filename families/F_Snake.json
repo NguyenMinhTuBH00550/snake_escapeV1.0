@@ -72,6 +72,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 723462140792967
+		},
+		{
+			"name": "IsCompleted",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 621225211277841
 		}
 	],
 	"behaviorTypes": [

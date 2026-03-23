@@ -2319,6 +2319,11 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {

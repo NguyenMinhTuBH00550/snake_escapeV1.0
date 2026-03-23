@@ -218,7 +218,12 @@
 			"play_zoombar_frame",
 			"TiledBackground",
 			"BG",
-			"wayBlockers"
+			"wayBlockers",
+			"blackHole",
+			"hand_tutorial",
+			"hand_icon",
+			"par_hand",
+			"Sprite"
 		],
 		"subfolders": [
 			{
@@ -298,7 +303,8 @@
 					"text_boosterGrid_count",
 					"text_boosterHInt_count",
 					"text_zoom_bar",
-					"text_wayBlocker"
+					"text_wayBlocker",
+					"text_count_hint"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -437,7 +443,9 @@
 					"Dia_noti_restart",
 					"Dia_pause",
 					"Dia_Setting",
-					"Dia_Ad"
+					"Dia_Ad",
+					"Dia_noti_hint",
+					"Dia_buy_hint"
 				],
 				"subfolders": [],
 				"name": "Dialog"
@@ -499,7 +507,9 @@
 		"items": [
 			"F_Snake",
 			"F_Tween",
-			"F_TextWidthChange"
+			"F_TextWidthChange",
+			"F_UiTop",
+			"F_UIBottom"
 		],
 		"subfolders": []
 	},
@@ -527,7 +537,8 @@
 			},
 			{
 				"items": [
-					"hint_booster"
+					"hint_booster",
+					"Buy_BoosterHint"
 				],
 				"subfolders": [],
 				"name": "Booster"
@@ -927,6 +938,262 @@
 							"name": "lv25.json",
 							"type": "application/json",
 							"sid": 196652674626102,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv26.json",
+							"type": "application/json",
+							"sid": 789222421922791,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv27.json",
+							"type": "application/json",
+							"sid": 287786309377027,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv28.json",
+							"type": "application/json",
+							"sid": 144209612017086,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv29.json",
+							"type": "application/json",
+							"sid": 259364010801216,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv30.json",
+							"type": "application/json",
+							"sid": 287130752380659,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv31.json",
+							"type": "application/json",
+							"sid": 536764809603022,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv32.json",
+							"type": "application/json",
+							"sid": 681480643438346,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv33.json",
+							"type": "application/json",
+							"sid": 684558836455934,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv34.json",
+							"type": "application/json",
+							"sid": 858846756917265,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv35.json",
+							"type": "application/json",
+							"sid": 284250312342101,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv36.json",
+							"type": "application/json",
+							"sid": 947324794297152,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv37.json",
+							"type": "application/json",
+							"sid": 494976912313072,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv38.json",
+							"type": "application/json",
+							"sid": 887638257318505,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv39.json",
+							"type": "application/json",
+							"sid": 741287669475637,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv40.json",
+							"type": "application/json",
+							"sid": 845126541828282,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv41.json",
+							"type": "application/json",
+							"sid": 214886325767268,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv42.json",
+							"type": "application/json",
+							"sid": 236927331896405,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv43.json",
+							"type": "application/json",
+							"sid": 599625284812377,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv44.json",
+							"type": "application/json",
+							"sid": 178761307287734,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv45.json",
+							"type": "application/json",
+							"sid": 431293482128374,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv46.json",
+							"type": "application/json",
+							"sid": 292804088696359,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv47.json",
+							"type": "application/json",
+							"sid": 117974227116124,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv48.json",
+							"type": "application/json",
+							"sid": 763742131387049,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv49.json",
+							"type": "application/json",
+							"sid": 832244418744998,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv50.json",
+							"type": "application/json",
+							"sid": 187021644033224,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv51.json",
+							"type": "application/json",
+							"sid": 538613562935926,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv52.json",
+							"type": "application/json",
+							"sid": 159843460668616,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv53.json",
+							"type": "application/json",
+							"sid": 613678736437224,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv54.json",
+							"type": "application/json",
+							"sid": 881232046749042,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv55.json",
+							"type": "application/json",
+							"sid": 765875831067260,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv56.json",
+							"type": "application/json",
+							"sid": 652360203937701,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv57.json",
+							"type": "application/json",
+							"sid": 981363062511166,
 							"file-info": {
 								"purpose": "none"
 							}

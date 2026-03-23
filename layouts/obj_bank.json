@@ -29,6 +29,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -40,7 +41,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -132,6 +141,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -143,7 +153,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -223,7 +241,7 @@
 					},
 					"uid": 345,
 					"sid": 141877447952157,
-					"tags": "",
+					"tags": "1st",
 					"instanceVariables": {
 						"GridX": 0,
 						"GridY": 0,
@@ -235,6 +253,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -246,7 +265,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -326,7 +353,7 @@
 					},
 					"uid": 292,
 					"sid": 903835412949180,
-					"tags": "",
+					"tags": "2nd",
 					"instanceVariables": {
 						"GridX": 0,
 						"GridY": 0,
@@ -338,6 +365,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -349,7 +377,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -441,6 +477,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"TailOrder": 0,
 						"TailPathIndex": 0,
 						"TailBackIndex": 0,
@@ -543,6 +580,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -554,7 +592,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -646,6 +692,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -657,7 +704,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -777,6 +832,11 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -890,6 +950,11 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -959,7 +1024,13 @@
 					"sid": 527037074034111,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 527037074034111,
 						"expanded": true
@@ -1161,6 +1232,11 @@
 						"ToggleState": 0
 					},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -1293,6 +1369,11 @@
 						"ToggleState": 0
 					},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -1801,7 +1882,8 @@
 						"GridY": 0,
 						"OwnerID": 0,
 						"HasSnake": 0,
-						"HasWayBlocker": false
+						"HasWayBlocker": false,
+						"HasBlackHole": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -5493,7 +5575,13 @@
 					"sid": 185791000756161,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": null,
 						"uid": 270,
@@ -5726,8 +5814,8 @@
 					"world": {
 						"x": 493,
 						"y": 543,
-						"width": 57,
-						"height": 40,
+						"width": 82.19565217391305,
+						"height": 97.33333333333333,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5826,8 +5914,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 0,
-						"y": 1408,
+						"x": 160,
+						"y": 1433,
 						"width": 969,
 						"height": 823,
 						"originX": 0.5,
@@ -5985,6 +6073,11 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -6055,6 +6148,11 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -6352,6 +6450,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6363,7 +6462,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6455,6 +6562,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6466,7 +6574,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6558,6 +6674,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6569,7 +6686,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6661,6 +6786,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6672,7 +6798,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6771,6 +6905,10 @@
 												"state": true
 											},
 											{
+												"iv": "IsCompleted",
+												"state": true
+											},
+											{
 												"iv": "BodyPathIndex",
 												"state": true
 											},
@@ -6816,6 +6954,38 @@
 											},
 											{
 												"iv": "isDiagonalBody",
+												"state": true
+											},
+											{
+												"iv": "BodyReadIndex",
+												"state": true
+											},
+											{
+												"iv": "HeadWayCache",
+												"state": true
+											},
+											{
+												"iv": "HeadIndexCache",
+												"state": true
+											},
+											{
+												"iv": "NeedMove",
+												"state": true
+											},
+											{
+												"iv": "MoveTargetX",
+												"state": true
+											},
+											{
+												"iv": "MoveTargetY",
+												"state": true
+											},
+											{
+												"iv": "moveAngle",
+												"state": true
+											},
+											{
+												"iv": "snakeOn",
 												"state": true
 											}
 										]
@@ -7078,6 +7248,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -7089,7 +7260,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7181,6 +7360,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"OrderIndexTemp": 0,
 						"HeadPathIndex": 0,
 						"HeadBackMax": 0,
@@ -7374,6 +7554,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"TailOrder": 0,
 						"TailPathIndex": 0,
 						"TailBackIndex": 0,
@@ -7480,6 +7661,10 @@
 											},
 											{
 												"iv": "MoveType",
+												"state": true
+											},
+											{
+												"iv": "IsCompleted",
 												"state": true
 											},
 											{
@@ -7821,6 +8006,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -7832,7 +8018,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7924,6 +8118,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -7935,7 +8130,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -8027,6 +8230,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -8038,7 +8242,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -8130,6 +8342,7 @@
 						"SnakeWay": "",
 						"CanTouch": true,
 						"MoveType": 0,
+						"IsCompleted": false,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -8141,7 +8354,15 @@
 						"BodyGoalY": 0,
 						"cpX": 0,
 						"cpY": 0,
-						"isDiagonalBody": 0
+						"isDiagonalBody": 0,
+						"BodyReadIndex": 0,
+						"HeadWayCache": "",
+						"HeadIndexCache": 0,
+						"NeedMove": 0,
+						"MoveTargetX": 0,
+						"MoveTargetY": 0,
+						"moveAngle": 0,
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -8240,6 +8461,10 @@
 												"state": true
 											},
 											{
+												"iv": "IsCompleted",
+												"state": true
+											},
+											{
 												"iv": "BodyPathIndex",
 												"state": true
 											},
@@ -8285,6 +8510,38 @@
 											},
 											{
 												"iv": "isDiagonalBody",
+												"state": true
+											},
+											{
+												"iv": "BodyReadIndex",
+												"state": true
+											},
+											{
+												"iv": "HeadWayCache",
+												"state": true
+											},
+											{
+												"iv": "HeadIndexCache",
+												"state": true
+											},
+											{
+												"iv": "NeedMove",
+												"state": true
+											},
+											{
+												"iv": "MoveTargetX",
+												"state": true
+											},
+											{
+												"iv": "MoveTargetY",
+												"state": true
+											},
+											{
+												"iv": "moveAngle",
+												"state": true
+											},
+											{
+												"iv": "snakeOn",
 												"state": true
 											}
 										]
@@ -8557,7 +8814,7 @@
 				{
 					"type": "Snake_Solid",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -8806,7 +9063,9 @@
 						"GridY": 0,
 						"lockTime": 0,
 						"OriginX": 0,
-						"OriginY": 0
+						"OriginY": 0,
+						"blockUID": 0,
+						"OwnerID": 0
 					},
 					"behaviors": {
 						"Tween": {
@@ -8969,6 +9228,215 @@
 						"y": 1147,
 						"width": 160,
 						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "blackHole",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 91,
+					"sid": 751628831675487,
+					"tags": "",
+					"instanceVariables": {
+						"GridX": 0,
+						"GridY": 0
+					},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 751628831675487,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 333,
+						"y": 2028,
+						"width": 316,
+						"height": 335,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "hand_tutorial",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 94,
+					"sid": 918792454822394,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 918792454822394,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2153,
+						"y": 673,
+						"width": 324,
+						"height": 423,
+						"originX": 0.21296296296296297,
+						"originY": 0.6028368794326241,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "hand_icon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 162,
+					"sid": 762236997362038,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 762236997362038,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2680,
+						"y": 715,
+						"width": 153,
+						"height": 166,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "par_hand",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 166,
+					"sid": 105715734733256,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 105715734733256,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2545,
+						"y": 1026,
+						"width": 197,
+						"height": 196,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 168,
+					"sid": 161109730945903,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 161109730945903,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1850,
+						"y": 651,
+						"width": 335,
+						"height": 446,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

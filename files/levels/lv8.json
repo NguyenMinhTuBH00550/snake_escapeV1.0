@@ -669,5 +669,6 @@
     "y": 14
   },
   "timeLimit": 180,
+  "layoutScale": 1,
   "wayBlockers": []
 }

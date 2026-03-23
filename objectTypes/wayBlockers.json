@@ -39,6 +39,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 735446993295398
+		},
+		{
+			"name": "blockUID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 278730934508768
+		},
+		{
+			"name": "OwnerID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 393130950854191
 		}
 	],
 	"behaviorTypes": [

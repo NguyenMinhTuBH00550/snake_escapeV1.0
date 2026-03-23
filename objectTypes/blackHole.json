@@ -1,0 +1,78 @@
+{
+	"name": "blackHole",
+	"plugin-id": "Sprite",
+	"sid": 503905414313941,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "GridX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 488999706516917
+		},
+		{
+			"name": "GridY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 128369293532241
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 496966847766283
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 946588244742371
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 316,
+						"height": 335,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7082910,
+						"collisionPoly": {
+							"points": [
+								0.3788546781529525,
+								0.4072190634495468,
+								0.5941573995090077,
+								0.40707738028134793,
+								0.5485106263552783,
+								0.5605654871713501,
+								0.42348698627956366,
+								0.5623277329581273
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 251345493938944,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

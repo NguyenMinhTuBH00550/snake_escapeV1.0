@@ -47,6 +47,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "SAVE_HINT",
+			"type": "string",
+			"initialValue": "SAVE_HINT",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 879498916265083
+		},
+		{
+			"eventType": "variable",
 			"name": "LevelID",
 			"type": "string",
 			"initialValue": "\"\"",
@@ -370,6 +380,15 @@
 					"parameters": {
 						"layout": "Home"
 					}
+				},
+				{
+					"id": "set-key",
+					"objectClass": "DicSaveGame",
+					"sid": 887929575314281,
+					"parameters": {
+						"key": "SAVE_HINT",
+						"value": "2"
+					}
 				}
 			],
 			"sid": 142436801467045
@@ -450,6 +469,36 @@
 						}
 					],
 					"sid": 116222569764755
+				},
+				{
+					"eventType": "comment",
+					"text": "ITEM_HINT"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-key",
+							"objectClass": "DicSaveGame",
+							"sid": 983928973258945,
+							"parameters": {
+								"key": "SAVE_HINT"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-key",
+							"objectClass": "DicSaveGame",
+							"sid": 725612995209509,
+							"parameters": {
+								"key": "SAVE_HINT",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 758414930618787
 				}
 			]
 		},

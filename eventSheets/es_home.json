@@ -267,58 +267,6 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "MoreCoin_Button",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "onclicked3",
-									"objectClass": "UI_icon_frameTop",
-									"sid": 380611533271244,
-									"behaviorType": "Button"
-								}
-							],
-							"actions": [
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 641744324471641,
-									"parameters": {
-										"layer": "\"Home\"",
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 171789917503329,
-									"parameters": {
-										"layer": "\"Shop\"",
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 738123164464115,
-									"parameters": {
-										"layer": "\"Challenge\"",
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 252068697495784,
-							"disabled": true
-						}
-					],
-					"sid": 545411176182388
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
 					"title": "Setting_button",
 					"description": "",
 					"isActiveOnStart": true,

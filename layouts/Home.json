@@ -1439,6 +1439,11 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -1529,6 +1534,11 @@
 								"top-edge": "none",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -1623,6 +1633,11 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -1713,6 +1728,11 @@
 								"top-edge": "none",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -1999,6 +2019,11 @@
 										"top-edge": "none",
 										"right-edge": "none",
 										"bottom-edge": "none",
+										"enabled": true
+									}
+								},
+								"Tween": {
+									"properties": {
 										"enabled": true
 									}
 								}
@@ -2729,6 +2754,20 @@
 								"name": "",
 								"parent-name": "scoll_view",
 								"parent-layer": false
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
@@ -7579,6 +7618,11 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -7669,6 +7713,11 @@
 								"top-edge": "window-top",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -9717,6 +9766,11 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -9807,6 +9861,11 @@
 								"top-edge": "none",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -9944,6 +10003,11 @@
 								"top-edge": "none",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -10448,6 +10512,11 @@
 								"top-edge": "window-top",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -11446,6 +11515,11 @@
 								"bottom-edge": "window-bottom",
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -11536,6 +11610,11 @@
 								"top-edge": "window-bottom",
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -11630,6 +11709,11 @@
 								"bottom-edge": "window-bottom",
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -11720,6 +11804,11 @@
 								"top-edge": "window-bottom",
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}

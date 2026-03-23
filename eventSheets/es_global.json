@@ -33,6 +33,29 @@
 					"sid": 486765517414447
 				},
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 980957798312417,
+					"parameters": {
+						"variable": "UI_BottomTween",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 535099548286204,
+					"parameters": {
+						"variable": "UI_TopTween",
+						"value": "0"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 981266551298287
+				},
+				{
 					"callFunction": "closeDialog",
 					"sid": 453339102200750,
 					"parameters": [
@@ -40,10 +63,23 @@
 					]
 				},
 				{
-					"id": "clear",
-					"objectClass": "DicSaveGame",
-					"sid": 951211057451384,
-					"disabled": true
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 395627902952527,
+					"disabled": true,
+					"parameters": {
+						"seconds": "1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 855327813556535,
+					"disabled": true,
+					"parameters": {
+						"tag": "\"aaa\""
+					}
 				},
 				{
 					"id": "wait-for-previous-actions",
@@ -53,16 +89,6 @@
 				{
 					"callFunction": "turnAudio",
 					"sid": 423194277632081
-				},
-				{
-					"id": "log",
-					"objectClass": "Browser",
-					"sid": 596987107808116,
-					"disabled": true,
-					"parameters": {
-						"type": "log",
-						"message": "(DicSaveGame.Get(SAVE_MUSIC))"
-					}
 				}
 			],
 			"sid": 707411446384968,
@@ -132,6 +158,53 @@
 							"sid": 154829682812230
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 109394056726047,
+							"parameters": {
+								"first-value": "CurrentLevel",
+								"comparison": 5,
+								"second-value": "6"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 288394813714323,
+							"parameters": {
+								"first-value": "CurrentLevel",
+								"comparison": 2,
+								"second-value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "open0",
+							"objectClass": "Dia_noti_hint",
+							"sid": 821069796021241,
+							"behaviorType": "Dialog",
+							"parameters": {
+								"target_x0": "0",
+								"target_y1": "0",
+								"center4": "yes"
+							}
+						},
+						{
+							"callFunction": "openDialog",
+							"sid": 289776821174708,
+							"parameters": [
+								"\"\""
+							]
+						}
+					],
+					"sid": 388812968381535,
+					"disabled": true
 				}
 			]
 		},

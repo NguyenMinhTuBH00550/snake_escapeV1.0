@@ -1,6 +1,8 @@
 {
   "size": { "x": 13, "y": 15 },
   "timeLimit": 180,
+  "layoutScale": 0.9,
+
   "name": "",
   "arrows": {
     "0": {

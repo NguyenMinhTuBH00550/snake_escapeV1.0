@@ -4,6 +4,8 @@
     "y": 15
   },
   "timeLimit": 180,
+  "layoutScale": 0.9,
+
   "arrows": {
     "0": {
       "nodes": {

@@ -20,6 +20,11 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"SliderBar": {
 							"properties": {
 								"enabled": "yes",
@@ -102,7 +107,7 @@
 					},
 					"uid": 189,
 					"sid": 838519325740408,
-					"tags": "",
+					"tags": "UI_top",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -111,6 +116,11 @@
 								"top-edge": "window-top",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -194,7 +204,7 @@
 					},
 					"uid": 190,
 					"sid": 202071105933750,
-					"tags": "",
+					"tags": "UI_top",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -203,6 +213,11 @@
 								"top-edge": "window-top",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -286,7 +301,7 @@
 					},
 					"uid": 191,
 					"sid": 539850550503457,
-					"tags": "",
+					"tags": "UI_top",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -295,6 +310,11 @@
 								"top-edge": "window-top",
 								"right-edge": "window-right",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -378,7 +398,7 @@
 					},
 					"uid": 192,
 					"sid": 395351305882529,
-					"tags": "",
+					"tags": "UI_top",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -387,6 +407,11 @@
 								"top-edge": "window-top",
 								"right-edge": "window-right",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -473,6 +498,11 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -571,6 +601,11 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -756,7 +791,13 @@
 					"sid": 201312915269200,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 191,
 						"uid": 196,
@@ -999,13 +1040,7 @@
 					"instanceVariables": {
 						"font_size": -1
 					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"effects": {
 						"Outline": {
 							"isEnabled": true,
@@ -1138,8 +1173,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -1091,
-						"y": -799,
+						"x": 553,
+						"y": 1426,
 						"width": 736.0000000000001,
 						"height": 192,
 						"originX": 0.5,
@@ -1221,8 +1256,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -1278.5,
-						"y": -838,
+						"x": 365.5,
+						"y": 1387,
 						"width": 384,
 						"height": 64,
 						"originX": 0,
@@ -1253,6 +1288,11 @@
 						"ToggleState": 0
 					},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -1415,6 +1455,11 @@
 						"ToggleState": 0
 					},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -2335,7 +2380,13 @@
 					"sid": 222039836259820,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 192,
 						"uid": 202,
@@ -2595,7 +2646,13 @@
 					"sid": 814352785631033,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 436,
 						"uid": 392,
@@ -2731,7 +2788,7 @@
 					},
 					"uid": 405,
 					"sid": 152639906472852,
-					"tags": "",
+					"tags": "grid",
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
@@ -2954,7 +3011,7 @@
 					},
 					"uid": 410,
 					"sid": 473957344838897,
-					"tags": "",
+					"tags": "hint_level",
 					"instanceVariables": {},
 					"behaviors": {
 						"GameObject": {
@@ -2962,6 +3019,20 @@
 								"name": "",
 								"parent-name": "",
 								"parent-layer": false
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
@@ -3000,7 +3071,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 984,
+						"x": 976,
 						"y": 1650,
 						"width": 103,
 						"height": 125,
@@ -3027,7 +3098,7 @@
 					},
 					"uid": 409,
 					"sid": 639595808821578,
-					"tags": "",
+					"tags": "hint",
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
@@ -3207,7 +3278,7 @@
 					},
 					"uid": 421,
 					"sid": 803986042958608,
-					"tags": "",
+					"tags": "UI_top",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -3216,6 +3287,11 @@
 								"top-edge": "window-top",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -3324,7 +3400,7 @@
 									"h": true,
 									"a": true,
 									"o": false,
-									"v": false,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -3392,6 +3468,11 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -3490,6 +3571,11 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -3632,7 +3718,7 @@
 							"h": true,
 							"a": true,
 							"o": false,
-							"v": false,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -3683,7 +3769,7 @@
 					},
 					"uid": 436,
 					"sid": 670739618708425,
-					"tags": "",
+					"tags": "UI_bottom",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -3692,6 +3778,11 @@
 								"top-edge": "window-bottom",
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -3775,7 +3866,7 @@
 					},
 					"uid": 437,
 					"sid": 760615289670841,
-					"tags": "",
+					"tags": "UI_bottom",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -3784,6 +3875,11 @@
 								"top-edge": "window-bottom",
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -3867,7 +3963,7 @@
 					},
 					"uid": 438,
 					"sid": 599187139947342,
-					"tags": "",
+					"tags": "UI_bottom",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -3876,6 +3972,11 @@
 								"top-edge": "window-bottom",
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
@@ -3959,7 +4060,7 @@
 					},
 					"uid": 439,
 					"sid": 526062425700999,
-					"tags": "",
+					"tags": "scroll_bar",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -3968,6 +4069,11 @@
 								"top-edge": "window-bottom",
 								"right-edge": "none",
 								"bottom-edge": "window-bottom",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}

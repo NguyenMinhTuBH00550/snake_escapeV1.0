@@ -88,6 +88,62 @@
 			"desc": "",
 			"show": true,
 			"sid": 550685168961819
+		},
+		{
+			"name": "BodyReadIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 124419361007393
+		},
+		{
+			"name": "HeadWayCache",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 174767414982329
+		},
+		{
+			"name": "HeadIndexCache",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 352160519036195
+		},
+		{
+			"name": "NeedMove",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 262661687349538
+		},
+		{
+			"name": "MoveTargetX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 312402233053498
+		},
+		{
+			"name": "MoveTargetY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 868163783070677
+		},
+		{
+			"name": "moveAngle",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 793209424429541
+		},
+		{
+			"name": "snakeOn",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 720134259769526
 		}
 	],
 	"behaviorTypes": [],

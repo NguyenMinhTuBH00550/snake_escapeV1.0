@@ -5,13 +5,7 @@
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 425255003470512
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [
 		{
 			"effectId": "outline",

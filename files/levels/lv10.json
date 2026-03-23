@@ -4,6 +4,8 @@
     "y": 16
   },
   "timeLimit": 180,
+  "layoutScale": 0.8,
+
   "name": "",
   "arrows": [
     {

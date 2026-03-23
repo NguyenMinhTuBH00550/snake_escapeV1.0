@@ -1760,6 +1760,11 @@
 								"bottom-edge": "none",
 								"enabled": true
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -1850,6 +1855,11 @@
 								"top-edge": "window-top",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}

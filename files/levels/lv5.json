@@ -1,6 +1,8 @@
 {
   "size": { "x": 10, "y": 14 },
   "timeLimit": 180,
+  "layoutScale": 1,
+
   "arrows": {
     "0": {
       "nodes": {

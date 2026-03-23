@@ -1310,8 +1310,8 @@
 					"world": {
 						"x": 800,
 						"y": 1336,
-						"width": 138,
-						"height": 120,
+						"width": 199,
+						"height": 292,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1622,8 +1622,8 @@
 					"world": {
 						"x": 800,
 						"y": 1076,
-						"width": 138,
-						"height": 120,
+						"width": 199,
+						"height": 292,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2023,6 +2023,11 @@
 								"top-edge": "window-top",
 								"right-edge": "none",
 								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
 								"enabled": true
 							}
 						}
