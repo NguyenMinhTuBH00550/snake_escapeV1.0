@@ -4,7 +4,7 @@
 	"name": "snake escape",
 	"runtime": "c3",
 	"useWorker": "auto",
-	"bundleAddons": true,
+	"bundleAddons": false,
 	"usedAddons": [
 		{
 			"type": "plugin",
@@ -109,7 +109,7 @@
 			"id": "aekiro_proui",
 			"name": "ProUI",
 			"author": "Aekiro",
-			"bundled": true,
+			"bundled": false,
 			"version": "1.822"
 		},
 		{
@@ -159,7 +159,7 @@
 			"id": "aekiro_button",
 			"name": "Button",
 			"author": "Aekiro",
-			"bundled": true,
+			"bundled": false,
 			"version": "1.822"
 		},
 		{
@@ -167,7 +167,7 @@
 			"id": "aekiro_dialog",
 			"name": "Dialog",
 			"author": "Aekiro",
-			"bundled": true,
+			"bundled": false,
 			"version": "1.822"
 		},
 		{
@@ -175,7 +175,7 @@
 			"id": "aekiro_gameobject",
 			"name": "Game Object",
 			"author": "Aekiro",
-			"bundled": true,
+			"bundled": false,
 			"version": "1.822"
 		},
 		{
@@ -183,7 +183,7 @@
 			"id": "aekiro_scrollView",
 			"name": "Scroll View",
 			"author": "Aekiro",
-			"bundled": true,
+			"bundled": false,
 			"version": "1.822"
 		},
 		{
@@ -191,7 +191,7 @@
 			"id": "aekiro_sliderbar",
 			"name": "Slider Bar",
 			"author": "Aekiro",
-			"bundled": true,
+			"bundled": false,
 			"version": "1.822"
 		},
 		{
@@ -206,7 +206,7 @@
 			"id": "outline",
 			"name": "Outline",
 			"author": "Richard Lems",
-			"bundled": true,
+			"bundled": false,
 			"version": "1.0.0.0"
 		}
 	],
@@ -301,7 +301,7 @@
 					"text_remove_bottomBanner",
 					"text_remove_bottomBanner2",
 					"text_boosterGrid_count",
-					"text_boosterHInt_count",
+					"text_boosterHint_count",
 					"text_zoom_bar",
 					"text_wayBlocker",
 					"text_count_hint"
@@ -509,7 +509,9 @@
 			"F_Tween",
 			"F_TextWidthChange",
 			"F_UiTop",
-			"F_UIBottom"
+			"F_UIBottom",
+			"F_ButtonBooster",
+			"F_ButtonWin"
 		],
 		"subfolders": []
 	},

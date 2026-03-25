@@ -194,6 +194,16 @@
 			"sid": 554813266084033
 		},
 		{
+			"eventType": "variable",
+			"name": "IsInputLocked",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 775337628813336
+		},
+		{
 			"eventType": "comment",
 			"text": "Value_eventTouch"
 		},
@@ -338,6 +348,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 403855099548200
+		},
+		{
+			"eventType": "variable",
+			"name": "IsCamMoving",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 814133089960624
 		},
 		{
 			"eventType": "comment",
@@ -577,7 +597,7 @@
 						},
 						{
 							"id": "set-visible",
-							"objectClass": "text_boosterHInt_count",
+							"objectClass": "text_boosterHint_count",
 							"sid": 582133563535624,
 							"parameters": {
 								"visibility": "invisible"
@@ -646,12 +666,12 @@
 							}
 						},
 						{
-							"id": "set-group-active",
+							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 751889802923779,
+							"sid": 423213811689486,
 							"parameters": {
-								"group-name": "\"Event_Touch\"",
-								"state": "deactivated"
+								"layer": "\"fade\"",
+								"visibility": "invisible"
 							}
 						}
 					],
@@ -775,7 +795,7 @@
 						},
 						{
 							"id": "set-visible",
-							"objectClass": "text_boosterHInt_count",
+							"objectClass": "text_boosterHint_count",
 							"sid": 562715705161835,
 							"parameters": {
 								"visibility": "visible"
@@ -963,6 +983,24 @@
 							],
 							"actions": [
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 526655128140929,
+									"parameters": {
+										"variable": "IsInputLocked",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 278090609025079,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "false"
+									}
+								},
+								{
 									"id": "parse",
 									"objectClass": "JsonLevel",
 									"sid": 124700179948049,
@@ -1055,17 +1093,21 @@
 									"sid": 482607720654547
 								},
 								{
-									"id": "wait-for-previous-actions",
-									"objectClass": "System",
-									"sid": 477194796294946
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 314059162253468,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "true"
+									}
 								},
 								{
-									"id": "set-group-active",
+									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 313484577929835,
+									"sid": 518832111768093,
 									"parameters": {
-										"group-name": "\"Event_Touch\"",
-										"state": "activated"
+										"variable": "IsInputLocked",
+										"value": "0"
 									}
 								}
 							],
@@ -4269,6 +4311,116 @@
 									"sid": 919672170206904
 								},
 								{
+									"eventType": "variable",
+									"name": "tempWayPoint",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 599260551727395
+								},
+								{
+									"eventType": "variable",
+									"name": "newWayPoint",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 452934034541700
+								},
+								{
+									"eventType": "variable",
+									"name": "id",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 825049096160239
+								},
+								{
+									"eventType": "variable",
+									"name": "idPrev",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 665217817259370
+								},
+								{
+									"eventType": "variable",
+									"name": "idNext",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 215614124575713
+								},
+								{
+									"eventType": "variable",
+									"name": "curX",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 965993639400153
+								},
+								{
+									"eventType": "variable",
+									"name": "curY",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 115998314426062
+								},
+								{
+									"eventType": "variable",
+									"name": "PrevX",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 864820771913339
+								},
+								{
+									"eventType": "variable",
+									"name": "PrevY",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 538107066948312
+								},
+								{
+									"eventType": "variable",
+									"name": "NextX",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 571574950423977
+								},
+								{
+									"eventType": "variable",
+									"name": "NextY",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 740198188894357
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -4288,6 +4440,24 @@
 											"parameters": {
 												"variable": "wayPoint",
 												"value": "\"\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 209626009740247,
+											"parameters": {
+												"variable": "PrevX",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 407828212223921,
+											"parameters": {
+												"variable": "PrevY",
+												"value": "-1"
 											}
 										}
 									],
@@ -4695,6 +4865,16 @@
 																						"variable": "wayPoint",
 																						"value": "wayPoint & Snake_Checkpoint.IID & \"|\""
 																					}
+																				},
+																				{
+																					"id": "log",
+																					"objectClass": "Browser",
+																					"sid": 461227224826944,
+																					"disabled": true,
+																					"parameters": {
+																						"type": "log",
+																						"message": "loopindex & \" - \" & wayPoint"
+																					}
 																				}
 																			],
 																			"sid": 940009470552946,
@@ -4766,6 +4946,16 @@
 																							"parameters": {
 																								"instance-variable": "wayPoint",
 																								"value": "wayPoint"
+																							}
+																						},
+																						{
+																							"id": "log",
+																							"objectClass": "Browser",
+																							"sid": 269813064922893,
+																							"disabled": true,
+																							"parameters": {
+																								"type": "log",
+																								"message": "\"aaa = \"  & wayPoint"
 																							}
 																						}
 																					],
@@ -4898,6 +5088,516 @@
 																				}
 																			],
 																			"sid": 850091721174942
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "variable",
+											"name": "dir1X",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 777551612434068
+										},
+										{
+											"eventType": "variable",
+											"name": "dir1Y",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 296145961714259
+										},
+										{
+											"eventType": "variable",
+											"name": "dir2X",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 962754289583767
+										},
+										{
+											"eventType": "variable",
+											"name": "dir2Y",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 693627419235043
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 111216343937198,
+													"parameters": {
+														"variable": "tempWayPoint",
+														"value": "wayPoint"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 111172511044106,
+													"parameters": {
+														"variable": "newWayPoint",
+														"value": "\"\""
+													}
+												}
+											],
+											"sid": 418733455308258,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for",
+															"objectClass": "System",
+															"sid": 174834743125162,
+															"parameters": {
+																"name": "\"i\"",
+																"start-index": "0",
+																"end-index": "tokencount(tempWayPoint,\"|\") - 2"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 444495576201859,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 544083741709367,
+																	"parameters": {
+																		"first-value": "loopindex",
+																		"comparison": 0,
+																		"second-value": "0"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 817568668327134,
+																	"parameters": {
+																		"first-value": "loopindex",
+																		"comparison": 0,
+																		"second-value": "tokencount(tempWayPoint,\"|\") - 2"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 464443920899631,
+																	"parameters": {
+																		"variable": "id",
+																		"value": "int(tokenat(tempWayPoint, loopindex, \"|\"))"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 745496693683794,
+																	"parameters": {
+																		"variable": "newWayPoint",
+																		"value": "newWayPoint & str(id) & \"|\""
+																	}
+																}
+															],
+															"sid": 190415846792898,
+															"isOrBlock": true
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 731108341621009
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 332579736642274,
+																	"parameters": {
+																		"variable": "id",
+																		"value": "int(tokenat(tempWayPoint, loopindex, \"|\"))"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 580778033903222,
+																	"parameters": {
+																		"variable": "idPrev",
+																		"value": "int(tokenat(tempWayPoint, loopindex-1,\"|\"))"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 212158547570308,
+																	"parameters": {
+																		"variable": "idNext",
+																		"value": "int(tokenat(tempWayPoint, loopindex+1,\"|\"))"
+																	}
+																}
+															],
+															"sid": 814092014855029,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-by-evaluate",
+																			"objectClass": "System",
+																			"sid": 893268461032009,
+																			"parameters": {
+																				"object": "Snake_Checkpoint",
+																				"expression": "Snake_Checkpoint.IID = idPrev"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 964193363594931,
+																			"parameters": {
+																				"variable": "PrevX",
+																				"value": "Snake_Checkpoint.GridX"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 571627648493491,
+																			"parameters": {
+																				"variable": "PrevY",
+																				"value": "Snake_Checkpoint.GridY"
+																			}
+																		}
+																	],
+																	"sid": 952415346383642
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-by-evaluate",
+																			"objectClass": "System",
+																			"sid": 746381971038602,
+																			"parameters": {
+																				"object": "Snake_Checkpoint",
+																				"expression": "Snake_Checkpoint.IID = idNext"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 545013018348827,
+																			"parameters": {
+																				"variable": "NextX",
+																				"value": "Snake_Checkpoint.GridX"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 579587435372677,
+																			"parameters": {
+																				"variable": "NextY",
+																				"value": "Snake_Checkpoint.GridY"
+																			}
+																		}
+																	],
+																	"sid": 607368731004602
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-by-evaluate",
+																			"objectClass": "System",
+																			"sid": 202371478315246,
+																			"parameters": {
+																				"object": "Snake_Checkpoint",
+																				"expression": "Snake_Checkpoint.IID = id"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 696456074070309,
+																			"parameters": {
+																				"variable": "curX",
+																				"value": "Snake_Checkpoint.GridX"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 699424336275313,
+																			"parameters": {
+																				"variable": "curY",
+																				"value": "Snake_Checkpoint.GridY"
+																			}
+																		}
+																	],
+																	"sid": 924443498656202
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [],
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 244198375476651,
+																			"parameters": {
+																				"variable": "dir1X",
+																				"value": "sign(curX - PrevX)"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 604435712364877,
+																			"parameters": {
+																				"variable": "dir1Y",
+																				"value": "sign( curY- PrevY)"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 268768779234644,
+																			"parameters": {
+																				"variable": "dir2X",
+																				"value": "sign(NextX - curX)"
+																			}
+																		},
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 835102949474432,
+																			"parameters": {
+																				"variable": "dir2Y",
+																				"value": "sign(NextY - curY)"
+																			}
+																		}
+																	],
+																	"sid": 428115762426813,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "compare-two-values",
+																					"objectClass": "System",
+																					"sid": 489679013198662,
+																					"parameters": {
+																						"first-value": "dir1X",
+																						"comparison": 1,
+																						"second-value": "dir2X"
+																					}
+																				},
+																				{
+																					"id": "compare-two-values",
+																					"objectClass": "System",
+																					"sid": 319451548761006,
+																					"parameters": {
+																						"first-value": "dir1Y",
+																						"comparison": 1,
+																						"second-value": "dir2Y"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-eventvar-value",
+																					"objectClass": "System",
+																					"sid": 568440544824069,
+																					"parameters": {
+																						"variable": "newWayPoint",
+																						"value": "newWayPoint & str(id) & \"|\""
+																					}
+																				}
+																			],
+																			"sid": 823361599129696,
+																			"isOrBlock": true
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-evaluate",
+															"objectClass": "System",
+															"sid": 987322390325871,
+															"parameters": {
+																"object": "snake_body",
+																"expression": "snake_body.OwnerID = snake_head.OwnerID"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 149953017661898,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each-ordered",
+																	"objectClass": "System",
+																	"sid": 273172173102995,
+																	"parameters": {
+																		"object": "snake_body",
+																		"expression": "snake_body.NodeIndex",
+																		"order": "ascending"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 489849742988487,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-by-evaluate",
+																			"objectClass": "System",
+																			"sid": 905407842278449,
+																			"parameters": {
+																				"object": "Snake_Checkpoint",
+																				"expression": "Snake_Checkpoint.GridX = snake_body.GridX &\r\nSnake_Checkpoint.GridY = snake_body.GridY "
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 870385029928000,
+																			"parameters": {
+																				"variable": "wayPoint",
+																				"value": "newWayPoint"
+																			}
+																		}
+																	],
+																	"sid": 323304357716366,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "for-each",
+																					"objectClass": "System",
+																					"sid": 971451996802929,
+																					"parameters": {
+																						"object": "F_Snake"
+																					}
+																				},
+																				{
+																					"id": "compare-two-values",
+																					"objectClass": "System",
+																					"sid": 240438119067490,
+																					"parameters": {
+																						"first-value": "F_Snake.GridX",
+																						"comparison": 0,
+																						"second-value": "snake_body.GridX"
+																					}
+																				},
+																				{
+																					"id": "compare-two-values",
+																					"objectClass": "System",
+																					"sid": 331320480986152,
+																					"parameters": {
+																						"first-value": "F_Snake.GridY",
+																						"comparison": 0,
+																						"second-value": "snake_body.GridY"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 480824429500238,
+																					"parameters": {
+																						"instance-variable": "startAngle",
+																						"value": "Self.Angle"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 218712571702783,
+																					"parameters": {
+																						"instance-variable": "StartX",
+																						"value": "Self.X"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 371115442600612,
+																					"parameters": {
+																						"instance-variable": "StartY",
+																						"value": "Self.Y"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 554674428070206,
+																					"parameters": {
+																						"instance-variable": "wayPoint",
+																						"value": "wayPoint"
+																					}
+																				},
+																				{
+																					"id": "log",
+																					"objectClass": "Browser",
+																					"sid": 910834050323536,
+																					"disabled": true,
+																					"parameters": {
+																						"type": "log",
+																						"message": "\"aaa = \"  & wayPoint"
+																					}
+																				}
+																			],
+																			"sid": 649017281252350
 																		}
 																	]
 																}
@@ -5091,130 +5791,221 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "TouchX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 361997151133120
+						},
+						{
+							"eventType": "variable",
+							"name": "TouchY",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 962531939933871
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-touched-object",
+									"id": "on-any-touch-start",
 									"objectClass": "Touch",
-									"sid": 854292893911023,
+									"sid": 564341057995178
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 684287051821636,
 									"parameters": {
-										"object": "SnakeHead",
-										"type": "start"
+										"first-value": "IsInputLocked",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 347466981115746,
+									"parameters": {
+										"object": "F_ButtonBooster"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 548691712283599,
+									"parameters": {
+										"variable": "TouchX",
+										"value": "Touch.X(\"Snakes\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 320545940226245,
+									"parameters": {
+										"variable": "TouchY",
+										"value": "Touch.Y(\"Snakes\")"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 496217940866599,
+							"sid": 400442730654408,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "SnakeHead",
-											"sid": 223151300757770,
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 725773076655414,
 											"parameters": {
-												"instance-variable": "CanTouch"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "SnakeHead",
-											"sid": 400145074306061,
-											"parameters": {
-												"instance-variable": "CanTouch",
-												"value": "false"
+												"object": "SnakeHead"
 											}
 										},
 										{
-											"callFunction": "SnakePlay",
-											"sid": 309816396281246,
-											"parameters": [
-												"SnakeHead.ownID"
-											]
+											"id": "pick-nearestfurthest",
+											"objectClass": "SnakeHead",
+											"sid": 856697164855890,
+											"parameters": {
+												"which": "nearest",
+												"x": "TouchX",
+												"y": "TouchY"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 696911753488114,
+											"parameters": {
+												"first-value": "distance(SnakeHead.X, SnakeHead.Y, TouchX, TouchY)  ",
+												"comparison": 2,
+												"second-value": "40"
+											}
 										}
 									],
-									"sid": 713278858448073,
+									"actions": [],
+									"sid": 834608705431100,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "pick-all",
-													"objectClass": "System",
-													"sid": 393346031919493,
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "SnakeHead",
+													"sid": 845798669586868,
 													"parameters": {
-														"object": "F_Snake"
-													}
-												},
-												{
-													"id": "pick-by-evaluate",
-													"objectClass": "System",
-													"sid": 201079742026657,
-													"parameters": {
-														"object": "F_Snake",
-														"expression": "F_Snake.ownID = SnakeHead.ownID"
-													}
-												},
-												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 855024261486898,
-													"parameters": {
-														"object": "F_Snake"
+														"instance-variable": "CanTouch"
 													}
 												}
 											],
 											"actions": [
 												{
 													"id": "set-boolean-instvar",
-													"objectClass": "F_Snake",
-													"sid": 934960959272676,
+													"objectClass": "SnakeHead",
+													"sid": 271133581098171,
 													"parameters": {
 														"instance-variable": "CanTouch",
 														"value": "false"
 													}
+												},
+												{
+													"callFunction": "SnakePlay",
+													"sid": 384218418386505,
+													"parameters": [
+														"SnakeHead.ownID"
+													]
 												}
 											],
-											"sid": 353161456840708
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 555196658831129,
-											"parameters": {
-												"first-value": "CurrentLevel",
-												"comparison": 3,
-												"second-value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "UI_challenge_level",
-											"sid": 808351282488757,
-											"parameters": {
-												"visibility": "invisible"
-											}
+											"sid": 409981627297164,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-all",
+															"objectClass": "System",
+															"sid": 460682404434033,
+															"parameters": {
+																"object": "F_Snake"
+															}
+														},
+														{
+															"id": "pick-by-evaluate",
+															"objectClass": "System",
+															"sid": 802744654587363,
+															"parameters": {
+																"object": "F_Snake",
+																"expression": "F_Snake.ownID = SnakeHead.ownID"
+															}
+														},
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 703789007826136,
+															"parameters": {
+																"object": "F_Snake"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "F_Snake",
+															"sid": 752179244068158,
+															"parameters": {
+																"instance-variable": "CanTouch",
+																"value": "false"
+															}
+														}
+													],
+													"sid": 529176141640737
+												}
+											]
 										},
 										{
-											"id": "set-visible",
-											"objectClass": "hand_icon",
-											"sid": 927823796731632,
-											"parameters": {
-												"visibility": "invisible"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 441930048261447,
+													"parameters": {
+														"first-value": "CurrentLevel",
+														"comparison": 3,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "UI_challenge_level",
+													"sid": 185386768159852,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "hand_icon",
+													"sid": 377740342985184,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 762115327545450
 										}
-									],
-									"sid": 462113427079363
+									]
 								}
 							]
 						},
@@ -5222,127 +6013,198 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-touched-object",
+									"id": "on-any-touch-start",
 									"objectClass": "Touch",
-									"sid": 189596809796787,
+									"sid": 387330398266671
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 967231484220861,
 									"parameters": {
-										"object": "SnakeBody",
-										"type": "start"
+										"first-value": "IsInputLocked",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 934608414959343,
+									"parameters": {
+										"object": "F_ButtonBooster"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 137209245254925,
+									"parameters": {
+										"variable": "TouchX",
+										"value": "Touch.X(\"Snakes\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 818741715362547,
+									"parameters": {
+										"variable": "TouchY",
+										"value": "Touch.Y(\"Snakes\")"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 296691316932705,
+							"sid": 488898789025792,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "SnakeBody",
-											"sid": 914849282776159,
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 150531469404629,
 											"parameters": {
-												"instance-variable": "CanTouch"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "SnakeBody",
-											"sid": 579904437670012,
-											"parameters": {
-												"instance-variable": "CanTouch",
-												"value": "false"
+												"object": "SnakeBody"
 											}
 										},
 										{
-											"callFunction": "SnakePlay",
-											"sid": 983410551105760,
-											"parameters": [
-												"SnakeBody.ownID"
-											]
+											"id": "pick-nearestfurthest",
+											"objectClass": "SnakeBody",
+											"sid": 638841321292646,
+											"parameters": {
+												"which": "nearest",
+												"x": "TouchX",
+												"y": "TouchY"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 361330862929271,
+											"parameters": {
+												"first-value": "distance(SnakeBody.X, SnakeBody.Y, TouchX, TouchY)  ",
+												"comparison": 2,
+												"second-value": "40"
+											}
 										}
 									],
-									"sid": 751365193504211,
+									"actions": [],
+									"sid": 126648709031372,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "pick-all",
-													"objectClass": "System",
-													"sid": 951544731449780,
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "SnakeBody",
+													"sid": 773871770265986,
 													"parameters": {
-														"object": "F_Snake"
-													}
-												},
-												{
-													"id": "pick-by-evaluate",
-													"objectClass": "System",
-													"sid": 725774333415258,
-													"parameters": {
-														"object": "F_Snake",
-														"expression": "F_Snake.ownID = SnakeBody.ownID"
-													}
-												},
-												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 302980594852688,
-													"parameters": {
-														"object": "F_Snake"
+														"instance-variable": "CanTouch"
 													}
 												}
 											],
 											"actions": [
 												{
 													"id": "set-boolean-instvar",
-													"objectClass": "F_Snake",
-													"sid": 917575689986878,
+													"objectClass": "SnakeBody",
+													"sid": 955159853188202,
 													"parameters": {
 														"instance-variable": "CanTouch",
 														"value": "false"
 													}
+												},
+												{
+													"callFunction": "SnakePlay",
+													"sid": 112032773302622,
+													"parameters": [
+														"SnakeBody.ownID"
+													]
 												}
 											],
-											"sid": 525516567501358
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 166918298754875,
-											"parameters": {
-												"first-value": "CurrentLevel",
-												"comparison": 3,
-												"second-value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "UI_challenge_level",
-											"sid": 823622743443760,
-											"parameters": {
-												"visibility": "invisible"
-											}
+											"sid": 404033305274149,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-all",
+															"objectClass": "System",
+															"sid": 905984006480420,
+															"parameters": {
+																"object": "F_Snake"
+															}
+														},
+														{
+															"id": "pick-by-evaluate",
+															"objectClass": "System",
+															"sid": 489748892295672,
+															"parameters": {
+																"object": "F_Snake",
+																"expression": "F_Snake.ownID = SnakeBody.ownID"
+															}
+														},
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 607493971111866,
+															"parameters": {
+																"object": "F_Snake"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "F_Snake",
+															"sid": 704857027132109,
+															"parameters": {
+																"instance-variable": "CanTouch",
+																"value": "false"
+															}
+														}
+													],
+													"sid": 374198523431882
+												}
+											]
 										},
 										{
-											"id": "set-visible",
-											"objectClass": "hand_icon",
-											"sid": 590129157434653,
-											"parameters": {
-												"visibility": "invisible"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 981014300080651,
+													"parameters": {
+														"first-value": "CurrentLevel",
+														"comparison": 3,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "UI_challenge_level",
+													"sid": 651462485436476,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "hand_icon",
+													"sid": 324536728794375,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 520252972989166
 										}
-									],
-									"sid": 310670681882325
+									]
 								}
 							]
 						},
@@ -5350,127 +6212,198 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-touched-object",
+									"id": "on-any-touch-start",
 									"objectClass": "Touch",
-									"sid": 770172728586303,
+									"sid": 595771708555193
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 308171538650710,
 									"parameters": {
-										"object": "SnakeTail",
-										"type": "start"
+										"first-value": "IsInputLocked",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 102701725528795,
+									"parameters": {
+										"object": "F_ButtonBooster"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 783076610654725,
+									"parameters": {
+										"variable": "TouchX",
+										"value": "Touch.X(\"Snakes\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 776811477554048,
+									"parameters": {
+										"variable": "TouchY",
+										"value": "Touch.Y(\"Snakes\")"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 360838366213940,
+							"sid": 164172841404929,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "SnakeTail",
-											"sid": 129700217891997,
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 249037790086526,
 											"parameters": {
-												"instance-variable": "CanTouch"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "SnakeTail",
-											"sid": 868341504009125,
-											"parameters": {
-												"instance-variable": "CanTouch",
-												"value": "false"
+												"object": "SnakeTail"
 											}
 										},
 										{
-											"callFunction": "SnakePlay",
-											"sid": 313607387618154,
-											"parameters": [
-												"SnakeTail.ownID"
-											]
+											"id": "pick-nearestfurthest",
+											"objectClass": "SnakeTail",
+											"sid": 755480373783029,
+											"parameters": {
+												"which": "nearest",
+												"x": "TouchX",
+												"y": "TouchY"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 536372096476097,
+											"parameters": {
+												"first-value": "distance(SnakeTail.X, SnakeTail.Y, TouchX, TouchY)  ",
+												"comparison": 2,
+												"second-value": "40"
+											}
 										}
 									],
-									"sid": 228775927276063,
+									"actions": [],
+									"sid": 923125828250079,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "pick-all",
-													"objectClass": "System",
-													"sid": 579141677568272,
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "SnakeTail",
+													"sid": 360657495812047,
 													"parameters": {
-														"object": "F_Snake"
-													}
-												},
-												{
-													"id": "pick-by-evaluate",
-													"objectClass": "System",
-													"sid": 625910337680869,
-													"parameters": {
-														"object": "F_Snake",
-														"expression": "F_Snake.ownID = SnakeTail.ownID"
-													}
-												},
-												{
-													"id": "for-each",
-													"objectClass": "System",
-													"sid": 354813343215985,
-													"parameters": {
-														"object": "F_Snake"
+														"instance-variable": "CanTouch"
 													}
 												}
 											],
 											"actions": [
 												{
 													"id": "set-boolean-instvar",
-													"objectClass": "F_Snake",
-													"sid": 679236413224271,
+													"objectClass": "SnakeTail",
+													"sid": 645788603673659,
 													"parameters": {
 														"instance-variable": "CanTouch",
 														"value": "false"
 													}
+												},
+												{
+													"callFunction": "SnakePlay",
+													"sid": 553709612690477,
+													"parameters": [
+														"SnakeTail.ownID"
+													]
 												}
 											],
-											"sid": 191607100323629
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 815866663018200,
-											"parameters": {
-												"first-value": "CurrentLevel",
-												"comparison": 3,
-												"second-value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "UI_challenge_level",
-											"sid": 276531838658238,
-											"parameters": {
-												"visibility": "invisible"
-											}
+											"sid": 573674096733046,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-all",
+															"objectClass": "System",
+															"sid": 828666750059170,
+															"parameters": {
+																"object": "F_Snake"
+															}
+														},
+														{
+															"id": "pick-by-evaluate",
+															"objectClass": "System",
+															"sid": 493762586227311,
+															"parameters": {
+																"object": "F_Snake",
+																"expression": "F_Snake.ownID = SnakeTail.ownID"
+															}
+														},
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 475649567787243,
+															"parameters": {
+																"object": "F_Snake"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "F_Snake",
+															"sid": 747493137337923,
+															"parameters": {
+																"instance-variable": "CanTouch",
+																"value": "false"
+															}
+														}
+													],
+													"sid": 152861717334802
+												}
+											]
 										},
 										{
-											"id": "set-visible",
-											"objectClass": "hand_icon",
-											"sid": 880082450734039,
-											"parameters": {
-												"visibility": "invisible"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 896088874740961,
+													"parameters": {
+														"first-value": "CurrentLevel",
+														"comparison": 3,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "UI_challenge_level",
+													"sid": 384398033837752,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "hand_icon",
+													"sid": 925521475746759,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 622609855880222
 										}
-									],
-									"sid": 983238440545111
+									]
 								}
 							]
 						},
@@ -6502,16 +7435,6 @@
 									"sid": 871266339980972
 								},
 								{
-									"eventType": "variable",
-									"name": "Index",
-									"type": "number",
-									"initialValue": "0",
-									"comment": "",
-									"isStatic": false,
-									"isConstant": false,
-									"sid": 397797807775095
-								},
-								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -6605,24 +7528,6 @@
 														"instance-variable": "snakeOn",
 														"value": "1"
 													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 129519386038989,
-													"parameters": {
-														"variable": "Index",
-														"value": "tokencount(SnakeBody.wayPoint, \"|\") - 2 - (SnakeBody.BodyOrder * spacing)"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 116992320180462,
-													"parameters": {
-														"variable": "Index",
-														"value": "max(0, index)"
-													}
 												}
 											],
 											"sid": 252377049317991,
@@ -6681,13 +7586,12 @@
 															}
 														},
 														{
-															"id": "set-instvar-value",
-															"objectClass": "Snake_Checkpoint",
-															"sid": 792639772269509,
-															"disabled": true,
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 667257467837960,
 															"parameters": {
-																"instance-variable": "HasSnake",
-																"value": "0"
+																"type": "log",
+																"message": "\"aaa= \" & Snake_Checkpoint.IID"
 															}
 														}
 													],
@@ -6725,6 +7629,16 @@
 																		"x": "Snake_Checkpoint.X",
 																		"y": "Snake_Checkpoint.Y",
 																		"mode": "add-waypoint"
+																	}
+																},
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 993066526568684,
+																	"disabled": true,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"bbb = \" & SnakeBody.MoveTo.WaypointCount & \" ccc = \" & SnakeBody.IID"
 																	}
 																}
 															],
@@ -6839,26 +7753,6 @@
 									"sid": 559301531122921,
 									"children": [
 										{
-											"eventType": "variable",
-											"name": "cpX",
-											"type": "number",
-											"initialValue": "0",
-											"comment": "",
-											"isStatic": false,
-											"isConstant": false,
-											"sid": 424802458087466
-										},
-										{
-											"eventType": "variable",
-											"name": "cpY",
-											"type": "number",
-											"initialValue": "0",
-											"comment": "",
-											"isStatic": false,
-											"isConstant": false,
-											"sid": 726890235845528
-										},
-										{
 											"eventType": "block",
 											"conditions": [
 												{
@@ -6891,24 +7785,6 @@
 													"actions": [
 														{
 															"id": "set-instvar-value",
-															"objectClass": "SnakeBody",
-															"sid": 846432406225529,
-															"parameters": {
-																"instance-variable": "cpX",
-																"value": "Snake_Checkpoint.X"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "SnakeBody",
-															"sid": 858630521215846,
-															"parameters": {
-																"instance-variable": "cpY",
-																"value": "Snake_Checkpoint.Y"
-															}
-														},
-														{
-															"id": "set-instvar-value",
 															"objectClass": "Snake_Checkpoint",
 															"sid": 882839206542571,
 															"disabled": true,
@@ -6918,22 +7794,13 @@
 															}
 														},
 														{
-															"id": "set-enabled",
-															"objectClass": "SnakeBody",
-															"sid": 470937407254137,
-															"behaviorType": "MoveTo",
-															"parameters": {
-																"enabled": true
-															}
-														},
-														{
 															"id": "move-to-position",
 															"objectClass": "SnakeBody",
-															"sid": 683458151675395,
+															"sid": 399217333087040,
 															"behaviorType": "MoveTo",
 															"parameters": {
-																"x": "SnakeBody.cpX",
-																"y": "SnakeBody.cpY",
+																"x": "Snake_Checkpoint.X",
+																"y": "Snake_Checkpoint.Y",
 																"mode": "add-waypoint"
 															}
 														}
@@ -6955,15 +7822,6 @@
 																}
 															],
 															"actions": [
-																{
-																	"id": "set-enabled",
-																	"objectClass": "SnakeBody",
-																	"sid": 532998555157512,
-																	"behaviorType": "MoveTo",
-																	"parameters": {
-																		"enabled": true
-																	}
-																},
 																{
 																	"id": "move-to-position",
 																	"objectClass": "SnakeBody",
@@ -9519,7 +10377,24 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "F_ButtonWin",
+											"sid": 441844082771357,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "F_ButtonWin",
+											"sid": 478230217631568,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										}
+									],
 									"sid": 578922302976656,
 									"children": [
 										{
@@ -9560,7 +10435,24 @@
 											"behaviorType": "Button"
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "F_ButtonWin",
+											"sid": 932779943114548,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "F_ButtonWin",
+											"sid": 915334118324554,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										}
+									],
 									"sid": 795040011075534,
 									"children": [
 										{
@@ -9690,58 +10582,75 @@
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 626345867681026,
+											"children": [
 												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 194961126993888,
-													"parameters": {
-														"object-to-create": "UI_coin_reward",
-														"layer": "UI_lose_btn_playon.LayerName",
-														"x": "xx",
-														"y": "yy",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "UI_coin_reward",
-													"sid": 661581348471838,
-													"parameters": {
-														"instance-variable": "Delay",
-														"value": "loopindex * 0.05"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "UI_coin_reward",
-													"sid": 498688605711743,
-													"parameters": {
-														"instance-variable": "coin",
-														"value": "coin/10"
-													}
-												},
-												{
-													"id": "tween-two-properties",
-													"objectClass": "UI_coin_reward",
-													"sid": 414659813981414,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"pop\"",
-														"property": "position",
-														"end-x": "Self.X + random(-120,120)",
-														"end-y": "Self.Y + random(-120,120)",
-														"time": "0.6",
-														"ease": "easeoutquint",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "UI_lose_btn_playon",
+															"sid": 284569773136385,
+															"parameters": {
+																"tags": "\"btn_nextLevel\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 801911316264423,
+															"parameters": {
+																"object-to-create": "UI_coin_reward",
+																"layer": "UI_lose_btn_playon.LayerName",
+																"x": "xx",
+																"y": "yy",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "UI_coin_reward",
+															"sid": 187456153229334,
+															"parameters": {
+																"instance-variable": "Delay",
+																"value": "loopindex * 0.05"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "UI_coin_reward",
+															"sid": 975689239716289,
+															"parameters": {
+																"instance-variable": "coin",
+																"value": "coin/10"
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "UI_coin_reward",
+															"sid": 371353263740518,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"pop\"",
+																"property": "position",
+																"end-x": "Self.X + random(-120,120)",
+																"end-y": "Self.Y + random(-120,120)",
+																"time": "0.6",
+																"ease": "easeoutquint",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														}
+													],
+													"sid": 184065484175905
 												}
-											],
-											"sid": 626345867681026
+											]
 										},
 										{
 											"eventType": "block",
@@ -9988,7 +10897,17 @@
 											"behaviorType": "Button"
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "setenabled0",
+											"objectClass": "UI_btn_home",
+											"sid": 336096685659314,
+											"behaviorType": "Button",
+											"parameters": {
+												"state2": "disabled"
+											}
+										}
+									],
 									"sid": 479426877056264,
 									"children": [
 										{
@@ -10134,6 +11053,15 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 390556746443733,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "false"
+									}
+								},
 								{
 									"id": "open0",
 									"objectClass": "Dia_noti_failed",
@@ -10319,21 +11247,66 @@
 							],
 							"actions": [
 								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 413750349389531,
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 490036628310381,
 									"parameters": {
-										"group-name": "\"Time_Level\"",
-										"state": "deactivated"
+										"instance-variable": "CanTouch",
+										"value": "false"
 									}
 								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 686444234559865,
+									"sid": 238402424997376,
+									"parameters": {
+										"variable": "PanPointerID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 349426595483735,
+									"parameters": {
+										"variable": "TouchZoomID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 449127053663270,
+									"parameters": {
+										"variable": "PanLastX",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 349122981948802,
+									"parameters": {
+										"variable": "PanLastY",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 660936635357529,
 									"parameters": {
 										"variable": "IsTimerRunning",
 										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 527100785702397,
+									"parameters": {
+										"variable": "IsInputLocked",
+										"value": "1"
 									}
 								}
 							],
@@ -10351,12 +11324,21 @@
 							],
 							"actions": [
 								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 134778876276667,
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 974847494372115,
 									"parameters": {
-										"group-name": "\"Time_Level\"",
-										"state": "activated"
+										"instance-variable": "CanTouch",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 944394504424931,
+									"parameters": {
+										"variable": "IsInputLocked",
+										"value": "0"
 									}
 								}
 							],
@@ -10485,30 +11467,30 @@
 									],
 									"actions": [
 										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 516834921318264,
+											"id": "set-boolean-instvar",
+											"objectClass": "F_Snake",
+											"sid": 575354976071950,
 											"parameters": {
-												"group-name": "\"Time_Level\"",
-												"state": "deactivated"
+												"instance-variable": "CanTouch",
+												"value": "false"
 											}
 										},
 										{
-											"id": "set-group-active",
+											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 412565032636694,
+											"sid": 506039763032381,
 											"parameters": {
-												"group-name": "\"Event_Touch\"",
-												"state": "deactivated"
+												"variable": "IsTimerRunning",
+												"value": "0"
 											}
 										},
 										{
-											"id": "set-group-active",
+											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 315823415914436,
+											"sid": 864648023016131,
 											"parameters": {
-												"group-name": "\"Zoom_In/Out\"",
-												"state": "deactivated"
+												"variable": "IsInputLocked",
+												"value": "1"
 											}
 										},
 										{
@@ -10562,21 +11544,21 @@
 									],
 									"actions": [
 										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 381952736296427,
+											"id": "set-boolean-instvar",
+											"objectClass": "F_Snake",
+											"sid": 922766592965232,
 											"parameters": {
-												"group-name": "\"Time_Level\"",
-												"state": "activated"
+												"instance-variable": "CanTouch",
+												"value": "true"
 											}
 										},
 										{
-											"id": "set-group-active",
+											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 728700535712411,
+											"sid": 790174928809959,
 											"parameters": {
-												"group-name": "\"Event_Touch\"",
-												"state": "activated"
+												"variable": "IsInputLocked",
+												"value": "0"
 											}
 										}
 									],
@@ -10779,7 +11761,72 @@
 									"sid": 753985374196607
 								}
 							],
-							"sid": 410127597142181
+							"sid": 410127597142181,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 971581598901146,
+											"parameters": {
+												"first-value": "CurrentLevel",
+												"comparison": 5,
+												"second-value": "6"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 519172272944188,
+											"parameters": {
+												"first-value": "CurrentLevel",
+												"comparison": 2,
+												"second-value": "7"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "open0",
+											"objectClass": "Dia_noti_hint",
+											"sid": 632975707856455,
+											"behaviorType": "Dialog",
+											"parameters": {
+												"target_x0": "0",
+												"target_y1": "0",
+												"center4": "yes"
+											}
+										},
+										{
+											"callFunction": "openDialog",
+											"sid": 425075043041303,
+											"parameters": [
+												"\"\""
+											]
+										},
+										{
+											"id": "set-key",
+											"objectClass": "DicSaveGame",
+											"sid": 753490963188029,
+											"parameters": {
+												"key": "SAVE_HINTS",
+												"value": "2"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_boosterHint_count",
+											"sid": 561551935780634,
+											"parameters": {
+												"text": "DicSaveGame.Get(SAVE_HINTS)"
+											}
+										}
+									],
+									"sid": 190371636894018
+								}
+							]
 						}
 					]
 				},
@@ -10788,7 +11835,7 @@
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
-					"functionCopyPicked": true,
+					"functionCopyPicked": false,
 					"functionIsAsync": false,
 					"functionParameters": [],
 					"eventType": "function-block",
@@ -10863,7 +11910,18 @@
 						},
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 538209787219266,
+									"parameters": {
+										"first-value": "Lives",
+										"comparison": 4,
+										"second-value": "0"
+									}
+								}
+							],
 							"actions": [
 								{
 									"id": "subtract-from-eventvar",
@@ -11157,21 +12215,66 @@
 											],
 											"actions": [
 												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 709561663006001,
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 846463282232191,
 													"parameters": {
-														"group-name": "\"Event_Touch\"",
-														"state": "deactivated"
+														"instance-variable": "CanTouch",
+														"value": "false"
 													}
 												},
 												{
-													"id": "set-group-active",
+													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 957723147408288,
+													"sid": 914062279359113,
 													"parameters": {
-														"group-name": "\"Time_Level\"",
-														"state": "deactivated"
+														"variable": "IsTimerRunning",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 944777831163562,
+													"parameters": {
+														"variable": "IsInputLocked",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 133185899053503,
+													"parameters": {
+														"variable": "PanPointerID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 207536029658154,
+													"parameters": {
+														"variable": "TouchZoomID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 582424494745048,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 304841051250253,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "0"
 													}
 												}
 											],
@@ -11216,21 +12319,21 @@
 											],
 											"actions": [
 												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 609182977619182,
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 795391421248266,
 													"parameters": {
-														"group-name": "\"Event_Touch\"",
-														"state": "activated"
+														"instance-variable": "CanTouch",
+														"value": "true"
 													}
 												},
 												{
-													"id": "set-group-active",
+													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 442968189848666,
+													"sid": 888155901837345,
 													"parameters": {
-														"group-name": "\"Time_Level\"",
-														"state": "activated"
+														"variable": "IsInputLocked",
+														"value": "0"
 													}
 												}
 											],
@@ -11262,6 +12365,169 @@
 													"sid": 606062780131081
 												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "ondialogopened0",
+													"objectClass": "Dia_noti_hint",
+													"sid": 369267892714954,
+													"behaviorType": "Dialog"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 900314764615379,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 666104922877178,
+													"parameters": {
+														"variable": "IsTimerRunning",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 645127276019040,
+													"parameters": {
+														"variable": "IsInputLocked",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 643090369580096,
+													"parameters": {
+														"variable": "PanPointerID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 771682633598760,
+													"parameters": {
+														"variable": "TouchZoomID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 536364218535572,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 173789161215470,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 587808237977955,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "UI_icon_hint",
+															"sid": 277953552198702,
+															"parameters": {
+																"tags": "\"hint_booster\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-active",
+															"objectClass": "UI_icon_hint",
+															"sid": 378989165326130,
+															"behaviorType": "Sine",
+															"parameters": {
+																"state": "active"
+															}
+														}
+													],
+													"sid": 822730124181871
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "ondialogclosed1",
+													"objectClass": "Dia_noti_hint",
+													"sid": 465577527516470,
+													"behaviorType": "Dialog"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 196840481456391,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 440606340194441,
+													"parameters": {
+														"variable": "IsInputLocked",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 770213538054013,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "UI_icon_hint",
+															"sid": 715565953123124,
+															"parameters": {
+																"tags": "\"hint_booster\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-active",
+															"objectClass": "UI_icon_hint",
+															"sid": 162016964931134,
+															"behaviorType": "Sine",
+															"parameters": {
+																"state": "inactive"
+															}
+														}
+													],
+													"sid": 515192074893957
+												}
+											]
 										}
 									],
 									"sid": 524976634405257
@@ -11284,10 +12550,10 @@
 											"actions": [
 												{
 													"id": "set-text",
-													"objectClass": "text_boosterHInt_count",
-													"sid": 188259869468519,
+													"objectClass": "text_boosterHint_count",
+													"sid": 295483442338550,
 													"parameters": {
-														"text": "DicSaveGame.Get(SAVE_HINT)"
+														"text": "DicSaveGame.Get(SAVE_HINTS)"
 													}
 												},
 												{
@@ -11297,15 +12563,6 @@
 													"parameters": {
 														"layer": "\"Shop\"",
 														"visibility": "invisible"
-													}
-												},
-												{
-													"id": "set-active",
-													"objectClass": "UI_icon_hint",
-													"sid": 686310219433771,
-													"behaviorType": "Sine",
-													"parameters": {
-														"state": "inactive"
 													}
 												}
 											],
@@ -11361,9 +12618,9 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 105201545215267,
+															"sid": 809446162429354,
 															"parameters": {
-																"first-value": "DicSaveGame.Get(SAVE_HINT)",
+																"first-value": "DicSaveGame.Get(SAVE_HINTS)",
 																"comparison": 4,
 																"second-value": "0"
 															}
@@ -11557,24 +12814,6 @@
 																							"id": "stop-loop",
 																							"objectClass": "System",
 																							"sid": 905675717892480
-																						},
-																						{
-																							"id": "set-eventvar-value",
-																							"objectClass": "System",
-																							"sid": 829159277845584,
-																							"parameters": {
-																								"variable": "CamTargetX",
-																								"value": "hint_tile.X"
-																							}
-																						},
-																						{
-																							"id": "set-eventvar-value",
-																							"objectClass": "System",
-																							"sid": 821983014465380,
-																							"parameters": {
-																								"variable": "CamTargetY",
-																								"value": "hint_tile.Y"
-																							}
 																						}
 																					],
 																					"sid": 823111845873700,
@@ -11615,6 +12854,33 @@
 																									}
 																								},
 																								{
+																									"id": "set-eventvar-value",
+																									"objectClass": "System",
+																									"sid": 255898619412197,
+																									"parameters": {
+																										"variable": "CamTargetX",
+																										"value": "hint_tile.X"
+																									}
+																								},
+																								{
+																									"id": "set-eventvar-value",
+																									"objectClass": "System",
+																									"sid": 680053938621332,
+																									"parameters": {
+																										"variable": "CamTargetY",
+																										"value": "hint_tile.Y"
+																									}
+																								},
+																								{
+																									"id": "set-eventvar-value",
+																									"objectClass": "System",
+																									"sid": 413029803583031,
+																									"parameters": {
+																										"variable": "IsCamMoving",
+																										"value": "1"
+																									}
+																								},
+																								{
 																									"id": "move-to-top",
 																									"objectClass": "hint_tile",
 																									"sid": 942694463752443
@@ -11631,10 +12897,10 @@
 																								{
 																									"id": "set-key",
 																									"objectClass": "DicSaveGame",
-																									"sid": 330650935183504,
+																									"sid": 670540139662768,
 																									"parameters": {
-																										"key": "SAVE_HINT",
-																										"value": "DicSaveGame.Get(SAVE_HINT) - 1"
+																										"key": "SAVE_HINTS",
+																										"value": "DicSaveGame.Get(SAVE_HINTS) - 1"
 																									}
 																								},
 																								{
@@ -11643,10 +12909,10 @@
 																								},
 																								{
 																									"id": "set-text",
-																									"objectClass": "text_boosterHInt_count",
-																									"sid": 775491663600782,
+																									"objectClass": "text_boosterHint_count",
+																									"sid": 933314854424171,
 																									"parameters": {
-																										"text": "DicSaveGame.Get(SAVE_HINT)"
+																										"text": "DicSaveGame.Get(SAVE_HINTS)"
 																									}
 																								},
 																								{
@@ -11698,6 +12964,153 @@
 																								}
 																							],
 																							"sid": 615008924170028
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "set-layer-visible",
+																	"objectClass": "System",
+																	"sid": 562600350388236,
+																	"parameters": {
+																		"layer": "\"fade\"",
+																		"visibility": "invisible"
+																	}
+																},
+																{
+																	"id": "set-visible",
+																	"objectClass": "fade_layout",
+																	"sid": 886672631015294,
+																	"parameters": {
+																		"visibility": "invisible"
+																	}
+																}
+															],
+															"sid": 670899782570705,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "has-tags",
+																			"objectClass": "Anchor",
+																			"sid": 289706220628208,
+																			"parameters": {
+																				"tags": "\"UI_hint\""
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 856583761395277,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "pick-children",
+																					"objectClass": "Anchor",
+																					"sid": 326346013141345,
+																					"parameters": {
+																						"child": "UI_btn_booter",
+																						"which": "own"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "move-to-layer",
+																					"objectClass": "UI_btn_booter",
+																					"sid": 379026105474424,
+																					"parameters": {
+																						"layer": "\"HUD\""
+																					}
+																				}
+																			],
+																			"sid": 555308975517792,
+																			"children": [
+																				{
+																					"eventType": "block",
+																					"conditions": [
+																						{
+																							"id": "pick-children",
+																							"objectClass": "UI_btn_booter",
+																							"sid": 363101998950262,
+																							"parameters": {
+																								"child": "UI_icon_hint",
+																								"which": "own"
+																							}
+																						}
+																					],
+																					"actions": [
+																						{
+																							"id": "move-to-layer",
+																							"objectClass": "UI_icon_hint",
+																							"sid": 142811962775318,
+																							"parameters": {
+																								"layer": "\"HUD\""
+																							}
+																						}
+																					],
+																					"sid": 396193459805992
+																				},
+																				{
+																					"eventType": "block",
+																					"conditions": [
+																						{
+																							"id": "pick-children",
+																							"objectClass": "UI_btn_booter",
+																							"sid": 581177247484221,
+																							"parameters": {
+																								"child": "UI_count_booster",
+																								"which": "own"
+																							}
+																						}
+																					],
+																					"actions": [
+																						{
+																							"id": "move-to-layer",
+																							"objectClass": "UI_count_booster",
+																							"sid": 640620157005383,
+																							"parameters": {
+																								"layer": "\"HUD\""
+																							}
+																						}
+																					],
+																					"sid": 780564097393438,
+																					"children": [
+																						{
+																							"eventType": "block",
+																							"conditions": [
+																								{
+																									"id": "pick-children",
+																									"objectClass": "UI_count_booster",
+																									"sid": 142873470447008,
+																									"parameters": {
+																										"child": "text_boosterHint_count",
+																										"which": "own"
+																									}
+																								}
+																							],
+																							"actions": [
+																								{
+																									"id": "move-to-layer",
+																									"objectClass": "text_boosterHint_count",
+																									"sid": 890773450438930,
+																									"parameters": {
+																										"layer": "\"HUD\""
+																									}
+																								}
+																							],
+																							"sid": 683235466969270
 																						}
 																					]
 																				}
@@ -11761,9 +13174,9 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 483464818606311,
+															"sid": 528502188204589,
 															"parameters": {
-																"first-value": "DicSaveGame.Get(SAVE_HINT)",
+																"first-value": "DicSaveGame.Get(SAVE_HINTS)",
 																"comparison": 0,
 																"second-value": "0"
 															}
@@ -11887,10 +13300,10 @@
 										{
 											"id": "set-key",
 											"objectClass": "DicSaveGame",
-											"sid": 556570177317781,
+											"sid": 666913532887384,
 											"parameters": {
-												"key": "SAVE_HINT",
-												"value": "DicSaveGame.Get(SAVE_HINT)  + 1"
+												"key": "SAVE_HINTS",
+												"value": "DicSaveGame.Get(SAVE_HINTS)  + 1"
 											}
 										},
 										{
@@ -11899,10 +13312,10 @@
 										},
 										{
 											"id": "set-text",
-											"objectClass": "text_boosterHInt_count",
-											"sid": 283185454736735,
+											"objectClass": "text_boosterHint_count",
+											"sid": 273441853560060,
 											"parameters": {
-												"text": "DicSaveGame.Get(SAVE_HINT)"
+												"text": "DicSaveGame.Get(SAVE_HINTS)"
 											}
 										},
 										{
@@ -11973,10 +13386,10 @@
 										{
 											"id": "set-key",
 											"objectClass": "DicSaveGame",
-											"sid": 564732760758700,
+											"sid": 409269298459973,
 											"parameters": {
-												"key": "SAVE_HINT",
-												"value": "DicSaveGame.Get(SAVE_HINT)  + 1"
+												"key": "SAVE_HINTS",
+												"value": "DicSaveGame.Get(SAVE_HINTS)  + 1"
 											}
 										},
 										{
@@ -11985,10 +13398,10 @@
 										},
 										{
 											"id": "set-text",
-											"objectClass": "text_boosterHInt_count",
-											"sid": 856352774222683,
+											"objectClass": "text_boosterHint_count",
+											"sid": 122054338379738,
 											"parameters": {
-												"text": "DicSaveGame.Get(SAVE_HINT)"
+												"text": "DicSaveGame.Get(SAVE_HINTS)"
 											}
 										},
 										{
@@ -12011,11 +13424,178 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "onclicked3",
+											"objectClass": "UI_btn_booster",
+											"sid": 968814893986621,
+											"behaviorType": "Button"
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "UI_btn_booster",
+											"sid": 813736139908671,
+											"parameters": {
+												"tags": "\"noti_hint\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "close1",
+											"objectClass": "Dia_noti_hint",
+											"sid": 875701076446325,
+											"behaviorType": "Dialog"
+										},
+										{
+											"callFunction": "closeDialog",
+											"sid": 906694317197693,
+											"parameters": [
+												"\"\""
+											]
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 675906165631672,
+											"parameters": {
+												"layer": "\"fade\"",
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 742612415232518,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Anchor",
+													"sid": 748330911391008,
+													"parameters": {
+														"tags": "\"UI_hint\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 110110842370508,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-children",
+															"objectClass": "Anchor",
+															"sid": 599566766943649,
+															"parameters": {
+																"child": "UI_btn_booter",
+																"which": "own"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "move-to-layer",
+															"objectClass": "UI_btn_booter",
+															"sid": 695248384836692,
+															"parameters": {
+																"layer": "\"fade\""
+															}
+														}
+													],
+													"sid": 601798210153618,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_btn_booter",
+																	"sid": 196768882175268,
+																	"parameters": {
+																		"child": "UI_icon_hint",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-to-layer",
+																	"objectClass": "UI_icon_hint",
+																	"sid": 380650090406273,
+																	"parameters": {
+																		"layer": "\"fade\""
+																	}
+																}
+															],
+															"sid": 566171781580488
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_btn_booter",
+																	"sid": 921502568309764,
+																	"parameters": {
+																		"child": "UI_count_booster",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-to-layer",
+																	"objectClass": "UI_count_booster",
+																	"sid": 421998174359691,
+																	"parameters": {
+																		"layer": "\"fade\""
+																	}
+																}
+															],
+															"sid": 564954033551702,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-children",
+																			"objectClass": "UI_count_booster",
+																			"sid": 735979680103800,
+																			"parameters": {
+																				"child": "text_boosterHint_count",
+																				"which": "own"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "move-to-layer",
+																			"objectClass": "text_boosterHint_count",
+																			"sid": 163912714034366,
+																			"parameters": {
+																				"layer": "\"fade\""
+																			}
+																		}
+																	],
+																	"sid": 266011181773541
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 538760669679785,
+											"sid": 333229810827152,
 											"parameters": {
-												"first-value": "DicSaveGame.Get(SAVE_HINT)",
+												"first-value": "DicSaveGame.Get(SAVE_HINTS)",
 												"comparison": 0,
 												"second-value": "0"
 											}
@@ -12039,7 +13619,7 @@
 												},
 												{
 													"id": "set-visible",
-													"objectClass": "text_boosterHInt_count",
+													"objectClass": "text_boosterHint_count",
 													"sid": 793453653089828,
 													"parameters": {
 														"visibility": "invisible"
@@ -12056,9 +13636,9 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 796643390791367,
+											"sid": 571147640907746,
 											"parameters": {
-												"first-value": "DicSaveGame.Get(SAVE_HINT)",
+												"first-value": "DicSaveGame.Get(SAVE_HINTS)",
 												"comparison": 5,
 												"second-value": "1"
 											}
@@ -12082,7 +13662,7 @@
 												},
 												{
 													"id": "set-visible",
-													"objectClass": "text_boosterHInt_count",
+													"objectClass": "text_boosterHint_count",
 													"sid": 976112641320945,
 													"parameters": {
 														"visibility": "visible"
@@ -12092,6 +13672,174 @@
 											"sid": 228005475175069
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 895994257397169
+										}
+									],
+									"actions": [],
+									"sid": 649697807596477,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 752588956041855,
+													"parameters": {
+														"first-value": "IsCamMoving",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "scroll-to-position",
+													"objectClass": "System",
+													"sid": 367422729973743,
+													"parameters": {
+														"x": "lerp(scrollx, CamTargetX, 0.15)",
+														"y": "lerp(scrolly, CamTargetY, 0.15)"
+													}
+												}
+											],
+											"sid": 610046634530443
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 776705724792549,
+											"parameters": {
+												"first-value": "distance(scrollx, scrolly, CamTargetX, CamTargetY)",
+												"comparison": 2,
+												"second-value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 441787129395277,
+											"parameters": {
+												"variable": "IsCamMoving",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 406737764603189
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-visible",
+											"objectClass": "fade_layout",
+											"sid": 682254517914365
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 144109410207770,
+											"parameters": {
+												"first-value": "CurrentLevel",
+												"comparison": 5,
+												"second-value": "6"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 387104465267437,
+											"parameters": {
+												"first-value": "CurrentLevel",
+												"comparison": 2,
+												"second-value": "7"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 835391930299639,
+											"parameters": {
+												"group-name": "\"Event_Touch\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 743396546630148,
+											"parameters": {
+												"group-name": "\"Zoom_In/Out\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 333676469381906,
+											"parameters": {
+												"group-name": "\"Button\"",
+												"state": "deactivated"
+											}
+										}
+									],
+									"sid": 679701449942473
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 419117826092323
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 457486624545770,
+											"parameters": {
+												"group-name": "\"Event_Touch\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 113707826178113,
+											"parameters": {
+												"group-name": "\"Zoom_In/Out\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 258515622226922,
+											"parameters": {
+												"group-name": "\"Button\"",
+												"state": "activated"
+											}
+										}
+									],
+									"sid": 879584859660367
 								}
 							],
 							"sid": 519186580649312
@@ -12414,111 +14162,6 @@
 								}
 							],
 							"sid": 853051837819273
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-touched-object",
-									"objectClass": "Touch",
-									"sid": 124303439721581,
-									"parameters": {
-										"object": "UI_btn_booster",
-										"type": "start"
-									}
-								},
-								{
-									"id": "has-tags",
-									"objectClass": "UI_btn_booster",
-									"sid": 146127373622653,
-									"parameters": {
-										"tags": "\"noti_hint\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "close1",
-									"objectClass": "Dia_noti_hint",
-									"sid": 193957318155106,
-									"behaviorType": "Dialog"
-								},
-								{
-									"callFunction": "closeDialog",
-									"sid": 559938040815066,
-									"parameters": [
-										"\"\""
-									]
-								}
-							],
-							"sid": 708075821588165,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "ondialogopened0",
-									"objectClass": "Dia_noti_hint",
-									"sid": 333432380518950,
-									"behaviorType": "Dialog"
-								}
-							],
-							"actions": [
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 615561727384733,
-									"parameters": {
-										"group-name": "\"Event_Touch\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 711022511100092,
-									"parameters": {
-										"group-name": "\"Zoom_In/Out\"",
-										"state": "deactivated"
-									}
-								}
-							],
-							"sid": 180981611534482,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "ondialogclosed1",
-									"objectClass": "Dia_noti_hint",
-									"sid": 250318545986161,
-									"behaviorType": "Dialog"
-								}
-							],
-							"actions": [
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 163354795261990,
-									"parameters": {
-										"group-name": "\"Event_Touch\"",
-										"state": "activated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 780703827051423,
-									"parameters": {
-										"group-name": "\"Zoom_In/Out\"",
-										"state": "activated"
-									}
-								}
-							],
-							"sid": 850743305993871,
-							"disabled": true
 						}
 					],
 					"sid": 677004420041689
@@ -12536,7 +14179,7 @@
 							"type": "number",
 							"initialValue": "0",
 							"comment": "",
-							"isStatic": false,
+							"isStatic": true,
 							"isConstant": false,
 							"sid": 622078588443030
 						},
@@ -12546,7 +14189,7 @@
 							"type": "number",
 							"initialValue": "0",
 							"comment": "",
-							"isStatic": false,
+							"isStatic": true,
 							"isConstant": false,
 							"sid": 369936658121684
 						},
@@ -12559,6 +14202,26 @@
 							"isStatic": false,
 							"isConstant": false,
 							"sid": 485234670705172
+						},
+						{
+							"eventType": "variable",
+							"name": "targetX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 813179676018007
+						},
+						{
+							"eventType": "variable",
+							"name": "targetY",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 788999093936962
 						},
 						{
 							"eventType": "group",
@@ -12583,6 +14246,36 @@
 												"first-value": "IsDraggingUI",
 												"comparison": 0,
 												"second-value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 333867720947522,
+											"parameters": {
+												"first-value": "IsCamMoving",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 344653622157157,
+											"parameters": {
+												"first-value": "IsInputLocked",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 217689574919454,
+											"parameters": {
+												"first-value": "CurrentLevel",
+												"comparison": 5,
+												"second-value": "6"
 											}
 										}
 									],
@@ -12752,11 +14445,11 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 944264070640694,
+											"sid": 992599368710452,
 											"parameters": {
 												"first-value": "distance(\n DragStartX,\n DragStartY,\n Touch.XForID(PanPointerID,\"HUD\"),\n Touch.YForID(PanPointerID,\"HUD\")\n)",
 												"comparison": 4,
-												"second-value": "200"
+												"second-value": "20"
 											}
 										}
 									],
@@ -12768,6 +14461,15 @@
 											"parameters": {
 												"variable": "IsPanning",
 												"value": "1"
+											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 856713493202600,
+											"parameters": {
+												"type": "log",
+												"message": "\"DragStartX= \" & DragStartX & \"DragStartY= \" & DragStartY"
 											}
 										}
 									],
@@ -12827,16 +14529,64 @@
 														"comparison": 0,
 														"second-value": "1"
 													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 364669577507686,
+													"parameters": {
+														"first-value": "IsCamMoving",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 564471789275882,
+													"parameters": {
+														"first-value": "IsInputLocked",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 337025700213985,
+													"parameters": {
+														"first-value": "CurrentLevel",
+														"comparison": 5,
+														"second-value": "6"
+													}
 												}
 											],
 											"actions": [
 												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 794148649731315,
+													"parameters": {
+														"variable": "targetX",
+														"value": "clamp(\r\n    scrollx- (Touch.XForID(PanPointerID,\"HUD\") - PanLastX) / LayoutScale,\r\n    0,\r\n    1100\r\n)"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 182488425257591,
+													"parameters": {
+														"variable": "targetY",
+														"value": "clamp(\r\n    scrolly - (Touch.YForID(PanPointerID,\"HUD\") - PanLastY) / LayoutScale,\r\n    300,\r\n    1800\r\n)"
+													}
+												},
+												{
 													"id": "scroll-to-position",
 													"objectClass": "System",
-													"sid": 972992901534443,
+													"sid": 664367668999869,
 													"parameters": {
-														"x": "clamp(\n    scrollx - (Touch.XForID(PanPointerID,\"HUD\") - PanLastX) / LayoutScale,\n    200,\n    880\n)",
-														"y": "clamp(\n    scrolly - (Touch.YForID(PanPointerID,\"HUD\") - PanLastY) / LayoutScale,\n    400,\n    1400\n)"
+														"x": "lerp(scrollx, targetX, 1)",
+														"y": "lerp(scrolly, targetY, 1)"
 													}
 												},
 												{
@@ -12917,7 +14667,27 @@
 											"comment": "",
 											"isStatic": false,
 											"isConstant": false,
-											"sid": 746646200876315
+											"sid": 826676965441207
+										},
+										{
+											"eventType": "variable",
+											"name": "TargetScrollX",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 862367057177509
+										},
+										{
+											"eventType": "variable",
+											"name": "TargetScrollY",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 938242431008180
 										},
 										{
 											"eventType": "block",
@@ -13018,7 +14788,38 @@
 												},
 												{
 													"eventType": "block",
-													"conditions": [],
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 485235707814844,
+															"parameters": {
+																"first-value": "IsCamMoving",
+																"comparison": 0,
+																"second-value": "0"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 674094304599886,
+															"parameters": {
+																"first-value": "IsInputLocked",
+																"comparison": 0,
+																"second-value": "0"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 185384703951893,
+															"parameters": {
+																"first-value": "CurrentLevel",
+																"comparison": 5,
+																"second-value": "6"
+															}
+														}
+													],
 													"actions": [
 														{
 															"id": "set-layout-scale",
@@ -13026,6 +14827,24 @@
 															"sid": 468902414884456,
 															"parameters": {
 																"scale": "zoomRaw"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 519739245533936,
+															"parameters": {
+																"variable": "TargetScrollX",
+																"value": "clamp(\r\n        scrollx - (TouchCurrentMidX - PanLastX) / LayoutScale,\r\n        0* LayoutScale,\r\n        1100* LayoutScale\r\n    )"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 941980957648098,
+															"parameters": {
+																"variable": "TargetScrollY",
+																"value": "clamp(\r\n        scrolly - (TouchCurrentMidY - PanLastY) / LayoutScale,\r\n        300* LayoutScale,\r\n        1800* LayoutScale\r\n    )"
 															}
 														},
 														{
@@ -13040,10 +14859,10 @@
 														{
 															"id": "scroll-to-position",
 															"objectClass": "System",
-															"sid": 870606551859578,
+															"sid": 481286286677392,
 															"parameters": {
-																"x": "clamp(\n        scrollx - (TouchCurrentMidX - PanLastX) / LayoutScale,\n        200,\n        880\n    )",
-																"y": "clamp(\n        scrolly - (TouchCurrentMidY - PanLastY) / LayoutScale,\n        400,\n        1400\n    )"
+																"x": "lerp(scrollx, TargetScrollX, 1)",
+																"y": "lerp(scrolly, TargetScrollY, 1)"
 															}
 														},
 														{
@@ -13333,6 +15152,36 @@
 											"parameters": {
 												"direction": "any"
 											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 175664262021341,
+											"parameters": {
+												"first-value": "IsCamMoving",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 151170606339272,
+											"parameters": {
+												"first-value": "IsInputLocked",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 386283994861237,
+											"parameters": {
+												"first-value": "CurrentLevel",
+												"comparison": 5,
+												"second-value": "6"
+											}
 										}
 									],
 									"actions": [],
@@ -13537,7 +15386,7 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 598666371095388,
+											"sid": 628283674166732,
 											"parameters": {
 												"variable": "IsDraggingUI",
 												"value": "1"

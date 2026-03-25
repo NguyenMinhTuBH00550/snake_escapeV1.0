@@ -16,7 +16,7 @@
 	"members": [
 		"text_booster",
 		"text_boosterGrid_count",
-		"text_boosterHInt_count",
+		"text_boosterHint_count",
 		"text_btn_Challenge",
 		"text_btn_Home",
 		"text_btn_challengeLock",

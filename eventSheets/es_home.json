@@ -48,14 +48,6 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "text_next_level_count",
-							"sid": 267086479498718,
-							"parameters": {
-								"text": "int(CurrentLevel) +1"
-							}
-						},
-						{
 							"id": "set-visible",
 							"objectClass": "UI_homeTab",
 							"sid": 348285283790039,
@@ -142,6 +134,54 @@
 							"sid": 451392157256977
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "text_next_level_count",
+							"sid": 442556155744156,
+							"parameters": {
+								"tags": "\"nextLevel\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "text_next_level_count",
+							"sid": 880398220731114,
+							"parameters": {
+								"text": "int(CurrentLevel) +1"
+							}
+						}
+					],
+					"sid": 119730098961807
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "text_next_level_count",
+							"sid": 776233434385802,
+							"parameters": {
+								"tags": "\"nextLevel2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "text_next_level_count",
+							"sid": 279906721436844,
+							"parameters": {
+								"text": "int(CurrentLevel) +2"
+							}
+						}
+					],
+					"sid": 257307935686478
 				},
 				{
 					"eventType": "block",
@@ -1323,16 +1363,6 @@
 							}
 						},
 						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 430997747941492,
-							"disabled": true,
-							"parameters": {
-								"layer": "\"fade\"",
-								"visibility": "visible"
-							}
-						},
-						{
 							"callFunction": "openDialog",
 							"sid": 829007890015538,
 							"parameters": [
@@ -1358,16 +1388,6 @@
 							"objectClass": "Dia_Ad",
 							"sid": 558441633324141,
 							"behaviorType": "Dialog"
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 504998800679198,
-							"disabled": true,
-							"parameters": {
-								"layer": "\"fade\"",
-								"visibility": "invisible"
-							}
 						},
 						{
 							"callFunction": "closeDialog",

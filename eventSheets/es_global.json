@@ -63,25 +63,6 @@
 					]
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 395627902952527,
-					"disabled": true,
-					"parameters": {
-						"seconds": "1",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "signal",
-					"objectClass": "System",
-					"sid": 855327813556535,
-					"disabled": true,
-					"parameters": {
-						"tag": "\"aaa\""
-					}
-				},
-				{
 					"id": "wait-for-previous-actions",
 					"objectClass": "System",
 					"sid": 659613807913292
@@ -89,6 +70,15 @@
 				{
 					"callFunction": "turnAudio",
 					"sid": 423194277632081
+				},
+				{
+					"id": "set-active",
+					"objectClass": "UI_icon_hint",
+					"sid": 686310219433771,
+					"behaviorType": "Sine",
+					"parameters": {
+						"state": "inactive"
+					}
 				}
 			],
 			"sid": 707411446384968,
@@ -165,46 +155,91 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 109394056726047,
+							"sid": 405757800709707,
 							"parameters": {
-								"first-value": "CurrentLevel",
-								"comparison": 5,
-								"second-value": "6"
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 288394813714323,
-							"parameters": {
-								"first-value": "CurrentLevel",
-								"comparison": 2,
-								"second-value": "7"
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"level\""
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "open0",
-							"objectClass": "Dia_noti_hint",
-							"sid": 821069796021241,
-							"behaviorType": "Dialog",
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 469757003589457,
 							"parameters": {
-								"target_x0": "0",
-								"target_y1": "0",
-								"center4": "yes"
+								"seconds": "0.5",
+								"use-timescale": true
 							}
-						},
-						{
-							"callFunction": "openDialog",
-							"sid": 289776821174708,
-							"parameters": [
-								"\"\""
-							]
 						}
 					],
 					"sid": 388812968381535,
-					"disabled": true
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 755794167107846,
+									"parameters": {
+										"first-value": "CurrentLevel",
+										"comparison": 5,
+										"second-value": "6"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 568864841354621,
+									"parameters": {
+										"first-value": "CurrentLevel",
+										"comparison": 2,
+										"second-value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "open0",
+									"objectClass": "Dia_noti_hint",
+									"sid": 880471778526080,
+									"behaviorType": "Dialog",
+									"parameters": {
+										"target_x0": "0",
+										"target_y1": "0",
+										"center4": "yes"
+									}
+								},
+								{
+									"callFunction": "openDialog",
+									"sid": 395991054699279,
+									"parameters": [
+										"\"\""
+									]
+								},
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 304790588710943,
+									"parameters": {
+										"key": "SAVE_HINTS",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_boosterHint_count",
+									"sid": 122314868624531,
+									"parameters": {
+										"text": "DicSaveGame.Get(SAVE_HINTS)"
+									}
+								}
+							],
+							"sid": 646976614732031
+						}
+					]
 				}
 			]
 		},

@@ -47,13 +47,23 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "SAVE_HINT",
+			"name": "SAVE_HINTS",
 			"type": "string",
-			"initialValue": "SAVE_HINT",
+			"initialValue": "SAVE_HINTS",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
-			"sid": 879498916265083
+			"sid": 938540201213756
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_HINTS2",
+			"type": "string",
+			"initialValue": "SAVE_HINTS",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 725809943759252
 		},
 		{
 			"eventType": "variable",
@@ -380,15 +390,6 @@
 					"parameters": {
 						"layout": "Home"
 					}
-				},
-				{
-					"id": "set-key",
-					"objectClass": "DicSaveGame",
-					"sid": 887929575314281,
-					"parameters": {
-						"key": "SAVE_HINT",
-						"value": "2"
-					}
 				}
 			],
 			"sid": 142436801467045
@@ -480,20 +481,20 @@
 						{
 							"id": "has-key",
 							"objectClass": "DicSaveGame",
-							"sid": 983928973258945,
+							"sid": 577343830717211,
 							"parameters": {
-								"key": "SAVE_HINT"
+								"key": "SAVE_HINTS"
 							},
 							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "set-key",
+							"id": "add-key",
 							"objectClass": "DicSaveGame",
-							"sid": 725612995209509,
+							"sid": 596663798260876,
 							"parameters": {
-								"key": "SAVE_HINT",
+								"key": "SAVE_HINTS",
 								"value": "2"
 							}
 						}

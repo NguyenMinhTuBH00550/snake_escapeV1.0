@@ -3110,7 +3110,7 @@
 								"flags": {
 									"x": true,
 									"y": true,
-									"z": true,
+									"z": false,
 									"w": true,
 									"h": true,
 									"a": true,
@@ -3170,7 +3170,7 @@
 					}
 				},
 				{
-					"type": "text_boosterHInt_count",
+					"type": "text_boosterHint_count",
 					"properties": {
 						"text": "1",
 						"enable-bbcode": true,
@@ -3222,7 +3222,7 @@
 						"flags": {
 							"x": true,
 							"y": true,
-							"z": true,
+							"z": false,
 							"w": true,
 							"h": true,
 							"a": true,
@@ -3866,7 +3866,7 @@
 					},
 					"uid": 437,
 					"sid": 760615289670841,
-					"tags": "UI_bottom",
+					"tags": "UI_hint",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {

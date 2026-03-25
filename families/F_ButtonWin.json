@@ -1,0 +1,12 @@
+{
+	"name": "F_ButtonWin",
+	"plugin-id": "Sprite",
+	"sid": 216871691771461,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"UI_lose_btn_playon",
+		"WinGameX2_BTN"
+	]
+}

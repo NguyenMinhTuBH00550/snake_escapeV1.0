@@ -102,6 +102,112 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 390222560447464,
+							"parameters": {
+								"first-value": "UI_TopTween",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-tweens",
+							"objectClass": "F_UiTop",
+							"sid": 979030115573217,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"top_out\""
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "F_UiTop",
+							"sid": 955916452141705,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"top_out\"",
+								"property": "offsetY",
+								"end-value": "Self.Y - 500",
+								"time": "0.3",
+								"ease": "noease",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 372602814033136,
+							"parameters": {
+								"variable": "UI_TopTween",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 512552424091593
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 666989057412779,
+							"parameters": {
+								"first-value": "UI_BottomTween",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-tweens",
+							"objectClass": "F_UIBottom",
+							"sid": 928350862152614,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"bottom_out\""
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "F_UIBottom",
+							"sid": 802953349115787,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"bottom_out\"",
+								"property": "offsetY",
+								"end-value": "Self.Y+ 500",
+								"time": "0.3",
+								"ease": "noease",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 160430744450850,
+							"parameters": {
+								"variable": "UI_BottomTween",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 695568633879271
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "evaluate-expression",
 							"objectClass": "System",
 							"sid": 991298957543801,
@@ -121,72 +227,6 @@
 						}
 					],
 					"sid": 669503675329082
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "tween-one-property",
-							"objectClass": "F_UiTop",
-							"sid": 211470473315117,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"top_out\"",
-								"property": "offsetY",
-								"end-value": "Self.Y - 500",
-								"time": "0.5",
-								"ease": "noease",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 226891207742810,
-							"parameters": {
-								"variable": "UI_TopTween",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 200790171254079
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "tween-one-property",
-							"objectClass": "F_UIBottom",
-							"sid": 111815660624478,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"bottom_out\"",
-								"property": "offsetY",
-								"end-value": "Self.Y+ 500",
-								"time": "0.5",
-								"ease": "noease",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 595505807014072,
-							"parameters": {
-								"variable": "UI_BottomTween",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 448821973738147
 				}
 			]
 		},
@@ -256,6 +296,112 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 252243215579604,
+							"parameters": {
+								"first-value": "UI_TopTween",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-tweens",
+							"objectClass": "F_UiTop",
+							"sid": 812494877886984,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"top_in\""
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "F_UiTop",
+							"sid": 334403291929259,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"top_in\"",
+								"property": "offsetY",
+								"end-value": "Self.Y + 500",
+								"time": "0.2",
+								"ease": "noease",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 351062446722815,
+							"parameters": {
+								"variable": "UI_TopTween",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 519513165698277
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 156603476600532,
+							"parameters": {
+								"first-value": "UI_BottomTween",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-tweens",
+							"objectClass": "F_UIBottom",
+							"sid": 128073605468460,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"bottom_in\""
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "F_UIBottom",
+							"sid": 583378690780871,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"bottom_in\"",
+								"property": "offsetY",
+								"end-value": "Self.Y - 500",
+								"time": "0.2",
+								"ease": "noease",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 222175533904669,
+							"parameters": {
+								"variable": "UI_BottomTween",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 474280622842580
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "evaluate-expression",
 							"objectClass": "System",
 							"sid": 322807422723175,
@@ -275,76 +421,6 @@
 						}
 					],
 					"sid": 601753645890345
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 126987857531981,
-							"parameters": {
-								"first-value": "UI_TopTween",
-								"comparison": 0,
-								"second-value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "tween-one-property",
-							"objectClass": "F_UiTop",
-							"sid": 726131240441864,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"bottom_out\"",
-								"property": "offsetY",
-								"end-value": "Self.Y + 500",
-								"time": "0.5",
-								"ease": "noease",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						}
-					],
-					"sid": 108671287262859
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 862449468967125,
-							"parameters": {
-								"first-value": "UI_BottomTween",
-								"comparison": 0,
-								"second-value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "tween-one-property",
-							"objectClass": "F_UIBottom",
-							"sid": 647523178622741,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"bottom_out\"",
-								"property": "offsetY",
-								"end-value": "Self.Y - 500",
-								"time": "0.5",
-								"ease": "noease",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						}
-					],
-					"sid": 963409307271163
 				}
 			]
 		},

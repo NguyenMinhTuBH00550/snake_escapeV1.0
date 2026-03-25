@@ -2746,7 +2746,7 @@
 					},
 					"uid": 320,
 					"sid": 671519017481009,
-					"tags": "",
+					"tags": "hint_shop",
 					"instanceVariables": {},
 					"behaviors": {
 						"GameObject": {
@@ -9169,7 +9169,7 @@
 					},
 					"uid": 293,
 					"sid": 611926290311374,
-					"tags": "",
+					"tags": "nextLevel",
 					"instanceVariables": {
 						"font_size": -1
 					},
@@ -9267,7 +9267,7 @@
 					},
 					"uid": 295,
 					"sid": 980434535920663,
-					"tags": "",
+					"tags": "nextLevel2",
 					"instanceVariables": {
 						"font_size": -1
 					},

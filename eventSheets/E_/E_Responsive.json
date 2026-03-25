@@ -172,6 +172,24 @@
 						},
 						{
 							"id": "set-size",
+							"objectClass": "fade_layout",
+							"sid": 122554417472350,
+							"parameters": {
+								"width": "ViewportWidth(0)",
+								"height": "ViewportHeight(0)"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "fade_layout",
+							"sid": 344562420311615,
+							"parameters": {
+								"x": "LayoutWidth*0.5",
+								"y": "LayoutHeight*0.5"
+							}
+						},
+						{
+							"id": "set-size",
 							"objectClass": "HUD_home_adbar",
 							"sid": 735785514003786,
 							"parameters": {

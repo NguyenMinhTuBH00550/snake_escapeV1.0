@@ -1,0 +1,15 @@
+{
+	"name": "F_ButtonBooster",
+	"plugin-id": "Sprite",
+	"sid": 970136677489315,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"play_zoombar_btnzoomin",
+		"play_zoombar_btnzoomou",
+		"UI_btn_booter",
+		"play_zoombar_frame",
+		"play_zoombar_slide"
+	]
+}
