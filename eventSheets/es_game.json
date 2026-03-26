@@ -47,7 +47,7 @@
 			"eventType": "variable",
 			"name": "CurrentLevel",
 			"type": "string",
-			"initialValue": "1",
+			"initialValue": "3",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -4332,7 +4332,7 @@
 								},
 								{
 									"eventType": "variable",
-									"name": "id",
+									"name": "idCur",
 									"type": "number",
 									"initialValue": "0",
 									"comment": "",
@@ -4690,6 +4690,15 @@
 																						"instance-variable": "wayPoint",
 																						"value": "wayPoint"
 																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 311109693976675,
+																					"parameters": {
+																						"instance-variable": "fullWaypoint",
+																						"value": "wayPoint"
+																					}
 																				}
 																			],
 																			"sid": 715156617726140
@@ -4790,6 +4799,15 @@
 																						"instance-variable": "wayPoint",
 																						"value": "wayPoint"
 																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 370466760181400,
+																					"parameters": {
+																						"instance-variable": "fullWaypoint",
+																						"value": "wayPoint"
+																					}
 																				}
 																			],
 																			"sid": 154910488019245
@@ -4865,16 +4883,6 @@
 																						"variable": "wayPoint",
 																						"value": "wayPoint & Snake_Checkpoint.IID & \"|\""
 																					}
-																				},
-																				{
-																					"id": "log",
-																					"objectClass": "Browser",
-																					"sid": 461227224826944,
-																					"disabled": true,
-																					"parameters": {
-																						"type": "log",
-																						"message": "loopindex & \" - \" & wayPoint"
-																					}
 																				}
 																			],
 																			"sid": 940009470552946,
@@ -4942,20 +4950,10 @@
 																						{
 																							"id": "set-instvar-value",
 																							"objectClass": "F_Snake",
-																							"sid": 208995525432988,
+																							"sid": 116269310751747,
 																							"parameters": {
-																								"instance-variable": "wayPoint",
+																								"instance-variable": "fullWaypoint",
 																								"value": "wayPoint"
-																							}
-																						},
-																						{
-																							"id": "log",
-																							"objectClass": "Browser",
-																							"sid": 269813064922893,
-																							"disabled": true,
-																							"parameters": {
-																								"type": "log",
-																								"message": "\"aaa = \"  & wayPoint"
 																							}
 																						}
 																					],
@@ -5209,7 +5207,7 @@
 																	"objectClass": "System",
 																	"sid": 464443920899631,
 																	"parameters": {
-																		"variable": "id",
+																		"variable": "idCur",
 																		"value": "int(tokenat(tempWayPoint, loopindex, \"|\"))"
 																	}
 																},
@@ -5219,7 +5217,16 @@
 																	"sid": 745496693683794,
 																	"parameters": {
 																		"variable": "newWayPoint",
-																		"value": "newWayPoint & str(id) & \"|\""
+																		"value": "newWayPoint & str(idCur) & \"|\""
+																	}
+																},
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 194887773330421,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"1 wayPoint = \" & newWayPoint"
 																	}
 																}
 															],
@@ -5241,7 +5248,7 @@
 																	"objectClass": "System",
 																	"sid": 332579736642274,
 																	"parameters": {
-																		"variable": "id",
+																		"variable": "idCur",
 																		"value": "int(tokenat(tempWayPoint, loopindex, \"|\"))"
 																	}
 																},
@@ -5345,7 +5352,7 @@
 																			"sid": 202371478315246,
 																			"parameters": {
 																				"object": "Snake_Checkpoint",
-																				"expression": "Snake_Checkpoint.IID = id"
+																				"expression": "Snake_Checkpoint.IID = idCur"
 																			}
 																		}
 																	],
@@ -5445,7 +5452,16 @@
 																					"sid": 568440544824069,
 																					"parameters": {
 																						"variable": "newWayPoint",
-																						"value": "newWayPoint & str(id) & \"|\""
+																						"value": "newWayPoint & str(idCur) & \"|\""
+																					}
+																				},
+																				{
+																					"id": "log",
+																					"objectClass": "Browser",
+																					"sid": 870253269197352,
+																					"parameters": {
+																						"type": "log",
+																						"message": "\"2 wayPoint = \" & newWayPoint"
 																					}
 																				}
 																			],
@@ -5464,7 +5480,7 @@
 														{
 															"id": "pick-by-evaluate",
 															"objectClass": "System",
-															"sid": 987322390325871,
+															"sid": 268873721689859,
 															"parameters": {
 																"object": "snake_body",
 																"expression": "snake_body.OwnerID = snake_head.OwnerID"
@@ -5472,7 +5488,7 @@
 														}
 													],
 													"actions": [],
-													"sid": 149953017661898,
+													"sid": 173902302234289,
 													"children": [
 														{
 															"eventType": "block",
@@ -5480,7 +5496,7 @@
 																{
 																	"id": "for-each-ordered",
 																	"objectClass": "System",
-																	"sid": 273172173102995,
+																	"sid": 539595233988040,
 																	"parameters": {
 																		"object": "snake_body",
 																		"expression": "snake_body.NodeIndex",
@@ -5489,7 +5505,7 @@
 																}
 															],
 															"actions": [],
-															"sid": 489849742988487,
+															"sid": 222316303353738,
 															"children": [
 																{
 																	"eventType": "block",
@@ -5497,25 +5513,15 @@
 																		{
 																			"id": "pick-by-evaluate",
 																			"objectClass": "System",
-																			"sid": 905407842278449,
+																			"sid": 580325713051290,
 																			"parameters": {
 																				"object": "Snake_Checkpoint",
 																				"expression": "Snake_Checkpoint.GridX = snake_body.GridX &\r\nSnake_Checkpoint.GridY = snake_body.GridY "
 																			}
 																		}
 																	],
-																	"actions": [
-																		{
-																			"id": "set-eventvar-value",
-																			"objectClass": "System",
-																			"sid": 870385029928000,
-																			"parameters": {
-																				"variable": "wayPoint",
-																				"value": "newWayPoint"
-																			}
-																		}
-																	],
-																	"sid": 323304357716366,
+																	"actions": [],
+																	"sid": 994654845565605,
 																	"children": [
 																		{
 																			"eventType": "block",
@@ -5523,7 +5529,7 @@
 																				{
 																					"id": "for-each",
 																					"objectClass": "System",
-																					"sid": 971451996802929,
+																					"sid": 171550636464674,
 																					"parameters": {
 																						"object": "F_Snake"
 																					}
@@ -5531,7 +5537,7 @@
 																				{
 																					"id": "compare-two-values",
 																					"objectClass": "System",
-																					"sid": 240438119067490,
+																					"sid": 496583200788818,
 																					"parameters": {
 																						"first-value": "F_Snake.GridX",
 																						"comparison": 0,
@@ -5541,7 +5547,7 @@
 																				{
 																					"id": "compare-two-values",
 																					"objectClass": "System",
-																					"sid": 331320480986152,
+																					"sid": 626318349090863,
 																					"parameters": {
 																						"first-value": "F_Snake.GridY",
 																						"comparison": 0,
@@ -5553,7 +5559,35 @@
 																				{
 																					"id": "set-instvar-value",
 																					"objectClass": "F_Snake",
-																					"sid": 480824429500238,
+																					"sid": 573116342871211,
+																					"parameters": {
+																						"instance-variable": "InitWaypoint",
+																						"value": "Snake_Checkpoint.IID"
+																					}
+																				},
+																				{
+																					"id": "log",
+																					"objectClass": "Browser",
+																					"sid": 456946261389450,
+																					"parameters": {
+																						"type": "log",
+																						"message": "\"snke iid = \" & F_Snake.IID"
+																					}
+																				},
+																				{
+																					"id": "log",
+																					"objectClass": "Browser",
+																					"sid": 700665901924973,
+																					"parameters": {
+																						"type": "log",
+																						"message": "\"wayPoint = \" & newWayPoint"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 615397740111105,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "startAngle",
 																						"value": "Self.Angle"
@@ -5562,7 +5596,8 @@
 																				{
 																					"id": "set-instvar-value",
 																					"objectClass": "F_Snake",
-																					"sid": 218712571702783,
+																					"sid": 539477920410760,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "StartX",
 																						"value": "Self.X"
@@ -5571,7 +5606,8 @@
 																				{
 																					"id": "set-instvar-value",
 																					"objectClass": "F_Snake",
-																					"sid": 371115442600612,
+																					"sid": 533110749426877,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "StartY",
 																						"value": "Self.Y"
@@ -5580,7 +5616,8 @@
 																				{
 																					"id": "set-instvar-value",
 																					"objectClass": "F_Snake",
-																					"sid": 554674428070206,
+																					"sid": 148276584337893,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "wayPoint",
 																						"value": "wayPoint"
@@ -5589,7 +5626,242 @@
 																				{
 																					"id": "log",
 																					"objectClass": "Browser",
-																					"sid": 910834050323536,
+																					"sid": 330690192425506,
+																					"disabled": true,
+																					"parameters": {
+																						"type": "log",
+																						"message": "SnakeBody.wayPoint"
+																					}
+																				}
+																			],
+																			"sid": 248133015072156,
+																			"children": [
+																				{
+																					"eventType": "block",
+																					"conditions": [
+																						{
+																							"id": "for",
+																							"objectClass": "System",
+																							"sid": 266521042861324,
+																							"parameters": {
+																								"name": "\"a\"",
+																								"start-index": "0",
+																								"end-index": "tokencount(newWayPoint, \"|\")-2"
+																							}
+																						}
+																					],
+																					"actions": [],
+																					"sid": 914491581923918,
+																					"children": [
+																						{
+																							"eventType": "block",
+																							"conditions": [
+																								{
+																									"id": "compare-two-values",
+																									"objectClass": "System",
+																									"sid": 588522856915948,
+																									"parameters": {
+																										"first-value": "tokenat(newWayPoint, loopindex(\"a\"), \"|\") ",
+																										"comparison": 1,
+																										"second-value": "str(F_Snake.InitWaypoint)"
+																									}
+																								}
+																							],
+																							"actions": [
+																								{
+																									"id": "set-instvar-value",
+																									"objectClass": "F_Snake",
+																									"sid": 108615705698641,
+																									"parameters": {
+																										"instance-variable": "wayPoint",
+																										"value": "Self.wayPoint & tokenat(newWayPoint, loopindex(\"a\"), \"|\") & \"|\""
+																									}
+																								}
+																							],
+																							"sid": 969401926289239
+																						},
+																						{
+																							"eventType": "block",
+																							"conditions": [
+																								{
+																									"id": "else",
+																									"objectClass": "System",
+																									"sid": 112987824775229
+																								},
+																								{
+																									"id": "compare-two-values",
+																									"objectClass": "System",
+																									"sid": 263083720150972,
+																									"parameters": {
+																										"first-value": "tokenat(newWayPoint, loopindex(\"a\"), \"|\") ",
+																										"comparison": 0,
+																										"second-value": "str(F_Snake.InitWaypoint)"
+																									}
+																								}
+																							],
+																							"actions": [
+																								{
+																									"id": "stop-loop",
+																									"objectClass": "System",
+																									"sid": 798702015459649
+																								},
+																								{
+																									"id": "set-instvar-value",
+																									"objectClass": "F_Snake",
+																									"sid": 106579874983660,
+																									"parameters": {
+																										"instance-variable": "wayPoint",
+																										"value": "Self.wayPoint & tokenat(newWayPoint, loopindex(\"a\"), \"|\") & \"|\""
+																									}
+																								}
+																							],
+																							"sid": 992978999373259
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-evaluate",
+															"objectClass": "System",
+															"sid": 501732364778352,
+															"parameters": {
+																"object": "snake_body",
+																"expression": "snake_body.OwnerID = snake_head.OwnerID"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 816718000817067,
+													"disabled": true,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each-ordered",
+																	"objectClass": "System",
+																	"sid": 671148722246159,
+																	"parameters": {
+																		"object": "snake_body",
+																		"expression": "snake_body.NodeIndex",
+																		"order": "ascending"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 938333861784145,
+															"disabled": true,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-by-evaluate",
+																			"objectClass": "System",
+																			"sid": 469774049655842,
+																			"parameters": {
+																				"object": "Snake_Checkpoint",
+																				"expression": "Snake_Checkpoint.GridX = snake_body.GridX &\r\nSnake_Checkpoint.GridY = snake_body.GridY "
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-eventvar-value",
+																			"objectClass": "System",
+																			"sid": 419686056747457,
+																			"parameters": {
+																				"variable": "wayPoint",
+																				"value": "newWayPoint"
+																			}
+																		}
+																	],
+																	"sid": 906494501802204,
+																	"disabled": true,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "for-each",
+																					"objectClass": "System",
+																					"sid": 962179220423633,
+																					"parameters": {
+																						"object": "F_Snake"
+																					}
+																				},
+																				{
+																					"id": "compare-two-values",
+																					"objectClass": "System",
+																					"sid": 774952272387742,
+																					"parameters": {
+																						"first-value": "F_Snake.GridX",
+																						"comparison": 0,
+																						"second-value": "snake_body.GridX"
+																					}
+																				},
+																				{
+																					"id": "compare-two-values",
+																					"objectClass": "System",
+																					"sid": 455027691267986,
+																					"parameters": {
+																						"first-value": "F_Snake.GridY",
+																						"comparison": 0,
+																						"second-value": "snake_body.GridY"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 121410928122739,
+																					"parameters": {
+																						"instance-variable": "startAngle",
+																						"value": "Self.Angle"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 245551657373799,
+																					"parameters": {
+																						"instance-variable": "StartX",
+																						"value": "Self.X"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 642466253571268,
+																					"parameters": {
+																						"instance-variable": "StartY",
+																						"value": "Self.Y"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "F_Snake",
+																					"sid": 961135393700352,
+																					"parameters": {
+																						"instance-variable": "wayPoint",
+																						"value": "wayPoint"
+																					}
+																				},
+																				{
+																					"id": "log",
+																					"objectClass": "Browser",
+																					"sid": 156159057490908,
 																					"disabled": true,
 																					"parameters": {
 																						"type": "log",
@@ -5597,7 +5869,8 @@
 																					}
 																				}
 																			],
-																			"sid": 649017281252350
+																			"sid": 496291566984996,
+																			"disabled": true
 																		}
 																	]
 																}
@@ -7787,7 +8060,6 @@
 															"id": "set-instvar-value",
 															"objectClass": "Snake_Checkpoint",
 															"sid": 882839206542571,
-															"disabled": true,
 															"parameters": {
 																"instance-variable": "HasSnake",
 																"value": "0"
@@ -9928,6 +10200,7 @@
 							],
 							"actions": [],
 							"sid": 405396613217946,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -9953,7 +10226,8 @@
 											}
 										}
 									],
-									"sid": 490642418787177
+									"sid": 490642418787177,
+									"disabled": true
 								}
 							]
 						},
@@ -9979,6 +10253,7 @@
 							],
 							"actions": [],
 							"sid": 556944929732303,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -10004,7 +10279,8 @@
 											}
 										}
 									],
-									"sid": 914352401411629
+									"sid": 914352401411629,
+									"disabled": true
 								}
 							]
 						},
@@ -10030,6 +10306,7 @@
 							],
 							"actions": [],
 							"sid": 458772991749838,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -10055,7 +10332,8 @@
 											}
 										}
 									],
-									"sid": 459255378162435
+									"sid": 459255378162435,
+									"disabled": true
 								}
 							]
 						},
