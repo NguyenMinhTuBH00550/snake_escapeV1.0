@@ -66,6 +66,7 @@
 		"text_vibration",
 		"text_zoom_bar",
 		"text_wayBlocker",
-		"text_count_hint"
+		"text_count_hint",
+		"text_grid"
 	]
 }

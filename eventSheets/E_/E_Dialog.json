@@ -81,12 +81,12 @@
 				{
 					"id": "tween-value",
 					"objectClass": "GameManager",
-					"sid": 340196396782524,
+					"sid": 300426731952498,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"BlackLayerBottom\"",
 						"start-value": "LayerOpacity(LAYER_BLACKLAYERBOTTOM)",
-						"end-value": "90",
+						"end-value": "80",
 						"time": "0.3",
 						"ease": "easeoutsine",
 						"destroy-on-complete": "no",
@@ -456,12 +456,12 @@
 				{
 					"id": "tween-value",
 					"objectClass": "GameManager",
-					"sid": 442146070963018,
+					"sid": 924238013755871,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"BlackLayerTop\"",
 						"start-value": "LayerOpacity(LAYER_BLACKLAYERTOP)",
-						"end-value": "85",
+						"end-value": "80",
 						"time": "0.3",
 						"ease": "default",
 						"destroy-on-complete": "no",

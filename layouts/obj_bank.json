@@ -6931,6 +6931,14 @@
 												"state": true
 											},
 											{
+												"iv": "InitWaypoint",
+												"state": true
+											},
+											{
+												"iv": "fullWaypoint",
+												"state": true
+											},
+											{
 												"iv": "BodyPathIndex",
 												"state": true
 											},
@@ -7008,14 +7016,6 @@
 											},
 											{
 												"iv": "snakeOn",
-												"state": true
-											},
-											{
-												"iv": "InitWaypoint",
-												"state": true
-											},
-											{
-												"iv": "fullWaypoint",
 												"state": true
 											}
 										]
@@ -7704,6 +7704,14 @@
 												"state": true
 											},
 											{
+												"iv": "InitWaypoint",
+												"state": true
+											},
+											{
+												"iv": "fullWaypoint",
+												"state": true
+											},
+											{
 												"iv": "TailOrder",
 												"state": true
 											},
@@ -7745,14 +7753,6 @@
 											},
 											{
 												"iv": "cpY",
-												"state": true
-											},
-											{
-												"iv": "InitWaypoint",
-												"state": true
-											},
-											{
-												"iv": "fullWaypoint",
 												"state": true
 											}
 										]
@@ -8517,6 +8517,14 @@
 												"state": true
 											},
 											{
+												"iv": "InitWaypoint",
+												"state": true
+											},
+											{
+												"iv": "fullWaypoint",
+												"state": true
+											},
+											{
 												"iv": "BodyPathIndex",
 												"state": true
 											},
@@ -8594,14 +8602,6 @@
 											},
 											{
 												"iv": "snakeOn",
-												"state": true
-											},
-											{
-												"iv": "InitWaypoint",
-												"state": true
-											},
-											{
-												"iv": "fullWaypoint",
 												"state": true
 											}
 										]
@@ -9460,43 +9460,6 @@
 						"y": 1026,
 						"width": 197,
 						"height": 196,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Sprite",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 168,
-					"sid": 161109730945903,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 161109730945903,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1850,
-						"y": 651,
-						"width": 335,
-						"height": 446,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

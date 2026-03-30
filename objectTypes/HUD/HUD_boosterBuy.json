@@ -1,7 +1,7 @@
 {
-	"name": "Sprite",
+	"name": "HUD_boosterBuy",
 	"plugin-id": "Sprite",
-	"sid": 591031475354545,
+	"sid": 304954748455359,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,41 @@
 			{
 				"frames": [
 					{
-						"width": 922,
-						"height": 2048,
+						"width": 950,
+						"height": 1093,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1067185,
+						"imageSpriteId": 1962737,
+						"collisionPoly": {
+							"points": [
+								0.23157894736842105,
+								0,
+								0.8136842105263158,
+								0.011893870082342177,
+								1,
+								0.18847209515096067,
+								0.9547368421052631,
+								0.9752973467520586,
+								0.8873684210526316,
+								1,
+								0.11263157894736842,
+								1,
+								0,
+								0.9021043000914913,
+								0.04631578947368421,
+								0.11436413540713632
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 273609815092074,
+				"sid": 916624060143018,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1763,7 +1763,7 @@
 					},
 					"uid": 211,
 					"sid": 359279293063103,
-					"tags": "",
+					"tags": "grid",
 					"instanceVariables": {
 						"font_size": -1
 					},
@@ -1846,7 +1846,7 @@
 					},
 					"uid": 212,
 					"sid": 766103514992751,
-					"tags": "",
+					"tags": "hint",
 					"instanceVariables": {
 						"font_size": -1
 					},
@@ -2723,6 +2723,20 @@
 								"name": "",
 								"parent-name": "",
 								"parent-layer": false
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
@@ -3963,7 +3977,7 @@
 					},
 					"uid": 438,
 					"sid": 599187139947342,
-					"tags": "UI_bottom",
+					"tags": "UI_grid",
 					"instanceVariables": {},
 					"behaviors": {
 						"Anchor": {
@@ -4220,40 +4234,6 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": true
-		},
-		{
-			"name": "Layer 0",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [],
-			"sid": 604986970161808,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
 		}
 	],
 	"scene-graphs-folder-root": {

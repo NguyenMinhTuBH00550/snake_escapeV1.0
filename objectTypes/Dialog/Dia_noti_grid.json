@@ -1,20 +1,20 @@
 {
-	"name": "UI_booster_grid",
+	"name": "Dia_noti_grid",
 	"plugin-id": "Sprite",
-	"sid": 995885728175832,
+	"sid": 115624605341619,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "aekiro_gameobject",
-			"name": "GameObject",
-			"sid": 496371551771752
+			"behaviorId": "aekiro_dialog",
+			"name": "Dialog",
+			"sid": 125186631211913
 		},
 		{
-			"behaviorId": "Sin",
-			"name": "Sine",
-			"sid": 276007806364277
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 983381189836974
 		}
 	],
 	"effectTypes": [],
@@ -23,22 +23,22 @@
 			{
 				"frames": [
 					{
-						"width": 148,
-						"height": 139,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1496866,
+						"imageSpriteId": 2669614,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 257721259232225,
-				"name": "Default",
+				"sid": 252772269084806,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

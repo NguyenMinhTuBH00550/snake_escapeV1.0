@@ -79,6 +79,15 @@
 					"parameters": {
 						"state": "inactive"
 					}
+				},
+				{
+					"id": "set-active",
+					"objectClass": "UI_booster_grid",
+					"sid": 293906256762921,
+					"behaviorType": "Sine",
+					"parameters": {
+						"state": "inactive"
+					}
 				}
 			],
 			"sid": 707411446384968,
@@ -238,6 +247,69 @@
 								}
 							],
 							"sid": 646976614732031
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 348533912085985,
+									"parameters": {
+										"first-value": "CurrentLevel",
+										"comparison": 5,
+										"second-value": "12"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 483574999350696,
+									"parameters": {
+										"first-value": "CurrentLevel",
+										"comparison": 2,
+										"second-value": "13"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "open0",
+									"objectClass": "Dia_noti_grid",
+									"sid": 395075149215552,
+									"behaviorType": "Dialog",
+									"parameters": {
+										"target_x0": "0",
+										"target_y1": "0",
+										"center4": "yes"
+									}
+								},
+								{
+									"callFunction": "openDialog",
+									"sid": 624617669146951,
+									"parameters": [
+										"\"\""
+									]
+								},
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 164442939884318,
+									"parameters": {
+										"key": "SAVE_GRID",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_boosterGrid_count",
+									"sid": 986661829571412,
+									"parameters": {
+										"text": "DicSaveGame.Get(SAVE_GRID)"
+									}
+								}
+							],
+							"sid": 483172044114385
 						}
 					]
 				}
@@ -629,6 +701,53 @@
 						}
 					],
 					"sid": 492746711789315
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "GameManager",
+							"sid": 591967155903747,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"FaderStart\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 954077229298039,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 158840255448567,
+									"parameters": {
+										"first-value": "GameManager.Tween.Value(\"FaderStart\")",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 862860074206405,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 719109932502949,
+							"disabled": true
+						}
+					]
 				}
 			],
 			"sid": 833894339197284

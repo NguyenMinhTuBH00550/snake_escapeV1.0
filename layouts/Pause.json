@@ -2086,7 +2086,7 @@
 					},
 					"uid": 50,
 					"sid": 239745924631321,
-					"tags": "STATE_WIN_GAME",
+					"tags": "",
 					"instanceVariables": {
 						"initWidth": 104,
 						"initHeight": 105

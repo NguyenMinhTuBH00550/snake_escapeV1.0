@@ -224,6 +224,15 @@
 					],
 					"actions": [
 						{
+							"id": "setenabled0",
+							"objectClass": "UI_btnPlay",
+							"sid": 353388692252604,
+							"behaviorType": "Button",
+							"parameters": {
+								"state2": "disabled"
+							}
+						},
+						{
 							"id": "reset-eventvar",
 							"objectClass": "System",
 							"sid": 437179748744893,
@@ -246,6 +255,15 @@
 							"sid": 291364961638089,
 							"parameters": {
 								"variable": "IsTimerRunning",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 163557113113080,
+							"parameters": {
+								"variable": "HasUsedGridBooster",
 								"value": "0"
 							}
 						},
@@ -275,9 +293,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 732451574816974,
+									"sid": 538733165539607,
 									"parameters": {
-										"seconds": "0.5",
+										"seconds": "0.8",
 										"use-timescale": true
 									}
 								},

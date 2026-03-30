@@ -2682,6 +2682,20 @@
 								"parent-name": "scoll_view",
 								"parent-layer": false
 							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -7450,7 +7464,7 @@
 					},
 					"uid": 427,
 					"sid": 652218121094184,
-					"tags": "STATE_WIN_GAME",
+					"tags": "",
 					"instanceVariables": {
 						"initWidth": 104,
 						"initHeight": 105
@@ -10281,7 +10295,7 @@
 					},
 					"uid": 128,
 					"sid": 693343126275987,
-					"tags": "STATE_WIN_GAME",
+					"tags": "",
 					"instanceVariables": {
 						"initWidth": 104,
 						"initHeight": 105

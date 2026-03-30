@@ -245,7 +245,8 @@
 					"HUD_setting_BA",
 					"HUD_booster_frame",
 					"HUD_outLive",
-					"BG_shop"
+					"BG_shop",
+					"HUD_boosterBuy"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -304,7 +305,8 @@
 					"text_boosterHint_count",
 					"text_zoom_bar",
 					"text_wayBlocker",
-					"text_count_hint"
+					"text_count_hint",
+					"text_grid"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -445,7 +447,9 @@
 					"Dia_Setting",
 					"Dia_Ad",
 					"Dia_noti_hint",
-					"Dia_buy_hint"
+					"Dia_buy_hint",
+					"Dia_noti_grid",
+					"Dia_buy_grid"
 				],
 				"subfolders": [],
 				"name": "Dialog"
@@ -540,7 +544,9 @@
 			{
 				"items": [
 					"hint_booster",
-					"Buy_BoosterHint"
+					"Buy_BoosterHint",
+					"grid_booster",
+					"Buy_BoosterGrid"
 				],
 				"subfolders": [],
 				"name": "Booster"
