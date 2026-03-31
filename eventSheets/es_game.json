@@ -494,6 +494,16 @@
 			"sid": 365148624927807
 		},
 		{
+			"eventType": "variable",
+			"name": "IsDraggingMap",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 750361716935979
+		},
+		{
 			"functionName": "start_layout",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -6273,6 +6283,16 @@
 									}
 								},
 								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 161208758459118,
+									"parameters": {
+										"first-value": "IsDraggingMap",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
 									"id": "is-touching-object",
 									"objectClass": "Touch",
 									"sid": 347466981115746,
@@ -6472,6 +6492,16 @@
 									}
 								},
 								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 760359037332852,
+									"parameters": {
+										"first-value": "IsDraggingMap",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
 									"id": "is-touching-object",
 									"objectClass": "Touch",
 									"sid": 934608414959343,
@@ -6666,6 +6696,16 @@
 									"sid": 308171538650710,
 									"parameters": {
 										"first-value": "IsInputLocked",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 333098941446962,
+									"parameters": {
+										"first-value": "IsDraggingMap",
 										"comparison": 0,
 										"second-value": "0"
 									}
@@ -16385,6 +16425,15 @@
 												"variable": "TouchStartDistance",
 												"value": "0"
 											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 326244532870858,
+											"parameters": {
+												"variable": "IsDraggingMap",
+												"value": "0"
+											}
 										}
 									],
 									"sid": 582351858463550,
@@ -16567,6 +16616,15 @@
 											"sid": 492041804732254,
 											"parameters": {
 												"variable": "IsPanning",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 800312158485592,
+											"parameters": {
+												"variable": "IsDraggingMap",
 												"value": "1"
 											}
 										}
