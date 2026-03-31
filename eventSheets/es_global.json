@@ -2518,57 +2518,11 @@
 										"group-name": "\"GamePlay\"",
 										"state": "activated"
 									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "F_Snake",
-									"sid": 916717757613498,
-									"disabled": true,
-									"parameters": {
-										"instance-variable": "CanTouch",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 759670613918027,
-									"disabled": true,
-									"parameters": {
-										"variable": "IsInputLocked",
-										"value": "0"
-									}
 								}
 							],
 							"sid": 871221770397478
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 572214041503838,
-							"parameters": {
-								"key": 84
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 519147096653307,
-							"parameters": {
-								"layer": "\"Shop\"",
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 448603093165931,
-					"disabled": true
 				},
 				{
 					"eventType": "block",

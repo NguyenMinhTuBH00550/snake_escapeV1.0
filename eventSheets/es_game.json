@@ -47,7 +47,7 @@
 			"eventType": "variable",
 			"name": "CurrentLevel",
 			"type": "string",
-			"initialValue": "15",
+			"initialValue": "7",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -1256,12 +1256,12 @@
 								},
 								{
 									"callFunction": "hideFader",
-									"sid": 632130341676640
+									"sid": 156811612421853
 								},
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 990001723974144,
+									"sid": 471110529154548,
 									"parameters": {
 										"seconds": "0.8",
 										"use-timescale": true
