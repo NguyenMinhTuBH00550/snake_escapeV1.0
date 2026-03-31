@@ -2933,7 +2933,7 @@
 					}
 				},
 				{
-					"type": "text_on",
+					"type": "text_toggle_On_Off",
 					"properties": {
 						"text": "ON",
 						"enable-bbcode": true,
@@ -3003,7 +3003,7 @@
 					}
 				},
 				{
-					"type": "text_on",
+					"type": "text_toggle_On_Off",
 					"properties": {
 						"text": "ON",
 						"enable-bbcode": true,
@@ -3138,7 +3138,7 @@
 					}
 				},
 				{
-					"type": "text_on",
+					"type": "text_toggle_On_Off",
 					"properties": {
 						"text": "ON",
 						"enable-bbcode": true,
@@ -3220,7 +3220,9 @@
 					"sid": 162345331266431,
 					"tags": "",
 					"instanceVariables": {
-						"Status": 0
+						"Status": 0,
+						"pos_On": 0,
+						"pos_Off": 0
 					},
 					"behaviors": {
 						"Tween": {
@@ -3265,7 +3267,9 @@
 					"sid": 852151425049794,
 					"tags": "",
 					"instanceVariables": {
-						"Status": 0
+						"Status": 0,
+						"pos_On": 0,
+						"pos_Off": 0
 					},
 					"behaviors": {
 						"Tween": {
@@ -3310,7 +3314,9 @@
 					"sid": 732671115410506,
 					"tags": "",
 					"instanceVariables": {
-						"Status": 0
+						"Status": 0,
+						"pos_On": 0,
+						"pos_Off": 0
 					},
 					"behaviors": {
 						"Tween": {

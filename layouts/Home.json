@@ -1866,9 +1866,9 @@
 							"locked": false,
 							"world": {
 								"x": 541.5,
-								"y": 1211,
+								"y": 1246,
 								"width": 1077,
-								"height": 2416,
+								"height": 2486,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -1986,7 +1986,7 @@
 								"x": 4,
 								"y": 243,
 								"width": 1076,
-								"height": 2135,
+								"height": 2243,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -2673,7 +2673,7 @@
 					},
 					"uid": 318,
 					"sid": 471789454549423,
-					"tags": "",
+					"tags": "grid_shop",
 					"instanceVariables": {},
 					"behaviors": {
 						"GameObject": {
@@ -7626,8 +7626,8 @@
 					"behaviors": {
 						"Anchor": {
 							"properties": {
-								"left-edge": "window-right",
-								"top-edge": "window-top",
+								"left-edge": "none",
+								"top-edge": "none",
 								"right-edge": "none",
 								"bottom-edge": "none",
 								"enabled": true
@@ -7803,6 +7803,104 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "HUD_popUp_close",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 42,
+					"sid": 523101148569640,
+					"tags": "shop_close",
+					"instanceVariables": {},
+					"behaviors": {
+						"Button": {
+							"properties": {
+								"isenabled": "true",
+								"normal-frame": "",
+								"hover-frame": "",
+								"clicked-frame": "",
+								"disabled-frame": "",
+								"focus-frame": "",
+								"click-sound": "",
+								"hover-sound": "",
+								"focus-sound": "",
+								"click-animation": "scale quadratic",
+								"hover-animation": "none",
+								"focus-animation": "none",
+								"normal-color": "",
+								"hover-color": "",
+								"clicked-color": "",
+								"disabled-color": "",
+								"focus-color": "",
+								"click-animation-factor": -0.07,
+								"hover-animation-factor": 0.5,
+								"focus-animation-factor": 0.5,
+								"ignore-input": "no"
+							}
+						},
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 42,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 2.220446049250313e-16,
+							"transformH": 2.220446049250313e-16,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 523101148569640,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 120,
+						"y": 109,
+						"width": 117,
+						"height": 105,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 350590527291000,
@@ -7825,7 +7923,7 @@
 			"isTransparent": true,
 			"parallaxX": 0,
 			"parallaxY": 0,
-			"scaleRate": 1,
+			"scaleRate": 0,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",
@@ -10150,7 +10248,7 @@
 					},
 					"uid": 127,
 					"sid": 196438471575101,
-					"tags": "",
+					"tags": "more_coin",
 					"instanceVariables": {},
 					"behaviors": {
 						"Button": {

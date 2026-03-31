@@ -11,6 +11,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 329799863679517
+		},
+		{
+			"name": "pos_On",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 403306585379149
+		},
+		{
+			"name": "pos_Off",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 818022382522267
 		}
 	],
 	"behaviorTypes": [
@@ -34,7 +48,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 229938,
+						"imageSpriteId": 475439,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

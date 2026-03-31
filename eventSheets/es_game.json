@@ -47,7 +47,7 @@
 			"eventType": "variable",
 			"name": "CurrentLevel",
 			"type": "string",
-			"initialValue": "1",
+			"initialValue": "15",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -11589,6 +11589,23 @@
 										}
 									],
 									"sid": 701650915536704
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 739335737968122
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "open_shop",
+											"sid": 590511663104950
+										}
+									],
+									"sid": 926384046281747
 								}
 							]
 						},
@@ -11933,6 +11950,10 @@
 												"variable": "PanLastY",
 												"value": "0"
 											}
+										},
+										{
+											"callFunction": "turnAudio",
+											"sid": 365120908489945
 										}
 									],
 									"sid": 229530007362113
@@ -13065,15 +13086,6 @@
 															"parameters": {
 																"text": "DicSaveGame.Get(SAVE_HINTS)"
 															}
-														},
-														{
-															"id": "set-layer-visible",
-															"objectClass": "System",
-															"sid": 649072313339986,
-															"parameters": {
-																"layer": "\"Shop\"",
-																"visibility": "invisible"
-															}
 														}
 													],
 													"sid": 548076557325154
@@ -13892,82 +13904,118 @@
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 285298091939135,
+											"children": [
 												{
-													"id": "setenabled0",
-													"objectClass": "UI_lose_btn_playon",
-													"sid": 775987887698740,
-													"behaviorType": "Button",
-													"parameters": {
-														"state2": "disabled"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 438407125181685,
+															"parameters": {
+																"first-value": "DicSaveGame.Get(SAVE_COIN)",
+																"comparison": 5,
+																"second-value": "200"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "setenabled0",
+															"objectClass": "UI_lose_btn_playon",
+															"sid": 416680937434155,
+															"behaviorType": "Button",
+															"parameters": {
+																"state2": "disabled"
+															}
+														},
+														{
+															"id": "set-key",
+															"objectClass": "DicSaveGame",
+															"sid": 710140851192025,
+															"parameters": {
+																"key": "SAVE_COIN",
+																"value": "DicSaveGame.Get(SAVE_COIN) - 200"
+															}
+														},
+														{
+															"callFunction": "SAVE_GAME",
+															"sid": 997756612336180
+														},
+														{
+															"id": "set-text",
+															"objectClass": "text_coin",
+															"sid": 116672830159796,
+															"parameters": {
+																"text": "DicSaveGame.Get(SAVE_COIN)"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 347132214223281,
+															"parameters": {
+																"seconds": "0.2",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-key",
+															"objectClass": "DicSaveGame",
+															"sid": 563591351675543,
+															"parameters": {
+																"key": "SAVE_HINTS",
+																"value": "DicSaveGame.Get(SAVE_HINTS)  + 1"
+															}
+														},
+														{
+															"callFunction": "SAVE_GAME",
+															"sid": 543456848978651
+														},
+														{
+															"id": "set-text",
+															"objectClass": "text_boosterHint_count",
+															"sid": 138705492693194,
+															"parameters": {
+																"text": "DicSaveGame.Get(SAVE_HINTS)"
+															}
+														},
+														{
+															"id": "close1",
+															"objectClass": "Dia_buy_hint",
+															"sid": 696980650459811,
+															"behaviorType": "Dialog"
+														},
+														{
+															"callFunction": "closeDialog",
+															"sid": 672087290287425,
+															"parameters": [
+																"\"\""
+															]
+														}
+													],
+													"sid": 808451451125781
 												},
 												{
-													"id": "set-key",
-													"objectClass": "DicSaveGame",
-													"sid": 759089758305200,
-													"parameters": {
-														"key": "SAVE_COIN",
-														"value": "DicSaveGame.Get(SAVE_COIN) - 200"
-													}
-												},
-												{
-													"callFunction": "SAVE_GAME",
-													"sid": 341818749881721
-												},
-												{
-													"id": "set-text",
-													"objectClass": "text_coin",
-													"sid": 267198453229494,
-													"parameters": {
-														"text": "DicSaveGame.Get(SAVE_COIN)"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 145735719233981,
-													"parameters": {
-														"seconds": "0.2",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-key",
-													"objectClass": "DicSaveGame",
-													"sid": 944660386001747,
-													"parameters": {
-														"key": "SAVE_HINTS",
-														"value": "DicSaveGame.Get(SAVE_HINTS)  + 1"
-													}
-												},
-												{
-													"callFunction": "SAVE_GAME",
-													"sid": 336691454951659
-												},
-												{
-													"id": "set-text",
-													"objectClass": "text_boosterHint_count",
-													"sid": 389833294368748,
-													"parameters": {
-														"text": "DicSaveGame.Get(SAVE_HINTS)"
-													}
-												},
-												{
-													"id": "close1",
-													"objectClass": "Dia_buy_hint",
-													"sid": 279658810912193,
-													"behaviorType": "Dialog"
-												},
-												{
-													"callFunction": "closeDialog",
-													"sid": 417753982311870,
-													"parameters": [
-														"\"\""
-													]
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 381740804627106
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "open_shop",
+															"sid": 758452587114000
+														}
+													],
+													"sid": 595964762097253
 												}
-											],
-											"sid": 285298091939135
+											]
 										},
 										{
 											"eventType": "block",
@@ -15783,82 +15831,118 @@
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 947535579202495,
+											"children": [
 												{
-													"id": "setenabled0",
-													"objectClass": "UI_lose_btn_playon",
-													"sid": 452291370509777,
-													"behaviorType": "Button",
-													"parameters": {
-														"state2": "disabled"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 889370763730313,
+															"parameters": {
+																"first-value": "DicSaveGame.Get(SAVE_COIN)",
+																"comparison": 5,
+																"second-value": "300"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "setenabled0",
+															"objectClass": "UI_lose_btn_playon",
+															"sid": 224506879420518,
+															"behaviorType": "Button",
+															"parameters": {
+																"state2": "disabled"
+															}
+														},
+														{
+															"id": "set-key",
+															"objectClass": "DicSaveGame",
+															"sid": 331216240776596,
+															"parameters": {
+																"key": "SAVE_COIN",
+																"value": "DicSaveGame.Get(SAVE_COIN) - 300"
+															}
+														},
+														{
+															"callFunction": "SAVE_GAME",
+															"sid": 719132408832135
+														},
+														{
+															"id": "set-text",
+															"objectClass": "text_coin",
+															"sid": 435660148609691,
+															"parameters": {
+																"text": "DicSaveGame.Get(SAVE_COIN)"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 850152879103737,
+															"parameters": {
+																"seconds": "0.2",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-key",
+															"objectClass": "DicSaveGame",
+															"sid": 227875004445820,
+															"parameters": {
+																"key": "SAVE_GRID",
+																"value": "DicSaveGame.Get(SAVE_GRID)  + 3"
+															}
+														},
+														{
+															"callFunction": "SAVE_GAME",
+															"sid": 275001680037430
+														},
+														{
+															"id": "set-text",
+															"objectClass": "text_boosterGrid_count",
+															"sid": 638538337000233,
+															"parameters": {
+																"text": "DicSaveGame.Get(SAVE_GRID)"
+															}
+														},
+														{
+															"id": "close1",
+															"objectClass": "Dia_buy_grid",
+															"sid": 648133854639042,
+															"behaviorType": "Dialog"
+														},
+														{
+															"callFunction": "closeDialog",
+															"sid": 496815737095914,
+															"parameters": [
+																"\"\""
+															]
+														}
+													],
+													"sid": 574720685258605
 												},
 												{
-													"id": "set-key",
-													"objectClass": "DicSaveGame",
-													"sid": 205684666551847,
-													"parameters": {
-														"key": "SAVE_COIN",
-														"value": "DicSaveGame.Get(SAVE_COIN) - 300"
-													}
-												},
-												{
-													"callFunction": "SAVE_GAME",
-													"sid": 985993338402700
-												},
-												{
-													"id": "set-text",
-													"objectClass": "text_coin",
-													"sid": 732130192604022,
-													"parameters": {
-														"text": "DicSaveGame.Get(SAVE_COIN)"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 856965083745342,
-													"parameters": {
-														"seconds": "0.2",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-key",
-													"objectClass": "DicSaveGame",
-													"sid": 911955325124480,
-													"parameters": {
-														"key": "SAVE_GRID",
-														"value": "DicSaveGame.Get(SAVE_GRID)  + 3"
-													}
-												},
-												{
-													"callFunction": "SAVE_GAME",
-													"sid": 438560204369695
-												},
-												{
-													"id": "set-text",
-													"objectClass": "text_boosterGrid_count",
-													"sid": 924007471530733,
-													"parameters": {
-														"text": "DicSaveGame.Get(SAVE_GRID)"
-													}
-												},
-												{
-													"id": "close1",
-													"objectClass": "Dia_buy_grid",
-													"sid": 832058448064107,
-													"behaviorType": "Dialog"
-												},
-												{
-													"callFunction": "closeDialog",
-													"sid": 352642983395421,
-													"parameters": [
-														"\"\""
-													]
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 980915776065715
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "open_shop",
+															"sid": 112968501330240
+														}
+													],
+													"sid": 378460172585176
 												}
-											],
-											"sid": 947535579202495
+											]
 										},
 										{
 											"eventType": "block",

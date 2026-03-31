@@ -88,6 +88,24 @@
 					"parameters": {
 						"state": "inactive"
 					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "UI_bar_setting",
+					"sid": 465859612864304,
+					"parameters": {
+						"instance-variable": "canClick",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 335655461367063,
+					"parameters": {
+						"layer": "\"Shop\"",
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 707411446384968,
@@ -310,6 +328,105 @@
 								}
 							],
 							"sid": 483172044114385
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 980271135253469,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Home\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 854125795001680,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "HUD_popUp_close",
+									"sid": 885007635100174,
+									"parameters": {
+										"tags": "\"shop_close\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "setignoreinput",
+									"objectClass": "HUD_popUp_close",
+									"sid": 196146951480579,
+									"behaviorType": "Button",
+									"parameters": {
+										"state": "yes"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "HUD_popUp_close",
+									"sid": 967075374585399,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 402066737914265
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 186368596724436
+						}
+					],
+					"actions": [],
+					"sid": 156742633079858,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "HUD_popUp_close",
+									"sid": 322160921913540,
+									"parameters": {
+										"tags": "\"shop_close\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "setignoreinput",
+									"objectClass": "HUD_popUp_close",
+									"sid": 991786452527614,
+									"behaviorType": "Button",
+									"parameters": {
+										"state": "no"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "HUD_popUp_close",
+									"sid": 382410059473748,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 193889233078281
 						}
 					]
 				}
@@ -1001,6 +1118,14 @@
 														"comparison": 0,
 														"value": "1"
 													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "UI_setting_button",
+													"sid": 657687692944685,
+													"parameters": {
+														"tags": "\"music\""
+													}
 												}
 											],
 											"actions": [],
@@ -1044,12 +1169,12 @@
 																{
 																	"id": "tween-one-property",
 																	"objectClass": "UI_setting_button",
-																	"sid": 903069525810371,
+																	"sid": 490160002184694,
 																	"behaviorType": "Tween",
 																	"parameters": {
 																		"tags": "\"music_on\"",
 																		"property": "offsetX",
-																		"end-value": "Self.X +150",
+																		"end-value": "Self.X +120",
 																		"time": "0.2",
 																		"ease": "noease",
 																		"destroy-on-complete": "no",
@@ -1130,6 +1255,14 @@
 														"comparison": 0,
 														"value": "0"
 													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "UI_setting_button",
+													"sid": 801697442098549,
+													"parameters": {
+														"tags": "\"music\""
+													}
 												}
 											],
 											"actions": [],
@@ -1173,12 +1306,12 @@
 																{
 																	"id": "tween-one-property",
 																	"objectClass": "UI_setting_button",
-																	"sid": 202749587842391,
+																	"sid": 569937454954053,
 																	"behaviorType": "Tween",
 																	"parameters": {
 																		"tags": "\"music_off\"",
 																		"property": "offsetX",
-																		"end-value": "Self.X - 150",
+																		"end-value": "Self.X - 120",
 																		"time": "0.2",
 																		"ease": "noease",
 																		"destroy-on-complete": "no",
@@ -1248,6 +1381,343 @@
 							"sid": 617085637235288
 						},
 						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Sound Button",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "onclicked3",
+											"objectClass": "UI_bar_setting",
+											"sid": 934979329868015,
+											"behaviorType": "Button"
+										},
+										{
+											"id": "has-tags",
+											"objectClass": "UI_bar_setting",
+											"sid": 270561693886338,
+											"parameters": {
+												"tags": "\"sound\""
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "UI_bar_setting",
+											"sid": 991255092818148,
+											"parameters": {
+												"instance-variable": "canClick"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "UI_bar_setting",
+											"sid": 473165285917805,
+											"parameters": {
+												"instance-variable": "canClick",
+												"value": "false"
+											}
+										},
+										{
+											"callFunction": "ToggleSound",
+											"sid": 684915651276661
+										}
+									],
+									"sid": 194310149448163
+								},
+								{
+									"functionName": "ToggleSound",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [],
+									"sid": 440781988556662,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "UI_setting_button",
+													"sid": 750572751109293,
+													"parameters": {
+														"instance-variable": "Status",
+														"comparison": 0,
+														"value": "1"
+													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "UI_setting_button",
+													"sid": 828909435157397,
+													"parameters": {
+														"tags": "\"sound\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 428374462919514,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "UI_bar_setting",
+															"sid": 582783026615340,
+															"parameters": {
+																"tags": "\"sound\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 154319386646220,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 993212695177070,
+																	"parameters": {
+																		"child": "UI_setting_button",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop-all-tweens",
+																	"objectClass": "UI_setting_button",
+																	"sid": 939986740122449,
+																	"behaviorType": "Tween"
+																},
+																{
+																	"id": "tween-one-property",
+																	"objectClass": "UI_setting_button",
+																	"sid": 837724689523919,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"sound_on\"",
+																		"property": "offsetX",
+																		"end-value": "Self.X +120",
+																		"time": "0.2",
+																		"ease": "noease",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no",
+																		"repeat-count": "1"
+																	}
+																},
+																{
+																	"id": "set-animation-frame",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 520822502928254,
+																	"parameters": {
+																		"frame-number": "0"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_setting_button",
+																	"sid": 663035045789899,
+																	"parameters": {
+																		"instance-variable": "Status",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-key",
+																	"objectClass": "DicSaveGame",
+																	"sid": 244678397548199,
+																	"parameters": {
+																		"key": "SAVE_SOUND",
+																		"value": "1"
+																	}
+																},
+																{
+																	"callFunction": "SAVE_GAME",
+																	"sid": 524426898914942
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 806786970297844,
+																	"parameters": {
+																		"seconds": "0.3",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 359095582531110,
+																	"parameters": {
+																		"instance-variable": "canClick",
+																		"value": "true"
+																	}
+																}
+															],
+															"sid": 752666053148363
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 264158713590789
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "UI_setting_button",
+													"sid": 230636028870376,
+													"parameters": {
+														"instance-variable": "Status",
+														"comparison": 0,
+														"value": "0"
+													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "UI_setting_button",
+													"sid": 997758609961636,
+													"parameters": {
+														"tags": "\"sound\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 887417495262024,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "UI_bar_setting",
+															"sid": 831023213990789,
+															"parameters": {
+																"tags": "\"sound\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 616773547846420,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 653339775580408,
+																	"parameters": {
+																		"child": "UI_setting_button",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop-all-tweens",
+																	"objectClass": "UI_setting_button",
+																	"sid": 429107199700555,
+																	"behaviorType": "Tween"
+																},
+																{
+																	"id": "tween-one-property",
+																	"objectClass": "UI_setting_button",
+																	"sid": 546144939333080,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"sound_off\"",
+																		"property": "offsetX",
+																		"end-value": "Self.X - 120",
+																		"time": "0.2",
+																		"ease": "noease",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no",
+																		"repeat-count": "1"
+																	}
+																},
+																{
+																	"id": "set-animation-frame",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 836978213984425,
+																	"parameters": {
+																		"frame-number": "1"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_setting_button",
+																	"sid": 917396977174956,
+																	"parameters": {
+																		"instance-variable": "Status",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "set-key",
+																	"objectClass": "DicSaveGame",
+																	"sid": 844658482207225,
+																	"parameters": {
+																		"key": "SAVE_SOUND",
+																		"value": "0"
+																	}
+																},
+																{
+																	"callFunction": "SAVE_GAME",
+																	"sid": 209002682357330
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 969452438208829,
+																	"parameters": {
+																		"seconds": "0.3",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 557899384213069,
+																	"parameters": {
+																		"instance-variable": "canClick",
+																		"value": "true"
+																	}
+																}
+															],
+															"sid": 804101292082498
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							],
+							"sid": 834636743482755
+						},
+						{
 							"functionName": "turnAudio",
 							"functionDescription": "",
 							"functionCategory": "",
@@ -1258,161 +1728,367 @@
 							"eventType": "function-block",
 							"conditions": [],
 							"actions": [],
-							"sid": 771998271444706,
+							"sid": 749870246803176,
 							"children": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 619588691741607,
-											"parameters": {
-												"first-value": "DicSaveGame.Get(SAVE_MUSIC)",
-												"comparison": 0,
-												"second-value": "1"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 240496676926010,
+									"eventType": "group",
+									"disabled": false,
+									"title": "Music",
+									"description": "",
+									"isActiveOnStart": true,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "has-tags",
-													"objectClass": "UI_bar_setting",
-													"sid": 725747352942897,
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 984770179223935,
 													"parameters": {
-														"tags": "\"music\""
+														"first-value": "DicSaveGame.Get(SAVE_MUSIC)",
+														"comparison": 0,
+														"second-value": "1"
 													}
 												}
 											],
-											"actions": [
-												{
-													"id": "set-animation-frame",
-													"objectClass": "UI_bar_setting",
-													"sid": 658206721519093,
-													"parameters": {
-														"frame-number": "0"
-													}
-												}
-											],
-											"sid": 284412586344786,
+											"actions": [],
+											"sid": 225628665522666,
 											"children": [
 												{
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "pick-children",
+															"id": "has-tags",
 															"objectClass": "UI_bar_setting",
-															"sid": 114732081831890,
+															"sid": 934659172687746,
 															"parameters": {
-																"child": "UI_setting_button",
-																"which": "own"
+																"tags": "\"music\""
 															}
 														}
 													],
 													"actions": [
 														{
-															"id": "set-instvar-value",
-															"objectClass": "UI_setting_button",
-															"sid": 941176462312119,
+															"id": "set-animation-frame",
+															"objectClass": "UI_bar_setting",
+															"sid": 316319592837622,
 															"parameters": {
-																"instance-variable": "Status",
-																"value": "0"
-															}
-														},
-														{
-															"id": "tween-one-property",
-															"objectClass": "UI_setting_button",
-															"sid": 740982113252795,
-															"behaviorType": "Tween",
-															"parameters": {
-																"tags": "\"music_on\"",
-																"property": "offsetX",
-																"end-value": "Self.X",
-																"time": "0.2",
-																"ease": "noease",
-																"destroy-on-complete": "no",
-																"loop": "no",
-																"ping-pong": "no",
-																"repeat-count": "1"
+																"frame-number": "0"
 															}
 														}
 													],
-													"sid": 306994358713391
+													"sid": 556526388619065,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 267977087321804,
+																	"parameters": {
+																		"child": "UI_setting_button",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop-all-tweens",
+																	"objectClass": "UI_setting_button",
+																	"sid": 968687001153180,
+																	"behaviorType": "Tween"
+																},
+																{
+																	"id": "set-x",
+																	"objectClass": "UI_setting_button",
+																	"sid": 961956041232548,
+																	"parameters": {
+																		"x": "Self.X"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_setting_button",
+																	"sid": 549347112977566,
+																	"parameters": {
+																		"instance-variable": "Status",
+																		"value": "0"
+																	}
+																}
+															],
+															"sid": 545389625171197
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 257579185906574,
+													"parameters": {
+														"first-value": "DicSaveGame.Get(SAVE_MUSIC)",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 249993923422850,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "UI_bar_setting",
+															"sid": 131545518869466,
+															"parameters": {
+																"tags": "\"music\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation-frame",
+															"objectClass": "UI_bar_setting",
+															"sid": 530692386223347,
+															"parameters": {
+																"frame-number": "1"
+															}
+														}
+													],
+													"sid": 211631946228025,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 698333899053387,
+																	"parameters": {
+																		"child": "UI_setting_button",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop-all-tweens",
+																	"objectClass": "UI_setting_button",
+																	"sid": 571024154561410,
+																	"behaviorType": "Tween"
+																},
+																{
+																	"id": "set-x",
+																	"objectClass": "UI_setting_button",
+																	"sid": 975199536652939,
+																	"parameters": {
+																		"x": "703.7528880242319"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_setting_button",
+																	"sid": 105603475571442,
+																	"parameters": {
+																		"instance-variable": "Status",
+																		"value": "1"
+																	}
+																}
+															],
+															"sid": 430480274617270
+														}
+													]
 												}
 											]
 										}
-									]
+									],
+									"sid": 102502443535301
 								},
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 531331180675832
-										}
-									],
-									"actions": [],
-									"sid": 244023929873254,
+									"eventType": "group",
+									"disabled": false,
+									"title": "Sound",
+									"description": "",
+									"isActiveOnStart": true,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "has-tags",
-													"objectClass": "UI_bar_setting",
-													"sid": 967896051131524,
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 207943370974917,
 													"parameters": {
-														"tags": "\"music\""
+														"first-value": "DicSaveGame.Get(SAVE_SOUND)",
+														"comparison": 0,
+														"second-value": "1"
 													}
 												}
 											],
-											"actions": [
-												{
-													"id": "set-animation-frame",
-													"objectClass": "UI_bar_setting",
-													"sid": 895409754836909,
-													"parameters": {
-														"frame-number": "1"
-													}
-												}
-											],
-											"sid": 794285113098553,
+											"actions": [],
+											"sid": 549758074394338,
 											"children": [
 												{
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "pick-children",
+															"id": "has-tags",
 															"objectClass": "UI_bar_setting",
-															"sid": 129535728334887,
+															"sid": 794039485371491,
 															"parameters": {
-																"child": "UI_setting_button",
-																"which": "own"
+																"tags": "\"sound\""
 															}
 														}
 													],
 													"actions": [
 														{
-															"id": "set-instvar-value",
-															"objectClass": "UI_setting_button",
-															"sid": 603324395170176,
+															"id": "set-animation-frame",
+															"objectClass": "UI_bar_setting",
+															"sid": 828965045682340,
 															"parameters": {
-																"instance-variable": "Status",
-																"value": "1"
+																"frame-number": "0"
 															}
 														}
 													],
-													"sid": 672473694767956
+													"sid": 490387674700152,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 836285613004138,
+																	"parameters": {
+																		"child": "UI_setting_button",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop-all-tweens",
+																	"objectClass": "UI_setting_button",
+																	"sid": 204428638421560,
+																	"behaviorType": "Tween"
+																},
+																{
+																	"id": "set-x",
+																	"objectClass": "UI_setting_button",
+																	"sid": 209617322964334,
+																	"parameters": {
+																		"x": "Self.X"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_setting_button",
+																	"sid": 709749537965118,
+																	"parameters": {
+																		"instance-variable": "Status",
+																		"value": "0"
+																	}
+																}
+															],
+															"sid": 758409520454103
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 287797248107976,
+													"parameters": {
+														"first-value": "DicSaveGame.Get(SAVE_SOUND)",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 565936133413895,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "UI_bar_setting",
+															"sid": 880033213942350,
+															"parameters": {
+																"tags": "\"sound\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation-frame",
+															"objectClass": "UI_bar_setting",
+															"sid": 544896054040770,
+															"parameters": {
+																"frame-number": "1"
+															}
+														}
+													],
+													"sid": 340188944260071,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-children",
+																	"objectClass": "UI_bar_setting",
+																	"sid": 380420466618190,
+																	"parameters": {
+																		"child": "UI_setting_button",
+																		"which": "own"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop-all-tweens",
+																	"objectClass": "UI_setting_button",
+																	"sid": 562291066072135,
+																	"behaviorType": "Tween"
+																},
+																{
+																	"id": "set-x",
+																	"objectClass": "UI_setting_button",
+																	"sid": 940297303260143,
+																	"parameters": {
+																		"x": "691.752888"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "UI_setting_button",
+																	"sid": 454872365187702,
+																	"parameters": {
+																		"instance-variable": "Status",
+																		"value": "1"
+																	}
+																}
+															],
+															"sid": 925064573951674
+														}
+													]
 												}
 											]
 										}
-									]
+									],
+									"sid": 426627944184824
 								}
 							]
 						}
@@ -1421,6 +2097,678 @@
 				}
 			],
 			"sid": 601662255812628
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Shop",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Shop_Fuction",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_shop_btn",
+									"sid": 831488820210227,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_shop_btn",
+									"sid": 212353915645478,
+									"parameters": {
+										"tags": "\"spd_deal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 832558818852934,
+									"parameters": {
+										"key": "\"SAVE_COIN\"",
+										"value": "DicSaveGame.Get(\"SAVE_COIN\") +3000"
+									}
+								},
+								{
+									"callFunction": "SAVE_GAME",
+									"sid": 442600874650462
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_coin",
+									"sid": 663642022470917,
+									"parameters": {
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 814369092487347,
+									"parameters": [
+										"text_coin.UID"
+									]
+								}
+							],
+							"sid": 163881464775360
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_shop_btn",
+									"sid": 157430358617906,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_shop_btn",
+									"sid": 681828122315446,
+									"parameters": {
+										"tags": "\"1kCoin_deal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 573768543234714,
+									"parameters": {
+										"key": "\"SAVE_COIN\"",
+										"value": "DicSaveGame.Get(\"SAVE_COIN\") +1000"
+									}
+								},
+								{
+									"callFunction": "SAVE_GAME",
+									"sid": 303970060573390
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_coin",
+									"sid": 534809987495208,
+									"parameters": {
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 870997589742786,
+									"parameters": [
+										"text_coin.UID"
+									]
+								}
+							],
+							"sid": 231046742207011
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_shop_btn",
+									"sid": 835612126590419,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_shop_btn",
+									"sid": 463613092784406,
+									"parameters": {
+										"tags": "\"5kCoin_deal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 703968055103774,
+									"parameters": {
+										"key": "\"SAVE_COIN\"",
+										"value": "DicSaveGame.Get(\"SAVE_COIN\") +5000"
+									}
+								},
+								{
+									"callFunction": "SAVE_GAME",
+									"sid": 606456664885519
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_coin",
+									"sid": 773741349805231,
+									"parameters": {
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 138557867339596,
+									"parameters": [
+										"text_coin.UID"
+									]
+								}
+							],
+							"sid": 523115732326267
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_shop_btn",
+									"sid": 590416413146345,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_shop_btn",
+									"sid": 330183532159643,
+									"parameters": {
+										"tags": "\"10kCoin_deal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 868136148142825,
+									"parameters": {
+										"key": "\"SAVE_COIN\"",
+										"value": "DicSaveGame.Get(\"SAVE_COIN\") +10000"
+									}
+								},
+								{
+									"callFunction": "SAVE_GAME",
+									"sid": 811645853386443
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_coin",
+									"sid": 701313878328288,
+									"parameters": {
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 511968458357106,
+									"parameters": [
+										"text_coin.UID"
+									]
+								}
+							],
+							"sid": 713604648534634
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_shop_btn",
+									"sid": 419154669927304,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_shop_btn",
+									"sid": 205270731924622,
+									"parameters": {
+										"tags": "\"25kCoin_deal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 873733624228660,
+									"parameters": {
+										"key": "\"SAVE_COIN\"",
+										"value": "DicSaveGame.Get(\"SAVE_COIN\") +25000"
+									}
+								},
+								{
+									"callFunction": "SAVE_GAME",
+									"sid": 870164114121735
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_coin",
+									"sid": 312717904712243,
+									"parameters": {
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 454829436388916,
+									"parameters": [
+										"text_coin.UID"
+									]
+								}
+							],
+							"sid": 678916602665603
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_shop_btn",
+									"sid": 462044833821743,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_shop_btn",
+									"sid": 320351251052218,
+									"parameters": {
+										"tags": "\"50kCoin_deal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 654339171851624,
+									"parameters": {
+										"key": "\"SAVE_COIN\"",
+										"value": "DicSaveGame.Get(\"SAVE_COIN\") +50000"
+									}
+								},
+								{
+									"callFunction": "SAVE_GAME",
+									"sid": 357527184995201
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_coin",
+									"sid": 458369157438515,
+									"parameters": {
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 433819890163780,
+									"parameters": [
+										"text_coin.UID"
+									]
+								}
+							],
+							"sid": 528154605055132
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_shop_btn",
+									"sid": 823850147648974,
+									"behaviorType": "Button"
+								},
+								{
+									"id": "has-tags",
+									"objectClass": "UI_shop_btn",
+									"sid": 906840921662145,
+									"parameters": {
+										"tags": "\"100kCoin_deal\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 747017052353272,
+									"parameters": {
+										"key": "\"SAVE_COIN\"",
+										"value": "DicSaveGame.Get(\"SAVE_COIN\") +100000"
+									}
+								},
+								{
+									"callFunction": "SAVE_GAME",
+									"sid": 986204885872473
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_coin",
+									"sid": 993335188588800,
+									"parameters": {
+										"text": "int(DIcSaveGame.Get(SAVE_COIN))"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 265627389285798,
+									"parameters": [
+										"text_coin.UID"
+									]
+								}
+							],
+							"sid": 137608509538430
+						}
+					],
+					"sid": 209537195457616
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onclicked3",
+							"objectClass": "HUD_popUp_close",
+							"sid": 841573541011701,
+							"behaviorType": "Button"
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "HUD_popUp_close",
+							"sid": 659187503987459,
+							"parameters": {
+								"tags": "\"shop_close\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 890931517568674,
+							"parameters": {
+								"layer": "\"Shop\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 436725147674041,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 574865320562367,
+									"parameters": {
+										"layer": "\"Shop\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 536741888288281,
+									"parameters": {
+										"group-name": "\"GamePlay\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 916717757613498,
+									"disabled": true,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 759670613918027,
+									"disabled": true,
+									"parameters": {
+										"variable": "IsInputLocked",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 871221770397478
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 572214041503838,
+							"parameters": {
+								"key": 84
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 519147096653307,
+							"parameters": {
+								"layer": "\"Shop\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 448603093165931,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onclicked3",
+							"objectClass": "UI_icon_frameTop",
+							"sid": 222211514941985,
+							"behaviorType": "Button"
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "UI_icon_frameTop",
+							"sid": 979221376760080,
+							"parameters": {
+								"tags": "\"more_coin\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "open_shop",
+							"sid": 681477995397080
+						}
+					],
+					"sid": 515079948246730
+				}
+			],
+			"sid": 793494274890926
+		},
+		{
+			"functionName": "open_shop",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 809447034259623,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 314022550222582,
+							"parameters": {
+								"layer": "\"Shop\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 139305857655060,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 383102589914680,
+									"parameters": {
+										"layer": "\"Shop\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 445285326066956,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 950436504982436,
+									"parameters": {
+										"variable": "IsTimerRunning",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 878618855967294,
+									"parameters": {
+										"variable": "IsInputLocked",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 793781132094939,
+									"parameters": {
+										"variable": "PanPointerID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 762696209131727,
+									"parameters": {
+										"variable": "TouchZoomID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 425867388145937,
+									"parameters": {
+										"variable": "PanLastX",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 533333118135873,
+									"parameters": {
+										"variable": "PanLastY",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 842266268942190,
+									"parameters": {
+										"group-name": "\"GamePlay\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 939402605113378,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "UI_booster_grid",
+											"sid": 140793943030505,
+											"parameters": {
+												"tags": "\"grid_shop\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_booster_grid",
+											"sid": 856071571316818,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 956088453314628
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "UI_icon_hint",
+											"sid": 421728766643107,
+											"parameters": {
+												"tags": "\"hint_shop\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_icon_hint",
+											"sid": 287407372262955,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 610386683909186
+								}
+							]
+						}
+					]
+				}
+			]
 		}
 	],
 	"sid": 667786211939097

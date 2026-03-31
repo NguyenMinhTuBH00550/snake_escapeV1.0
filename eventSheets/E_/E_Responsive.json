@@ -263,6 +263,7 @@
 							"id": "set-size",
 							"objectClass": "UI_shop_top",
 							"sid": 264588054114237,
+							"disabled": true,
 							"parameters": {
 								"width": "ViewportWidth(0)",
 								"height": "UI_shop_top.Height"
@@ -272,6 +273,7 @@
 							"id": "set-position",
 							"objectClass": "UI_shop_top",
 							"sid": 190294599240457,
+							"disabled": true,
 							"parameters": {
 								"x": "LayoutWidth*0.5",
 								"y": "Self.Y"
