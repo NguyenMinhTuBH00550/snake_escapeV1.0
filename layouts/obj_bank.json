@@ -107,7 +107,7 @@
 						"x": 980,
 						"y": 1379,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -221,7 +221,7 @@
 						"x": 1102,
 						"y": 1376,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -335,7 +335,7 @@
 						"x": 1040,
 						"y": 1635,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -449,7 +449,7 @@
 						"x": 1153,
 						"y": 1635,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -668,7 +668,7 @@
 						"x": 1254,
 						"y": 1073,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -782,7 +782,7 @@
 						"x": 1214,
 						"y": 1378,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6548,7 +6548,7 @@
 						"x": 1324,
 						"y": 1378,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6662,7 +6662,7 @@
 						"x": 1379,
 						"y": 1073,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6776,7 +6776,7 @@
 						"x": 1508,
 						"y": 1073,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -7248,7 +7248,7 @@
 						"x": 1630,
 						"y": 1073,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -7362,7 +7362,7 @@
 						"x": 1461,
 						"y": 1378,
 						"width": 226,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -7557,7 +7557,7 @@
 					"world": {
 						"x": 1594,
 						"y": 1378,
-						"width": 254,
+						"width": 255,
 						"height": 242,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -8134,7 +8134,7 @@
 						"x": 1264,
 						"y": 1635,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -8248,7 +8248,7 @@
 						"x": 1389,
 						"y": 1635,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -8362,7 +8362,7 @@
 						"x": 1518,
 						"y": 1635,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -8864,7 +8864,7 @@
 						"x": 1640,
 						"y": 1635,
 						"width": 220,
-						"height": 222,
+						"height": 224,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
