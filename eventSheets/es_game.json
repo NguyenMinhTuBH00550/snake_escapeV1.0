@@ -47,7 +47,7 @@
 			"eventType": "variable",
 			"name": "CurrentLevel",
 			"type": "string",
-			"initialValue": "50",
+			"initialValue": "1",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
