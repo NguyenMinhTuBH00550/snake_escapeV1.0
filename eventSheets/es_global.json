@@ -706,15 +706,6 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
-						},
-						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 877395802025551,
-							"parameters": {
-								"type": "log",
-								"message": "\"bbb\""
-							}
 						}
 					],
 					"sid": 274801497961586,

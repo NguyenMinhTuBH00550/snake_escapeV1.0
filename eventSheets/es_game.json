@@ -292,6 +292,36 @@
 			"sid": 674097357650379
 		},
 		{
+			"eventType": "variable",
+			"name": "centerX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 608859828367990
+		},
+		{
+			"eventType": "variable",
+			"name": "centerY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 501477501483216
+		},
+		{
+			"eventType": "variable",
+			"name": "maxDist",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 703841422507073
+		},
+		{
 			"eventType": "comment",
 			"text": "Value_event_Lose_Heart"
 		},
@@ -10399,7 +10429,35 @@
 							"functionParameters": [],
 							"eventType": "function-block",
 							"conditions": [],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 851171668594805,
+									"parameters": {
+										"variable": "maxDist",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 858140419058377,
+									"parameters": {
+										"variable": "centerX",
+										"value": "(GridW - 1) / 2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 873141526311618,
+									"parameters": {
+										"variable": "centerY",
+										"value": "(GridH - 1) / 2"
+									}
+								}
+							],
 							"sid": 873872460924349,
 							"children": [
 								{
@@ -10416,36 +10474,148 @@
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 734158919688445,
+									"children": [
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 285442108846763,
-											"parameters": {
-												"seconds": "0.7",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "open0",
-											"objectClass": "Dia_winSceen",
-											"sid": 738376977091643,
-											"behaviorType": "Dialog",
-											"parameters": {
-												"target_x0": "0",
-												"target_y1": "0",
-												"center4": "yes"
-											}
-										},
-										{
-											"callFunction": "openDialog",
-											"sid": 827417903460892,
-											"parameters": [
-												"\"\""
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 935777778514630,
+													"parameters": {
+														"object": "Grid_Dot"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 316178686757811,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Grid_Dot",
+															"sid": 412754883068054,
+															"parameters": {
+																"instance-variable": "dist",
+																"value": "distance(Grid_Dot.GridX, Grid_Dot.GridY, centerX, centerY)"
+															}
+														}
+													],
+													"sid": 401885162412164,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 300304734786304,
+																	"parameters": {
+																		"first-value": "Grid_Dot.dist",
+																		"comparison": 4,
+																		"second-value": "maxDist"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 747424163578375,
+																	"parameters": {
+																		"variable": "maxDist",
+																		"value": "Grid_Dot.dist"
+																	}
+																}
+															],
+															"sid": 107480239045514
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Grid_Dot",
+															"sid": 497091320645515,
+															"parameters": {
+																"instance-variable": "delay",
+																"value": "(Grid_Dot.dist/ maxDist) * 0.5"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 224083261388718,
+															"parameters": {
+																"seconds": "Grid_Dot.delay",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "Grid_Dot",
+															"sid": 666058437788651,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"dot_opacity\"",
+																"property": "offsetOpacity",
+																"end-value": "0",
+																"time": "0.3",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														}
+													],
+													"sid": 544630533253141
+												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 978734816899829,
+													"parameters": {
+														"seconds": "1",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "open0",
+													"objectClass": "Dia_winSceen",
+													"sid": 268856899720189,
+													"behaviorType": "Dialog",
+													"parameters": {
+														"target_x0": "0",
+														"target_y1": "0",
+														"center4": "yes"
+													}
+												},
+												{
+													"callFunction": "openDialog",
+													"sid": 452689031252508,
+													"parameters": [
+														"\"\""
+													]
+												}
+											],
+											"sid": 875340224224891
 										}
-									],
-									"sid": 734158919688445
+									]
 								}
 							]
 						},

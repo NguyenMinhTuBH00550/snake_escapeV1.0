@@ -1853,9 +1853,20 @@
 						"HasSnake": 0,
 						"PathOrder": -1,
 						"GridX": 0,
-						"GridY": 0
+						"GridY": 0,
+						"dist": 0,
+						"delay": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 488141666738587,
 						"expanded": true

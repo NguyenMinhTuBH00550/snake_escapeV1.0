@@ -32,9 +32,34 @@
 			"desc": "",
 			"show": true,
 			"sid": 154444093165495
+		},
+		{
+			"name": "dist",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 600902666004092
+		},
+		{
+			"name": "delay",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 970651556083713
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 354336017651594
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 246916213974467
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
