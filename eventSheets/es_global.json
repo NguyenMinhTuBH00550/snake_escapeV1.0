@@ -706,6 +706,15 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 877395802025551,
+							"parameters": {
+								"type": "log",
+								"message": "\"bbb\""
+							}
 						}
 					],
 					"sid": 274801497961586,
@@ -789,6 +798,15 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 142044911323453,
+							"parameters": {
+								"type": "log",
+								"message": "\"aaa\""
+							}
 						}
 					],
 					"sid": 464775636997347
@@ -818,53 +836,6 @@
 						}
 					],
 					"sid": 492746711789315
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-tweens-finished",
-							"objectClass": "GameManager",
-							"sid": 591967155903747,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"FaderStart\""
-							}
-						}
-					],
-					"actions": [],
-					"sid": 954077229298039,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 158840255448567,
-									"parameters": {
-										"first-value": "GameManager.Tween.Value(\"FaderStart\")",
-										"comparison": 0,
-										"second-value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "F_Snake",
-									"sid": 862860074206405,
-									"parameters": {
-										"instance-variable": "CanTouch",
-										"value": "true"
-									}
-								}
-							],
-							"sid": 719109932502949,
-							"disabled": true
-						}
-					]
 				}
 			],
 			"sid": 833894339197284

@@ -1167,6 +1167,15 @@
 							],
 							"actions": [
 								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 787640442602858,
+									"parameters": {
+										"layer": "\"Fader\"",
+										"opacity": "100"
+									}
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
 									"sid": 526655128140929,
@@ -1255,17 +1264,17 @@
 									}
 								},
 								{
-									"callFunction": "hideFader",
-									"sid": 156811612421853
-								},
-								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 471110529154548,
+									"sid": 535007863222028,
 									"parameters": {
-										"seconds": "0.8",
+										"seconds": "0.5",
 										"use-timescale": true
 									}
+								},
+								{
+									"callFunction": "hideFader",
+									"sid": 294207046323154
 								},
 								{
 									"id": "set-eventvar-value",

@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 44903,
+	"savedWithRelease": 44904,
 	"name": "snake escape",
 	"runtime": "c3",
 	"useWorker": "auto",
