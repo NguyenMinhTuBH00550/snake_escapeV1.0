@@ -275,6 +275,14 @@
 								"variable": "NextLayout",
 								"value": "\"Level\""
 							}
+						},
+						{
+							"callFunction": "PlaySFX",
+							"sid": 558241312957670,
+							"parameters": [
+								"\"SE_Click\"",
+								"-10"
+							]
 						}
 					],
 					"sid": 322674816031204,
@@ -357,6 +365,14 @@
 									"parameters": [
 										"\"\""
 									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 126908972870911,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 842321542290707
@@ -391,6 +407,14 @@
 									"sid": 440179357729724,
 									"parameters": [
 										"\"\""
+									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 375069972218288,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
 									]
 								}
 							],
@@ -479,6 +503,14 @@
 										"layer": "\"Challenge\"",
 										"visibility": "invisible"
 									}
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 665651144386000,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 865342530996296
@@ -538,6 +570,14 @@
 										"layer": "\"Challenge\"",
 										"visibility": "invisible"
 									}
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 247493311092723,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 357618724468064
@@ -597,6 +637,14 @@
 										"layer": "\"Challenge\"",
 										"visibility": "visible"
 									}
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 140800250361124,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 584241838515934
@@ -979,6 +1027,70 @@
 						}
 					],
 					"sid": 135776830977899
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onclicked3",
+							"objectClass": "UI_icon_frameTop",
+							"sid": 819429636887371,
+							"behaviorType": "Button"
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "UI_icon_frameTop",
+							"sid": 820927932646318,
+							"parameters": {
+								"tags": "\"more_coin_home\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetActiveIcon",
+							"sid": 707704871909257,
+							"parameters": [
+								"1"
+							]
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 301355065179068,
+							"parameters": {
+								"layer": "\"Home\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 964319403905884,
+							"parameters": {
+								"layer": "\"Shop\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 493005706566253,
+							"parameters": {
+								"layer": "\"Challenge\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"callFunction": "PlaySFX",
+							"sid": 954598234238869,
+							"parameters": [
+								"\"SE_Click\"",
+								"-10"
+							]
+						}
+					],
+					"sid": 727205760814660
 				}
 			],
 			"sid": 843270326101061
@@ -1026,6 +1138,14 @@
 							"parameters": [
 								"\"\""
 							]
+						},
+						{
+							"callFunction": "PlaySFX",
+							"sid": 958994222812357,
+							"parameters": [
+								"\"SE_Click\"",
+								"-10"
+							]
 						}
 					],
 					"sid": 393899755508327
@@ -1052,6 +1172,14 @@
 							"sid": 382411738067152,
 							"parameters": [
 								"\"\""
+							]
+						},
+						{
+							"callFunction": "PlaySFX",
+							"sid": 956789000232983,
+							"parameters": [
+								"\"SE_Click\"",
+								"-10"
 							]
 						}
 					],

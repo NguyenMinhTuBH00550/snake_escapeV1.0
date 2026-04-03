@@ -553,8 +553,8 @@
 					"world": {
 						"x": 1385,
 						"y": 760,
-						"width": 182,
-						"height": 157,
+						"width": 177,
+						"height": 144,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6980,10 +6980,6 @@
 												"state": true
 											},
 											{
-												"iv": "NeedBack",
-												"state": true
-											},
-											{
 												"iv": "BodyGoalX",
 												"state": true
 											},
@@ -7033,6 +7029,10 @@
 											},
 											{
 												"iv": "snakeOn",
+												"state": true
+											},
+											{
+												"iv": "NeedBack",
 												"state": true
 											}
 										]
@@ -7753,10 +7753,6 @@
 												"state": true
 											},
 											{
-												"iv": "Needback",
-												"state": true
-											},
-											{
 												"iv": "TailGoalX",
 												"state": true
 											},
@@ -7770,6 +7766,10 @@
 											},
 											{
 												"iv": "cpY",
+												"state": true
+											},
+											{
+												"iv": "Needback",
 												"state": true
 											}
 										]
@@ -7965,8 +7965,8 @@
 					"world": {
 						"x": 1471,
 						"y": 759,
-						"width": 176,
-						"height": 186.99999999999997,
+						"width": 180,
+						"height": 181,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -8566,10 +8566,6 @@
 												"state": true
 											},
 											{
-												"iv": "NeedBack",
-												"state": true
-											},
-											{
 												"iv": "BodyGoalX",
 												"state": true
 											},
@@ -8619,6 +8615,10 @@
 											},
 											{
 												"iv": "snakeOn",
+												"state": true
+											},
+											{
+												"iv": "NeedBack",
 												"state": true
 											}
 										]
@@ -9393,8 +9393,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2153,
-						"y": 673,
+						"x": 1868,
+						"y": 499,
 						"width": 324,
 						"height": 423,
 						"originX": 0.21296296296296297,
@@ -9477,6 +9477,80 @@
 						"y": 1026,
 						"width": 197,
 						"height": 196,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HUD_popup_newobject_image_wall",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 57,
+					"sid": 911932065261863,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 911932065261863,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -1001,
+						"y": 1288,
+						"width": 824,
+						"height": 603,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HUD_popup_newobject_image_blackhole",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 495,
+					"sid": 611377883093246,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 611377883093246,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -1024,
+						"y": 1973,
+						"width": 824,
+						"height": 603,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

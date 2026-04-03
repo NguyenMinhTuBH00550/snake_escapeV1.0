@@ -80,9 +80,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 316.128809980373,
+						"x": 316.628809980373,
 						"y": 1656.0327678969802,
-						"width": 366.3493002112,
+						"width": 358,
 						"height": 49.94320239420859,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -469,7 +469,7 @@
 					"locked": false,
 					"world": {
 						"x": 554,
-						"y": 219,
+						"y": 225,
 						"width": 24.788064496935725,
 						"height": 22.697506991134574,
 						"originX": 0.5,
@@ -573,8 +573,8 @@
 					"world": {
 						"x": 110,
 						"y": 87,
-						"width": 120,
-						"height": 100,
+						"width": 123,
+						"height": 124,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -676,8 +676,8 @@
 					"world": {
 						"x": 251,
 						"y": 87,
-						"width": 122,
-						"height": 100,
+						"width": 123,
+						"height": 124,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -764,8 +764,8 @@
 					"world": {
 						"x": 980,
 						"y": 89,
-						"width": 113,
-						"height": 96,
+						"width": 115,
+						"height": 119,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -898,7 +898,7 @@
 						"x": 544,
 						"y": 102,
 						"width": 393.00000000000006,
-						"height": 128,
+						"height": 156,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1175,8 +1175,8 @@
 					"world": {
 						"x": 553,
 						"y": 1426,
-						"width": 736.0000000000001,
-						"height": 192,
+						"width": 711,
+						"height": 220,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1425,8 +1425,8 @@
 					"world": {
 						"x": 760.1936693044565,
 						"y": 1660.1841008616507,
-						"width": 177,
-						"height": 147,
+						"width": 181,
+						"height": 182,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1592,8 +1592,8 @@
 					"world": {
 						"x": 970.6936693044565,
 						"y": 1659.1841008616507,
-						"width": 177,
-						"height": 147,
+						"width": 181,
+						"height": 182,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1658,7 +1658,7 @@
 						"x": 759.9990922450263,
 						"y": 1639.4999991759803,
 						"width": 75,
-						"height": 68,
+						"height": 83,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1723,7 +1723,7 @@
 						"x": 971,
 						"y": 1640,
 						"width": 75,
-						"height": 68,
+						"height": 83,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1732,7 +1732,7 @@
 							1,
 							1
 						],
-						"angle": 0.001815510944823906,
+						"angle": 6.282554665476324,
 						"zElevation": 0
 					}
 				},
@@ -1804,7 +1804,7 @@
 					"locked": false,
 					"world": {
 						"x": 716,
-						"y": 1671,
+						"y": 1675,
 						"width": 96,
 						"height": 30,
 						"originX": 0,
@@ -1887,7 +1887,7 @@
 					"locked": false,
 					"world": {
 						"x": 927,
-						"y": 1669,
+						"y": 1675,
 						"width": 86,
 						"height": 30,
 						"originX": 0,
@@ -1970,8 +1970,8 @@
 					"world": {
 						"x": 468,
 						"y": 123,
-						"width": 61,
-						"height": 42,
+						"width": 54.400000000000006,
+						"height": 47.2,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2043,8 +2043,8 @@
 					"world": {
 						"x": 468,
 						"y": 123,
-						"width": 53,
-						"height": 37,
+						"width": 51.84,
+						"height": 44.96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2125,8 +2125,8 @@
 					"world": {
 						"x": 544,
 						"y": 122,
-						"width": 61,
-						"height": 43,
+						"width": 54.400000000000006,
+						"height": 47.2,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2198,8 +2198,8 @@
 					"world": {
 						"x": 544,
 						"y": 123,
-						"width": 54,
-						"height": 39,
+						"width": 51.84,
+						"height": 44.96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2280,8 +2280,8 @@
 					"world": {
 						"x": 619,
 						"y": 122,
-						"width": 62,
-						"height": 44,
+						"width": 54.400000000000006,
+						"height": 47.2,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2353,8 +2353,8 @@
 					"world": {
 						"x": 619,
 						"y": 123,
-						"width": 55,
-						"height": 40.00000000000001,
+						"width": 51.84,
+						"height": 44.96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2455,9 +2455,9 @@
 					"locked": false,
 					"world": {
 						"x": 556,
-						"y": 219,
-						"width": 193,
-						"height": 57,
+						"y": 225,
+						"width": 178.4,
+						"height": 61.6,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2520,9 +2520,9 @@
 					"locked": false,
 					"world": {
 						"x": 471,
-						"y": 218,
-						"width": 75,
-						"height": 61,
+						"y": 224,
+						"width": 80.39999999999999,
+						"height": 80.1,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2617,8 +2617,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 514,
-						"y": 201,
+						"x": 511,
+						"y": 207,
 						"width": 119,
 						"height": 40,
 						"originX": 0,
@@ -2775,10 +2775,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 767,
+						"x": 766,
 						"y": 1652,
-						"width": 147,
-						"height": 108.00000000000001,
+						"width": 148,
+						"height": 139,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2857,10 +2857,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 800,
-						"y": 1709,
-						"width": 74,
-						"height": 59,
+						"x": 802,
+						"y": 1719,
+						"width": 73,
+						"height": 74,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2955,8 +2955,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 799,
-						"y": 1706,
+						"x": 801,
+						"y": 1716,
 						"width": 41,
 						"height": 38,
 						"originX": 0.5,
@@ -3087,8 +3087,8 @@
 					"world": {
 						"x": 976,
 						"y": 1650,
-						"width": 103,
-						"height": 125,
+						"width": 99.5,
+						"height": 146,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3168,9 +3168,9 @@
 					"locked": false,
 					"world": {
 						"x": 1008,
-						"y": 1705,
-						"width": 74,
-						"height": 59,
+						"y": 1716,
+						"width": 73,
+						"height": 74,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3266,7 +3266,7 @@
 					"locked": false,
 					"world": {
 						"x": 1008,
-						"y": 1703,
+						"y": 1713,
 						"width": 25.741900063695084,
 						"height": 36,
 						"originX": 0.5,
@@ -3454,8 +3454,8 @@
 					"world": {
 						"x": 196,
 						"y": 1661,
-						"width": 128.60407893650859,
-						"height": 69.74270973035573,
+						"width": 129,
+						"height": 88,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3557,8 +3557,8 @@
 					"world": {
 						"x": 89,
 						"y": 1661,
-						"width": 108,
-						"height": 85,
+						"width": 106,
+						"height": 107,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3660,8 +3660,8 @@
 					"world": {
 						"x": 543.479800193844,
 						"y": 1661,
-						"width": 108,
-						"height": 85,
+						"width": 106,
+						"height": 107,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

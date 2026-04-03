@@ -328,6 +328,98 @@
 								}
 							],
 							"sid": 483172044114385
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 246383878478105,
+									"parameters": {
+										"first-value": "CurrentLevel",
+										"comparison": 5,
+										"second-value": "15"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 852264001512799,
+									"parameters": {
+										"first-value": "CurrentLevel",
+										"comparison": 2,
+										"second-value": "16"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "open0",
+									"objectClass": "Dia_notiWall",
+									"sid": 471091118930456,
+									"behaviorType": "Dialog",
+									"parameters": {
+										"target_x0": "0",
+										"target_y1": "0",
+										"center4": "yes"
+									}
+								},
+								{
+									"callFunction": "openDialog",
+									"sid": 280907792610759,
+									"parameters": [
+										"\"\""
+									]
+								}
+							],
+							"sid": 172125356973495
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 375337764165647,
+									"parameters": {
+										"first-value": "CurrentLevel",
+										"comparison": 5,
+										"second-value": "31"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 615372778925014,
+									"parameters": {
+										"first-value": "CurrentLevel",
+										"comparison": 2,
+										"second-value": "32"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "open0",
+									"objectClass": "Dia_noti_blackHole",
+									"sid": 733939720894045,
+									"behaviorType": "Dialog",
+									"parameters": {
+										"target_x0": "0",
+										"target_y1": "0",
+										"center4": "yes"
+									}
+								},
+								{
+									"callFunction": "openDialog",
+									"sid": 956823411485323,
+									"parameters": [
+										"\"\""
+									]
+								}
+							],
+							"sid": 177548144891125
 						}
 					]
 				},
@@ -431,219 +523,6 @@
 					]
 				}
 			]
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Btn_UI_icon_frameTop",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "onclicked3",
-							"objectClass": "UI_icon_frameTop",
-							"sid": 823082940901821,
-							"behaviorType": "Button"
-						}
-					],
-					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 983732020773429,
-							"parameters": {
-								"layer": "\"fade\"",
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 467329187306262,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [],
-					"sid": 450454089669937,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "HUD_popUp_close",
-									"sid": 500388256590176,
-									"parameters": {
-										"tags": "\"shop\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "setenabled0",
-									"objectClass": "HUD_popUp_close",
-									"sid": 750341857786717,
-									"behaviorType": "Button",
-									"parameters": {
-										"state2": "enabled"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "HUD_popUp_close",
-									"sid": 448022344012621,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 682206774302513,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "UI_icon_settingButton",
-									"sid": 198176113043920,
-									"parameters": {
-										"tags": "\"\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "setenabled0",
-									"objectClass": "UI_icon_settingButton",
-									"sid": 978356743026654,
-									"behaviorType": "Button",
-									"parameters": {
-										"state2": "disabled"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "UI_icon_settingButton",
-									"sid": 326619384610914,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 691209426216885,
-							"disabled": true
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "onclicked3",
-							"objectClass": "HUD_popUp_close",
-							"sid": 615563547538394,
-							"behaviorType": "Button"
-						},
-						{
-							"id": "has-tags",
-							"objectClass": "HUD_popUp_close",
-							"sid": 784589086339601,
-							"parameters": {
-								"tags": "\"shop\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 623367988544241,
-							"parameters": {
-								"layer": "\"fade\"",
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 765174067629458,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "HUD_popUp_close",
-									"sid": 945933569389620,
-									"parameters": {
-										"tags": "\"shop\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "setenabled0",
-									"objectClass": "HUD_popUp_close",
-									"sid": 850095405644073,
-									"behaviorType": "Button",
-									"parameters": {
-										"state2": "disabled"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "HUD_popUp_close",
-									"sid": 972664179072517,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 271747050370790,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "UI_icon_settingButton",
-									"sid": 414459298106390,
-									"parameters": {
-										"tags": "\"\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "setenabled0",
-									"objectClass": "UI_icon_settingButton",
-									"sid": 626062604718366,
-									"behaviorType": "Button",
-									"parameters": {
-										"state2": "enabled"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "UI_icon_settingButton",
-									"sid": 779177553532763,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 738563674973487,
-							"disabled": true
-						}
-					]
-				}
-			],
-			"sid": 405242757979508
 		},
 		{
 			"eventType": "variable",
@@ -1051,6 +930,14 @@
 										{
 											"callFunction": "ToggleMusic",
 											"sid": 263586326491083
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 352982298915170,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
 										}
 									],
 									"sid": 807669498870245
@@ -1713,7 +1600,17 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "set-paused",
+													"objectClass": "Audio",
+													"sid": 788469396023948,
+													"parameters": {
+														"tag": "\"SFX\"",
+														"state": "resume"
+													}
+												}
+											],
 											"sid": 225628665522666,
 											"children": [
 												{
@@ -1798,7 +1695,17 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "set-paused",
+													"objectClass": "Audio",
+													"sid": 663448240136094,
+													"parameters": {
+														"tag": "\"SFX\"",
+														"state": "pause"
+													}
+												}
+											],
 											"sid": 249993923422850,
 											"children": [
 												{
@@ -2053,6 +1960,97 @@
 									"sid": 426627944184824
 								}
 							]
+						},
+						{
+							"functionName": "PlaySFX",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "soundName",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"sid": 598697185055271
+								},
+								{
+									"name": "vol",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 951567646922681
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 667490822620674,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 950024686139771,
+											"parameters": {
+												"first-value": "DicSaveGame.Get(SAVE_SOUND)",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										},
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 561504956386479,
+											"parameters": {
+												"tag": "soundName"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "play-by-name",
+											"objectClass": "Audio",
+											"sid": 178841855322745,
+											"parameters": {
+												"folder": "sounds",
+												"audio-file-name": "soundName",
+												"loop": "not-looping",
+												"volume": "vol",
+												"stereo-pan": "0",
+												"tag-optional": "\"SFX\""
+											}
+										}
+									],
+									"sid": 402187246266617
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 365183777419080
+										}
+									],
+									"actions": [
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 533411652088141,
+											"parameters": {
+												"tag": "soundName"
+											}
+										}
+									],
+									"sid": 952927909166319
+								}
+							]
 						}
 					],
 					"sid": 258134291351911
@@ -2120,6 +2118,14 @@
 									"parameters": [
 										"text_coin.UID"
 									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 146620440916664,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 163881464775360
@@ -2169,6 +2175,14 @@
 									"sid": 870997589742786,
 									"parameters": [
 										"text_coin.UID"
+									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 389057275722048,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
 									]
 								}
 							],
@@ -2220,6 +2234,14 @@
 									"parameters": [
 										"text_coin.UID"
 									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 939812958567079,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 523115732326267
@@ -2270,6 +2292,14 @@
 									"parameters": [
 										"text_coin.UID"
 									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 304698732512101,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 713604648534634
@@ -2316,9 +2346,17 @@
 								},
 								{
 									"callFunction": "ChangeTextWidth",
-									"sid": 454829436388916,
+									"sid": 162798393660336,
 									"parameters": [
 										"text_coin.UID"
+									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 876207015660829,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
 									]
 								}
 							],
@@ -2370,6 +2408,14 @@
 									"parameters": [
 										"text_coin.UID"
 									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 343537515406576,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 528154605055132
@@ -2420,6 +2466,14 @@
 									"parameters": [
 										"text_coin.UID"
 									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 270822109156134,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 137608509538430
@@ -2454,6 +2508,14 @@
 								"layer": "\"Shop\"",
 								"visibility": "invisible"
 							}
+						},
+						{
+							"callFunction": "PlaySFX",
+							"sid": 509671781271515,
+							"parameters": [
+								"\"SE_Click\"",
+								"-10"
+							]
 						}
 					],
 					"sid": 436725147674041,
@@ -2508,6 +2570,14 @@
 						{
 							"callFunction": "open_shop",
 							"sid": 681477995397080
+						},
+						{
+							"callFunction": "PlaySFX",
+							"sid": 453763183445246,
+							"parameters": [
+								"\"SE_Click\"",
+								"-10"
+							]
 						}
 					],
 					"sid": 515079948246730

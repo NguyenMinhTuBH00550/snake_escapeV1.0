@@ -231,7 +231,10 @@
 			"hand_icon",
 			"par_hand",
 			"Sprite",
-			"Audio"
+			"Audio",
+			"HUD_popup_newobject_image_wall",
+			"popup_newobject_image_wall",
+			"HUD_popup_newobject_image_blackhole"
 		],
 		"subfolders": [
 			{
@@ -314,7 +317,8 @@
 					"text_zoom_bar",
 					"text_wayBlocker",
 					"text_count_hint",
-					"text_grid"
+					"text_grid",
+					"text_Wall"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -457,7 +461,9 @@
 					"Dia_noti_hint",
 					"Dia_buy_hint",
 					"Dia_noti_grid",
-					"Dia_buy_grid"
+					"Dia_buy_grid",
+					"Dia_notiWall",
+					"Dia_noti_blackHole"
 				],
 				"subfolders": [],
 				"name": "Dialog"
@@ -539,7 +545,9 @@
 			"Restart_sceen",
 			"Failed_sceen",
 			"Fade",
-			"Ad_sceen"
+			"Ad_sceen",
+			"newObject_wall",
+			"newObject_BlackHole"
 		],
 		"subfolders": [
 			{
@@ -587,7 +595,72 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "SE_Click.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 190882952941360,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SE_coin.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 212276651756386,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SE_lose_popup.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 495774730656189,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SE_revive_popup.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 680483016465849,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SE_Snake_Move.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 810228163968018,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SE_Snake_Tap.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 931556181125053,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SE_win_popup.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 378346452845689,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_Confetti_Explosion.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 749173984687854,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
@@ -1210,6 +1283,14 @@
 							"name": "lv57.json",
 							"type": "application/json",
 							"sid": 981363062511166,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv58.json",
+							"type": "application/json",
+							"sid": 576862381550996,
 							"file-info": {
 								"purpose": "none"
 							}

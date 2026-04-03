@@ -47,7 +47,7 @@
 			"eventType": "variable",
 			"name": "CurrentLevel",
 			"type": "string",
-			"initialValue": "1",
+			"initialValue": "2",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -6018,6 +6018,16 @@
 							"sid": 962531939933871
 						},
 						{
+							"eventType": "variable",
+							"name": "PickedID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 160656569185333
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -6083,14 +6093,14 @@
 										{
 											"id": "pick-all",
 											"objectClass": "System",
-											"sid": 764126493694350,
+											"sid": 577018866273373,
 											"parameters": {
-												"object": "SnakeHead"
+												"object": "F_Snake"
 											}
 										},
 										{
 											"id": "pick-nearestfurthest",
-											"objectClass": "SnakeHead",
+											"objectClass": "F_Snake",
 											"sid": 707205694308666,
 											"parameters": {
 												"which": "nearest",
@@ -6101,15 +6111,25 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 848966602167048,
+											"sid": 520565976298786,
 											"parameters": {
-												"first-value": "distance(SnakeHead.X, SnakeHead.Y, TouchX, TouchY)  ",
+												"first-value": "distance(F_Snake.X, F_Snake.Y, TouchX, TouchY)  ",
 												"comparison": 2,
 												"second-value": "40"
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 966038925607860,
+											"parameters": {
+												"variable": "PickedID",
+												"value": "F_Snake.ownID"
+											}
+										}
+									],
 									"sid": 981960017688315,
 									"children": [
 										{
@@ -6117,32 +6137,15 @@
 											"conditions": [
 												{
 													"id": "is-boolean-instance-variable-set",
-													"objectClass": "SnakeHead",
-													"sid": 544673696291462,
+													"objectClass": "F_Snake",
+													"sid": 192410931763613,
 													"parameters": {
 														"instance-variable": "CanTouch"
 													}
 												}
 											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "SnakeHead",
-													"sid": 873382018782175,
-													"parameters": {
-														"instance-variable": "CanTouch",
-														"value": "false"
-													}
-												},
-												{
-													"callFunction": "SnakePlay",
-													"sid": 204239868988434,
-													"parameters": [
-														"SnakeHead.ownID"
-													]
-												}
-											],
-											"sid": 314517582039126,
+											"actions": [],
+											"sid": 798155246574340,
 											"children": [
 												{
 													"eventType": "block",
@@ -6150,7 +6153,7 @@
 														{
 															"id": "pick-all",
 															"objectClass": "System",
-															"sid": 722991844813912,
+															"sid": 947985765943078,
 															"parameters": {
 																"object": "F_Snake"
 															}
@@ -6158,18 +6161,10 @@
 														{
 															"id": "pick-by-evaluate",
 															"objectClass": "System",
-															"sid": 576374275630923,
+															"sid": 160229375478794,
 															"parameters": {
 																"object": "F_Snake",
-																"expression": "F_Snake.ownID = SnakeHead.ownID"
-															}
-														},
-														{
-															"id": "for-each",
-															"objectClass": "System",
-															"sid": 890245841360413,
-															"parameters": {
-																"object": "F_Snake"
+																"expression": "F_Snake.ownID = PickedID"
 															}
 														}
 													],
@@ -6177,14 +6172,21 @@
 														{
 															"id": "set-boolean-instvar",
 															"objectClass": "F_Snake",
-															"sid": 613616027633427,
+															"sid": 252510283260350,
 															"parameters": {
 																"instance-variable": "CanTouch",
 																"value": "false"
 															}
+														},
+														{
+															"callFunction": "SnakePlay",
+															"sid": 134047096075851,
+															"parameters": [
+																"PickedID"
+															]
 														}
 													],
-													"sid": 601242898912015
+													"sid": 204159599791075
 												}
 											]
 										},
@@ -6194,7 +6196,7 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 676028809283578,
+													"sid": 446309344277979,
 													"parameters": {
 														"first-value": "CurrentLevel",
 														"comparison": 3,
@@ -6206,7 +6208,7 @@
 												{
 													"id": "set-visible",
 													"objectClass": "UI_challenge_level",
-													"sid": 218529214936601,
+													"sid": 218407767072972,
 													"parameters": {
 														"visibility": "invisible"
 													}
@@ -6214,431 +6216,13 @@
 												{
 													"id": "set-visible",
 													"objectClass": "hand_icon",
-													"sid": 942606457464252,
+													"sid": 683720010107698,
 													"parameters": {
 														"visibility": "invisible"
 													}
 												}
 											],
-											"sid": 600657866012944
-										}
-									]
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-any-touch-end",
-									"objectClass": "Touch",
-									"sid": 847089267649095
-								},
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 967231484220861,
-									"parameters": {
-										"first-value": "IsInputLocked",
-										"comparison": 0,
-										"second-value": "0"
-									}
-								},
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 760359037332852,
-									"parameters": {
-										"first-value": "IsDraggingMap",
-										"comparison": 0,
-										"second-value": "0"
-									}
-								},
-								{
-									"id": "is-touching-object",
-									"objectClass": "Touch",
-									"sid": 934608414959343,
-									"parameters": {
-										"object": "F_ButtonBooster"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 137209245254925,
-									"parameters": {
-										"variable": "TouchX",
-										"value": "Touch.X(\"Snakes\")"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 818741715362547,
-									"parameters": {
-										"variable": "TouchY",
-										"value": "Touch.Y(\"Snakes\")"
-									}
-								}
-							],
-							"sid": 488898789025792,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-all",
-											"objectClass": "System",
-											"sid": 319838947490766,
-											"parameters": {
-												"object": "SnakeBody"
-											}
-										},
-										{
-											"id": "pick-nearestfurthest",
-											"objectClass": "SnakeBody",
-											"sid": 236841035148487,
-											"parameters": {
-												"which": "nearest",
-												"x": "TouchX",
-												"y": "TouchY"
-											}
-										},
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 816837072997480,
-											"parameters": {
-												"first-value": "distance(SnakeBody.X, SnakeBody.Y, TouchX, TouchY)  ",
-												"comparison": 2,
-												"second-value": "40"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 871658690331110,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "SnakeBody",
-													"sid": 158237002408920,
-													"parameters": {
-														"instance-variable": "CanTouch"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "SnakeBody",
-													"sid": 321062436252733,
-													"parameters": {
-														"instance-variable": "CanTouch",
-														"value": "false"
-													}
-												},
-												{
-													"callFunction": "SnakePlay",
-													"sid": 388066371333150,
-													"parameters": [
-														"SnakeBody.ownID"
-													]
-												}
-											],
-											"sid": 364912663576448,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "pick-all",
-															"objectClass": "System",
-															"sid": 809252561403201,
-															"parameters": {
-																"object": "F_Snake"
-															}
-														},
-														{
-															"id": "pick-by-evaluate",
-															"objectClass": "System",
-															"sid": 633746480271118,
-															"parameters": {
-																"object": "F_Snake",
-																"expression": "F_Snake.ownID = SnakeBody.ownID"
-															}
-														},
-														{
-															"id": "for-each",
-															"objectClass": "System",
-															"sid": 177690235165319,
-															"parameters": {
-																"object": "F_Snake"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-boolean-instvar",
-															"objectClass": "F_Snake",
-															"sid": 516771670517397,
-															"parameters": {
-																"instance-variable": "CanTouch",
-																"value": "false"
-															}
-														}
-													],
-													"sid": 263905285066553
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 847312865085549,
-													"parameters": {
-														"first-value": "CurrentLevel",
-														"comparison": 3,
-														"second-value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-visible",
-													"objectClass": "UI_challenge_level",
-													"sid": 934545573564195,
-													"parameters": {
-														"visibility": "invisible"
-													}
-												},
-												{
-													"id": "set-visible",
-													"objectClass": "hand_icon",
-													"sid": 322012344992482,
-													"parameters": {
-														"visibility": "invisible"
-													}
-												}
-											],
-											"sid": 309458647067412
-										}
-									]
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-any-touch-end",
-									"objectClass": "Touch",
-									"sid": 577952962612731
-								},
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 308171538650710,
-									"parameters": {
-										"first-value": "IsInputLocked",
-										"comparison": 0,
-										"second-value": "0"
-									}
-								},
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 333098941446962,
-									"parameters": {
-										"first-value": "IsDraggingMap",
-										"comparison": 0,
-										"second-value": "0"
-									}
-								},
-								{
-									"id": "is-touching-object",
-									"objectClass": "Touch",
-									"sid": 102701725528795,
-									"parameters": {
-										"object": "F_ButtonBooster"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 783076610654725,
-									"parameters": {
-										"variable": "TouchX",
-										"value": "Touch.X(\"Snakes\")"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 776811477554048,
-									"parameters": {
-										"variable": "TouchY",
-										"value": "Touch.Y(\"Snakes\")"
-									}
-								}
-							],
-							"sid": 164172841404929,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-all",
-											"objectClass": "System",
-											"sid": 425522178370864,
-											"parameters": {
-												"object": "SnakeTail"
-											}
-										},
-										{
-											"id": "pick-nearestfurthest",
-											"objectClass": "SnakeTail",
-											"sid": 750194623504724,
-											"parameters": {
-												"which": "nearest",
-												"x": "TouchX",
-												"y": "TouchY"
-											}
-										},
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 617780994065488,
-											"parameters": {
-												"first-value": "distance(SnakeTail.X, SnakeTail.Y, TouchX, TouchY)  ",
-												"comparison": 2,
-												"second-value": "40"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 647838885759415,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "SnakeTail",
-													"sid": 229011181232105,
-													"parameters": {
-														"instance-variable": "CanTouch"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "SnakeTail",
-													"sid": 641161440331559,
-													"parameters": {
-														"instance-variable": "CanTouch",
-														"value": "false"
-													}
-												},
-												{
-													"callFunction": "SnakePlay",
-													"sid": 688000956899851,
-													"parameters": [
-														"SnakeTail.ownID"
-													]
-												}
-											],
-											"sid": 698470565660674,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "pick-all",
-															"objectClass": "System",
-															"sid": 484358367959678,
-															"parameters": {
-																"object": "F_Snake"
-															}
-														},
-														{
-															"id": "pick-by-evaluate",
-															"objectClass": "System",
-															"sid": 781827111930092,
-															"parameters": {
-																"object": "F_Snake",
-																"expression": "F_Snake.ownID = SnakeTail.ownID"
-															}
-														},
-														{
-															"id": "for-each",
-															"objectClass": "System",
-															"sid": 910643933141534,
-															"parameters": {
-																"object": "F_Snake"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-boolean-instvar",
-															"objectClass": "F_Snake",
-															"sid": 136864648613066,
-															"parameters": {
-																"instance-variable": "CanTouch",
-																"value": "false"
-															}
-														}
-													],
-													"sid": 955735498368479
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 488251816291005,
-													"parameters": {
-														"first-value": "CurrentLevel",
-														"comparison": 3,
-														"second-value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-visible",
-													"objectClass": "UI_challenge_level",
-													"sid": 217465327261693,
-													"parameters": {
-														"visibility": "invisible"
-													}
-												},
-												{
-													"id": "set-visible",
-													"objectClass": "hand_icon",
-													"sid": 196946627627493,
-													"parameters": {
-														"visibility": "invisible"
-													}
-												}
-											],
-											"sid": 461279876800654
+											"sid": 984170382984384
 										}
 									]
 								}
@@ -6714,40 +6298,6 @@
 									"isStatic": false,
 									"isConstant": false,
 									"sid": 151105829893074
-								},
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "set-instvar-value",
-											"objectClass": "F_Snake",
-											"sid": 731820302376964,
-											"parameters": {
-												"instance-variable": "StartX",
-												"value": "Self.X"
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "F_Snake",
-											"sid": 665826393226131,
-											"parameters": {
-												"instance-variable": "StartY",
-												"value": "Self.Y"
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "F_Snake",
-											"sid": 806212801348650,
-											"parameters": {
-												"instance-variable": "startAngle",
-												"value": "Self.Angle"
-											}
-										}
-									],
-									"sid": 160903790840202
 								},
 								{
 									"eventType": "block",
@@ -7115,6 +6665,14 @@
 																				"instance-variable": "MoveType",
 																				"value": "2"
 																			}
+																		},
+																		{
+																			"callFunction": "PlaySFX",
+																			"sid": 278637522069003,
+																			"parameters": [
+																				"\"SE_Snake_Move\"",
+																				"-10"
+																			]
 																		},
 																		{
 																			"id": "move-to-position",
@@ -7809,6 +7367,14 @@
 																		}
 																	],
 																	"actions": [
+																		{
+																			"callFunction": "PlaySFX",
+																			"sid": 582969782961594,
+																			"parameters": [
+																				"\"SE_Snake_Move\"",
+																				"-10"
+																			]
+																		},
 																		{
 																			"id": "set-eventvar-value",
 																			"objectClass": "System",
@@ -8747,15 +8313,6 @@
 													}
 												},
 												{
-													"id": "set-instvar-value",
-													"objectClass": "SnakeHead",
-													"sid": 543801137328725,
-													"parameters": {
-														"instance-variable": "MoveType",
-														"value": "0"
-													}
-												},
-												{
 													"id": "wait",
 													"objectClass": "System",
 													"sid": 389704367995918,
@@ -8770,106 +8327,70 @@
 													"parameters": [
 														"SnakeHead.ownID"
 													]
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 371554500894039,
+													"parameters": {
+														"type": "log",
+														"message": "\"1\""
+													}
 												}
 											],
-											"sid": 707417604734017,
+											"sid": 707417604734017
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "SnakeHead",
+													"sid": 123711160266981,
+													"parameters": {
+														"instance-variable": "NeedBack",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 246466354685406,
 											"children": [
 												{
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "compare-instance-variable",
-															"objectClass": "SnakeHead",
-															"sid": 244012015655129,
+															"id": "pick-by-evaluate",
+															"objectClass": "System",
+															"sid": 186882261862787,
 															"parameters": {
-																"instance-variable": "NeedBack",
-																"comparison": 0,
-																"value": "1"
+																"object": "SnakeHead",
+																"expression": "SnakeHead.X = SnakeHead.StartX &\nSnakeHead.Y = SnakeHead.StartY"
 															}
 														}
 													],
-													"actions": [],
-													"sid": 527691148569220,
-													"children": [
+													"actions": [
 														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "pick-all",
-																	"objectClass": "System",
-																	"sid": 319490584671435,
-																	"parameters": {
-																		"object": "SnakeHead"
-																	}
-																}
-															],
-															"actions": [],
-															"sid": 454326684474832,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "pick-by-evaluate",
-																			"objectClass": "System",
-																			"sid": 422054075740032,
-																			"parameters": {
-																				"object": "SnakeHead",
-																				"expression": "SnakeHead.ownID = activeOwnID"
-																			}
-																		}
-																	],
-																	"actions": [],
-																	"sid": 897380483861592,
-																	"children": [
-																		{
-																			"eventType": "block",
-																			"conditions": [
-																				{
-																					"id": "for-each",
-																					"objectClass": "System",
-																					"sid": 271553391822889,
-																					"parameters": {
-																						"object": "SnakeHead"
-																					}
-																				}
-																			],
-																			"actions": [],
-																			"sid": 970145255711666,
-																			"children": [
-																				{
-																					"eventType": "block",
-																					"conditions": [
-																						{
-																							"id": "pick-by-evaluate",
-																							"objectClass": "System",
-																							"sid": 304888212719692,
-																							"parameters": {
-																								"object": "SnakeHead",
-																								"expression": "SnakeHead.X = SnakeHead.StartX &\nSnakeHead.Y = SnakeHead.StartY"
-																							}
-																						}
-																					],
-																					"actions": [
-																						{
-																							"id": "set-boolean-instvar",
-																							"objectClass": "SnakeHead",
-																							"sid": 614550327189839,
-																							"parameters": {
-																								"instance-variable": "CanTouch",
-																								"value": "true"
-																							}
-																						}
-																					],
-																					"sid": 836652933888226
-																				}
-																			]
-																		}
-																	]
-																}
-															]
+															"id": "set-boolean-instvar",
+															"objectClass": "SnakeHead",
+															"sid": 437835741632688,
+															"parameters": {
+																"instance-variable": "CanTouch",
+																"value": "true"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "SnakeHead",
+															"sid": 689421576585706,
+															"parameters": {
+																"instance-variable": "NeedBack",
+																"value": "0"
+															}
 														}
-													]
+													],
+													"sid": 459188001314104
 												}
 											]
 										}
@@ -9268,7 +8789,16 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 611724502132464,
+									"parameters": [
+										"\"SE_Snake_Tap\"",
+										"-10"
+									]
+								}
+							],
 							"sid": 806931117903163,
 							"children": [
 								{
@@ -9300,16 +8830,6 @@
 											}
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 449296008333509,
-											"disabled": true,
-											"parameters": {
-												"seconds": "0",
-												"use-timescale": true
-											}
-										},
-										{
 											"callFunction": "SnakeMoveBack",
 											"sid": 343869893794888,
 											"parameters": [
@@ -9318,7 +8838,8 @@
 										},
 										{
 											"callFunction": "LoseLife",
-											"sid": 705945030657592
+											"sid": 705945030657592,
+											"disabled": true
 										}
 									],
 									"sid": 686504783449966,
@@ -10048,6 +9569,15 @@
 															"parameters": [
 																"SnakeBody.ownID"
 															]
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 258887977537877,
+															"parameters": {
+																"type": "log",
+																"message": "\"2\""
+															}
 														}
 													],
 													"sid": 208758440289573,
@@ -10206,6 +9736,15 @@
 															"parameters": [
 																"SnakeTail.ownID"
 															]
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 901324086352174,
+															"parameters": {
+																"type": "log",
+																"message": "\"3\""
+															}
 														}
 													],
 													"sid": 198691874028009,
@@ -10269,6 +9808,86 @@
 								}
 							],
 							"sid": 272404827684138
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 507751472588113,
+									"parameters": {
+										"object": "F_Snake"
+									}
+								},
+								{
+									"id": "pick-by-evaluate",
+									"objectClass": "System",
+									"sid": 561581908995722,
+									"parameters": {
+										"object": "F_Snake",
+										"expression": "F_Snake.ownID = PickedID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 869984598242954,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "F_Snake",
+											"sid": 269854497453942,
+											"behaviorType": "MoveTo",
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 459875394367547,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-evaluate",
+													"objectClass": "System",
+													"sid": 588175058108555,
+													"parameters": {
+														"object": "F_Snake",
+														"expression": "F_Snake.X = F_Snake.StartX &\nF_Snake.Y = F_Snake.StartY"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 449162072724306,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "true"
+													}
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 119490011407295,
+													"parameters": {
+														"type": "log",
+														"message": "\"4\""
+													}
+												}
+											],
+											"sid": 184104523239325,
+											"disabled": true
+										}
+									]
+								}
+							]
 						}
 					],
 					"sid": 680401071414401
@@ -10611,6 +10230,14 @@
 													"parameters": [
 														"\"\""
 													]
+												},
+												{
+													"callFunction": "PlaySFX",
+													"sid": 644512582419577,
+													"parameters": [
+														"\"SE_win_popup\"",
+														"-10"
+													]
 												}
 											],
 											"sid": 875340224224891
@@ -10638,6 +10265,14 @@
 									"parameters": {
 										"state": "active"
 									}
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 403037740220403,
+									"parameters": [
+										"\"SFX_Confetti_Explosion\"",
+										"-10"
+									]
 								},
 								{
 									"id": "create-object",
@@ -10673,9 +10308,104 @@
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 490426302130388,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 944567490416959,
+									"parameters": {
+										"variable": "PanPointerID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 748935022202495,
+									"parameters": {
+										"variable": "TouchZoomID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 235042406133969,
+									"parameters": {
+										"variable": "PanLastX",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 407707742800650,
+									"parameters": {
+										"variable": "PanLastY",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 863883455749807,
+									"parameters": {
+										"variable": "IsTimerRunning",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 737415669122313,
+									"parameters": {
+										"variable": "IsInputLocked",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 992833321444873
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "ondialogclosed1",
+									"objectClass": "Dia_winSceen",
+									"sid": 324027357765353,
+									"behaviorType": "Dialog"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 415493464237742,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 623753487901351,
+									"parameters": {
+										"variable": "IsInputLocked",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 405846166511030
 						},
 						{
 							"eventType": "group",
@@ -10718,6 +10448,14 @@
 											"parameters": {
 												"collisions": "disabled"
 											}
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 966086124359374,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
 										}
 									],
 									"sid": 578922302976656,
@@ -10776,6 +10514,14 @@
 											"parameters": {
 												"collisions": "disabled"
 											}
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 781322099661756,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
 										}
 									],
 									"sid": 795040011075534,
@@ -10907,7 +10653,16 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"callFunction": "PlaySFX",
+													"sid": 421001320381397,
+													"parameters": [
+														"\"SE_coin\"",
+														"-10"
+													]
+												}
+											],
 											"sid": 626345867681026,
 											"children": [
 												{
@@ -11230,6 +10985,14 @@
 									],
 									"actions": [
 										{
+											"callFunction": "PlaySFX",
+											"sid": 260144511549881,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
+										},
+										{
 											"id": "setenabled0",
 											"objectClass": "UI_btn_home",
 											"sid": 336096685659314,
@@ -11322,6 +11085,14 @@
 										"target_y1": "0",
 										"center4": "yes"
 									}
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 459876578243615,
+									"parameters": [
+										"\"SE_Click\"",
+										"-5"
+									]
 								}
 							],
 							"sid": 502798097576418
@@ -11348,6 +11119,14 @@
 								{
 									"callFunction": "Restart_Level",
 									"sid": 610445253674446
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 766736514083564,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 701272038182549
@@ -11387,11 +11166,16 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "F_Snake",
-									"sid": 390556746443733,
+									"sid": 451414895442368,
 									"parameters": {
 										"instance-variable": "CanTouch",
 										"value": "false"
 									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 699662467057738
 								},
 								{
 									"id": "open0",
@@ -11432,7 +11216,16 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 861174267984959,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								}
+							],
 							"sid": 409533854183845,
 							"children": [
 								{
@@ -11579,6 +11372,14 @@
 									"parameters": [
 										"\"\""
 									]
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 860656776368964,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
 								}
 							],
 							"sid": 411260664087381
@@ -11594,6 +11395,14 @@
 								}
 							],
 							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 309649397315621,
+									"parameters": [
+										"\"SE_lose_popup\"",
+										"-10"
+									]
+								},
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "F_Snake",
@@ -11691,6 +11500,123 @@
 								}
 							],
 							"sid": 170240965609596
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "ondialogopened0",
+									"objectClass": "Dia_noti_restart",
+									"sid": 378719156445210,
+									"behaviorType": "Dialog"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 925841579787245,
+									"parameters": [
+										"\"SE_revive_popup\"",
+										"-10"
+									]
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 709367791247595,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 492102616272464,
+									"parameters": {
+										"variable": "PanPointerID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 353369351717737,
+									"parameters": {
+										"variable": "TouchZoomID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 672761375362845,
+									"parameters": {
+										"variable": "PanLastX",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 765899078761378,
+									"parameters": {
+										"variable": "PanLastY",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 478828026714341,
+									"parameters": {
+										"variable": "IsTimerRunning",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 811354963783465,
+									"parameters": {
+										"variable": "IsInputLocked",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 401140246035929
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "ondialogclosed1",
+									"objectClass": "Dia_noti_restart",
+									"sid": 229418575361147,
+									"behaviorType": "Dialog"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "F_Snake",
+									"sid": 358867775157241,
+									"parameters": {
+										"instance-variable": "CanTouch",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 319495762273962,
+									"parameters": {
+										"variable": "IsInputLocked",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 946894086991935
 						}
 					],
 					"sid": 546206241501007
@@ -11737,6 +11663,14 @@
 											"parameters": [
 												"\"\""
 											]
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 906425017698072,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
 										}
 									],
 									"sid": 478987287351435
@@ -11772,6 +11706,14 @@
 											"parameters": [
 												"\"\""
 											]
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 811909527038862,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
 										}
 									],
 									"sid": 666344886867077
@@ -11798,6 +11740,14 @@
 											"sid": 881662235988317,
 											"parameters": [
 												"\"\""
+											]
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 404736613997285,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
 											]
 										}
 									],
@@ -11979,6 +11929,14 @@
 									],
 									"actions": [
 										{
+											"callFunction": "PlaySFX",
+											"sid": 865724890613513,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
+										},
+										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
 											"sid": 163486604034762,
@@ -12019,6 +11977,14 @@
 										}
 									],
 									"actions": [
+										{
+											"callFunction": "PlaySFX",
+											"sid": 553691914949014,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
+										},
 										{
 											"id": "set-instvar-value",
 											"objectClass": "UI_btn_booter",
@@ -13084,7 +13050,16 @@
 																	}
 																}
 															],
-															"actions": [],
+															"actions": [
+																{
+																	"callFunction": "PlaySFX",
+																	"sid": 621783380211198,
+																	"parameters": [
+																		"\"SE_Click\"",
+																		"-10"
+																	]
+																}
+															],
 															"sid": 320186750057012,
 															"children": [
 																{
@@ -13661,7 +13636,16 @@
 																	}
 																}
 															],
-															"actions": [],
+															"actions": [
+																{
+																	"callFunction": "PlaySFX",
+																	"sid": 756358582323501,
+																	"parameters": [
+																		"\"SE_Click\"",
+																		"-10"
+																	]
+																}
+															],
 															"sid": 792573057395258,
 															"children": [
 																{
@@ -13732,6 +13716,14 @@
 											],
 											"actions": [
 												{
+													"callFunction": "PlaySFX",
+													"sid": 485832587913034,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												},
+												{
 													"id": "close1",
 													"objectClass": "Dia_buy_hint",
 													"sid": 438437832114656,
@@ -13766,6 +13758,14 @@
 												}
 											],
 											"actions": [
+												{
+													"callFunction": "PlaySFX",
+													"sid": 297918884069839,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												},
 												{
 													"id": "setenabled0",
 													"objectClass": "UI_btn_booster",
@@ -13830,7 +13830,16 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"callFunction": "PlaySFX",
+													"sid": 274393277005225,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												}
+											],
 											"sid": 285298091939135,
 											"children": [
 												{
@@ -13962,6 +13971,14 @@
 												}
 											],
 											"actions": [
+												{
+													"callFunction": "PlaySFX",
+													"sid": 495676276735430,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												},
 												{
 													"id": "close1",
 													"objectClass": "Dia_noti_hint",
@@ -14795,7 +14812,16 @@
 																	}
 																}
 															],
-															"actions": [],
+															"actions": [
+																{
+																	"callFunction": "PlaySFX",
+																	"sid": 889061107430246,
+																	"parameters": [
+																		"\"SE_Click\"",
+																		"-10"
+																	]
+																}
+															],
 															"sid": 917899904143918,
 															"children": [
 																{
@@ -15337,6 +15363,14 @@
 																		"instance-variable": "ToggleState",
 																		"value": "1- UI_btn_booter.ToggleState"
 																	}
+																},
+																{
+																	"callFunction": "PlaySFX",
+																	"sid": 779318191161306,
+																	"parameters": [
+																		"\"SE_Click\"",
+																		"-10"
+																	]
 																}
 															],
 															"sid": 573351468790462,
@@ -15659,6 +15693,14 @@
 											],
 											"actions": [
 												{
+													"callFunction": "PlaySFX",
+													"sid": 954591462422365,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												},
+												{
 													"id": "close1",
 													"objectClass": "Dia_buy_grid",
 													"sid": 234635379725847,
@@ -15693,6 +15735,14 @@
 												}
 											],
 											"actions": [
+												{
+													"callFunction": "PlaySFX",
+													"sid": 580238629360329,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												},
 												{
 													"id": "setenabled0",
 													"objectClass": "UI_btn_booster",
@@ -15757,7 +15807,16 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"callFunction": "PlaySFX",
+													"sid": 756987178693171,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												}
+											],
 											"sid": 947535579202495,
 											"children": [
 												{
@@ -15889,6 +15948,14 @@
 												}
 											],
 											"actions": [
+												{
+													"callFunction": "PlaySFX",
+													"sid": 520075180689718,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												},
 												{
 													"id": "close1",
 													"objectClass": "Dia_noti_grid",
@@ -16312,6 +16379,412 @@
 						}
 					],
 					"sid": 677004420041689
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "New Object",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Black_Hole",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "OpenHint",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "ondialogopened0",
+													"objectClass": "Dia_noti_blackHole",
+													"sid": 550133974178297,
+													"behaviorType": "Dialog"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 275756017516527,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "fade_layout",
+													"sid": 250476977011585,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 174655976795531,
+													"parameters": {
+														"variable": "IsTimerRunning",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 479081426133004,
+													"parameters": {
+														"variable": "IsInputLocked",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 284801624442006,
+													"parameters": {
+														"variable": "PanPointerID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 853136300841077,
+													"parameters": {
+														"variable": "TouchZoomID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 873861471950896,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 763145486784631,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 154583689098573
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "ondialogclosed1",
+													"objectClass": "Dia_noti_blackHole",
+													"sid": 906949548292384,
+													"behaviorType": "Dialog"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 907643351378421,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 175343499859699,
+													"parameters": {
+														"variable": "IsInputLocked",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 994490599257863
+										}
+									],
+									"sid": 298164627762823
+								},
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "CloseHint",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "onclicked3",
+													"objectClass": "UI_btn_booster",
+													"sid": 714684029752757,
+													"behaviorType": "Button"
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "UI_btn_booster",
+													"sid": 828426570054734,
+													"parameters": {
+														"tags": "\"noti_hole\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "PlaySFX",
+													"sid": 633568099593359,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												},
+												{
+													"id": "close1",
+													"objectClass": "Dia_noti_blackHole",
+													"sid": 193178874584370,
+													"behaviorType": "Dialog"
+												},
+												{
+													"callFunction": "closeDialog",
+													"sid": 278572826191718,
+													"parameters": [
+														"\"\""
+													]
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "fade_layout",
+													"sid": 837959638767065,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 479111683446743
+										}
+									],
+									"sid": 822009566323393
+								}
+							],
+							"sid": 511986330007144
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Wall",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "DiaLog",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "ondialogopened0",
+													"objectClass": "Dia_notiWall",
+													"sid": 357092412832416,
+													"behaviorType": "Dialog"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 537529528026184,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "fade_layout",
+													"sid": 792835934869441,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 160418786840041,
+													"parameters": {
+														"variable": "IsTimerRunning",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 728254936825603,
+													"parameters": {
+														"variable": "IsInputLocked",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 635646197381820,
+													"parameters": {
+														"variable": "PanPointerID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 822213328766300,
+													"parameters": {
+														"variable": "TouchZoomID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 194690195752972,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 330690035623222,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 847340220636459
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "ondialogclosed1",
+													"objectClass": "Dia_notiWall",
+													"sid": 517105186076147,
+													"behaviorType": "Dialog"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 637621700594292,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 300515013570461,
+													"parameters": {
+														"variable": "IsInputLocked",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 926657386542852
+										}
+									],
+									"sid": 621361394814392
+								},
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Close",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "onclicked3",
+													"objectClass": "UI_btn_booster",
+													"sid": 102057534625076,
+													"behaviorType": "Button"
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "UI_btn_booster",
+													"sid": 307941345264428,
+													"parameters": {
+														"tags": "\"noti_wall\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "PlaySFX",
+													"sid": 665471991280641,
+													"parameters": [
+														"\"SE_Click\"",
+														"-10"
+													]
+												},
+												{
+													"id": "close1",
+													"objectClass": "Dia_notiWall",
+													"sid": 103495692189754,
+													"behaviorType": "Dialog"
+												},
+												{
+													"callFunction": "closeDialog",
+													"sid": 300367030147208,
+													"parameters": [
+														"\"\""
+													]
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "fade_layout",
+													"sid": 874222564010494,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 690089876337658
+										}
+									],
+									"sid": 226960011397442
+								}
+							],
+							"sid": 277746419424987
+						}
+					],
+					"sid": 443400769483216
 				},
 				{
 					"eventType": "group",
@@ -17611,6 +18084,14 @@
 											"parameters": {
 												"text": "play_zoombar_frame.SliderBar.value & \"%\""
 											}
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 356811042543536,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
 										}
 									],
 									"sid": 322231488810836,
@@ -17655,6 +18136,14 @@
 											"parameters": {
 												"text": "play_zoombar_frame.SliderBar.value & \"%\""
 											}
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 155635948600947,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
 										}
 									],
 									"sid": 145428374122150,
