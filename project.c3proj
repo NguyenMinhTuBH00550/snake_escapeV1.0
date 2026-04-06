@@ -221,20 +221,10 @@
 	"objectTypes": {
 		"items": [
 			"9patch",
-			"CameraController",
-			"play_zoombar_frame",
 			"TiledBackground",
-			"BG",
-			"wayBlockers",
-			"blackHole",
-			"hand_tutorial",
-			"hand_icon",
-			"par_hand",
 			"Sprite",
 			"Audio",
-			"HUD_popup_newobject_image_wall",
-			"popup_newobject_image_wall",
-			"HUD_popup_newobject_image_blackhole"
+			"snake_face_"
 		],
 		"subfolders": [
 			{
@@ -257,7 +247,11 @@
 					"HUD_booster_frame",
 					"HUD_outLive",
 					"BG_shop",
-					"HUD_boosterBuy"
+					"HUD_boosterBuy",
+					"BG",
+					"HUD_popup_newobject_image_blackhole",
+					"HUD_popup_newobject_image_wall",
+					"popup_newobject_image_wall"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -413,7 +407,13 @@
 					"SnakeHead",
 					"SnakeTail",
 					"UI_count_booster",
-					"hint_grid"
+					"hint_grid",
+					"blackHole",
+					"hand_icon",
+					"hand_tutorial",
+					"par_hand",
+					"play_zoombar_frame",
+					"wayBlockers"
 				],
 				"subfolders": [],
 				"name": "UI"

@@ -67,6 +67,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -181,6 +186,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -295,6 +305,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -409,6 +424,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -514,6 +534,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -628,6 +653,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -742,6 +772,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -6519,6 +6554,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -6633,6 +6673,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -6747,6 +6792,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -6861,6 +6911,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"template": {
@@ -6980,6 +7035,10 @@
 												"state": true
 											},
 											{
+												"iv": "NeedBack",
+												"state": true
+											},
+											{
 												"iv": "BodyGoalX",
 												"state": true
 											},
@@ -7030,10 +7089,6 @@
 											{
 												"iv": "snakeOn",
 												"state": true
-											},
-											{
-												"iv": "NeedBack",
-												"state": true
 											}
 										]
 									}
@@ -7078,6 +7133,15 @@
 									{
 										"key": "Timer",
 										"state": []
+									},
+									{
+										"key": "Tween",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
 									}
 								]
 							},
@@ -7333,6 +7397,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -7437,6 +7506,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -7634,6 +7708,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"template": {
@@ -7753,6 +7832,10 @@
 												"state": true
 											},
 											{
+												"iv": "Needback",
+												"state": true
+											},
+											{
 												"iv": "TailGoalX",
 												"state": true
 											},
@@ -7766,10 +7849,6 @@
 											},
 											{
 												"iv": "cpY",
-												"state": true
-											},
-											{
-												"iv": "Needback",
 												"state": true
 											}
 										]
@@ -7815,6 +7894,15 @@
 									{
 										"key": "Timer",
 										"state": []
+									},
+									{
+										"key": "Tween",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
 									}
 								]
 							},
@@ -8105,6 +8193,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -8219,6 +8312,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -8333,6 +8431,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"sceneGraphData": {
@@ -8447,6 +8550,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"template": {
@@ -8566,6 +8674,10 @@
 												"state": true
 											},
 											{
+												"iv": "NeedBack",
+												"state": true
+											},
+											{
 												"iv": "BodyGoalX",
 												"state": true
 											},
@@ -8616,10 +8728,6 @@
 											{
 												"iv": "snakeOn",
 												"state": true
-											},
-											{
-												"iv": "NeedBack",
-												"state": true
 											}
 										]
 									}
@@ -8664,6 +8772,15 @@
 									{
 										"key": "Timer",
 										"state": []
+									},
+									{
+										"key": "Tween",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
 									}
 								]
 							},
@@ -9071,53 +9188,6 @@
 							1,
 							1,
 							0.6
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CameraController",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": false,
-						"live-preview": false
-					},
-					"uid": 30,
-					"sid": 497917214808910,
-					"tags": "",
-					"instanceVariables": {
-						"Zoom": 1,
-						"TargetZoom": 1,
-						"ZoomMin": 1,
-						"ZoomMax": 2,
-						"ZoomSpeed": 0.15,
-						"BoundLeft": 0,
-						"BoundRight": 0,
-						"BoundTop": 0,
-						"BoundBottom": 0
-					},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 497917214808910,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 2016,
-						"y": 1152,
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -9551,6 +9621,43 @@
 						"y": 1973,
 						"width": 824,
 						"height": 603,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "snake_face_",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 30,
+					"sid": 206078691681982,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 206078691681982,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -1566,
+						"y": -1267,
+						"width": 2048,
+						"height": 2048,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

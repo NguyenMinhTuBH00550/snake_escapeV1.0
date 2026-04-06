@@ -105,6 +105,11 @@
 			"behaviorId": "Timer",
 			"name": "Timer",
 			"sid": 324648685182931
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 369844668800691
 		}
 	],
 	"effectTypes": [],
