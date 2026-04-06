@@ -8356,6 +8356,7 @@
 											],
 											"actions": [],
 											"sid": 246466354685406,
+											"disabled": true,
 											"children": [
 												{
 													"eventType": "block",
@@ -8390,7 +8391,8 @@
 															}
 														}
 													],
-													"sid": 459188001314104
+													"sid": 459188001314104,
+													"disabled": true
 												}
 											]
 										}
@@ -9606,7 +9608,8 @@
 																	}
 																}
 															],
-															"sid": 520540850477783
+															"sid": 520540850477783,
+															"disabled": true
 														}
 													]
 												}
@@ -9736,15 +9739,6 @@
 															"parameters": [
 																"SnakeTail.ownID"
 															]
-														},
-														{
-															"id": "log",
-															"objectClass": "Browser",
-															"sid": 901324086352174,
-															"parameters": {
-																"type": "log",
-																"message": "\"3\""
-															}
 														}
 													],
 													"sid": 198691874028009,
@@ -9755,25 +9749,59 @@
 																{
 																	"id": "pick-by-evaluate",
 																	"objectClass": "System",
-																	"sid": 919613815690053,
+																	"sid": 696783045127072,
 																	"parameters": {
 																		"object": "SnakeTail",
-																		"expression": "SnakeTail.BackTargetX = SnakeTail.X &\nSnakeTail.BackTargetY = SnakeTail.Y"
+																		"expression": "SnakeTail.BackTargetX = SnakeTail.X &\nSnakeTail.BackTargetY = SnakeTail.Y "
 																	}
 																}
 															],
-															"actions": [
+															"actions": [],
+															"sid": 568109923577033,
+															"children": [
 																{
-																	"id": "set-boolean-instvar",
-																	"objectClass": "SnakeTail",
-																	"sid": 983853913895376,
-																	"parameters": {
-																		"instance-variable": "CanTouch",
-																		"value": "true"
-																	}
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-all",
+																			"objectClass": "System",
+																			"sid": 468982894865628,
+																			"parameters": {
+																				"object": "F_Snake"
+																			}
+																		},
+																		{
+																			"id": "pick-by-evaluate",
+																			"objectClass": "System",
+																			"sid": 345386671907154,
+																			"parameters": {
+																				"object": "F_Snake",
+																				"expression": "F_Snake.ownID = SnakeTail.ownID"
+																			}
+																		},
+																		{
+																			"id": "for-each",
+																			"objectClass": "System",
+																			"sid": 190295131154267,
+																			"parameters": {
+																				"object": "F_Snake"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-boolean-instvar",
+																			"objectClass": "F_Snake",
+																			"sid": 762185539534677,
+																			"parameters": {
+																				"instance-variable": "CanTouch",
+																				"value": "true"
+																			}
+																		}
+																	],
+																	"sid": 602061842666178
 																}
-															],
-															"sid": 605819535590345
+															]
 														}
 													]
 												}
@@ -9808,86 +9836,6 @@
 								}
 							],
 							"sid": 272404827684138
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-all",
-									"objectClass": "System",
-									"sid": 507751472588113,
-									"parameters": {
-										"object": "F_Snake"
-									}
-								},
-								{
-									"id": "pick-by-evaluate",
-									"objectClass": "System",
-									"sid": 561581908995722,
-									"parameters": {
-										"object": "F_Snake",
-										"expression": "F_Snake.ownID = PickedID"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 869984598242954,
-							"disabled": true,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-moving",
-											"objectClass": "F_Snake",
-											"sid": 269854497453942,
-											"behaviorType": "MoveTo",
-											"isInverted": true
-										}
-									],
-									"actions": [],
-									"sid": 459875394367547,
-									"disabled": true,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "pick-by-evaluate",
-													"objectClass": "System",
-													"sid": 588175058108555,
-													"parameters": {
-														"object": "F_Snake",
-														"expression": "F_Snake.X = F_Snake.StartX &\nF_Snake.Y = F_Snake.StartY"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "F_Snake",
-													"sid": 449162072724306,
-													"parameters": {
-														"instance-variable": "CanTouch",
-														"value": "true"
-													}
-												},
-												{
-													"id": "log",
-													"objectClass": "Browser",
-													"sid": 119490011407295,
-													"parameters": {
-														"type": "log",
-														"message": "\"4\""
-													}
-												}
-											],
-											"sid": 184104523239325,
-											"disabled": true
-										}
-									]
-								}
-							]
 						}
 					],
 					"sid": 680401071414401

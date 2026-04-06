@@ -149,7 +149,8 @@
 							}
 						}
 					],
-					"sid": 512552424091593
+					"sid": 512552424091593,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -202,7 +203,8 @@
 							}
 						}
 					],
-					"sid": 695568633879271
+					"sid": 695568633879271,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -343,7 +345,8 @@
 							}
 						}
 					],
-					"sid": 519513165698277
+					"sid": 519513165698277,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -396,7 +399,8 @@
 							}
 						}
 					],
-					"sid": 474280622842580
+					"sid": 474280622842580,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
