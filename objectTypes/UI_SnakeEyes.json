@@ -1,32 +1,55 @@
 {
-	"name": "home_snake_preview",
+	"name": "UI_SnakeEyes",
 	"plugin-id": "Sprite",
-	"sid": 514648556628056,
+	"sid": 335761568012470,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 471450386247323
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 837529587378770
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 109,
-						"height": 397,
+						"width": 125,
+						"height": 227,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7279699,
+						"imageSpriteId": 5876220,
+						"collisionPoly": {
+							"points": [
+								0,
+								1,
+								0,
+								0,
+								1,
+								0,
+								1,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 664378411992303,
+				"sid": 713930793927462,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
