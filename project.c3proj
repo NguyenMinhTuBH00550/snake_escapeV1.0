@@ -57,6 +57,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "List",
+			"name": "List",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "LocalStorage",
 			"name": "Local storage",
 			"author": "Scirra",
@@ -226,7 +233,8 @@
 			"Audio",
 			"snake_face_",
 			"UI_SnakeEyes",
-			"UI_eye"
+			"UI_eye",
+			"List"
 		],
 		"subfolders": [
 			{
@@ -1293,6 +1301,54 @@
 							"name": "lv58.json",
 							"type": "application/json",
 							"sid": 576862381550996,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv59.json",
+							"type": "application/json",
+							"sid": 355279479265989,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv60.json",
+							"type": "application/json",
+							"sid": 152113799451425,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv61.json",
+							"type": "application/json",
+							"sid": 486304447012370,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv62.json",
+							"type": "application/json",
+							"sid": 955440447581771,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv63.json",
+							"type": "application/json",
+							"sid": 485571951755740,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "lv64.json",
+							"type": "application/json",
+							"sid": 861764112164926,
 							"file-info": {
 								"purpose": "none"
 							}

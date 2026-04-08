@@ -47,7 +47,7 @@
 			"eventType": "variable",
 			"name": "CurrentLevel",
 			"type": "string",
-			"initialValue": "4",
+			"initialValue": "-1",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -543,7 +543,17 @@
 			"functionParameters": [],
 			"eventType": "function-block",
 			"conditions": [],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 165269917663253,
+					"parameters": {
+						"variable": "CurrentLevel",
+						"value": "DicSaveGame.Get(SAVE_LEVEL)"
+					}
+				}
+			],
 			"sid": 676433732713456,
 			"children": [
 				{
@@ -570,9 +580,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "text_level",
-							"sid": 471694989698029,
+							"sid": 769842076691690,
 							"parameters": {
-								"text": "\"Level  \" & int(CurrentLevel)"
+								"text": "\"Level  \" & DicSaveGame.Get(SAVE_LEVEL)"
 							}
 						},
 						{
@@ -1230,9 +1240,18 @@
 							],
 							"actions": [
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 628020483608110,
+									"parameters": {
+										"variable": "CurrentLevel",
+										"value": "DicSaveGame.Get(SAVE_LEVEL)"
+									}
+								},
+								{
 									"id": "set-layer-opacity",
 									"objectClass": "System",
-									"sid": 787640442602858,
+									"sid": 376708613731863,
 									"parameters": {
 										"layer": "\"Fader\"",
 										"opacity": "100"
@@ -1346,6 +1365,14 @@
 									"parameters": {
 										"variable": "IsInputLocked",
 										"value": "0"
+									}
+								},
+								{
+									"id": "add-item",
+									"objectClass": "List",
+									"sid": 855986262704797,
+									"parameters": {
+										"text": "\"level \" & CurrentLevel"
 									}
 								}
 							],
@@ -5584,92 +5611,6 @@
 																						{
 																							"id": "for",
 																							"objectClass": "System",
-																							"sid": 266521042861324,
-																							"parameters": {
-																								"name": "\"a\"",
-																								"start-index": "0",
-																								"end-index": "tokencount(newWayPoint, \"|\")-2"
-																							}
-																						}
-																					],
-																					"actions": [],
-																					"sid": 914491581923918,
-																					"disabled": true,
-																					"children": [
-																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "compare-two-values",
-																									"objectClass": "System",
-																									"sid": 588522856915948,
-																									"parameters": {
-																										"first-value": "tokenat(newWayPoint, loopindex(\"a\"), \"|\") ",
-																										"comparison": 1,
-																										"second-value": "str(F_Snake.InitWaypoint)"
-																									}
-																								}
-																							],
-																							"actions": [
-																								{
-																									"id": "set-instvar-value",
-																									"objectClass": "F_Snake",
-																									"sid": 108615705698641,
-																									"parameters": {
-																										"instance-variable": "wayPoint",
-																										"value": "Self.wayPoint & tokenat(newWayPoint, loopindex(\"a\"), \"|\") & \"|\""
-																									}
-																								}
-																							],
-																							"sid": 969401926289239,
-																							"disabled": true
-																						},
-																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "else",
-																									"objectClass": "System",
-																									"sid": 112987824775229
-																								},
-																								{
-																									"id": "compare-two-values",
-																									"objectClass": "System",
-																									"sid": 263083720150972,
-																									"parameters": {
-																										"first-value": "tokenat(newWayPoint, loopindex(\"a\"), \"|\") ",
-																										"comparison": 0,
-																										"second-value": "str(F_Snake.InitWaypoint)"
-																									}
-																								}
-																							],
-																							"actions": [
-																								{
-																									"id": "stop-loop",
-																									"objectClass": "System",
-																									"sid": 798702015459649
-																								},
-																								{
-																									"id": "set-instvar-value",
-																									"objectClass": "F_Snake",
-																									"sid": 106579874983660,
-																									"parameters": {
-																										"instance-variable": "wayPoint",
-																										"value": "Self.wayPoint & tokenat(newWayPoint, loopindex(\"a\"), \"|\") & \"|\""
-																									}
-																								}
-																							],
-																							"sid": 992978999373259,
-																							"disabled": true
-																						}
-																					]
-																				},
-																				{
-																					"eventType": "block",
-																					"conditions": [
-																						{
-																							"id": "for",
-																							"objectClass": "System",
 																							"sid": 979599040179801,
 																							"parameters": {
 																								"name": "\"i\"",
@@ -6893,6 +6834,166 @@
 																										}
 																									],
 																									"sid": 516516875005974
+																								}
+																							]
+																						}
+																					]
+																				},
+																				{
+																					"eventType": "block",
+																					"conditions": [
+																						{
+																							"id": "pick-all",
+																							"objectClass": "System",
+																							"sid": 260929584336456,
+																							"parameters": {
+																								"object": "wayBlockers"
+																							}
+																						}
+																					],
+																					"actions": [],
+																					"sid": 407362014380198,
+																					"children": [
+																						{
+																							"eventType": "block",
+																							"conditions": [],
+																							"actions": [
+																								{
+																									"id": "subtract-from-instvar",
+																									"objectClass": "wayBlockers",
+																									"sid": 941835175413749,
+																									"parameters": {
+																										"instance-variable": "lockTime",
+																										"value": "1"
+																									}
+																								},
+																								{
+																									"id": "set-text",
+																									"objectClass": "text_wayBlocker",
+																									"sid": 722519118908758,
+																									"parameters": {
+																										"text": "wayBlockers.lockTime"
+																									}
+																								},
+																								{
+																									"callFunction": "ChangeTextWidth",
+																									"sid": 449980970302006,
+																									"parameters": [
+																										"text_wayBlocker.UID"
+																									]
+																								},
+																								{
+																									"id": "stop-all-tweens",
+																									"objectClass": "wayBlockers",
+																									"sid": 625238698403253,
+																									"behaviorType": "Tween"
+																								},
+																								{
+																									"id": "set-scale",
+																									"objectClass": "wayBlockers",
+																									"sid": 241166380867579,
+																									"parameters": {
+																										"scale": "Block_scale"
+																									}
+																								},
+																								{
+																									"id": "tween-two-properties",
+																									"objectClass": "wayBlockers",
+																									"sid": 269659127957408,
+																									"behaviorType": "Tween",
+																									"parameters": {
+																										"tags": "\"\"",
+																										"property": "scale",
+																										"end-x": "0.5",
+																										"end-y": "0.6",
+																										"time": "0.1",
+																										"ease": "noease",
+																										"destroy-on-complete": "no",
+																										"loop": "no",
+																										"ping-pong": "yes",
+																										"repeat-count": "1"
+																									}
+																								}
+																							],
+																							"sid": 693872058061055,
+																							"children": [
+																								{
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "pick-by-comparison",
+																											"objectClass": "System",
+																											"sid": 644548460486983,
+																											"parameters": {
+																												"object": "wayBlockers",
+																												"expression": "wayBlockers.lockTime",
+																												"comparison": 3,
+																												"value": "0"
+																											}
+																										}
+																									],
+																									"actions": [
+																										{
+																											"id": "wait",
+																											"objectClass": "System",
+																											"sid": 610743403177129,
+																											"parameters": {
+																												"seconds": "0.2",
+																												"use-timescale": true
+																											}
+																										},
+																										{
+																											"id": "destroy",
+																											"objectClass": "wayBlockers",
+																											"sid": 194218628346587
+																										}
+																									],
+																									"sid": 693452479287997,
+																									"children": [
+																										{
+																											"eventType": "block",
+																											"conditions": [
+																												{
+																													"id": "pick-all",
+																													"objectClass": "System",
+																													"sid": 645809035273512,
+																													"parameters": {
+																														"object": "Snake_Checkpoint"
+																													}
+																												},
+																												{
+																													"id": "pick-by-evaluate",
+																													"objectClass": "System",
+																													"sid": 694931938721845,
+																													"parameters": {
+																														"object": "Snake_Checkpoint",
+																														"expression": "wayBlockers.GridX = Snake_Checkpoint.GridX &\nwayBlockers.GridY = Snake_Checkpoint.GridY"
+																													}
+																												}
+																											],
+																											"actions": [
+																												{
+																													"id": "set-boolean-instvar",
+																													"objectClass": "Snake_Checkpoint",
+																													"sid": 164767684297120,
+																													"parameters": {
+																														"instance-variable": "HasWayBlocker",
+																														"value": "false"
+																													}
+																												},
+																												{
+																													"id": "set-instvar-value",
+																													"objectClass": "Snake_Checkpoint",
+																													"sid": 987813198253429,
+																													"parameters": {
+																														"instance-variable": "HasSnake",
+																														"value": "0"
+																													}
+																												}
+																											],
+																											"sid": 522530489638527
+																										}
+																									]
 																								}
 																							]
 																						}
@@ -10914,11 +11015,15 @@
 												{
 													"id": "set-key",
 													"objectClass": "DicSaveGame",
-													"sid": 992066234312317,
+													"sid": 831423000504595,
 													"parameters": {
-														"key": "\"CurrentLevel\"",
+														"key": "SAVE_LEVEL",
 														"value": "CurrentLevel"
 													}
+												},
+												{
+													"callFunction": "SAVE_GAME",
+													"sid": 765654760586871
 												},
 												{
 													"id": "wait",

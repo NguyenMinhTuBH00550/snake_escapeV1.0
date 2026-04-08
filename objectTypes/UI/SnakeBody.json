@@ -144,6 +144,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 720134259769526
+		},
+		{
+			"name": "Waypoints",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 281705796397868
 		}
 	],
 	"behaviorTypes": [],

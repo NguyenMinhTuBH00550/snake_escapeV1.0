@@ -452,6 +452,32 @@
 					"text": "LEVEL"
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-key",
+							"objectClass": "DicSaveGame",
+							"sid": 631045580614230,
+							"parameters": {
+								"key": "SAVE_LEVEL"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-key",
+							"objectClass": "DicSaveGame",
+							"sid": 140161130011166,
+							"parameters": {
+								"key": "SAVE_LEVEL",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 303611994456873
+				},
+				{
 					"eventType": "comment",
 					"text": "MUSIC"
 				},

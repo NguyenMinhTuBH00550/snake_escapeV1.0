@@ -34,17 +34,17 @@
 						{
 							"id": "set-text",
 							"objectClass": "text_level",
-							"sid": 447163641988644,
+							"sid": 993215976343313,
 							"parameters": {
-								"text": "\"Level  \" & CurrentLevel"
+								"text": "\"Level  \" & DicSaveGame.Get(SAVE_LEVEL)"
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "text_level_count",
-							"sid": 962861758492299,
+							"sid": 388379119893608,
 							"parameters": {
-								"text": "CurrentLevel"
+								"text": "DicSaveGame.Get(SAVE_LEVEL)"
 							}
 						},
 						{
@@ -151,9 +151,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "text_next_level_count",
-							"sid": 880398220731114,
+							"sid": 311892458542290,
 							"parameters": {
-								"text": "int(CurrentLevel) +1"
+								"text": "int(DicSaveGame.Get(SAVE_LEVEL)) +1"
 							}
 						}
 					],
@@ -175,9 +175,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "text_next_level_count",
-							"sid": 279906721436844,
+							"sid": 193021656436844,
 							"parameters": {
-								"text": "int(CurrentLevel) +2"
+								"text": "int(DicSaveGame.Get(SAVE_LEVEL)) +2"
 							}
 						}
 					],
@@ -204,6 +204,28 @@
 					"sid": 574297336614207
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-selection-changed",
+					"objectClass": "List",
+					"sid": 569849024193000
+				}
+			],
+			"actions": [
+				{
+					"id": "set-key",
+					"objectClass": "DicSaveGame",
+					"sid": 146046357777337,
+					"parameters": {
+						"key": "SAVE_LEVEL",
+						"value": "List.SelectedText"
+					}
+				}
+			],
+			"sid": 214178647304627
 		},
 		{
 			"eventType": "group",
