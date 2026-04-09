@@ -6254,16 +6254,6 @@
 									"sid": 223580759033716
 								},
 								{
-									"eventType": "variable",
-									"name": "Spacing",
-									"type": "number",
-									"initialValue": "10",
-									"comment": "",
-									"isStatic": false,
-									"isConstant": false,
-									"sid": 151105829893074
-								},
-								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -6731,14 +6721,6 @@
 																										{
 																											"eventType": "block",
 																											"conditions": [
-																												{
-																													"id": "pick-all",
-																													"objectClass": "System",
-																													"sid": 302492685798406,
-																													"parameters": {
-																														"object": "Snake_Checkpoint"
-																													}
-																												},
 																												{
 																													"id": "pick-by-evaluate",
 																													"objectClass": "System",
@@ -7816,7 +7798,7 @@
 										{
 											"id": "for-each",
 											"objectClass": "System",
-											"sid": 719652165029268,
+											"sid": 457971893153535,
 											"parameters": {
 												"object": "SnakeBody"
 											}
@@ -7883,12 +7865,14 @@
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "pick-by-evaluate",
+															"id": "pick-by-comparison",
 															"objectClass": "System",
-															"sid": 622983689362813,
+															"sid": 303158437433965,
 															"parameters": {
 																"object": "Snake_Checkpoint",
-																"expression": "Snake_Checkpoint.IID = int(tokenat(SnakeBody.wayPoint, loopindex , \"|\"))"
+																"expression": "Snake_Checkpoint.IID",
+																"comparison": 0,
+																"value": "int(tokenat(SnakeBody.wayPoint, loopindex, \"|\"))"
 															}
 														}
 													],
@@ -7956,14 +7940,6 @@
 											"parameters": {
 												"object": "SnakeTail",
 												"expression": "SnakeTail.ownID = activeOwnID"
-											}
-										},
-										{
-											"id": "for-each",
-											"objectClass": "System",
-											"sid": 617281825498355,
-											"parameters": {
-												"object": "SnakeTail"
 											}
 										}
 									],
@@ -8169,6 +8145,26 @@
 							"isStatic": false,
 							"isConstant": false,
 							"sid": 152764862795750
+						},
+						{
+							"eventType": "variable",
+							"name": "Index",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 826893481968092
+						},
+						{
+							"eventType": "variable",
+							"name": "Spacing",
+							"type": "number",
+							"initialValue": "5",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 151105829893074
 						},
 						{
 							"eventType": "block",
@@ -8877,8 +8873,7 @@
 										},
 										{
 											"callFunction": "LoseLife",
-											"sid": 705945030657592,
-											"disabled": true
+											"sid": 705945030657592
 										}
 									],
 									"sid": 686504783449966,

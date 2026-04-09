@@ -51,8 +51,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -171,8 +170,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -291,8 +289,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -411,8 +408,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -641,8 +637,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -761,8 +756,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6544,8 +6538,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6664,8 +6657,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6784,8 +6776,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -6904,8 +6895,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -7098,10 +7088,6 @@
 											},
 											{
 												"iv": "snakeOn",
-												"state": true
-											},
-											{
-												"iv": "Waypoints",
 												"state": true
 											}
 										]
@@ -7395,8 +7381,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -8127,8 +8112,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -8247,8 +8231,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -8367,8 +8350,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -8487,8 +8469,7 @@
 						"MoveTargetX": 0,
 						"MoveTargetY": 0,
 						"moveAngle": 0,
-						"snakeOn": 0,
-						"Waypoints": ""
+						"snakeOn": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -8681,10 +8662,6 @@
 											},
 											{
 												"iv": "snakeOn",
-												"state": true
-											},
-											{
-												"iv": "Waypoints",
 												"state": true
 											}
 										]
