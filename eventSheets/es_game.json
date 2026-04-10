@@ -6778,14 +6778,6 @@
 																										"start-index": "tokencount(SnakeTail.wayPoint, \"|\") -2",
 																										"end-index": "0"
 																									}
-																								},
-																								{
-																									"id": "pick-all",
-																									"objectClass": "System",
-																									"sid": 757345697856742,
-																									"parameters": {
-																										"object": "Snake_Checkpoint"
-																									}
 																								}
 																							],
 																							"actions": [],
@@ -7840,6 +7832,12 @@
 												"instance-variable": "BodyGoalY",
 												"value": "GoalY"
 											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "SnakeBody",
+											"sid": 193411716868311,
+											"behaviorType": "MoveTo"
 										}
 									],
 									"sid": 559301531122921,

@@ -4,7 +4,7 @@
 	"name": "snake escape",
 	"runtime": "c3",
 	"useWorker": "auto",
-	"bundleAddons": false,
+	"bundleAddons": true,
 	"usedAddons": [
 		{
 			"type": "plugin",
@@ -123,7 +123,7 @@
 			"id": "aekiro_proui",
 			"name": "ProUI",
 			"author": "Aekiro",
-			"bundled": false,
+			"bundled": true,
 			"version": "1.822"
 		},
 		{
@@ -173,7 +173,7 @@
 			"id": "aekiro_button",
 			"name": "Button",
 			"author": "Aekiro",
-			"bundled": false,
+			"bundled": true,
 			"version": "1.822"
 		},
 		{
@@ -181,7 +181,7 @@
 			"id": "aekiro_dialog",
 			"name": "Dialog",
 			"author": "Aekiro",
-			"bundled": false,
+			"bundled": true,
 			"version": "1.822"
 		},
 		{
@@ -189,7 +189,7 @@
 			"id": "aekiro_gameobject",
 			"name": "Game Object",
 			"author": "Aekiro",
-			"bundled": false,
+			"bundled": true,
 			"version": "1.822"
 		},
 		{
@@ -197,7 +197,7 @@
 			"id": "aekiro_scrollView",
 			"name": "Scroll View",
 			"author": "Aekiro",
-			"bundled": false,
+			"bundled": true,
 			"version": "1.822"
 		},
 		{
@@ -205,7 +205,7 @@
 			"id": "aekiro_sliderbar",
 			"name": "Slider Bar",
 			"author": "Aekiro",
-			"bundled": false,
+			"bundled": true,
 			"version": "1.822"
 		},
 		{
@@ -220,7 +220,7 @@
 			"id": "outline",
 			"name": "Outline",
 			"author": "Richard Lems",
-			"bundled": false,
+			"bundled": true,
 			"version": "1.0.0.0"
 		}
 	],
