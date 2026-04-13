@@ -119,6 +119,19 @@
 						"tag": "\"LoadAllLevels\"",
 						"file": "all_levels.json"
 					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 995760862100902
+				},
+				{
+					"id": "parse",
+					"objectClass": "JsonLevel",
+					"sid": 944203412616169,
+					"parameters": {
+						"data": "AJAX.LastData"
+					}
 				}
 			],
 			"sid": 515464601622336,

@@ -2101,6 +2101,24 @@
 									}
 								},
 								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 545546411690694,
+									"parameters": {
+										"key": "\"SAVE_HINTS\"",
+										"value": "DicSaveGame.Get(\"SAVE_HINTS\") +3"
+									}
+								},
+								{
+									"id": "set-key",
+									"objectClass": "DicSaveGame",
+									"sid": 804654918825753,
+									"parameters": {
+										"key": "\"SAVE_GRID\"",
+										"value": "DicSaveGame.Get(\"SAVE_GRID\") +3"
+									}
+								},
+								{
 									"callFunction": "SAVE_GAME",
 									"sid": 442600874650462
 								},

@@ -5954,8 +5954,73 @@
 											"sid": 840515430268655
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-children",
+											"objectClass": "SnakeHead",
+											"sid": 396274254847247,
+											"parameters": {
+												"child": "UI_SnakeEyes",
+												"which": "own"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 268763821772580,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-children",
+													"objectClass": "UI_SnakeEyes",
+													"sid": 470809488873565,
+													"parameters": {
+														"child": "UI_eye",
+														"which": "own"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle",
+													"objectClass": "UI_eye",
+													"sid": 410245887754020,
+													"parameters": {
+														"angle": "UI_SnakeEyes.Angle"
+													}
+												}
+											],
+											"sid": 736613181639640
+										}
+									]
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "Snake_Checkpoint",
+									"sid": 233019209445121
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Snake_Checkpoint",
+									"sid": 913491393030770,
+									"parameters": {
+										"instance-variable": "myID",
+										"value": "Snake_Checkpoint.IID"
+									}
+								}
+							],
+							"sid": 925172186873453
 						}
 					],
 					"sid": 161037751883584
@@ -7822,6 +7887,16 @@
 									"text": "SnakeBody move"
 								},
 								{
+									"eventType": "variable",
+									"name": "curID",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 833732237145339
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -7902,21 +7977,29 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 334265791650078,
+													"parameters": {
+														"variable": "curID",
+														"value": "int(tokenat(SnakeBody.wayPoint, loopindex, \"|\"))"
+													}
+												}
+											],
 											"sid": 732284180603561,
 											"children": [
 												{
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "pick-by-comparison",
+															"id": "pick-by-evaluate",
 															"objectClass": "System",
-															"sid": 303158437433965,
+															"sid": 310592530344470,
 															"parameters": {
 																"object": "Snake_Checkpoint",
-																"expression": "Snake_Checkpoint.IID",
-																"comparison": 0,
-																"value": "int(tokenat(SnakeBody.wayPoint, loopindex, \"|\"))"
+																"expression": "Snake_Checkpoint.myID = curID"
 															}
 														}
 													],
@@ -9995,7 +10078,34 @@
 									}
 								}
 							],
-							"sid": 881212376260253
+							"sid": 881212376260253,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-parent",
+											"objectClass": "UI_eye",
+											"sid": 335740321576868,
+											"parameters": {
+												"parent": "UI_SnakeEyes",
+												"which": "own"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "UI_eye",
+											"sid": 791869983480667,
+											"parameters": {
+												"angle": "UI_SnakeEyes.Angle"
+											}
+										}
+									],
+									"sid": 109357055587434
+								}
+							]
 						},
 						{
 							"functionName": "eye_animation",
