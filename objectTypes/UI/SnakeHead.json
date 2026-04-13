@@ -74,6 +74,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 456193857986731
+		},
+		{
+			"name": "FakeTargetX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 389037020032809
+		},
+		{
+			"name": "FakeTargetY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 496454321162990
 		}
 	],
 	"behaviorTypes": [],

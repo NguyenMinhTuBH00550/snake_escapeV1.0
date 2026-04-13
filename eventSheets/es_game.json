@@ -548,6 +548,7 @@
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 165269917663253,
+					"disabled": true,
 					"parameters": {
 						"variable": "CurrentLevel",
 						"value": "DicSaveGame.Get(SAVE_LEVEL)"
@@ -1247,6 +1248,11 @@
 										"variable": "CurrentLevel",
 										"value": "DicSaveGame.Get(SAVE_LEVEL)"
 									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 374785142927704
 								},
 								{
 									"id": "set-layer-opacity",
@@ -6193,6 +6199,46 @@
 							]
 						},
 						{
+							"eventType": "variable",
+							"name": "FakeTargetX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 733310184439065
+						},
+						{
+							"eventType": "variable",
+							"name": "FakeTargetY",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 858301584010134
+						},
+						{
+							"eventType": "variable",
+							"name": "moveAngle",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 516093186659038
+						},
+						{
+							"eventType": "variable",
+							"name": "backOffset",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 105457660629668
+						},
+						{
 							"functionName": "SnakePlay",
 							"functionDescription": "",
 							"functionCategory": "",
@@ -6424,46 +6470,6 @@
 													"sid": 144091416744621,
 													"children": [
 														{
-															"eventType": "variable",
-															"name": "FakeTargetX",
-															"type": "number",
-															"initialValue": "0",
-															"comment": "",
-															"isStatic": false,
-															"isConstant": false,
-															"sid": 737474687103332
-														},
-														{
-															"eventType": "variable",
-															"name": "FakeTargetY",
-															"type": "number",
-															"initialValue": "0",
-															"comment": "",
-															"isStatic": false,
-															"isConstant": false,
-															"sid": 838917708348961
-														},
-														{
-															"eventType": "variable",
-															"name": "moveAngle",
-															"type": "number",
-															"initialValue": "0",
-															"comment": "",
-															"isStatic": false,
-															"isConstant": false,
-															"sid": 610693105776766
-														},
-														{
-															"eventType": "variable",
-															"name": "backOffset",
-															"type": "number",
-															"initialValue": "0",
-															"comment": "",
-															"isStatic": false,
-															"isConstant": false,
-															"sid": 776593850153803
-														},
-														{
 															"eventType": "block",
 															"conditions": [
 																{
@@ -6501,10 +6507,10 @@
 																		{
 																			"id": "set-eventvar-value",
 																			"objectClass": "System",
-																			"sid": 650914187120046,
+																			"sid": 418779038608414,
 																			"parameters": {
 																				"variable": "backOffset",
-																				"value": "SnakeBody.Width"
+																				"value": "SnakeBody.Width * 0.64"
 																			}
 																		},
 																		{
@@ -6729,6 +6735,16 @@
 																														"object": "Snake_Checkpoint",
 																														"expression": "Snake_Checkpoint.IID = int(tokenat(SnakeBody.wayPoint, loopindex , \"|\"))"
 																													}
+																												},
+																												{
+																													"id": "compare-instance-variable",
+																													"objectClass": "Snake_Checkpoint",
+																													"sid": 213167384110570,
+																													"parameters": {
+																														"instance-variable": "HasSnake",
+																														"comparison": 0,
+																														"value": "1"
+																													}
 																												}
 																											],
 																											"actions": [
@@ -6793,6 +6809,16 @@
 																											"parameters": {
 																												"object": "Snake_Checkpoint",
 																												"expression": "Snake_Checkpoint.IID = int(tokenat(SnakeTail.wayPoint, loopindex, \"|\"))"
+																											}
+																										},
+																										{
+																											"id": "compare-instance-variable",
+																											"objectClass": "Snake_Checkpoint",
+																											"sid": 567562599399443,
+																											"parameters": {
+																												"instance-variable": "HasSnake",
+																												"comparison": 0,
+																												"value": "1"
 																											}
 																										}
 																									],
@@ -7248,7 +7274,7 @@
 																				{
 																					"id": "for-each",
 																					"objectClass": "System",
-																					"sid": 423944731134504,
+																					"sid": 994116059790912,
 																					"parameters": {
 																						"object": "SnakeBody"
 																					}
@@ -7284,6 +7310,16 @@
 																									"parameters": {
 																										"object": "Snake_Checkpoint",
 																										"expression": "Snake_Checkpoint.IID = int(tokenat(SnakeBody.wayPoint, loopindex , \"|\"))"
+																									}
+																								},
+																								{
+																									"id": "compare-instance-variable",
+																									"objectClass": "Snake_Checkpoint",
+																									"sid": 613963145873458,
+																									"parameters": {
+																										"instance-variable": "HasSnake",
+																										"comparison": 0,
+																										"value": "1"
 																									}
 																								}
 																							],
@@ -7349,6 +7385,16 @@
 																							"parameters": {
 																								"object": "Snake_Checkpoint",
 																								"expression": "Snake_Checkpoint.IID = int(tokenat(SnakeTail.wayPoint, loopindex, \"|\"))"
+																							}
+																						},
+																						{
+																							"id": "compare-instance-variable",
+																							"objectClass": "Snake_Checkpoint",
+																							"sid": 995306519252411,
+																							"parameters": {
+																								"instance-variable": "HasSnake",
+																								"comparison": 0,
+																								"value": "1"
 																							}
 																						}
 																					],

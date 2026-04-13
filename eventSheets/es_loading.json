@@ -400,6 +400,15 @@
 					"parameters": {
 						"layout": "Home"
 					}
+				},
+				{
+					"id": "delete-key",
+					"objectClass": "DicSaveGame",
+					"sid": 946904508552688,
+					"disabled": true,
+					"parameters": {
+						"key": "SAVE_LEVEL"
+					}
 				}
 			],
 			"sid": 142436801467045
