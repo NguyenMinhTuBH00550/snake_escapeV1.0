@@ -348,43 +348,9 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "load",
-							"objectClass": "Dic_Level",
-							"sid": 184268603702663,
-							"parameters": {
-								"json": "AJAX.LastData"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 277044646333036,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for-each-key",
-									"objectClass": "Dic_Level",
-									"sid": 283786442358442
-								}
-							],
-							"actions": [
-								{
-									"id": "request-url",
-									"objectClass": "AJAX",
-									"sid": 168581489611207,
-									"parameters": {
-										"tag": "\"LoadLevel_\" & Dic_Level.CurrentKey",
-										"url": "Dic_Level.Get(Dic_Level.CurrentKey)\n"
-									}
-								}
-							],
-							"sid": 881768212210916,
-							"disabled": true
-						}
-					]
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -413,15 +379,6 @@
 							"parameters": {
 								"variable": "LevelID",
 								"value": "replace(AJAX.Tag, \"LoadLevel_\", \"\")\r\n"
-							}
-						},
-						{
-							"id": "add-key",
-							"objectClass": "Dic_Level",
-							"sid": 209993056580778,
-							"parameters": {
-								"key": "LevelID",
-								"value": "AJAX.LastData"
 							}
 						}
 					],
@@ -801,11 +758,6 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "Dic_Level",
-							"sid": 377303563987199
 						}
 					],
 					"sid": 961657027899954
@@ -828,16 +780,6 @@
 							"parameters": {
 								"key": "LOCAL_TAG",
 								"value": "DICT_SaveGame.AsJSON"
-							}
-						},
-						{
-							"id": "set-item",
-							"objectClass": "LocalStorage",
-							"sid": 546387892005023,
-							"disabled": true,
-							"parameters": {
-								"key": "SAVE_LEVEL",
-								"value": "Dic_level.AsJSON"
 							}
 						}
 					],

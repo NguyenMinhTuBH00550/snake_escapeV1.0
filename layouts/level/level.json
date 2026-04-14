@@ -667,14 +667,6 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "Dic_Level",
-			"properties": {},
-			"uid": 41,
-			"sid": 214963501784317,
-			"tags": "",
-			"instanceVariables": {}
-		},
-		{
 			"type": "GridMap",
 			"properties": {
 				"width": 10,

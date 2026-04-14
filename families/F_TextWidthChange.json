@@ -68,6 +68,12 @@
 		"text_wayBlocker",
 		"text_count_hint",
 		"text_grid",
-		"text_Wall"
+		"text_Wall",
+		"text_vs",
+		"text_Tournament",
+		"text_JoinGroup",
+		"text_LikePage",
+		"text_Invite",
+		"text_Share"
 	]
 }

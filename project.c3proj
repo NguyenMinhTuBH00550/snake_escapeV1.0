@@ -228,13 +228,17 @@
 	"objectTypes": {
 		"items": [
 			"9patch",
-			"TiledBackground",
 			"Sprite",
 			"Audio",
 			"snake_face_",
-			"UI_SnakeEyes",
-			"UI_eye",
-			"List"
+			"List",
+			"Sprite2",
+			"UI_VS",
+			"UI_Tournament",
+			"UI_Invite",
+			"UI_JoinGroup",
+			"UI_LikePage",
+			"UI_Share"
 		],
 		"subfolders": [
 			{
@@ -322,7 +326,13 @@
 					"text_wayBlocker",
 					"text_count_hint",
 					"text_grid",
-					"text_Wall"
+					"text_Wall",
+					"text_vs",
+					"text_Tournament",
+					"text_JoinGroup",
+					"text_LikePage",
+					"text_Invite",
+					"text_Share"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -423,7 +433,9 @@
 					"hand_tutorial",
 					"par_hand",
 					"play_zoombar_frame",
-					"wayBlockers"
+					"wayBlockers",
+					"UI_eye",
+					"UI_SnakeEyes"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -439,9 +451,7 @@
 				"name": "Spite"
 			},
 			{
-				"items": [
-					"Dic_Level"
-				],
+				"items": [],
 				"subfolders": [],
 				"name": "Dic"
 			},

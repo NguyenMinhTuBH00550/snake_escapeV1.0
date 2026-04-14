@@ -1,0 +1,15 @@
+{
+	"name": "text_JoinGroup",
+	"plugin-id": "Text",
+	"sid": 959629604617965,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"name": "text_Share",
+	"plugin-id": "Text",
+	"sid": 618955176431954,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}
