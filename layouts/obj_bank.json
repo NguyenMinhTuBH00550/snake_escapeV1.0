@@ -1943,8 +1943,7 @@
 						"OwnerID": 0,
 						"HasSnake": 0,
 						"HasWayBlocker": false,
-						"HasBlackHole": false,
-						"myID": 0
+						"HasBlackHole": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {

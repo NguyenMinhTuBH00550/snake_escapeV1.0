@@ -36,7 +36,7 @@
 							"objectClass": "text_level",
 							"sid": 993215976343313,
 							"parameters": {
-								"text": "\"Level  \" & DicSaveGame.Get(SAVE_LEVEL)"
+								"text": "\"Level  \" & DICT_SaveGame.Get(SAVE_LEVEL)"
 							}
 						},
 						{
@@ -44,7 +44,7 @@
 							"objectClass": "text_level_count",
 							"sid": 388379119893608,
 							"parameters": {
-								"text": "DicSaveGame.Get(SAVE_LEVEL)"
+								"text": "DICT_SaveGame.Get(SAVE_LEVEL)"
 							}
 						},
 						{
@@ -153,7 +153,7 @@
 							"objectClass": "text_next_level_count",
 							"sid": 311892458542290,
 							"parameters": {
-								"text": "int(DicSaveGame.Get(SAVE_LEVEL)) +1"
+								"text": "int(DICT_SaveGame.Get(SAVE_LEVEL)) +1"
 							}
 						}
 					],
@@ -177,7 +177,7 @@
 							"objectClass": "text_next_level_count",
 							"sid": 193021656436844,
 							"parameters": {
-								"text": "int(DicSaveGame.Get(SAVE_LEVEL)) +2"
+								"text": "int(DICT_SaveGame.Get(SAVE_LEVEL)) +2"
 							}
 						}
 					],
@@ -217,7 +217,7 @@
 			"actions": [
 				{
 					"id": "set-key",
-					"objectClass": "DicSaveGame",
+					"objectClass": "DICT_SaveGame",
 					"sid": 146046357777337,
 					"parameters": {
 						"key": "SAVE_LEVEL",

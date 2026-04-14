@@ -7,76 +7,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "LOCAL_TAG",
-			"type": "string",
-			"initialValue": "1.1.1",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 747725889197551
-		},
-		{
-			"eventType": "variable",
-			"name": "SAVE_COIN",
-			"type": "string",
-			"initialValue": "SAVE_COIN",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 140311367469370
-		},
-		{
-			"eventType": "variable",
-			"name": "SAVE_LEVEL",
-			"type": "string",
-			"initialValue": "SAVE_LEVEL",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 541452750897695
-		},
-		{
-			"eventType": "variable",
-			"name": "SAVE_MUSIC",
-			"type": "string",
-			"initialValue": "SAVE_MUSIC",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 988785016478006
-		},
-		{
-			"eventType": "variable",
-			"name": "SAVE_SOUND",
-			"type": "string",
-			"initialValue": "SAVE_SOUND",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 639167564486852
-		},
-		{
-			"eventType": "variable",
-			"name": "SAVE_HINTS",
-			"type": "string",
-			"initialValue": "SAVE_HINTS",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 938540201213756
-		},
-		{
-			"eventType": "variable",
-			"name": "SAVE_GRID",
-			"type": "string",
-			"initialValue": "SAVE_GRID",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 564052499369441
-		},
-		{
-			"eventType": "variable",
 			"name": "LevelID",
 			"type": "string",
 			"initialValue": "\"\"",
@@ -86,67 +16,392 @@
 			"sid": 409464466058385
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 620365075732231
-				}
-			],
-			"actions": [
-				{
-					"id": "set-width",
-					"objectClass": "HUD_tileLoading",
-					"sid": 536688091320010,
-					"parameters": {
-						"width": "0"
-					}
-				},
-				{
-					"id": "check-item-exists",
-					"objectClass": "LocalStorage",
-					"sid": 798112519158344,
-					"parameters": {
-						"key": "LOCAL_TAG"
-					}
-				},
-				{
-					"id": "request-project-file",
-					"objectClass": "AJAX",
-					"sid": 713142596339423,
-					"parameters": {
-						"tag": "\"LoadAllLevels\"",
-						"file": "all_levels.json"
-					}
-				},
-				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 995760862100902
-				},
-				{
-					"id": "parse",
-					"objectClass": "JsonLevel",
-					"sid": 944203412616169,
-					"parameters": {
-						"data": "AJAX.LastData"
-					}
-				}
-			],
-			"sid": 515464601622336,
+			"eventType": "group",
+			"disabled": false,
+			"title": "LOADING",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 972625263381505
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "loadbar",
+							"sid": 817722645052220,
+							"parameters": {
+								"width": "0"
+							}
+						},
+						{
+							"id": "check-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 495094932299853,
+							"parameters": {
+								"key": "LOCAL_TAG"
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 701922556757921,
+							"parameters": {
+								"tag": "\"LoadAllLevels\"",
+								"file": "all_levels.json"
+							}
+						}
+					],
+					"sid": 355300765935448,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 408789618616702,
+									"parameters": {
+										"first-value": "NextLayout",
+										"comparison": 0,
+										"second-value": "\"\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 455226343881306,
+									"parameters": {
+										"variable": "NextLayout",
+										"value": "\"Home\""
+									}
+								}
+							],
+							"sid": 793560667305266
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-loader-layout-complete",
+							"objectClass": "System",
+							"sid": 513464599177636
+						}
+					],
+					"actions": [],
+					"sid": 974992133318185,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-in-preview",
+									"objectClass": "System",
+									"sid": 203090568116382,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"language": "javascript",
+									"script": [
+										"FBInstant.initializeAsync().then(function() {",
+										"    // Many properties will be null until the initialization completes.",
+										"    // This is a good place to fetch them:",
+										"    ",
+										"    var playerID = FBInstant.player.getID();",
+										"    console.log(\"playerID = \", playerID);",
+										"    runtime.globalVars.playerID = playerID;",
+										"    ",
+										"",
+										"    runtime.callFunction(\"instantGameAvailable\");",
+										"});"
+									]
+								}
+							],
+							"sid": 717840462002884
+						}
+					]
+				},
+				{
+					"functionName": "instantGameAvailable",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 328029795631882,
+							"parameters": {
+								"group-name": "\"LoadingWait\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "InstantGame",
+							"sid": 621106661709411,
+							"parameters": {
+								"instance-variable": "Available",
+								"value": "true"
+							}
+						},
+						{
+							"callFunction": "addMissingKey",
+							"sid": 729103468133933
+						},
+						{
+							"callFunction": "getEntryPointData",
+							"sid": 881736641594748
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DICT_GameManager",
+							"sid": 232891312386967,
+							"parameters": {
+								"instance-variable": "playerID",
+								"value": "playerID = \"\" ?\nDICT_SaveGame.Get(SAVE_PROFILE_ID) :\nplayerID"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "InstantGame",
+							"sid": 211188276049543,
+							"parameters": {
+								"instance-variable": "playerID",
+								"value": "playerID = \"\" ?\r\nDICT_SaveGame.Get(SAVE_PROFILE_ID) :\r\nplayerID"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "DICT_SaveGame",
+							"sid": 158506908308105,
+							"parameters": {
+								"key": "SAVE_PROFILE_ID",
+								"value": "playerID"
+							}
+						},
+						{
+							"callFunction": "saveGame",
+							"sid": 351605588314215
+						},
+						{
+							"type": "comment",
+							"text": "Check IAP"
+						},
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"FBInstant.payments.onReady(function () {",
+								"    console.log('Payments Ready!')",
+								"    runtime.callFunction(\"iapAvailable\");",
+								"});"
+							]
+						},
+						{
+							"type": "comment",
+							"text": "start GoogleAnalytics"
+						},
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"var t = FBInstant.player.getID();",
+								"FBInstant.getEntryPointAsync().then((function (n) {",
+								"\tinitGoogleAnalytics(t, n)",
+								"})).catch((function () {",
+								"\tinitGoogleAnalytics(t, \"no_entry\")",
+								"}))"
+							]
+						},
+						{
+							"type": "comment",
+							"text": "Start game"
+						},
+						{
+							"id": "tween-value",
+							"objectClass": "InstantGame",
+							"sid": 307002345746240,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"loading\"",
+								"start-value": "0",
+								"end-value": "100",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 610705063676590,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"FBInstant.startGameAsync().then(function() {",
+								"    console.log('Start Game!')",
+								"});"
+							]
+						}
+					],
+					"sid": 809576576648203
+				},
+				{
+					"functionName": "setLoadingProgress",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "progress",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 277339592644280
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "InstantGame",
+							"sid": 539813100604354,
+							"parameters": {
+								"instance-variable": "Available"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"FBInstant.setLoadingProgress(localVars.progress); // Assets are 50% loaded"
+							]
+						}
+					],
+					"sid": 344655600409289
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "InstantGame",
+							"sid": 954337383230383,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"loading\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "setLoadingProgress",
+							"sid": 355502810713292,
+							"parameters": [
+								"round(InstantGame.Tween.Value(\"loading\"))"
+							]
+						}
+					],
+					"sid": 701387440710198
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 932427306387745,
+							"parameters": {
+								"tag": "\"LoadAllLevels\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "Dic_Level",
+							"sid": 184268603702663,
+							"parameters": {
+								"json": "AJAX.LastData"
+							}
+						}
+					],
+					"sid": 277044646333036,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-key",
+									"objectClass": "Dic_Level",
+									"sid": 283786442358442
+								}
+							],
+							"actions": [
+								{
+									"id": "request-url",
+									"objectClass": "AJAX",
+									"sid": 168581489611207,
+									"parameters": {
+										"tag": "\"LoadLevel_\" & Dic_Level.CurrentKey",
+										"url": "Dic_Level.Get(Dic_Level.CurrentKey)\n"
+									}
+								}
+							],
+							"sid": 881768212210916,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-completed",
+							"objectClass": "AJAX",
+							"sid": 739272421304971
+						},
+						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 299622423878389,
+							"sid": 338293541482906,
 							"parameters": {
-								"first-value": "NextLayout",
-								"comparison": 0,
-								"second-value": "\"\""
+								"first-value": "find(AJAX.Tag, \"LoadLevel_\")",
+								"comparison": 1,
+								"second-value": "-1"
 							}
 						}
 					],
@@ -154,504 +409,780 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 752937118893540,
+							"sid": 234330246152790,
 							"parameters": {
-								"variable": "NextLayout",
-								"value": "\"Home\""
+								"variable": "LevelID",
+								"value": "replace(AJAX.Tag, \"LoadLevel_\", \"\")\r\n"
 							}
-						}
-					],
-					"sid": 913655508160127
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 548090827895600,
-					"parameters": {
-						"tag": "\"LoadAllLevels\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "Dic_Level",
-					"sid": 581656299648756,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				}
-			],
-			"sid": 953146970376252,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
+						},
 						{
-							"id": "for-each-key",
+							"id": "add-key",
 							"objectClass": "Dic_Level",
-							"sid": 952239167355847
+							"sid": 209993056580778,
+							"parameters": {
+								"key": "LevelID",
+								"value": "AJAX.LastData"
+							}
+						}
+					],
+					"sid": 112866490191782,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 903175420181424,
+							"parameters": {
+								"value": "loadbar.Width = loadbar.ImageWidth"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 710695065956534,
+							"parameters": {
+								"first-value": "loadingprogress",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 360676895407028
 						}
 					],
 					"actions": [
 						{
-							"id": "request-url",
-							"objectClass": "AJAX",
-							"sid": 244085375572653,
+							"callFunction": "showFader",
+							"sid": 105121472657514,
+							"parameters": [
+								"100"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 973123139845853,
 							"parameters": {
-								"tag": "\"LoadLevel_\" & Dic_Level.CurrentKey",
-								"url": "Dic_Level.Get(Dic_Level.CurrentKey)\n"
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 541049307649644,
+							"parameters": {
+								"layout": "Home"
 							}
 						}
 					],
-					"sid": 590744882243646
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-any-completed",
-					"objectClass": "AJAX",
-					"sid": 978826263198226
+					"sid": 519578400999453
 				},
 				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 825869446316893,
-					"parameters": {
-						"first-value": "find(AJAX.Tag, \"LoadLevel_\")",
-						"comparison": 1,
-						"second-value": "-1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 309674604688340,
-					"parameters": {
-						"variable": "LevelID",
-						"value": "replace(AJAX.Tag, \"LoadLevel_\", \"\")\r\n"
-					}
-				},
-				{
-					"id": "add-key",
-					"objectClass": "Dic_Level",
-					"sid": 969115301139624,
-					"parameters": {
-						"key": "LevelID",
-						"value": "AJAX.LastData"
-					}
-				}
-			],
-			"sid": 563977563637572
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-item-missing",
-					"objectClass": "LocalStorage",
-					"sid": 448975234053506,
-					"parameters": {
-						"key": "LOCAL_TAG"
-					}
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "int_SAVE_GAME",
-					"sid": 265721976773679
-				},
-				{
-					"id": "set-width",
-					"objectClass": "HUD_tileLoading",
-					"sid": 361578367717113,
-					"parameters": {
-						"width": "Self.ImageWidth*0.01"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "HUD_tileLoading",
-					"sid": 546881795692486,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "offsetWidth",
-						"end-value": "Self.ImageWidth",
-						"time": "0.3",
-						"ease": "default",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				}
-			],
-			"sid": 265934556098516
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-item-exists",
-					"objectClass": "LocalStorage",
-					"sid": 722313678741553,
-					"parameters": {
-						"key": "LOCAL_TAG"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "get-item",
-					"objectClass": "LocalStorage",
-					"sid": 393353556618233,
-					"parameters": {
-						"key": "LOCAL_TAG"
-					}
-				}
-			],
-			"sid": 492049667588831
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-item-get",
-					"objectClass": "LocalStorage",
-					"sid": 539343581812852,
-					"parameters": {
-						"key": "LOCAL_TAG"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "DicSaveGame",
-					"sid": 629791993282922,
-					"parameters": {
-						"json": "LocalStorage.ItemValue"
-					}
-				},
-				{
-					"callFunction": "int_SAVE_GAME",
-					"sid": 403401732537403
-				},
-				{
-					"id": "set-width",
-					"objectClass": "HUD_tileLoading",
-					"sid": 361578367717113,
-					"parameters": {
-						"width": "Self.ImageWidth*0.01"
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "HUD_tileLoading",
-					"sid": 546881795692486,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "offsetWidth",
-						"end-value": "Self.ImageWidth",
-						"time": "0.3",
-						"ease": "default",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
-				}
-			],
-			"sid": 970052492998585
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "HUD_tileLoading",
-					"sid": 449599668375302,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "showFader",
-					"sid": 966555801721438,
-					"parameters": [
-						"100"
+					"functionName": "loadGame",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "progress",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 688860367536895
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "stop-all-tweens",
+							"objectClass": "loadbar",
+							"sid": 152383069791209,
+							"behaviorType": "Tween"
+						},
+						{
+							"id": "tween-value",
+							"objectClass": "loadbar",
+							"sid": 724506655524997,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"Loading\"",
+								"start-value": "Self.Width",
+								"end-value": "Self.ImageWidth*progress/100",
+								"time": "0.5",
+								"ease": "noease",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 465320773468745,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "evaluate-expression",
+									"objectClass": "System",
+									"sid": 205578602699772,
+									"parameters": {
+										"value": "progress = 100"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 529250640743895,
+									"parameters": {
+										"seconds": "1.0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "loadbar",
+									"sid": 335222525516768,
+									"parameters": {
+										"width": "Self.ImageWidth"
+									}
+								}
+							],
+							"sid": 333473994736736
+						}
 					]
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 753194438894202,
-					"parameters": {
-						"seconds": "0.3",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 852359824718126,
-					"parameters": {
-						"layout": "Home"
-					}
-				},
-				{
-					"id": "delete-key",
-					"objectClass": "DicSaveGame",
-					"sid": 946904508552688,
-					"disabled": true,
-					"parameters": {
-						"key": "SAVE_LEVEL"
-					}
 				}
 			],
-			"sid": 142436801467045
+			"sid": 391758809594871
 		},
 		{
-			"functionName": "int_SAVE_GAME",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [],
-			"sid": 385979098988155,
+			"eventType": "variable",
+			"name": "LOCAL_TAG",
+			"type": "string",
+			"initialValue": "1.1.1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 597243109761960
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_COIN",
+			"type": "string",
+			"initialValue": "SAVE_COIN",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 735832988004050
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_LEVEL",
+			"type": "string",
+			"initialValue": "SAVE_LEVEL",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 653049723028341
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_MUSIC",
+			"type": "string",
+			"initialValue": "SAVE_MUSIC",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 204726440976375
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_SOUND",
+			"type": "string",
+			"initialValue": "SAVE_SOUND",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 698733840003526
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_HINTS",
+			"type": "string",
+			"initialValue": "SAVE_HINTS",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 850007008208372
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_GRID",
+			"type": "string",
+			"initialValue": "SAVE_GRID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 175791499090726
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_CAMP_ID",
+			"type": "string",
+			"initialValue": "SAVE_CAMP_ID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 390274835326178
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_ADSET_ID",
+			"type": "string",
+			"initialValue": "SAVE_ADSET_ID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 244994645535595
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_AD_ID",
+			"type": "string",
+			"initialValue": "SAVE_AD_ID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 109908168157102
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_PROFILE_ID",
+			"type": "string",
+			"initialValue": "SAVE_PROFILE_ID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 228956742779240
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SAVE GAME",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "comment",
-					"text": "COINS"
-				},
-				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "has-key",
-							"objectClass": "DicSaveGame",
-							"sid": 951658043387128,
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 805012290371041,
 							"parameters": {
-								"key": "SAVE_COIN"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "add-key",
-							"objectClass": "DicSaveGame",
-							"sid": 430000019624481,
-							"parameters": {
-								"key": "SAVE_COIN",
-								"value": "0"
+								"key": "LOCAL_TAG"
 							}
 						}
 					],
-					"sid": 417009553548023
-				},
-				{
-					"eventType": "comment",
-					"text": "LEVEL"
+					"actions": [
+						{
+							"callFunction": "addMissingKey",
+							"sid": 293815788223494
+						},
+						{
+							"id": "set-width",
+							"objectClass": "loadbar",
+							"sid": 759638153951384,
+							"parameters": {
+								"width": "Self.ImageWidth*0.01"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "loadbar",
+							"sid": 834186942645198,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetWidth",
+								"end-value": "Self.ImageWidth",
+								"time": "0.3",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 727301050745525
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "has-key",
-							"objectClass": "DicSaveGame",
-							"sid": 631045580614230,
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 706112283650329,
 							"parameters": {
-								"key": "SAVE_LEVEL"
-							},
-							"isInverted": true
+								"key": "LOCAL_TAG"
+							}
 						}
 					],
 					"actions": [
 						{
-							"id": "add-key",
-							"objectClass": "DicSaveGame",
-							"sid": 140161130011166,
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 735132365896910,
+							"parameters": {
+								"key": "LOCAL_TAG"
+							}
+						}
+					],
+					"sid": 496336304648165
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 391009692590951,
+							"parameters": {
+								"key": "LOCAL_TAG"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "DICT_SaveGame",
+							"sid": 935236278358948,
+							"parameters": {
+								"json": "LocalStorage.ItemValue"
+							}
+						},
+						{
+							"callFunction": "addMissingKey",
+							"sid": 739485908851322
+						},
+						{
+							"id": "set-width",
+							"objectClass": "loadbar",
+							"sid": 993497982598010,
+							"parameters": {
+								"width": "Self.ImageWidth*0.01"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "loadbar",
+							"sid": 395637278760232,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetWidth",
+								"end-value": "Self.ImageWidth",
+								"time": "0.3",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Dic_Level",
+							"sid": 377303563987199
+						}
+					],
+					"sid": 961657027899954
+				},
+				{
+					"functionName": "saveGame",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 208946312115565,
+							"parameters": {
+								"key": "LOCAL_TAG",
+								"value": "DICT_SaveGame.AsJSON"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 546387892005023,
+							"disabled": true,
 							"parameters": {
 								"key": "SAVE_LEVEL",
-								"value": "1"
+								"value": "Dic_level.AsJSON"
 							}
 						}
 					],
-					"sid": 303611994456873
+					"sid": 947515409909491
 				},
 				{
-					"eventType": "comment",
-					"text": "MUSIC"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+					"functionName": "addMissingKey",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 908576580221129,
+					"children": [
 						{
-							"id": "has-key",
-							"objectClass": "DicSaveGame",
-							"sid": 105096589860875,
-							"parameters": {
-								"key": "SAVE_MUSIC"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
+							"eventType": "comment",
+							"text": "COINS"
+						},
 						{
-							"id": "add-key",
-							"objectClass": "DicSaveGame",
-							"sid": 130589718583228,
-							"parameters": {
-								"key": "SAVE_MUSIC",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 116222569764755
-				},
-				{
-					"eventType": "comment",
-					"text": "SOUND"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 608123688843018,
+									"parameters": {
+										"key": "SAVE_COIN"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 446442973930820,
+									"parameters": {
+										"key": "SAVE_COIN",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 896641789191058
+						},
 						{
-							"id": "has-key",
-							"objectClass": "DicSaveGame",
-							"sid": 696108346808963,
-							"parameters": {
-								"key": "SAVE_SOUND"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
+							"eventType": "comment",
+							"text": "LEVEL"
+						},
 						{
-							"id": "add-key",
-							"objectClass": "DicSaveGame",
-							"sid": 491731900249238,
-							"parameters": {
-								"key": "SAVE_SOUND",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 107644308586744
-				},
-				{
-					"eventType": "comment",
-					"text": "ITEM_HINT"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 459598586509955,
+									"parameters": {
+										"key": "SAVE_LEVEL"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 974808996841201,
+									"parameters": {
+										"key": "SAVE_LEVEL",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 893284791452925
+						},
 						{
-							"id": "has-key",
-							"objectClass": "DicSaveGame",
-							"sid": 577343830717211,
-							"parameters": {
-								"key": "SAVE_HINTS"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
+							"eventType": "comment",
+							"text": "MUSIC"
+						},
 						{
-							"id": "add-key",
-							"objectClass": "DicSaveGame",
-							"sid": 829603186668409,
-							"parameters": {
-								"key": "SAVE_HINTS",
-								"value": "0"
-							}
-						}
-					],
-					"sid": 758414930618787
-				},
-				{
-					"eventType": "comment",
-					"text": "ITEM_GRID"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 512052630619906,
+									"parameters": {
+										"key": "SAVE_MUSIC"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 984277237385817,
+									"parameters": {
+										"key": "SAVE_MUSIC",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 243160272661473
+						},
 						{
-							"id": "has-key",
-							"objectClass": "DicSaveGame",
-							"sid": 459398513894980,
-							"parameters": {
-								"key": "SAVE_GRID"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
+							"eventType": "comment",
+							"text": "SOUND"
+						},
 						{
-							"id": "add-key",
-							"objectClass": "DicSaveGame",
-							"sid": 651165079837338,
-							"parameters": {
-								"key": "SAVE_GRID",
-								"value": "0"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 103198838990415,
+									"parameters": {
+										"key": "SAVE_SOUND"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 351688546758834,
+									"parameters": {
+										"key": "SAVE_SOUND",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 904069556779010
+						},
+						{
+							"eventType": "comment",
+							"text": "ITEM_HINT"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 841704581395595,
+									"parameters": {
+										"key": "SAVE_HINTS"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 409101324123489,
+									"parameters": {
+										"key": "SAVE_HINTS",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 876285250421224
+						},
+						{
+							"eventType": "comment",
+							"text": "ITEM_GRID"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 679165746370427,
+									"parameters": {
+										"key": "SAVE_GRID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 942589627082898,
+									"parameters": {
+										"key": "SAVE_GRID",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 705338645662983
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 395572483371246,
+									"parameters": {
+										"key": "SAVE_CAMP_ID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 670977710509723,
+									"parameters": {
+										"key": "SAVE_CAMP_ID",
+										"value": "\"\"\n"
+									}
+								}
+							],
+							"sid": 951524831416961
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 806607172242114,
+									"parameters": {
+										"key": "SAVE_ADSET_ID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 194555475253019,
+									"parameters": {
+										"key": "SAVE_ADSET_ID",
+										"value": "\"\""
+									}
+								}
+							],
+							"sid": 717268197920676
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 892368544404314,
+									"parameters": {
+										"key": "SAVE_AD_ID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 657114084998030,
+									"parameters": {
+										"key": "SAVE_AD_ID",
+										"value": "\"\""
+									}
+								}
+							],
+							"sid": 326978220927900
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 398379701839839,
+									"parameters": {
+										"key": "SAVE_PROFILE_ID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 355086123009566,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "InstantGame",
+											"sid": 440901184089118,
+											"parameters": {
+												"instance-variable": "Available"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DICT_SaveGame",
+											"sid": 622570848091363,
+											"parameters": {
+												"key": "SAVE_PROFILE_ID",
+												"value": "DICT_GameManager.playerID\n"
+											}
+										}
+									],
+									"sid": 935267903461419
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 302828881948897
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DICT_SaveGame",
+											"sid": 161090657094197,
+											"parameters": {
+												"key": "SAVE_PROFILE_ID",
+												"value": "\"SNAKE\" & zeropad(round(random(100000)), 6) & choose(\"A\",\"B\",\"C\") & choose(\"X\",\"Y\",\"Z\")\n"
+											}
+										}
+									],
+									"sid": 686713947514969
+								}
+							]
 						}
-					],
-					"sid": 515879150076372
-				}
-			]
-		},
-		{
-			"functionName": "SAVE_GAME",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "set-item",
-					"objectClass": "LocalStorage",
-					"sid": 233795556942204,
-					"parameters": {
-						"key": "LOCAL_TAG",
-						"value": "DicSaveGame.AsJSON"
-					}
-				},
-				{
-					"id": "set-item",
-					"objectClass": "LocalStorage",
-					"sid": 250420259192728,
-					"parameters": {
-						"key": "SAVE_LEVEL",
-						"value": "Dic_level.AsJSON"
-					}
+					]
 				}
 			],
-			"sid": 310615058733741
+			"sid": 710944426137213
 		}
 	],
 	"sid": 307326677987007

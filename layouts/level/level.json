@@ -659,7 +659,7 @@
 	"sid": 939378455030547,
 	"nonworld-instances": [
 		{
-			"type": "DicSaveGame",
+			"type": "DICT_SaveGame",
 			"properties": {},
 			"uid": 56,
 			"sid": 177649584780610,
@@ -721,6 +721,44 @@
 				"tourEndTime": "",
 				"tourLevel": 0,
 				"iapAvailable": 0
+			}
+		},
+		{
+			"type": "EntryPointData_DICT",
+			"properties": {},
+			"uid": 503,
+			"sid": 411484911265327,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "DICT_CampID",
+			"properties": {},
+			"uid": 504,
+			"sid": 385765431796538,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "JSON_Friends",
+			"properties": {},
+			"uid": 505,
+			"sid": 912011621145927,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "ARR_listFriendID",
+			"properties": {
+				"width": 3,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 506,
+			"sid": 383638135939078,
+			"tags": "",
+			"instanceVariables": {
+				"friends": 0
 			}
 		}
 	],

@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 44904,
-	"name": "snake escape",
+	"name": "Snake Escape",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": true,
@@ -249,7 +249,7 @@
 					"HUD_BG_loading",
 					"HUD_barBG",
 					"HUD_logo",
-					"HUD_tileLoading",
+					"loadbar",
 					"HUD_popUp_close",
 					"HUD_homeBottom_tab",
 					"HUD_popUp_pause",
@@ -440,7 +440,6 @@
 			},
 			{
 				"items": [
-					"DicSaveGame",
 					"Dic_Level"
 				],
 				"subfolders": [],
@@ -495,7 +494,10 @@
 				"subfolders": [
 					{
 						"items": [
-							"DICT_GameManager"
+							"DICT_CampID",
+							"DICT_GameManager",
+							"DICT_SaveGame",
+							"EntryPointData_DICT"
 						],
 						"subfolders": [],
 						"name": "Dict"
@@ -522,6 +524,20 @@
 						],
 						"subfolders": [],
 						"name": "Particle"
+					},
+					{
+						"items": [
+							"ARR_listFriendID"
+						],
+						"subfolders": [],
+						"name": "Array"
+					},
+					{
+						"items": [
+							"JSON_Friends"
+						],
+						"subfolders": [],
+						"name": "json"
 					}
 				],
 				"name": "hhg"
@@ -584,7 +600,8 @@
 			"es_loading",
 			"es_global",
 			"es_game",
-			"es_home"
+			"es_home",
+			"F_Instant"
 		],
 		"subfolders": [
 			{
@@ -601,7 +618,32 @@
 	},
 	"rootFileFolders": {
 		"script": {
-			"items": [],
+			"items": [
+				{
+					"name": "main.ts",
+					"type": "application/typescript",
+					"sid": 907257619147400,
+					"script-info": {
+						"purpose": "main"
+					}
+				},
+				{
+					"name": "script.js",
+					"type": "application/javascript",
+					"sid": 102553872205037,
+					"script-info": {
+						"purpose": "imports-for-events"
+					}
+				},
+				{
+					"name": "handle_FBInstants_js.js",
+					"type": "application/javascript",
+					"sid": 741632149645138,
+					"script-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"sound": {

@@ -10726,8 +10726,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 891,
-						"y": 699,
+						"x": 675,
+						"y": 711,
 						"width": 166.88555862398107,
 						"height": 46.99063974920841,
 						"originX": 0,
@@ -12442,7 +12442,7 @@
 					}
 				},
 				{
-					"type": "HUD_tileLoading",
+					"type": "loadbar",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",

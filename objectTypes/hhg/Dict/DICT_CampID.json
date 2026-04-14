@@ -1,0 +1,8 @@
+{
+	"name": "DICT_CampID",
+	"plugin-id": "Dictionary",
+	"sid": 943117603162048,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": []
+}

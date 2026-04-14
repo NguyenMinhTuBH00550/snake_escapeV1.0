@@ -1,0 +1,1571 @@
+{
+	"name": "F_Instant",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "INSTANT_ENTRY_DATA",
+			"type": "string",
+			"initialValue": "{\"c2dictionary\":true,\"data\":",
+			"comment": "configure entry point data",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 728243031543542
+		},
+		{
+			"eventType": "variable",
+			"name": "InstantEPData",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 711330528734414
+		},
+		{
+			"eventType": "variable",
+			"name": "canSaveGame",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 623093142396261
+		},
+		{
+			"eventType": "variable",
+			"name": "playerID",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 577133187978042
+		},
+		{
+			"eventType": "variable",
+			"name": "playerData",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 830878910007370
+		},
+		{
+			"eventType": "variable",
+			"name": "ListPlayedFriendID",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 510461161552212
+		},
+		{
+			"eventType": "variable",
+			"name": "ListPlayedFriendName",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 297353819562512
+		},
+		{
+			"eventType": "variable",
+			"name": "ListPlayedFriendPhoto",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 457512856747752
+		},
+		{
+			"eventType": "variable",
+			"name": "LastCancelContext",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 275110025226792
+		},
+		{
+			"eventType": "variable",
+			"name": "SavePlayedFriendID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 615698644093050
+		},
+		{
+			"eventType": "variable",
+			"name": "base64ImageInviteFriend",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 145704284065938
+		},
+		{
+			"eventType": "variable",
+			"name": "tourContextID",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 146047831864256
+		},
+		{
+			"eventType": "variable",
+			"name": "tourID",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 250627436569732
+		},
+		{
+			"eventType": "variable",
+			"name": "tourPayload",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 400534294325503
+		},
+		{
+			"eventType": "variable",
+			"name": "tourEndTime",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 560667095266431
+		},
+		{
+			"eventType": "variable",
+			"name": "tourName",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 199599375636964
+		},
+		{
+			"eventType": "variable",
+			"name": "photoOfPlayer",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 186556130748182
+		},
+		{
+			"eventType": "variable",
+			"name": "scoreOfPlayer",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 422157485335914
+		},
+		{
+			"eventType": "variable",
+			"name": "nameOfPlayer",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 704823767171156
+		},
+		{
+			"eventType": "variable",
+			"name": "idOfPlayer",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 873250860502169
+		},
+		{
+			"eventType": "variable",
+			"name": "numberOfPlayer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 190669142943838
+		},
+		{
+			"eventType": "variable",
+			"name": "myScore",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 682724609720098
+		},
+		{
+			"eventType": "variable",
+			"name": "yourInstantID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 132093543243810
+		},
+		{
+			"eventType": "variable",
+			"name": "endTour",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 378548478017595
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Instant Game",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "1. Entry point data",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "getEntryPointData",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 247547675018655,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "InstantGame",
+											"sid": 114746856125209,
+											"parameters": {
+												"instance-variable": "Available"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 142848395461073,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"type": "script",
+													"language": "javascript",
+													"script": [
+														"let EPdata = FBInstant.getEntryPointData();",
+														"console.log(\"EPD = \", EPdata);",
+														"",
+														"if (EPdata === null || EPdata === undefined) {",
+														"\tconsole.log(\"EPD null\");",
+														"} else {",
+														"\truntime.globalVars.InstantEPData = JSON.stringify(EPdata);",
+														"\tconsole.log(\"EPD str = \", runtime.globalVars.InstantEPData);",
+														"}"
+													]
+												}
+											],
+											"sid": 958568502615250,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "evaluate-expression",
+															"objectClass": "System",
+															"sid": 191896685780319,
+															"parameters": {
+																"value": "InstantEPData <> \"\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "load",
+															"objectClass": "EntryPointData_DICT",
+															"sid": 867435731542215,
+															"parameters": {
+																"json": "INSTANT_ENTRY_DATA & \nInstantEPData & \n\"}\""
+															}
+														},
+														{
+															"id": "load",
+															"objectClass": "EntryPointData_DICT",
+															"sid": 100221176985657,
+															"parameters": {
+																"json": "EntryPointData_DICT.Get(\"myReplayData\")"
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 125074389173146,
+															"parameters": {
+																"type": "log",
+																"message": "\"EDP dict = \" & EntryPointData_DICT.AsJSON"
+															}
+														}
+													],
+													"sid": 466168763864955,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "has-key",
+																	"objectClass": "EntryPointData_DICT",
+																	"sid": 447961169734602,
+																	"parameters": {
+																		"key": "\"fb_instant_game_campaign_id\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "load",
+																	"objectClass": "DICT_CampID",
+																	"sid": 548718725869710,
+																	"parameters": {
+																		"json": "EntryPointData_DICT.AsJSON"
+																	}
+																}
+															],
+															"sid": 401776443033159,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "evaluate-expression",
+																			"objectClass": "System",
+																			"sid": 350047065775801,
+																			"disabled": true,
+																			"parameters": {
+																				"value": "tokencount(DICT_SaveGame.Get(SAVE_CAMP_ID), \",\") = 0"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Gtag",
+																			"sid": 920459893904081,
+																			"parameters": [
+																				"\"CAMP_\" & DICT_CampID.Get(\"fb_instant_game_campaign_id\")",
+																				"\"{}\""
+																			]
+																		},
+																		{
+																			"id": "set-key",
+																			"objectClass": "DICT_SaveGame",
+																			"sid": 861060626960918,
+																			"parameters": {
+																				"key": "SAVE_CAMP_ID",
+																				"value": "DICT_CampID.Get(\"fb_instant_game_campaign_id\")"
+																			}
+																		},
+																		{
+																			"callFunction": "Gtag",
+																			"sid": 994746331996464,
+																			"parameters": [
+																				"\"ADSET_\" & DICT_CampID.Get(\"fb_instant_game_adset_id\")",
+																				"\"{}\""
+																			]
+																		},
+																		{
+																			"id": "set-key",
+																			"objectClass": "DICT_SaveGame",
+																			"sid": 377731890573417,
+																			"parameters": {
+																				"key": "SAVE_ADSET_ID",
+																				"value": "DICT_CampID.Get(\"fb_instant_game_adset_id\")"
+																			}
+																		},
+																		{
+																			"callFunction": "Gtag",
+																			"sid": 320911986280566,
+																			"parameters": [
+																				"\"AD_\" & DICT_CampID.Get(\"fb_instant_game_ad_id\")",
+																				"\"{}\""
+																			]
+																		},
+																		{
+																			"id": "set-key",
+																			"objectClass": "DICT_SaveGame",
+																			"sid": 446856411264949,
+																			"parameters": {
+																				"key": "SAVE_AD_ID",
+																				"value": "DICT_CampID.Get(\"fb_instant_game_ad_id\")"
+																			}
+																		}
+																	],
+																	"sid": 263671544501612
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "repeat",
+																			"objectClass": "System",
+																			"sid": 774731128925219,
+																			"parameters": {
+																				"count": "tokencount(DICT_SaveGame.Get(SAVE_CAMP_ID), \",\")"
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 142442269469132,
+																	"disabled": true,
+																	"children": [
+																		{
+																			"eventType": "variable",
+																			"name": "checkin",
+																			"type": "number",
+																			"initialValue": "0",
+																			"comment": "",
+																			"isStatic": false,
+																			"isConstant": false,
+																			"sid": 542286559282618
+																		},
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "evaluate-expression",
+																					"objectClass": "System",
+																					"sid": 241936822560631,
+																					"parameters": {
+																						"value": "DICT_CampID.Get(\"fb_instant_game_campaign_id\") =  tokenat(DICT_SaveGame.Get(SAVE_CAMP_ID),loopindex,\",\")"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-eventvar-value",
+																					"objectClass": "System",
+																					"sid": 524169641275945,
+																					"parameters": {
+																						"variable": "checkin",
+																						"value": "1"
+																					}
+																				},
+																				{
+																					"id": "stop-loop",
+																					"objectClass": "System",
+																					"sid": 738997881185821
+																				}
+																			],
+																			"sid": 600496514107516,
+																			"disabled": true
+																		},
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "evaluate-expression",
+																					"objectClass": "System",
+																					"sid": 435194008380694,
+																					"parameters": {
+																						"value": "loopindex = tokencount(DICT_SaveGame.Get(SAVE_CAMP_ID),\",\")-1 "
+																					}
+																				},
+																				{
+																					"id": "evaluate-expression",
+																					"objectClass": "System",
+																					"sid": 862210295394744,
+																					"parameters": {
+																						"value": "checkin = 0"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"callFunction": "Gtag",
+																					"sid": 543564089263455,
+																					"parameters": [
+																						"\"CAMP_\" & DICT_CampID.Get(\"fb_instant_game_campaign_id\")",
+																						"\"{}\""
+																					]
+																				},
+																				{
+																					"id": "set-key",
+																					"objectClass": "DICT_SaveGame",
+																					"sid": 237794026302615,
+																					"parameters": {
+																						"key": "SAVE_CAMP_ID",
+																						"value": "DICT_SaveGame.Get(SAVE_CAMP_ID) & \",\" & DICT_CampID.Get(\"fb_instant_game_campaign_id\")"
+																					}
+																				},
+																				{
+																					"callFunction": "Gtag",
+																					"sid": 617256798406115,
+																					"parameters": [
+																						"\"ADSET_\" & DICT_CampID.Get(\"fb_instant_game_adset_id\")",
+																						"\"{}\""
+																					]
+																				},
+																				{
+																					"id": "set-key",
+																					"objectClass": "DICT_SaveGame",
+																					"sid": 134149282624722,
+																					"parameters": {
+																						"key": "SAVE_ADSET_ID",
+																						"value": "DICT_SaveGame.Get(SAVE_ADSET_ID) & DICT_CampID.Get(\"fb_instant_game_adset_id\")"
+																					}
+																				},
+																				{
+																					"callFunction": "Gtag",
+																					"sid": 568094327500131,
+																					"parameters": [
+																						"\"AD_\" & DICT_CampID.Get(\"fb_instant_game_ad_id\")",
+																						"\"{}\""
+																					]
+																				},
+																				{
+																					"id": "set-key",
+																					"objectClass": "DICT_SaveGame",
+																					"sid": 244371240268041,
+																					"parameters": {
+																						"key": "SAVE_AD_ID",
+																						"value": "DICT_SaveGame.Get(SAVE_AD_ID) & DICT_CampID.Get(\"fb_instant_game_ad_id\")"
+																					}
+																				}
+																			],
+																			"sid": 883739546199122,
+																			"disabled": true
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 643569067896932
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "completeLoadInstantData",
+											"sid": 345195370176194
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DICT_GameManager",
+											"sid": 557278762478032,
+											"parameters": {
+												"instance-variable": "canSaveGame",
+												"value": "1"
+											}
+										},
+										{
+											"callFunction": "canSaveGame",
+											"sid": 349210983754595
+										}
+									],
+									"sid": 934099865573775
+								}
+							]
+						}
+					],
+					"sid": 807830913263041
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "2. Instant load data",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "getDataAsync",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 631025174513813,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "InstantGame",
+											"sid": 237467995145323,
+											"parameters": {
+												"instance-variable": "Available"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 139168553593547,
+											"parameters": {
+												"variable": "playerData",
+												"value": "DICT_SaveGame.AsJSON"
+											}
+										},
+										{
+											"type": "script",
+											"language": "javascript",
+											"script": [
+												"const DEFAULT_DATA = {",
+												"    data: runtime.globalVars.playerData,",
+												"}",
+												"",
+												"FBInstant.player",
+												"    .getDataAsync([\"data\"])",
+												"    .then((data) => {",
+												"        if (data[\"data\"] === undefined) {",
+												"            console.log('data is undefined');",
+												"            data = DEFAULT_DATA;",
+												"        }",
+												"        //console.log(\"loaded    === \", data[\"data\"])",
+												"",
+												"        if (typeof data[\"data\"] == \"string\") {",
+												"            runtime.globalVars.playerData = data[\"data\"];",
+												"        } else {",
+												"            runtime.globalVars.playerData = JSON.stringify(data[\"data\"]);",
+												"        }",
+												"        //console.log(\"PlayerData    === \", runtime.globalVars.PlayerData)",
+												"        runtime.callFunction(\"getConnectedPlayersAsync\");",
+												"        runtime.callFunction(\"canSaveGame\");",
+												"        runtime.globalVars.canSaveGame = 1;",
+												"    }).catch(error => {",
+												"        console.error(\"getDataAsync\", error)",
+												"        runtime.callFunction(\"getConnectedPlayersAsync\");",
+												"        runtime.globalVars.canSaveGame = 0;",
+												"",
+												"    });"
+											]
+										}
+									],
+									"sid": 396810616888587
+								}
+							]
+						},
+						{
+							"functionName": "getConnectedPlayersAsync",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 689766371087188,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "InstantGame",
+											"sid": 630234694191094,
+											"parameters": {
+												"instance-variable": "Available"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "load",
+											"objectClass": "DICT_SaveGame",
+											"sid": 661426043461397,
+											"parameters": {
+												"json": "playerData"
+											}
+										},
+										{
+											"callFunction": "addMissingKey",
+											"sid": 329467863262425
+										},
+										{
+											"callFunction": "configureConnectedPlayer",
+											"sid": 822971596051992
+										}
+									],
+									"sid": 692889083007097,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"type": "comment",
+													"text": ""
+												},
+												{
+													"type": "script",
+													"language": "javascript",
+													"script": [
+														"FBInstant.player.getConnectedPlayersAsync()",
+														"    .then(function(players) {",
+														"        let data = players.map(function(player) {",
+														"            return {",
+														"                id: player.getID()",
+														"            }",
+														"        });",
+														"        runtime.objects.JSON_Friends.getFirstInstance().setJsonDataCopy(data)",
+														"        runtime.callFunction(\"configureConnectedPlayer\");",
+														"    }).catch(error => {",
+														"        console.error(\"getConnectedPlayersAsync\", error)",
+														"        runtime.callFunction(\"configureConnectedPlayer\");",
+														"    });"
+													]
+												}
+											],
+											"sid": 471578152615307
+										}
+									]
+								}
+							]
+						},
+						{
+							"functionName": "configureConnectedPlayer",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "InstantGame",
+									"sid": 828758709402780,
+									"parameters": {
+										"instance-variable": "Available"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 365732817239892,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-key",
+											"objectClass": "JSON_Friends",
+											"sid": 950106207779125,
+											"parameters": {
+												"path": "\"0.id\""
+											}
+										},
+										{
+											"id": "for-each",
+											"objectClass": "JSON_Friends",
+											"sid": 876423803205205,
+											"parameters": {
+												"path": "\"\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "ARR_listFriendID",
+											"sid": 945699660600085,
+											"parameters": {
+												"instance-variable": "friends",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 358736873127372,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 695156848952867,
+													"parameters": {
+														"first-value": "ListPlayedFriendID",
+														"comparison": 0,
+														"second-value": "\"\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 165992510438779,
+													"parameters": {
+														"variable": "ListPlayedFriendID",
+														"value": "JSON_Friends.Get(JSON_Friends.CurrentKey&\".id\")"
+													}
+												}
+											],
+											"sid": 223187028832955
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 846185052661959
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 496002511388351,
+													"parameters": {
+														"variable": "ListPlayedFriendID",
+														"value": "ListPlayedFriendID & \",\" & JSON_Friends.Get(JSON_Friends.CurrentKey&\".id\")"
+													}
+												}
+											],
+											"sid": 111517310688115
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"callFunction": "getTournamentAsync",
+											"sid": 422856634740685
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 995285816717100,
+											"disabled": true,
+											"parameters": {
+												"seconds": "1.0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-at-x",
+											"objectClass": "ARR_listFriendID",
+											"sid": 848163956390380,
+											"parameters": {
+												"x": "0",
+												"value": "ListPlayedFriendID"
+											}
+										}
+									],
+									"sid": 871747682436315
+								}
+							]
+						},
+						{
+							"functionName": "getTournamentAsync",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"type": "script",
+									"language": "javascript",
+									"script": [
+										"FBInstant.getTournamentAsync().then(function(tournament) {\t",
+										"\t\truntime.globalVars.tourContextID = String(tournament.getContextID());\t",
+										"\t\truntime.globalVars.tourID = String(tournament.getID());",
+										"\t\truntime.globalVars.tourPayload = String(tournament.getPayload());",
+										"\t\truntime.globalVars.tourEndTime = String(tournament.getEndTime()*1000);",
+										"\t\truntime.globalVars.tourName = String(tournament.getTitle());\t\t",
+										"\t\truntime.callFunction(\"completeLoadInstantData\");",
+										"\t\tconsole.log(\"tourContextID = \", runtime.globalVars.tourContextID);",
+										"\t\tconsole.log(\"tourID = \", runtime.globalVars.tourID);",
+										"\t\tconsole.log(\"tourEndTime = \", runtime.globalVars.tourEndTime);",
+										"\t\tconsole.log(\"tourName = \", runtime.globalVars.tourName);",
+										"\t\t",
+										"\t}).catch(function(e) {",
+										"\t\truntime.callFunction(\"completeLoadInstantData\");",
+										"\t\tconsole.log(\"getTournamentAsync: \", e)",
+										"\t});"
+									]
+								}
+							],
+							"sid": 601869382801652
+						},
+						{
+							"functionName": "completeLoadInstantData2",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DICT_GameManager",
+									"sid": 673559523962213,
+									"parameters": {
+										"instance-variable": "tourContextID",
+										"value": "tourContextID"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DICT_GameManager",
+									"sid": 550038527013367,
+									"parameters": {
+										"instance-variable": "tourName",
+										"value": "tourName"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DICT_GameManager",
+									"sid": 781168897490545,
+									"parameters": {
+										"instance-variable": "tourEndTime",
+										"value": "tourEndTime"
+									}
+								},
+								{
+									"callFunction": "loadGame",
+									"sid": 171069523363199,
+									"parameters": [
+										"100"
+									]
+								}
+							],
+							"sid": 874671717021278
+						}
+					],
+					"sid": 943382749190928
+				},
+				{
+					"functionName": "canSaveGame",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DICT_GameManager",
+							"sid": 280230826879948,
+							"parameters": {
+								"instance-variable": "canSaveGame",
+								"value": "1"
+							}
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 349339006430000,
+							"parameters": {
+								"type": "log",
+								"message": "\"canSaveGame\""
+							}
+						}
+					],
+					"sid": 499653448775018
+				},
+				{
+					"functionName": "completeLoadInstantData",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DICT_GameManager",
+							"sid": 213561483900615,
+							"parameters": {
+								"instance-variable": "tourContextID",
+								"value": "tourContextID"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DICT_GameManager",
+							"sid": 776999983297047,
+							"parameters": {
+								"instance-variable": "tourName",
+								"value": "tourName"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DICT_GameManager",
+							"sid": 533373866588285,
+							"parameters": {
+								"instance-variable": "tourEndTime",
+								"value": "tourEndTime"
+							}
+						},
+						{
+							"callFunction": "loadGame",
+							"sid": 599262927723408,
+							"parameters": [
+								"100"
+							]
+						}
+					],
+					"sid": 569730569997848
+				}
+			],
+			"sid": 406200280590596
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Shorcut",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "check_createShortcut",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 449290305077644,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 725790640868397,
+									"parameters": {
+										"key": "\"sub_bot\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 271441924755075,
+									"parameters": {
+										"key": "\"sub_bot\"",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 754567578471324
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 501281472482050
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 229418275933406,
+									"parameters": {
+										"key": "\"sub_bot\"",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 447549146440744
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 848382458361402,
+									"parameters": {
+										"key": "\"Shortcut\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 648777813142172,
+									"parameters": {
+										"key": "\"Shortcut\"",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 661456816673286
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 758355999971301
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 561733323528426,
+									"parameters": {
+										"key": "\"Shortcut\"",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 395498031638822
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 312080627327680,
+									"parameters": {
+										"key": "\"play_num\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 362906614356424,
+									"parameters": {
+										"key": "\"play_num\"",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 957565280486585
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 486309076363568
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 456106379522600,
+									"parameters": {
+										"key": "\"play_num\"",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 836458785156889
+						}
+					]
+				},
+				{
+					"functionName": "subcribeBotSuccess",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-key",
+							"objectClass": "DICT_SaveGame",
+							"sid": 263085120850934,
+							"parameters": {
+								"key": "\"sub_bot\"",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 916743778746725
+				},
+				{
+					"functionName": "createShortcutSuccess",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-key",
+							"objectClass": "DICT_SaveGame",
+							"sid": 783606065501613,
+							"parameters": {
+								"key": "\"Shortcut\"",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 527406932538149
+				},
+				{
+					"functionName": "Shortcut_BotMess",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "InstantGame",
+							"sid": 647590478778535,
+							"parameters": {
+								"instance-variable": "Available"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 128346636293566,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						}
+					],
+					"sid": 944032622588742,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "DICT_SaveGame",
+									"sid": 667886249685667,
+									"parameters": {
+										"key": "\"play_num\"",
+										"comparison": 5,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 242899566611939,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-value",
+											"objectClass": "DICT_SaveGame",
+											"sid": 564057095641013,
+											"parameters": {
+												"key": "\"Shortcut\"",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"type": "script",
+											"language": "javascript",
+											"script": [
+												"FBInstant.canCreateShortcutAsync()",
+												"    .then(function(canCreateShortcut) {",
+												"        if (canCreateShortcut) {",
+												"            FBInstant.createShortcutAsync()",
+												"                .then(function() {",
+												"                    // Shortcut created",
+												"                    console.log(\"Shortcut created\");",
+												"                    runtime.callFunction(\"createShortcutSuccess\");",
+												"                })",
+												"                .catch(function(e) {",
+												"                    // Shortcut not created",
+												"                    console.log(\"Shortcut not created: \", e);",
+												"                    if (e.code == \"USER_INPUT\") {",
+												"                      runtime.callFunction(\"createShortcutSuccess\");",
+												"                    }",
+												"                });",
+												"        }",
+												"    });",
+												""
+											]
+										}
+									],
+									"sid": 364142620040985
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 984117157987569
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "IAP",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "getIAP_Data",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"FBInstant.payments.getCatalogAsync().then(function (catalog) {",
+								"   \truntime.objects.JSON_IAP.getFirstInstance().setJsonDataCopy(catalog) \t",
+								"});"
+							]
+						}
+					],
+					"sid": 269844982740325
+				},
+				{
+					"functionName": "iapAvailable",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DICT_GameManager",
+							"sid": 853602171074884,
+							"parameters": {
+								"instance-variable": "iapAvailable",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 289231693607251
+				}
+			],
+			"sid": 377668577481532
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "A2U",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "a2u",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 515542146159033,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"type": "script",
+									"language": "javascript",
+									"script": [
+										"FBInstant.player.getASIDAsync().then(",
+										"            _asid => {",
+										"                cancel_all_notifications(_asid);",
+										"            }",
+										"        );",
+										"\t\t",
+										"function cancel_all_notifications(asid){",
+										"        FBInstant.graphApi.requestAsync(",
+										"            \"/\" + asid + \"/cancel_all_notifications\",",
+										"            \"POST\"",
+										"        )",
+										"        .then((result) => {",
+										"            console.log(\"resetSendA2u: \", result);",
+										"            sendNewA2U(asid);",
+										"        })",
+										"        .catch((error) => {",
+										"            console.log(\"error send a2u : \", error);",
+										"            sendNewA2U(asid);",
+										"        });",
+										"    }",
+										"\t",
+										"function sendNewA2U(asid){",
+										"        let DAYS = [1, 2, 3, 4, 5, 6];",
+										"            for (let i = 0; i < DAYS.length; i++) {",
+										"                let delayTime = 60 * 5 * 1;",
+										"\t\t\t\t",
+										"                if(DAYS[i] > 0) {",
+										"                    delayTime = 86400  * DAYS[i];",
+										"                };",
+										"                let messageData = {",
+										"\t\t\t\t\tmessage: {",
+										"\t\t\t\t\t\ttitle: runtime.callFunction(\"a2u_getdata\", i, \"title\"),",
+										"\t\t\t\t\t\tbody: runtime.callFunction(\"a2u_getdata\", i, \"body\"),",
+										"\t\t\t\t\t\tmedia_url: runtime.callFunction(\"a2u_getdata\", i, \"photo\"),",
+										"\t\t\t\t\t\t",
+										"\t\t\t\t\t}, schedule_interval: delayTime",
+										"\t\t\t\t};",
+										"                FBInstant.graphApi",
+										"                    .requestAsync(",
+										"                        \"/\" + asid + \"/notifications\",",
+										"                        \"POST\",",
+										"                        messageData",
+										"                    )",
+										"                    .then((result) => {",
+										"                        console.log(\"result send a2u : \", result, messageData);",
+										"\t\t\t\t\t\t",
+										"                    })",
+										"                    .catch((error) => {",
+										"                        console.log(\"error send a2u : \", error, messageData);",
+										"                    });",
+										"            }",
+										"    }"
+									]
+								}
+							],
+							"sid": 869183919551365
+						}
+					]
+				},
+				{
+					"functionName": "a2u_getdata",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "string",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "day",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 761347577016685
+						},
+						{
+							"name": "type",
+							"type": "string",
+							"initialValue": "title",
+							"comment": "",
+							"sid": 549195853749127
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 602706544838192
+				}
+			],
+			"sid": 145031592376971
+		}
+	],
+	"sid": 391396594286864
+}

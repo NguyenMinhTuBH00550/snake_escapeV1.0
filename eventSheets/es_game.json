@@ -551,7 +551,7 @@
 					"disabled": true,
 					"parameters": {
 						"variable": "CurrentLevel",
-						"value": "DicSaveGame.Get(SAVE_LEVEL)"
+						"value": "DICT_SaveGame.Get(SAVE_LEVEL)"
 					}
 				}
 			],
@@ -583,7 +583,7 @@
 							"objectClass": "text_level",
 							"sid": 769842076691690,
 							"parameters": {
-								"text": "\"Level  \" & DicSaveGame.Get(SAVE_LEVEL)"
+								"text": "\"Level  \" & DICT_SaveGame.Get(SAVE_LEVEL)"
 							}
 						},
 						{
@@ -1246,7 +1246,7 @@
 									"sid": 628020483608110,
 									"parameters": {
 										"variable": "CurrentLevel",
-										"value": "DicSaveGame.Get(SAVE_LEVEL)"
+										"value": "DICT_SaveGame.Get(SAVE_LEVEL)"
 									}
 								},
 								{
@@ -1273,11 +1273,25 @@
 									}
 								},
 								{
+									"id": "request-url",
+									"objectClass": "AJAX",
+									"sid": 797818701985607,
+									"parameters": {
+										"tag": "\"level\"",
+										"url": "\"levels/lv\" & CurrentLevel & \".json\""
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 792496361235794
+								},
+								{
 									"id": "parse",
 									"objectClass": "JsonLevel",
-									"sid": 124700179948049,
+									"sid": 190612184167126,
 									"parameters": {
-										"data": "Dic_Level.Get(CurrentLevel)\r\n"
+										"data": "AJAX.LastData\r\n"
 									}
 								},
 								{
@@ -5961,7 +5975,7 @@
 										{
 											"id": "pick-children",
 											"objectClass": "SnakeHead",
-											"sid": 396274254847247,
+											"sid": 768523997355877,
 											"parameters": {
 												"child": "UI_SnakeEyes",
 												"which": "own"
@@ -5969,7 +5983,7 @@
 										}
 									],
 									"actions": [],
-									"sid": 268763821772580,
+									"sid": 966605819073121,
 									"children": [
 										{
 											"eventType": "block",
@@ -5977,7 +5991,7 @@
 												{
 													"id": "pick-children",
 													"objectClass": "UI_SnakeEyes",
-													"sid": 470809488873565,
+													"sid": 474413110163201,
 													"parameters": {
 														"child": "UI_eye",
 														"which": "own"
@@ -5988,39 +6002,17 @@
 												{
 													"id": "set-angle",
 													"objectClass": "UI_eye",
-													"sid": 410245887754020,
+													"sid": 948010589590042,
 													"parameters": {
 														"angle": "UI_SnakeEyes.Angle"
 													}
 												}
 											],
-											"sid": 736613181639640
+											"sid": 151402840181912
 										}
 									]
 								}
 							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-created",
-									"objectClass": "Snake_Checkpoint",
-									"sid": 233019209445121
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Snake_Checkpoint",
-									"sid": 913491393030770,
-									"parameters": {
-										"instance-variable": "myID",
-										"value": "Snake_Checkpoint.IID"
-									}
-								}
-							],
-							"sid": 925172186873453
 						}
 					],
 					"sid": 161037751883584
@@ -7887,16 +7879,6 @@
 									"text": "SnakeBody move"
 								},
 								{
-									"eventType": "variable",
-									"name": "curID",
-									"type": "number",
-									"initialValue": "0",
-									"comment": "",
-									"isStatic": false,
-									"isConstant": false,
-									"sid": 833732237145339
-								},
-								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -7977,29 +7959,21 @@
 													}
 												}
 											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 334265791650078,
-													"parameters": {
-														"variable": "curID",
-														"value": "int(tokenat(SnakeBody.wayPoint, loopindex, \"|\"))"
-													}
-												}
-											],
+											"actions": [],
 											"sid": 732284180603561,
 											"children": [
 												{
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "pick-by-evaluate",
+															"id": "pick-by-comparison",
 															"objectClass": "System",
-															"sid": 310592530344470,
+															"sid": 303158437433965,
 															"parameters": {
 																"object": "Snake_Checkpoint",
-																"expression": "Snake_Checkpoint.myID = curID"
+																"expression": "Snake_Checkpoint.IID",
+																"comparison": 0,
+																"value": "int(tokenat(SnakeBody.wayPoint, loopindex, \"|\"))"
 															}
 														}
 													],
@@ -8543,15 +8517,6 @@
 													"parameters": [
 														"SnakeHead.ownID"
 													]
-												},
-												{
-													"id": "log",
-													"objectClass": "Browser",
-													"sid": 371554500894039,
-													"parameters": {
-														"type": "log",
-														"message": "\"1\""
-													}
 												}
 											],
 											"sid": 707417604734017
@@ -9728,17 +9693,7 @@
 											"children": [
 												{
 													"eventType": "block",
-													"conditions": [
-														{
-															"id": "for-each",
-															"objectClass": "System",
-															"sid": 906988298129298,
-															"disabled": true,
-															"parameters": {
-																"object": "SnakeBody"
-															}
-														}
-													],
+													"conditions": [],
 													"actions": [
 														{
 															"id": "set-angle",
@@ -9868,17 +9823,7 @@
 											"children": [
 												{
 													"eventType": "block",
-													"conditions": [
-														{
-															"id": "for-each",
-															"objectClass": "System",
-															"sid": 122034778013675,
-															"disabled": true,
-															"parameters": {
-																"object": "SnakeTail"
-															}
-														}
-													],
+													"conditions": [],
 													"actions": [
 														{
 															"id": "set-angle",
@@ -10086,7 +10031,7 @@
 										{
 											"id": "pick-parent",
 											"objectClass": "UI_eye",
-											"sid": 335740321576868,
+											"sid": 901612903518874,
 											"parameters": {
 												"parent": "UI_SnakeEyes",
 												"which": "own"
@@ -10097,13 +10042,13 @@
 										{
 											"id": "set-angle",
 											"objectClass": "UI_eye",
-											"sid": 791869983480667,
+											"sid": 786055980222487,
 											"parameters": {
 												"angle": "UI_SnakeEyes.Angle"
 											}
 										}
 									],
-									"sid": 109357055587434
+									"sid": 577881609653804
 								}
 							]
 						},
@@ -11023,15 +10968,15 @@
 										},
 										{
 											"id": "set-key",
-											"objectClass": "DicSaveGame",
+											"objectClass": "DICT_SaveGame",
 											"sid": 106338561257896,
 											"parameters": {
 												"key": "\"SAVE_COIN\"",
-												"value": "DicSaveGame.Get(\"SAVE_COIN\") + coin"
+												"value": "DICT_SaveGame.Get(\"SAVE_COIN\") + coin"
 											}
 										},
 										{
-											"callFunction": "SAVE_GAME",
+											"callFunction": "saveGame",
 											"sid": 872115835403732
 										},
 										{
@@ -11163,7 +11108,7 @@
 												},
 												{
 													"id": "set-key",
-													"objectClass": "DicSaveGame",
+													"objectClass": "DICT_SaveGame",
 													"sid": 831423000504595,
 													"parameters": {
 														"key": "SAVE_LEVEL",
@@ -11171,7 +11116,7 @@
 													}
 												},
 												{
-													"callFunction": "SAVE_GAME",
+													"callFunction": "saveGame",
 													"sid": 765654760586871
 												},
 												{
@@ -11366,7 +11311,7 @@
 										},
 										{
 											"id": "set-key",
-											"objectClass": "DicSaveGame",
+											"objectClass": "DICT_SaveGame",
 											"sid": 928676647080437,
 											"parameters": {
 												"key": "\"CurrentLevel\"",
@@ -11656,7 +11601,7 @@
 											"objectClass": "System",
 											"sid": 373763181391394,
 											"parameters": {
-												"first-value": "DIcSaveGame.Get(SAVE_COIN)",
+												"first-value": "DICT_SaveGame.Get(SAVE_COIN)",
 												"comparison": 5,
 												"second-value": "300"
 											}
@@ -11665,15 +11610,15 @@
 									"actions": [
 										{
 											"id": "set-key",
-											"objectClass": "DicSaveGame",
+											"objectClass": "DICT_SaveGame",
 											"sid": 160878585438670,
 											"parameters": {
 												"key": "\"SAVE_COIN\"",
-												"value": "DicSaveGame.Get(\"SAVE_COIN\") - 300"
+												"value": "DICT_SaveGame.Get(\"SAVE_COIN\") - 300"
 											}
 										},
 										{
-											"callFunction": "SAVE_GAME",
+											"callFunction": "saveGame",
 											"sid": 707658257000844
 										},
 										{
@@ -11681,7 +11626,7 @@
 											"objectClass": "text_coin",
 											"sid": 567337399356129,
 											"parameters": {
-												"text": "int(DIcSaveGame.Get(SAVE_COIN))"
+												"text": "int(DICT_SaveGame.Get(SAVE_COIN))"
 											}
 										},
 										{
@@ -12555,7 +12500,7 @@
 										},
 										{
 											"id": "set-key",
-											"objectClass": "DicSaveGame",
+											"objectClass": "DICT_SaveGame",
 											"sid": 753490963188029,
 											"parameters": {
 												"key": "SAVE_HINTS",
@@ -12567,7 +12512,7 @@
 											"objectClass": "text_boosterHint_count",
 											"sid": 561551935780634,
 											"parameters": {
-												"text": "DicSaveGame.Get(SAVE_HINTS)"
+												"text": "DICT_SaveGame.Get(SAVE_HINTS)"
 											}
 										}
 									],
@@ -12618,7 +12563,7 @@
 										},
 										{
 											"id": "set-key",
-											"objectClass": "DicSaveGame",
+											"objectClass": "DICT_SaveGame",
 											"sid": 155929140606449,
 											"parameters": {
 												"key": "SAVE_GRID",
@@ -12630,7 +12575,7 @@
 											"objectClass": "text_boosterHint_count",
 											"sid": 112554718001644,
 											"parameters": {
-												"text": "DicSaveGame.Get(SAVE_HINTS)"
+												"text": "DICT_SaveGame.Get(SAVE_HINTS)"
 											}
 										}
 									],
@@ -13396,7 +13341,7 @@
 															"objectClass": "text_boosterHint_count",
 															"sid": 803214164547067,
 															"parameters": {
-																"text": "DicSaveGame.Get(SAVE_HINTS)"
+																"text": "DICT_SaveGame.Get(SAVE_HINTS)"
 															}
 														}
 													],
@@ -13454,7 +13399,7 @@
 																	"objectClass": "System",
 																	"sid": 471894952564928,
 																	"parameters": {
-																		"first-value": "DicSaveGame.Get(SAVE_HINTS)",
+																		"first-value": "DICT_SaveGame.Get(SAVE_HINTS)",
 																		"comparison": 4,
 																		"second-value": "0"
 																	}
@@ -13739,15 +13684,15 @@
 																										},
 																										{
 																											"id": "set-key",
-																											"objectClass": "DicSaveGame",
+																											"objectClass": "DICT_SaveGame",
 																											"sid": 568819453442269,
 																											"parameters": {
 																												"key": "SAVE_HINTS",
-																												"value": "DicSaveGame.Get(SAVE_HINTS) - 1"
+																												"value": "DICT_SaveGame.Get(SAVE_HINTS) - 1"
 																											}
 																										},
 																										{
-																											"callFunction": "SAVE_GAME",
+																											"callFunction": "saveGame",
 																											"sid": 436038441627766
 																										},
 																										{
@@ -13755,7 +13700,7 @@
 																											"objectClass": "text_boosterHint_count",
 																											"sid": 505449561877449,
 																											"parameters": {
-																												"text": "DicSaveGame.Get(SAVE_HINTS)"
+																												"text": "DICT_SaveGame.Get(SAVE_HINTS)"
 																											}
 																										},
 																										{
@@ -14040,7 +13985,7 @@
 																	"objectClass": "System",
 																	"sid": 481902855936574,
 																	"parameters": {
-																		"first-value": "DicSaveGame.Get(SAVE_HINTS)",
+																		"first-value": "DICT_SaveGame.Get(SAVE_HINTS)",
 																		"comparison": 0,
 																		"second-value": "0"
 																	}
@@ -14197,15 +14142,15 @@
 												},
 												{
 													"id": "set-key",
-													"objectClass": "DicSaveGame",
+													"objectClass": "DICT_SaveGame",
 													"sid": 856433562625804,
 													"parameters": {
 														"key": "SAVE_HINTS",
-														"value": "DicSaveGame.Get(SAVE_HINTS)  + 1"
+														"value": "DICT_SaveGame.Get(SAVE_HINTS)  + 1"
 													}
 												},
 												{
-													"callFunction": "SAVE_GAME",
+													"callFunction": "saveGame",
 													"sid": 296158235987628
 												},
 												{
@@ -14213,7 +14158,7 @@
 													"objectClass": "text_boosterHint_count",
 													"sid": 219994858389497,
 													"parameters": {
-														"text": "DicSaveGame.Get(SAVE_HINTS)"
+														"text": "DICT_SaveGame.Get(SAVE_HINTS)"
 													}
 												},
 												{
@@ -14270,7 +14215,7 @@
 															"objectClass": "System",
 															"sid": 438407125181685,
 															"parameters": {
-																"first-value": "DicSaveGame.Get(SAVE_COIN)",
+																"first-value": "DICT_SaveGame.Get(SAVE_COIN)",
 																"comparison": 5,
 																"second-value": "200"
 															}
@@ -14288,15 +14233,15 @@
 														},
 														{
 															"id": "set-key",
-															"objectClass": "DicSaveGame",
+															"objectClass": "DICT_SaveGame",
 															"sid": 710140851192025,
 															"parameters": {
 																"key": "SAVE_COIN",
-																"value": "DicSaveGame.Get(SAVE_COIN) - 200"
+																"value": "DICT_SaveGame.Get(SAVE_COIN) - 200"
 															}
 														},
 														{
-															"callFunction": "SAVE_GAME",
+															"callFunction": "saveGame",
 															"sid": 997756612336180
 														},
 														{
@@ -14304,7 +14249,7 @@
 															"objectClass": "text_coin",
 															"sid": 116672830159796,
 															"parameters": {
-																"text": "DicSaveGame.Get(SAVE_COIN)"
+																"text": "DICT_SaveGame.Get(SAVE_COIN)"
 															}
 														},
 														{
@@ -14318,15 +14263,15 @@
 														},
 														{
 															"id": "set-key",
-															"objectClass": "DicSaveGame",
+															"objectClass": "DICT_SaveGame",
 															"sid": 563591351675543,
 															"parameters": {
 																"key": "SAVE_HINTS",
-																"value": "DicSaveGame.Get(SAVE_HINTS)  + 1"
+																"value": "DICT_SaveGame.Get(SAVE_HINTS)  + 1"
 															}
 														},
 														{
-															"callFunction": "SAVE_GAME",
+															"callFunction": "saveGame",
 															"sid": 543456848978651
 														},
 														{
@@ -14334,7 +14279,7 @@
 															"objectClass": "text_boosterHint_count",
 															"sid": 138705492693194,
 															"parameters": {
-																"text": "DicSaveGame.Get(SAVE_HINTS)"
+																"text": "DICT_SaveGame.Get(SAVE_HINTS)"
 															}
 														},
 														{
@@ -14563,7 +14508,7 @@
 													"objectClass": "System",
 													"sid": 208446460890061,
 													"parameters": {
-														"first-value": "DicSaveGame.Get(SAVE_HINTS)",
+														"first-value": "DICT_SaveGame.Get(SAVE_HINTS)",
 														"comparison": 0,
 														"second-value": "0"
 													}
@@ -14634,7 +14579,7 @@
 													"objectClass": "System",
 													"sid": 421234972385972,
 													"parameters": {
-														"first-value": "DicSaveGame.Get(SAVE_HINTS)",
+														"first-value": "DICT_SaveGame.Get(SAVE_HINTS)",
 														"comparison": 5,
 														"second-value": "1"
 													}
@@ -15168,7 +15113,7 @@
 															"objectClass": "text_boosterGrid_count",
 															"sid": 415292272437673,
 															"parameters": {
-																"text": "DicSaveGame.Get(SAVE_GRID)"
+																"text": "DICT_SaveGame.Get(SAVE_GRID)"
 															}
 														}
 													],
@@ -15252,7 +15197,7 @@
 																			"objectClass": "System",
 																			"sid": 815210999934812,
 																			"parameters": {
-																				"first-value": "DicSaveGame.Get(SAVE_GRID)",
+																				"first-value": "DICT_SaveGame.Get(SAVE_GRID)",
 																				"comparison": 4,
 																				"second-value": "0"
 																			}
@@ -15270,15 +15215,15 @@
 																		},
 																		{
 																			"id": "set-key",
-																			"objectClass": "DicSaveGame",
+																			"objectClass": "DICT_SaveGame",
 																			"sid": 304196535999881,
 																			"parameters": {
 																				"key": "SAVE_GRID",
-																				"value": "DicSaveGame.Get(SAVE_GRID) - 1"
+																				"value": "DICT_SaveGame.Get(SAVE_GRID) - 1"
 																			}
 																		},
 																		{
-																			"callFunction": "SAVE_GAME",
+																			"callFunction": "saveGame",
 																			"sid": 754178821604513
 																		},
 																		{
@@ -15286,7 +15231,7 @@
 																			"objectClass": "text_boosterGrid_count",
 																			"sid": 398542052512198,
 																			"parameters": {
-																				"text": "DicSaveGame.Get(SAVE_GRID)"
+																				"text": "DICT_SaveGame.Get(SAVE_GRID)"
 																			}
 																		}
 																	],
@@ -15659,7 +15604,7 @@
 																			"objectClass": "System",
 																			"sid": 491367163624518,
 																			"parameters": {
-																				"first-value": "DicSaveGame.Get(SAVE_GRID)",
+																				"first-value": "DICT_SaveGame.Get(SAVE_GRID)",
 																				"comparison": 0,
 																				"second-value": "0"
 																			}
@@ -16174,15 +16119,15 @@
 												},
 												{
 													"id": "set-key",
-													"objectClass": "DicSaveGame",
+													"objectClass": "DICT_SaveGame",
 													"sid": 481905027291154,
 													"parameters": {
 														"key": "SAVE_GRID",
-														"value": "DicSaveGame.Get(SAVE_GRID)  + 1"
+														"value": "DICT_SaveGame.Get(SAVE_GRID)  + 1"
 													}
 												},
 												{
-													"callFunction": "SAVE_GAME",
+													"callFunction": "saveGame",
 													"sid": 997248335880912
 												},
 												{
@@ -16190,7 +16135,7 @@
 													"objectClass": "text_boosterGrid_count",
 													"sid": 335166172589695,
 													"parameters": {
-														"text": "DicSaveGame.Get(SAVE_GRID)"
+														"text": "DICT_SaveGame.Get(SAVE_GRID)"
 													}
 												},
 												{
@@ -16247,7 +16192,7 @@
 															"objectClass": "System",
 															"sid": 889370763730313,
 															"parameters": {
-																"first-value": "DicSaveGame.Get(SAVE_COIN)",
+																"first-value": "DICT_SaveGame.Get(SAVE_COIN)",
 																"comparison": 5,
 																"second-value": "300"
 															}
@@ -16265,15 +16210,15 @@
 														},
 														{
 															"id": "set-key",
-															"objectClass": "DicSaveGame",
+															"objectClass": "DICT_SaveGame",
 															"sid": 331216240776596,
 															"parameters": {
 																"key": "SAVE_COIN",
-																"value": "DicSaveGame.Get(SAVE_COIN) - 300"
+																"value": "DICT_SaveGame.Get(SAVE_COIN) - 300"
 															}
 														},
 														{
-															"callFunction": "SAVE_GAME",
+															"callFunction": "saveGame",
 															"sid": 719132408832135
 														},
 														{
@@ -16281,7 +16226,7 @@
 															"objectClass": "text_coin",
 															"sid": 435660148609691,
 															"parameters": {
-																"text": "DicSaveGame.Get(SAVE_COIN)"
+																"text": "DICT_SaveGame.Get(SAVE_COIN)"
 															}
 														},
 														{
@@ -16295,15 +16240,15 @@
 														},
 														{
 															"id": "set-key",
-															"objectClass": "DicSaveGame",
+															"objectClass": "DICT_SaveGame",
 															"sid": 227875004445820,
 															"parameters": {
 																"key": "SAVE_GRID",
-																"value": "DicSaveGame.Get(SAVE_GRID)  + 3"
+																"value": "DICT_SaveGame.Get(SAVE_GRID)  + 3"
 															}
 														},
 														{
-															"callFunction": "SAVE_GAME",
+															"callFunction": "saveGame",
 															"sid": 275001680037430
 														},
 														{
@@ -16311,7 +16256,7 @@
 															"objectClass": "text_boosterGrid_count",
 															"sid": 638538337000233,
 															"parameters": {
-																"text": "DicSaveGame.Get(SAVE_GRID)"
+																"text": "DICT_SaveGame.Get(SAVE_GRID)"
 															}
 														},
 														{
@@ -16540,7 +16485,7 @@
 													"objectClass": "System",
 													"sid": 762070355372241,
 													"parameters": {
-														"first-value": "DicSaveGame.Get(SAVE_GRID)",
+														"first-value": "DICT_SaveGame.Get(SAVE_GRID)",
 														"comparison": 0,
 														"second-value": "0"
 													}
@@ -16630,7 +16575,7 @@
 													"objectClass": "System",
 													"sid": 696653560109369,
 													"parameters": {
-														"first-value": "DicSaveGame.Get(SAVE_GRID)",
+														"first-value": "DICT_SaveGame.Get(SAVE_GRID)",
 														"comparison": 5,
 														"second-value": "1"
 													}
