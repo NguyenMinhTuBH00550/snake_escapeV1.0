@@ -457,13 +457,6 @@
 			},
 			{
 				"items": [
-					"GridMap"
-				],
-				"subfolders": [],
-				"name": "Array"
-			},
-			{
-				"items": [
 					"JsonLevel"
 				],
 				"subfolders": [],
@@ -537,7 +530,10 @@
 					},
 					{
 						"items": [
-							"ARR_listFriendID"
+							"ARR_listFriendID",
+							"ARR_BodyPath",
+							"ARR_HeadPath",
+							"ARR_TailPath"
 						],
 						"subfolders": [],
 						"name": "Array"

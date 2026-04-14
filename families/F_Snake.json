@@ -93,6 +93,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 612366471925843
+		},
+		{
+			"name": "currentIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 330069673138162
+		},
+		{
+			"name": "targetIID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 931368494797839
 		}
 	],
 	"behaviorTypes": [

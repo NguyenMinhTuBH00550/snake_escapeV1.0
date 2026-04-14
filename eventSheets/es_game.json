@@ -5795,6 +5795,59 @@
 															]
 														}
 													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 573572443932427,
+															"parameters": {
+																"object": "F_Snake"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 100806178104038,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 171915193983990,
+																	"parameters": {
+																		"first-value": "tokencount(F_Snake.wayPoint, \"|\")",
+																		"comparison": 4,
+																		"second-value": "0"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "F_Snake",
+																	"sid": 884396800715605,
+																	"parameters": {
+																		"instance-variable": "currentIndex",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "F_Snake",
+																	"sid": 158986177156498,
+																	"parameters": {
+																		"instance-variable": "targetIID",
+																		"value": "int(tokenat(F_Snake.wayPoint, 0, \"|\"))"
+																	}
+																}
+															],
+															"sid": 896106844344694
+														}
+													]
 												}
 											]
 										}
@@ -5816,6 +5869,16 @@
 									"id": "move-to-bottom",
 									"objectClass": "SnakeBody",
 									"sid": 519945108215415
+								},
+								{
+									"id": "set-size",
+									"objectClass": "ARR_BodyPath",
+									"sid": 280793831974000,
+									"parameters": {
+										"width": "0",
+										"height": "3",
+										"depth": "1"
+									}
 								}
 							],
 							"sid": 334215439757851
@@ -5834,6 +5897,16 @@
 									"id": "move-to-bottom",
 									"objectClass": "SnakeTail",
 									"sid": 435559233558263
+								},
+								{
+									"id": "set-size",
+									"objectClass": "ARR_TailPath",
+									"sid": 245752129288082,
+									"parameters": {
+										"width": "0",
+										"height": "3",
+										"depth": "1"
+									}
 								}
 							],
 							"sid": 888459389380648
@@ -5847,7 +5920,18 @@
 									"sid": 930606386390818
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "ARR_HeadPath",
+									"sid": 453934252627209,
+									"parameters": {
+										"width": "0",
+										"height": "3",
+										"depth": "1"
+									}
+								}
+							],
 							"sid": 456512252506439,
 							"children": [
 								{
@@ -6256,46 +6340,6 @@
 							]
 						},
 						{
-							"eventType": "variable",
-							"name": "FakeTargetX",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 733310184439065
-						},
-						{
-							"eventType": "variable",
-							"name": "FakeTargetY",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 858301584010134
-						},
-						{
-							"eventType": "variable",
-							"name": "moveAngle",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 516093186659038
-						},
-						{
-							"eventType": "variable",
-							"name": "backOffset",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 105457660629668
-						},
-						{
 							"functionName": "SnakePlay",
 							"functionDescription": "",
 							"functionCategory": "",
@@ -6526,6 +6570,46 @@
 													"actions": [],
 													"sid": 144091416744621,
 													"children": [
+														{
+															"eventType": "variable",
+															"name": "FakeTargetX",
+															"type": "number",
+															"initialValue": "0",
+															"comment": "",
+															"isStatic": false,
+															"isConstant": false,
+															"sid": 367731492860419
+														},
+														{
+															"eventType": "variable",
+															"name": "FakeTargetY",
+															"type": "number",
+															"initialValue": "0",
+															"comment": "",
+															"isStatic": false,
+															"isConstant": false,
+															"sid": 764809154036131
+														},
+														{
+															"eventType": "variable",
+															"name": "moveAngle",
+															"type": "number",
+															"initialValue": "0",
+															"comment": "",
+															"isStatic": false,
+															"isConstant": false,
+															"sid": 634943388398576
+														},
+														{
+															"eventType": "variable",
+															"name": "backOffset",
+															"type": "number",
+															"initialValue": "0",
+															"comment": "",
+															"isStatic": false,
+															"isConstant": false,
+															"sid": 626566410628230
+														},
 														{
 															"eventType": "block",
 															"conditions": [
@@ -7511,29 +7595,29 @@
 																		{
 																			"id": "set-eventvar-value",
 																			"objectClass": "System",
-																			"sid": 596535390083566,
+																			"sid": 165951827135073,
 																			"parameters": {
 																				"variable": "GoalX",
-																				"value": "Snake_Checkpoint.X + dirX*2000"
+																				"value": "Snake_Checkpoint.X + dirX * 6500"
 																			}
 																		},
 																		{
 																			"id": "set-eventvar-value",
 																			"objectClass": "System",
-																			"sid": 659942877144645,
+																			"sid": 702263794895651,
 																			"parameters": {
 																				"variable": "GoalY",
-																				"value": "Snake_Checkpoint.Y + dirY*2000"
+																				"value": "Snake_Checkpoint.Y + dirY * 6500"
 																			}
 																		},
 																		{
 																			"id": "move-to-position",
 																			"objectClass": "SnakeHead",
-																			"sid": 923342134214850,
+																			"sid": 849075012378625,
 																			"behaviorType": "MoveTo",
 																			"parameters": {
-																				"x": "goalX",
-																				"y": "goalY",
+																				"x": "GoalX",
+																				"y": "GoalY",
 																				"mode": "add-waypoint"
 																			}
 																		},
@@ -7775,15 +7859,6 @@
 																"instance-variable": "cpY",
 																"value": "Snake_Checkpoint.Y"
 															}
-														},
-														{
-															"id": "log",
-															"objectClass": "Browser",
-															"sid": 667257467837960,
-															"parameters": {
-																"type": "log",
-																"message": "\"aaa= \" & Snake_Checkpoint.IID"
-															}
 														}
 													],
 													"sid": 990217809089969,
@@ -7879,6 +7954,16 @@
 									"text": "SnakeBody move"
 								},
 								{
+									"eventType": "variable",
+									"name": "curID",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 923339309360314
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -7959,21 +8044,30 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 563346421876726,
+													"disabled": true,
+													"parameters": {
+														"type": "log",
+														"message": "\"aaa\""
+													}
+												}
+											],
 											"sid": 732284180603561,
 											"children": [
 												{
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "pick-by-comparison",
+															"id": "pick-by-evaluate",
 															"objectClass": "System",
-															"sid": 303158437433965,
+															"sid": 320688279493451,
 															"parameters": {
 																"object": "Snake_Checkpoint",
-																"expression": "Snake_Checkpoint.IID",
-																"comparison": 0,
-																"value": "int(tokenat(SnakeBody.wayPoint, loopindex, \"|\"))"
+																"expression": "Snake_Checkpoint.IID = int(tokenat(SnakeBody.wayPoint, loopindex, \"|\"))"
 															}
 														}
 													],
@@ -9570,30 +9664,30 @@
 										{
 											"id": "every-tick",
 											"objectClass": "System",
-											"sid": 740847817621035
+											"sid": 808386110298441
 										}
 									],
 									"actions": [
 										{
 											"id": "set-instvar-value",
 											"objectClass": "SnakeTail",
-											"sid": 951863241233229,
+											"sid": 581220320598861,
 											"parameters": {
 												"instance-variable": "SnakeWay",
-												"value": "\"B \"\r\n&\r\nSnakeTail.SnakeWay\r\n&\r\nSnakeTail.ownID & \",\"\r\n&\r\nSnakeTail.X & \",\"\r\n&\r\nSnakeTail.Y & \",\"\r\n&\r\nSnakeTail.Angle\r\n&\r\n\"|\"\r\n"
+												"value": "SnakeTail.SnakeWay\r\n&\r\nSnakeTail.ownID & \",\"\r\n&\r\nSnakeTail.X & \",\"\r\n&\r\nSnakeTail.Y & \",\"\r\n&\r\nSnakeTail.Angle\r\n&\r\n\"|\"\r\n"
 											}
 										},
 										{
 											"id": "add-to-instvar",
 											"objectClass": "SnakeTail",
-											"sid": 855841834264865,
+											"sid": 751623000608375,
 											"parameters": {
 												"instance-variable": "TailPathIndex",
 												"value": "1"
 											}
 										}
 									],
-									"sid": 216429801857490
+									"sid": 868860639555290
 								}
 							]
 						},
@@ -9616,30 +9710,30 @@
 										{
 											"id": "every-tick",
 											"objectClass": "System",
-											"sid": 764964942190133
+											"sid": 184032880739006
 										}
 									],
 									"actions": [
 										{
 											"id": "set-instvar-value",
 											"objectClass": "SnakeBody",
-											"sid": 926835886393498,
+											"sid": 819378250560366,
 											"parameters": {
 												"instance-variable": "SnakeWay",
-												"value": "\"B \"\r\n&\r\nSnakeBody.SnakeWay\r\n&\r\nSnakeBody.ownID & \",\"\r\n&\r\nSnakeBody.X & \",\"\r\n&\r\nSnakeBody.Y & \",\"\r\n&\r\nSnakeBody.Angle\r\n&\r\n\"|\"\r\n"
+												"value": "SnakeBody.SnakeWay\r\n&\r\nSnakeBody.ownID & \",\"\r\n&\r\nSnakeBody.X & \",\"\r\n&\r\nSnakeBody.Y & \",\"\r\n&\r\nSnakeBody.Angle\r\n&\r\n\"|\"\r\n"
 											}
 										},
 										{
 											"id": "add-to-instvar",
 											"objectClass": "SnakeBody",
-											"sid": 884801950946812,
+											"sid": 554127278917366,
 											"parameters": {
 												"instance-variable": "BodyPathIndex",
 												"value": "1"
 											}
 										}
 									],
-									"sid": 943962639690943
+									"sid": 550892125470503
 								}
 							]
 						},
@@ -10394,7 +10488,7 @@
 								{
 									"id": "destroy",
 									"objectClass": "F_Snake",
-									"sid": 784019665955251
+									"sid": 782006301664910
 								}
 							],
 							"sid": 221403821043949
@@ -10454,7 +10548,17 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 272091436357825,
+											"parameters": {
+												"variable": "isWin",
+												"value": "1"
+											}
+										}
+									],
 									"sid": 734158919688445,
 									"children": [
 										{
@@ -11395,6 +11499,129 @@
 								}
 							],
 							"sid": 931280641459558
+						},
+						{
+							"eventType": "variable",
+							"name": "isWin",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 508263472159598
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 567528747702245,
+									"parameters": {
+										"first-value": "completedSnakes",
+										"comparison": 0,
+										"second-value": "totalSnakes"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 563157459413124,
+									"parameters": {
+										"variable": "isWin",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 308780538533266,
+									"parameters": {
+										"variable": "CamTargetX",
+										"value": "LayoutWidth/2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 466806746585857,
+									"parameters": {
+										"variable": "CamTargetY",
+										"value": "LayoutHeight/2"
+									}
+								}
+							],
+							"sid": 148434608201252
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 759623391748367
+								}
+							],
+							"actions": [],
+							"sid": 334464021911823,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 575690806013890,
+											"parameters": {
+												"first-value": "isWin",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "scroll-to-position",
+											"objectClass": "System",
+											"sid": 136342377950384,
+											"parameters": {
+												"x": "lerp(scrollx, CamTargetX, 0.15)",
+												"y": "lerp(scrolly, CamTargetY, 0.15)"
+											}
+										}
+									],
+									"sid": 440995210000871
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 924883415603420,
+									"parameters": {
+										"first-value": "distance(scrollx, scrolly, CamTargetX, CamTargetY)",
+										"comparison": 2,
+										"second-value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 843955123502398,
+									"parameters": {
+										"variable": "isWin",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 142186332478108
 						}
 					],
 					"sid": 199234473461030

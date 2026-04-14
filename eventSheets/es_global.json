@@ -668,15 +668,6 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
-						},
-						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 142044911323453,
-							"parameters": {
-								"type": "log",
-								"message": "\"aaa\""
-							}
 						}
 					],
 					"sid": 464775636997347

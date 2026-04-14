@@ -32,6 +32,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -151,6 +153,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -270,6 +274,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -389,6 +395,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -508,6 +516,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"TailOrder": 0,
 						"TailPathIndex": 0,
 						"TailBackIndex": 0,
@@ -618,6 +628,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -737,6 +749,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6519,6 +6533,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6638,6 +6654,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6757,6 +6775,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -6876,6 +6896,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -7088,6 +7110,14 @@
 											},
 											{
 												"iv": "snakeOn",
+												"state": true
+											},
+											{
+												"iv": "currentIndex",
+												"state": true
+											},
+											{
+												"iv": "targetIID",
 												"state": true
 											}
 										]
@@ -7362,6 +7392,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -7481,6 +7513,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"OrderIndexTemp": 0,
 						"HeadPathIndex": 0,
 						"HeadBackMax": 0,
@@ -7684,6 +7718,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"TailOrder": 0,
 						"TailPathIndex": 0,
 						"TailBackIndex": 0,
@@ -7851,6 +7887,14 @@
 											},
 											{
 												"iv": "cpY",
+												"state": true
+											},
+											{
+												"iv": "currentIndex",
+												"state": true
+											},
+											{
+												"iv": "targetIID",
 												"state": true
 											}
 										]
@@ -8095,6 +8139,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -8214,6 +8260,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -8333,6 +8381,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -8452,6 +8502,8 @@
 						"IsCompleted": false,
 						"InitWaypoint": 0,
 						"fullWaypoint": "",
+						"currentIndex": 0,
+						"targetIID": -1,
 						"BodyPathIndex": 0,
 						"BodyBackIndex": 0,
 						"BodyBackMax": 0,
@@ -8664,6 +8716,14 @@
 											},
 											{
 												"iv": "snakeOn",
+												"state": true
+											},
+											{
+												"iv": "currentIndex",
+												"state": true
+											},
+											{
+												"iv": "targetIID",
 												"state": true
 											}
 										]

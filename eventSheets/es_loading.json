@@ -340,55 +340,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-completed",
-							"objectClass": "AJAX",
-							"sid": 932427306387745,
-							"parameters": {
-								"tag": "\"LoadAllLevels\""
-							}
-						}
-					],
-					"actions": [],
-					"sid": 277044646333036,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-any-completed",
-							"objectClass": "AJAX",
-							"sid": 739272421304971
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 338293541482906,
-							"parameters": {
-								"first-value": "find(AJAX.Tag, \"LoadLevel_\")",
-								"comparison": 1,
-								"second-value": "-1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 234330246152790,
-							"parameters": {
-								"variable": "LevelID",
-								"value": "replace(AJAX.Tag, \"LoadLevel_\", \"\")\r\n"
-							}
-						}
-					],
-					"sid": 112866490191782,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "evaluate-expression",
 							"objectClass": "System",
 							"sid": 903175420181424,
@@ -491,9 +442,9 @@
 								{
 									"id": "evaluate-expression",
 									"objectClass": "System",
-									"sid": 205578602699772,
+									"sid": 843300136099803,
 									"parameters": {
-										"value": "progress = 100"
+										"value": "progress= 100"
 									}
 								}
 							],

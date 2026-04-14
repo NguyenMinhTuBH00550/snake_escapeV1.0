@@ -949,54 +949,6 @@
 								}
 							],
 							"sid": 601869382801652
-						},
-						{
-							"functionName": "completeLoadInstantData2",
-							"functionDescription": "",
-							"functionCategory": "",
-							"functionReturnType": "none",
-							"functionCopyPicked": false,
-							"functionIsAsync": false,
-							"functionParameters": [],
-							"eventType": "function-block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "DICT_GameManager",
-									"sid": 673559523962213,
-									"parameters": {
-										"instance-variable": "tourContextID",
-										"value": "tourContextID"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "DICT_GameManager",
-									"sid": 550038527013367,
-									"parameters": {
-										"instance-variable": "tourName",
-										"value": "tourName"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "DICT_GameManager",
-									"sid": 781168897490545,
-									"parameters": {
-										"instance-variable": "tourEndTime",
-										"value": "tourEndTime"
-									}
-								},
-								{
-									"callFunction": "loadGame",
-									"sid": 171069523363199,
-									"parameters": [
-										"100"
-									]
-								}
-							],
-							"sid": 874671717021278
 						}
 					],
 					"sid": 943382749190928
@@ -1047,7 +999,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "DICT_GameManager",
-							"sid": 213561483900615,
+							"sid": 825217901298169,
 							"parameters": {
 								"instance-variable": "tourContextID",
 								"value": "tourContextID"
@@ -1056,7 +1008,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "DICT_GameManager",
-							"sid": 776999983297047,
+							"sid": 820890939084664,
 							"parameters": {
 								"instance-variable": "tourName",
 								"value": "tourName"
@@ -1065,7 +1017,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "DICT_GameManager",
-							"sid": 533373866588285,
+							"sid": 138281487754873,
 							"parameters": {
 								"instance-variable": "tourEndTime",
 								"value": "tourEndTime"
@@ -1073,13 +1025,13 @@
 						},
 						{
 							"callFunction": "loadGame",
-							"sid": 599262927723408,
+							"sid": 498688948226437,
 							"parameters": [
 								"100"
 							]
 						}
 					],
-					"sid": 569730569997848
+					"sid": 440551738262482
 				}
 			],
 			"sid": 406200280590596

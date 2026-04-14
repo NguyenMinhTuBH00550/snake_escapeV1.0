@@ -355,6 +355,170 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "FB_Instants_Button",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_Invite",
+									"sid": 867237722450611,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 683855908969983,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								}
+							],
+							"sid": 347947795353547
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_JoinGroup",
+									"sid": 919059671558040,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 737713138989418,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								}
+							],
+							"sid": 387149857120269
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_LikePage",
+									"sid": 110451517950794,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 397112591134446,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								}
+							],
+							"sid": 620261666843029
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_LikePage",
+									"sid": 733107765326040,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 840061488905546,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								}
+							],
+							"sid": 864931347064043
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_Share",
+									"sid": 507119772469951,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 889690811701835,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								}
+							],
+							"sid": 745332395606251
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_Tournament",
+									"sid": 889865265517177,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 558093009956183,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								}
+							],
+							"sid": 183121010040780
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_VS",
+									"sid": 605457396873974,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 649940577266469,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								}
+							],
+							"sid": 206091316665318
+						}
+					],
+					"sid": 654880534806397
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Setting_button",
 					"description": "",
 					"isActiveOnStart": true,
