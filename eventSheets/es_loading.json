@@ -340,6 +340,47 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-tweens-finished",
+							"objectClass": "loadbar",
+							"sid": 984006425210621,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "showFader",
+							"sid": 978389115669981,
+							"parameters": [
+								"100"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 917898874595571,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 976562717832277,
+							"parameters": {
+								"layout": "Home"
+							}
+						}
+					],
+					"sid": 370211017766759
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "evaluate-expression",
 							"objectClass": "System",
 							"sid": 903175420181424,
@@ -366,7 +407,7 @@
 					"actions": [
 						{
 							"callFunction": "showFader",
-							"sid": 105121472657514,
+							"sid": 479741512832933,
 							"parameters": [
 								"100"
 							]
@@ -374,7 +415,7 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 973123139845853,
+							"sid": 440689135351963,
 							"parameters": {
 								"seconds": "0.5",
 								"use-timescale": true
@@ -383,13 +424,23 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 541049307649644,
+							"sid": 712492649256480,
 							"parameters": {
 								"layout": "Home"
 							}
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 572414299182174,
+							"parameters": {
+								"type": "log",
+								"message": "\"aaa\""
+							}
 						}
 					],
-					"sid": 519578400999453
+					"sid": 519578400999453,
+					"disabled": true
 				},
 				{
 					"functionName": "loadGame",
