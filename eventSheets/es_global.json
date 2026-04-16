@@ -2519,6 +2519,17 @@
 							}
 						},
 						{
+							"id": "start-timer",
+							"objectClass": "UI_SnakeEyes",
+							"sid": 247764162843926,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "random(2,6)",
+								"type": "once",
+								"tag": "\"blink\""
+							}
+						},
+						{
 							"callFunction": "PlaySFX",
 							"sid": 509671781271515,
 							"parameters": [
