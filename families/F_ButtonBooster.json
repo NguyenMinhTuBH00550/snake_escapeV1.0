@@ -12,6 +12,10 @@
 		"play_zoombar_frame",
 		"play_zoombar_slide",
 		"HUD_pause",
-		"HUD_retry"
+		"HUD_retry",
+		"HUD_level_txt",
+		"HUD_heart",
+		"UI_heart_frame",
+		"HUD_icon_snake"
 	]
 }

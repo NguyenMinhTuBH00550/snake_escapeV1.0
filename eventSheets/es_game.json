@@ -15204,19 +15204,19 @@
 																				{
 																					"id": "set-eventvar-value",
 																					"objectClass": "System",
-																					"sid": 370326532707380,
+																					"sid": 196777089237246,
 																					"parameters": {
 																						"variable": "GoalX",
-																						"value": " SnakeHead.X + dirX * 2000"
+																						"value": " SnakeHead.X + dirX * 8000"
 																					}
 																				},
 																				{
 																					"id": "set-eventvar-value",
 																					"objectClass": "System",
-																					"sid": 686652339505069,
+																					"sid": 612602736648159,
 																					"parameters": {
 																						"variable": "GoalY",
-																						"value": " SnakeHead.Y + dirY * 2000"
+																						"value": " SnakeHead.Y + dirY * 8000"
 																					}
 																				}
 																			],
