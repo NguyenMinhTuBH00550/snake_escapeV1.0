@@ -1517,6 +1517,383 @@
 				}
 			],
 			"sid": 145031592376971
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Share",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "setYourData",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "score",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 324517140808671
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "add-key",
+							"objectClass": "YourData_DICT",
+							"sid": 756086693777023,
+							"parameters": {
+								"key": "\"id\"",
+								"value": "DICT_SaveGame.Get(SAVE_PROFILE_ID)"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "YourData_DICT",
+							"sid": 693179453128435,
+							"parameters": {
+								"key": "\"name\"",
+								"value": "DICT_SaveGame.Get(SAVE_PROFILE_NAME)"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "YourData_DICT",
+							"sid": 557713278871686,
+							"parameters": {
+								"key": "\"avatar\"",
+								"value": "DICT_SaveGame.Get(SAVE_PROFILE_AVATAR_PICKED)"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "YourData_DICT",
+							"sid": 707760882753304,
+							"parameters": {
+								"key": "\"score\"",
+								"value": "score"
+							}
+						}
+					],
+					"sid": 859753831731700
+				},
+				{
+					"functionName": "setFriendData",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "name",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 959571063669212
+						},
+						{
+							"name": "frame",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 340567674492284
+						},
+						{
+							"name": "score",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 451410765077865
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "add-key",
+							"objectClass": "FriendData_DICT",
+							"sid": 800360881971564,
+							"parameters": {
+								"key": "\"id\"",
+								"value": "0"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "FriendData_DICT",
+							"sid": 412044353418391,
+							"parameters": {
+								"key": "\"name\"",
+								"value": "name"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "FriendData_DICT",
+							"sid": 698105425832345,
+							"parameters": {
+								"key": "\"avatar\"",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "FriendData_DICT",
+							"sid": 729274263256932,
+							"parameters": {
+								"key": "\"score\"",
+								"value": "score"
+							}
+						}
+					],
+					"sid": 630839230569937
+				},
+				{
+					"functionName": "onContextChanged",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "base64Picture",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 791834177190397
+						},
+						{
+							"name": "data",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 604110874624709
+						},
+						{
+							"name": "funcName",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 260610362681000
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"// This will post a custom update. When people launch the game from this",
+								"// message, those game sessions will be able to access the specified blob",
+								"// of data through FBInstant.getEntryPointData().",
+								"",
+								"const getBase64FromUrl = async (url) => {",
+								"  const data = await fetch(url);",
+								"  const blob = await data.blob();",
+								"  return new Promise((resolve) => {",
+								"    const reader = new FileReader();",
+								"    reader.readAsDataURL(blob); ",
+								"    reader.onloadend = () => {",
+								"      const base64data = reader.result;   ",
+								"      resolve(base64data);",
+								"    }",
+								"  });",
+								"}",
+								"",
+								"localVars.base64 = getBase64FromUrl(localVars.base64Picture).then((base64data) => {",
+								"\tFBInstant.updateAsync({",
+								"    action: 'CUSTOM',",
+								"    cta: 'Join The Fight',",
+								"    image: base64data,",
+								"    text: \"Can you beat me?\",",
+								"    template: 'VILLAGE_INVASION',",
+								"    data: { myReplayData: localVars.data },",
+								"    strategy: 'IMMEDIATE',",
+								"    notification: 'PUSH',",
+								"}).then(function() {",
+								"    runtime.callFunction(localVars.funcName);",
+								"});",
+								"})"
+							]
+						}
+					],
+					"sid": 467602563563276
+				},
+				{
+					"functionName": "onContextCancelled",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "warning",
+							"sid": 724151826019736,
+							"parameters": [
+								"\"\"",
+								"\"You must invite friends\" & newline &  \"to play with them!\"",
+								"24"
+							]
+						}
+					],
+					"sid": 165243961822004
+				},
+				{
+					"functionName": "inviteAsync",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "base64",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 101491549806980
+						},
+						{
+							"name": "data",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 327919350581792
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 872952447148625,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"type": "script",
+									"language": "javascript",
+									"script": [
+										"const getBase64FromUrl = async (url) => {",
+										"  const data = await fetch(url);",
+										"  const blob = await data.blob();",
+										"  return new Promise((resolve) => {",
+										"    const reader = new FileReader();",
+										"    reader.readAsDataURL(blob); ",
+										"    reader.onloadend = () => {",
+										"      const base64data = reader.result;   ",
+										"      resolve(base64data);",
+										"    }",
+										"  });",
+										"}",
+										"",
+										"localVars.base64 = getBase64FromUrl(localVars.base64).then((base64data) => {",
+										"\tFBInstant.inviteAsync({",
+										"                action: 'CUSTOM',",
+										"                cta: \"Play\",",
+										"                image: base64data,",
+										"                text: {",
+										"                    default: 'Play with me!',",
+										"                    localizations: {",
+										"                    }",
+										"                },",
+										"\t\t\t\tdata: { myReplayData: localVars.data }",
+										"                })",
+										"                .then(function() {",
+										"                })\t\t\t",
+										"                .catch(function (e) {\t\t\t\t\t",
+										"                });",
+										"})"
+									]
+								}
+							],
+							"sid": 352637445078290
+						}
+					]
+				},
+				{
+					"functionName": "shareAsync",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "base64",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 884924073478641
+						},
+						{
+							"name": "data",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 786062319229020
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 448896038772392,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"type": "script",
+									"language": "javascript",
+									"script": [
+										"const getBase64FromUrl = async (url) => {",
+										"  const data = await fetch(url);",
+										"  const blob = await data.blob();",
+										"  return new Promise((resolve) => {",
+										"    const reader = new FileReader();",
+										"    reader.readAsDataURL(blob); ",
+										"    reader.onloadend = () => {",
+										"      const base64data = reader.result;   ",
+										"      resolve(base64data);",
+										"    }",
+										"  });",
+										"}",
+										"",
+										"localVars.base64 = getBase64FromUrl(localVars.base64).then((base64data) => {",
+										"\tFBInstant.shareAsync({",
+										"    intent: 'REQUEST',",
+										"    image: base64data,",
+										"    text: 'Play with me!',",
+										"    data: { myReplayData: localVars.data },",
+										"    shareDestination: ['NEWSFEED', 'GROUP', 'COPY_LINK', 'MESSENGER'],",
+										"    switchContext: false",
+										"}).then(function() {",
+										"    // continue with the game.",
+										"});",
+										"})"
+									]
+								}
+							],
+							"sid": 545590639221623
+						}
+					]
+				}
+			],
+			"sid": 822324448997370
 		}
 	],
 	"sid": 391396594286864

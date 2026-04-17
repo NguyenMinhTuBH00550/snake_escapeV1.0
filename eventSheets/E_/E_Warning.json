@@ -1,0 +1,41 @@
+{
+	"name": "E_Warning",
+	"events": [
+		{
+			"functionName": "warning",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "layerName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 182368524221674
+				},
+				{
+					"name": "detail",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 376649911738610
+				},
+				{
+					"name": "fontSize",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 926903709880463
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 847160223558062
+		}
+	],
+	"sid": 609763269706094
+}

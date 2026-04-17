@@ -43,6 +43,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "DrawingCanvas",
+			"name": "Drawing canvas",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Json",
 			"name": "JSON",
 			"author": "Scirra",
@@ -238,7 +245,11 @@
 			"UI_Invite",
 			"UI_JoinGroup",
 			"UI_LikePage",
-			"UI_Share"
+			"UI_Share",
+			"banner_share_PvP_720x",
+			"DrawingCanvas",
+			"Warning",
+			"TXT_Warning"
 		],
 		"subfolders": [
 			{
@@ -500,7 +511,9 @@
 							"DICT_CampID",
 							"DICT_GameManager",
 							"DICT_SaveGame",
-							"EntryPointData_DICT"
+							"EntryPointData_DICT",
+							"YourData_DICT",
+							"FriendData_DICT"
 						],
 						"subfolders": [],
 						"name": "Dict"
@@ -533,7 +546,8 @@
 							"ARR_listFriendID",
 							"ARR_BodyPath",
 							"ARR_HeadPath",
-							"ARR_TailPath"
+							"ARR_TailPath",
+							"ProfileAvatar_ARR"
 						],
 						"subfolders": [],
 						"name": "Array"
@@ -615,7 +629,8 @@
 					"E_Responsive",
 					"E_Dialog",
 					"E_GA",
-					"E_Particle"
+					"E_Particle",
+					"E_Warning"
 				],
 				"subfolders": [],
 				"name": "E_"

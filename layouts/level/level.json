@@ -776,6 +776,34 @@
 			"sid": 469945706392570,
 			"tags": "",
 			"instanceVariables": {}
+		},
+		{
+			"type": "YourData_DICT",
+			"properties": {},
+			"uid": 528,
+			"sid": 672379712777886,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "FriendData_DICT",
+			"properties": {},
+			"uid": 529,
+			"sid": 589043010155856,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "ProfileAvatar_ARR",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 530,
+			"sid": 287636013706448,
+			"tags": "",
+			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],

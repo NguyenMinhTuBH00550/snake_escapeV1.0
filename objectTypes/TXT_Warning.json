@@ -1,0 +1,38 @@
+{
+	"name": "TXT_Warning",
+	"plugin-id": "Text",
+	"sid": 991732287246354,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "noADS",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 634543143276167
+		},
+		{
+			"name": "mustInvite",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 236670129270130
+		},
+		{
+			"name": "buyTicket",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 396337168543489
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 692963869315737
+		}
+	],
+	"effectTypes": []
+}

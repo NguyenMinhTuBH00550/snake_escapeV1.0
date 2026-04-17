@@ -235,6 +235,105 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"functionName": "playGame",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "setenabled0",
+							"objectClass": "UI_btnPlay",
+							"sid": 710727544276536,
+							"behaviorType": "Button",
+							"parameters": {
+								"state2": "disabled"
+							}
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 666988429361340,
+							"parameters": {
+								"variable": "TimeRemaining"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 705688015102755,
+							"parameters": {
+								"variable": "Lives",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 198032276941945,
+							"parameters": {
+								"variable": "IsTimerRunning",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 810695587837319,
+							"parameters": {
+								"variable": "HasUsedGridBooster",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 559617094350551,
+							"parameters": {
+								"variable": "NextLayout",
+								"value": "\"Level\""
+							}
+						},
+						{
+							"callFunction": "PlaySFX",
+							"sid": 223055069696752,
+							"parameters": [
+								"\"SE_Click\"",
+								"-10"
+							]
+						},
+						{
+							"callFunction": "showFader",
+							"sid": 362375587172043,
+							"parameters": [
+								"100"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 538936770827187,
+							"parameters": {
+								"seconds": "0.8",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 714107112299866,
+							"parameters": {
+								"layout": "level"
+							}
+						}
+					],
+					"sid": 244470551175199
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -246,101 +345,11 @@
 					],
 					"actions": [
 						{
-							"id": "setenabled0",
-							"objectClass": "UI_btnPlay",
-							"sid": 353388692252604,
-							"behaviorType": "Button",
-							"parameters": {
-								"state2": "disabled"
-							}
-						},
-						{
-							"id": "reset-eventvar",
-							"objectClass": "System",
-							"sid": 437179748744893,
-							"parameters": {
-								"variable": "TimeRemaining"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 860315456226014,
-							"parameters": {
-								"variable": "Lives",
-								"value": "3"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 291364961638089,
-							"parameters": {
-								"variable": "IsTimerRunning",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 163557113113080,
-							"parameters": {
-								"variable": "HasUsedGridBooster",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 990875955210698,
-							"parameters": {
-								"variable": "NextLayout",
-								"value": "\"Level\""
-							}
-						},
-						{
-							"callFunction": "PlaySFX",
-							"sid": 558241312957670,
-							"parameters": [
-								"\"SE_Click\"",
-								"-10"
-							]
+							"callFunction": "playGame",
+							"sid": 808523184380511
 						}
 					],
-					"sid": 322674816031204,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"callFunction": "showFader",
-									"sid": 391436665951677,
-									"parameters": [
-										"100"
-									]
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 538733165539607,
-									"parameters": {
-										"seconds": "0.8",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 375135725561308,
-									"parameters": {
-										"layout": "level"
-									}
-								}
-							],
-							"sid": 225088306938249
-						}
-					]
+					"sid": 322674816031204
 				}
 			],
 			"sid": 992932701751427
@@ -359,6 +368,224 @@
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_JoinGroup",
+									"sid": 984743495084398,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 163625732321844,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								},
+								{
+									"type": "script",
+									"language": "javascript",
+									"script": [
+										"FBInstant.community.joinOfficialGroupAsync()",
+										"\t.then(function(data) {",
+										"    console.log(\"group ok \", data);",
+										"\t",
+										"  });",
+										""
+									]
+								}
+							],
+							"sid": 479417198009853
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_LikePage",
+									"sid": 894567952020761,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 757847680506583,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								},
+								{
+									"type": "script",
+									"language": "javascript",
+									"script": [
+										"FBInstant.community.followOfficialPageAsync()",
+										""
+									]
+								}
+							],
+							"sid": 565391955477737
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "onclicked3",
+									"objectClass": "UI_VS",
+									"sid": 924886164418763,
+									"behaviorType": "Button"
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlaySFX",
+									"sid": 127025281480715,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								}
+							],
+							"sid": 502164334530193,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "base64",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 323807944661885
+								},
+								{
+									"eventType": "variable",
+									"name": "data",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 339157125690577
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-size",
+											"objectClass": "DrawingCanvas",
+											"sid": 292013758747184,
+											"parameters": {
+												"width": "banner_share_PvP_720x.Width",
+												"height": "banner_share_PvP_720x.Height"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "DrawingCanvas",
+											"sid": 672700863065381,
+											"parameters": {
+												"x": "banner_share_PvP_720x.X",
+												"y": "banner_share_PvP_720x.Y"
+											}
+										},
+										{
+											"id": "paste-object",
+											"objectClass": "DrawingCanvas",
+											"sid": 629693863512091,
+											"parameters": {
+												"object": "banner_share_PvP_720x",
+												"effects": "with-effects"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 986003092244101
+										},
+										{
+											"id": "save-image",
+											"objectClass": "DrawingCanvas",
+											"sid": 380499253827627,
+											"parameters": {
+												"format": "png",
+												"jpeg-quality": "75",
+												"x": "0",
+												"y": "0",
+												"width": "0",
+												"height": "0"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 912063413937060
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 245795150741338,
+											"parameters": {
+												"variable": "base64",
+												"value": "DrawingCanvas.SavedImageURL"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "DrawingCanvas",
+											"sid": 336059949611461,
+											"parameters": {
+												"x": "-5000",
+												"y": "-5000"
+											}
+										},
+										{
+											"callFunction": "setYourData",
+											"sid": 417400462410561,
+											"parameters": [
+												"DICT_SaveGame.Get(SAVE_LEVEL)"
+											]
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 796763436904522,
+											"parameters": {
+												"variable": "data",
+												"value": "YourData_DICT.AsJSON"
+											}
+										},
+										{
+											"type": "script",
+											"language": "javascript",
+											"script": [
+												"console.log(FBInstant.context.getID());",
+												"// 1122334455",
+												"FBInstant.context",
+												"    .chooseAsync()",
+												"    .then(function() {",
+												"        console.log(FBInstant.context.getID());",
+												"        runtime.callFunction(\"onContextChanged\", localVars.base64, localVars.data, \"playGame\");",
+												"    }).catch(function(err) {",
+												"      console.log(\"err: \", err);",
+												"      runtime.callFunction(\"onContextCancelled\");",
+												"    });",
+												"",
+												"    "
+											]
+										}
+									],
+									"sid": 860678335536617
+								}
+							]
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -386,72 +613,6 @@
 							"conditions": [
 								{
 									"id": "onclicked3",
-									"objectClass": "UI_JoinGroup",
-									"sid": 919059671558040,
-									"behaviorType": "Button"
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "PlaySFX",
-									"sid": 737713138989418,
-									"parameters": [
-										"\"SE_Click\"",
-										"-10"
-									]
-								}
-							],
-							"sid": 387149857120269
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "onclicked3",
-									"objectClass": "UI_LikePage",
-									"sid": 110451517950794,
-									"behaviorType": "Button"
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "PlaySFX",
-									"sid": 397112591134446,
-									"parameters": [
-										"\"SE_Click\"",
-										"-10"
-									]
-								}
-							],
-							"sid": 620261666843029
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "onclicked3",
-									"objectClass": "UI_LikePage",
-									"sid": 733107765326040,
-									"behaviorType": "Button"
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "PlaySFX",
-									"sid": 840061488905546,
-									"parameters": [
-										"\"SE_Click\"",
-										"-10"
-									]
-								}
-							],
-							"sid": 864931347064043
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "onclicked3",
 									"objectClass": "UI_Share",
 									"sid": 507119772469951,
 									"behaviorType": "Button"
@@ -470,48 +631,30 @@
 							"sid": 745332395606251
 						},
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "onclicked3",
-									"objectClass": "UI_Tournament",
-									"sid": 889865265517177,
-									"behaviorType": "Button"
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "PlaySFX",
-									"sid": 558093009956183,
-									"parameters": [
-										"\"SE_Click\"",
-										"-10"
-									]
-								}
-							],
-							"sid": 183121010040780
+							"eventType": "comment",
+							"text": ""
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "onclicked3",
-									"objectClass": "UI_VS",
-									"sid": 605457396873974,
+									"objectClass": "UI_Tournament",
+									"sid": 279375535705761,
 									"behaviorType": "Button"
 								}
 							],
 							"actions": [
 								{
 									"callFunction": "PlaySFX",
-									"sid": 649940577266469,
+									"sid": 336321773670897,
 									"parameters": [
 										"\"SE_Click\"",
 										"-10"
 									]
 								}
 							],
-							"sid": 206091316665318
+							"sid": 585311554029774
 						}
 					],
 					"sid": 654880534806397
