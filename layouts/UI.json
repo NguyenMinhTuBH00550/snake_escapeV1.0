@@ -468,7 +468,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 554,
+						"x": 435,
 						"y": 225,
 						"width": 24.788064496935725,
 						"height": 22.697506991134574,
@@ -701,7 +701,7 @@
 					},
 					"uid": 195,
 					"sid": 246588660137410,
-					"tags": "",
+					"tags": "aaa",
 					"instanceVariables": {},
 					"behaviors": {
 						"Tween": {
@@ -2454,7 +2454,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 556,
+						"x": 437,
 						"y": 225,
 						"width": 178.4,
 						"height": 61.6,
@@ -2519,7 +2519,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 471,
+						"x": 352,
 						"y": 224,
 						"width": 80,
 						"height": 80,
@@ -2617,7 +2617,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 511,
+						"x": 392,
 						"y": 207,
 						"width": 119,
 						"height": 40,
@@ -4193,6 +4193,373 @@
 						"y": 1660,
 						"width": 50.63295055631581,
 						"height": 49.843934075087745,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UI_play_timeframe",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 536,
+					"sid": 454842876640265,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 540,
+						"uid": 536,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 454842876640265,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 686.9061656042961,
+						"y": 227.70167824922316,
+						"width": 178.4,
+						"height": 61.6,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HUD_icon_snake",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 535,
+					"sid": 377642546879580,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 540,
+						"uid": 535,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 377642546879580,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 612.3958878794485,
+						"y": 230.35083912461155,
+						"width": 80,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_score",
+					"properties": {
+						"text": "0",
+						"enable-bbcode": true,
+						"font": "LilitaOne-Regular_0",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9411764705882353,
+							0.9372549019607843,
+							0.9215686274509803,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 539,
+					"sid": 800836857425138,
+					"tags": "",
+					"instanceVariables": {
+						"font_size": -1
+					},
+					"behaviors": {},
+					"effects": {
+						"Outline": {
+							"isEnabled": true,
+							"parameters": {
+								"width": 1,
+								"cl": [
+									0,
+									0,
+									0,
+									1
+								],
+								"diag": 0.7071
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 540,
+						"uid": 539,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 800836857425138,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 632.8569737843047,
+						"y": 208.61281614598664,
+						"width": 143.1212749396941,
+						"height": 40,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Anchor",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 540,
+					"sid": 313986142937617,
+					"tags": "UI_top",
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "none",
+								"top-edge": "none",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 540,
+						"children": [
+							{
+								"uid": 536,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 535,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 539,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 313986142937617,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 689,
+						"y": 230,
+						"width": 24.788064496935725,
+						"height": 22.697506991134574,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

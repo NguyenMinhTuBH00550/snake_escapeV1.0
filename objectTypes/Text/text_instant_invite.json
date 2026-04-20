@@ -1,0 +1,15 @@
+{
+	"name": "text_instant_invite",
+	"plugin-id": "Text",
+	"sid": 409532003246071,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
+}

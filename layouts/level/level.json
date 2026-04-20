@@ -25,7 +25,7 @@
 						"expanded": true
 					},
 					"showing": true,
-					"locked": false,
+					"locked": true,
 					"world": {
 						"x": 540.5,
 						"y": 960,

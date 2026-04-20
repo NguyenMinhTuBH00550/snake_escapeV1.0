@@ -246,10 +246,11 @@
 			"UI_JoinGroup",
 			"UI_LikePage",
 			"UI_Share",
-			"banner_share_PvP_720x",
 			"DrawingCanvas",
 			"Warning",
-			"TXT_Warning"
+			"TXT_Warning",
+			"banner_share_PvP_720x",
+			"banner_invite_720x"
 		],
 		"subfolders": [
 			{
@@ -343,7 +344,11 @@
 					"text_JoinGroup",
 					"text_LikePage",
 					"text_Invite",
-					"text_Share"
+					"text_Share",
+					"text_instant_invite",
+					"text_time2",
+					"text_time3",
+					"text_score"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -575,7 +580,8 @@
 			"F_UiTop",
 			"F_UIBottom",
 			"F_ButtonBooster",
-			"F_ButtonWin"
+			"F_ButtonWin",
+			"F_FB_Instants"
 		],
 		"subfolders": []
 	},

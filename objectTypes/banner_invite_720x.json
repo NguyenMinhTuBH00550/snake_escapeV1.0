@@ -1,7 +1,7 @@
 {
-	"name": "banner_share_PvP_720x",
+	"name": "banner_invite_720x",
 	"plugin-id": "Sprite",
-	"sid": 562086555249482,
+	"sid": 564540435512509,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 1304,
-						"height": 816,
+						"width": 1361,
+						"height": 768,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8193399,
+						"imageSpriteId": 6271852,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 616604826017346,
+				"sid": 730746870128344,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

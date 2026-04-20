@@ -369,6 +369,10 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": "JoinGroup"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -403,6 +407,10 @@
 							"sid": 479417198009853
 						},
 						{
+							"eventType": "comment",
+							"text": "LikePage"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -431,6 +439,10 @@
 								}
 							],
 							"sid": 565391955477737
+						},
+						{
+							"eventType": "comment",
+							"text": "VS"
 						},
 						{
 							"eventType": "block",
@@ -481,7 +493,7 @@
 										{
 											"id": "set-size",
 											"objectClass": "DrawingCanvas",
-											"sid": 292013758747184,
+											"sid": 881833319617649,
 											"parameters": {
 												"width": "banner_share_PvP_720x.Width",
 												"height": "banner_share_PvP_720x.Height"
@@ -490,7 +502,7 @@
 										{
 											"id": "set-position",
 											"objectClass": "DrawingCanvas",
-											"sid": 672700863065381,
+											"sid": 289777009360119,
 											"parameters": {
 												"x": "banner_share_PvP_720x.X",
 												"y": "banner_share_PvP_720x.Y"
@@ -499,7 +511,7 @@
 										{
 											"id": "paste-object",
 											"objectClass": "DrawingCanvas",
-											"sid": 629693863512091,
+											"sid": 974557545107393,
 											"parameters": {
 												"object": "banner_share_PvP_720x",
 												"effects": "with-effects"
@@ -536,6 +548,20 @@
 												"variable": "base64",
 												"value": "DrawingCanvas.SavedImageURL"
 											}
+										},
+										{
+											"id": "invoke-download",
+											"objectClass": "Browser",
+											"sid": 579782021744921,
+											"parameters": {
+												"url": "base64",
+												"filename": "\"test.png\""
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 215162292271324
 										},
 										{
 											"id": "set-position",
@@ -587,6 +613,10 @@
 							]
 						},
 						{
+							"eventType": "comment",
+							"text": "invite"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -606,7 +636,170 @@
 									]
 								}
 							],
-							"sid": 347947795353547
+							"sid": 347947795353547,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "base64",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 587580667049528
+								},
+								{
+									"eventType": "variable",
+									"name": "data",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 124905699912617
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-size",
+											"objectClass": "DrawingCanvas",
+											"sid": 410289494285362,
+											"parameters": {
+												"width": "banner_invite_720x.Width",
+												"height": "banner_invite_720x.Height"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "DrawingCanvas",
+											"sid": 896039229819794,
+											"parameters": {
+												"x": "banner_invite_720x.X",
+												"y": "banner_invite_720x.Y"
+											}
+										},
+										{
+											"id": "paste-object",
+											"objectClass": "DrawingCanvas",
+											"sid": 679464626026064,
+											"parameters": {
+												"object": "banner_invite_720x",
+												"effects": "with-effects"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 821284071560858
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_instant_invite",
+											"sid": 168355701697292,
+											"parameters": {
+												"text": "\"Level \" & DICT_SaveGame.Get(SAVE_LEVEL)"
+											}
+										},
+										{
+											"callFunction": "ChangeTextWidth",
+											"sid": 526005105937990,
+											"parameters": [
+												"text_instant_invite.UID"
+											]
+										},
+										{
+											"id": "paste-object",
+											"objectClass": "DrawingCanvas",
+											"sid": 292637713522204,
+											"parameters": {
+												"object": "text_instant_invite",
+												"effects": "with-effects"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 112034605907253
+										},
+										{
+											"id": "save-image",
+											"objectClass": "DrawingCanvas",
+											"sid": 319544299216117,
+											"parameters": {
+												"format": "png",
+												"jpeg-quality": "75",
+												"x": "0",
+												"y": "0",
+												"width": "0",
+												"height": "0"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 801340280693932
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 553675256970284,
+											"parameters": {
+												"variable": "base64",
+												"value": "DrawingCanvas.SavedImageURL"
+											}
+										},
+										{
+											"id": "invoke-download",
+											"objectClass": "Browser",
+											"sid": 833432289611515,
+											"parameters": {
+												"url": "base64",
+												"filename": "\"test.png\""
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "DrawingCanvas",
+											"sid": 235932553225337,
+											"parameters": {
+												"x": "-5000",
+												"y": "-5000"
+											}
+										},
+										{
+											"callFunction": "setYourData",
+											"sid": 295597755566240,
+											"parameters": [
+												"DICT_SaveGame.Get(SAVE_LEVEL)"
+											]
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 225589094115756,
+											"parameters": {
+												"variable": "data",
+												"value": "YourData_DICT.AsJSON"
+											}
+										},
+										{
+											"callFunction": "inviteAsync",
+											"sid": 632992580150641,
+											"parameters": [
+												"base64",
+												"data"
+											]
+										}
+									],
+									"sid": 975863253272989
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Share"
 						},
 						{
 							"eventType": "block",
@@ -628,11 +821,170 @@
 									]
 								}
 							],
-							"sid": 745332395606251
+							"sid": 745332395606251,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "base64",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 223702524626690
+								},
+								{
+									"eventType": "variable",
+									"name": "data",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 143190677125188
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-size",
+											"objectClass": "DrawingCanvas",
+											"sid": 250392346400415,
+											"parameters": {
+												"width": "banner_invite_720x.Width",
+												"height": "banner_invite_720x.Height"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "DrawingCanvas",
+											"sid": 383742680663147,
+											"parameters": {
+												"x": "banner_invite_720x.X",
+												"y": "banner_invite_720x.Y"
+											}
+										},
+										{
+											"id": "paste-object",
+											"objectClass": "DrawingCanvas",
+											"sid": 758005290906776,
+											"parameters": {
+												"object": "banner_invite_720x",
+												"effects": "with-effects"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 211046663206879
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_instant_invite",
+											"sid": 133490167857740,
+											"parameters": {
+												"text": "\"Level \" & DICT_SaveGame.Get(SAVE_LEVEL)"
+											}
+										},
+										{
+											"callFunction": "ChangeTextWidth",
+											"sid": 800514784523217,
+											"parameters": [
+												"text_instant_invite.UID"
+											]
+										},
+										{
+											"id": "paste-object",
+											"objectClass": "DrawingCanvas",
+											"sid": 371575122476480,
+											"parameters": {
+												"object": "text_instant_invite",
+												"effects": "with-effects"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 115922598393614
+										},
+										{
+											"id": "save-image",
+											"objectClass": "DrawingCanvas",
+											"sid": 860298143726832,
+											"parameters": {
+												"format": "png",
+												"jpeg-quality": "75",
+												"x": "0",
+												"y": "0",
+												"width": "0",
+												"height": "0"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 288955423741139
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 729018746851316,
+											"parameters": {
+												"variable": "base64",
+												"value": "DrawingCanvas.SavedImageURL"
+											}
+										},
+										{
+											"id": "invoke-download",
+											"objectClass": "Browser",
+											"sid": 327506330460022,
+											"parameters": {
+												"url": "base64",
+												"filename": "\"test.png\""
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "DrawingCanvas",
+											"sid": 586719715622270,
+											"parameters": {
+												"x": "-5000",
+												"y": "-5000"
+											}
+										},
+										{
+											"callFunction": "setYourData",
+											"sid": 636680109855408,
+											"parameters": [
+												"DICT_SaveGame.Get(SAVE_LEVEL)"
+											]
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 676940452167772,
+											"parameters": {
+												"variable": "data",
+												"value": "YourData_DICT.AsJSON"
+											}
+										},
+										{
+											"callFunction": "shareAsync",
+											"sid": 346112295711931,
+											"parameters": [
+												"base64",
+												"data"
+											]
+										}
+									],
+									"sid": 700834125186984
+								}
+							]
 						},
 						{
 							"eventType": "comment",
-							"text": ""
+							"text": "Tournament"
 						},
 						{
 							"eventType": "block",

@@ -322,6 +322,36 @@
 			"sid": 703841422507073
 		},
 		{
+			"eventType": "variable",
+			"name": "comboCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 558254714794734
+		},
+		{
+			"eventType": "variable",
+			"name": "baseScore",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 144105507117146
+		},
+		{
+			"eventType": "variable",
+			"name": "score_combo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 109987951621327
+		},
+		{
 			"eventType": "comment",
 			"text": "Value_event_Lose_Heart"
 		},
@@ -543,18 +573,7 @@
 			"functionParameters": [],
 			"eventType": "function-block",
 			"conditions": [],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 165269917663253,
-					"disabled": true,
-					"parameters": {
-						"variable": "CurrentLevel",
-						"value": "DICT_SaveGame.Get(SAVE_LEVEL)"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 676433732713456,
 			"children": [
 				{
@@ -782,6 +801,24 @@
 							"sid": 192723073586336,
 							"parameters": {
 								"scale": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 686078550792233,
+							"parameters": {
+								"variable": "score_combo",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 899787895475808,
+							"parameters": {
+								"variable": "comboCount",
+								"value": "0"
 							}
 						}
 					],
@@ -6517,16 +6554,6 @@
 															"sid": 626566410628230
 														},
 														{
-															"eventType": "variable",
-															"name": "BlackHole_ownID",
-															"type": "number",
-															"initialValue": "0",
-															"comment": "",
-															"isStatic": false,
-															"isConstant": false,
-															"sid": 509854911985763
-														},
-														{
 															"eventType": "block",
 															"conditions": [
 																{
@@ -6673,15 +6700,6 @@
 																	}
 																},
 																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 515018390625425,
-																	"parameters": {
-																		"variable": "BlackHole_ownID",
-																		"value": "SnakeHead.ownID"
-																	}
-																},
-																{
 																	"callFunction": "PlaySFX",
 																	"sid": 544132393514105,
 																	"parameters": [
@@ -6717,12 +6735,48 @@
 																			}
 																		},
 																		{
+																			"id": "add-to-eventvar",
+																			"objectClass": "System",
+																			"sid": 138447709072149,
+																			"parameters": {
+																				"variable": "comboCount",
+																				"value": "100"
+																			}
+																		},
+																		{
+																			"id": "set-text",
+																			"objectClass": "text_score",
+																			"sid": 659523141333223,
+																			"parameters": {
+																				"text": "comboCount"
+																			}
+																		},
+																		{
+																			"callFunction": "ChangeTextWidth",
+																			"sid": 417486806747477,
+																			"parameters": [
+																				"text_count_snake.UID"
+																			]
+																		},
+																		{
+																			"id": "wait-for-previous-actions",
+																			"objectClass": "System",
+																			"sid": 113430165854563
+																		},
+																		{
 																			"id": "set-text",
 																			"objectClass": "text_count_snake",
 																			"sid": 368327603697853,
 																			"parameters": {
 																				"text": "completedSnakes & \"/\" & totalSnakes"
 																			}
+																		},
+																		{
+																			"callFunction": "ChangeTextWidth",
+																			"sid": 619149448755144,
+																			"parameters": [
+																				"text_count_snake.UID"
+																			]
 																		},
 																		{
 																			"callFunction": "CheckWinCondition",
@@ -7117,12 +7171,52 @@
 																	}
 																},
 																{
+																	"id": "add-to-eventvar",
+																	"objectClass": "System",
+																	"sid": 467583342145799,
+																	"parameters": {
+																		"variable": "comboCount",
+																		"value": "1"
+																	}
+																},
+																{
+																	"id": "add-to-eventvar",
+																	"objectClass": "System",
+																	"sid": 834389559721240,
+																	"parameters": {
+																		"variable": "score_combo",
+																		"value": "(baseScore * (comboCount * 0.5))"
+																	}
+																},
+																{
+																	"id": "set-text",
+																	"objectClass": "text_score",
+																	"sid": 390055573486715,
+																	"parameters": {
+																		"text": "score_combo"
+																	}
+																},
+																{
+																	"callFunction": "ChangeTextWidth",
+																	"sid": 773151231123071,
+																	"parameters": [
+																		"text_count_snake.UID"
+																	]
+																},
+																{
 																	"id": "set-text",
 																	"objectClass": "text_count_snake",
 																	"sid": 594315626237676,
 																	"parameters": {
 																		"text": "completedSnakes & \"/\" & totalSnakes"
 																	}
+																},
+																{
+																	"callFunction": "ChangeTextWidth",
+																	"sid": 736788311765298,
+																	"parameters": [
+																		"text_count_snake.UID"
+																	]
 																},
 																{
 																	"callFunction": "CheckWinCondition",
@@ -8292,16 +8386,6 @@
 							"isStatic": false,
 							"isConstant": false,
 							"sid": 826893481968092
-						},
-						{
-							"eventType": "variable",
-							"name": "Spacing",
-							"type": "number",
-							"initialValue": "5",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 151105829893074
 						},
 						{
 							"eventType": "block",
@@ -12662,6 +12746,22 @@
 									]
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 505352013004197,
+									"parameters": {
+										"variable": "comboCount",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 363519915432628
 						}
 					]
 				},

@@ -1,0 +1,16 @@
+{
+	"name": "F_FB_Instants",
+	"plugin-id": "Sprite",
+	"sid": 307004768513988,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"UI_Invite",
+		"UI_LikePage",
+		"UI_Share",
+		"UI_JoinGroup",
+		"UI_Tournament",
+		"UI_VS"
+	]
+}
