@@ -18,6 +18,10 @@
 			"includeSheet": "E_GA"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "es_SaveGame"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

@@ -574,9 +574,9 @@
 										},
 										{
 											"callFunction": "setYourData",
-											"sid": 417400462410561,
+											"sid": 509754354365285,
 											"parameters": [
-												"DICT_SaveGame.Get(SAVE_LEVEL)"
+												"DICT_SaveGame.Get(SAVE_SCORE)"
 											]
 										},
 										{
@@ -1006,7 +1006,15 @@
 									]
 								}
 							],
-							"sid": 585311554029774
+							"sid": 585311554029774,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 765259698180319
+								}
+							]
 						}
 					],
 					"sid": 654880534806397

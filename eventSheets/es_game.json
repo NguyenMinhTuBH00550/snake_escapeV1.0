@@ -352,6 +352,16 @@
 			"sid": 109987951621327
 		},
 		{
+			"eventType": "variable",
+			"name": "comboTimer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 390031064871060
+		},
+		{
 			"eventType": "comment",
 			"text": "Value_event_Lose_Heart"
 		},
@@ -819,6 +829,22 @@
 							"parameters": {
 								"variable": "comboCount",
 								"value": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "text_combo",
+							"sid": 505952827110541,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "text_combo",
+							"sid": 559395393256488,
+							"parameters": {
+								"opacity": "0"
 							}
 						}
 					],
@@ -6726,61 +6752,12 @@
 																	"conditions": [],
 																	"actions": [
 																		{
-																			"id": "add-to-eventvar",
-																			"objectClass": "System",
-																			"sid": 530306604627342,
-																			"parameters": {
-																				"variable": "completedSnakes",
-																				"value": "1"
-																			}
+																			"callFunction": "AddComboScore",
+																			"sid": 120916667729046
 																		},
 																		{
-																			"id": "add-to-eventvar",
-																			"objectClass": "System",
-																			"sid": 138447709072149,
-																			"parameters": {
-																				"variable": "comboCount",
-																				"value": "100"
-																			}
-																		},
-																		{
-																			"id": "set-text",
-																			"objectClass": "text_score",
-																			"sid": 659523141333223,
-																			"parameters": {
-																				"text": "comboCount"
-																			}
-																		},
-																		{
-																			"callFunction": "ChangeTextWidth",
-																			"sid": 417486806747477,
-																			"parameters": [
-																				"text_count_snake.UID"
-																			]
-																		},
-																		{
-																			"id": "wait-for-previous-actions",
-																			"objectClass": "System",
-																			"sid": 113430165854563
-																		},
-																		{
-																			"id": "set-text",
-																			"objectClass": "text_count_snake",
-																			"sid": 368327603697853,
-																			"parameters": {
-																				"text": "completedSnakes & \"/\" & totalSnakes"
-																			}
-																		},
-																		{
-																			"callFunction": "ChangeTextWidth",
-																			"sid": 619149448755144,
-																			"parameters": [
-																				"text_count_snake.UID"
-																			]
-																		},
-																		{
-																			"callFunction": "CheckWinCondition",
-																			"sid": 791875532168692
+																			"callFunction": "AddCompletedSnake",
+																			"sid": 513783733718585
 																		}
 																	],
 																	"sid": 668165271057263,
@@ -7162,65 +7139,12 @@
 															"conditions": [],
 															"actions": [
 																{
-																	"id": "add-to-eventvar",
-																	"objectClass": "System",
-																	"sid": 753035807592182,
-																	"parameters": {
-																		"variable": "completedSnakes",
-																		"value": "1"
-																	}
+																	"callFunction": "AddComboScore",
+																	"sid": 411988383869718
 																},
 																{
-																	"id": "add-to-eventvar",
-																	"objectClass": "System",
-																	"sid": 467583342145799,
-																	"parameters": {
-																		"variable": "comboCount",
-																		"value": "1"
-																	}
-																},
-																{
-																	"id": "add-to-eventvar",
-																	"objectClass": "System",
-																	"sid": 834389559721240,
-																	"parameters": {
-																		"variable": "score_combo",
-																		"value": "(baseScore * (comboCount * 0.5))"
-																	}
-																},
-																{
-																	"id": "set-text",
-																	"objectClass": "text_score",
-																	"sid": 390055573486715,
-																	"parameters": {
-																		"text": "score_combo"
-																	}
-																},
-																{
-																	"callFunction": "ChangeTextWidth",
-																	"sid": 773151231123071,
-																	"parameters": [
-																		"text_count_snake.UID"
-																	]
-																},
-																{
-																	"id": "set-text",
-																	"objectClass": "text_count_snake",
-																	"sid": 594315626237676,
-																	"parameters": {
-																		"text": "completedSnakes & \"/\" & totalSnakes"
-																	}
-																},
-																{
-																	"callFunction": "ChangeTextWidth",
-																	"sid": 736788311765298,
-																	"parameters": [
-																		"text_count_snake.UID"
-																	]
-																},
-																{
-																	"callFunction": "CheckWinCondition",
-																	"sid": 810059712813322
+																	"callFunction": "AddCompletedSnake",
+																	"sid": 360978602374837
 																}
 															],
 															"sid": 519247434601618,
@@ -10315,6 +10239,19 @@
 												"variable": "isWin",
 												"value": "1"
 											}
+										},
+										{
+											"id": "set-key",
+											"objectClass": "DICT_SaveGame",
+											"sid": 343554721435440,
+											"parameters": {
+												"key": "\"SAVE_SCORE\"",
+												"value": "score_combo"
+											}
+										},
+										{
+											"callFunction": "saveGame",
+											"sid": 961153286959330
 										}
 									],
 									"sid": 734158919688445,
@@ -10470,6 +10407,164 @@
 							]
 						},
 						{
+							"functionName": "AddCompletedSnake",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 664167654531127,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 173730643082759,
+											"parameters": {
+												"variable": "completedSnakes",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_count_snake",
+											"sid": 862845960194042,
+											"parameters": {
+												"text": "completedSnakes & \"/\" & totalSnakes"
+											}
+										},
+										{
+											"callFunction": "ChangeTextWidth",
+											"sid": 199046112112074,
+											"parameters": [
+												"text_count_snake.UID"
+											]
+										},
+										{
+											"callFunction": "CheckWinCondition",
+											"sid": 448054993582354
+										}
+									],
+									"sid": 187297193107906
+								}
+							]
+						},
+						{
+							"functionName": "AddComboScore",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 808542566131407,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 982025113563379,
+											"parameters": {
+												"variable": "comboCount",
+												"value": "1"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 995204642232685,
+											"parameters": {
+												"variable": "score_combo",
+												"value": "(baseScore * (comboCount * 0.5))"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_score",
+											"sid": 713735032597423,
+											"parameters": {
+												"text": "score_combo"
+											}
+										},
+										{
+											"callFunction": "ChangeTextWidth",
+											"sid": 774668140949207,
+											"parameters": [
+												"text_count_snake.UID"
+											]
+										}
+									],
+									"sid": 233007005187981,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 677525070294736,
+													"parameters": {
+														"first-value": "comboCount",
+														"comparison": 4,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "text_combo",
+													"sid": 905612458839739,
+													"parameters": {
+														"text": "\"Combo X\" & comboCount"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "text_combo",
+													"sid": 685878213252648,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "text_combo",
+													"sid": 584421204772429,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"combo\"",
+														"property": "offsetOpacity",
+														"end-value": "100",
+														"time": "0.2",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 236476158361683
+										}
+									]
+								}
+							]
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -10479,124 +10574,132 @@
 									"behaviorType": "Dialog"
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 992833321444873,
+							"children": [
 								{
-									"id": "set-active",
-									"objectClass": "UI_txt_endgame",
-									"sid": 281322820646232,
-									"behaviorType": "Sine",
-									"parameters": {
-										"state": "active"
-									}
-								},
-								{
-									"callFunction": "PlaySFX",
-									"sid": 403037740220403,
-									"parameters": [
-										"\"SFX_Confetti_Explosion\"",
-										"-10"
-									]
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 535337910119613,
-									"parameters": {
-										"object-to-create": "Fireword_PTC",
-										"layer": "\"win_sceen\"",
-										"x": "UI_txt_endgame.X-50",
-										"y": "UI_txt_endgame.Y",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 694186379665968,
-									"parameters": {
-										"seconds": "0.25",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 148118659130101,
-									"parameters": {
-										"object-to-create": "Fireword_PTC",
-										"layer": "\"win_sceen\"",
-										"x": "UI_txt_endgame.X+50",
-										"y": "UI_txt_endgame.Y",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "F_Snake",
-									"sid": 490426302130388,
-									"parameters": {
-										"instance-variable": "CanTouch",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 944567490416959,
-									"parameters": {
-										"variable": "PanPointerID",
-										"value": "-1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 748935022202495,
-									"parameters": {
-										"variable": "TouchZoomID",
-										"value": "-1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 235042406133969,
-									"parameters": {
-										"variable": "PanLastX",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 407707742800650,
-									"parameters": {
-										"variable": "PanLastY",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 863883455749807,
-									"parameters": {
-										"variable": "IsTimerRunning",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 737415669122313,
-									"parameters": {
-										"variable": "IsInputLocked",
-										"value": "1"
-									}
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-active",
+											"objectClass": "UI_txt_endgame",
+											"sid": 416438278321418,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
+											}
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 618351086679446,
+											"parameters": [
+												"\"SFX_Confetti_Explosion\"",
+												"-10"
+											]
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 797830727132891,
+											"parameters": {
+												"object-to-create": "Fireword_PTC",
+												"layer": "\"win_sceen\"",
+												"x": "UI_txt_endgame.X-50",
+												"y": "UI_txt_endgame.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 710560975058237,
+											"parameters": {
+												"seconds": "0.25",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 754757862165416,
+											"parameters": {
+												"object-to-create": "Fireword_PTC",
+												"layer": "\"win_sceen\"",
+												"x": "UI_txt_endgame.X+50",
+												"y": "UI_txt_endgame.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "F_Snake",
+											"sid": 480197892694538,
+											"parameters": {
+												"instance-variable": "CanTouch",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 569666297256762,
+											"parameters": {
+												"variable": "PanPointerID",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 175954552924363,
+											"parameters": {
+												"variable": "TouchZoomID",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 496376340397873,
+											"parameters": {
+												"variable": "PanLastX",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 915821275843968,
+											"parameters": {
+												"variable": "PanLastY",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 366052042896532,
+											"parameters": {
+												"variable": "IsTimerRunning",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 279345975143072,
+											"parameters": {
+												"variable": "IsInputLocked",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 687024867038769
 								}
-							],
-							"sid": 992833321444873
+							]
 						},
 						{
 							"eventType": "block",
@@ -10608,27 +10711,35 @@
 									"behaviorType": "Dialog"
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 405846166511030,
+							"children": [
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "F_Snake",
-									"sid": 415493464237742,
-									"parameters": {
-										"instance-variable": "CanTouch",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 623753487901351,
-									"parameters": {
-										"variable": "IsInputLocked",
-										"value": "0"
-									}
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "F_Snake",
+											"sid": 537497503536827,
+											"parameters": {
+												"instance-variable": "CanTouch",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 454910976412454,
+											"parameters": {
+												"variable": "IsInputLocked",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 804203915288827
 								}
-							],
-							"sid": 405846166511030
+							]
 						},
 						{
 							"eventType": "group",
@@ -11282,36 +11393,44 @@
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 148434608201252,
+							"children": [
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 563157459413124,
-									"parameters": {
-										"variable": "isWin",
-										"value": "1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 308780538533266,
-									"parameters": {
-										"variable": "CamTargetX",
-										"value": "LayoutWidth/2"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 466806746585857,
-									"parameters": {
-										"variable": "CamTargetY",
-										"value": "LayoutHeight/2"
-									}
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 589918174391238,
+											"parameters": {
+												"variable": "isWin",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 583222990569743,
+											"parameters": {
+												"variable": "CamTargetX",
+												"value": "LayoutWidth/2"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 284801085697057,
+											"parameters": {
+												"variable": "CamTargetY",
+												"value": "LayoutHeight/2"
+											}
+										}
+									],
+									"sid": 842395313062345
 								}
-							],
-							"sid": 148434608201252
+							]
 						},
 						{
 							"eventType": "block",
@@ -11380,6 +11499,59 @@
 								}
 							],
 							"sid": 142186332478108
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 525307807722854,
+									"parameters": {
+										"interval-seconds": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 652277366870950,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-visible",
+											"objectClass": "text_combo",
+											"sid": 492075653115449
+										},
+										{
+											"id": "is-running-typewriter-text",
+											"objectClass": "text_combo",
+											"sid": 262993526154273,
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "text_combo",
+											"sid": 402207134388207,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"combo\"",
+												"property": "offsetOpacity",
+												"end-value": "0",
+												"time": "0.2",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 211226789946147
+								}
+							]
 						}
 					],
 					"sid": 199234473461030

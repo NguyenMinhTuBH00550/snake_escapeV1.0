@@ -240,17 +240,10 @@
 			"snake_face_",
 			"List",
 			"Sprite2",
-			"UI_VS",
-			"UI_Tournament",
-			"UI_Invite",
-			"UI_JoinGroup",
-			"UI_LikePage",
-			"UI_Share",
 			"DrawingCanvas",
-			"Warning",
-			"TXT_Warning",
 			"banner_share_PvP_720x",
-			"banner_invite_720x"
+			"banner_invite_720x",
+			"Sprite3"
 		],
 		"subfolders": [
 			{
@@ -348,7 +341,9 @@
 					"text_instant_invite",
 					"text_time2",
 					"text_time3",
-					"text_score"
+					"text_score",
+					"text_combo",
+					"TXT_Warning"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -451,7 +446,14 @@
 					"play_zoombar_frame",
 					"wayBlockers",
 					"UI_eye",
-					"UI_SnakeEyes"
+					"UI_SnakeEyes",
+					"UI_Invite",
+					"UI_JoinGroup",
+					"UI_LikePage",
+					"UI_Share",
+					"UI_Tournament",
+					"UI_VS",
+					"Warning"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -549,9 +551,6 @@
 					{
 						"items": [
 							"ARR_listFriendID",
-							"ARR_BodyPath",
-							"ARR_HeadPath",
-							"ARR_TailPath",
 							"ProfileAvatar_ARR"
 						],
 						"subfolders": [],
@@ -627,7 +626,8 @@
 			"es_global",
 			"es_game",
 			"es_home",
-			"F_Instant"
+			"F_Instant",
+			"es_SaveGame"
 		],
 		"subfolders": [
 			{

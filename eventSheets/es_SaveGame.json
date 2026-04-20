@@ -1,0 +1,899 @@
+{
+	"name": "es_SaveGame",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "LOCAL_TAG",
+			"type": "string",
+			"initialValue": "1.1.1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 597243109761960
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_COIN",
+			"type": "string",
+			"initialValue": "SAVE_COIN",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 735832988004050
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_SCORE",
+			"type": "string",
+			"initialValue": "SAVE_SCORE",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 628749363291221
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_LEVEL",
+			"type": "string",
+			"initialValue": "SAVE_LEVEL",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 653049723028341
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_MUSIC",
+			"type": "string",
+			"initialValue": "SAVE_MUSIC",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 204726440976375
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_SOUND",
+			"type": "string",
+			"initialValue": "SAVE_SOUND",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 698733840003526
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_HINTS",
+			"type": "string",
+			"initialValue": "SAVE_HINTS",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 850007008208372
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_GRID",
+			"type": "string",
+			"initialValue": "SAVE_GRID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 175791499090726
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_CAMP_ID",
+			"type": "string",
+			"initialValue": "SAVE_CAMP_ID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 390274835326178
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_ADSET_ID",
+			"type": "string",
+			"initialValue": "SAVE_ADSET_ID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 244994645535595
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_AD_ID",
+			"type": "string",
+			"initialValue": "SAVE_AD_ID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 109908168157102
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_PROFILE_ID",
+			"type": "string",
+			"initialValue": "SAVE_PROFILE_ID",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 228956742779240
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_PROFILE_AVATAR",
+			"type": "string",
+			"initialValue": "SAVE_PROFILE_AVATAR",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 831552646100490
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_PROFILE_AVATAR_PICKED",
+			"type": "string",
+			"initialValue": "SAVE_PROFILE_AVATAR_PICKED",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 651673133052012
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_PROFILE_NAME",
+			"type": "string",
+			"initialValue": "SAVE_PROFILE_NAME",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 392532456383147
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SAVE GAME",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-missing",
+							"objectClass": "LocalStorage",
+							"sid": 805012290371041,
+							"parameters": {
+								"key": "LOCAL_TAG"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "addMissingKey",
+							"sid": 293815788223494
+						},
+						{
+							"id": "set-width",
+							"objectClass": "loadbar",
+							"sid": 759638153951384,
+							"parameters": {
+								"width": "Self.ImageWidth*0.01"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "loadbar",
+							"sid": 834186942645198,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetWidth",
+								"end-value": "Self.ImageWidth",
+								"time": "0.3",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 727301050745525
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-exists",
+							"objectClass": "LocalStorage",
+							"sid": 706112283650329,
+							"parameters": {
+								"key": "LOCAL_TAG"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "get-item",
+							"objectClass": "LocalStorage",
+							"sid": 735132365896910,
+							"parameters": {
+								"key": "LOCAL_TAG"
+							}
+						}
+					],
+					"sid": 496336304648165
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "LocalStorage",
+							"sid": 391009692590951,
+							"parameters": {
+								"key": "LOCAL_TAG"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "DICT_SaveGame",
+							"sid": 935236278358948,
+							"parameters": {
+								"json": "LocalStorage.ItemValue"
+							}
+						},
+						{
+							"callFunction": "addMissingKey",
+							"sid": 739485908851322
+						},
+						{
+							"id": "set-width",
+							"objectClass": "loadbar",
+							"sid": 993497982598010,
+							"parameters": {
+								"width": "Self.ImageWidth*0.01"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "loadbar",
+							"sid": 395637278760232,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetWidth",
+								"end-value": "Self.ImageWidth",
+								"time": "0.3",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 961657027899954
+				},
+				{
+					"functionName": "saveGame",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 208946312115565,
+							"parameters": {
+								"key": "LOCAL_TAG",
+								"value": "DICT_SaveGame.AsJSON"
+							}
+						}
+					],
+					"sid": 947515409909491
+				},
+				{
+					"functionName": "addMissingKey",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 908576580221129,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "COINS"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 608123688843018,
+									"parameters": {
+										"key": "SAVE_COIN"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 446442973930820,
+									"parameters": {
+										"key": "SAVE_COIN",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 896641789191058
+						},
+						{
+							"eventType": "comment",
+							"text": "SCORE"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 230810654018409,
+									"parameters": {
+										"key": "SAVE_SCORE"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 341188526515622,
+									"parameters": {
+										"key": "SAVE_SCORE",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 563348740649340
+						},
+						{
+							"eventType": "comment",
+							"text": "LEVEL"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 459598586509955,
+									"parameters": {
+										"key": "SAVE_LEVEL"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 974808996841201,
+									"parameters": {
+										"key": "SAVE_LEVEL",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 893284791452925
+						},
+						{
+							"eventType": "comment",
+							"text": "MUSIC"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 512052630619906,
+									"parameters": {
+										"key": "SAVE_MUSIC"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 984277237385817,
+									"parameters": {
+										"key": "SAVE_MUSIC",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 243160272661473
+						},
+						{
+							"eventType": "comment",
+							"text": "SOUND"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 103198838990415,
+									"parameters": {
+										"key": "SAVE_SOUND"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 351688546758834,
+									"parameters": {
+										"key": "SAVE_SOUND",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 904069556779010
+						},
+						{
+							"eventType": "comment",
+							"text": "ITEM_HINT"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 841704581395595,
+									"parameters": {
+										"key": "SAVE_HINTS"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 409101324123489,
+									"parameters": {
+										"key": "SAVE_HINTS",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 876285250421224
+						},
+						{
+							"eventType": "comment",
+							"text": "ITEM_GRID"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 679165746370427,
+									"parameters": {
+										"key": "SAVE_GRID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 942589627082898,
+									"parameters": {
+										"key": "SAVE_GRID",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 705338645662983
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 395572483371246,
+									"parameters": {
+										"key": "SAVE_CAMP_ID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 670977710509723,
+									"parameters": {
+										"key": "SAVE_CAMP_ID",
+										"value": "\"\"\n"
+									}
+								}
+							],
+							"sid": 951524831416961
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 806607172242114,
+									"parameters": {
+										"key": "SAVE_ADSET_ID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 194555475253019,
+									"parameters": {
+										"key": "SAVE_ADSET_ID",
+										"value": "\"\""
+									}
+								}
+							],
+							"sid": 717268197920676
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 892368544404314,
+									"parameters": {
+										"key": "SAVE_AD_ID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 657114084998030,
+									"parameters": {
+										"key": "SAVE_AD_ID",
+										"value": "\"\""
+									}
+								}
+							],
+							"sid": 326978220927900
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 398379701839839,
+									"parameters": {
+										"key": "SAVE_PROFILE_ID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 355086123009566,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "InstantGame",
+											"sid": 440901184089118,
+											"parameters": {
+												"instance-variable": "Available"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DICT_SaveGame",
+											"sid": 622570848091363,
+											"parameters": {
+												"key": "SAVE_PROFILE_ID",
+												"value": "DICT_GameManager.playerID\n"
+											}
+										}
+									],
+									"sid": 935267903461419
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 302828881948897
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DICT_SaveGame",
+											"sid": 161090657094197,
+											"parameters": {
+												"key": "SAVE_PROFILE_ID",
+												"value": "\"SNAKE\" & zeropad(round(random(100000)), 6) & choose(\"A\",\"B\",\"C\") & choose(\"X\",\"Y\",\"Z\")\n"
+											}
+										}
+									],
+									"sid": 686713947514969
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 817550207708646,
+									"parameters": {
+										"key": "SAVE_PROFILE_AVATAR"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "ProfileAvatar_ARR",
+									"sid": 543546849628033,
+									"parameters": {
+										"width": "15",
+										"height": "2",
+										"depth": "1"
+									}
+								},
+								{
+									"id": "clear",
+									"objectClass": "ProfileAvatar_ARR",
+									"sid": 549567446259058,
+									"parameters": {
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "ProfileAvatar_ARR",
+									"sid": 662361138356056,
+									"parameters": {
+										"x": "0",
+										"y": "0",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "ProfileAvatar_ARR",
+									"sid": 153539577017647,
+									"parameters": {
+										"x": "0",
+										"y": "1",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 483306337880915,
+									"parameters": {
+										"key": "SAVE_PROFILE_AVATAR",
+										"value": "ProfileAvatar_ARR.AsJSON"
+									}
+								}
+							],
+							"sid": 978082803378001
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 353886041869449,
+									"parameters": {
+										"key": "SAVE_PROFILE_AVATAR_PICKED"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 191935320699716,
+									"parameters": {
+										"key": "SAVE_PROFILE_AVATAR_PICKED",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 627417695741205
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 601005527912046,
+									"parameters": {
+										"key": "SAVE_PROFILE_NAME"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 149491305889651,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "InstantGame",
+											"sid": 689055919290417,
+											"parameters": {
+												"instance-variable": "Available"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DICT_SaveGame",
+											"sid": 888987200185436,
+											"parameters": {
+												"key": "SAVE_PROFILE_NAME",
+												"value": "DICT_GameManager.playerID = \"\" ?\n\"HEX\" & zeropad(round(random(100000)), 6) & choose(\"A\",\"B\",\"C\") & choose(\"X\",\"Y\",\"Z\") :\nDICT_GameManager.playerID\n"
+											}
+										}
+									],
+									"sid": 420977332094948
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 574666709125998
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DICT_SaveGame",
+											"sid": 981119876932924,
+											"parameters": {
+												"key": "SAVE_PROFILE_NAME",
+												"value": "\"HEX\" & zeropad(round(random(100000)), 6) & choose(\"A\",\"B\",\"C\") & choose(\"X\",\"Y\",\"Z\")"
+											}
+										}
+									],
+									"sid": 509457518359262
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DICT_SaveGame",
+									"sid": 386675468071209,
+									"parameters": {
+										"key": "SAVE_PROFILE_ID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 826825994714204,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "InstantGame",
+											"sid": 311983089552115,
+											"parameters": {
+												"instance-variable": "Available"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DICT_SaveGame",
+											"sid": 465570098056592,
+											"parameters": {
+												"key": "SAVE_PROFILE_ID",
+												"value": "DICT_GameManager.playerID\n"
+											}
+										}
+									],
+									"sid": 666146678611810
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 124155170651532
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DICT_SaveGame",
+											"sid": 270640475255281,
+											"parameters": {
+												"key": "SAVE_PROFILE_ID",
+												"value": "\"HEX\" & zeropad(round(random(100000)), 6) & choose(\"A\",\"B\",\"C\") & choose(\"X\",\"Y\",\"Z\")\n"
+											}
+										}
+									],
+									"sid": 542421575867933
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 710944426137213
+		}
+	],
+	"sid": 471150189006834
+}

@@ -742,42 +742,6 @@
 			}
 		},
 		{
-			"type": "ARR_HeadPath",
-			"properties": {
-				"width": 10,
-				"height": 1,
-				"depth": 1
-			},
-			"uid": 525,
-			"sid": 255947958792950,
-			"tags": "",
-			"instanceVariables": {}
-		},
-		{
-			"type": "ARR_BodyPath",
-			"properties": {
-				"width": 10,
-				"height": 1,
-				"depth": 1
-			},
-			"uid": 526,
-			"sid": 812960906897790,
-			"tags": "",
-			"instanceVariables": {}
-		},
-		{
-			"type": "ARR_TailPath",
-			"properties": {
-				"width": 10,
-				"height": 1,
-				"depth": 1
-			},
-			"uid": 527,
-			"sid": 469945706392570,
-			"tags": "",
-			"instanceVariables": {}
-		},
-		{
 			"type": "YourData_DICT",
 			"properties": {},
 			"uid": 528,

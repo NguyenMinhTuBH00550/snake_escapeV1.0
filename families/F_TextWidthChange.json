@@ -78,6 +78,7 @@
 		"text_instant_invite",
 		"text_time2",
 		"text_time3",
-		"text_score"
+		"text_score",
+		"text_combo"
 	]
 }
