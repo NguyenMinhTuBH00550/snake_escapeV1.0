@@ -341,9 +341,26 @@
 							"objectClass": "UI_btnPlay",
 							"sid": 731887674525300,
 							"behaviorType": "Button"
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "UI_btnPlay",
+							"sid": 499703808299735,
+							"parameters": {
+								"tags": "\"main_play\""
+							}
 						}
 					],
 					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 412306290012986,
+							"parameters": {
+								"variable": "GAME_STATE",
+								"value": "\"MAIN\""
+							}
+						},
 						{
 							"callFunction": "playGame",
 							"sid": 808523184380511
@@ -1876,6 +1893,60 @@
 				}
 			],
 			"sid": 507241512456126
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Challenge",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onclicked3",
+							"objectClass": "UI_btnPlay",
+							"sid": 763973527777969,
+							"behaviorType": "Button"
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "UI_btnPlay",
+							"sid": 519046894505956,
+							"parameters": {
+								"tags": "\"play_tour\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 727678496472262,
+							"parameters": {
+								"variable": "GAME_STATE",
+								"value": "\"TOUR\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 666437434286446,
+							"parameters": {
+								"variable": "TourLevel",
+								"value": "UI_btnPlay.levelID"
+							}
+						},
+						{
+							"callFunction": "playGame",
+							"sid": 235882603025164
+						}
+					],
+					"sid": 104581974609202
+				}
+			],
+			"sid": 568942521007267
 		}
 	],
 	"sid": 879809268910420

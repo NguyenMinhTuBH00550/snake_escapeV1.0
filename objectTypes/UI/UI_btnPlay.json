@@ -4,7 +4,15 @@
 	"sid": 674592859635373,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "levelID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 739790077076787
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "aekiro_button",
@@ -38,7 +46,58 @@
 					}
 				],
 				"sid": 691348390348384,
-				"name": "Animation 1",
+				"name": "ON",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 566,
+						"height": 266,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1265885,
+						"collisionPoly": {
+							"points": [
+								0.15547703180212014,
+								0,
+								0.9098939929328622,
+								0.05263157894736842,
+								0.9346289752650176,
+								0.09774436090225563,
+								0.9964664310954063,
+								0.6879699248120301,
+								0.9752650176678446,
+								0.8195488721804511,
+								0.9434628975265018,
+								0.9097744360902256,
+								0.911660777385159,
+								0.9548872180451128,
+								0.8392226148409894,
+								0.9924812030075187,
+								0.10424028268551237,
+								0.9661654135338346,
+								0.07420494699646643,
+								0.9323308270676691,
+								0.03180212014134275,
+								0.8421052631578947
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 502428538362522,
+				"name": "OFF",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

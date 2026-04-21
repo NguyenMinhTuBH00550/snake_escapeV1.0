@@ -1,39 +1,33 @@
 {
-	"name": "HUD_challenge_panel",
+	"name": "Sprite4",
 	"plugin-id": "Sprite",
-	"sid": 453677366756675,
+	"sid": 143200194863080,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "aekiro_gameobject",
-			"name": "GameObject",
-			"sid": 502204356816159
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 1008,
-						"height": 534,
+						"width": 504,
+						"height": 618,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5536218,
+						"imageSpriteId": 4990320,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 410931303380865,
-				"name": "Default",
+				"sid": 710128117620833,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

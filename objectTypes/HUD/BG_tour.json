@@ -1,33 +1,44 @@
 {
-	"name": "HUD_challenge_BG",
+	"name": "BG_tour",
 	"plugin-id": "Sprite",
-	"sid": 962633072951154,
+	"sid": 819652020249882,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_scrollView",
+			"name": "ScrollView",
+			"sid": 432074689616048
+		},
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 218699281420633
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 1366,
-						"height": 2048,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7313642,
+						"imageSpriteId": 5589112,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 978847866721212,
-				"name": "Default",
+				"sid": 771179045867816,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

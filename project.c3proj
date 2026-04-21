@@ -243,7 +243,8 @@
 			"DrawingCanvas",
 			"banner_share_PvP_720x",
 			"banner_invite_720x",
-			"Sprite3"
+			"Sprite3",
+			"Sprite4"
 		],
 		"subfolders": [
 			{
@@ -265,12 +266,13 @@
 					"HUD_setting_BA",
 					"HUD_booster_frame",
 					"HUD_outLive",
-					"BG_shop",
+					"BG_tour",
 					"HUD_boosterBuy",
 					"BG",
 					"HUD_popup_newobject_image_blackhole",
 					"HUD_popup_newobject_image_wall",
-					"popup_newobject_image_wall"
+					"popup_newobject_image_wall",
+					"BG2"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -343,7 +345,10 @@
 					"text_time3",
 					"text_score",
 					"text_combo",
-					"TXT_Warning"
+					"TXT_Warning",
+					"text_snakeLevel",
+					"text_timeLeft",
+					"text_tour"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -394,7 +399,7 @@
 					"UI_play_timeframe",
 					"UI_popup_loseheart",
 					"UI_Home",
-					"Tile_BG_shop",
+					"Tile_BG_tour",
 					"UI_booster_grid",
 					"UI_shop_btn",
 					"UI_shop_coin_panel",
@@ -421,7 +426,6 @@
 					"UI_popup_noads_X",
 					"fade_layout",
 					"hint_tile",
-					"HUD_challenge_BG",
 					"HUD_challenge_panel",
 					"HUD_home_adbar",
 					"HUD_popup_noads_btn",

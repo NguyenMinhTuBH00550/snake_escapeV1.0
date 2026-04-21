@@ -40,6 +40,26 @@
 			"sid": 648177564860600
 		},
 		{
+			"eventType": "variable",
+			"name": "GAME_STATE",
+			"type": "string",
+			"initialValue": "\"\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 153494899509916
+		},
+		{
+			"eventType": "variable",
+			"name": "TourLevel",
+			"type": "string",
+			"initialValue": "-1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 569761346310047
+		},
+		{
 			"eventType": "comment",
 			"text": "Value_createMap"
 		},
@@ -1302,165 +1322,147 @@
 									"sid": 598187291300820
 								}
 							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 628020483608110,
-									"parameters": {
-										"variable": "CurrentLevel",
-										"value": "DICT_SaveGame.Get(SAVE_LEVEL)"
-									}
-								},
-								{
-									"id": "wait-for-previous-actions",
-									"objectClass": "System",
-									"sid": 374785142927704
-								},
-								{
-									"id": "set-layer-opacity",
-									"objectClass": "System",
-									"sid": 376708613731863,
-									"parameters": {
-										"layer": "\"Fader\"",
-										"opacity": "100"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 526655128140929,
-									"parameters": {
-										"variable": "IsInputLocked",
-										"value": "1"
-									}
-								},
-								{
-									"id": "request-url",
-									"objectClass": "AJAX",
-									"sid": 797818701985607,
-									"parameters": {
-										"tag": "\"level\"",
-										"url": "\"levels/lv\" & CurrentLevel & \".json\""
-									}
-								},
-								{
-									"id": "wait-for-previous-actions",
-									"objectClass": "System",
-									"sid": 792496361235794
-								},
-								{
-									"id": "parse",
-									"objectClass": "JsonLevel",
-									"sid": 190612184167126,
-									"parameters": {
-										"data": "AJAX.LastData\r\n"
-									}
-								},
-								{
-									"callFunction": "start_layout",
-									"sid": 449769341486055
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 674020963183056,
-									"parameters": {
-										"variable": "completedSnakes",
-										"value": "0"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 801384273160815,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
-								},
-								{
-									"callFunction": "CreateMap",
-									"sid": 504586293925285
-								},
-								{
-									"id": "wait-for-previous-actions",
-									"objectClass": "System",
-									"sid": 530537943159274
-								},
-								{
-									"callFunction": "SetUpSnake",
-									"sid": 689971593926011
-								},
-								{
-									"id": "wait-for-previous-actions",
-									"objectClass": "System",
-									"sid": 166358269425171
-								},
-								{
-									"callFunction": "UpdateGridDot",
-									"sid": 459376794874141
-								},
-								{
-									"id": "wait-for-previous-actions",
-									"objectClass": "System",
-									"sid": 547020725986009
-								},
-								{
-									"id": "remove-from-parent",
-									"objectClass": "F_Snake",
-									"sid": 222151031083827
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 954723006527248,
-									"parameters": {
-										"variable": "totalSnakes",
-										"value": "snake_head.Count"
-									}
-								},
-								{
-									"id": "set-text",
-									"objectClass": "text_count_snake",
-									"sid": 517701128728663,
-									"parameters": {
-										"text": "completedSnakes & \"/\" & totalSnakes"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 535007863222028,
-									"parameters": {
-										"seconds": "0.5",
-										"use-timescale": true
-									}
-								},
-								{
-									"callFunction": "hideFader",
-									"sid": 294207046323154
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 518832111768093,
-									"parameters": {
-										"variable": "IsInputLocked",
-										"value": "0"
-									}
-								},
-								{
-									"id": "add-item",
-									"objectClass": "List",
-									"sid": 855986262704797,
-									"parameters": {
-										"text": "\"level \" & CurrentLevel"
-									}
-								}
-							],
+							"actions": [],
 							"sid": 844376283277351,
 							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 120548181796062,
+											"parameters": {
+												"first-value": "GAME_STATE",
+												"comparison": 0,
+												"second-value": "\"MAIN\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 133687192180880,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 892491668690772,
+													"parameters": {
+														"variable": "CurrentLevel",
+														"value": "DICT_SaveGame.Get(SAVE_LEVEL)"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 725873148333181
+												},
+												{
+													"callFunction": "OnStartLayout",
+													"sid": 261127614268219
+												}
+											],
+											"sid": 113654525234137,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "text_level",
+															"sid": 159586230408089,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-visible",
+															"objectClass": "text_tour",
+															"sid": 263760579646549,
+															"parameters": {
+																"visibility": "invisible"
+															}
+														}
+													],
+													"sid": 955075341401897
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 246317284792171,
+											"parameters": {
+												"first-value": "GAME_STATE",
+												"comparison": 0,
+												"second-value": "\"TOUR\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 781135906087245,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 150258162061602,
+													"parameters": {
+														"variable": "CurrentLevel",
+														"value": "TourLevel"
+													}
+												},
+												{
+													"id": "wait-for-previous-actions",
+													"objectClass": "System",
+													"sid": 979172990042081
+												},
+												{
+													"callFunction": "OnStartLayout",
+													"sid": 137069761717437
+												}
+											],
+											"sid": 764135409329082,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "text_level",
+															"sid": 236225167933000,
+															"parameters": {
+																"visibility": "invisible"
+															}
+														},
+														{
+															"id": "set-visible",
+															"objectClass": "text_tour",
+															"sid": 471301450994361,
+															"parameters": {
+																"visibility": "visible"
+															}
+														}
+													],
+													"sid": 527112515000537
+												}
+											]
+										}
+									]
+								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -6064,6 +6066,169 @@
 											"sid": 151402840181912
 										}
 									]
+								}
+							]
+						},
+						{
+							"functionName": "OnStartLayout",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 852744096697978,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-layer-opacity",
+											"objectClass": "System",
+											"sid": 499944510533784,
+											"parameters": {
+												"layer": "\"Fader\"",
+												"opacity": "100"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 172252612070078,
+											"parameters": {
+												"variable": "IsInputLocked",
+												"value": "1"
+											}
+										},
+										{
+											"id": "request-url",
+											"objectClass": "AJAX",
+											"sid": 886691245877161,
+											"parameters": {
+												"tag": "\"level\"",
+												"url": "\"levels/lv\" & CurrentLevel & \".json\""
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 426724218659854
+										},
+										{
+											"id": "parse",
+											"objectClass": "JsonLevel",
+											"sid": 487157006189765,
+											"parameters": {
+												"data": "AJAX.LastData\r\n"
+											}
+										},
+										{
+											"callFunction": "start_layout",
+											"sid": 654461256103542
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 412848559841080,
+											"parameters": {
+												"variable": "completedSnakes",
+												"value": "0"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 862300143672797,
+											"parameters": {
+												"seconds": "0",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "CreateMap",
+											"sid": 879099135076167
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 488340254389523
+										},
+										{
+											"callFunction": "SetUpSnake",
+											"sid": 815267154632283
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 550591598798698
+										},
+										{
+											"callFunction": "UpdateGridDot",
+											"sid": 376990486749423
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 566967552532941
+										},
+										{
+											"id": "remove-from-parent",
+											"objectClass": "F_Snake",
+											"sid": 186563596823652
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 935633450367002,
+											"parameters": {
+												"variable": "totalSnakes",
+												"value": "snake_head.Count"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_count_snake",
+											"sid": 851582038878531,
+											"parameters": {
+												"text": "completedSnakes & \"/\" & totalSnakes"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 501855153943433,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "hideFader",
+											"sid": 470952130469223
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 267412785475653,
+											"parameters": {
+												"variable": "IsInputLocked",
+												"value": "0"
+											}
+										},
+										{
+											"id": "add-item",
+											"objectClass": "List",
+											"sid": 359773149732544,
+											"parameters": {
+												"text": "\"level \" & CurrentLevel"
+											}
+										}
+									],
+									"sid": 256590657009853
 								}
 							]
 						}

@@ -281,24 +281,6 @@
 						},
 						{
 							"id": "set-size",
-							"objectClass": "HUD_challenge_BG",
-							"sid": 500938283893707,
-							"parameters": {
-								"width": "ViewportWidth(0)",
-								"height": "ViewportHeight(0)"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "HUD_challenge_BG",
-							"sid": 739816918879531,
-							"parameters": {
-								"x": "LayoutWidth*0.5",
-								"y": "LayoutHeight*0.5"
-							}
-						},
-						{
-							"id": "set-size",
 							"objectClass": "HUD_home_adbar",
 							"sid": 667567217646932,
 							"parameters": {
