@@ -1,20 +1,15 @@
 {
-	"name": "BG_tour",
+	"name": "UI_rank3",
 	"plugin-id": "Sprite",
-	"sid": 819652020249882,
+	"sid": 138347437555771,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "aekiro_scrollView",
-			"name": "ScrollView",
-			"sid": 432074689616048
-		},
-		{
 			"behaviorId": "aekiro_gameobject",
 			"name": "GameObject",
-			"sid": 218699281420633
+			"sid": 872120447851128
 		}
 	],
 	"effectTypes": [],
@@ -23,22 +18,22 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 215,
+						"height": 215,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5589112,
+						"imageSpriteId": 2485097,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 771179045867816,
-				"name": "Animation 1",
+				"sid": 622398690271219,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

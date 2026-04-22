@@ -5,7 +5,18 @@
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 815721596465322
+		},
+		{
+			"behaviorId": "aekiro_gridviewbind",
+			"name": "GridViewDataBind",
+			"sid": 438717506995665
+		}
+	],
 	"effectTypes": [
 		{
 			"effectId": "outline",

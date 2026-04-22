@@ -16,6 +16,26 @@
 			"sid": 651110732894354
 		},
 		{
+			"eventType": "variable",
+			"name": "gCurrentIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 194879466444133
+		},
+		{
+			"eventType": "variable",
+			"name": "tourContextID_BTN",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 242359896220584
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -30,108 +50,143 @@
 				{
 					"eventType": "block",
 					"conditions": [],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "text_level",
-							"sid": 993215976343313,
-							"parameters": {
-								"text": "\"Level  \" & DICT_SaveGame.Get(SAVE_LEVEL)"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "text_level_count",
-							"sid": 388379119893608,
-							"parameters": {
-								"text": "DICT_SaveGame.Get(SAVE_LEVEL)"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "UI_homeTab",
-							"sid": 348285283790039,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 757007937669911,
-							"parameters": {
-								"seconds": "0",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "UI_Home",
-							"sid": 948220384674888,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"icon_home\"",
-								"property": "offsetY",
-								"end-value": "Self.Y -100",
-								"time": "0.15",
-								"ease": "noease",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "UI_Home",
-							"sid": 594397102531501,
-							"parameters": {
-								"animation": "\"home_bottomtab2\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "text_btn_Shop",
-							"sid": 918383480215015,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "text_btn_Challenge",
-							"sid": 794201727695068,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 465369523426076,
+					"actions": [],
+					"sid": 112758270553795,
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "UI_homeTab",
-									"sid": 869343805787456,
-									"parameters": {
-										"tags": "\"pannel_home\""
-									}
-								}
-							],
+							"conditions": [],
 							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "text_level",
+									"sid": 672874299270623,
+									"parameters": {
+										"text": "\"Level  \" & DICT_SaveGame.Get(SAVE_LEVEL)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_level_count",
+									"sid": 295392456009775,
+									"parameters": {
+										"text": "DICT_SaveGame.Get(SAVE_LEVEL)"
+									}
+								},
 								{
 									"id": "set-visible",
 									"objectClass": "UI_homeTab",
-									"sid": 900355486499879,
+									"sid": 863374961238944,
 									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 888354200187200,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "UI_Home",
+									"sid": 523917621652609,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"icon_home\"",
+										"property": "offsetY",
+										"end-value": "Self.Y -100",
+										"time": "0.15",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "UI_Home",
+									"sid": 943042030740258,
+									"parameters": {
+										"animation": "\"home_bottomtab2\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "text_btn_Shop",
+									"sid": 428952704094668,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "text_btn_Challenge",
+									"sid": 587775225777315,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 620253234641257,
+									"parameters": {
+										"layer": "\"Home\"",
 										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 765627282669948,
+									"parameters": {
+										"layer": "\"Shop\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 814040936988269,
+									"parameters": {
+										"layer": "\"Challenge\"",
+										"visibility": "invisible"
 									}
 								}
 							],
-							"sid": 451392157256977
+							"sid": 927922688537929,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "UI_homeTab",
+											"sid": 676428417647713,
+											"parameters": {
+												"tags": "\"pannel_home\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_homeTab",
+											"sid": 356128892202707,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 793231205375775
+								}
+							]
 						}
 					]
 				},
@@ -1028,7 +1083,50 @@
 								{
 									"eventType": "block",
 									"conditions": [],
-									"actions": [],
+									"actions": [
+										{
+											"callFunction": "SetActiveIcon",
+											"sid": 815956267643139,
+											"parameters": [
+												"2"
+											]
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 913832784186372,
+											"parameters": {
+												"layer": "\"Home\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 462679694076707,
+											"parameters": {
+												"layer": "\"Shop\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 944578348833186,
+											"parameters": {
+												"layer": "\"Challenge\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"callFunction": "PlaySFX",
+											"sid": 648014829549786,
+											"parameters": [
+												"\"SE_Click\"",
+												"-10"
+											]
+										}
+									],
 									"sid": 765259698180319
 								}
 							]
@@ -1902,6 +2000,368 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "sec",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 226969228079564
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 823108453414274
+						}
+					],
+					"actions": [
+						{
+							"id": "request-url",
+							"objectClass": "AJAX",
+							"sid": 553165470823679,
+							"parameters": {
+								"tag": "\"tour\"",
+								"url": "\"tour_time/LeaderboardList\" & \".json\""
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 225350422567842
+						},
+						{
+							"id": "parse",
+							"objectClass": "JSON_LeaderBoard",
+							"sid": 604954045346224,
+							"parameters": {
+								"data": "AJAX.LastData"
+							}
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 317206972120978,
+							"disabled": true,
+							"parameters": {
+								"type": "log",
+								"message": "(JSON_LeaderBoard.Get(\".0.name\"))"
+							}
+						},
+						{
+							"id": "setdatabyjsonobject",
+							"objectClass": "Tile_BG_tour",
+							"sid": 739447015377800,
+							"behaviorType": "GridView",
+							"parameters": {
+								"data0": "JSON_LeaderBoard",
+								"root": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JSON_UserData",
+							"sid": 384923484729432
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JSON_LeaderData",
+							"sid": 184418782522218
+						}
+					],
+					"sid": 966559874048670,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 256967106356041,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "0",
+										"end-index": "JSON_LeaderBoard.ArraySize(\"\") -1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 613482644599826,
+									"disabled": true,
+									"parameters": {
+										"type": "log",
+										"message": "\"aaa   \" & JSON_LeaderBoard.Get(\".\" & loopindex & \"._id\")"
+									}
+								},
+								{
+									"id": "request-url",
+									"objectClass": "AJAX",
+									"sid": 808075986070425,
+									"parameters": {
+										"tag": "\"players_\"",
+										"url": "JSON_LeaderBoard.Get(\".\" & loopindex & \"._id\") & \".json\""
+									}
+								}
+							],
+							"sid": 541587112548941,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 535851868545866,
+											"parameters": {
+												"object-to-create": "JSON_LeaderData",
+												"layer": "0",
+												"x": "0",
+												"y": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "JSON_LeaderData",
+											"sid": 667260255835986,
+											"parameters": {
+												"path": "\"._id\"",
+												"value": "JSON_LeaderBoard.Get(\".\" & loopindex & \"._id\")"
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "JSON_LeaderData",
+											"sid": 607395509859301,
+											"parameters": {
+												"path": "\".gameId\"",
+												"value": "JSON_LeaderBoard.Get(\".\" & loopindex & \".gameId\")"
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "JSON_LeaderData",
+											"sid": 727485819795553,
+											"parameters": {
+												"path": "\".contextId\"",
+												"value": "JSON_LeaderBoard.Get(\".\" & loopindex & \".contextId\")"
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "JSON_LeaderData",
+											"sid": 104360610264422,
+											"parameters": {
+												"path": "\".tournamentId\"",
+												"value": "JSON_LeaderBoard.Get(\".\" & loopindex & \".tournamentId\")"
+											}
+										}
+									],
+									"sid": 166148122953520
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 232601148396654,
+							"parameters": {
+								"tag": "\"players_\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 272119335279886,
+							"disabled": true,
+							"parameters": {
+								"type": "log",
+								"message": "\"bbb \" & AJAX.LastData"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 690367595920468,
+							"parameters": {
+								"object-to-create": "JSON_UserData",
+								"layer": "0",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "parse",
+							"objectClass": "JSON_UserData",
+							"sid": 777487385347031,
+							"parameters": {
+								"data": "AJAX.LastData"
+							}
+						},
+						{
+							"id": "set-json",
+							"objectClass": "JSON_LeaderBoard",
+							"sid": 842270449456839,
+							"disabled": true,
+							"parameters": {
+								"path": "\".\" & gCurrentIndex & \".players\"",
+								"json": "JSON_UserData.Get(\"\")"
+							}
+						}
+					],
+					"sid": 610287420270041,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 163097974863910,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "0",
+										"end-index": "JSON_LeaderBoard.ArraySize(\"\") -1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-json",
+									"objectClass": "JSON_LeaderBoard",
+									"sid": 102072619584353,
+									"parameters": {
+										"path": "\".\" & loopindex & \".players\"",
+										"json": "AJAX.LastData"
+									}
+								}
+							],
+							"sid": 745657937181789,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "clear1",
+									"objectClass": "Tile_BG_tour",
+									"sid": 149624510065863,
+									"behaviorType": "GridView"
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 541847800127690
+								},
+								{
+									"id": "setdatabyjsonobject",
+									"objectClass": "Tile_BG_tour",
+									"sid": 584440359738222,
+									"behaviorType": "GridView",
+									"parameters": {
+										"data0": "JSON_LeaderBoard",
+										"root": "\"\""
+									}
+								}
+							],
+							"sid": 172103588393045
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onGridViewRender",
+							"objectClass": "text_snakeLevel",
+							"sid": 400222553016540,
+							"behaviorType": "GridViewDataBind"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "text_snakeLevel",
+							"sid": 804460972707100,
+							"parameters": {
+								"text": "Self.GridViewDataBind.get(\"name\")"
+							}
+						},
+						{
+							"callFunction": "ChangeTextWidth",
+							"sid": 517940814379492,
+							"parameters": [
+								"text_snakeLevel.UID"
+							]
+						}
+					],
+					"sid": 351999055648575
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onGridViewRender",
+							"objectClass": "text_timeLeft",
+							"sid": 560984683346735,
+							"behaviorType": "GridViewDataBind"
+						}
+					],
+					"actions": [],
+					"sid": 443699719759701,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 315132771503314,
+									"parameters": {
+										"variable": "sec",
+										"value": "floor((text_timeLeft.GridViewDataBind.get(\"expireTime\") * 1000 - Date.Now) / 1000)\n"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "text_timeLeft",
+									"sid": 966401094990403,
+									"parameters": {
+										"text": "\" Time Left: \" & floor(sec/86400) & \"D \" & floor((sec%86400)/3600) & \"H \" & floor((sec%3600)/60) & \"M\""
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 495775069351285,
+									"parameters": [
+										"text_timeLeft.UID"
+									]
+								}
+							],
+							"sid": 396433887919925
+						}
+					]
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -1939,11 +2399,403 @@
 							}
 						},
 						{
-							"callFunction": "playGame",
-							"sid": 235882603025164
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 208199806698057,
+							"parameters": {
+								"variable": "tourContextID_BTN",
+								"value": "UI_btnPlay.tourContextID_BTN"
+							}
 						}
 					],
-					"sid": 104581974609202
+					"sid": 104581974609202,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "InstantGame",
+									"sid": 834672467493099,
+									"parameters": {
+										"instance-variable": "Available"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"language": "javascript",
+									"script": [
+										"console.log(\"tournament_contextID = \", runtime.globalVars.tourContextID_BTN);",
+										"",
+										"//ấn vào núi sẽ hiện ra bảng hỏi người chơi có muốn join tournamnt không?",
+										"FBInstant.context.switchAsync(String(runtime.globalVars.tourContextID_BTN)).then(() => {",
+										"                runtime.callFunction(\"playGame\")",
+										"                console.log(\"switchAsync done\");",
+										"            }).catch(function (e){",
+										"                if(e.code == \"SAME_CONTEXT\" || e.code == \"CLIENT_UNSUPPORTED_OPERATION\"){",
+										"                    runtime.callFunction(\"playGame\")",
+										"",
+										"                    console.log(\"SAME_CONTEXT | CLIENT_UNSUPPORTED_OPERATION\");",
+										"                }else{",
+										"                    console.log(\"err = \", e);",
+										"                    runtime.callFunction(\"hideFader\")",
+										"                }",
+										"",
+										"            });"
+									]
+								}
+							],
+							"sid": 468559293400761
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 480897504396660
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "playGame",
+									"sid": 745610857007600
+								}
+							],
+							"sid": 366442011616201
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 882246137538476,
+							"parameters": {
+								"layer": "\"Challenge\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 579788296918788,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "UI_btnPlay",
+									"sid": 451329073725045,
+									"parameters": {
+										"tags": "\"play_tour\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "setenabled0",
+									"objectClass": "UI_btnPlay",
+									"sid": 309101524410320,
+									"behaviorType": "Button",
+									"parameters": {
+										"state2": "disabled"
+									}
+								}
+							],
+							"sid": 407700128997305
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 539729448204983
+						}
+					],
+					"actions": [],
+					"sid": 187314885883399,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "UI_btnPlay",
+									"sid": 120422777940030,
+									"parameters": {
+										"tags": "\"play_tour\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "setenabled0",
+									"objectClass": "UI_btnPlay",
+									"sid": 985936870122407,
+									"behaviorType": "Button",
+									"parameters": {
+										"state2": "enabled"
+									}
+								}
+							],
+							"sid": 191764371690424
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onGridViewRender",
+							"objectClass": "text_topName",
+							"sid": 589390413716131,
+							"behaviorType": "GridViewDataBind"
+						}
+					],
+					"actions": [],
+					"sid": 300613367479970,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "text_topName",
+									"sid": 246651826064559,
+									"parameters": {
+										"tags": "\"rank1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "text_topName",
+									"sid": 756895708315700,
+									"parameters": {
+										"text": "\" \" & Self.GridViewDataBind.get(\"players.0.name\")"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 480003099618824,
+									"parameters": [
+										"text_topName.UID"
+									]
+								}
+							],
+							"sid": 515509805634909
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "text_topName",
+									"sid": 656454464662229,
+									"parameters": {
+										"tags": "\"rank2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "text_topName",
+									"sid": 401310851880145,
+									"parameters": {
+										"text": "\" \" & Self.GridViewDataBind.get(\"players.1.name\")"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 862474233591135,
+									"parameters": [
+										"text_topName.UID"
+									]
+								}
+							],
+							"sid": 744338756857077
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "text_topName",
+									"sid": 942360867475154,
+									"parameters": {
+										"tags": "\"rank3\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "text_topName",
+									"sid": 869237283007460,
+									"parameters": {
+										"text": "\" \" & Self.GridViewDataBind.get(\"players.2.name\")"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 124182438227071,
+									"parameters": [
+										"text_topName.UID"
+									]
+								}
+							],
+							"sid": 313744289772058
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onGridViewRender",
+							"objectClass": "text_topScore",
+							"sid": 551460582375713,
+							"behaviorType": "GridViewDataBind"
+						}
+					],
+					"actions": [],
+					"sid": 629811198360937,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "text_topScore",
+									"sid": 937055293528868,
+									"parameters": {
+										"tags": "\"rank1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "text_topScore",
+									"sid": 769780415739119,
+									"parameters": {
+										"text": "\" Score: \" & Self.GridViewDataBind.get(\"players.0.score\")"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 867769344619806,
+									"parameters": [
+										"text_topName.UID"
+									]
+								}
+							],
+							"sid": 984621085383456
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "text_topScore",
+									"sid": 813999045046920,
+									"parameters": {
+										"tags": "\"rank2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "text_topScore",
+									"sid": 234807431682367,
+									"parameters": {
+										"text": "\" Score: \" & Self.GridViewDataBind.get(\"players.1.score\")"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 956189342515127,
+									"parameters": [
+										"text_topName.UID"
+									]
+								}
+							],
+							"sid": 628074253219922
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "text_topScore",
+									"sid": 683782280165058,
+									"parameters": {
+										"tags": "\"rank3\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "text_topScore",
+									"sid": 314949236432560,
+									"parameters": {
+										"text": "\" Score: \" & Self.GridViewDataBind.get(\"players.2.score\")"
+									}
+								},
+								{
+									"callFunction": "ChangeTextWidth",
+									"sid": 599433296503077,
+									"parameters": [
+										"text_topName.UID"
+									]
+								}
+							],
+							"sid": 833144160033971
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onGridViewRender",
+							"objectClass": "UI_btnPlay",
+							"sid": 123880237485890,
+							"behaviorType": "GridViewDataBind"
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "UI_btnPlay",
+							"sid": 678516928282988,
+							"parameters": {
+								"tags": "\"play_tour\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "UI_btnPlay",
+							"sid": 208845107272863,
+							"parameters": {
+								"instance-variable": "tourContextID_BTN",
+								"value": "Self.GridViewDataBind.get(\"contextId\")"
+							}
+						}
+					],
+					"sid": 147654938391803
 				}
 			],
 			"sid": 568942521007267

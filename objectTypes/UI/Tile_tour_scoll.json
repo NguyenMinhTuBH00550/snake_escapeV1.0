@@ -1,7 +1,7 @@
 {
-	"name": "Tile_BG_tour",
+	"name": "Tile_tour_scoll",
 	"plugin-id": "TiledBg",
-	"sid": 599962617943885,
+	"sid": 748654670800564,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -9,12 +9,12 @@
 		{
 			"behaviorId": "aekiro_gameobject",
 			"name": "GameObject",
-			"sid": 882700003200443
+			"sid": 753878785802056
 		},
 		{
-			"behaviorId": "aekiro_gridView",
-			"name": "GridView",
-			"sid": 104497005518096
+			"behaviorId": "aekiro_scrollView",
+			"name": "ScrollView",
+			"sid": 667771056870197
 		}
 	],
 	"effectTypes": [],
@@ -27,7 +27,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 8292350,
+		"imageSpriteId": 4538443,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

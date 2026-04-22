@@ -861,6 +861,21 @@
 									"d": true,
 									"sm": "normal"
 								}
+							},
+							{
+								"uid": 546,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
 							}
 						],
 						"flags": {
@@ -4204,10 +4219,10 @@
 						"flags": {
 							"x": true,
 							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
 							"o": false,
 							"v": false,
 							"d": true,
@@ -4363,9 +4378,9 @@
 					"behaviors": {
 						"Anchor": {
 							"properties": {
-								"left-edge": "none",
-								"top-edge": "none",
-								"right-edge": "none",
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "window-right",
 								"bottom-edge": "none",
 								"enabled": true
 							}
@@ -4400,10 +4415,10 @@
 								"flags": {
 									"x": true,
 									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
 									"o": false,
 									"v": false,
 									"d": true,
@@ -4594,9 +4609,9 @@
 					"behaviors": {
 						"Anchor": {
 							"properties": {
-								"left-edge": "none",
-								"top-edge": "none",
-								"right-edge": "none",
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "window-right",
 								"bottom-edge": "none",
 								"enabled": true
 							}
@@ -4821,7 +4836,7 @@
 						}
 					},
 					"sceneGraphData": {
-						"parent-uid": null,
+						"parent-uid": 196,
 						"uid": 546,
 						"flags": {
 							"x": true,

@@ -199,6 +199,15 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 780395281487882,
+							"parameters": {
+								"variable": "GAME_STATE",
+								"value": "\"MAIN\""
+							}
 						}
 					],
 					"sid": 727301050745525
@@ -244,6 +253,14 @@
 							"id": "load",
 							"objectClass": "DICT_SaveGame",
 							"sid": 935236278358948,
+							"parameters": {
+								"json": "LocalStorage.ItemValue"
+							}
+						},
+						{
+							"id": "load",
+							"objectClass": "DICT_LevelTime",
+							"sid": 474894499524949,
 							"parameters": {
 								"json": "LocalStorage.ItemValue"
 							}

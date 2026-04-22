@@ -378,71 +378,6 @@
 					"sid": 370211017766759
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "evaluate-expression",
-							"objectClass": "System",
-							"sid": 903175420181424,
-							"parameters": {
-								"value": "loadbar.Width = loadbar.ImageWidth"
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 710695065956534,
-							"parameters": {
-								"first-value": "loadingprogress",
-								"comparison": 0,
-								"second-value": "1"
-							}
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 360676895407028
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "showFader",
-							"sid": 479741512832933,
-							"parameters": [
-								"100"
-							]
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 440689135351963,
-							"parameters": {
-								"seconds": "0.5",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 712492649256480,
-							"parameters": {
-								"layout": "Home"
-							}
-						},
-						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 572414299182174,
-							"parameters": {
-								"type": "log",
-								"message": "\"aaa\""
-							}
-						}
-					],
-					"sid": 519578400999453,
-					"disabled": true
-				},
-				{
 					"functionName": "loadGame",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -521,6 +456,32 @@
 							"sid": 333473994736736
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "loadbar",
+							"sid": 294830706196982,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"Loading\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "setenabled0",
+							"objectClass": "UI_btnPlay",
+							"sid": 225101129694683,
+							"behaviorType": "Button",
+							"parameters": {
+								"state2": "disabled"
+							}
+						}
+					],
+					"sid": 427657328617321
 				}
 			],
 			"sid": 391758809594871

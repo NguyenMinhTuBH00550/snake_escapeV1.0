@@ -1,7 +1,7 @@
 {
-	"name": "text_timeLeft",
+	"name": "text_topScore",
 	"plugin-id": "Text",
-	"sid": 732999614666299,
+	"sid": 679319384219478,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -9,12 +9,12 @@
 		{
 			"behaviorId": "aekiro_gameobject",
 			"name": "GameObject",
-			"sid": 827197808148530
+			"sid": 440246889713036
 		},
 		{
 			"behaviorId": "aekiro_gridviewbind",
 			"name": "GridViewDataBind",
-			"sid": 419276515315578
+			"sid": 332121953927672
 		}
 	],
 	"effectTypes": [

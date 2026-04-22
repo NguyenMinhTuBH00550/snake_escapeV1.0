@@ -780,7 +780,7 @@
 							"sid": 431262000124707,
 							"parameters": {
 								"variable": "ZoomMin",
-								"value": "JsonLevel.Get(\"layoutScale\")"
+								"value": "Json_Level.Get(\"layoutScale\")"
 							}
 						},
 						{
@@ -1938,7 +1938,7 @@
 									"sid": 486491434126912,
 									"parameters": {
 										"variable": "GridW",
-										"value": "JsonLevel.Get(\"size.x\")"
+										"value": "Json_Level.Get(\"size.x\")"
 									}
 								},
 								{
@@ -1947,7 +1947,7 @@
 									"sid": 997248395365933,
 									"parameters": {
 										"variable": "GridH",
-										"value": "JsonLevel.Get(\"size.y\")"
+										"value": "Json_Level.Get(\"size.y\")"
 									}
 								},
 								{
@@ -1955,7 +1955,7 @@
 									"objectClass": "System",
 									"sid": 879693040792367,
 									"parameters": {
-										"scale": "JsonLevel.Get(\"layoutScale\")"
+										"scale": "Json_Level.Get(\"layoutScale\")"
 									}
 								},
 								{
@@ -1964,7 +1964,7 @@
 									"sid": 475586236603008,
 									"parameters": {
 										"variable": "ZoomLevel",
-										"value": "JsonLevel.Get(\"layoutScale\")"
+										"value": "Json_Level.Get(\"layoutScale\")"
 									}
 								}
 							],
@@ -2315,7 +2315,7 @@
 									"conditions": [
 										{
 											"id": "for-each",
-											"objectClass": "JsonLevel",
+											"objectClass": "Json_Level",
 											"sid": 863199212711516,
 											"parameters": {
 												"path": "\"arrows\""
@@ -2329,7 +2329,7 @@
 											"sid": 813349250075859,
 											"parameters": {
 												"variable": "ArrowIndex",
-												"value": "JsonLevel.CurrentKey"
+												"value": "Json_Level.CurrentKey"
 											}
 										},
 										{
@@ -2338,7 +2338,7 @@
 											"sid": 920169966834241,
 											"parameters": {
 												"variable": "ArrowColor",
-												"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".color\"))"
+												"value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".color\"))"
 											}
 										},
 										{
@@ -2367,7 +2367,7 @@
 											"conditions": [
 												{
 													"id": "for-each",
-													"objectClass": "JsonLevel",
+													"objectClass": "Json_Level",
 													"sid": 506014198217399,
 													"parameters": {
 														"path": "\"arrows.\" & ArrowIndex & \".nodes\"\r\n"
@@ -2390,7 +2390,7 @@
 													"sid": 777129327961165,
 													"parameters": {
 														"variable": "NodeX",
-														"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & JsonLevel.CurrentKey & \".x\"))"
+														"value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & Json_Level.CurrentKey & \".x\"))"
 													}
 												},
 												{
@@ -2399,7 +2399,7 @@
 													"sid": 384562936566325,
 													"parameters": {
 														"variable": "NodeY",
-														"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & JsonLevel.CurrentKey & \".y\"))"
+														"value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & Json_Level.CurrentKey & \".y\"))"
 													}
 												},
 												{
@@ -2656,7 +2656,7 @@
 																	"sid": 383977442186025,
 																	"parameters": {
 																		"variable": "i",
-																		"value": "int(JsonLevel.CurrentKey)"
+																		"value": "int(Json_Level.CurrentKey)"
 																	}
 																},
 																{
@@ -2678,7 +2678,7 @@
 																	"sid": 284810330659750,
 																	"parameters": {
 																		"instance-variable": "NodeIndex",
-																		"value": "int(JsonLevel.CurrentKey)"
+																		"value": "int(Json_Level.CurrentKey)"
 																	}
 																},
 																{
@@ -2759,7 +2759,7 @@
 																	"sid": 868795004647063,
 																	"parameters": {
 																		"variable": "PrevX",
-																		"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & (i-1) & \".x\"))"
+																		"value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & (i-1) & \".x\"))"
 																	}
 																},
 																{
@@ -2768,7 +2768,7 @@
 																	"sid": 952751499110344,
 																	"parameters": {
 																		"variable": "PrevY",
-																		"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & (i-1) & \".y\"))\n"
+																		"value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & (i-1) & \".y\"))\n"
 																	}
 																},
 																{
@@ -2777,7 +2777,7 @@
 																	"sid": 593316136795109,
 																	"parameters": {
 																		"variable": "NextX",
-																		"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & (i+1) & \".x\"))"
+																		"value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & (i+1) & \".x\"))"
 																	}
 																},
 																{
@@ -2786,7 +2786,7 @@
 																	"sid": 568057923695910,
 																	"parameters": {
 																		"variable": "NextY",
-																		"value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & (i+1) & \".y\"))"
+																		"value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.\" & (i+1) & \".y\"))"
 																	}
 																}
 															],
@@ -3150,7 +3150,7 @@
 									"conditions": [
 										{
 											"id": "for-each",
-											"objectClass": "JsonLevel",
+											"objectClass": "Json_Level",
 											"sid": 698773487518130,
 											"parameters": {
 												"path": "\"wayBlockers\""
@@ -3170,7 +3170,7 @@
 													"sid": 108101143174699,
 													"parameters": {
 														"variable": "NodeX",
-														"value": "int(JsonLevel.Get(\"wayBlockers.\" & JsonLevel.CurrentKey & \".position.x\"))"
+														"value": "int(Json_Level.Get(\"wayBlockers.\" & Json_Level.CurrentKey & \".position.x\"))"
 													}
 												},
 												{
@@ -3179,7 +3179,7 @@
 													"sid": 622157621588955,
 													"parameters": {
 														"variable": "NodeY",
-														"value": "int(JsonLevel.Get(\"wayBlockers.\" & JsonLevel.CurrentKey & \".position.y\"))"
+														"value": "int(Json_Level.Get(\"wayBlockers.\" & Json_Level.CurrentKey & \".position.y\"))"
 													}
 												},
 												{
@@ -3237,7 +3237,7 @@
 													"sid": 101401410378315,
 													"parameters": {
 														"instance-variable": "lockTime",
-														"value": "int(JsonLevel.Get(\"wayBlockers.\" & JsonLevel.CurrentKey & \".lockTime\"))"
+														"value": "int(Json_Level.Get(\"wayBlockers.\" & Json_Level.CurrentKey & \".lockTime\"))"
 													}
 												},
 												{
@@ -3273,7 +3273,7 @@
 									"conditions": [
 										{
 											"id": "for-each",
-											"objectClass": "JsonLevel",
+											"objectClass": "Json_Level",
 											"sid": 227373148329937,
 											"parameters": {
 												"path": "\"blackHoles\""
@@ -3293,7 +3293,7 @@
 													"sid": 832791150050628,
 													"parameters": {
 														"variable": "NodeX",
-														"value": "int(JsonLevel.Get(\"blackHoles.\" & JsonLevel.CurrentKey & \".position.x\"))"
+														"value": "int(Json_Level.Get(\"blackHoles.\" & Json_Level.CurrentKey & \".position.x\"))"
 													}
 												},
 												{
@@ -3302,7 +3302,7 @@
 													"sid": 942287979293496,
 													"parameters": {
 														"variable": "NodeY",
-														"value": "int(JsonLevel.Get(\"blackHoles.\" & JsonLevel.CurrentKey & \".position.y\"))"
+														"value": "int(Json_Level.Get(\"blackHoles.\" & Json_Level.CurrentKey & \".position.y\"))"
 													}
 												},
 												{
@@ -5913,9 +5913,9 @@
 											"objectClass": "System",
 											"sid": 810976104824932,
 											"parameters": {
-												"first-value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.0.x\"))",
+												"first-value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.0.x\"))",
 												"comparison": 0,
-												"second-value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.1.x\"))"
+												"second-value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.1.x\"))"
 											}
 										},
 										{
@@ -5923,9 +5923,9 @@
 											"objectClass": "System",
 											"sid": 100520658442933,
 											"parameters": {
-												"first-value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.0.y\"))",
+												"first-value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.0.y\"))",
 												"comparison": 0,
-												"second-value": "int(JsonLevel.Get(\"arrows.\" & ArrowIndex & \".nodes.1.y\"))"
+												"second-value": "int(Json_Level.Get(\"arrows.\" & ArrowIndex & \".nodes.1.y\"))"
 											}
 										}
 									],
@@ -6120,7 +6120,7 @@
 										},
 										{
 											"id": "parse",
-											"objectClass": "JsonLevel",
+											"objectClass": "Json_Level",
 											"sid": 487157006189765,
 											"parameters": {
 												"data": "AJAX.LastData\r\n"
@@ -11233,49 +11233,124 @@
 										},
 										{
 											"eventType": "block",
-											"conditions": [],
-											"actions": [
+											"conditions": [
 												{
-													"id": "set-eventvar-value",
+													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 618995389222147,
+													"sid": 951984601262840,
 													"parameters": {
-														"variable": "CurrentLevel",
-														"value": " str( int(CurrentLevel) + 1 )"
-													}
-												},
-												{
-													"id": "set-key",
-													"objectClass": "DICT_SaveGame",
-													"sid": 831423000504595,
-													"parameters": {
-														"key": "SAVE_LEVEL",
-														"value": "CurrentLevel"
-													}
-												},
-												{
-													"callFunction": "saveGame",
-													"sid": 765654760586871
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 761660157972553,
-													"parameters": {
-														"seconds": "2",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "go-to-layout",
-													"objectClass": "System",
-													"sid": 484378119386460,
-													"parameters": {
-														"layout": "Loading"
+														"first-value": "GAME_STATE",
+														"comparison": 0,
+														"second-value": "\"MAIN\""
 													}
 												}
 											],
-											"sid": 275039172981735
+											"actions": [],
+											"sid": 146048676808436,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 956996919411732,
+															"parameters": {
+																"variable": "CurrentLevel",
+																"value": " str( int(CurrentLevel) + 1 )"
+															}
+														},
+														{
+															"id": "set-key",
+															"objectClass": "DICT_SaveGame",
+															"sid": 498427705062603,
+															"parameters": {
+																"key": "SAVE_LEVEL",
+																"value": "CurrentLevel"
+															}
+														},
+														{
+															"callFunction": "saveGame",
+															"sid": 837529295864339
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 775075117036829,
+															"parameters": {
+																"seconds": "2",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 693856264905374,
+															"parameters": {
+																"layout": "Loading"
+															}
+														}
+													],
+													"sid": 444716338027498
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 434634216711343,
+													"parameters": {
+														"first-value": "GAME_STATE",
+														"comparison": 0,
+														"second-value": "\"TOUR\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 820221958611898,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-key",
+															"objectClass": "DICT_SaveGame",
+															"sid": 796475161446723,
+															"parameters": {
+																"key": "\"SAVE_SCORE\"",
+																"value": "score_combo"
+															}
+														},
+														{
+															"callFunction": "saveGame",
+															"sid": 323019405446435
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 789227753113661,
+															"parameters": {
+																"seconds": "2",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 211446629786527,
+															"parameters": {
+																"layout": "Loading"
+															}
+														}
+													],
+													"sid": 599143339143101
+												}
+											]
 										}
 									]
 								},

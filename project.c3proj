@@ -36,6 +36,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Date",
+			"name": "Date",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Dictionary",
 			"name": "Dictionary",
 			"author": "Scirra",
@@ -201,6 +208,22 @@
 		},
 		{
 			"type": "behavior",
+			"id": "aekiro_gridView",
+			"name": "Grid View",
+			"author": "Aekiro",
+			"bundled": true,
+			"version": "1.822"
+		},
+		{
+			"type": "behavior",
+			"id": "aekiro_gridviewbind",
+			"name": "GridView Data Bind",
+			"author": "Aekiro",
+			"bundled": true,
+			"version": "1.822"
+		},
+		{
+			"type": "behavior",
 			"id": "aekiro_scrollView",
 			"name": "Scroll View",
 			"author": "Aekiro",
@@ -244,7 +267,15 @@
 			"banner_share_PvP_720x",
 			"banner_invite_720x",
 			"Sprite3",
-			"Sprite4"
+			"Sprite4",
+			"Date",
+			"AvatarBot",
+			"JSON_LeaderBoard",
+			"JSON_LeaderData",
+			"JSON_UserData",
+			"UI_rank1",
+			"UI_rank3",
+			"UI_rank2"
 		],
 		"subfolders": [
 			{
@@ -266,7 +297,7 @@
 					"HUD_setting_BA",
 					"HUD_booster_frame",
 					"HUD_outLive",
-					"BG_tour",
+					"BG_shop",
 					"HUD_boosterBuy",
 					"BG",
 					"HUD_popup_newobject_image_blackhole",
@@ -348,7 +379,9 @@
 					"TXT_Warning",
 					"text_snakeLevel",
 					"text_timeLeft",
-					"text_tour"
+					"text_tour",
+					"text_topName",
+					"text_topScore"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -399,7 +432,7 @@
 					"UI_play_timeframe",
 					"UI_popup_loseheart",
 					"UI_Home",
-					"Tile_BG_tour",
+					"Tile_BG_shop",
 					"UI_booster_grid",
 					"UI_shop_btn",
 					"UI_shop_coin_panel",
@@ -457,7 +490,10 @@
 					"UI_Share",
 					"UI_Tournament",
 					"UI_VS",
-					"Warning"
+					"Warning",
+					"Tile_BG_tour",
+					"Tile_tour",
+					"Tile_tour_scoll"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -479,7 +515,7 @@
 			},
 			{
 				"items": [
-					"JsonLevel"
+					"Json_Level"
 				],
 				"subfolders": [],
 				"name": "JSON"
@@ -524,7 +560,8 @@
 							"DICT_SaveGame",
 							"EntryPointData_DICT",
 							"YourData_DICT",
-							"FriendData_DICT"
+							"FriendData_DICT",
+							"DICT_LevelTime"
 						],
 						"subfolders": [],
 						"name": "Dict"
@@ -602,7 +639,8 @@
 			"Fade",
 			"Ad_sceen",
 			"newObject_wall",
-			"newObject_BlackHole"
+			"newObject_BlackHole",
+			"Tour_End"
 		],
 		"subfolders": [
 			{
@@ -906,6 +944,22 @@
 					"name": "all_levels.json",
 					"type": "application/json",
 					"sid": 398895278329981,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "69e6d850c67c53f05b74133e.json",
+					"type": "application/json",
+					"sid": 130877856559645,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "69e72f1fc67c53f05b8484ec.json",
+					"type": "application/json",
+					"sid": 946013301537578,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -1477,6 +1531,20 @@
 					],
 					"subfolders": [],
 					"name": "levels"
+				},
+				{
+					"items": [
+						{
+							"name": "LeaderboardList.json",
+							"type": "application/json",
+							"sid": 218138517571012,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "tour_time"
 				}
 			]
 		}

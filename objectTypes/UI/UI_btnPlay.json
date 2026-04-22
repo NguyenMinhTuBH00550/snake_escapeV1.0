@@ -11,6 +11,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 739790077076787
+		},
+		{
+			"name": "tourContextID_BTN",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 424983710077373
 		}
 	],
 	"behaviorTypes": [
@@ -23,6 +30,11 @@
 			"behaviorId": "aekiro_gameobject",
 			"name": "GameObject",
 			"sid": 541341946034032
+		},
+		{
+			"behaviorId": "aekiro_gridviewbind",
+			"name": "GridViewDataBind",
+			"sid": 624422743123382
 		}
 	],
 	"effectTypes": [],

@@ -82,6 +82,8 @@
 		"text_combo",
 		"text_snakeLevel",
 		"text_timeLeft",
-		"text_tour"
+		"text_tour",
+		"text_topName",
+		"text_topScore"
 	]
 }

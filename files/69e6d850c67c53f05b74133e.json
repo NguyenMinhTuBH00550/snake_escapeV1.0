@@ -1,0 +1,402 @@
+[
+    {
+        "rank": 1,
+        "score": 1545995,
+        "playerId": "25157687110583420",
+        "name": "Bob",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10232471905600200&gaming_photo_type=unified_picture&ext=1779109594&hash=AT_Dvvq0ek6neuMTdkcGqJ_g",
+        "country": "US"
+    },
+    {
+        "rank": 2,
+        "score": 812790,
+        "playerId": "23995834153392906",
+        "name": "Emiliano",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=122225520800160468&gaming_photo_type=unified_picture&ext=1779329715&hash=AT_DQtQLquUj-qEXc5Ue7g_q",
+        "country": "ES"
+    },
+    {
+        "rank": 3,
+        "score": 146810,
+        "playerId": "24402729129381250",
+        "name": "Konrad",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1836420033890918&gaming_photo_type=unified_picture&ext=1779283399&hash=AT-LIEggtXuIst-rtfeA-foV",
+        "country": "AU"
+    },
+    {
+        "rank": 4,
+        "score": 102045,
+        "playerId": "24914794624815948",
+        "name": "Eleanor",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10238909687662869&gaming_photo_type=unified_picture&ext=1779354533&hash=AT8W0PVIoqeDkeuL6jVc-vHA",
+        "country": "GB"
+    },
+    {
+        "rank": 5,
+        "score": 92494,
+        "playerId": "24673564722264902",
+        "name": "Karen",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10160243276552465&gaming_photo_type=unified_picture&ext=1779257919&hash=AT_y7vz4mHXVhK8ruij-Utqc",
+        "country": "AU"
+    },
+    {
+        "rank": 6,
+        "score": 85051,
+        "playerId": "23928986993437500",
+        "name": "Joyce",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10234809352227666&gaming_photo_type=unified_picture&ext=1779339729&hash=AT_L_3F7O8yiILSFnGWqw1C1",
+        "country": "US"
+    },
+    {
+        "rank": 7,
+        "score": 70891,
+        "playerId": "25961394456787150",
+        "name": "Ann",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=4230613940584505&gaming_photo_type=unified_picture&ext=1779296333&hash=AT9ivNePHgYy1vyF4RFHXtln",
+        "country": "US"
+    },
+    {
+        "rank": 8,
+        "score": 50385,
+        "playerId": "30995750410072122",
+        "name": "Nadja",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10161877448271229&gaming_photo_type=unified_picture&ext=1779247739&hash=AT-yeeFPXW7UFDVXUHSt5N3M",
+        "country": "US"
+    },
+    {
+        "rank": 9,
+        "score": 43162,
+        "playerId": "24547874038223156",
+        "name": "Stephen",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=2363916990726461&gaming_photo_type=unified_picture&ext=1779354881&hash=AT_4YwziZ1VGX9pTZxeV5xnO",
+        "country": "GB"
+    },
+    {
+        "rank": 10,
+        "score": 38494,
+        "playerId": "7991558140947412",
+        "name": "Bertrand",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=3604181613050082&gaming_photo_type=unified_picture&ext=1779339355&hash=AT-K8FVvRZmTjaPcfpgtjlBs",
+        "country": "NC"
+    },
+    {
+        "rank": 11,
+        "score": 33785,
+        "playerId": "8682457061801453",
+        "name": "Marie",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=9424418557591805&gaming_photo_type=unified_picture&ext=1779307110&hash=AT_2qi51gZWTeN8yBc-RgxLq",
+        "country": "FR"
+    },
+    {
+        "rank": 12,
+        "score": 33729,
+        "playerId": "29970483389232925",
+        "name": "Lazy",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=590006030810119&gaming_photo_type=unified_picture&ext=1778533163&hash=AT_TcXP5GUfT4KzfOHSmUPvT",
+        "country": "US"
+    },
+    {
+        "rank": 13,
+        "score": 32694,
+        "playerId": "25001730492855254",
+        "name": "Tim",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10225094639748273&gaming_photo_type=unified_picture&ext=1779278477&hash=AT-d8W1kCPUkP350YOpGNVXo",
+        "country": "US"
+    },
+    {
+        "rank": 14,
+        "score": 31642,
+        "playerId": "10085273388157731",
+        "name": "Maria",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=2431472327215166&gaming_photo_type=unified_picture&ext=1779255609&hash=AT91iVGLZdU0t4rxmQUMJtAw",
+        "country": "AU"
+    },
+    {
+        "rank": 15,
+        "score": 29758,
+        "playerId": "26352721777647181",
+        "name": "Belen",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=26144781981800267&gaming_photo_type=unified_picture&ext=1779023885&hash=AT_8HNZl7oNWUgyt1WZzDwsp",
+        "country": "US"
+    },
+    {
+        "rank": 16,
+        "score": 26363,
+        "playerId": "25992397647083078",
+        "name": "Wendy",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=4300693180186479&gaming_photo_type=unified_picture&ext=1778601953&hash=AT8HQUv19yvHftpzAeBXvFI_",
+        "country": "GB"
+    },
+    {
+        "rank": 17,
+        "score": 22972,
+        "playerId": "24896571609973179",
+        "name": "David",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=731106619990327&gaming_photo_type=unified_picture&ext=1779289469&hash=AT90r3nAbGN0WyWjMqzm7N-S",
+        "country": "GB"
+    },
+    {
+        "rank": 18,
+        "score": 22765,
+        "playerId": "24109151945420302",
+        "name": "Nursuha",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1470138564324571&gaming_photo_type=unified_picture&ext=1779351054&hash=AT8JsPC4uubqpGjywImgQXEp",
+        "country": "ID"
+    },
+    {
+        "rank": 19,
+        "score": 21762,
+        "playerId": "25405210709105300",
+        "name": "Dominique",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10235771447660811&gaming_photo_type=unified_picture&ext=1779353335&hash=AT8FwRbQNiVA15Wsli1kOEUC",
+        "country": "FR"
+    },
+    {
+        "rank": 20,
+        "score": 20743,
+        "playerId": "24604624515797274",
+        "name": "Val",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=3283505435130881&gaming_photo_type=unified_picture&ext=1778997311&hash=AT9LmRum_WhcUi1SESSP4pt9",
+        "country": "AU"
+    },
+    {
+        "rank": 21,
+        "score": 18552,
+        "playerId": "26123233193997961",
+        "name": "Mark",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=26530102366608263&gaming_photo_type=unified_picture&ext=1779294426&hash=AT-Op91G7Bqu8O_TH4G5FVk3",
+        "country": "US"
+    },
+    {
+        "rank": 22,
+        "score": 18261,
+        "playerId": "8626352330809077",
+        "name": "Michelle",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10220806334428477&gaming_photo_type=unified_picture&ext=1778868858&hash=AT86dOJLNvHEoHcbtmJJWKUA",
+        "country": "BB"
+    },
+    {
+        "rank": 23,
+        "score": 17263,
+        "playerId": "26417829861216545",
+        "name": "Богдан",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=3722274331274881&gaming_photo_type=unified_picture&ext=1779207538&hash=AT9ku_SOLT_UUQF__n5Grfup",
+        "country": "UA"
+    },
+    {
+        "rank": 24,
+        "score": 16582,
+        "playerId": "24325581217038600",
+        "name": "Maria",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1248607436751178&gaming_photo_type=unified_picture&ext=1779296936&hash=AT-27MaXzOshuWWx9Q2DFODN",
+        "country": "PL"
+    },
+    {
+        "rank": 25,
+        "score": 15943,
+        "playerId": "9928830077178751",
+        "name": "Michael",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=31222320750747357&gaming_photo_type=unified_picture&ext=1779024416&hash=AT_dkny7G07Wne5-O9gi2qCe",
+        "country": "US"
+    },
+    {
+        "rank": 26,
+        "score": 15235,
+        "playerId": "25811814821740508",
+        "name": "Elias",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1906246913567149&gaming_photo_type=unified_picture&ext=1779120125&hash=AT8kgWKiBYzg7v5XxN336FSq",
+        "country": "BR"
+    },
+    {
+        "rank": 27,
+        "score": 14410,
+        "playerId": "24875688332103863",
+        "name": "Γιώργος",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=2551897401861112&gaming_photo_type=unified_picture&ext=1779303344&hash=AT-j0sDikt0OiR2LqXPyRZ3_",
+        "country": "GR"
+    },
+    {
+        "rank": 28,
+        "score": 14107,
+        "playerId": "25330655063280739",
+        "name": "Zeta",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=26693322556935117&gaming_photo_type=unified_picture&ext=1779220366&hash=AT99mySVvAfPicAfHGbfhH9s",
+        "country": "GB"
+    },
+    {
+        "rank": 29,
+        "score": 13460,
+        "playerId": "25441104645571109",
+        "name": "Jolanta",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10232317437817783&gaming_photo_type=unified_picture&ext=1779339867&hash=AT8kIvWCqyceRZUKGu3tBjZo",
+        "country": "PL"
+    },
+    {
+        "rank": 30,
+        "score": 13420,
+        "playerId": "26977098041890565",
+        "name": "TC Erdogan",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10236637815740091&gaming_photo_type=unified_picture&ext=1779311598&hash=AT9OWAXW3T3xdjdbLWoFXS8D",
+        "country": "US"
+    },
+    {
+        "rank": 31,
+        "score": 13277,
+        "playerId": "26296447949993460",
+        "name": "淼超",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=27056664277257159&gaming_photo_type=unified_picture&ext=1779321780&hash=AT97ePq3nTdWk5za0lX8WP6T",
+        "country": "TW"
+    },
+    {
+        "rank": 32,
+        "score": 13175,
+        "playerId": "26292464137113339",
+        "name": "Sandra",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=27393365693586014&gaming_photo_type=unified_picture&ext=1779336432&hash=AT-FPBy9Cd6OWXuaBk_iIXNq",
+        "country": "US"
+    },
+    {
+        "rank": 33,
+        "score": 13155,
+        "playerId": "26499400406357946",
+        "name": "Peter",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=2361615494360424&gaming_photo_type=unified_picture&ext=1779318147&hash=AT_7H1hNvctbX-4RgE3eocLv",
+        "country": "GB"
+    },
+    {
+        "rank": 34,
+        "score": 11059,
+        "playerId": "26293136200306419",
+        "name": "Brenda",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10232524316637138&gaming_photo_type=unified_picture&ext=1779316068&hash=AT_ME6aL5ukE6MCvzFLr0L2H",
+        "country": "US"
+    },
+    {
+        "rank": 35,
+        "score": 10572,
+        "playerId": "24191368100527628",
+        "name": "Ernie",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=864520912933159&gaming_photo_type=unified_picture&ext=1778365976&hash=AT8e3ALVD9mDZyxfT7yaoNMj",
+        "country": "AU"
+    },
+    {
+        "rank": 36,
+        "score": 10453,
+        "playerId": "25485896374337690",
+        "name": "Toyyo",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=4323414464544063&gaming_photo_type=unified_picture&ext=1779224835&hash=AT83B_DE0-RQWby54h6Da2eU",
+        "country": "US"
+    },
+    {
+        "rank": 37,
+        "score": 9636,
+        "playerId": "33218210721126720",
+        "name": "Linda",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=3860115287626131&gaming_photo_type=unified_picture&ext=1779331847&hash=AT_j0nCDmTty1wNLsa0xc5kS",
+        "country": "US"
+    },
+    {
+        "rank": 38,
+        "score": 8259,
+        "playerId": "33541573628791079",
+        "name": "Max",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1440887557545703&gaming_photo_type=unified_picture&ext=1779020857&hash=AT8o4feOY488OFp8kKl6AFK_",
+        "country": "NO"
+    },
+    {
+        "rank": 39,
+        "score": 7978,
+        "playerId": "25302568672728783",
+        "name": "Keith",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=122159166734706598&gaming_photo_type=unified_picture&ext=1779312534&hash=AT-0XWFFatM-n8xIhir_6X6g",
+        "country": "GB"
+    },
+    {
+        "rank": 40,
+        "score": 7976,
+        "playerId": "25701789799471692",
+        "name": "Claudine",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10241690081252674&gaming_photo_type=unified_picture&ext=1779136930&hash=AT_c0DXb-cil605-tYkz7e6z",
+        "country": "US"
+    },
+    {
+        "rank": 41,
+        "score": 7498,
+        "playerId": "8408776815900728",
+        "name": "Lauraine",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=9257622347589771&gaming_photo_type=unified_picture&ext=1779306873&hash=AT8n-PNmY8BQhLtqwJcAHynJ",
+        "country": "CA"
+    },
+    {
+        "rank": 42,
+        "score": 7247,
+        "playerId": "31547501224894815",
+        "name": "Pat",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=2543587696023240&gaming_photo_type=unified_picture&ext=1779332007&hash=AT_Ip1eys01fmGyLLlG0sGGW",
+        "country": "CA"
+    },
+    {
+        "rank": 43,
+        "score": 7128,
+        "playerId": "25625098863786691",
+        "name": "Rita",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=122247071216117170&gaming_photo_type=unified_picture&ext=1779259288&hash=AT_4AQh1ZTHIuvnBU0FCIAwo",
+        "country": "MX"
+    },
+    {
+        "rank": 44,
+        "score": 6990,
+        "playerId": "24202619569408290",
+        "name": "Gladys",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1415923246175528&gaming_photo_type=unified_picture&ext=1778263431&hash=AT9tdS4OL0G454iRMt5Laow3",
+        "country": "US"
+    },
+    {
+        "rank": 45,
+        "score": 6215,
+        "playerId": "24607818085559662",
+        "name": "Tim",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10239649640034163&gaming_photo_type=unified_picture&ext=1779129232&hash=AT9DNL2wty1TKntwErLgmdOy",
+        "country": "GB"
+    },
+    {
+        "rank": 46,
+        "score": 6181,
+        "playerId": "24538489949102531",
+        "name": "Jose Manuel",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1097983912176921&gaming_photo_type=unified_picture&ext=1778711711&hash=AT_rOy3MFSUR6mPPBZRXmVqV",
+        "country": "ES"
+    },
+    {
+        "rank": 47,
+        "score": 5915,
+        "playerId": "24364061539921285",
+        "name": "Helen",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=31569398369340809&gaming_photo_type=unified_picture&ext=1779295099&hash=AT97SPLy-zzdV15dNcBVqW2x",
+        "country": "US"
+    },
+    {
+        "rank": 48,
+        "score": 5887,
+        "playerId": "24869662745977942",
+        "name": "Juanita",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=4179122909037340&gaming_photo_type=unified_picture&ext=1779320352&hash=AT-CUpFLN-MiR9BJCquJHzSH",
+        "country": "US"
+    },
+    {
+        "rank": 49,
+        "score": 5737,
+        "playerId": "25589851264034312",
+        "name": "Marek",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1558097858764124&gaming_photo_type=unified_picture&ext=1778534445&hash=AT-ebbQksinUjrHuWebRmwNv",
+        "country": "PL"
+    },
+    {
+        "rank": 50,
+        "score": 5195,
+        "playerId": "24957764460512431",
+        "name": "Sandra",
+        "avatar": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10225227307948460&gaming_photo_type=unified_picture&ext=1779323573&hash=AT9cfKG3ioGx9avGx0AhaVCZ",
+        "country": "US"
+    }
+]
