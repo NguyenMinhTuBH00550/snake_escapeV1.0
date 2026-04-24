@@ -355,7 +355,7 @@
 			"eventType": "variable",
 			"name": "baseScore",
 			"type": "number",
-			"initialValue": "20",
+			"initialValue": "200",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -380,6 +380,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 390031064871060
+		},
+		{
+			"eventType": "variable",
+			"name": "comboTimer2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 207320400194431
 		},
 		{
 			"eventType": "comment",
@@ -10586,7 +10596,16 @@
 							"children": [
 								{
 									"eventType": "block",
-									"conditions": [],
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "InstantGame",
+											"sid": 133666223868995,
+											"parameters": {
+												"instance-variable": "Available"
+											}
+										}
+									],
 									"actions": [
 										{
 											"id": "add-to-eventvar",
@@ -10613,11 +10632,66 @@
 											]
 										},
 										{
-											"callFunction": "CheckWinCondition",
-											"sid": 448054993582354
+											"type": "script",
+											"language": "javascript",
+											"script": [
+												"FBInstant.tournament.shareAsync({",
+												"    score_combo: runtime.globalVars.score_combo,",
+												"    data: {}",
+												"}).then(function() {",
+												"    // continue with the game.",
+												"    console.log(\"Facebook shareAsync: update score finished\");",
+												"    runtime.callFunction(\"CheckWinCondition\");",
+												"}).catch(function(e) {",
+												"    console.log(\"Facebook shareAsync: error\", e);",
+												"    runtime.callFunction(\"CheckWinCondition\");",
+												"",
+												"});"
+											]
 										}
 									],
 									"sid": 187297193107906
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 299890410313864
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 283561184022923,
+											"parameters": {
+												"variable": "completedSnakes",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "text_count_snake",
+											"sid": 231133070044698,
+											"parameters": {
+												"text": "completedSnakes & \"/\" & totalSnakes"
+											}
+										},
+										{
+											"callFunction": "ChangeTextWidth",
+											"sid": 509517509886307,
+											"parameters": [
+												"text_count_snake.UID"
+											]
+										},
+										{
+											"callFunction": "CheckWinCondition",
+											"sid": 432338755915464
+										}
+									],
+									"sid": 673848745681365
 								}
 							]
 						},
@@ -10744,125 +10818,332 @@
 							"children": [
 								{
 									"eventType": "block",
-									"conditions": [],
-									"actions": [
+									"conditions": [
 										{
-											"id": "set-active",
-											"objectClass": "UI_txt_endgame",
-											"sid": 416438278321418,
-											"behaviorType": "Sine",
-											"parameters": {
-												"state": "active"
-											}
-										},
-										{
-											"callFunction": "PlaySFX",
-											"sid": 618351086679446,
-											"parameters": [
-												"\"SFX_Confetti_Explosion\"",
-												"-10"
-											]
-										},
-										{
-											"id": "create-object",
+											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 797830727132891,
+											"sid": 435486666969260,
 											"parameters": {
-												"object-to-create": "Fireword_PTC",
-												"layer": "\"win_sceen\"",
-												"x": "UI_txt_endgame.X-50",
-												"y": "UI_txt_endgame.Y",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 710560975058237,
-											"parameters": {
-												"seconds": "0.25",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 754757862165416,
-											"parameters": {
-												"object-to-create": "Fireword_PTC",
-												"layer": "\"win_sceen\"",
-												"x": "UI_txt_endgame.X+50",
-												"y": "UI_txt_endgame.Y",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "F_Snake",
-											"sid": 480197892694538,
-											"parameters": {
-												"instance-variable": "CanTouch",
-												"value": "false"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 569666297256762,
-											"parameters": {
-												"variable": "PanPointerID",
-												"value": "-1"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 175954552924363,
-											"parameters": {
-												"variable": "TouchZoomID",
-												"value": "-1"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 496376340397873,
-											"parameters": {
-												"variable": "PanLastX",
-												"value": "0"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 915821275843968,
-											"parameters": {
-												"variable": "PanLastY",
-												"value": "0"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 366052042896532,
-											"parameters": {
-												"variable": "IsTimerRunning",
-												"value": "0"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 279345975143072,
-											"parameters": {
-												"variable": "IsInputLocked",
-												"value": "1"
+												"first-value": "GAME_STATE",
+												"comparison": 0,
+												"second-value": "\"MAIN\""
 											}
 										}
 									],
-									"sid": 687024867038769
+									"actions": [],
+									"sid": 509144552027879,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "text_level_complete",
+													"sid": 401984455391923,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "text_complete_tour",
+													"sid": 594664274497989,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-active",
+													"objectClass": "UI_txt_endgame",
+													"sid": 728832471369019,
+													"behaviorType": "Sine",
+													"parameters": {
+														"state": "active"
+													}
+												},
+												{
+													"callFunction": "PlaySFX",
+													"sid": 925473447044353,
+													"parameters": [
+														"\"SFX_Confetti_Explosion\"",
+														"-10"
+													]
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 356628566592048,
+													"parameters": {
+														"object-to-create": "Fireword_PTC",
+														"layer": "\"win_sceen\"",
+														"x": "UI_txt_endgame.X-50",
+														"y": "UI_txt_endgame.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 512166351377250,
+													"parameters": {
+														"seconds": "0.25",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 727792331551265,
+													"parameters": {
+														"object-to-create": "Fireword_PTC",
+														"layer": "\"win_sceen\"",
+														"x": "UI_txt_endgame.X+50",
+														"y": "UI_txt_endgame.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 921772120318090,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 795391255988578,
+													"parameters": {
+														"variable": "PanPointerID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 252292257104910,
+													"parameters": {
+														"variable": "TouchZoomID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 564726795346974,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 359756311629130,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 316125086185008,
+													"parameters": {
+														"variable": "IsTimerRunning",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 796977949677547,
+													"parameters": {
+														"variable": "IsInputLocked",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 330234043947446
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 720114120812173,
+											"parameters": {
+												"first-value": "GAME_STATE",
+												"comparison": 0,
+												"second-value": "\"TOUR\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 795370295954474,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "text_level_complete",
+													"sid": 688407582838001,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "text_complete_tour",
+													"sid": 514174293589690,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "text_complete_tour",
+													"sid": 967314193151852,
+													"parameters": {
+														"text": "\"Score: \" & DICT_SaveGame.Get(SAVE_SCORE)"
+													}
+												},
+												{
+													"callFunction": "ChangeTextWidth",
+													"sid": 680537936585981,
+													"parameters": [
+														"text_complete_tour.UID"
+													]
+												},
+												{
+													"id": "set-active",
+													"objectClass": "UI_txt_endgame",
+													"sid": 166288146562334,
+													"behaviorType": "Sine",
+													"parameters": {
+														"state": "active"
+													}
+												},
+												{
+													"callFunction": "PlaySFX",
+													"sid": 785474058298706,
+													"parameters": [
+														"\"SFX_Confetti_Explosion\"",
+														"-10"
+													]
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 153426148635707,
+													"parameters": {
+														"object-to-create": "Fireword_PTC",
+														"layer": "\"win_sceen\"",
+														"x": "UI_txt_endgame.X-50",
+														"y": "UI_txt_endgame.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 274650151808327,
+													"parameters": {
+														"seconds": "0.25",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 252119253327924,
+													"parameters": {
+														"object-to-create": "Fireword_PTC",
+														"layer": "\"win_sceen\"",
+														"x": "UI_txt_endgame.X+50",
+														"y": "UI_txt_endgame.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "F_Snake",
+													"sid": 718699767727956,
+													"parameters": {
+														"instance-variable": "CanTouch",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 966095255902339,
+													"parameters": {
+														"variable": "PanPointerID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 272906409098351,
+													"parameters": {
+														"variable": "TouchZoomID",
+														"value": "-1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 423069080348058,
+													"parameters": {
+														"variable": "PanLastX",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 876732234668454,
+													"parameters": {
+														"variable": "PanLastY",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 300512452367317,
+													"parameters": {
+														"variable": "IsTimerRunning",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 794395487829421,
+													"parameters": {
+														"variable": "IsInputLocked",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 668523148569498
+										}
+									]
 								}
 							]
 						},

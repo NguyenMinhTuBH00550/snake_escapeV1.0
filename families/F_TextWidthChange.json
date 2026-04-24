@@ -84,6 +84,7 @@
 		"text_timeLeft",
 		"text_tour",
 		"text_topName",
-		"text_topScore"
+		"text_topScore",
+		"text_complete_tour"
 	]
 }
