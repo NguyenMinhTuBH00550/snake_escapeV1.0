@@ -83,6 +83,15 @@
 										"variable": "NextLayout",
 										"value": "\"Home\""
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 859026653513540,
+									"parameters": {
+										"variable": "GAME_STATE",
+										"value": "\"HOME\""
+									}
 								}
 							],
 							"sid": 793560667305266
@@ -349,33 +358,100 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 370211017766759,
+					"children": [
 						{
-							"callFunction": "showFader",
-							"sid": 978389115669981,
-							"parameters": [
-								"100"
-							]
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 344116903468267,
+									"parameters": {
+										"first-value": "GAME_STATE",
+										"comparison": 0,
+										"second-value": "\"HOME\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 369598176108460,
+									"parameters": {
+										"first-value": "GAME_STATE",
+										"comparison": 0,
+										"second-value": "\"TOUR\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "showFader",
+									"sid": 496669010122084,
+									"parameters": [
+										"100"
+									]
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 645735189608733,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 742192793723986,
+									"parameters": {
+										"layout": "Home"
+									}
+								}
+							],
+							"sid": 249992078179318,
+							"isOrBlock": true
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 917898874595571,
-							"parameters": {
-								"seconds": "0.5",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 976562717832277,
-							"parameters": {
-								"layout": "Home"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 267039996605563
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "showFader",
+									"sid": 533131628317088,
+									"parameters": [
+										"100"
+									]
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 140724517124530,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 449491162400904,
+									"parameters": {
+										"layout": "level"
+									}
+								}
+							],
+							"sid": 284430577331056
 						}
-					],
-					"sid": 370211017766759
+					]
 				},
 				{
 					"functionName": "loadGame",

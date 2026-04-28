@@ -1,33 +1,39 @@
 {
-	"name": "HUD_clock_icon",
+	"name": "play_topbar_frame",
 	"plugin-id": "Sprite",
-	"sid": 484057546827989,
+	"sid": 291833361432874,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 203933362413914
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 268,
-						"height": 267,
+						"width": 230,
+						"height": 81,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3318514,
+						"imageSpriteId": 2106859,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 553047952923804,
-				"name": "Animation 1",
+				"sid": 974013019618354,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

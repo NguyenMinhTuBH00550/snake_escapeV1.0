@@ -382,16 +382,6 @@
 			"sid": 390031064871060
 		},
 		{
-			"eventType": "variable",
-			"name": "comboTimer2",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 207320400194431
-		},
-		{
 			"eventType": "comment",
 			"text": "Value_event_Lose_Heart"
 		},
@@ -862,19 +852,65 @@
 							}
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "text_combo",
-							"sid": 505952827110541,
+							"id": "set-opacity",
+							"objectClass": "CongratulateHightlight",
+							"sid": 802731847316766,
 							"parameters": {
-								"visibility": "invisible"
+								"opacity": "0"
 							}
 						},
 						{
-							"id": "set-opacity",
-							"objectClass": "text_combo",
-							"sid": 559395393256488,
+							"id": "set-instvar-value",
+							"objectClass": "CongratulateHightlight",
+							"sid": 499220709589677,
 							"parameters": {
-								"opacity": "0"
+								"instance-variable": "StartX",
+								"value": "CongratulateHightlight.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "CongratulateHightlight",
+							"sid": 862141705343459,
+							"parameters": {
+								"instance-variable": "StartY",
+								"value": "CongratulateHightlight.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "F_Combo",
+							"sid": 997412442420701,
+							"parameters": {
+								"instance-variable": "StartX",
+								"value": "F_Combo.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "F_Combo",
+							"sid": 389140756212732,
+							"parameters": {
+								"instance-variable": "StartY",
+								"value": "F_Combo.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "F_Combo",
+							"sid": 264397968188073,
+							"parameters": {
+								"instance-variable": "StartH",
+								"value": "F_Combo.Height"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "F_Combo",
+							"sid": 256748561751490,
+							"parameters": {
+								"instance-variable": "StartW",
+								"value": "F_Combo.Width"
 							}
 						}
 					],
@@ -1332,7 +1368,16 @@
 									"sid": 598187291300820
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "F_Combo",
+									"sid": 180966796674229,
+									"parameters": {
+										"opacity": "0"
+									}
+								}
+							],
 							"sid": 844376283277351,
 							"children": [
 								{
@@ -1399,6 +1444,34 @@
 														}
 													],
 													"sid": 955075341401897
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "text_score",
+															"sid": 662224741728971,
+															"parameters": {
+																"visibility": "invisible"
+															}
+														},
+														{
+															"id": "set-animation-frame",
+															"objectClass": "HUD_level_icon",
+															"sid": 619292409168307,
+															"parameters": {
+																"frame-number": "0"
+															}
+														},
+														{
+															"id": "destroy",
+															"objectClass": "F_Combo",
+															"sid": 984202772404785
+														}
+													],
+													"sid": 952001871022281
 												}
 											]
 										}
@@ -1460,14 +1533,52 @@
 														},
 														{
 															"id": "set-visible",
+															"objectClass": "text_time",
+															"sid": 739877097178698,
+															"parameters": {
+																"visibility": "invisible"
+															}
+														},
+														{
+															"id": "set-visible",
 															"objectClass": "text_tour",
 															"sid": 471301450994361,
 															"parameters": {
 																"visibility": "visible"
 															}
+														},
+														{
+															"id": "set-text",
+															"objectClass": "text_tour",
+															"sid": 427429418201505,
+															"parameters": {
+																"text": "\" Snake Tournament \" & TourLevel"
+															}
+														},
+														{
+															"callFunction": "ChangeTextWidth",
+															"sid": 573476814236376,
+															"parameters": [
+																"text_tour.UID"
+															]
 														}
 													],
 													"sid": 527112515000537
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-animation-frame",
+															"objectClass": "HUD_level_icon",
+															"sid": 815721019058868,
+															"parameters": {
+																"frame-number": "1"
+															}
+														}
+													],
+													"sid": 920238302084915
 												}
 											]
 										}
@@ -7320,6 +7431,10 @@
 																{
 																	"callFunction": "AddCompletedSnake",
 																	"sid": 360978602374837
+																},
+																{
+																	"callFunction": "Hightlight_text",
+																	"sid": 643531894911774
 																}
 															],
 															"sid": 519247434601618,
@@ -7715,6 +7830,10 @@
 																				"\"SE_Snake_Move\"",
 																				"-10"
 																			]
+																		},
+																		{
+																			"callFunction": "Hightlight_text",
+																			"sid": 709982939555831
 																		},
 																		{
 																			"id": "set-eventvar-value",
@@ -10709,6 +10828,26 @@
 							"sid": 808542566131407,
 							"children": [
 								{
+									"eventType": "variable",
+									"name": "tens",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 171351051308900
+								},
+								{
+									"eventType": "variable",
+									"name": "units",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 451729778191886
+								},
+								{
 									"eventType": "block",
 									"conditions": [],
 									"actions": [
@@ -10719,6 +10858,15 @@
 											"parameters": {
 												"variable": "comboCount",
 												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 161735915098774,
+											"parameters": {
+												"variable": "comboTimer",
+												"value": "3"
 											}
 										},
 										{
@@ -10744,6 +10892,24 @@
 											"parameters": [
 												"text_count_snake.UID"
 											]
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 767077101338286,
+											"parameters": {
+												"variable": "tens",
+												"value": "floor(comboCount / 10)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 882039281618358,
+											"parameters": {
+												"variable": "units",
+												"value": "comboCount % 10"
+											}
 										}
 									],
 									"sid": 233007005187981,
@@ -10752,52 +10918,233 @@
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 677525070294736,
+													"id": "has-tags",
+													"objectClass": "ComboNumber",
+													"sid": 503239885001096,
 													"parameters": {
-														"first-value": "comboCount",
-														"comparison": 4,
-														"second-value": "1"
+														"tags": "\"HangDonVi\""
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-text",
-													"objectClass": "text_combo",
-													"sid": 905612458839739,
+													"id": "set-animation-frame",
+													"objectClass": "ComboNumber",
+													"sid": 405194877182400,
 													"parameters": {
-														"text": "\"Combo X\" & comboCount"
+														"frame-number": "units"
 													}
 												},
 												{
-													"id": "set-visible",
-													"objectClass": "text_combo",
-													"sid": 685878213252648,
+													"id": "stop-all-tweens",
+													"objectClass": "F_Combo",
+													"sid": 410293436910758,
+													"behaviorType": "Tween"
+												},
+												{
+													"id": "set-position",
+													"objectClass": "F_Combo",
+													"sid": 659757009534895,
 													"parameters": {
-														"visibility": "visible"
+														"x": "F_Combo.StartX",
+														"y": "F_Combo.StartY"
 													}
 												},
 												{
-													"id": "tween-one-property",
-													"objectClass": "text_combo",
-													"sid": 584421204772429,
-													"behaviorType": "Tween",
+													"id": "set-size",
+													"objectClass": "F_Combo",
+													"sid": 309158574455881,
 													"parameters": {
-														"tags": "\"combo\"",
-														"property": "offsetOpacity",
-														"end-value": "100",
-														"time": "0.2",
-														"ease": "default",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
+														"width": "F_Combo.StartW",
+														"height": "F_Combo.StartH"
 													}
 												}
 											],
-											"sid": 236476158361683
+											"sid": 839057072113947,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "tween-one-property",
+															"objectClass": "F_Combo",
+															"sid": 152433747139356,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"combo_fade\"",
+																"property": "offsetOpacity",
+																"end-value": "100",
+																"time": "0.3",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "F_Combo",
+															"sid": 834595876420678,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"\"",
+																"property": "scale",
+																"end-x": "1.4",
+																"end-y": "1.4",
+																"time": "0.2",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														}
+													],
+													"sid": 920513407160219
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "ComboNumber",
+													"sid": 687647955738764,
+													"parameters": {
+														"tags": "\"HangChuc\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "ComboNumber",
+													"sid": 542059984880764,
+													"parameters": {
+														"frame-number": "tens"
+													}
+												}
+											],
+											"sid": 512475615865546
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 621515571880514,
+													"parameters": {
+														"first-value": "comboCount",
+														"comparison": 2,
+														"second-value": "10"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 850468878445412,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "ComboNumber",
+															"sid": 554858299700410,
+															"parameters": {
+																"tags": "\"HangChuc\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "ComboNumber",
+															"sid": 883953155055072,
+															"parameters": {
+																"visibility": "invisible"
+															}
+														}
+													],
+													"sid": 919273881191832
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 133002538082039
+												}
+											],
+											"actions": [],
+											"sid": 974937825209895,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "ComboNumber",
+															"sid": 336036412628652,
+															"parameters": {
+																"tags": "\"HangChuc\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "F_Combo",
+															"sid": 165524580350124,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "F_Combo",
+															"sid": 841680001224680,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"combo_fade\"",
+																"property": "offsetOpacity",
+																"end-value": "100",
+																"time": "0.3",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "F_Combo",
+															"sid": 960938087371404,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"\"",
+																"property": "scale",
+																"end-x": "1.4",
+																"end-y": "1.4",
+																"time": "0.2",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														}
+													],
+													"sid": 976038099913858
+												}
+											]
 										}
 									]
 								}
@@ -11567,7 +11914,7 @@
 														{
 															"id": "go-to-layout",
 															"objectClass": "System",
-															"sid": 693856264905374,
+															"sid": 913353026038927,
 															"parameters": {
 																"layout": "Loading"
 															}
@@ -11623,7 +11970,7 @@
 														{
 															"id": "go-to-layout",
 															"objectClass": "System",
-															"sid": 211446629786527,
+															"sid": 558355289817194,
 															"parameters": {
 																"layout": "Loading"
 															}
@@ -11632,6 +11979,63 @@
 													"sid": 599143339143101
 												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 368998800866360,
+													"parameters": {
+														"first-value": "GAME_STATE",
+														"comparison": 0,
+														"second-value": "\"HOME\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 995493007272502,
+													"parameters": {
+														"variable": "CurrentLevel",
+														"value": " str( int(CurrentLevel) + 1 )"
+													}
+												},
+												{
+													"id": "set-key",
+													"objectClass": "DICT_SaveGame",
+													"sid": 981881719997802,
+													"parameters": {
+														"key": "SAVE_LEVEL",
+														"value": "CurrentLevel"
+													}
+												},
+												{
+													"callFunction": "saveGame",
+													"sid": 929152087314494
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 279330437793620,
+													"parameters": {
+														"seconds": "2",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 775160535315076,
+													"parameters": {
+														"layout": "Loading"
+													}
+												}
+											],
+											"sid": 242529078390906
 										}
 									]
 								},
@@ -11830,7 +12234,8 @@
 											}
 										}
 									],
-									"sid": 677246849773459
+									"sid": 677246849773459,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -11852,9 +12257,36 @@
 											]
 										},
 										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 514606467847780,
+											"parameters": {
+												"variable": "GAME_STATE",
+												"value": "\"HOME\""
+											}
+										},
+										{
 											"id": "setenabled0",
 											"objectClass": "UI_btn_home",
 											"sid": 336096685659314,
+											"behaviorType": "Button",
+											"parameters": {
+												"state2": "disabled"
+											}
+										},
+										{
+											"id": "setenabled0",
+											"objectClass": "UI_lose_btn_playon",
+											"sid": 372826983518370,
+											"behaviorType": "Button",
+											"parameters": {
+												"state2": "disabled"
+											}
+										},
+										{
+											"id": "setenabled0",
+											"objectClass": "WinGameX2_BTN",
+											"sid": 744997244129586,
 											"behaviorType": "Button",
 											"parameters": {
 												"state2": "disabled"
@@ -11869,21 +12301,42 @@
 												{
 													"id": "has-tags",
 													"objectClass": "UI_lose_btn_playon",
-													"sid": 992336793242570,
+													"sid": 500516777467574,
 													"parameters": {
 														"tags": "\"btn_nextLevel\""
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 937572833152730,
+											"children": [
 												{
-													"id": "simulateclick",
-													"objectClass": "UI_lose_btn_playon",
-													"sid": 922719395376559,
-													"behaviorType": "Button"
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-children",
+															"objectClass": "UI_lose_btn_playon",
+															"sid": 133661757342606,
+															"parameters": {
+																"child": "UI_coin_topBar",
+																"which": "all"
+															}
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "winCoin",
+															"sid": 516719693505526,
+															"parameters": [
+																"40",
+																"UI_coin_topBar.X",
+																"UI_coin_topBar.Y"
+															]
+														}
+													],
+													"sid": 715172588415966
 												}
-											],
-											"sid": 538774916267991
+											]
 										}
 									]
 								}
@@ -12020,59 +12473,6 @@
 								}
 							],
 							"sid": 142186332478108
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-x-seconds",
-									"objectClass": "System",
-									"sid": 525307807722854,
-									"parameters": {
-										"interval-seconds": "4"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 652277366870950,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-visible",
-											"objectClass": "text_combo",
-											"sid": 492075653115449
-										},
-										{
-											"id": "is-running-typewriter-text",
-											"objectClass": "text_combo",
-											"sid": 262993526154273,
-											"isInverted": true
-										}
-									],
-									"actions": [
-										{
-											"id": "tween-one-property",
-											"objectClass": "text_combo",
-											"sid": 402207134388207,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"combo\"",
-												"property": "offsetOpacity",
-												"end-value": "0",
-												"time": "0.2",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										}
-									],
-									"sid": 211226789946147
-								}
-							]
 						}
 					],
 					"sid": 199234473461030
@@ -12978,6 +13378,15 @@
 												"\"SE_Click\"",
 												"-10"
 											]
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 303562913264630,
+											"parameters": {
+												"variable": "GAME_STATE",
+												"value": "\"HOME\""
+											}
 										},
 										{
 											"id": "set-eventvar-value",
@@ -19631,6 +20040,252 @@
 						}
 					],
 					"sid": 951611515819565
+				},
+				{
+					"functionName": "Hightlight_text",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 530743948483767,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "stop-all-tweens",
+									"objectClass": "CongratulateHightlight",
+									"sid": 405550436867691,
+									"behaviorType": "Tween"
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CongratulateHightlight",
+									"sid": 372734469416921,
+									"parameters": {
+										"frame-number": "int(random(CongratulateHightlight.AnimationFrameCount))"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "CongratulateHightlight",
+									"sid": 299725771530516,
+									"parameters": {
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "CongratulateHightlight",
+									"sid": 525724028274508,
+									"parameters": {
+										"scale": "0.5"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "CongratulateHightlight",
+									"sid": 761176908484188,
+									"parameters": {
+										"x": "CongratulateHightlight.StartX",
+										"y": "CongratulateHightlight.StartY"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "CongratulateHightlight",
+									"sid": 245226920804365,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "100",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "CongratulateHightlight",
+									"sid": 506172622754527,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "scale",
+										"end-x": "1.5",
+										"end-y": "1.5",
+										"time": "0.3",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "CongratulateHightlight",
+									"sid": 995189894017797,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"HightLight\"",
+										"property": "offsetY",
+										"end-value": "CongratulateHightlight.StartY - 100",
+										"time": "0.3",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 697717369894878
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "CongratulateHightlight",
+							"sid": 434156502361418,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"HightLight\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 653260143330770,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-visible",
+									"objectClass": "CongratulateHightlight",
+									"sid": 412723819016338
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "CongratulateHightlight",
+									"sid": 613915736459434,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": "0.5",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 494083663263687
+								},
+								{
+									"id": "set-position",
+									"objectClass": "CongratulateHightlight",
+									"sid": 355962437808153,
+									"parameters": {
+										"x": "CongratulateHightlight.StartX",
+										"y": "CongratulateHightlight.StartY"
+									}
+								}
+							],
+							"sid": 235966950468117
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 868024871884534,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 150561971802278,
+							"parameters": {
+								"variable": "comboTimer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 907872270488211,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 500020089741509,
+									"parameters": {
+										"first-value": "comboTimer",
+										"comparison": 3,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "F_Combo",
+									"sid": 508590092587023,
+									"parameters": {
+										"comparison": 0,
+										"opacity": "100"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "F_Combo",
+									"sid": 505779338548383,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": "0.3",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 329262238564250
+						}
+					]
 				}
 			],
 			"sid": 403058626511012

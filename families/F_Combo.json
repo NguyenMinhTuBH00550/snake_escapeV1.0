@@ -1,0 +1,47 @@
+{
+	"name": "F_Combo",
+	"plugin-id": "Sprite",
+	"sid": 184817654627808,
+	"instanceVariables": [
+		{
+			"name": "StartX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 352612115272922
+		},
+		{
+			"name": "StartY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 103085109743692
+		},
+		{
+			"name": "StartW",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 212456154674330
+		},
+		{
+			"name": "StartH",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 975923599062635
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 979849038458682
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"ComboNumber",
+		"ComboTitile"
+	]
+}

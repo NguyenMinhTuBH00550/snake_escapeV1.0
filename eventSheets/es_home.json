@@ -299,94 +299,102 @@
 					"functionParameters": [],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [
+					"actions": [],
+					"sid": 244470551175199,
+					"children": [
 						{
-							"id": "setenabled0",
-							"objectClass": "UI_btnPlay",
-							"sid": 710727544276536,
-							"behaviorType": "Button",
-							"parameters": {
-								"state2": "disabled"
-							}
-						},
-						{
-							"id": "reset-eventvar",
-							"objectClass": "System",
-							"sid": 666988429361340,
-							"parameters": {
-								"variable": "TimeRemaining"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 705688015102755,
-							"parameters": {
-								"variable": "Lives",
-								"value": "3"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 198032276941945,
-							"parameters": {
-								"variable": "IsTimerRunning",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 810695587837319,
-							"parameters": {
-								"variable": "HasUsedGridBooster",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 559617094350551,
-							"parameters": {
-								"variable": "NextLayout",
-								"value": "\"Level\""
-							}
-						},
-						{
-							"callFunction": "PlaySFX",
-							"sid": 223055069696752,
-							"parameters": [
-								"\"SE_Click\"",
-								"-10"
-							]
-						},
-						{
-							"callFunction": "showFader",
-							"sid": 362375587172043,
-							"parameters": [
-								"100"
-							]
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 538936770827187,
-							"parameters": {
-								"seconds": "0.8",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 714107112299866,
-							"parameters": {
-								"layout": "level"
-							}
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "setenabled0",
+									"objectClass": "UI_btnPlay",
+									"sid": 293505666122483,
+									"behaviorType": "Button",
+									"parameters": {
+										"state2": "disabled"
+									}
+								},
+								{
+									"id": "reset-eventvar",
+									"objectClass": "System",
+									"sid": 870398629749399,
+									"parameters": {
+										"variable": "TimeRemaining"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 317588951003547,
+									"parameters": {
+										"variable": "Lives",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 552022666120542,
+									"parameters": {
+										"variable": "IsTimerRunning",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 907759164082942,
+									"parameters": {
+										"variable": "HasUsedGridBooster",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 385563011767831,
+									"parameters": {
+										"variable": "NextLayout",
+										"value": "\"Level\""
+									}
+								},
+								{
+									"callFunction": "PlaySFX",
+									"sid": 396837280061436,
+									"parameters": [
+										"\"SE_Click\"",
+										"-10"
+									]
+								},
+								{
+									"callFunction": "showFader",
+									"sid": 461107321480512,
+									"parameters": [
+										"100"
+									]
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 373897329489233,
+									"parameters": {
+										"seconds": "0.8",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 909404624708842,
+									"parameters": {
+										"layout": "level"
+									}
+								}
+							],
+							"sid": 914144569855259
 						}
-					],
-					"sid": 244470551175199
+					]
 				},
 				{
 					"eventType": "block",

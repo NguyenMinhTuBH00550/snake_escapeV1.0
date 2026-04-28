@@ -203,10 +203,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 780395281487882,
+							"sid": 478704599188860,
 							"parameters": {
 								"variable": "GAME_STATE",
-								"value": "\"MAIN\""
+								"value": "\"HOME\""
 							}
 						}
 					],

@@ -1,7 +1,7 @@
 {
-	"name": "9patch",
+	"name": "9patch2",
 	"plugin-id": "NinePatch",
-	"sid": 750608245108818,
+	"sid": 176157564188818,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -9,7 +9,7 @@
 		{
 			"behaviorId": "aekiro_gameobject",
 			"name": "GameObject",
-			"sid": 719765246969705
+			"sid": 763989192014129
 		}
 	],
 	"effectTypes": [],
@@ -22,7 +22,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 242637,
+		"imageSpriteId": 852361,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

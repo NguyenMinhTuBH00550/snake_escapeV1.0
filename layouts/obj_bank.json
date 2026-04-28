@@ -895,11 +895,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -969,13 +964,7 @@
 					"sid": 202132528279147,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 202132528279147,
 						"expanded": true
@@ -1013,11 +1002,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -1087,13 +1071,7 @@
 					"sid": 527037074034111,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 527037074034111,
 						"expanded": true
@@ -1163,7 +1141,7 @@
 					}
 				},
 				{
-					"type": "HUD_clock_icon",
+					"type": "HUD_level_icon",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1186,7 +1164,7 @@
 						"x": 270,
 						"y": 144,
 						"width": 77,
-						"height": 63,
+						"height": 63.235955056179776,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1295,11 +1273,6 @@
 						"ToggleState": 0
 					},
 					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -1432,11 +1405,6 @@
 						"ToggleState": 0
 					},
 					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -5661,13 +5629,7 @@
 					"sid": 185791000756161,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": null,
 						"uid": 270,
@@ -6159,11 +6121,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -6234,11 +6191,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
 						"Button": {
 							"properties": {
 								"isenabled": "true",
@@ -10308,6 +10260,311 @@
 						"y": -73,
 						"width": 120,
 						"height": 109.00000000000001,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ComboNumber",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 9,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 553,
+					"sid": 150793595921874,
+					"tags": "HangChuc",
+					"instanceVariables": {
+						"StartX": 0,
+						"StartY": 0,
+						"StartW": 0,
+						"StartH": 0,
+						"index": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 555,
+						"uid": 553,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": true,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 150793595921874,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 3428,
+						"y": -1069,
+						"width": 123,
+						"height": 141,
+						"originX": 1,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ComboNumber",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 9,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 554,
+					"sid": 719051829230681,
+					"tags": "HangDonVi",
+					"instanceVariables": {
+						"StartX": 0,
+						"StartY": 0,
+						"StartW": 0,
+						"StartH": 0,
+						"index": 1
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 555,
+						"uid": 554,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": true,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 719051829230681,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 3491,
+						"y": -1070,
+						"width": 123,
+						"height": 141,
+						"originX": 1,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ComboTitile",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 555,
+					"sid": 144738377562189,
+					"tags": "",
+					"instanceVariables": {
+						"StartX": 0,
+						"StartY": 0,
+						"StartW": 0,
+						"StartH": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 555,
+						"children": [
+							{
+								"uid": 554,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": true,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 553,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": true,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 144738377562189,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 3680,
+						"y": -1071,
+						"width": 413.75,
+						"height": 121.25,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.282977060618665,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CongratulateHightlight",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 556,
+					"sid": 749034820983852,
+					"tags": "",
+					"instanceVariables": {
+						"StartX": 0,
+						"StartY": 0
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 749034820983852,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 3626,
+						"y": -336,
+						"width": 313.5,
+						"height": 114,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

@@ -257,7 +257,6 @@
 	"uniqueId": "17juoc9txi6",
 	"objectTypes": {
 		"items": [
-			"9patch",
 			"Sprite",
 			"Audio",
 			"snake_face_",
@@ -275,7 +274,13 @@
 			"JSON_UserData",
 			"UI_rank1",
 			"UI_rank3",
-			"UI_rank2"
+			"UI_rank2",
+			"ComboNumber",
+			"ComboTitile",
+			"CongratulateHightlight",
+			"9patch2",
+			"9patch",
+			"play_topbar_frame"
 		],
 		"subfolders": [
 			{
@@ -285,7 +290,7 @@
 					"HUD_pause",
 					"HUD_retry",
 					"HUD_heart",
-					"HUD_clock_icon",
+					"HUD_level_icon",
 					"HUD_layout_level",
 					"HUD_BG_loading",
 					"HUD_barBG",
@@ -375,7 +380,6 @@
 					"text_time2",
 					"text_time3",
 					"text_score",
-					"text_combo",
 					"TXT_Warning",
 					"text_snakeLevel",
 					"text_timeLeft",
@@ -618,11 +622,10 @@
 			"F_Snake",
 			"F_Tween",
 			"F_TextWidthChange",
-			"F_UiTop",
-			"F_UIBottom",
 			"F_ButtonBooster",
 			"F_ButtonWin",
-			"F_FB_Instants"
+			"F_FB_Instants",
+			"F_Combo"
 		],
 		"subfolders": []
 	},

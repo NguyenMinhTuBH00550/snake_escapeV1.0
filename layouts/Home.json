@@ -359,16 +359,20 @@
 							}
 						},
 						{
-							"type": "UI_shop_noadsplus",
+							"type": "9patch2",
 							"properties": {
+								"left-margin": 64,
+								"right-margin": 64,
+								"top-margin": 64,
+								"bottom-margin": 64,
+								"edges": "stretch",
+								"fill": "stretch",
 								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
+								"origin": "center",
+								"seams": "overlap"
 							},
-							"uid": 543,
-							"sid": 129899630198495,
+							"uid": 557,
+							"sid": 213329130087972,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {
@@ -382,25 +386,10 @@
 							},
 							"sceneGraphData": {
 								"parent-uid": null,
-								"uid": 543,
+								"uid": 557,
 								"children": [
 									{
-										"uid": 373,
-										"flags": {
-											"x": true,
-											"y": true,
-											"z": true,
-											"w": true,
-											"h": true,
-											"a": true,
-											"o": false,
-											"v": false,
-											"d": true,
-											"sm": "normal"
-										}
-									},
-									{
-										"uid": 544,
+										"uid": 543,
 										"flags": {
 											"x": true,
 											"y": true,
@@ -430,7 +419,7 @@
 										}
 									},
 									{
-										"uid": 380,
+										"uid": 544,
 										"flags": {
 											"x": true,
 											"y": true,
@@ -445,22 +434,7 @@
 										}
 									},
 									{
-										"uid": 379,
-										"flags": {
-											"x": true,
-											"y": true,
-											"z": true,
-											"w": true,
-											"h": true,
-											"a": true,
-											"o": false,
-											"v": false,
-											"d": true,
-											"sm": "normal"
-										}
-									},
-									{
-										"uid": 381,
+										"uid": 373,
 										"flags": {
 											"x": true,
 											"y": true,
@@ -501,16 +475,16 @@
 								}
 							},
 							"instanceFolderItem": {
-								"sid": 129899630198495,
+								"sid": 213329130087972,
 								"expanded": true
 							},
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 538,
-								"y": 771,
-								"width": 928,
-								"height": 676.5222134399414,
+								"x": 539,
+								"y": 805,
+								"width": 999,
+								"height": 796,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -577,7 +551,7 @@
 								}
 							},
 							"sceneGraphData": {
-								"parent-uid": 543,
+								"parent-uid": 557,
 								"uid": 373,
 								"children": [
 									{
@@ -628,10 +602,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 769,
-								"y": 964.5,
-								"width": 336,
-								"height": 154,
+								"x": 809,
+								"y": 1062,
+								"width": 347,
+								"height": 166,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -647,10 +621,10 @@
 						{
 							"type": "text_btn_challengeLock",
 							"properties": {
-								"text": "Join Tournament",
+								"text": "Join",
 								"enable-bbcode": true,
 								"font": "LilitaOne-Regular_0",
-								"size": 25,
+								"size": 55,
 								"line-height": 0,
 								"bold": false,
 								"italic": false,
@@ -734,10 +708,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 775,
-								"y": 945,
-								"width": 258,
-								"height": 99,
+								"x": 813,
+								"y": 1042,
+								"width": 211,
+								"height": 72,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -756,7 +730,7 @@
 								"text": "Snakes Escape Lv5",
 								"enable-bbcode": true,
 								"font": "LilitaOne-Regular_0",
-								"size": 35,
+								"size": 40,
 								"line-height": 0,
 								"bold": false,
 								"italic": false,
@@ -809,7 +783,7 @@
 								}
 							},
 							"sceneGraphData": {
-								"parent-uid": 543,
+								"parent-uid": 557,
 								"uid": 374,
 								"flags": {
 									"x": true,
@@ -843,10 +817,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 311,
-								"y": 911,
-								"width": 372,
-								"height": 70,
+								"x": 305,
+								"y": 1012,
+								"width": 475,
+								"height": 114,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -865,7 +839,7 @@
 								"text": "Time Left:",
 								"enable-bbcode": true,
 								"font": "LilitaOne-Regular_0",
-								"size": 35,
+								"size": 40,
 								"line-height": 0,
 								"bold": false,
 								"italic": false,
@@ -918,7 +892,7 @@
 								}
 							},
 							"sceneGraphData": {
-								"parent-uid": 543,
+								"parent-uid": 557,
 								"uid": 544,
 								"flags": {
 									"x": true,
@@ -952,10 +926,494 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 322.3377097811529,
-								"y": 978,
-								"width": 389.92954463621754,
-								"height": 70,
+								"x": 334,
+								"y": 1090,
+								"width": 505.92954463621754,
+								"height": 97,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "9patch",
+							"properties": {
+								"left-margin": 64,
+								"right-margin": 64,
+								"top-margin": 64,
+								"bottom-margin": 64,
+								"edges": "stretch",
+								"fill": "stretch",
+								"initially-visible": true,
+								"origin": "center",
+								"seams": "overlap"
+							},
+							"uid": 543,
+							"sid": 144900825011347,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"GameObject": {
+									"properties": {
+										"name": "",
+										"parent-name": "tour_level",
+										"parent-layer": false
+									}
+								}
+							},
+							"sceneGraphData": {
+								"parent-uid": 557,
+								"uid": 543,
+								"children": [
+									{
+										"uid": 558,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 559,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 560,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									}
+								],
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 144900825011347,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 539,
+								"y": 696,
+								"width": 932,
+								"height": 511,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "play_topbar_frame",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 558,
+							"sid": 479319719587980,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"GameObject": {
+									"properties": {
+										"name": "",
+										"parent-name": "tour_level",
+										"parent-layer": false
+									}
+								}
+							},
+							"sceneGraphData": {
+								"parent-uid": 543,
+								"uid": 558,
+								"children": [
+									{
+										"uid": 548,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 385,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 433,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									}
+								],
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 479319719587980,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 767,
+								"y": 546,
+								"width": 427,
+								"height": 136,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "play_topbar_frame",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 559,
+							"sid": 309344379659610,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"GameObject": {
+									"properties": {
+										"name": "",
+										"parent-name": "tour_level",
+										"parent-layer": false
+									}
+								}
+							},
+							"sceneGraphData": {
+								"parent-uid": 543,
+								"uid": 559,
+								"children": [
+									{
+										"uid": 551,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 384,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 434,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									}
+								],
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 309344379659610,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 767,
+								"y": 693,
+								"width": 427,
+								"height": 136,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "play_topbar_frame",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 560,
+							"sid": 148739088163892,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"GameObject": {
+									"properties": {
+										"name": "",
+										"parent-name": "tour_level",
+										"parent-layer": false
+									}
+								}
+							},
+							"sceneGraphData": {
+								"parent-uid": 543,
+								"uid": 560,
+								"children": [
+									{
+										"uid": 552,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 435,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 383,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"d": true,
+											"sm": "normal"
+										}
+									}
+								],
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 148739088163892,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 768,
+								"y": 843,
+								"width": 427,
+								"height": 136,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -1000,6 +1458,947 @@
 				}
 			],
 			"instances": [
+				{
+					"type": "AvatarBot",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 526,
+					"sid": 906230641424782,
+					"tags": "",
+					"instanceVariables": {
+						"unlock": 0,
+						"index": 0,
+						"picked": 0
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 526,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 906230641424782,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1706,
+						"y": -162,
+						"width": 166.4,
+						"height": 166.4,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_topName",
+					"properties": {
+						"text": "User",
+						"enable-bbcode": true,
+						"font": "LilitaOne-Regular_0",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9725490196078431,
+							0.9882352941176471,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 383,
+					"sid": 257927333517004,
+					"tags": "rank3",
+					"instanceVariables": {
+						"font_size": -1
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "tour_level",
+								"parent-layer": false
+							}
+						},
+						"GridViewDataBind": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Outline": {
+							"isEnabled": true,
+							"parameters": {
+								"width": 1.5,
+								"cl": [
+									0,
+									0,
+									0,
+									1
+								],
+								"diag": 0.7071
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 560,
+						"uid": 383,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 257927333517004,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 842,
+						"y": 808.6754079679163,
+						"width": 193,
+						"height": 60.2626332467313,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_topName",
+					"properties": {
+						"text": "User",
+						"enable-bbcode": true,
+						"font": "LilitaOne-Regular_0",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9725490196078431,
+							0.9882352941176471,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 384,
+					"sid": 462540346200174,
+					"tags": "rank2",
+					"instanceVariables": {
+						"font_size": -1
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "tour_level",
+								"parent-layer": false
+							}
+						},
+						"GridViewDataBind": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Outline": {
+							"isEnabled": true,
+							"parameters": {
+								"width": 1.5,
+								"cl": [
+									0,
+									0,
+									0,
+									1
+								],
+								"diag": 0.7071
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 559,
+						"uid": 384,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 462540346200174,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 844,
+						"y": 658.4033680928358,
+						"width": 193,
+						"height": 59.58721368442559,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_topName",
+					"properties": {
+						"text": "User",
+						"enable-bbcode": true,
+						"font": "LilitaOne-Regular_0",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9725490196078431,
+							0.9882352941176471,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 385,
+					"sid": 789177489816232,
+					"tags": "rank1",
+					"instanceVariables": {
+						"font_size": -1
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "tour_level",
+								"parent-layer": false
+							}
+						},
+						"GridViewDataBind": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Outline": {
+							"isEnabled": true,
+							"parameters": {
+								"width": 1.5,
+								"cl": [
+									0,
+									0,
+									0,
+									1
+								],
+								"diag": 0.7071
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 558,
+						"uid": 385,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 789177489816232,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 848,
+						"y": 510.3902387493771,
+						"width": 193,
+						"height": 60.93807599781607,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_topScore",
+					"properties": {
+						"text": "Score",
+						"enable-bbcode": true,
+						"font": "LilitaOne-Regular_0",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9725490196078431,
+							0.9882352941176471,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 433,
+					"sid": 216911173567547,
+					"tags": "rank1",
+					"instanceVariables": {
+						"font_size": -1
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "tour_level",
+								"parent-layer": false
+							}
+						},
+						"GridViewDataBind": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Outline": {
+							"isEnabled": true,
+							"parameters": {
+								"width": 1.5,
+								"cl": [
+									0,
+									0,
+									0,
+									1
+								],
+								"diag": 0.7071
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 558,
+						"uid": 433,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 216911173567547,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 835.7054589362798,
+						"y": 554.2982753732191,
+						"width": 250.4109178725596,
+						"height": 48.78043112119644,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_topScore",
+					"properties": {
+						"text": "Score",
+						"enable-bbcode": true,
+						"font": "LilitaOne-Regular_0",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9725490196078431,
+							0.9882352941176471,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 434,
+					"sid": 101516708373497,
+					"tags": "rank2",
+					"instanceVariables": {
+						"font_size": -1
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "tour_level",
+								"parent-layer": false
+							}
+						},
+						"GridViewDataBind": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Outline": {
+							"isEnabled": true,
+							"parameters": {
+								"width": 1.5,
+								"cl": [
+									0,
+									0,
+									0,
+									1
+								],
+								"diag": 0.7071
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 559,
+						"uid": 434,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 101516708373497,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 831.7054589362798,
+						"y": 697.2851808129287,
+						"width": 250.4109178725596,
+						"height": 47.42963837414243,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_topScore",
+					"properties": {
+						"text": "Score",
+						"enable-bbcode": true,
+						"font": "LilitaOne-Regular_0",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9725490196078431,
+							0.9882352941176471,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 435,
+					"sid": 763161178574333,
+					"tags": "rank3",
+					"instanceVariables": {
+						"font_size": -1
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "tour_level",
+								"parent-layer": false
+							}
+						},
+						"GridViewDataBind": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Outline": {
+							"isEnabled": true,
+							"parameters": {
+								"width": 1.5,
+								"cl": [
+									0,
+									0,
+									0,
+									1
+								],
+								"diag": 0.7071
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 560,
+						"uid": 435,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 763161178574333,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 829.7054589362798,
+						"y": 853.2720282806911,
+						"width": 250.4109178725596,
+						"height": 48.78043112119633,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UI_rank1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 548,
+					"sid": 363795042651633,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "tour_level",
+								"parent-layer": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 558,
+						"uid": 548,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 363795042651633,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 629,
+						"y": 535,
+						"width": 90,
+						"height": 90,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UI_rank2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 551,
+					"sid": 121927786880956,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "tour_level",
+								"parent-layer": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 559,
+						"uid": 551,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 121927786880956,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 632,
+						"y": 683,
+						"width": 90,
+						"height": 90,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UI_rank3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 552,
+					"sid": 669261558498849,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "",
+								"parent-name": "tour_level",
+								"parent-layer": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 560,
+						"uid": 552,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 669261558498849,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 632,
+						"y": 834,
+						"width": 90,
+						"height": 90,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
 				{
 					"type": "Anchor",
 					"properties": {
@@ -1265,1307 +2664,6 @@
 						"y": 87,
 						"width": 574,
 						"height": 137,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "UI_shop_coin_panel",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 380,
-					"sid": 763626739649139,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 543,
-						"uid": 380,
-						"children": [
-							{
-								"uid": 385,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 433,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 548,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 763626739649139,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 717.167005,
-						"y": 543.8329948725888,
-						"width": 389,
-						"height": 88,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "UI_shop_coin_panel",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 379,
-					"sid": 303701268240812,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 543,
-						"uid": 379,
-						"children": [
-							{
-								"uid": 384,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 434,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 551,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 303701268240812,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 717.167005,
-						"y": 649.832995,
-						"width": 389,
-						"height": 88,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "UI_shop_coin_panel",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 381,
-					"sid": 663364496014316,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 543,
-						"uid": 381,
-						"children": [
-							{
-								"uid": 383,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 435,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 552,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 663364496014316,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 717.167005,
-						"y": 755.832995,
-						"width": 389,
-						"height": 88,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "text_topName",
-					"properties": {
-						"text": "User",
-						"enable-bbcode": true,
-						"font": "LilitaOne-Regular_0",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9725490196078431,
-							0.9882352941176471,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 383,
-					"sid": 257927333517004,
-					"tags": "rank3",
-					"instanceVariables": {
-						"font_size": -1
-					},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						},
-						"GridViewDataBind": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Outline": {
-							"isEnabled": true,
-							"parameters": {
-								"width": 1.5,
-								"cl": [
-									0,
-									0,
-									0,
-									1
-								],
-								"diag": 0.7071
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 381,
-						"uid": 383,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 257927333517004,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 804.710162,
-						"y": 732.2063699690083,
-						"width": 193,
-						"height": 40,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "text_topName",
-					"properties": {
-						"text": "User",
-						"enable-bbcode": true,
-						"font": "LilitaOne-Regular_0",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9725490196078431,
-							0.9882352941176471,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 384,
-					"sid": 462540346200174,
-					"tags": "rank2",
-					"instanceVariables": {
-						"font_size": -1
-					},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						},
-						"GridViewDataBind": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Outline": {
-							"isEnabled": true,
-							"parameters": {
-								"width": 1.5,
-								"cl": [
-									0,
-									0,
-									0,
-									1
-								],
-								"diag": 0.7071
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 379,
-						"uid": 384,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 462540346200174,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 801.710162,
-						"y": 627.20637,
-						"width": 193,
-						"height": 40,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "text_topName",
-					"properties": {
-						"text": "User",
-						"enable-bbcode": true,
-						"font": "LilitaOne-Regular_0",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9725490196078431,
-							0.9882352941176471,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 385,
-					"sid": 789177489816232,
-					"tags": "rank1",
-					"instanceVariables": {
-						"font_size": -1
-					},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						},
-						"GridViewDataBind": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Outline": {
-							"isEnabled": true,
-							"parameters": {
-								"width": 1.5,
-								"cl": [
-									0,
-									0,
-									0,
-									1
-								],
-								"diag": 0.7071
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 380,
-						"uid": 385,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 789177489816232,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 797.710162,
-						"y": 526.20637,
-						"width": 193,
-						"height": 40,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "text_topScore",
-					"properties": {
-						"text": "Score",
-						"enable-bbcode": true,
-						"font": "LilitaOne-Regular_0",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9725490196078431,
-							0.9882352941176471,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 433,
-					"sid": 216911173567547,
-					"tags": "rank1",
-					"instanceVariables": {
-						"font_size": -1
-					},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						},
-						"GridViewDataBind": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Outline": {
-							"isEnabled": true,
-							"parameters": {
-								"width": 1.5,
-								"cl": [
-									0,
-									0,
-									0,
-									1
-								],
-								"diag": 0.7071
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 380,
-						"uid": 433,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 216911173567547,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 798,
-						"y": 558,
-						"width": 193,
-						"height": 40,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "text_topScore",
-					"properties": {
-						"text": "Score",
-						"enable-bbcode": true,
-						"font": "LilitaOne-Regular_0",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9725490196078431,
-							0.9882352941176471,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 434,
-					"sid": 101516708373497,
-					"tags": "rank2",
-					"instanceVariables": {
-						"font_size": -1
-					},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						},
-						"GridViewDataBind": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Outline": {
-							"isEnabled": true,
-							"parameters": {
-								"width": 1.5,
-								"cl": [
-									0,
-									0,
-									0,
-									1
-								],
-								"diag": 0.7071
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 379,
-						"uid": 434,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 101516708373497,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 802,
-						"y": 664.7410928220062,
-						"width": 193,
-						"height": 40,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "text_topScore",
-					"properties": {
-						"text": "Score",
-						"enable-bbcode": true,
-						"font": "LilitaOne-Regular_0",
-						"size": 20,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9725490196078431,
-							0.9882352941176471,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 435,
-					"sid": 763161178574333,
-					"tags": "rank3",
-					"instanceVariables": {
-						"font_size": -1
-					},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						},
-						"GridViewDataBind": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Outline": {
-							"isEnabled": true,
-							"parameters": {
-								"width": 1.5,
-								"cl": [
-									0,
-									0,
-									0,
-									1
-								],
-								"diag": 0.7071
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 381,
-						"uid": 435,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 763161178574333,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 805,
-						"y": 770.6718626237351,
-						"width": 193,
-						"height": 40,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "AvatarBot",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": false,
-						"live-preview": false
-					},
-					"uid": 526,
-					"sid": 906230641424782,
-					"tags": "",
-					"instanceVariables": {
-						"unlock": 0,
-						"index": 0,
-						"picked": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 526,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 906230641424782,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1706,
-						"y": -162,
-						"width": 166.4,
-						"height": 166.4,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "UI_rank1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 548,
-					"sid": 363795042651633,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 380,
-						"uid": 548,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 363795042651633,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 565,
-						"y": 540,
-						"width": 60,
-						"height": 60,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "UI_rank2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 551,
-					"sid": 121927786880956,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 379,
-						"uid": 551,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 121927786880956,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 565,
-						"y": 646,
-						"width": 60,
-						"height": 60,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "UI_rank3",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 552,
-					"sid": 669261558498849,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"GameObject": {
-							"properties": {
-								"name": "",
-								"parent-name": "tour_level",
-								"parent-layer": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 381,
-						"uid": 552,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 669261558498849,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 565,
-						"y": 750,
-						"width": 60,
-						"height": 60,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
