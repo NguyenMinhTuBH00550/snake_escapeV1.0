@@ -1032,145 +1032,164 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 111560524764175,
-							"parameters": {
-								"group-name": "\"Zoom_In/Out\"",
-								"state": "activated"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "UI_icon_hint",
-							"sid": 756229217601996,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "text_boosterHint_count",
-							"sid": 562715705161835,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 338652623843208,
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 852506528850982,
+									"parameters": {
+										"first-value": "GAME_STATE",
+										"comparison": 0,
+										"second-value": "\"MAIN\""
+									}
+								}
+							],
 							"actions": [
 								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 133106063750518,
+									"parameters": {
+										"group-name": "\"Zoom_In/Out\"",
+										"state": "activated"
+									}
+								},
+								{
 									"id": "set-visible",
-									"objectClass": "play_zoombar_frame",
-									"sid": 907740630977648,
+									"objectClass": "UI_icon_hint",
+									"sid": 193302648780057,
 									"parameters": {
 										"visibility": "visible"
 									}
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "play_zoombar_btnzoomin",
-									"sid": 267218879409871,
+									"objectClass": "text_boosterHint_count",
+									"sid": 595643430003065,
 									"parameters": {
 										"visibility": "visible"
 									}
+								}
+							],
+							"sid": 973091968675738,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "play_zoombar_frame",
+											"sid": 926723435143091,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "play_zoombar_btnzoomin",
+											"sid": 229151770374785,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "play_zoombar_btnzoomou",
+											"sid": 759387929321524,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "play_zoombar_slide",
+											"sid": 970780913416315,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 960787645182089
 								},
 								{
-									"id": "set-visible",
-									"objectClass": "play_zoombar_btnzoomou",
-									"sid": 565584919608123,
-									"parameters": {
-										"visibility": "visible"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "UI_lock_booster",
+											"sid": 120257024364902,
+											"parameters": {
+												"tags": "\"hint_booster\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_lock_booster",
+											"sid": 718708278523906,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 926961860300920
 								},
 								{
-									"id": "set-visible",
-									"objectClass": "play_zoombar_slide",
-									"sid": 596531209989574,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 187479585921317
-						},
-						{
-							"eventType": "block",
-							"conditions": [
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "UI_count_booster",
+											"sid": 742312744635392,
+											"parameters": {
+												"tags": "\"hint\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_count_booster",
+											"sid": 637328141891582,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 880943456313291
+								},
 								{
-									"id": "has-tags",
-									"objectClass": "UI_lock_booster",
-									"sid": 888549801099558,
-									"parameters": {
-										"tags": "\"hint_booster\""
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "text_booster",
+											"sid": 850200175540009,
+											"parameters": {
+												"tags": "\"grid\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "text_booster",
+											"sid": 188195387367604,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 922310491478438
 								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "UI_lock_booster",
-									"sid": 133979077514669,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 163740135329585
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "UI_count_booster",
-									"sid": 239788306996608,
-									"parameters": {
-										"tags": "\"hint\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "UI_count_booster",
-									"sid": 804669211449464,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 948107765231215
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "text_booster",
-									"sid": 419458682657509,
-									"parameters": {
-										"tags": "\"grid\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "text_booster",
-									"sid": 822338079888408,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 458838857209627
+							]
 						}
 					]
 				},
@@ -1249,97 +1268,251 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "UI_booster_grid",
-							"sid": 622593362086602,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "text_boosterGrid_count",
-							"sid": 385449585595253,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 513539041037468,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "has-tags",
-									"objectClass": "UI_lock_booster",
-									"sid": 753742084606467,
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 900248798251345,
 									"parameters": {
-										"tags": "\"grid_booster\""
+										"first-value": "GAME_STATE",
+										"comparison": 0,
+										"second-value": "\"MAIN\""
 									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-visible",
-									"objectClass": "UI_lock_booster",
-									"sid": 852358670717788,
+									"objectClass": "UI_booster_grid",
+									"sid": 511287486614960,
 									"parameters": {
-										"visibility": "invisible"
+										"visibility": "visible"
 									}
-								}
-							],
-							"sid": 304053214500821
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-tags",
-									"objectClass": "UI_count_booster",
-									"sid": 811306914017042,
-									"parameters": {
-										"tags": "\"grid\""
-									}
-								}
-							],
-							"actions": [
+								},
 								{
 									"id": "set-visible",
-									"objectClass": "UI_count_booster",
-									"sid": 741927066223770,
+									"objectClass": "text_boosterGrid_count",
+									"sid": 973789091003018,
 									"parameters": {
 										"visibility": "visible"
 									}
 								}
 							],
-							"sid": 790298780109693
-						},
+							"sid": 663792872939197,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "UI_lock_booster",
+											"sid": 997390516263017,
+											"parameters": {
+												"tags": "\"grid_booster\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_lock_booster",
+											"sid": 815500426526482,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 350438295560561
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "UI_count_booster",
+											"sid": 787181585752886,
+											"parameters": {
+												"tags": "\"grid\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_count_booster",
+											"sid": 962331765325499,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 604606367048376
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "text_booster",
+											"sid": 296580741470553,
+											"parameters": {
+												"tags": "\"grid\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "text_booster",
+											"sid": 915473128665948,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 301709661815504
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 435297237959376,
+							"parameters": {
+								"first-value": "CurrentLevel",
+								"comparison": 5,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 338232059990648,
+					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "has-tags",
-									"objectClass": "text_booster",
-									"sid": 537369767201276,
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 485350997007463,
 									"parameters": {
-										"tags": "\"grid\""
+										"first-value": "GAME_STATE",
+										"comparison": 0,
+										"second-value": "\"TOUR\""
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-visible",
-									"objectClass": "text_booster",
-									"sid": 163039701157337,
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 257449092283681,
 									"parameters": {
-										"visibility": "invisible"
+										"group-name": "\"Zoom_In/Out\"",
+										"state": "activated"
 									}
 								}
 							],
-							"sid": 898322492340342
+							"sid": 646152775288387,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "play_zoombar_frame",
+											"sid": 450777007857362,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "play_zoombar_btnzoomin",
+											"sid": 400792776830764,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "play_zoombar_btnzoomou",
+											"sid": 290331587422283,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "play_zoombar_slide",
+											"sid": 715789789038431,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 426369892034979
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "UI_btn_booter",
+											"sid": 164776868014794,
+											"parameters": {
+												"tags": "\"hint\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_btn_booter",
+											"sid": 685093426525007,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 922438269544109
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "UI_btn_booter",
+											"sid": 578083323096651,
+											"parameters": {
+												"tags": "\"grid\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_btn_booter",
+											"sid": 393733837605202,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 841468499455669
+								}
+							]
 						}
 					]
 				}
@@ -1394,7 +1567,17 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 296858943147005,
+											"parameters": {
+												"group-name": "\"LoseLife\"",
+												"state": "activated"
+											}
+										}
+									],
 									"sid": 133687192180880,
 									"children": [
 										{
@@ -1491,7 +1674,25 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "UI_heart_frame",
+											"sid": 947975043009574,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 564856297630685,
+											"parameters": {
+												"group-name": "\"LoseLife\"",
+												"state": "deactivated"
+											}
+										}
+									],
 									"sid": 781135906087245,
 									"children": [
 										{
@@ -7800,6 +8001,48 @@
 																			]
 																		}
 																	]
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-by-evaluate",
+																			"objectClass": "System",
+																			"sid": 259468545624778,
+																			"parameters": {
+																				"object": "hint_tile",
+																				"expression": "hint_tile.OwnerID =  SnakeHead.ownID"
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 375875010578926,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "is-animation-playing",
+																					"objectClass": "hint_tile",
+																					"sid": 135132890709909,
+																					"parameters": {
+																						"animation": "\"Animation 1\""
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "set-visible",
+																					"objectClass": "hint_tile",
+																					"sid": 490274087847597,
+																					"parameters": {
+																						"visibility": "invisible"
+																					}
+																				}
+																			],
+																			"sid": 142317608119074
+																		}
+																	]
 																}
 															]
 														},
@@ -9306,51 +9549,7 @@
 											"sid": 705945030657592
 										}
 									],
-									"sid": 686504783449966,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "pick-by-evaluate",
-													"objectClass": "System",
-													"sid": 259468545624778,
-													"parameters": {
-														"object": "hint_tile",
-														"expression": "hint_tile.OwnerID =  SnakeHead.ownID"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 375875010578926,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-animation-playing",
-															"objectClass": "hint_tile",
-															"sid": 867058668484198,
-															"parameters": {
-																"animation": "\"Animation 2\""
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-visible",
-															"objectClass": "hint_tile",
-															"sid": 490274087847597,
-															"parameters": {
-																"visibility": "invisible"
-															}
-														}
-													],
-													"sid": 142317608119074
-												}
-											]
-										}
-									]
+									"sid": 686504783449966
 								},
 								{
 									"eventType": "block",
@@ -12480,6 +12679,211 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "LoseLife",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "LoseLife",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 272931455968009,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "stop-all-tweens",
+											"objectClass": "UI_redaura",
+											"sid": 533543071729318,
+											"behaviorType": "Tween"
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "UI_redaura",
+											"sid": 175897173207586,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"warning_open\"",
+												"property": "offsetOpacity",
+												"end-value": "60",
+												"time": "0.15",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 723687318587607,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 725819619026254,
+													"parameters": {
+														"seconds": "0.25",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "UI_redaura",
+													"sid": 526251397543306,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"warning_close\"",
+														"property": "offsetOpacity",
+														"end-value": "0",
+														"time": "0.3",
+														"ease": "easeoutquint",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 744785211297093
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 850777489657070,
+											"parameters": {
+												"first-value": "Lives",
+												"comparison": 4,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 710471762550533,
+											"parameters": {
+												"variable": "Lives",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 401541978566487,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 356035120460926,
+													"parameters": {
+														"object": "HUD_heart"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 182167182278151,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 168787675966197,
+															"parameters": {
+																"first-value": "HUD_heart.Index",
+																"comparison": 0,
+																"second-value": "Lives +1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "tween-two-properties",
+															"objectClass": "HUD_heart",
+															"sid": 747651070069632,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"heart_scale\"",
+																"property": "scale",
+																"end-x": "0.25",
+																"end-y": "0.25",
+																"time": "0.2",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "HUD_heart",
+															"sid": 905549350324757,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"heart_opacity\"",
+																"property": "offsetOpacity",
+																"end-value": "0",
+																"time": "0.3",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														}
+													],
+													"sid": 479302211799645
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 756729836869079,
+											"parameters": {
+												"variable": "comboCount",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 299134431432627
+								}
+							]
+						}
+					],
+					"sid": 956514710463669
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Level_Failed",
 					"description": "",
 					"isActiveOnStart": true,
@@ -13669,201 +14073,6 @@
 									"sid": 853157583583512
 								}
 							]
-						}
-					]
-				},
-				{
-					"functionName": "LoseLife",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [],
-					"sid": 999711436263177,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "stop-all-tweens",
-									"objectClass": "UI_redaura",
-									"sid": 698519592012673,
-									"behaviorType": "Tween"
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "UI_redaura",
-									"sid": 395276289335002,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"warning_open\"",
-										"property": "offsetOpacity",
-										"end-value": "60",
-										"time": "0.15",
-										"ease": "noease",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								}
-							],
-							"sid": 475867813997167,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 874812083789679,
-											"parameters": {
-												"seconds": "0.25",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "tween-one-property",
-											"objectClass": "UI_redaura",
-											"sid": 277878560850339,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"warning_close\"",
-												"property": "offsetOpacity",
-												"end-value": "0",
-												"time": "0.3",
-												"ease": "easeoutquint",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										}
-									],
-									"sid": 384832445407372
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 538209787219266,
-									"parameters": {
-										"first-value": "Lives",
-										"comparison": 4,
-										"second-value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 903559600790676,
-									"parameters": {
-										"variable": "Lives",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 875002789680482,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "for-each",
-											"objectClass": "System",
-											"sid": 373684195163783,
-											"parameters": {
-												"object": "HUD_heart"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 558052829608062,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 167577159255961,
-													"parameters": {
-														"first-value": "HUD_heart.Index",
-														"comparison": 0,
-														"second-value": "Lives +1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "tween-two-properties",
-													"objectClass": "HUD_heart",
-													"sid": 186570663813640,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"heart_scale\"",
-														"property": "scale",
-														"end-x": "0.25",
-														"end-y": "0.25",
-														"time": "0.2",
-														"ease": "default",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
-													}
-												},
-												{
-													"id": "tween-one-property",
-													"objectClass": "HUD_heart",
-													"sid": 983798940226687,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"heart_opacity\"",
-														"property": "offsetOpacity",
-														"end-value": "0",
-														"time": "0.3",
-														"ease": "default",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
-													}
-												}
-											],
-											"sid": 366119053755144
-										}
-									]
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 505352013004197,
-									"parameters": {
-										"variable": "comboCount",
-										"value": "0"
-									}
-								}
-							],
-							"sid": 363519915432628
 						}
 					]
 				},
@@ -18355,16 +18564,6 @@
 												"comparison": 0,
 												"second-value": "0"
 											}
-										},
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 217689574919454,
-											"parameters": {
-												"first-value": "CurrentLevel",
-												"comparison": 5,
-												"second-value": "6"
-											}
 										}
 									],
 									"actions": [
@@ -18395,139 +18594,337 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 108469490311192,
+													"sid": 488743615492101,
 													"parameters": {
-														"first-value": "PanPointerID",
-														"comparison": 0,
-														"second-value": "-1"
+														"first-value": "CurrentLevel",
+														"comparison": 5,
+														"second-value": "6"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 374770608714904,
+													"parameters": {
+														"first-value": "GAME_STATE",
+														"comparison": 5,
+														"second-value": "\"MAIN\""
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 726793438380517,
+											"children": [
 												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 340227726064152,
-													"parameters": {
-														"variable": "PanPointerID",
-														"value": "Touch.TouchID"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 108469490311192,
+															"parameters": {
+																"first-value": "PanPointerID",
+																"comparison": 0,
+																"second-value": "-1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 340227726064152,
+															"parameters": {
+																"variable": "PanPointerID",
+																"value": "Touch.TouchID"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 130457665261148,
+															"parameters": {
+																"variable": "PanLastX",
+																"value": "Touch.X(\"HUD\")"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 604593617207425,
+															"parameters": {
+																"variable": "PanLastY",
+																"value": "Touch.Y(\"HUD\")"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 824634257780771,
+															"parameters": {
+																"variable": "DragStartX",
+																"value": "Touch.X(\"HUD\")"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 805645194018181,
+															"parameters": {
+																"variable": "DragStartY",
+																"value": "Touch.Y(\"HUD\")"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 492608230578286,
+															"parameters": {
+																"variable": "IsPanning",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 617016779965557
 												},
 												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 130457665261148,
-													"parameters": {
-														"variable": "PanLastX",
-														"value": "Touch.X(\"HUD\")"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 604593617207425,
-													"parameters": {
-														"variable": "PanLastY",
-														"value": "Touch.Y(\"HUD\")"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 824634257780771,
-													"parameters": {
-														"variable": "DragStartX",
-														"value": "Touch.X(\"HUD\")"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 805645194018181,
-													"parameters": {
-														"variable": "DragStartY",
-														"value": "Touch.Y(\"HUD\")"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 492608230578286,
-													"parameters": {
-														"variable": "IsPanning",
-														"value": "0"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 400155654165783
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 252301542786770,
+															"parameters": {
+																"first-value": "TouchZoomID",
+																"comparison": 0,
+																"second-value": "-1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 581683756895382,
+															"parameters": {
+																"variable": "TouchZoomID",
+																"value": "Touch.TouchID"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 252620783257403,
+															"parameters": {
+																"variable": "TouchStartDistance",
+																"value": "distance(\r\n Touch.XForID(PanPointerID,\"HUD\"),\r\n Touch.YForID(PanPointerID,\"HUD\"),\r\n Touch.XForID(TouchZoomID,\"HUD\"),\r\n Touch.YForID(TouchZoomID,\"HUD\")\r\n)"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 293679051728588,
+															"parameters": {
+																"variable": "InitialScale",
+																"value": "LayoutScale"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 720420812283598,
+															"parameters": {
+																"variable": "PanLastX",
+																"value": "(\r\n Touch.XForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.XForID(TouchZoomID,\"HUD\")\r\n) / 2"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 775972578851632,
+															"parameters": {
+																"variable": "PanLastY",
+																"value": "(\r\n Touch.YForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.YForID(TouchZoomID,\"HUD\")\r\n) / 2"
+															}
+														}
+													],
+													"sid": 267287619504085
 												}
-											],
-											"sid": 617016779965557
+											]
 										},
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "else",
+													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 400155654165783
+													"sid": 857667973866532,
+													"parameters": {
+														"first-value": "CurrentLevel",
+														"comparison": 5,
+														"second-value": "1"
+													}
 												},
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 252301542786770,
+													"sid": 865501156603723,
 													"parameters": {
-														"first-value": "TouchZoomID",
-														"comparison": 0,
-														"second-value": "-1"
+														"first-value": "GAME_STATE",
+														"comparison": 5,
+														"second-value": "\"TOUR\""
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 754525036718738,
+											"children": [
 												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 581683756895382,
-													"parameters": {
-														"variable": "TouchZoomID",
-														"value": "Touch.TouchID"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 845673128290850,
+															"parameters": {
+																"first-value": "PanPointerID",
+																"comparison": 0,
+																"second-value": "-1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 589649117948992,
+															"parameters": {
+																"variable": "PanPointerID",
+																"value": "Touch.TouchID"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 136943917972176,
+															"parameters": {
+																"variable": "PanLastX",
+																"value": "Touch.X(\"HUD\")"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 636280441396079,
+															"parameters": {
+																"variable": "PanLastY",
+																"value": "Touch.Y(\"HUD\")"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 443003074359286,
+															"parameters": {
+																"variable": "DragStartX",
+																"value": "Touch.X(\"HUD\")"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 335873920656718,
+															"parameters": {
+																"variable": "DragStartY",
+																"value": "Touch.Y(\"HUD\")"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 925710429457869,
+															"parameters": {
+																"variable": "IsPanning",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 596794816114937
 												},
 												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 252620783257403,
-													"parameters": {
-														"variable": "TouchStartDistance",
-														"value": "distance(\r\n Touch.XForID(PanPointerID,\"HUD\"),\r\n Touch.YForID(PanPointerID,\"HUD\"),\r\n Touch.XForID(TouchZoomID,\"HUD\"),\r\n Touch.YForID(TouchZoomID,\"HUD\")\r\n)"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 293679051728588,
-													"parameters": {
-														"variable": "InitialScale",
-														"value": "LayoutScale"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 720420812283598,
-													"parameters": {
-														"variable": "PanLastX",
-														"value": "(\r\n Touch.XForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.XForID(TouchZoomID,\"HUD\")\r\n) / 2"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 775972578851632,
-													"parameters": {
-														"variable": "PanLastY",
-														"value": "(\r\n Touch.YForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.YForID(TouchZoomID,\"HUD\")\r\n) / 2"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 517227865919698
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 678419103388707,
+															"parameters": {
+																"first-value": "TouchZoomID",
+																"comparison": 0,
+																"second-value": "-1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 734335910933887,
+															"parameters": {
+																"variable": "TouchZoomID",
+																"value": "Touch.TouchID"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 149316058399698,
+															"parameters": {
+																"variable": "TouchStartDistance",
+																"value": "distance(\r\n Touch.XForID(PanPointerID,\"HUD\"),\r\n Touch.YForID(PanPointerID,\"HUD\"),\r\n Touch.XForID(TouchZoomID,\"HUD\"),\r\n Touch.YForID(TouchZoomID,\"HUD\")\r\n)"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 587220621154010,
+															"parameters": {
+																"variable": "InitialScale",
+																"value": "LayoutScale"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 419961224914536,
+															"parameters": {
+																"variable": "PanLastX",
+																"value": "(\r\n Touch.XForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.XForID(TouchZoomID,\"HUD\")\r\n) / 2"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 849339761257535,
+															"parameters": {
+																"variable": "PanLastY",
+																"value": "(\r\n Touch.YForID(PanPointerID,\"HUD\")\r\n +\r\n Touch.YForID(TouchZoomID,\"HUD\")\r\n) / 2"
+															}
+														}
+													],
+													"sid": 551466808225003
 												}
-											],
-											"sid": 267287619504085
+											]
 										}
 									]
 								},
@@ -18656,66 +19053,174 @@
 														"comparison": 0,
 														"second-value": "0"
 													}
-												},
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 337025700213985,
-													"parameters": {
-														"first-value": "CurrentLevel",
-														"comparison": 5,
-														"second-value": "6"
-													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 561166539196622,
+											"children": [
 												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 347691817439740,
-													"parameters": {
-														"variable": "targetX",
-														"value": "clamp(\n    scrollx - (Touch.XForID(PanPointerID,\"HUD\") - PanLastX) / LayoutScale,\n    -200,\n    1300\n)\n"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 416781008424252,
+															"parameters": {
+																"first-value": "CurrentLevel",
+																"comparison": 5,
+																"second-value": "6"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 918693671370740,
+															"parameters": {
+																"first-value": "GAME_STATE",
+																"comparison": 5,
+																"second-value": "\"MAIN\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 518087940799976,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 378274833361315,
+																	"parameters": {
+																		"variable": "targetX",
+																		"value": "clamp(\n    scrollx - (Touch.XForID(PanPointerID,\"HUD\") - PanLastX) / LayoutScale,\n    -200,\n    1300\n)\n"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 625611074534329,
+																	"parameters": {
+																		"variable": "targetY",
+																		"value": " clamp(\n    scrolly - (Touch.YForID(PanPointerID,\"HUD\") - PanLastY) / LayoutScale,\n    100,\n    2000\n)"
+																	}
+																},
+																{
+																	"id": "scroll-to-position",
+																	"objectClass": "System",
+																	"sid": 295076226760690,
+																	"parameters": {
+																		"x": "lerp(scrollx, targetX, 1)",
+																		"y": "lerp(scrolly, targetY, 1)"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 948928076321763,
+																	"parameters": {
+																		"variable": "PanLastX",
+																		"value": " Touch.XForID(PanPointerID,\"HUD\")"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 215320343361244,
+																	"parameters": {
+																		"variable": "PanLastY",
+																		"value": " Touch.YForID(PanPointerID,\"HUD\")"
+																	}
+																}
+															],
+															"sid": 769972520196958
+														}
+													]
 												},
 												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 142007541139938,
-													"parameters": {
-														"variable": "targetY",
-														"value": " clamp(\n    scrolly - (Touch.YForID(PanPointerID,\"HUD\") - PanLastY) / LayoutScale,\n    100,\n    2000\n)"
-													}
-												},
-												{
-													"id": "scroll-to-position",
-													"objectClass": "System",
-													"sid": 664367668999869,
-													"parameters": {
-														"x": "lerp(scrollx, targetX, 1)",
-														"y": "lerp(scrolly, targetY, 1)"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 880804687790210,
-													"parameters": {
-														"variable": "PanLastX",
-														"value": " Touch.XForID(PanPointerID,\"HUD\")"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 778946056207290,
-													"parameters": {
-														"variable": "PanLastY",
-														"value": " Touch.YForID(PanPointerID,\"HUD\")"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 655415014510846,
+															"parameters": {
+																"first-value": "CurrentLevel",
+																"comparison": 5,
+																"second-value": "1"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 286615259376294,
+															"parameters": {
+																"first-value": "GAME_STATE",
+																"comparison": 5,
+																"second-value": "\"TOUR\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 144919226396605,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 954728529345004,
+																	"parameters": {
+																		"variable": "targetX",
+																		"value": "clamp(\n    scrollx - (Touch.XForID(PanPointerID,\"HUD\") - PanLastX) / LayoutScale,\n    -200,\n    1300\n)\n"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 710680624023686,
+																	"parameters": {
+																		"variable": "targetY",
+																		"value": " clamp(\n    scrolly - (Touch.YForID(PanPointerID,\"HUD\") - PanLastY) / LayoutScale,\n    100,\n    2000\n)"
+																	}
+																},
+																{
+																	"id": "scroll-to-position",
+																	"objectClass": "System",
+																	"sid": 699735588411782,
+																	"parameters": {
+																		"x": "lerp(scrollx, targetX, 1)",
+																		"y": "lerp(scrolly, targetY, 1)"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 142141741257466,
+																	"parameters": {
+																		"variable": "PanLastX",
+																		"value": " Touch.XForID(PanPointerID,\"HUD\")"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 973795475704562,
+																	"parameters": {
+																		"variable": "PanLastY",
+																		"value": " Touch.YForID(PanPointerID,\"HUD\")"
+																	}
+																}
+															],
+															"sid": 503488922903830
+														}
+													]
 												}
-											],
-											"sid": 561166539196622
+											]
 										}
 									]
 								},
@@ -18915,83 +19420,192 @@
 																"comparison": 0,
 																"second-value": "0"
 															}
-														},
-														{
-															"id": "compare-two-values",
-															"objectClass": "System",
-															"sid": 185384703951893,
-															"parameters": {
-																"first-value": "CurrentLevel",
-																"comparison": 5,
-																"second-value": "6"
-															}
 														}
 													],
-													"actions": [
+													"actions": [],
+													"sid": 213399345010419,
+													"children": [
 														{
-															"id": "set-layout-scale",
-															"objectClass": "System",
-															"sid": 468902414884456,
-															"parameters": {
-																"scale": "zoomRaw"
-															}
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 600312106736149,
+																	"parameters": {
+																		"first-value": "CurrentLevel",
+																		"comparison": 5,
+																		"second-value": "6"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 403459412766020,
+																	"parameters": {
+																		"first-value": "GAME_STATE",
+																		"comparison": 5,
+																		"second-value": "\"MAIN\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-layout-scale",
+																	"objectClass": "System",
+																	"sid": 353840520419094,
+																	"parameters": {
+																		"scale": "zoomRaw"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 490824934540822,
+																	"parameters": {
+																		"variable": "TargetScrollX",
+																		"value": "clamp(\r\n        scrollx - (TouchCurrentMidX - PanLastX) / LayoutScale,\r\n        -200 * LayoutScale,\r\n        1300 * LayoutScale\r\n    )"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 739319162629216,
+																	"parameters": {
+																		"variable": "TargetScrollY",
+																		"value": "clamp(\r\n        scrolly - (TouchCurrentMidY - PanLastY) / LayoutScale,\r\n        100 * LayoutScale,\r\n        2000 * LayoutScale\r\n    )"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 953290431815076,
+																	"parameters": {
+																		"variable": "ZoomLevel",
+																		"value": "zoomRaw"
+																	}
+																},
+																{
+																	"id": "scroll-to-position",
+																	"objectClass": "System",
+																	"sid": 733232739124713,
+																	"parameters": {
+																		"x": "lerp(scrollx, TargetScrollX, 1)",
+																		"y": "lerp(scrolly, TargetScrollY, 1)"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 946270771175553,
+																	"parameters": {
+																		"variable": "PanLastX",
+																		"value": "TouchCurrentMidX"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 857967124221292,
+																	"parameters": {
+																		"variable": "PanLastY",
+																		"value": "TouchCurrentMidY"
+																	}
+																}
+															],
+															"sid": 591522087506550
 														},
 														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 348302409394289,
-															"parameters": {
-																"variable": "TargetScrollX",
-																"value": "clamp(\r\n        scrollx - (TouchCurrentMidX - PanLastX) / LayoutScale,\r\n        -200 * LayoutScale,\r\n        1300 * LayoutScale\r\n    )"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 815050930971075,
-															"parameters": {
-																"variable": "TargetScrollY",
-																"value": "clamp(\r\n        scrolly - (TouchCurrentMidY - PanLastY) / LayoutScale,\r\n        100 * LayoutScale,\r\n        2000 * LayoutScale\r\n    )"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 924573944153874,
-															"parameters": {
-																"variable": "ZoomLevel",
-																"value": "zoomRaw"
-															}
-														},
-														{
-															"id": "scroll-to-position",
-															"objectClass": "System",
-															"sid": 481286286677392,
-															"parameters": {
-																"x": "lerp(scrollx, TargetScrollX, 1)",
-																"y": "lerp(scrolly, TargetScrollY, 1)"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 496586076217181,
-															"parameters": {
-																"variable": "PanLastX",
-																"value": "TouchCurrentMidX"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 945925247565391,
-															"parameters": {
-																"variable": "PanLastY",
-																"value": "TouchCurrentMidY"
-															}
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 749030755294359,
+																	"parameters": {
+																		"first-value": "CurrentLevel",
+																		"comparison": 5,
+																		"second-value": "1"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 939549493262238,
+																	"parameters": {
+																		"first-value": "GAME_STATE",
+																		"comparison": 5,
+																		"second-value": "\"TOUR\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-layout-scale",
+																	"objectClass": "System",
+																	"sid": 962256599904208,
+																	"parameters": {
+																		"scale": "zoomRaw"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 977341539538981,
+																	"parameters": {
+																		"variable": "TargetScrollX",
+																		"value": "clamp(\r\n        scrollx - (TouchCurrentMidX - PanLastX) / LayoutScale,\r\n        -200 * LayoutScale,\r\n        1300 * LayoutScale\r\n    )"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 108155865908617,
+																	"parameters": {
+																		"variable": "TargetScrollY",
+																		"value": "clamp(\r\n        scrolly - (TouchCurrentMidY - PanLastY) / LayoutScale,\r\n        100 * LayoutScale,\r\n        2000 * LayoutScale\r\n    )"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 120703943023336,
+																	"parameters": {
+																		"variable": "ZoomLevel",
+																		"value": "zoomRaw"
+																	}
+																},
+																{
+																	"id": "scroll-to-position",
+																	"objectClass": "System",
+																	"sid": 740901536947355,
+																	"parameters": {
+																		"x": "lerp(scrollx, TargetScrollX, 1)",
+																		"y": "lerp(scrolly, TargetScrollY, 1)"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 158340956823985,
+																	"parameters": {
+																		"variable": "PanLastX",
+																		"value": "TouchCurrentMidX"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 985482598112161,
+																	"parameters": {
+																		"variable": "PanLastY",
+																		"value": "TouchCurrentMidY"
+																	}
+																}
+															],
+															"sid": 748198671571579
 														}
-													],
-													"sid": 213399345010419
+													]
 												}
 											]
 										}
@@ -19279,16 +19893,6 @@
 												"comparison": 0,
 												"second-value": "0"
 											}
-										},
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 386283994861237,
-											"parameters": {
-												"first-value": "CurrentLevel",
-												"comparison": 5,
-												"second-value": "6"
-											}
 										}
 									],
 									"actions": [],
@@ -19300,148 +19904,369 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 307011966384467,
+													"sid": 608871433816757,
 													"parameters": {
-														"first-value": "Mouse.WheelDeltaY",
-														"comparison": 2,
-														"second-value": "0"
+														"first-value": "CurrentLevel",
+														"comparison": 5,
+														"second-value": "6"
 													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 980026740010908,
-													"parameters": {
-														"variable": "targetZoom",
-														"value": "ZoomLevel + ZoomStep"
-													}
-												}
-											],
-											"sid": 981276260933166
-										},
-										{
-											"eventType": "block",
-											"conditions": [
+												},
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 425648066134344,
+													"sid": 970116735891732,
 													"parameters": {
-														"first-value": "Mouse.WheelDeltaY",
-														"comparison": 4,
-														"second-value": "0"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 562949859020544,
-													"parameters": {
-														"variable": "targetZoom",
-														"value": "ZoomLevel - ZoomStep"
-													}
-												}
-											],
-											"sid": 582781458408119
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 783419361441899,
-													"parameters": {
-														"first-value": "targetZoom",
-														"comparison": 4,
-														"second-value": "ZoomMax"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 160579439712619,
-													"parameters": {
-														"variable": "targetZoom",
-														"value": "ZoomMax"
-													}
-												}
-											],
-											"sid": 231434949211629
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 689670975034690,
-													"parameters": {
-														"first-value": "targetZoom",
-														"comparison": 2,
-														"second-value": "ZoomMin"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 692715069024777,
-													"parameters": {
-														"variable": "targetZoom",
-														"value": "ZoomMin"
-													}
-												}
-											],
-											"sid": 994844297733211
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 489118411875086,
-													"parameters": {
-														"first-value": "targetZoom",
-														"comparison": 1,
-														"second-value": "ZoomLevel"
+														"first-value": "GAME_STATE",
+														"comparison": 5,
+														"second-value": "\"MAIN\""
 													}
 												}
 											],
 											"actions": [],
-											"sid": 450938064626110,
+											"sid": 343935136513971,
 											"children": [
 												{
 													"eventType": "block",
-													"conditions": [],
-													"actions": [
+													"conditions": [
 														{
-															"id": "set-layout-scale",
+															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 644138464289383,
+															"sid": 948538348514093,
 															"parameters": {
-																"scale": "targetZoom"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 734013789179168,
-															"parameters": {
-																"variable": "ZoomLevel",
-																"value": "targetZoom"
+																"first-value": "Mouse.WheelDeltaY",
+																"comparison": 2,
+																"second-value": "0"
 															}
 														}
 													],
-													"sid": 389398979710827
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 859657785597645,
+															"parameters": {
+																"variable": "targetZoom",
+																"value": "ZoomLevel + ZoomStep"
+															}
+														}
+													],
+													"sid": 912870683813070
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 476905496677319,
+															"parameters": {
+																"first-value": "Mouse.WheelDeltaY",
+																"comparison": 4,
+																"second-value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 208380640546794,
+															"parameters": {
+																"variable": "targetZoom",
+																"value": "ZoomLevel - ZoomStep"
+															}
+														}
+													],
+													"sid": 451585773467318
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 771914045900921,
+															"parameters": {
+																"first-value": "targetZoom",
+																"comparison": 4,
+																"second-value": "ZoomMax"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 293359152753787,
+															"parameters": {
+																"variable": "targetZoom",
+																"value": "ZoomMax"
+															}
+														}
+													],
+													"sid": 214965713673951
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 212197882334191,
+															"parameters": {
+																"first-value": "targetZoom",
+																"comparison": 2,
+																"second-value": "ZoomMin"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 435151502233359,
+															"parameters": {
+																"variable": "targetZoom",
+																"value": "ZoomMin"
+															}
+														}
+													],
+													"sid": 153744985738120
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 179448774672462,
+															"parameters": {
+																"first-value": "targetZoom",
+																"comparison": 1,
+																"second-value": "ZoomLevel"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 344822275749544,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "set-layout-scale",
+																	"objectClass": "System",
+																	"sid": 670030014544632,
+																	"parameters": {
+																		"scale": "targetZoom"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 701459635651242,
+																	"parameters": {
+																		"variable": "ZoomLevel",
+																		"value": "targetZoom"
+																	}
+																}
+															],
+															"sid": 328964832483621
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [],
+													"sid": 715779661531835
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 783008177500055,
+													"parameters": {
+														"first-value": "CurrentLevel",
+														"comparison": 5,
+														"second-value": "1"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 625775141520402,
+													"parameters": {
+														"first-value": "GAME_STATE",
+														"comparison": 5,
+														"second-value": "\"TOUR\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 455588238838578,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 986962549248906,
+															"parameters": {
+																"first-value": "Mouse.WheelDeltaY",
+																"comparison": 2,
+																"second-value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 993349252392910,
+															"parameters": {
+																"variable": "targetZoom",
+																"value": "ZoomLevel + ZoomStep"
+															}
+														}
+													],
+													"sid": 270158900746913
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 749530550454439,
+															"parameters": {
+																"first-value": "Mouse.WheelDeltaY",
+																"comparison": 4,
+																"second-value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 483899927295799,
+															"parameters": {
+																"variable": "targetZoom",
+																"value": "ZoomLevel - ZoomStep"
+															}
+														}
+													],
+													"sid": 133870834178838
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 798591281677592,
+															"parameters": {
+																"first-value": "targetZoom",
+																"comparison": 4,
+																"second-value": "ZoomMax"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 537162941072766,
+															"parameters": {
+																"variable": "targetZoom",
+																"value": "ZoomMax"
+															}
+														}
+													],
+													"sid": 459087083923650
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 393397791924509,
+															"parameters": {
+																"first-value": "targetZoom",
+																"comparison": 2,
+																"second-value": "ZoomMin"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 627304988720779,
+															"parameters": {
+																"variable": "targetZoom",
+																"value": "ZoomMin"
+															}
+														}
+													],
+													"sid": 577259562302353
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 198746612371994,
+															"parameters": {
+																"first-value": "targetZoom",
+																"comparison": 1,
+																"second-value": "ZoomLevel"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 251484624707900,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "set-layout-scale",
+																	"objectClass": "System",
+																	"sid": 458078817787551,
+																	"parameters": {
+																		"scale": "targetZoom"
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 877146719336126,
+																	"parameters": {
+																		"variable": "ZoomLevel",
+																		"value": "targetZoom"
+																	}
+																}
+															],
+															"sid": 481732128523657
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [],
+													"sid": 485624458765208
 												}
 											]
 										}
@@ -20289,6 +21114,15 @@
 				}
 			],
 			"sid": 403058626511012
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "hZsd[",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 145574386059083
 		}
 	],
 	"sid": 255832887203852
